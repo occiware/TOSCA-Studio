@@ -1,0 +1,10 @@
+.DS_Store
+bin/
+target/
+build.acceleo
+*.xtendbin
+*~
+.metadata/
+.project
+.classpath
+.settings/
