@@ -10,19 +10,18 @@ public class MixinReader {
 	
 	private Map<String, ?> mixins;
 	
-	private Extension extension;
-	
-	public MixinReader(Extension extension, Map<String, ?> mixins) {
-		this.extension = extension;
+	public MixinReader(Map<String, ?> mixins) {
 		this.mixins = mixins;
 	}
 	
 	private Mixin getMixinByName(String name) {
-		for (Mixin mixin : extension.getMixins()) {
+		for (Mixin mixin : ExtensionsManager.getExtension("tosca").getMixins()) {
+			System.out.println(mixin.getName());
 			if (name.equals(mixin.getName())) {
 				return mixin;
 			}
 		}
+		System.out.println(mixins);
 		Map<String, ?> maps = (Map<String, ?>) mixins.get(name);
 		System.out.println(name + " is not defined");
 		if (maps == null && StringToDataType.map.get(name) != null) {
@@ -30,6 +29,7 @@ public class MixinReader {
 			System.err.println(name);
 			return null;
 		} else {
+			System.out.println(maps);
 			readMixin(name, maps);
 			return getMixinByName(name);
 		}
@@ -37,7 +37,7 @@ public class MixinReader {
 
 	public void readMixin(String mixinStr, Map<String, ?> map) {
 		boolean alreadyRegistered = false;
-		for (Mixin registeredMixin : extension.getMixins()) {
+		for (Mixin registeredMixin : ExtensionsManager.getExtension("tosca").getMixins()) {
 			if (registeredMixin.getName().equals(mixinStr)) {
 				alreadyRegistered = true;
 			}
@@ -48,8 +48,6 @@ public class MixinReader {
 		
 		Mixin mixin = OCCIFactory.eINSTANCE.createMixin();
 		mixin.setName(mixinStr);
-
-		//mapper.map(mixin);
 		
 		Object derived_from = map.get("derived_from");
 		if (derived_from != null) {
@@ -74,8 +72,24 @@ public class MixinReader {
 				AttributeReader.readAttributes(mixin, (Map<String, ?>) map.get("attributes"));
 			}
 		}
+		
+		Map<String, ?> capabilities = (Map<String, ?>)map.get("capabilities");
+		if (capabilities != null) {
+			for (String capability : capabilities.keySet()) {
+				if (capabilities.get(capability) instanceof String) {
+					continue;
+				}
+				Map<String, ?> valuesCapabilities = (Map<String, ?>)capabilities.get(capability);
+					Mixin mixinCapability = getMixinByName(valuesCapabilities.get("type").toString());
+					if (mixinCapability == null) {
+						System.err.println("Capability not found : " + mixinCapability);
+					}
+					mixin.getDepends().add(mixinCapability);
+			}
+		}
+		
 		mixin.setScheme("http://occi/tosca/" + mixinStr.replaceAll("\\.", "").toLowerCase() + "#");
-		extension.getMixins().add(mixin);
+		ExtensionsManager.getExtension("tosca").getMixins().add(mixin);
 	}
 
 }

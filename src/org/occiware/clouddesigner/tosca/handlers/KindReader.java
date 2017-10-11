@@ -11,15 +11,12 @@ public class KindReader {
 	
 	private Map<String, ?> kinds;
 	
-	private Extension extension;
-	
-	public KindReader(Extension extension, Map<String, ?> kinds) {
-		this.extension = extension;
+	public KindReader(Map<String, ?> kinds) {
 		this.kinds = kinds;
 	}
 	
 	private Kind getKindByName(String name) {
-		for (Kind kind : extension.getKinds()) {
+		for (Kind kind : ExtensionsManager.getExtension("tosca").getKinds()) {
 			if (name.equals(kind.getName())) {
 				return kind;
 			}
@@ -38,7 +35,7 @@ public class KindReader {
 
 	public void readKind(String kindStr, Map<String, ?> map) {
 		boolean alreadyRegistered = false;
-		for (Kind registeredKind : extension.getKinds()) {
+		for (Kind registeredKind : ExtensionsManager.getExtension("tosca").getKinds()) {
 			if (registeredKind.getName().equals(kindStr)) {
 				alreadyRegistered = true;
 			}
@@ -49,8 +46,22 @@ public class KindReader {
 		
 		Kind kind = OCCIFactory.eINSTANCE.createKind();
 		kind.setName(kindStr);
+		
+		if (map.get("derived_from") != null) {
+			String nameOfParent = map.get("derived_from").toString();
+			if ("tosca.relationships.Root".equals(nameOfParent)) {
+				for (Mixin mixin : ExtensionsManager.getExtension("tosca").getMixins()) {
+					System.err.println(mixin.getTerm());
+					if (mixin.getTerm().equals("tosca.relationships.root")) {
+						mixin.getApplies().add(kind);
+					}
+				}
+			} else {
+				kind.setParent(getKindByName(nameOfParent));
+			}
+		}
 
-		//mapper.map(mixin);
+		//mapper.map(kind);
 		
 		Object description = map.get("description");
 		if (description != null) {
@@ -66,8 +77,9 @@ public class KindReader {
 				AttributeReader.readAttributes(kind, (Map<String, ?>) map.get("attributes"));
 			}
 		}
+		
 		kind.setScheme("http://occi/tosca/" + kindStr.replaceAll("\\.", "").toLowerCase() + "#");
-		extension.getKinds().add(kind);
+		ExtensionsManager.getExtension("tosca").getKinds().add(kind);
 	}
 
 }

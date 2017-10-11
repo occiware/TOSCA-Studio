@@ -90,29 +90,29 @@ public class StringToDataType {
 		
 		typeModelMapString.setName("mapString");
 		
-		Main.extension.getTypes().add(typeModelString);
-		Main.extension.getTypes().add(typeModelBoolean);
-		Main.extension.getTypes().add(typeModelByte);
-		Main.extension.getTypes().add(typeModelDouble);
-		Main.extension.getTypes().add(typeModelFloat);
-		Main.extension.getTypes().add(typeModelInteger);
-		Main.extension.getTypes().add(typeModelLong);
-		Main.extension.getTypes().add(typeModelShort);
-		Main.extension.getTypes().add(typeEnum);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelString);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelBoolean);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelByte);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelDouble);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelFloat);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelInteger);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelLong);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelShort);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeEnum);
 		
-		Main.extension.getTypes().add(typeArray);
-		Main.extension.getTypes().add(typeArrayString);
-		Main.extension.getTypes().add(typeArrayBoolean);
-		Main.extension.getTypes().add(typeArrayByte);
-		Main.extension.getTypes().add(typeArrayDouble);
-		Main.extension.getTypes().add(typeArrayFloat);
-		Main.extension.getTypes().add(typeArrayInteger);
-		Main.extension.getTypes().add(typeArrayLong);
-		Main.extension.getTypes().add(typeArrayShort);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeArray);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayString);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayBoolean);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayByte);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayDouble);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayFloat);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayInteger);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayLong);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayShort);
 		
-		Main.extension.getTypes().add(typeRecord);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeRecord);
 		
-		Main.extension.getTypes().add(typeModelMap);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelMap);
 		
 		map.put("string", typeModelString);
 		map.put("boolean", typeModelBoolean);	

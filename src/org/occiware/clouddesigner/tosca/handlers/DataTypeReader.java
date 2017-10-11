@@ -25,7 +25,7 @@ public class DataTypeReader {
     		recordType.getRecordFields().addAll(readRecordField((Map<String, ?> )map.get("properties")));	
     	}
 
-    	Main.extension.getTypes().add(recordType);
+    	ExtensionsManager.getExtension("tosca").getTypes().add(recordType);
 	}
 	
 	private static Collection<RecordField> readRecordField(Map<String, ?> recordFieldsMap) {

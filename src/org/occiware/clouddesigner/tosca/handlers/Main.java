@@ -37,30 +37,7 @@ import com.esotericsoftware.yamlbeans.YamlReader;
  */
 public class Main extends AbstractHandler {
 
-	public static Extension extension;
-
-	private Resource resource;
-
 	private Map<String, ?> map;
-
-	private ExtensionsManager extensionsManager;
-
-	private Mapper mapper;
-
-	// TODO extension should not be static
-	public Main() {
-		ResourceSet resSet = new ResourceSetImpl();
-		URI modelURI = URI
-				.createURI("file:/C:/Users/schallit/runtime-EclipseApplication31072017/tosca_model/TOSCA.occie");
-		resource = resSet.createResource(modelURI);
-		extension = OCCIFactory.eINSTANCE.createExtension();
-		extension.setDescription("Mon extension TOSCA");
-		extension.setScheme("http://occi/tosca#");
-		extension.setName("TOSCA");
-		resource.getContents().add(extension);
-		extensionsManager = new ExtensionsManager(extension);
-		mapper = new Mapper(extensionsManager, extension);
-	}
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
@@ -71,31 +48,60 @@ public class Main extends AbstractHandler {
 					"C:/Users/schallit/workspace-tosca/org.occiware.clouddesigner.tosca/normative-types.yml"));
 			map = (Map<String, ?>) reader.read();
 
-			// links / relationship
-			Map<String, ?> kinds = (Map<String, ?>) map.get("relationship_types");
-			KindReader kindReader = new KindReader(extension, kinds);
-			for (String kind : kinds.keySet()) {
-				kindReader.readKind(kind, (Map<String, ?>) kinds.get(kind));
-			}
-
 			// datatypes <=> record
 			Map<String, ?> dataTypes = (Map<String, ?>) map.get("data_types");
 			for (String datatype : dataTypes.keySet()) {
 				DataTypeReader.read(datatype, (Map<String, ?>) dataTypes.get(datatype));
 			}
+			
+			// capabilities
+			Map<String, ?> capabilites = (Map<String, ?>) map.get("capability_types");
+			MixinReader mixinReader = new MixinReader(capabilites);
+			for (String capability : capabilites.keySet()) {
+				mixinReader.readMixin(capability, (Map<String, ?>) capabilites.get(capability));
+			}
 
 			for (String collection : map.keySet()) {
 				if (collection.endsWith("_types") && !"relationship_types".equals(collection)
-						&& !"data_types".equals(collection) && !"artifact_types".equals(collection)) {
+						&& !"data_types".equals(collection) && !"artifact_types".equals(collection)
+						&& !"capability_types".equals(collection)) {
 					Map<String, ?> mixins = (Map<String, ?>) map.get(collection);
-					MixinReader mixinReader = new MixinReader(extension, mixins);
+					mixinReader = new MixinReader(mixins);
 					for (String mixin : mixins.keySet()) {
-						mixinReader.readMixin(mixin, (Map<String, ?>) mixins.get(mixin));
+						if ("tosca.nodes.LoadBalancer".equals(mixin)) {
+							KindReader kindReader = new KindReader(mixins);
+							kindReader.readKind(mixin, mixins);
+						} else {
+							mixinReader.readMixin(mixin, (Map<String, ?>) mixins.get(mixin));
+						}
 					}
 				}
 			}
-			System.out.println("Saving...");
-			resource.save(Collections.emptyMap());
+
+			// links / relationship
+			Map<String, ?> kinds = (Map<String, ?>) map.get("relationship_types");
+			KindReader kindReader = new KindReader(kinds);
+			// relationships.Root is a Mixin
+			mixinReader = new MixinReader(kinds);
+			mixinReader.readMixin("tosca.relationships.Root", kinds);
+			for (String kind : kinds.keySet()) {
+				if (!"tosca.relationships.Root".equals(kind)) {
+					kindReader.readKind(kind, (Map<String, ?>) kinds.get(kind));
+				}
+			}
+
+			Extension extension = ExtensionsManager.getExtension("tosca");
+			Mapper mapper = new Mapper();
+			for (Kind kind : extension.getKinds()) {
+				mapper.map(kind);
+			}
+			
+			for (Mixin mixin : extension.getMixins()) {
+				mapper.map(mixin);
+			}
+			
+			ExtensionsManager.save();
+			
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
