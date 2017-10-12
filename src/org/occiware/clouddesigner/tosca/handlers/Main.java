@@ -79,23 +79,31 @@ public class Main extends AbstractHandler {
 			}
 
 			// links / relationship
-			Map<String, ?> kinds = (Map<String, ?>) map.get("relationship_types");
-			KindReader kindReader = new KindReader(kinds);
+			Map<String, ?> links = (Map<String, ?>) map.get("relationship_types");
+			KindReader linkReader = new KindReader(links);
 			// relationships.Root is a Mixin
-			mixinReader = new MixinReader(kinds);
-			mixinReader.readMixin("tosca.relationships.Root", kinds);
-			for (String kind : kinds.keySet()) {
+			mixinReader = new MixinReader(links);
+			mixinReader.readMixin("tosca.relationships.Root", (Map<String, ?>) links.get("tosca.relationships.Root"));
+			for (String kind : links.keySet()) {
 				if (!"tosca.relationships.Root".equals(kind)) {
-					kindReader.readKind(kind, (Map<String, ?>) kinds.get(kind));
+					linkReader.readKind(kind, (Map<String, ?>) links.get(kind));
 				}
 			}
 
 			Extension extension = ExtensionsManager.getExtension("tosca");
-			Mapper mapper = new Mapper();
+			Mapper mapper = new TypeMapper();
 			for (Kind kind : extension.getKinds()) {
 				mapper.map(kind);
 			}
 			
+			for (Mixin mixin : extension.getMixins()) {
+				mapper.map(mixin);
+			}
+			
+			mapper = new AttributeMapper();
+			for (Kind kind : extension.getKinds()) {
+				mapper.map(kind);
+			}
 			for (Mixin mixin : extension.getMixins()) {
 				mapper.map(mixin);
 			}
