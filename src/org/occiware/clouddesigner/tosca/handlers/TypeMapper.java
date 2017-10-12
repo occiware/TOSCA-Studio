@@ -18,8 +18,10 @@ public class TypeMapper extends Mapper {
 		super();
 		
 		this.mappings.put("tosca.nodes.Root", 
-				new MixinMapping(ExtensionsManager.getKindFromItsTerm("core", "resource"))
-		);
+				new MixinMapping(
+						ExtensionsManager.getKindFromItsTerm("core", "resource"),
+						ExtensionsManager.getMixinFromItsTerm("tosca", "tosca.interfaces.node.lifecycle.standard")
+								));
 		
 		this.mappings.put("tosca.nodes.BlockStorage",
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("infrastructure", "storage"))
@@ -99,6 +101,12 @@ public class TypeMapper extends Mapper {
 //						standardMixin
 //			));
 //		
+		
+		this.mappings.put("tosca.relationships.Root", 
+				new MixinMapping(ExtensionsManager.getMixinFromItsTerm("tosca", "tosca.interfaces.relationship.configure"))
+		);
+		
+		
 		this.mappings.put("tosca.relationships.AttachesTo", 
 				new LinkMapping(
 						ExtensionsManager.getKindFromItsTerm("infrastructure", "storagelink"), 
@@ -165,10 +173,15 @@ public class TypeMapper extends Mapper {
 			this.apply = null;
 			this.dependsOn = depend;
 		}
+		public MixinMapping(Kind apply, Mixin depend) {
+			this.apply = apply;
+			this.dependsOn = depend;
+		}
 		public void mapTo(Mixin mixin) {
 			if (apply != null) {
 				mixin.getApplies().add(apply);
-			} else {
+			} 
+			if (dependsOn != null) {
 				mixin.getDepends().add(dependsOn);
 			}
 		}
