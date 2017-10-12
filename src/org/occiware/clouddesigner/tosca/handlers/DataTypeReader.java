@@ -26,6 +26,7 @@ public class DataTypeReader {
     	}
 
     	ExtensionsManager.getExtension("tosca").getTypes().add(recordType);
+    	StringToDataType.map.put(dataTypeAsString, recordType);
 	}
 	
 	private static Collection<RecordField> readRecordField(Map<String, ?> recordFieldsMap) {
@@ -45,7 +46,7 @@ public class DataTypeReader {
 				if (type.equals("list")) {
 					type = "array";
 				}
-				if (type.equals("array") || type.equals("map")) {
+				if (type.equals("array")) {
 					String typeOfCollection = (String)(((Map<String, ?>)recordFieldMap.get("entry_schema")).get("type"));
 					type += typeOfCollection;                                                                                                                      
 				}

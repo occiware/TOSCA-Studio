@@ -8,6 +8,7 @@ import org.eclipse.cmf.occi.core.ArrayType;
 import org.eclipse.cmf.occi.core.BooleanType;
 import org.eclipse.cmf.occi.core.DataType;
 import org.eclipse.cmf.occi.core.EObjectType;
+import org.eclipse.cmf.occi.core.EnumerationLiteral;
 import org.eclipse.cmf.occi.core.EnumerationType;
 import org.eclipse.cmf.occi.core.NumericType;
 import org.eclipse.cmf.occi.core.NumericTypeEnum;
@@ -26,6 +27,8 @@ public class StringToDataType {
 	public final static NumericType typeModelLong = OCCIFactory.eINSTANCE.createNumericType();
 	public final static NumericType typeModelShort = OCCIFactory.eINSTANCE.createNumericType();
 	
+	public final static NumericType typeModelRange = OCCIFactory.eINSTANCE.createNumericType();
+	
 	public final static EnumerationType typeEnum = OCCIFactory.eINSTANCE.createEnumerationType();
 	
 	public final static ArrayType typeArray = OCCIFactory.eINSTANCE.createArrayType();
@@ -38,12 +41,13 @@ public class StringToDataType {
 	public final static ArrayType typeArrayLong = OCCIFactory.eINSTANCE.createArrayType();
 	public final static ArrayType typeArrayShort = OCCIFactory.eINSTANCE.createArrayType();
 	
-	
 	public final static RecordType typeRecord = OCCIFactory.eINSTANCE.createRecordType();
 	
 	public final static EObjectType typeModelMap = OCCIFactory.eINSTANCE.createEObjectType();
 	
 	public final static EObjectType typeModelMapString = OCCIFactory.eINSTANCE.createEObjectType();
+	
+	public final static StringType typeModelVersion = OCCIFactory.eINSTANCE.createStringType();
 	
 	public final static Map<String, DataType> map = new HashMap<>();
 
@@ -60,6 +64,11 @@ public class StringToDataType {
 		typeModelLong.setName("long");
 		typeModelShort.setType(NumericTypeEnum.SHORT);
 		typeModelShort.setName("short");
+		
+		typeModelRange.setType(NumericTypeEnum.SHORT);
+		typeModelRange.setName("range");
+		typeModelRange.setMaxInclusive("65535");
+		typeModelRange.setMinInclusive("1");
 		
 		typeModelBoolean.setName("boolean");
 		typeModelString.setName("string");
@@ -88,7 +97,10 @@ public class StringToDataType {
 		
 		typeModelMap.setName("map");
 		
-		typeModelMapString.setName("mapString");
+//		typeModelMapString.setName("mapString");
+		
+		typeModelVersion.setName("version");
+		typeModelVersion.setPattern("((\\d+)((\\.\\d+)+)?)"); //examples: "10" "10.1" "10.1.999999", TODO check the pattern
 		
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelString);
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelBoolean);
@@ -114,6 +126,11 @@ public class StringToDataType {
 		
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelMap);
 		
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelVersion);
+		
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelRange);
+		
+		
 		map.put("string", typeModelString);
 		map.put("boolean", typeModelBoolean);	
 		
@@ -133,5 +150,8 @@ public class StringToDataType {
 		
 		map.put("map", typeModelMap);
 		map.put("mapString", typeModelMapString);
+		map.put("version", typeModelVersion);
+		map.put("range", typeModelRange);
+		
 	}
 }
