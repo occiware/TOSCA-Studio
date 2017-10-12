@@ -88,6 +88,26 @@ public class MixinReader {
 			}
 		}
 		
+		if (mixinStr.startsWith("tosca.interfaces")
+				&& !mixinStr.endsWith("Root")) {
+			ActionReader.readActions(mixin, (Map<String, ?>)mixins.get(mixinStr));
+		}
+		
+//		Map<String, ?> interfaces = (Map<String, ?>)map.get("interfaces");
+//		if (interfaces != null) {
+//			for (String toscaInterface : interfaces.keySet()) {
+//				if (interfaces.get(toscaInterface) instanceof String) {
+//					continue;
+//				}
+//				Map<String, ?> valuesInterfaces = (Map<String, ?>)interfaces.get(toscaInterface);
+//					Mixin mixinInterface = getMixinByName(valuesInterfaces.get("type").toString());
+//					if (mixinInterface == null) {
+//						System.err.println("Interface not found : " + mixinInterface);
+//					}
+//					mixin.getDepends().add(mixinInterface);
+//			}
+//		}
+//		
 		mixin.setScheme("http://occi/tosca/" + mixinStr.replaceAll("\\.", "").toLowerCase() + "#");
 		ExtensionsManager.getExtension("tosca").getMixins().add(mixin);
 	}
