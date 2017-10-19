@@ -44,12 +44,6 @@ public class ExtensionsManager {
 		
 		extensionsPerName.put("tosca", extension);
 		
-		// add abstract Resource in platform
-//		Kind coreResource = getKindFromItsTerm("core", "resource");
-//		Kind platformResource = Util.copyKind(coreResource, extension);
-//		platformResource.setName(platformResource.getName() + "Platform");
-//		platformResource.setParent(coreResource);
-//		extensionsPerName.get("platform").getKinds().add(platformResource);
 	}
 	
 	public static Extension getExtension(String extension) {
@@ -59,7 +53,6 @@ public class ExtensionsManager {
 	public static Mixin getMixinFromItsTerm(String extension, String termOfTheMixin) {
 		List<Mixin> mixins = extensionsPerName.get(extension).getMixins();
 		for (Mixin mixin : mixins ) {
-			System.err.println(mixin.getTerm());
 			if (mixin.getTerm().equals(termOfTheMixin)) {
 				return mixin;
 			}
@@ -70,7 +63,6 @@ public class ExtensionsManager {
 	public static Kind getKindFromItsTerm(String extension, String termOfTheKind) {
 		List<Kind> kinds = extensionsPerName.get(extension).getKinds();
 		for (Kind kind : kinds) {
-			System.err.println(kind.getTerm());
 			if (kind.getTerm().equals(termOfTheKind)) {
 				return kind;
 			}
