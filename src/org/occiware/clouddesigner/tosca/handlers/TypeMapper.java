@@ -59,9 +59,9 @@ public class TypeMapper extends Mapper {
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("platform", "component")
 			));
 		
-		this.mappings.put("tosca.nodes.LoadBalancer", 
-				new KindMapping(ExtensionsManager.getKindFromItsTerm("core", "resource"))
-		);
+//		this.mappings.put("tosca.nodes.LoadBalancer", 
+//				new KindMapping(ExtensionsManager.getKindFromItsTerm("core", "resource"))
+//		);
 		
 //		this.mappings.put("tosca.nodes.Container.Runtime", 
 //				new MixinMapping(ExtensionsManager.getKindFromItsTerm("platform", "component")
@@ -102,46 +102,50 @@ public class TypeMapper extends Mapper {
 //			));
 //		
 		
-		this.mappings.put("tosca.relationships.Root", 
-				new MixinMapping(ExtensionsManager.getMixinFromItsTerm("tosca", "tosca.interfaces.relationship.configure"))
+		this.mappings.put("tosca.relationships.Root",
+				new MixinMapping(ExtensionsManager.getKindFromItsTerm("core", "link"))
 		);
 		
-		
-		this.mappings.put("tosca.relationships.AttachesTo", 
-				new LinkMapping(
-						ExtensionsManager.getKindFromItsTerm("infrastructure", "storagelink"), 
-						ExtensionsManager.getKindFromItsTerm("infrastructure", "compute"),
-						ExtensionsManager.getKindFromItsTerm("infrastructure", "storage"))
-			);
-		
-		this.mappings.put("tosca.relationships.ConnectsTo", 
-				new LinkMapping(
-						ExtensionsManager.getKindFromItsTerm("core", "link"), 
-						ExtensionsManager.getKindFromItsTerm("core", "resource"),
-						ExtensionsManager.getKindFromItsTerm("core", "resource"))
-			);
-		
-		this.mappings.put("tosca.relationships.DependsOn", 
-				new LinkMapping(
-						ExtensionsManager.getKindFromItsTerm("core", "link"), 
-						ExtensionsManager.getKindFromItsTerm("core", "resource"),
-						ExtensionsManager.getKindFromItsTerm("core", "resource"))
-			);
-		
-		this.mappings.put("tosca.relationships.HostedOn", 
-				new LinkMapping(
-						ExtensionsManager.getKindFromItsTerm("core", "link"), 
-						ExtensionsManager.getKindFromItsTerm("platform", "component"),
-						ExtensionsManager.getKindFromItsTerm("platform", "component"))
-			);
-			
-		
-		this.mappings.put("tosca.relationships.RoutesTo", 
-				new LinkMapping(
-						ExtensionsManager.getKindFromItsTerm("tosca", "tosca.relationships.connectsto"), 
-						ExtensionsManager.getKindFromItsTerm("tosca", "tosca.nodes.loadbalancer"),
-						ExtensionsManager.getKindFromItsTerm("core", "resource"))
-			);
+//		this.mappings.put("tosca.relationships.Root", 
+//				new MixinMapping(ExtensionsManager.getMixinFromItsTerm("tosca", "tosca.interfaces.relationship.configure"))
+//		);
+//		
+//		
+//		this.mappings.put("tosca.relationships.AttachesTo", 
+//				new LinkMapping(
+//						ExtensionsManager.getKindFromItsTerm("infrastructure", "storagelink"), 
+//						ExtensionsManager.getKindFromItsTerm("infrastructure", "compute"),
+//						ExtensionsManager.getKindFromItsTerm("infrastructure", "storage"))
+//			);
+//		
+//		this.mappings.put("tosca.relationships.ConnectsTo", 
+//				new LinkMapping(
+//						ExtensionsManager.getKindFromItsTerm("core", "link"), 
+//						ExtensionsManager.getKindFromItsTerm("core", "resource"),
+//						ExtensionsManager.getKindFromItsTerm("core", "resource"))
+//			);
+//		
+//		this.mappings.put("tosca.relationships.DependsOn", 
+//				new LinkMapping(
+//						ExtensionsManager.getKindFromItsTerm("core", "link"), 
+//						ExtensionsManager.getKindFromItsTerm("core", "resource"),
+//						ExtensionsManager.getKindFromItsTerm("core", "resource"))
+//			);
+//		
+//		this.mappings.put("tosca.relationships.HostedOn", 
+//				new LinkMapping(
+//						ExtensionsManager.getKindFromItsTerm("core", "link"), 
+//						ExtensionsManager.getKindFromItsTerm("platform", "component"),
+//						ExtensionsManager.getKindFromItsTerm("platform", "component"))
+//			);
+//			
+//		
+//		this.mappings.put("tosca.relationships.RoutesTo", 
+//				new LinkMapping(
+//						ExtensionsManager.getKindFromItsTerm("tosca", "tosca.relationships.connectsto"), 
+//						ExtensionsManager.getKindFromItsTerm("tosca", "tosca.nodes.loadbalancer"),
+//						ExtensionsManager.getKindFromItsTerm("core", "resource"))
+//			);
 
 //		this.mappings.put("tosca.relationship.Configure", 
 //				new LinkMapping(
