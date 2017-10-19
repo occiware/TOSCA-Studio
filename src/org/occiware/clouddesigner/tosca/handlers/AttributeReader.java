@@ -1,6 +1,7 @@
 package org.occiware.clouddesigner.tosca.handlers;
 
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Map;
 
@@ -17,41 +18,43 @@ public class AttributeReader {
 	public static void readAttributes(Category category, Map<String, ?> attributes) {
 		for (String attributeName : attributes.keySet()) {
 			Attribute attribute = OCCIFactory.eINSTANCE.createAttribute();
-			Map<String, ?> attributesValues = (Map<String, ?> ) attributes.get(attributeName);
+			Map<String, ?> attributesValues = (Map<String, ?>) attributes.get(attributeName);
 			attribute.setName(attributeName);
 			Object description = attributesValues.get("description");
 			if (description != null) {
-				attribute.setDescription(description.toString());	
+				attribute.setDescription(description.toString());
 			}
 			if (attributesValues.containsKey("required")) {
-				attribute.setRequired(attributesValues.get("required").equals("true"));	
+				attribute.setRequired(attributesValues.get("required").equals("true"));
 			}
 			if (attributesValues.containsKey("default")) {
-				attribute.setDefault((String)attributesValues.get("default"));
+				attribute.setDefault((String) attributesValues.get("default"));
 			}
 			DataType type = StringToDataType.map.get(attributesValues.get("type"));
-			if (type != null) {
+			if (type != null || ((String)attributesValues.get("type")).startsWith("scalar")) {
 				if (attributesValues.get("constraints") != null) {
-					List<Map<String, ?>> constraints = (ArrayList<Map<String, ?>>)attributesValues.get("constraints");
+					List<Map<String, ?>> constraints = (ArrayList<Map<String, ?>>) attributesValues.get("constraints");
 					for (Map<String, ?> constraint : constraints) {
-					if (constraint.get("valid_values") != null) {
-						List<String> literals  = (ArrayList)constraint.get("valid_values");
-						type = OCCIFactory.eINSTANCE.createEnumerationType();
-						type.setName(attributeName + "Enum");
-//						String [] literals = validValues.replaceAll("[", "").replaceAll("]", "").trim().split(",");
-						for (String literal : literals) {
-							EnumerationLiteral enumLit = OCCIFactory.eINSTANCE.createEnumerationLiteral();
-							enumLit.setName(literal);
-							enumLit.setEnumerationType((EnumerationType) type);
-							((EnumerationType) type).getLiterals().add(enumLit);
+						if (constraint.get("valid_values") != null) {
+							List<String> literals = (ArrayList) constraint.get("valid_values");
+							type = OCCIFactory.eINSTANCE.createEnumerationType();
+							type.setName(attributeName + "Enum");
+							for (String literal : literals) {
+								EnumerationLiteral enumLit = OCCIFactory.eINSTANCE.createEnumerationLiteral();
+								enumLit.setName(literal);
+								enumLit.setEnumerationType((EnumerationType) type);
+								((EnumerationType) type).getLiterals().add(enumLit);
+							}
+							StringToDataType.map.put(attributeName + "Enum", type);
+							ExtensionsManager.getExtension("tosca").getTypes().add(type);
 						}
-						StringToDataType.map.put(attributeName + "Enum", type);
-						ExtensionsManager.getExtension("tosca").getTypes().add(type);
-					}
-					if (constraint.get("min_length") != null 
-							&& type instanceof StringType) {
-						((StringType)type).setMinLength(Integer.parseInt(constraint.get("min_length").toString())); // TODO this may change all attribute type string
-					}
+						if (constraint.get("min_length") != null && type instanceof StringType) {
+							type = StringToDataType.map.get("stringMinOne");
+						}
+						if (constraint.get("greater_or_equal") != null ) {
+							type =  StringToDataType.map.get((String)attributesValues.get("type") +
+									constraint.get("greater_or_equal"));
+						}
 					}
 				}
 				attribute.setType(type);
@@ -59,5 +62,5 @@ public class AttributeReader {
 			category.getAttributes().add(attribute);
 		}
 	}
-	
+
 }
