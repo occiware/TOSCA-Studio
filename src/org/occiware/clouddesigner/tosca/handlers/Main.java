@@ -53,7 +53,7 @@ public class Main extends AbstractHandler {
 			for (String datatype : dataTypes.keySet()) {
 				DataTypeReader.read(datatype, (Map<String, ?>) dataTypes.get(datatype));
 			}
-			
+
 			// capabilities
 			Map<String, ?> capabilites = (Map<String, ?>) map.get("capability_types");
 			MixinReader mixinReader = new MixinReader(capabilites);
@@ -68,26 +68,16 @@ public class Main extends AbstractHandler {
 					Map<String, ?> mixins = (Map<String, ?>) map.get(collection);
 					mixinReader = new MixinReader(mixins);
 					for (String mixin : mixins.keySet()) {
-						if ("tosca.nodes.LoadBalancer".equals(mixin)) {
-							KindReader kindReader = new KindReader(mixins);
-							kindReader.readKind(mixin, mixins);
-						} else {
-							mixinReader.readMixin(mixin, (Map<String, ?>) mixins.get(mixin));
-						}
+						mixinReader.readMixin(mixin, (Map<String, ?>) mixins.get(mixin));
 					}
 				}
 			}
 
 			// links / relationship
 			Map<String, ?> links = (Map<String, ?>) map.get("relationship_types");
-			KindReader linkReader = new KindReader(links);
-			// relationships.Root is a Mixin
 			mixinReader = new MixinReader(links);
-			mixinReader.readMixin("tosca.relationships.Root", (Map<String, ?>) links.get("tosca.relationships.Root"));
-			for (String kind : links.keySet()) {
-				if (!"tosca.relationships.Root".equals(kind)) {
-					linkReader.readKind(kind, (Map<String, ?>) links.get(kind));
-				}
+			for (String link : links.keySet()) {
+				mixinReader.readMixin(link, (Map<String, ?>) links.get(link));
 			}
 
 			Extension extension = ExtensionsManager.getExtension("tosca");
@@ -95,11 +85,11 @@ public class Main extends AbstractHandler {
 			for (Kind kind : extension.getKinds()) {
 				mapper.map(kind);
 			}
-			
+
 			for (Mixin mixin : extension.getMixins()) {
 				mapper.map(mixin);
 			}
-			
+
 			mapper = new AttributeMapper();
 			for (Kind kind : extension.getKinds()) {
 				mapper.map(kind);
@@ -107,9 +97,9 @@ public class Main extends AbstractHandler {
 			for (Mixin mixin : extension.getMixins()) {
 				mapper.map(mixin);
 			}
-			
+
 			ExtensionsManager.save();
-			
+
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
