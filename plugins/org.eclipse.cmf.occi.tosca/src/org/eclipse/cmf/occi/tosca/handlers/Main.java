@@ -1,5 +1,5 @@
 
-package org.occiware.clouddesigner.tosca.handlers;
+package org.eclipse.cmf.occi.tosca.handlers;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -45,7 +45,7 @@ public class Main extends AbstractHandler {
 		// MessageDialog.openInformation(window.getShell(), "Tosca", "Tosca2Occi");
 		try {
 			YamlReader reader = new YamlReader(new FileReader(
-					"C:/Users/schallit/workspace-tosca/org.occiware.clouddesigner.tosca/normative-types.yml"));
+					"C:/Users/schallit/workspace-tosca/org.eclipse.cmf.occi.tosca/normative-types.yml"));
 			map = (Map<String, ?>) reader.read();
 
 			// datatypes <=> record

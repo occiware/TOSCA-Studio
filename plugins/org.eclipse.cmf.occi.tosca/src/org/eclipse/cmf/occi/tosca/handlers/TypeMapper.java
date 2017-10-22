@@ -1,4 +1,4 @@
-package org.occiware.clouddesigner.tosca.handlers;
+package org.eclipse.cmf.occi.tosca.handlers;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,7 +10,7 @@ import org.eclipse.cmf.occi.core.Kind;
 import org.eclipse.cmf.occi.core.Mixin;
 import org.eclipse.cmf.occi.core.OCCIFactory;
 import org.eclipse.cmf.occi.core.Type;
-import org.occiware.clouddesigner.tosca.handlers.Mapper.Mapping;
+import org.eclipse.cmf.occi.tosca.handlers.Mapper.Mapping;
 
 public class TypeMapper extends Mapper {
 	

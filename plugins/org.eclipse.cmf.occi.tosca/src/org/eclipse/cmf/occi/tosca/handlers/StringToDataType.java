@@ -1,4 +1,4 @@
-package org.occiware.clouddesigner.tosca.handlers;
+package org.eclipse.cmf.occi.tosca.handlers;
 
 
 import java.util.HashMap;
