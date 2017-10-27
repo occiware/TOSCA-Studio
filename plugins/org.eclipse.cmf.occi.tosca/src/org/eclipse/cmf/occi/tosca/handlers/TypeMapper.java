@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.cmf.occi.core.Constraint;
 import org.eclipse.cmf.occi.core.Extension;
 import org.eclipse.cmf.occi.core.Kind;
 import org.eclipse.cmf.occi.core.Mixin;
@@ -21,7 +22,7 @@ public class TypeMapper extends Mapper {
 				new MixinMapping(
 						ExtensionsManager.getKindFromItsTerm("core", "resource"),
 						ExtensionsManager.getMixinFromItsTerm("tosca", "tosca.interfaces.node.lifecycle.standard")
-								));
+		));
 		
 		this.mappings.put("tosca.nodes.BlockStorage",
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("infrastructure", "storage"))
@@ -29,44 +30,40 @@ public class TypeMapper extends Mapper {
 		
 		this.mappings.put("tosca.nodes.ObjectStorage", 
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("infrastructure", "storage")
-			));
-
+		));
 		
+		Constraint computeConstraint = OCCIFactory.eINSTANCE.createConstraint();
+		computeConstraint.setName("SourceMustBeSoftwareComponent");
 		this.mappings.put("tosca.nodes.Compute", 
-				new MixinMapping(ExtensionsManager.getKindFromItsTerm("infrastructure", "compute"))
+				new MixinMapping(ExtensionsManager.getKindFromItsTerm("infrastructure", "compute"), computeConstraint)
 			);
+		
+
+	
 
 		this.mappings.put("tosca.nodes.SoftwareComponent", 
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("platform", "component")
 			));
-		
-
-//		this.mappings.put("tosca.nodes.WebServer", 
-//				new MixinMapping(ExtensionsManager.getKindFromItsTerm("platform", "component")
-//			));
-		
 
 		this.mappings.put("tosca.nodes.WebApplication", 
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("platform", "component")
 			));
-
 		
+		Constraint webServerConstraint = OCCIFactory.eINSTANCE.createConstraint();
+		webServerConstraint.setName("SourceMustBeWebApplication");
+		this.mappings.put("tosca.nodes.WebServer", 
+				new MixinMapping(webServerConstraint)
+			);
+		
+		Constraint dbmsConstraint = OCCIFactory.eINSTANCE.createConstraint();
+		dbmsConstraint.setName("SourceMustBeDatabase");
 		this.mappings.put("tosca.nodes.DBMS", 
-				new MixinMapping(ExtensionsManager.getMixinFromItsTerm("platform", "database")
-			));
+				new MixinMapping(ExtensionsManager.getMixinFromItsTerm("platform", "database"), dbmsConstraint)
+			);
 		
 		this.mappings.put("tosca.nodes.Database", 
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("platform", "component")
 			));
-		
-//		this.mappings.put("tosca.nodes.LoadBalancer", 
-//				new KindMapping(ExtensionsManager.getKindFromItsTerm("core", "resource"))
-//		);
-		
-//		this.mappings.put("tosca.nodes.Container.Runtime", 
-//				new MixinMapping(ExtensionsManager.getKindFromItsTerm("platform", "component")
-//			));
-		
 
 		this.mappings.put("tosca.nodes.Container.Application", 
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("platform", "component")
@@ -74,86 +71,50 @@ public class TypeMapper extends Mapper {
 		
 		this.mappings.put("tosca.policies.Root", 
 				new MixinMapping(ExtensionsManager.getMixinFromItsTerm("sla", "agreement_term"))
-		);
-		
-//		this.mappings.put("tosca.policies.Update", 
-//				new MixinMapping(ExtensionsManager.getMixinFromItsTerm("sla", "agreement_term")
-//		));
-//		
-//		this.mappings.put("tosca.policies.Placement", 
-//				new MixinMapping(ExtensionsManager.getMixinFromItsTerm("sla", "agreement_term")
-//			));
-//
-//		this.mappings.put("tosca.policies.Scaling", 
-//				new MixinMapping(ExtensionsManager.getMixinFromItsTerm("sla", "agreement_term")
-//			));
-//
-//		this.mappings.put("tosca.policies.Performance", 
-//				new MixinMapping(ExtensionsManager.getKindFromItsTerm("sla", "agreement")
-//			));
-//		
-//		Mixin standardMixin = OCCIFactory.eINSTANCE.createMixin();
-//		standardMixin.setName("StandardMixin");
-//		standardMixin.setScheme("http://occi/tosca/"+"standardMixin".replaceAll("\\.", "").toLowerCase()+"#");
-//		extension.getMixins().add(standardMixin);
-//		this.mappings.put("tosca.interfaces.node.lifecycle.Standard", 
-//				new ResourceMapping(ExtensionsManager.getKindFromItsTerm("core", "resource"),
-//						standardMixin
-//			));
-//		
+		);	
 		
 		this.mappings.put("tosca.relationships.Root",
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("core", "link"))
 		);
 		
-//		this.mappings.put("tosca.relationships.Root", 
-//				new MixinMapping(ExtensionsManager.getMixinFromItsTerm("tosca", "tosca.interfaces.relationship.configure"))
-//		);
-//		
-//		
-//		this.mappings.put("tosca.relationships.AttachesTo", 
-//				new LinkMapping(
-//						ExtensionsManager.getKindFromItsTerm("infrastructure", "storagelink"), 
-//						ExtensionsManager.getKindFromItsTerm("infrastructure", "compute"),
-//						ExtensionsManager.getKindFromItsTerm("infrastructure", "storage"))
-//			);
-//		
-//		this.mappings.put("tosca.relationships.ConnectsTo", 
-//				new LinkMapping(
-//						ExtensionsManager.getKindFromItsTerm("core", "link"), 
-//						ExtensionsManager.getKindFromItsTerm("core", "resource"),
-//						ExtensionsManager.getKindFromItsTerm("core", "resource"))
-//			);
-//		
-//		this.mappings.put("tosca.relationships.DependsOn", 
-//				new LinkMapping(
-//						ExtensionsManager.getKindFromItsTerm("core", "link"), 
-//						ExtensionsManager.getKindFromItsTerm("core", "resource"),
-//						ExtensionsManager.getKindFromItsTerm("core", "resource"))
-//			);
-//		
-//		this.mappings.put("tosca.relationships.HostedOn", 
-//				new LinkMapping(
-//						ExtensionsManager.getKindFromItsTerm("core", "link"), 
-//						ExtensionsManager.getKindFromItsTerm("platform", "component"),
-//						ExtensionsManager.getKindFromItsTerm("platform", "component"))
-//			);
-//			
-//		
-//		this.mappings.put("tosca.relationships.RoutesTo", 
-//				new LinkMapping(
-//						ExtensionsManager.getKindFromItsTerm("tosca", "tosca.relationships.connectsto"), 
-//						ExtensionsManager.getKindFromItsTerm("tosca", "tosca.nodes.loadbalancer"),
-//						ExtensionsManager.getKindFromItsTerm("core", "resource"))
-//			);
-
-//		this.mappings.put("tosca.relationship.Configure", 
-//				new LinkMapping(
-//						ExtensionsManager.getKindFromItsTerm("core", "link"),
-//						null,
-//						null,
-//						configureMixin)						
-//			);
+		Constraint dependsOnConstraint = OCCIFactory.eINSTANCE.createConstraint();
+		dependsOnConstraint.setName("SourceMustBeNodeAndTargetMustBeNode");
+		this.mappings.put("tosca.relationships.DependsOn",
+				new MixinMapping(dependsOnConstraint)
+		);
+		
+		Constraint hostedOnConstraints1 = OCCIFactory.eINSTANCE.createConstraint();
+		hostedOnConstraints1.setName("SourceMustBeSoftwareComponentAndTargetMustBeCompute");
+		MixinMapping hostedOnMapping = new MixinMapping(hostedOnConstraints1);
+		
+		Constraint hostedOnConstraints2 = OCCIFactory.eINSTANCE.createConstraint();
+		hostedOnConstraints2.setName("SourceMustBeWebServerAndTargetMustBeWebApplication");
+		hostedOnMapping.constraints.add(hostedOnConstraints2);
+		this.mappings.put("tosca.relationships.HostedOn", hostedOnMapping);
+		
+		Constraint hostedOnConstraints3 = OCCIFactory.eINSTANCE.createConstraint();
+		hostedOnConstraints3.setName("SourceMustBeDatabaseAndTargetMustBeDBMS");
+		hostedOnMapping.constraints.add(hostedOnConstraints3);
+		this.mappings.put("tosca.relationships.HostedOn", hostedOnMapping);
+		
+		Constraint hostedOnConstraints4 = OCCIFactory.eINSTANCE.createConstraint();
+		hostedOnConstraints4.setName("SourceMustBeContainerApplicationAndTargetMustBeContainerRuntime");
+		hostedOnMapping.constraints.add(hostedOnConstraints4);
+		this.mappings.put("tosca.relationships.HostedOn", hostedOnMapping);
+		
+		Constraint attachesToConstraint = OCCIFactory.eINSTANCE.createConstraint();
+		attachesToConstraint.setName("SourceMustBeComputeAndTargetMustBeBlockStorage");
+		this.mappings.put("tosca.relationships.AttachesTo",
+				new MixinMapping(attachesToConstraint)
+		);
+		
+		Constraint routesToConstraint = OCCIFactory.eINSTANCE.createConstraint();
+		routesToConstraint.setName("SourceMustBeLoadBalancer");
+		this.mappings.put("tosca.relationships.RoutesTo",
+				new MixinMapping(routesToConstraint)
+		);
+			
+		
 	}
 	
 	private class KindMapping implements Mapping<Kind> {
@@ -169,17 +130,39 @@ public class TypeMapper extends Mapper {
 	private class MixinMapping implements Mapping<Mixin> {
 		public final Kind apply;
 		public final Mixin dependsOn;
+		public final List<Constraint> constraints;
 		public MixinMapping(Kind apply) {
 			this.apply = apply;
 			this.dependsOn = null;
+			this.constraints = new ArrayList<Constraint>();
 		}
 		public MixinMapping(Mixin depend) {
 			this.apply = null;
 			this.dependsOn = depend;
+			this.constraints = new ArrayList<Constraint>();
+		}
+		public MixinMapping(Constraint constraint) {
+			this.apply = null;
+			this.dependsOn = null;
+			this.constraints = new ArrayList<Constraint>();
+			this.constraints.add(constraint);
 		}
 		public MixinMapping(Kind apply, Mixin depend) {
 			this.apply = apply;
 			this.dependsOn = depend;
+			this.constraints = new ArrayList<Constraint>();
+		}
+		public MixinMapping(Mixin depend, Constraint constraint) {
+			this.apply = null;
+			this.dependsOn = depend;
+			this.constraints = new ArrayList<Constraint>();
+			this.constraints.add(constraint);
+		}
+		public MixinMapping(Kind apply, Constraint constraint) {
+			this.apply = apply;
+			this.dependsOn = null;
+			this.constraints = new ArrayList<Constraint>();
+			this.constraints.add(constraint);
 		}
 		public void mapTo(Mixin mixin) {
 			if (apply != null) {
@@ -187,6 +170,9 @@ public class TypeMapper extends Mapper {
 			} 
 			if (dependsOn != null) {
 				mixin.getDepends().add(dependsOn);
+			}
+			if (!constraints.isEmpty()) {
+				mixin.getConstraints().addAll(constraints);
 			}
 		}
 	}
