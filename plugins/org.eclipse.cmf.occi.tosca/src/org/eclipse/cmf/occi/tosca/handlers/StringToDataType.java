@@ -31,9 +31,8 @@ public class StringToDataType {
 	
 	public final static NumericType typeModelRange = OCCIFactory.eINSTANCE.createNumericType();
 	
-	public final static EnumerationType typeEnum = OCCIFactory.eINSTANCE.createEnumerationType();
+	public final static NumericType toscaDatatypesNetworkPortDef = OCCIFactory.eINSTANCE.createNumericType();
 	
-	public final static ArrayType typeArray = OCCIFactory.eINSTANCE.createArrayType();
 	public final static ArrayType typeArrayString = OCCIFactory.eINSTANCE.createArrayType();
 	public final static ArrayType typeArrayBoolean = OCCIFactory.eINSTANCE.createArrayType();
 	public final static ArrayType typeArrayByte = OCCIFactory.eINSTANCE.createArrayType();
@@ -42,8 +41,6 @@ public class StringToDataType {
 	public final static ArrayType typeArrayInteger = OCCIFactory.eINSTANCE.createArrayType();
 	public final static ArrayType typeArrayLong = OCCIFactory.eINSTANCE.createArrayType();
 	public final static ArrayType typeArrayShort = OCCIFactory.eINSTANCE.createArrayType();
-	
-	public final static RecordType typeRecord = OCCIFactory.eINSTANCE.createRecordType();
 	
 	public final static EObjectType typeModelMap = OCCIFactory.eINSTANCE.createEObjectType();
 	
@@ -99,14 +96,16 @@ public class StringToDataType {
 		typeModelRange.setMaxInclusive("65535");
 		typeModelRange.setMinInclusive("1");
 		
+		// semantically same as "range" type, but used explicitly in TOSCA. We create a specific type to remain consistent between both models: TOSCA and OCCI.
+		toscaDatatypesNetworkPortDef.setType(NumericTypeEnum.SHORT);
+		toscaDatatypesNetworkPortDef.setName("tosca.datatypes.network.PortDef");
+		toscaDatatypesNetworkPortDef.setMaxInclusive("65535");
+		toscaDatatypesNetworkPortDef.setMinInclusive("1");
+		
 		typeModelBoolean.setName("boolean");
 		typeModelString.setName("string");
 		typeModelStringMinOne.setName("stringMinOne");
 		typeModelStringMinOne.setMinLength(1);
-		typeEnum.setName("enum");
-		
-		typeArray.setName("array");
-		
 		typeArrayString.setName("arrayString");
 		typeArrayString.setType(typeModelString);
 		typeArrayBoolean.setName("arrayBoolean");
@@ -124,11 +123,7 @@ public class StringToDataType {
 		typeArrayShort.setName("arrayShort");
 		typeArrayShort.setType(typeModelShort);
 		
-		typeRecord.setName("record");
-		
 		typeModelMap.setName("map");
-		
-//		typeModelMapString.setName("mapString");
 		
 		typeModelVersion.setName("version");
 		typeModelVersion.setPattern("((\\d+)((\\.\\d+)+)?)"); //examples: "10" "10.1" "10.1.999999", TODO check the pattern
@@ -143,9 +138,7 @@ public class StringToDataType {
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelIntegerMinOne);
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelLong);
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelShort);
-		ExtensionsManager.getExtension("tosca").getTypes().add(typeEnum);
 		
-		ExtensionsManager.getExtension("tosca").getTypes().add(typeArray);
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayString);
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayBoolean);
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayByte);
@@ -155,13 +148,13 @@ public class StringToDataType {
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayLong);
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayShort);
 		
-		ExtensionsManager.getExtension("tosca").getTypes().add(typeRecord);
-		
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelMap);
 		
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelVersion);
 		
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelRange);
+		
+		ExtensionsManager.getExtension("tosca").getTypes().add(toscaDatatypesNetworkPortDef);
 		
 		ExtensionsManager.getExtension("tosca").getTypes().add(scalarFrequency);
 		
@@ -186,15 +179,13 @@ public class StringToDataType {
 		map.put("long", typeModelLong);
 		map.put("short", typeModelShort);
 		
-		map.put("enum", typeEnum);
-		map.put("array", typeArray);
-		map.put("arraystring", typeArray);
-		map.put("record", typeRecord);
+		map.put("arraystring", typeArrayString);
 		
 		map.put("map", typeModelMap);
 		map.put("mapString", typeModelMapString);
 		map.put("version", typeModelVersion);
 		map.put("range", typeModelRange);
+		map.put("tosca.datatypes.network.PortDef", toscaDatatypesNetworkPortDef);
 
 		map.put("scalar-unit.frequency0.1 GHz", scalarFrequency);
 		
