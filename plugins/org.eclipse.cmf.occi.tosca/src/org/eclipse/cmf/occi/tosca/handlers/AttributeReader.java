@@ -19,6 +19,7 @@ public class AttributeReader {
 		for (String attributeName : attributes.keySet()) {
 			Attribute attribute = OCCIFactory.eINSTANCE.createAttribute();
 			Map<String, ?> attributesValues = (Map<String, ?>) attributes.get(attributeName);
+			attributeName = attributeName.replaceAll("_",".");
 			attribute.setName(attributeName);
 			Object description = attributesValues.get("description");
 			if (description != null) {

@@ -12,20 +12,20 @@ public class AttributeMapper extends Mapper {
 	public AttributeMapper() {
 		super();
 		
-		this.mappings.put("tosca.nodes.ObjectStorage", new AttributesMapping("maxsize"));
+		this.mappings.put("tosca_nodes_ObjectStorage", new AttributesMapping("maxsize"));
 		
 		List<String> attributeToRemoveFromNodeRoot = new ArrayList<String>();
-		attributeToRemoveFromNodeRoot.add("tosca_id");
-		attributeToRemoveFromNodeRoot.add("tosca_name");
+		attributeToRemoveFromNodeRoot.add("tosca.id");
+		attributeToRemoveFromNodeRoot.add("tosca.name");
 		attributeToRemoveFromNodeRoot.add("state");
-		this.mappings.put("tosca.nodes.Root", new AttributesMapping(attributeToRemoveFromNodeRoot));
+		this.mappings.put("tosca_nodes_Root", new AttributesMapping(attributeToRemoveFromNodeRoot));
 		
-		this.mappings.put("tosca.relationships.AttachesTo", new AttributesMapping("device"));
+		this.mappings.put("tosca_relationships_AttachesTo", new AttributesMapping("device"));
 
 		List<String> actionsToRemoveFromStandard = new ArrayList<String>();
 		actionsToRemoveFromStandard.add("start");
 		actionsToRemoveFromStandard.add("stop");
-		this.mappings.put("tosca.interfaces.node.lifecycle.Standard", new ActionMapping(actionsToRemoveFromStandard));
+		this.mappings.put("tosca_interfaces_node_lifecycle_Standard", new ActionMapping(actionsToRemoveFromStandard));
 	}
 	
 	private class ActionMapping implements Mapping<Type> {
