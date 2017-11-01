@@ -36,8 +36,9 @@ public class DataTypeReader {
 		List<RecordField> recordFields = new ArrayList<>();
 		for (String recordFieldName : recordFieldsMap.keySet()) {
 			RecordField recordField = OCCIFactory.eINSTANCE.createRecordField();
-			recordField.setName(recordFieldName);
 			Map<String, ?> recordFieldMap = (Map<String, ?>) recordFieldsMap.get(recordFieldName);
+			recordFieldName = recordFieldName.replaceAll("_",".");
+			recordField.setName(recordFieldName);
 
 			String description = (String) recordFieldMap.get("description");
 			if (description != null) {
