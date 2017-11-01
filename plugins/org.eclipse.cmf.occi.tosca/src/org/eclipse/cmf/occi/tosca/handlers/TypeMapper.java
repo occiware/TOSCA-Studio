@@ -18,68 +18,65 @@ public class TypeMapper extends Mapper {
 	public TypeMapper() {
 		super();
 		
-		this.mappings.put("tosca.nodes.Root", 
+		this.mappings.put("tosca_nodes_Root", 
 				new MixinMapping(
 						ExtensionsManager.getKindFromItsTerm("core", "resource"),
-						ExtensionsManager.getMixinFromItsTerm("tosca", "tosca.interfaces.node.lifecycle.standard")
+						ExtensionsManager.getMixinFromItsTerm("tosca", "tosca_interfaces_node_lifecycle_standard")
 		));
 		
-		this.mappings.put("tosca.nodes.BlockStorage",
+		this.mappings.put("tosca_nodes_BlockStorage",
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("infrastructure", "storage"))
 		);
 		
-		this.mappings.put("tosca.nodes.ObjectStorage", 
+		this.mappings.put("tosca_nodes_ObjectStorage", 
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("infrastructure", "storage")
 		));
 		
 		Constraint computeConstraint = OCCIFactory.eINSTANCE.createConstraint();
 		computeConstraint.setName("SourceMustBeSoftwareComponent");
-		this.mappings.put("tosca.nodes.Compute", 
+		this.mappings.put("tosca_nodes_Compute", 
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("infrastructure", "compute"), computeConstraint)
 			);
-		
 
-	
-
-		this.mappings.put("tosca.nodes.SoftwareComponent", 
+		this.mappings.put("tosca_nodes_SoftwareComponent", 
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("platform", "component")
 			));
 
-		this.mappings.put("tosca.nodes.WebApplication", 
+		this.mappings.put("tosca_nodes_WebApplication", 
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("platform", "component")
 			));
 		
 		Constraint webServerConstraint = OCCIFactory.eINSTANCE.createConstraint();
 		webServerConstraint.setName("SourceMustBeWebApplication");
-		this.mappings.put("tosca.nodes.WebServer", 
+		this.mappings.put("tosca_nodes_WebServer", 
 				new MixinMapping(webServerConstraint)
-			);
+		);
 		
 		Constraint dbmsConstraint = OCCIFactory.eINSTANCE.createConstraint();
 		dbmsConstraint.setName("SourceMustBeDatabase");
-		this.mappings.put("tosca.nodes.DBMS", 
+		this.mappings.put("tosca_nodes_DBMS", 
 				new MixinMapping(ExtensionsManager.getMixinFromItsTerm("platform", "database"), dbmsConstraint)
 			);
 		
-		this.mappings.put("tosca.nodes.Database", 
+		this.mappings.put("tosca_nodes_Database", 
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("platform", "component")
 			));
 
-		this.mappings.put("tosca.nodes.Container.Application", 
+		this.mappings.put("tosca_nodes_Container_Application", 
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("platform", "component")
 			));
 		
-		this.mappings.put("tosca.policies.Root", 
+		this.mappings.put("tosca_policies_Root", 
 				new MixinMapping(ExtensionsManager.getMixinFromItsTerm("sla", "agreement_term"))
 		);	
 		
-		this.mappings.put("tosca.relationships.Root",
+		this.mappings.put("tosca_relationships_Root",
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("core", "link"))
 		);
 		
 		Constraint dependsOnConstraint = OCCIFactory.eINSTANCE.createConstraint();
 		dependsOnConstraint.setName("SourceMustBeNodeAndTargetMustBeNode");
-		this.mappings.put("tosca.relationships.DependsOn",
+		this.mappings.put("tosca_relationships_DependsOn",
 				new MixinMapping(dependsOnConstraint)
 		);
 		
@@ -90,31 +87,29 @@ public class TypeMapper extends Mapper {
 		Constraint hostedOnConstraints2 = OCCIFactory.eINSTANCE.createConstraint();
 		hostedOnConstraints2.setName("SourceMustBeWebServerAndTargetMustBeWebApplication");
 		hostedOnMapping.constraints.add(hostedOnConstraints2);
-		this.mappings.put("tosca.relationships.HostedOn", hostedOnMapping);
+		this.mappings.put("tosca_relationships_HostedOn", hostedOnMapping);
 		
 		Constraint hostedOnConstraints3 = OCCIFactory.eINSTANCE.createConstraint();
 		hostedOnConstraints3.setName("SourceMustBeDatabaseAndTargetMustBeDBMS");
 		hostedOnMapping.constraints.add(hostedOnConstraints3);
-		this.mappings.put("tosca.relationships.HostedOn", hostedOnMapping);
+		this.mappings.put("tosca_relationships_HostedOn", hostedOnMapping);
 		
 		Constraint hostedOnConstraints4 = OCCIFactory.eINSTANCE.createConstraint();
 		hostedOnConstraints4.setName("SourceMustBeContainerApplicationAndTargetMustBeContainerRuntime");
 		hostedOnMapping.constraints.add(hostedOnConstraints4);
-		this.mappings.put("tosca.relationships.HostedOn", hostedOnMapping);
+		this.mappings.put("tosca_relationships_HostedOn", hostedOnMapping);
 		
 		Constraint attachesToConstraint = OCCIFactory.eINSTANCE.createConstraint();
 		attachesToConstraint.setName("SourceMustBeComputeAndTargetMustBeBlockStorage");
-		this.mappings.put("tosca.relationships.AttachesTo",
+		this.mappings.put("tosca_relationships_AttachesTo",
 				new MixinMapping(attachesToConstraint)
 		);
 		
 		Constraint routesToConstraint = OCCIFactory.eINSTANCE.createConstraint();
 		routesToConstraint.setName("SourceMustBeLoadBalancer");
-		this.mappings.put("tosca.relationships.RoutesTo",
+		this.mappings.put("tosca_relationships_RoutesTo",
 				new MixinMapping(routesToConstraint)
 		);
-			
-		
 	}
 	
 	private class KindMapping implements Mapping<Kind> {

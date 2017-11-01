@@ -15,12 +15,13 @@ public class MixinReader {
 	}
 
 	private Mixin getMixinByName(String name) {
+		name = name.replaceAll("\\.", "_");
 		for (Mixin mixin : ExtensionsManager.getExtension("tosca").getMixins()) {
 			if (name.equals(mixin.getName())) {
 				return mixin;
 			}
 		}
-		Map<String, ?> maps = (Map<String, ?>) mixins.get(name);
+		Map<String, ?> maps = (Map<String, ?>) mixins.get(name.replaceAll("_", "\\."));
 		System.out.println(name + " is not defined");
 		if (maps == null && StringToDataType.map.get(name) != null) {
 			// TODO for instance we have derived_from: integer
@@ -33,6 +34,7 @@ public class MixinReader {
 	}
 
 	public void readMixin(String mixinStr, Map<String, ?> map) {
+		mixinStr = mixinStr.replaceAll("\\.", "_");
 		boolean alreadyRegistered = false;
 		for (Mixin registeredMixin : ExtensionsManager.getExtension("tosca").getMixins()) {
 			if (registeredMixin.getName().equals(mixinStr)) {
@@ -46,6 +48,8 @@ public class MixinReader {
 		Mixin mixin = OCCIFactory.eINSTANCE.createMixin();
 		mixin.setName(mixinStr);
 
+		System.out.println(mixinStr);
+		
 		Object derived_from = map.get("derived_from");
 		if (derived_from != null) {
 			Mixin parent = getMixinByName(derived_from.toString());

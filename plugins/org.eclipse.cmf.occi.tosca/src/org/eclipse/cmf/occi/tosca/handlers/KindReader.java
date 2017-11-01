@@ -45,11 +45,12 @@ public class KindReader {
 		}
 		
 		Kind kind = OCCIFactory.eINSTANCE.createKind();
+		kindStr = kindStr.replaceAll("\\.", "_");
 		kind.setName(kindStr);
 		
 		if (map.get("derived_from") != null) {
 			String nameOfParent = map.get("derived_from").toString();
-			if ("tosca.relationships.Root".equals(nameOfParent)) {
+			if ("tosca_relationships_Root".equals(nameOfParent)) {
 				for (Mixin mixin : ExtensionsManager.getExtension("tosca").getMixins()) {
 					System.err.println(mixin.getTerm());
 					if (mixin.getTerm().equals("tosca.relationships.root")) {
@@ -78,7 +79,7 @@ public class KindReader {
 			}
 		}
 		
-		kind.setScheme("http://occi/tosca/" + kindStr.replaceAll("\\.", "").toLowerCase() + "#");
+		kind.setScheme(ExtensionsManager.getExtension("tosca").getScheme());
 		ExtensionsManager.getExtension("tosca").getKinds().add(kind);
 	}
 
