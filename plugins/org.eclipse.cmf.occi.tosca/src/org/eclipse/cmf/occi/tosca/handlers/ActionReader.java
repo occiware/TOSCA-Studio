@@ -22,7 +22,7 @@ public class ActionReader {
 						action.setTitle(description.toString());	
 					}
 					type.getActions().add(action);
-					action.setScheme("http://occi/tosca/" + actionName.replaceAll("\\.", "").toLowerCase() + "#");
+					action.setScheme(ExtensionsManager.getExtension("tosca").getScheme());
 				}
 			}
 		}
