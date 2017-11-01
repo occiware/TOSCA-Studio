@@ -51,7 +51,10 @@ public class Main extends AbstractHandler {
 			// datatypes <=> record
 			Map<String, ?> dataTypes = (Map<String, ?>) map.get("data_types");
 			for (String datatype : dataTypes.keySet()) {
-				DataTypeReader.read(datatype, (Map<String, ?>) dataTypes.get(datatype));
+				if (!"tosca.datatypes.Root".equals(datatype) && //the datatype Root is omitted because it does not have any record fields, and it is not allowed in OCCI meta model
+						((Map<String, ?>) dataTypes.get(datatype)).get("properties") != null) {//tosca.datatypes.network.PortDef is also omitted and considered as a type
+					DataTypeReader.read(datatype, (Map<String, ?>) dataTypes.get(datatype));
+				}
 			}
 
 			// capabilities
