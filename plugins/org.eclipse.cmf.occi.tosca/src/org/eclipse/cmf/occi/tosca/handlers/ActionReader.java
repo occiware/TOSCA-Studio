@@ -22,7 +22,8 @@ public class ActionReader {
 						action.setTitle(description.toString());	
 					}
 					type.getActions().add(action);
-					action.setScheme(ExtensionsManager.getExtension("tosca").getScheme());
+					action.setScheme(ExtensionsManager.getExtension("tosca").getScheme().split("#")[0] + 
+							"/" + type.getTerm() + "/action#");
 				}
 			}
 		}
