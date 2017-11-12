@@ -10,6 +10,7 @@ import org.eclipse.cmf.occi.core.Category;
 import org.eclipse.cmf.occi.core.DataType;
 import org.eclipse.cmf.occi.core.EnumerationLiteral;
 import org.eclipse.cmf.occi.core.EnumerationType;
+import org.eclipse.cmf.occi.core.Mixin;
 import org.eclipse.cmf.occi.core.OCCIFactory;
 import org.eclipse.cmf.occi.core.StringType;
 
@@ -17,6 +18,31 @@ public class AttributeReader {
 
 	public static void readAttributes(Category category, Map<String, ?> attributes) {
 		for (String attributeName : attributes.keySet()) {
+			boolean skip = false;
+			if (category instanceof Mixin) {
+				Mixin mixin = (Mixin) category;
+				for (Mixin parent : mixin.getDepends()) {
+					for (Attribute attribute : parent.getAttributes()) {
+						if (attribute.getName().equals(attributeName.replaceAll("_","."))) {
+							System.err.println("WARNING " + attributeName + " is defined in both " + parent.getName() + " and " + mixin.getName());
+							skip = true; // TODO add as OCL constraint
+						}
+					}
+					if (!skip && parent.getDepends() != null) {
+						for (Mixin grandParent : parent.getDepends()) {
+							for (Attribute attribute : grandParent.getAttributes()) {
+								if (attribute.getName().equals(attributeName.replaceAll("_","."))) {
+									System.err.println("WARNING " + attributeName + " is defined in both " + parent.getName() + " and " + mixin.getName());
+									skip = true; // TODO add as OCL constraint
+								}
+							}	
+						}
+					}
+				}
+			}
+			if (skip) {
+				continue;
+			}
 			Attribute attribute = OCCIFactory.eINSTANCE.createAttribute();
 			Map<String, ?> attributesValues = (Map<String, ?>) attributes.get(attributeName);
 			attributeName = attributeName.replaceAll("_",".");
