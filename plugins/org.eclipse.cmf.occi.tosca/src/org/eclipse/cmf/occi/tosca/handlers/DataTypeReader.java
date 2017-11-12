@@ -17,7 +17,7 @@ public class DataTypeReader {
 
 	public static void read(String dataTypeAsString, Map<String, ?> map) {
 		RecordType recordType = OCCIFactory.eINSTANCE.createRecordType();
-		recordType.setName(dataTypeAsString);
+		recordType.setName(dataTypeAsString.replaceAll("\\.", ""));
 		Object description = map.get("description");
 		if (description != null) {
 			recordType.setDocumentation(description.toString());
@@ -37,7 +37,7 @@ public class DataTypeReader {
 		for (String recordFieldName : recordFieldsMap.keySet()) {
 			RecordField recordField = OCCIFactory.eINSTANCE.createRecordField();
 			Map<String, ?> recordFieldMap = (Map<String, ?>) recordFieldsMap.get(recordFieldName);
-			recordFieldName = recordFieldName.replaceAll("_",".");
+			recordFieldName = recordFieldName.replaceAll("_","");
 			recordField.setName(recordFieldName);
 
 			String description = (String) recordFieldMap.get("description");
@@ -56,7 +56,7 @@ public class DataTypeReader {
 					type += typeOfCollection;
 				}
 				List<Map<String, ?>> constraints = (ArrayList<Map<String, ?>>) recordFieldMap.get("constraints");
-				if (constraints != null) {
+				if (!"range".equals(type) && constraints != null) {
 					for (Map<String, ?> constraint : constraints) {
 						if (constraint.get("valid_values") != null) {
 							List<String> literals = (ArrayList) constraint.get("valid_values");
