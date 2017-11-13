@@ -33,8 +33,8 @@ public class MixinReader {
 		}
 	}
 
-	public void readMixin(String mixinStr, Map<String, ?> map) {
-		mixinStr = mixinStr.replaceAll("\\.", "_");
+	public void readMixin(String mixinData, Map<String, ?> map) {
+		String mixinStr = mixinData.replaceAll("\\.", "_");
 		boolean alreadyRegistered = false;
 		for (Mixin registeredMixin : ExtensionsManager.getExtension("tosca").getMixins()) {
 			if (registeredMixin.getName().equals(mixinStr)) {
@@ -64,16 +64,6 @@ public class MixinReader {
 			mixin.setTitle(description.toString());
 		}
 
-		Map<String, ?> attributes = (Map<String, ?>) map.get("properties");
-		if (attributes != null) {
-			AttributeReader.readAttributes(mixin, (Map<String, ?>) map.get("properties"));
-		} else {
-			attributes = (Map<String, ?>) map.get("attributes");
-			if (attributes != null) {
-				AttributeReader.readAttributes(mixin, (Map<String, ?>) map.get("attributes"));
-			}
-		}
-
 		Map<String, ?> capabilities = (Map<String, ?>) map.get("capabilities");
 		if (capabilities != null) {
 			for (String capability : capabilities.keySet()) {
@@ -90,12 +80,22 @@ public class MixinReader {
 				}
 			}
 		}
-
-		if (mixinStr.startsWith("tosca.interfaces") && !mixinStr.endsWith("Root")) {
-			ActionReader.readActions(mixin, (Map<String, ?>) mixins.get(mixinStr));
+		
+		Map<String, ?> attributes = (Map<String, ?>) map.get("properties");
+		if (attributes != null) {
+			AttributeReader.readAttributes(mixin, (Map<String, ?>) map.get("properties"));
+		} else {
+			attributes = (Map<String, ?>) map.get("attributes");
+			if (attributes != null) {
+				AttributeReader.readAttributes(mixin, (Map<String, ?>) map.get("attributes"));
+			}
+		}
+		
+		if (mixinStr.startsWith("tosca_interfaces") && !mixinStr.endsWith("Root")) {
+			ActionReader.readActions(mixin, (Map<String, ?>) mixins.get(mixinData));
 		}
 
-		mixin.setScheme("http://occi/tosca/" + mixinStr.replaceAll("\\.", "").toLowerCase() + "#");
+		mixin.setScheme(ExtensionsManager.getExtension("tosca").getScheme());
 		ExtensionsManager.getExtension("tosca").getMixins().add(mixin);
 	}
 
