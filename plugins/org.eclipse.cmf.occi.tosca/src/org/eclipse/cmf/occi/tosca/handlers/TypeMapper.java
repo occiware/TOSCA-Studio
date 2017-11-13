@@ -34,6 +34,7 @@ public class TypeMapper extends Mapper {
 		
 		Constraint computeConstraint = OCCIFactory.eINSTANCE.createConstraint();
 		computeConstraint.setName("SourceMustBeSoftwareComponent");
+		computeConstraint.setBody("true");
 		this.mappings.put("tosca_nodes_Compute", 
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("infrastructure", "compute"), computeConstraint)
 			);
@@ -48,14 +49,18 @@ public class TypeMapper extends Mapper {
 		
 		Constraint webServerConstraint = OCCIFactory.eINSTANCE.createConstraint();
 		webServerConstraint.setName("SourceMustBeWebApplication");
+		//webServerConstraint.setBody("self.depends.applies.source= tosca_nodes_WebApplication");
+		webServerConstraint.setBody("true");
 		this.mappings.put("tosca_nodes_WebServer", 
 				new MixinMapping(webServerConstraint)
 		);
 		
 		Constraint dbmsConstraint = OCCIFactory.eINSTANCE.createConstraint();
 		dbmsConstraint.setName("SourceMustBeDatabase");
+		//dbmsConstraint.setBody("self.depends.applies.source= tosca_nodes_Database");
+		dbmsConstraint.setBody("true");
 		this.mappings.put("tosca_nodes_DBMS", 
-				new MixinMapping(ExtensionsManager.getMixinFromItsTerm("platform", "database"), dbmsConstraint)
+				new MixinMapping(/*ExtensionsManager.getMixinFromItsTerm("platform", "database"),*/ dbmsConstraint)
 			);
 		
 		this.mappings.put("tosca_nodes_Database", 
@@ -76,37 +81,49 @@ public class TypeMapper extends Mapper {
 		
 		Constraint dependsOnConstraint = OCCIFactory.eINSTANCE.createConstraint();
 		dependsOnConstraint.setName("SourceMustBeNodeAndTargetMustBeNode");
+		//dependsOnConstraint.setBody("self.depends.applies.source= tosca_nodes_Root and self.depends.applies.target = tosca_nodes_Root");
+		dependsOnConstraint.setBody("true");
 		this.mappings.put("tosca_relationships_DependsOn",
 				new MixinMapping(dependsOnConstraint)
 		);
 		
 		Constraint hostedOnConstraints1 = OCCIFactory.eINSTANCE.createConstraint();
 		hostedOnConstraints1.setName("SourceMustBeSoftwareComponentAndTargetMustBeCompute");
+		//hostedOnConstraints1.setBody("self.depends.applies.source= tosca_nodes_SoftwareComponent and self.depends.applies.target = tosca_nodes_Compute");
+		hostedOnConstraints1.setBody("true");
 		MixinMapping hostedOnMapping = new MixinMapping(hostedOnConstraints1);
 		
 		Constraint hostedOnConstraints2 = OCCIFactory.eINSTANCE.createConstraint();
 		hostedOnConstraints2.setName("SourceMustBeWebServerAndTargetMustBeWebApplication");
+		//hostedOnConstraints2.setBody("self.depends.applies.source= tosca_nodes_WebServer and self.depends.applies.target = tosca_nodes_WebApplication");
+		hostedOnConstraints2.setBody("true");
 		hostedOnMapping.constraints.add(hostedOnConstraints2);
-		this.mappings.put("tosca_relationships_HostedOn", hostedOnMapping);
 		
 		Constraint hostedOnConstraints3 = OCCIFactory.eINSTANCE.createConstraint();
 		hostedOnConstraints3.setName("SourceMustBeDatabaseAndTargetMustBeDBMS");
+		//hostedOnConstraints3.setBody("self.depends.applies.source= tosca_nodes_Database and self.depends.applies.target = tosca_nodes_DBMS");
+		hostedOnConstraints3.setBody("true");
 		hostedOnMapping.constraints.add(hostedOnConstraints3);
-		this.mappings.put("tosca_relationships_HostedOn", hostedOnMapping);
 		
 		Constraint hostedOnConstraints4 = OCCIFactory.eINSTANCE.createConstraint();
 		hostedOnConstraints4.setName("SourceMustBeContainerApplicationAndTargetMustBeContainerRuntime");
+		//hostedOnConstraints4.setBody("self.depends.applies.source= tosca_nodes_container_Application and self.depends.applies.target = tosca_nodes_Container_Runtime");
+		hostedOnConstraints4.setBody("true");
 		hostedOnMapping.constraints.add(hostedOnConstraints4);
 		this.mappings.put("tosca_relationships_HostedOn", hostedOnMapping);
 		
 		Constraint attachesToConstraint = OCCIFactory.eINSTANCE.createConstraint();
 		attachesToConstraint.setName("SourceMustBeComputeAndTargetMustBeBlockStorage");
+		//attachesToConstraint.setBody("self.depends.applies.source= tosca_nodes_Compute and self.depends.applies.target = tosca_nodes_BlockStorage");
+		attachesToConstraint.setBody("true");
 		this.mappings.put("tosca_relationships_AttachesTo",
-				new MixinMapping(attachesToConstraint)
+				new MixinMapping(ExtensionsManager.getKindFromItsTerm("infrastructure", "storagelink"), attachesToConstraint)
 		);
 		
 		Constraint routesToConstraint = OCCIFactory.eINSTANCE.createConstraint();
 		routesToConstraint.setName("SourceMustBeLoadBalancer");
+		//routesToConstraint.setBody("self.depends.applies.source= tosca_nodes_LoadBalancer");
+		routesToConstraint.setBody("true");
 		this.mappings.put("tosca_relationships_RoutesTo",
 				new MixinMapping(routesToConstraint)
 		);
