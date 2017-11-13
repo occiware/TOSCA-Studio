@@ -44,8 +44,6 @@ public class StringToDataType {
 	
 	public final static EObjectType typeModelMap = OCCIFactory.eINSTANCE.createEObjectType();
 	
-	public final static EObjectType typeModelMapString = OCCIFactory.eINSTANCE.createEObjectType();
-	
 	public final static StringType typeModelVersion = OCCIFactory.eINSTANCE.createStringType();
 	
 	public final static NumericType scalarFrequency = OCCIFactory.eINSTANCE.createNumericType();
@@ -98,7 +96,7 @@ public class StringToDataType {
 		
 		// semantically same as "range" type, but used explicitly in TOSCA. We create a specific type to remain consistent between both models: TOSCA and OCCI.
 		toscaDatatypesNetworkPortDef.setType(NumericTypeEnum.SHORT);
-		toscaDatatypesNetworkPortDef.setName("tosca.datatypes.network.PortDef");
+		toscaDatatypesNetworkPortDef.setName("toscadatatypesnetworkPortDef");
 		toscaDatatypesNetworkPortDef.setMaxInclusive("65535");
 		toscaDatatypesNetworkPortDef.setMinInclusive("1");
 		
@@ -124,6 +122,7 @@ public class StringToDataType {
 		typeArrayShort.setType(typeModelShort);
 		
 		typeModelMap.setName("map");
+		typeModelMap.setInstanceClassName("java.util.Map");
 		
 		typeModelVersion.setName("version");
 		typeModelVersion.setPattern("((\\d+)((\\.\\d+)+)?)"); //examples: "10" "10.1" "10.1.999999", TODO check the pattern
@@ -182,7 +181,6 @@ public class StringToDataType {
 		map.put("arraystring", typeArrayString);
 		
 		map.put("map", typeModelMap);
-		map.put("mapString", typeModelMapString);
 		map.put("version", typeModelVersion);
 		map.put("range", typeModelRange);
 		map.put("tosca.datatypes.network.PortDef", toscaDatatypesNetworkPortDef);
