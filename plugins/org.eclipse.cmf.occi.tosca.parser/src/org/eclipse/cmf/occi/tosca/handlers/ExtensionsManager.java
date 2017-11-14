@@ -34,7 +34,7 @@ public class ExtensionsManager {
 		
 		ResourceSet resSet = new ResourceSetImpl();
 		URI modelURI = URI
-				.createURI("file:/C:/Users/schallit/runtime-EclipseApplication31072017/tosca_model/model/tosca.occie");
+				.createURI("file:/C:/Users/schallit/runtime-EclipseApplication31072017/org.eclipse.cmf.occi.tosca/model/tosca.occie");
 		resource = resSet.createResource(modelURI);
 		Extension extension = OCCIFactory.eINSTANCE.createExtension();
 		extension.setDescription("Mon extension TOSCA");
