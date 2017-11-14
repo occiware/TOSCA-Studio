@@ -45,7 +45,7 @@ public class Main extends AbstractHandler {
 		// MessageDialog.openInformation(window.getShell(), "Tosca", "Tosca2Occi");
 		try {
 			YamlReader reader = new YamlReader(new FileReader(
-					"C:/Users/schallit/workspace-tosca/plugins/org.eclipse.cmf.occi.tosca/normative-types.yml"));
+					"C:/Users/schallit/workspace-tosca/plugins/org.eclipse.cmf.occi.tosca.parser/normative-types.yml"));
 			map = (Map<String, ?>) reader.read();
 
 			// datatypes <=> record
