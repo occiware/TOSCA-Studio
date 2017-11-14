@@ -33,12 +33,14 @@ public class ExtensionsManager {
 		extensionsPerName.put("sla", OcciHelper.loadExtension("http://schemas.ogf.org/occi/sla#"));
 		
 		ResourceSet resSet = new ResourceSetImpl();
+		
 		URI modelURI = URI
-				.createURI("file:/C:/Users/schallit/runtime-EclipseApplication31072017/org.eclipse.cmf.occi.tosca/model/tosca.occie");
+				.createURI("file:/C:/Users/schallit/workspace-tosca/plugins/org.eclipse.cmf.occi.tosca/model/tosca.occie");
+		//		.createURI("file:/C:/Users/schallit/runtime-EclipseApplication31072017/org.eclipse.cmf.occi.tosca/model/tosca.occie");
 		resource = resSet.createResource(modelURI);
 		Extension extension = OCCIFactory.eINSTANCE.createExtension();
 		extension.setDescription("Mon extension TOSCA");
-		extension.setScheme("http://occi/tosca#");
+		extension.setScheme("http://org.occi/tosca#");
 		extension.setName("tosca");
 		extension.getImport().add(extensionsPerName.get("core"));
 		extension.getImport().add(extensionsPerName.get("infrastructure"));
