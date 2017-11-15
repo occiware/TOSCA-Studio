@@ -1,0 +1,58 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+topology_template:
+  description: Template of a database including its hosting stack.
+  inputs:
+    mq_service_ip:
+      type: string
+      description: IP address of the message queuing server to receive messages from
+    receiver_port:
+      type: string
+      description: Port to be used for receiving messages
+  substitution_mappings:
+    node_type: example.TransactionSubsystem
+    capabilities:
+      message_receiver:
+      - app
+      - message_receiver
+    requirements:
+      database_endpoint:
+      - app
+      - database
+  node_templates:
+    app:
+      type: example.SomeApp
+      properties: null
+      capabilities:
+        message_receiver:
+          properties: null
+          service_ip:
+            get_input: mq_service_ip
+      requirements:
+      - database: null
+      - host: websrv
+    websrv:
+      type: tosca.nodes.WebServer
+      properties: null
+      capabilities:
+        data_endpoint:
+          properties:
+            port_name:
+              get_input: receiver_port
+      requirements:
+      - host: server
+    server:
+      type: tosca.nodes.Compute
+  outputs:
+    receiver_ip:
+      description: private IP address of the message receiver application
+      value:
+        get_attribute:
+        - server
+        - private_address
+    receiver_port:
+      description: Port of the message receiver endpoint
+      value:
+        get_attribute:
+        - app
+        - app_endpoint
+        - port
