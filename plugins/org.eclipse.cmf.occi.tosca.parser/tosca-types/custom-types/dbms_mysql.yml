@@ -1,0 +1,15 @@
+node_types:
+    tosca.nodes.DBMS.MySQL:
+        derived_from: tosca.nodes.DBMS
+        properties:
+            port:
+                description: reflect the default MySQL server port
+                default: 3306
+            root_password:
+                # MySQL requires a root_password for configuration
+                # Override parent DBMS definition to make this property required
+                required: true
+        capabilities:
+            # Further constrain the ‘host’ capability to only allow MySQL databases
+            host:
+                valid_source_types: [ tosca.nodes.Database.MySQL ]

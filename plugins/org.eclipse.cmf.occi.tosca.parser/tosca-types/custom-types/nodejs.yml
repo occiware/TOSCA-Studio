@@ -1,0 +1,15 @@
+node_types:
+    tosca.nodes.WebServer.Nodejs:
+        derived_from: tosca.nodes.WebServer
+        properties:
+            # Property to supply the desired implementation in the Github repository
+            github_url:
+                required: no
+                type: string
+                description: location of the application on the github.
+                default: https://github.com/mmm/testnode.git
+        interfaces:
+            Standard:
+                inputs:
+                    github_url:
+                        type: string

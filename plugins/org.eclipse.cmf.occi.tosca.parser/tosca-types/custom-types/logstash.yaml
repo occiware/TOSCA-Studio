@@ -1,13 +1,9 @@
 tosca_definitions_version: tosca_simple_yaml_1_0
 
-description: >
-  Logstash is a tool for receiving, processing and outputting logs. All kinds
-  of logs. System logs, webserver logs, error logs, application logs, and just
-  about anything you can throw at it.
-
 node_types:
   tosca.nodes.SoftwareComponent.Logstash:
     derived_from: tosca.nodes.SoftwareComponent
+    description: Logstash is a tool for receiving, processing and outputting logs. All kinds of logs. System logs, webserver logs, error logs, application logs, and just about anything you can throw at it.
     requirements:
         - search_endpoint:
             capability: tosca.capabilities.Endpoint

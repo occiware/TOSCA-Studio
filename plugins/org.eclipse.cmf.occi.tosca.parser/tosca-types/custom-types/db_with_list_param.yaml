@@ -6,5 +6,4 @@ node_types:
     properties:
       list_prop:
         type: list
-        entry_schema:
-          type: integer
+        entry_schema: integer

@@ -1,0 +1,275 @@
+!java.util.LinkedHashMap
+tosca_definitions_version: tosca_simple_yaml_1_0
+description: This TOSCA definitions document contains the custom types definitions as expressed in the
+   TOSCA specification document. It is composed by the files in the directory custom-types
+node_types: 
+   tosca.nodes.Database.MySQL: 
+      requirements: 
+      -  host: 
+            node: tosca.nodes.DBMS.MySQL
+      derived_from: tosca.nodes.Database
+   tosca.nodes.ComputeWithProp: 
+      derived_from: tosca.nodes.Compute
+      description: Compute node type with a parameter for the get property with host test
+      properties: 
+         test: 
+            type: integer
+            required: false
+   tosca.nodes.SoftwareComponent.Elasticsearch: 
+      capabilities: 
+         search_endpoint: 
+            type: tosca.capabilities.Endpoint
+      derived_from: tosca.nodes.SoftwareComponent
+      description: Elasticsearch is an open-source search engine built on top of Apache Lucene, a full-text
+         search-engine library.
+   tosca.nodes.DatabaseWithListParam: 
+      derived_from: tosca.nodes.Database
+      properties: 
+         list_prop: 
+            entry_schema: integer
+            type: list
+   tosca.nodes.WebApplication.PayPalPizzaStore: 
+      requirements: 
+      -  database_connection: 
+            node: tosca.nodes.Database
+            capability: tosca.capabilities.Endpoint.Database
+            relationship: tosca.relationships.ConnectsTo
+      interfaces: 
+         Standard: 
+            configure: 
+               inputs: 
+                  github_url: 
+                     type: string
+                  mongodb_ip: 
+                     type: string
+      derived_from: tosca.nodes.WebApplication
+      description: Pizza store app that allows you to explore the features provided by PayPal's REST APIs.
+         More detail can be found at https://github.com/paypal/rest-api-sample-app-nodejs/
+      properties: 
+         github_url: 
+            default: https://github.com/sample.git
+            description: location of the application on the github.
+            type: string
+            required: false
+   tosca.nodes.WebApplication.WordPress: 
+      requirements: 
+      -  database_endpoint: 
+            node: tosca.nodes.Database
+            capability: tosca.capabilities.Endpoint.Database
+            relationship: tosca.relationships.ConnectsTo
+      derived_from: tosca.nodes.WebApplication
+      properties: 
+         db_host: 
+            type: string
+         admin_password: 
+            type: string
+         admin_user: 
+            type: string
+   tosca.nodes.NodeWithCap: 
+      capabilities: 
+         some_req: 
+            type: tosca.capabilities.SomeCap
+      derived_from: tosca.nodes.Root
+   tosca.nodes.Container.Application.Docker: 
+      requirements: 
+      -  host: 
+      capability: tosca.capabilities.Container.Docker
+      derived_from: tosca.nodes.Container.Application
+   tosca.nodes.SoftwareComponent.Kibana: 
+      requirements: 
+      -  search_endpoint: 
+            node: tosca.nodes.SoftwareComponent.Elasticsearch
+            capability: tosca.capabilities.Endpoint
+            relationship: tosca.relationships.ConnectsTo
+      derived_from: tosca.nodes.SoftwareComponent
+      description: Kibana is an open source analytics and visualization platform designed to work with
+         Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch.
+   Rsyslog: 
+      requirements: 
+      -  log_endpoint: 
+            node: tosca.nodes.SoftwareComponent.Logstash
+            capability: tosca.capabilities.Endpoint
+            relationship: tosca.relationships.ConnectsTo
+      derived_from: tosca.nodes.SoftwareComponent
+      description: RSYSLOG is the Rocket-fast SYStem for LOG processing.
+   tosca.nodes.ComputeWithAttrList: 
+      derived_from: tosca.nodes.Compute
+      description: Compute node type with a list attribute
+      attributes: 
+         attr_list: 
+            entry_schema: 
+               type: string
+            type: map
+   tosca.nodes.SoftwareComponent.Logstash: 
+      requirements: 
+      -  search_endpoint: 
+            node: tosca.nodes.SoftwareComponent.Elasticsearch
+            capability: tosca.capabilities.Endpoint
+            relationship: 
+               interfaces: 
+                  Configure: 
+                     pre_configure_source: 
+                        inputs: 
+                           elasticsearch_ip: 
+                              type: string
+               type: tosca.relationships.ConnectsTo
+      capabilities: 
+         log_endpoint: 
+            type: tosca.capabilities.Endpoint
+      derived_from: tosca.nodes.SoftwareComponent
+      description: Logstash is a tool for receiving, processing and outputting logs. All kinds of logs.
+         System logs, webserver logs, error logs, application logs, and just about anything you can throw
+         at it.
+   tosca.nodes.SoftwareComponent.Collectd: 
+      requirements: 
+      -  log_endpoint: 
+            node: tosca.nodes.SoftwareComponent.Logstash
+            capability: tosca.capabilities.Endpoint
+            relationship: tosca.relationships.ConnectsTo
+      derived_from: tosca.nodes.SoftwareComponent
+      description: collectd is a daemon which gathers statistics about the system it is running on.
+   tosca.nodes.ComputeWithCapWithAttr: 
+      capabilities: 
+         endpoint: 
+            type: tosca.capabilities.indigo.Endpoint
+      derived_from: tosca.nodes.Compute
+      description: Compute node type with capability with an attribute of type list
+   tosca.nodes.NodeWithReq: 
+      requirements: 
+      -  host: 
+            occurrences: 
+            - '1'
+            - '1'
+            capability: tosca.capabilities.SomeCap
+            relationship: tosca.relationships.HostedOn
+      derived_from: tosca.nodes.SoftwareComponent
+   tosca.nodes.SoftwareComponent.Rsyslog: 
+      requirements: 
+      -  log_endpoint: 
+            node: tosca.nodes.SoftwareComponent.Logstash
+            capability: tosca.capabilities.Endpoint
+            relationship: tosca.relationships.ConnectsTo
+      derived_from: tosca.nodes.SoftwareComponent
+      description: RSYSLOG is the Rocket-fast SYStem for LOG processing.
+   tosca.nodes.HACompute: 
+      requirements: 
+      -  high_availability: 
+            node: tosca.nodes.HACompute
+            capability: tosca.capabilities.HA
+            occurences: 
+            - '0'
+            - '1'
+            relationship: tosca.relationships.HA
+      capabilities: 
+         high_availability: 
+            type: tosca.capabilities.HA
+      derived_from: tosca.nodes.Compute
+   tosca.nodes.SomeNode: 
+      requirements: 
+      -  some_req: 
+            node: tosca.nodes.NodeWithCap
+            capability: tosca.capabilities.SomeCap
+            relationship: tosca.relationships.HostedOn
+      derived_from: tosca.nodes.Root
+      description: Node type that has a requirement of a capability with a defined value
+      properties: 
+         some_prop: 
+            default: some
+            type: string
+            required: false
+   tosca.capabilities.Container.Docker: 
+      derived_from: tosca.capabilities.Container
+      properties: 
+         publish_all: 
+            default: false
+            type: boolean
+            required: false
+         publish_ports: 
+            entry_schema: PortSpec
+            type: list
+            required: false
+         expose_ports: 
+            entry_schema: PortSpec
+            type: list
+            required: false
+         volumes: 
+            entry_schema: string
+            type: list
+         version: 
+            entry_schema: version
+            type: list
+            required: false
+   tosca.nodes.WebServer.Nodejs: 
+      interfaces: 
+         Standard: 
+            inputs: 
+               github_url: 
+                  type: string
+      derived_from: tosca.nodes.WebServer
+      properties: 
+         github_url: 
+            default: https://github.com/mmm/testnode.git
+            description: location of the application on the github.
+            type: string
+            required: no
+   tosca.nodes.SomeNode2: 
+      requirements: 
+      -  host: 
+            node: tosca.nodes.Compute
+            capability: tosca.capabilities.Container
+            relationship: tosca.relationships.HostedOn
+      capabilities: 
+         host_child: 
+            type: tosca.capabilities.ContainerChild
+      derived_from: tosca.nodes.Root
+   tosca.nodes.DBMS.MySQL: 
+      capabilities: 
+         host: 
+            valid_source_types: 
+            - tosca.nodes.Database.MySQL
+      derived_from: tosca.nodes.DBMS
+      properties: 
+         port: 
+            default: '3306'
+            description: reflect the default MySQL server port
+         root_password: 
+            required: true
+capability_types: 
+   tosca.capabilities.indigo.Endpoint: 
+      derived_from: tosca.capabilities.Endpoint
+      attributes: 
+         credential: 
+            entry_schema: tosca.datatypes.Credential
+            type: list
+   tosca.capabilities.SomeCap: 
+      derived_from: tosca.capabilities.Container
+      properties: 
+         type: 
+            default: someval
+            type: string
+            constraints: 
+            -  equal: someval
+            required: true
+   tosca.capabilities.HA: 
+      valid_source_types: 
+      - tosca.nodes.HACompute
+      derived_from: tosca.capabilities.Root
+   tosca.capabilities.ContainerChild: 
+      derived_from: tosca.capabilities.Container
+      description: Define a capability class that inherits from tosca.capabilities.Container
+   tosca.capabilities.SomeChildCap: 
+      derived_from: tosca.capabilities.SomeCap
+relationship_types: 
+   tosca.relationships.HA: 
+      valid_target_types: 
+      - tosca.capabilities.HA
+      derived_from: tosca.relationships.Root
+   test.relation.connects: 
+      derived_from4: tosca.relationships.ConnectsTo
+policy_types: 
+   mycompany.mytypes.myScalingPolicy: 
+      derived1_from: tosca.policies.Scaling
+      metadata: 
+         entry_schema: 
+            type: string
+         type: map

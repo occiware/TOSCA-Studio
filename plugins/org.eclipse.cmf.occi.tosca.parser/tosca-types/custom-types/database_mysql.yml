@@ -1,0 +1,6 @@
+node_types:
+    tosca.nodes.Database.MySQL:
+        derived_from: tosca.nodes.Database
+        requirements:
+            - host:
+                node: tosca.nodes.DBMS.MySQL    

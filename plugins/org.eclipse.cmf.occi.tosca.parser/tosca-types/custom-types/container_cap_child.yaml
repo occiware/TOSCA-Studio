@@ -1,12 +1,11 @@
 tosca_definitions_version: tosca_simple_yaml_1_0
 
-description: >
-  Define a capability class that inherits from tosca.capabilities.Container
 
 capability_types:
 
   tosca.capabilities.ContainerChild:
     derived_from: tosca.capabilities.Container
+    description: Define a capability class that inherits from tosca.capabilities.Container
 
 node_types:
 

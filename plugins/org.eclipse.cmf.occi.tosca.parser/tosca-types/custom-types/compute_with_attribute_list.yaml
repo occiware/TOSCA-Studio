@@ -1,10 +1,9 @@
 tosca_definitions_version: tosca_simple_yaml_1_0
 
-description: Compute node type with a list attribute
-
 node_types:
   tosca.nodes.ComputeWithAttrList:
     derived_from: tosca.nodes.Compute
+    description: Compute node type with a list attribute
     attributes:
       attr_list:
         type: map

@@ -1,0 +1,28 @@
+node_types:
+    tosca.capabilities.Container.Docker:
+        derived_from: tosca.capabilities.Container
+        properties:
+            version:
+                type: list
+                required: false
+                entry_schema: version
+            publish_all:
+                type: boolean
+                default: false
+                required: false
+            publish_ports:
+                type: list
+                entry_schema: PortSpec
+                required: false
+            expose_ports:
+                type: list
+                entry_schema: PortSpec
+                required: false
+            volumes:
+                type: list
+                entry_schema: string
+    tosca.nodes.Container.Application.Docker:
+        derived_from: tosca.nodes.Container.Application
+        requirements:
+            - host:
+        capability: tosca.capabilities.Container.Docker
