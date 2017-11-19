@@ -29,35 +29,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_capabilities_containerImpl#getNumCpus <em>Num Cpus</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_capabilities_containerImpl#getDiskSize <em>Disk Size</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_capabilities_containerImpl#getCpuFrequency <em>Cpu Frequency</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_capabilities_containerImpl#getMemSize <em>Mem Size</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class Tosca_capabilities_containerImpl extends Tosca_capabilities_rootImpl implements Tosca_capabilities_container {
-	/**
-	 * The default value of the '{@link #getNumCpus() <em>Num Cpus</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNumCpus()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Integer NUM_CPUS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getNumCpus() <em>Num Cpus</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNumCpus()
-	 * @generated
-	 * @ordered
-	 */
-	protected Integer numCpus = NUM_CPUS_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getDiskSize() <em>Disk Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -79,46 +56,6 @@ public class Tosca_capabilities_containerImpl extends Tosca_capabilities_rootImp
 	protected Integer diskSize = DISK_SIZE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCpuFrequency() <em>Cpu Frequency</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCpuFrequency()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Double CPU_FREQUENCY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCpuFrequency() <em>Cpu Frequency</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCpuFrequency()
-	 * @generated
-	 * @ordered
-	 */
-	protected Double cpuFrequency = CPU_FREQUENCY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getMemSize() <em>Mem Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMemSize()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Integer MEM_SIZE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getMemSize() <em>Mem Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMemSize()
-	 * @generated
-	 * @ordered
-	 */
-	protected Integer memSize = MEM_SIZE_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -135,27 +72,6 @@ public class Tosca_capabilities_containerImpl extends Tosca_capabilities_rootImp
 	@Override
 	protected EClass eStaticClass() {
 		return ToscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Integer getNumCpus() {
-		return numCpus;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNumCpus(Integer newNumCpus) {
-		Integer oldNumCpus = numCpus;
-		numCpus = newNumCpus;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__NUM_CPUS, oldNumCpus, numCpus));
 	}
 
 	/**
@@ -184,59 +100,11 @@ public class Tosca_capabilities_containerImpl extends Tosca_capabilities_rootImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Double getCpuFrequency() {
-		return cpuFrequency;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCpuFrequency(Double newCpuFrequency) {
-		Double oldCpuFrequency = cpuFrequency;
-		cpuFrequency = newCpuFrequency;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__CPU_FREQUENCY, oldCpuFrequency, cpuFrequency));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Integer getMemSize() {
-		return memSize;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMemSize(Integer newMemSize) {
-		Integer oldMemSize = memSize;
-		memSize = newMemSize;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__MEM_SIZE, oldMemSize, memSize));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__NUM_CPUS:
-				return getNumCpus();
 			case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE:
 				return getDiskSize();
-			case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__CPU_FREQUENCY:
-				return getCpuFrequency();
-			case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__MEM_SIZE:
-				return getMemSize();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -249,17 +117,8 @@ public class Tosca_capabilities_containerImpl extends Tosca_capabilities_rootImp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__NUM_CPUS:
-				setNumCpus((Integer)newValue);
-				return;
 			case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE:
 				setDiskSize((Integer)newValue);
-				return;
-			case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__CPU_FREQUENCY:
-				setCpuFrequency((Double)newValue);
-				return;
-			case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__MEM_SIZE:
-				setMemSize((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -273,17 +132,8 @@ public class Tosca_capabilities_containerImpl extends Tosca_capabilities_rootImp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__NUM_CPUS:
-				setNumCpus(NUM_CPUS_EDEFAULT);
-				return;
 			case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE:
 				setDiskSize(DISK_SIZE_EDEFAULT);
-				return;
-			case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__CPU_FREQUENCY:
-				setCpuFrequency(CPU_FREQUENCY_EDEFAULT);
-				return;
-			case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__MEM_SIZE:
-				setMemSize(MEM_SIZE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -297,14 +147,8 @@ public class Tosca_capabilities_containerImpl extends Tosca_capabilities_rootImp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__NUM_CPUS:
-				return NUM_CPUS_EDEFAULT == null ? numCpus != null : !NUM_CPUS_EDEFAULT.equals(numCpus);
 			case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE:
 				return DISK_SIZE_EDEFAULT == null ? diskSize != null : !DISK_SIZE_EDEFAULT.equals(diskSize);
-			case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__CPU_FREQUENCY:
-				return CPU_FREQUENCY_EDEFAULT == null ? cpuFrequency != null : !CPU_FREQUENCY_EDEFAULT.equals(cpuFrequency);
-			case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__MEM_SIZE:
-				return MEM_SIZE_EDEFAULT == null ? memSize != null : !MEM_SIZE_EDEFAULT.equals(memSize);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -319,14 +163,8 @@ public class Tosca_capabilities_containerImpl extends Tosca_capabilities_rootImp
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (numCpus: ");
-		result.append(numCpus);
-		result.append(", diskSize: ");
+		result.append(" (diskSize: ");
 		result.append(diskSize);
-		result.append(", cpuFrequency: ");
-		result.append(cpuFrequency);
-		result.append(", memSize: ");
-		result.append(memSize);
 		result.append(')');
 		return result.toString();
 	}

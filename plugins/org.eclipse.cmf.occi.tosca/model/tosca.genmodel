@@ -249,16 +249,7 @@
     <genClasses>
       <ecoreClass href="tosca.ecore#//Tosca_capabilities_container"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//Tosca_capabilities_container/numCpus"/>
-      </genFeatures>
-      <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//Tosca_capabilities_container/diskSize"/>
-      </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//Tosca_capabilities_container/cpuFrequency"/>
-      </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//Tosca_capabilities_container/memSize"/>
       </genFeatures>
     </genClasses>
     <genClasses>

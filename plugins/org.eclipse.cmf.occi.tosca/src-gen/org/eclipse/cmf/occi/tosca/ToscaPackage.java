@@ -1055,40 +1055,13 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_CAPABILITIES_CONTAINER__ATTRIBUTES = TOSCA_CAPABILITIES_ROOT__ATTRIBUTES;
 
 	/**
-	 * The feature id for the '<em><b>Num Cpus</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_CAPABILITIES_CONTAINER__NUM_CPUS = TOSCA_CAPABILITIES_ROOT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Disk Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE = TOSCA_CAPABILITIES_ROOT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Cpu Frequency</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_CAPABILITIES_CONTAINER__CPU_FREQUENCY = TOSCA_CAPABILITIES_ROOT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Mem Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_CAPABILITIES_CONTAINER__MEM_SIZE = TOSCA_CAPABILITIES_ROOT_FEATURE_COUNT + 3;
+	int TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE = TOSCA_CAPABILITIES_ROOT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Tosca capabilities container</em>' class.
@@ -1097,7 +1070,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_CAPABILITIES_CONTAINER_FEATURE_COUNT = TOSCA_CAPABILITIES_ROOT_FEATURE_COUNT + 4;
+	int TOSCA_CAPABILITIES_CONTAINER_FEATURE_COUNT = TOSCA_CAPABILITIES_ROOT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Tosca capabilities container</em>' class.
@@ -2081,40 +2054,13 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_DBMS__COMPONENT_VERSION = TOSCA_NODES_SOFTWARECOMPONENT__COMPONENT_VERSION;
 
 	/**
-	 * The feature id for the '<em><b>Num Cpus</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DBMS__NUM_CPUS = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Disk Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_DBMS__DISK_SIZE = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Cpu Frequency</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DBMS__CPU_FREQUENCY = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Mem Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DBMS__MEM_SIZE = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 3;
+	int TOSCA_NODES_DBMS__DISK_SIZE = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' attribute.
@@ -2123,7 +2069,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_DBMS__PORT = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 4;
+	int TOSCA_NODES_DBMS__PORT = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Root Password</b></em>' attribute.
@@ -2132,7 +2078,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_DBMS__ROOT_PASSWORD = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 5;
+	int TOSCA_NODES_DBMS__ROOT_PASSWORD = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Tosca nodes dbms</em>' class.
@@ -2141,7 +2087,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_DBMS_FEATURE_COUNT = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 6;
+	int TOSCA_NODES_DBMS_FEATURE_COUNT = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Create</em>' operation.
@@ -2551,40 +2497,13 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_COMPUTE__ARCHITECTURE = TOSCA_NODES_ROOT_FEATURE_COUNT + 14;
 
 	/**
-	 * The feature id for the '<em><b>Num Cpus</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_COMPUTE__NUM_CPUS = TOSCA_NODES_ROOT_FEATURE_COUNT + 15;
-
-	/**
 	 * The feature id for the '<em><b>Disk Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_COMPUTE__DISK_SIZE = TOSCA_NODES_ROOT_FEATURE_COUNT + 16;
-
-	/**
-	 * The feature id for the '<em><b>Cpu Frequency</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_COMPUTE__CPU_FREQUENCY = TOSCA_NODES_ROOT_FEATURE_COUNT + 17;
-
-	/**
-	 * The feature id for the '<em><b>Mem Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_COMPUTE__MEM_SIZE = TOSCA_NODES_ROOT_FEATURE_COUNT + 18;
+	int TOSCA_NODES_COMPUTE__DISK_SIZE = TOSCA_NODES_ROOT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Private Address</b></em>' attribute.
@@ -2593,7 +2512,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_COMPUTE__PRIVATE_ADDRESS = TOSCA_NODES_ROOT_FEATURE_COUNT + 19;
+	int TOSCA_NODES_COMPUTE__PRIVATE_ADDRESS = TOSCA_NODES_ROOT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Public Address</b></em>' attribute.
@@ -2602,7 +2521,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_COMPUTE__PUBLIC_ADDRESS = TOSCA_NODES_ROOT_FEATURE_COUNT + 20;
+	int TOSCA_NODES_COMPUTE__PUBLIC_ADDRESS = TOSCA_NODES_ROOT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Networks</b></em>' attribute.
@@ -2611,7 +2530,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_COMPUTE__NETWORKS = TOSCA_NODES_ROOT_FEATURE_COUNT + 21;
+	int TOSCA_NODES_COMPUTE__NETWORKS = TOSCA_NODES_ROOT_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of structural features of the '<em>Tosca nodes compute</em>' class.
@@ -2620,7 +2539,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_COMPUTE_FEATURE_COUNT = TOSCA_NODES_ROOT_FEATURE_COUNT + 22;
+	int TOSCA_NODES_COMPUTE_FEATURE_COUNT = TOSCA_NODES_ROOT_FEATURE_COUNT + 19;
 
 	/**
 	 * The operation id for the '<em>Create</em>' operation.
@@ -2994,40 +2913,13 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_WEBSERVER__URL_PATH = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>Num Cpus</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_WEBSERVER__NUM_CPUS = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 8;
-
-	/**
 	 * The feature id for the '<em><b>Disk Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_WEBSERVER__DISK_SIZE = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Cpu Frequency</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_WEBSERVER__CPU_FREQUENCY = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Mem Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_WEBSERVER__MEM_SIZE = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 11;
+	int TOSCA_NODES_WEBSERVER__DISK_SIZE = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Tosca nodes webserver</em>' class.
@@ -3036,7 +2928,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_WEBSERVER_FEATURE_COUNT = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 12;
+	int TOSCA_NODES_WEBSERVER_FEATURE_COUNT = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Create</em>' operation.
@@ -3456,40 +3348,13 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_CONTAINER_RUNTIME__DEFAULT_INSTANCES = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Num Cpus</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_CONTAINER_RUNTIME__NUM_CPUS = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Disk Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_CONTAINER_RUNTIME__DISK_SIZE = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Cpu Frequency</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_CONTAINER_RUNTIME__CPU_FREQUENCY = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Mem Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_CONTAINER_RUNTIME__MEM_SIZE = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 6;
+	int TOSCA_NODES_CONTAINER_RUNTIME__DISK_SIZE = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Tosca nodes container runtime</em>' class.
@@ -3498,7 +3363,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_CONTAINER_RUNTIME_FEATURE_COUNT = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 7;
+	int TOSCA_NODES_CONTAINER_RUNTIME_FEATURE_COUNT = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Create</em>' operation.
@@ -5862,17 +5727,6 @@ public interface ToscaPackage extends EPackage {
 	EClass getTosca_capabilities_container();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.Tosca_capabilities_container#getNumCpus <em>Num Cpus</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Num Cpus</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.Tosca_capabilities_container#getNumCpus()
-	 * @see #getTosca_capabilities_container()
-	 * @generated
-	 */
-	EAttribute getTosca_capabilities_container_NumCpus();
-
-	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.Tosca_capabilities_container#getDiskSize <em>Disk Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5882,28 +5736,6 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTosca_capabilities_container_DiskSize();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.Tosca_capabilities_container#getCpuFrequency <em>Cpu Frequency</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cpu Frequency</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.Tosca_capabilities_container#getCpuFrequency()
-	 * @see #getTosca_capabilities_container()
-	 * @generated
-	 */
-	EAttribute getTosca_capabilities_container_CpuFrequency();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.Tosca_capabilities_container#getMemSize <em>Mem Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Mem Size</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.Tosca_capabilities_container#getMemSize()
-	 * @see #getTosca_capabilities_container()
-	 * @generated
-	 */
-	EAttribute getTosca_capabilities_container_MemSize();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.Tosca_capabilities_endpoint_database <em>Tosca capabilities endpoint database</em>}'.
@@ -7570,36 +7402,12 @@ public interface ToscaPackage extends EPackage {
 		EClass TOSCA_CAPABILITIES_CONTAINER = eINSTANCE.getTosca_capabilities_container();
 
 		/**
-		 * The meta object literal for the '<em><b>Num Cpus</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TOSCA_CAPABILITIES_CONTAINER__NUM_CPUS = eINSTANCE.getTosca_capabilities_container_NumCpus();
-
-		/**
 		 * The meta object literal for the '<em><b>Disk Size</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE = eINSTANCE.getTosca_capabilities_container_DiskSize();
-
-		/**
-		 * The meta object literal for the '<em><b>Cpu Frequency</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TOSCA_CAPABILITIES_CONTAINER__CPU_FREQUENCY = eINSTANCE.getTosca_capabilities_container_CpuFrequency();
-
-		/**
-		 * The meta object literal for the '<em><b>Mem Size</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TOSCA_CAPABILITIES_CONTAINER__MEM_SIZE = eINSTANCE.getTosca_capabilities_container_MemSize();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_capabilities_endpoint_databaseImpl <em>Tosca capabilities endpoint database</em>}' class.

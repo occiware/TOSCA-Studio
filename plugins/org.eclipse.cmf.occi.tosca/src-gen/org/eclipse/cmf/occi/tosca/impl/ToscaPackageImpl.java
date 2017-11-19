@@ -1164,35 +1164,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTosca_capabilities_container_NumCpus() {
-		return (EAttribute)tosca_capabilities_containerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getTosca_capabilities_container_DiskSize() {
-		return (EAttribute)tosca_capabilities_containerEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTosca_capabilities_container_CpuFrequency() {
-		return (EAttribute)tosca_capabilities_containerEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTosca_capabilities_container_MemSize() {
-		return (EAttribute)tosca_capabilities_containerEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)tosca_capabilities_containerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2294,10 +2267,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		tosca_capabilities_network_bindableEClass = createEClass(TOSCA_CAPABILITIES_NETWORK_BINDABLE);
 
 		tosca_capabilities_containerEClass = createEClass(TOSCA_CAPABILITIES_CONTAINER);
-		createEAttribute(tosca_capabilities_containerEClass, TOSCA_CAPABILITIES_CONTAINER__NUM_CPUS);
 		createEAttribute(tosca_capabilities_containerEClass, TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE);
-		createEAttribute(tosca_capabilities_containerEClass, TOSCA_CAPABILITIES_CONTAINER__CPU_FREQUENCY);
-		createEAttribute(tosca_capabilities_containerEClass, TOSCA_CAPABILITIES_CONTAINER__MEM_SIZE);
 
 		tosca_capabilities_endpoint_databaseEClass = createEClass(TOSCA_CAPABILITIES_ENDPOINT_DATABASE);
 
@@ -2642,10 +2612,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		initEClass(tosca_capabilities_network_bindableEClass, Tosca_capabilities_network_bindable.class, "Tosca_capabilities_network_bindable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(tosca_capabilities_containerEClass, Tosca_capabilities_container.class, "Tosca_capabilities_container", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTosca_capabilities_container_NumCpus(), this.getintegerMinOne(), "numCpus", null, 0, 1, Tosca_capabilities_container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTosca_capabilities_container_DiskSize(), this.getscalarSizeMinZeroMB(), "diskSize", null, 0, 1, Tosca_capabilities_container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTosca_capabilities_container_CpuFrequency(), this.getscalarFrequency(), "cpuFrequency", null, 0, 1, Tosca_capabilities_container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTosca_capabilities_container_MemSize(), this.getscalarSizeMinZeroMB(), "memSize", null, 0, 1, Tosca_capabilities_container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tosca_capabilities_endpoint_databaseEClass, Tosca_capabilities_endpoint_database.class, "Tosca_capabilities_endpoint_database", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

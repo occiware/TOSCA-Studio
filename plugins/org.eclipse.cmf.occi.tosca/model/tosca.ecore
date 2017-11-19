@@ -297,24 +297,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_capabilities_network_bindable"
       eSuperTypes="#//Tosca_capabilities_node platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_capabilities_container" eSuperTypes="#//Tosca_capabilities_root platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numCpus" eType="#//integerMinOne">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Number of (actual or virtual) CPUs associated with the Compute node."/>
-      </eAnnotations>
-    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="diskSize" eType="#//scalarSizeMinZeroMB">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Size of the local disk available to applications running on the Compute node (default unit is MB)."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cpuFrequency" eType="#//scalarFrequency">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Specifies the operating frequency of CPU's core.  This property expresses the expected frequency of one (1) CPU as provided by the property â€œnum_cpusâ€�."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="memSize" eType="#//scalarSizeMinZeroMB">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Size of memory available to applications running on the Compute node (default unit is MB)."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>

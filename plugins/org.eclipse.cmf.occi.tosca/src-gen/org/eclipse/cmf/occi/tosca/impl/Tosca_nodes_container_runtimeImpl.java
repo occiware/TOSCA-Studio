@@ -34,10 +34,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_container_runtimeImpl#getMinInstances <em>Min Instances</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_container_runtimeImpl#getMaxInstances <em>Max Instances</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_container_runtimeImpl#getDefaultInstances <em>Default Instances</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_container_runtimeImpl#getNumCpus <em>Num Cpus</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_container_runtimeImpl#getDiskSize <em>Disk Size</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_container_runtimeImpl#getCpuFrequency <em>Cpu Frequency</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_container_runtimeImpl#getMemSize <em>Mem Size</em>}</li>
  * </ul>
  *
  * @generated
@@ -104,26 +101,6 @@ public class Tosca_nodes_container_runtimeImpl extends Tosca_nodes_softwarecompo
 	protected Integer defaultInstances = DEFAULT_INSTANCES_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getNumCpus() <em>Num Cpus</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNumCpus()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Integer NUM_CPUS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getNumCpus() <em>Num Cpus</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNumCpus()
-	 * @generated
-	 * @ordered
-	 */
-	protected Integer numCpus = NUM_CPUS_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getDiskSize() <em>Disk Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -142,46 +119,6 @@ public class Tosca_nodes_container_runtimeImpl extends Tosca_nodes_softwarecompo
 	 * @ordered
 	 */
 	protected Integer diskSize = DISK_SIZE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getCpuFrequency() <em>Cpu Frequency</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCpuFrequency()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Double CPU_FREQUENCY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCpuFrequency() <em>Cpu Frequency</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCpuFrequency()
-	 * @generated
-	 * @ordered
-	 */
-	protected Double cpuFrequency = CPU_FREQUENCY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getMemSize() <em>Mem Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMemSize()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Integer MEM_SIZE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getMemSize() <em>Mem Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMemSize()
-	 * @generated
-	 * @ordered
-	 */
-	protected Integer memSize = MEM_SIZE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -270,27 +207,6 @@ public class Tosca_nodes_container_runtimeImpl extends Tosca_nodes_softwarecompo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Integer getNumCpus() {
-		return numCpus;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNumCpus(Integer newNumCpus) {
-		Integer oldNumCpus = numCpus;
-		numCpus = newNumCpus;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__NUM_CPUS, oldNumCpus, numCpus));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Integer getDiskSize() {
 		return diskSize;
 	}
@@ -312,48 +228,6 @@ public class Tosca_nodes_container_runtimeImpl extends Tosca_nodes_softwarecompo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Double getCpuFrequency() {
-		return cpuFrequency;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCpuFrequency(Double newCpuFrequency) {
-		Double oldCpuFrequency = cpuFrequency;
-		cpuFrequency = newCpuFrequency;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__CPU_FREQUENCY, oldCpuFrequency, cpuFrequency));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Integer getMemSize() {
-		return memSize;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMemSize(Integer newMemSize) {
-		Integer oldMemSize = memSize;
-		memSize = newMemSize;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__MEM_SIZE, oldMemSize, memSize));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -363,14 +237,8 @@ public class Tosca_nodes_container_runtimeImpl extends Tosca_nodes_softwarecompo
 				return getMaxInstances();
 			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__DEFAULT_INSTANCES:
 				return getDefaultInstances();
-			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__NUM_CPUS:
-				return getNumCpus();
 			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__DISK_SIZE:
 				return getDiskSize();
-			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__CPU_FREQUENCY:
-				return getCpuFrequency();
-			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__MEM_SIZE:
-				return getMemSize();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -392,17 +260,8 @@ public class Tosca_nodes_container_runtimeImpl extends Tosca_nodes_softwarecompo
 			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__DEFAULT_INSTANCES:
 				setDefaultInstances((Integer)newValue);
 				return;
-			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__NUM_CPUS:
-				setNumCpus((Integer)newValue);
-				return;
 			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__DISK_SIZE:
 				setDiskSize((Integer)newValue);
-				return;
-			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__CPU_FREQUENCY:
-				setCpuFrequency((Double)newValue);
-				return;
-			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__MEM_SIZE:
-				setMemSize((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -425,17 +284,8 @@ public class Tosca_nodes_container_runtimeImpl extends Tosca_nodes_softwarecompo
 			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__DEFAULT_INSTANCES:
 				setDefaultInstances(DEFAULT_INSTANCES_EDEFAULT);
 				return;
-			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__NUM_CPUS:
-				setNumCpus(NUM_CPUS_EDEFAULT);
-				return;
 			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__DISK_SIZE:
 				setDiskSize(DISK_SIZE_EDEFAULT);
-				return;
-			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__CPU_FREQUENCY:
-				setCpuFrequency(CPU_FREQUENCY_EDEFAULT);
-				return;
-			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__MEM_SIZE:
-				setMemSize(MEM_SIZE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -455,14 +305,8 @@ public class Tosca_nodes_container_runtimeImpl extends Tosca_nodes_softwarecompo
 				return MAX_INSTANCES_EDEFAULT == null ? maxInstances != null : !MAX_INSTANCES_EDEFAULT.equals(maxInstances);
 			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__DEFAULT_INSTANCES:
 				return DEFAULT_INSTANCES_EDEFAULT == null ? defaultInstances != null : !DEFAULT_INSTANCES_EDEFAULT.equals(defaultInstances);
-			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__NUM_CPUS:
-				return NUM_CPUS_EDEFAULT == null ? numCpus != null : !NUM_CPUS_EDEFAULT.equals(numCpus);
 			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__DISK_SIZE:
 				return DISK_SIZE_EDEFAULT == null ? diskSize != null : !DISK_SIZE_EDEFAULT.equals(diskSize);
-			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__CPU_FREQUENCY:
-				return CPU_FREQUENCY_EDEFAULT == null ? cpuFrequency != null : !CPU_FREQUENCY_EDEFAULT.equals(cpuFrequency);
-			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__MEM_SIZE:
-				return MEM_SIZE_EDEFAULT == null ? memSize != null : !MEM_SIZE_EDEFAULT.equals(memSize);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -484,10 +328,7 @@ public class Tosca_nodes_container_runtimeImpl extends Tosca_nodes_softwarecompo
 		}
 		if (baseClass == Tosca_capabilities_container.class) {
 			switch (derivedFeatureID) {
-				case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__NUM_CPUS: return ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__NUM_CPUS;
 				case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__DISK_SIZE: return ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE;
-				case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__CPU_FREQUENCY: return ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__CPU_FREQUENCY;
-				case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__MEM_SIZE: return ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__MEM_SIZE;
 				default: return -1;
 			}
 		}
@@ -511,10 +352,7 @@ public class Tosca_nodes_container_runtimeImpl extends Tosca_nodes_softwarecompo
 		}
 		if (baseClass == Tosca_capabilities_container.class) {
 			switch (baseFeatureID) {
-				case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__NUM_CPUS: return ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__NUM_CPUS;
 				case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE: return ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__DISK_SIZE;
-				case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__CPU_FREQUENCY: return ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__CPU_FREQUENCY;
-				case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__MEM_SIZE: return ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__MEM_SIZE;
 				default: return -1;
 			}
 		}
@@ -537,14 +375,8 @@ public class Tosca_nodes_container_runtimeImpl extends Tosca_nodes_softwarecompo
 		result.append(maxInstances);
 		result.append(", defaultInstances: ");
 		result.append(defaultInstances);
-		result.append(", numCpus: ");
-		result.append(numCpus);
 		result.append(", diskSize: ");
 		result.append(diskSize);
-		result.append(", cpuFrequency: ");
-		result.append(cpuFrequency);
-		result.append(", memSize: ");
-		result.append(memSize);
 		result.append(')');
 		return result.toString();
 	}

@@ -103,11 +103,9 @@ public class ToscaTables
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_double = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("double", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_float = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("float", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_integer = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("integer", 0);
-	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_integerMinOne = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("integerMinOne", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_long = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("long", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_map = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("map", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_range = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("range", 0);
-	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_scalarFrequency = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("scalarFrequency", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_scalarSizeMinOneMB = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("scalarSizeMinOneMB", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_scalarSizeMinZeroGB = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("scalarSizeMinZeroGB", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_scalarSizeMinZeroMB = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("scalarSizeMinZeroMB", 0);
@@ -844,10 +842,7 @@ public class ToscaTables
 		}
 
 
-		public static final /*@NonNull*/ ExecutorProperty _Tosca_capabilities_container__cpuFrequency = new EcoreExecutorProperty(ToscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER__CPU_FREQUENCY, Types._Tosca_capabilities_container, 0);
-		public static final /*@NonNull*/ ExecutorProperty _Tosca_capabilities_container__diskSize = new EcoreExecutorProperty(ToscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE, Types._Tosca_capabilities_container, 1);
-		public static final /*@NonNull*/ ExecutorProperty _Tosca_capabilities_container__memSize = new EcoreExecutorProperty(ToscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER__MEM_SIZE, Types._Tosca_capabilities_container, 2);
-		public static final /*@NonNull*/ ExecutorProperty _Tosca_capabilities_container__numCpus = new EcoreExecutorProperty(ToscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER__NUM_CPUS, Types._Tosca_capabilities_container, 3);
+		public static final /*@NonNull*/ ExecutorProperty _Tosca_capabilities_container__diskSize = new EcoreExecutorProperty(ToscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE, Types._Tosca_capabilities_container, 0);
 
 		public static final /*@NonNull*/ ExecutorProperty _Tosca_capabilities_endpoint__initiator = new EcoreExecutorProperty(ToscaPackage.Literals.TOSCA_CAPABILITIES_ENDPOINT__INITIATOR, Types._Tosca_capabilities_endpoint, 0);
 		public static final /*@NonNull*/ ExecutorProperty _Tosca_capabilities_endpoint__networkName = new EcoreExecutorProperty(ToscaPackage.Literals.TOSCA_CAPABILITIES_ENDPOINT__NETWORK_NAME, Types._Tosca_capabilities_endpoint, 1);
@@ -4214,10 +4209,7 @@ public class ToscaTables
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_capabilities_attachment = {};
 
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_capabilities_container = {
-			ToscaTables.Properties._Tosca_capabilities_container__cpuFrequency,
-			ToscaTables.Properties._Tosca_capabilities_container__diskSize,
-			ToscaTables.Properties._Tosca_capabilities_container__memSize,
-			ToscaTables.Properties._Tosca_capabilities_container__numCpus
+			ToscaTables.Properties._Tosca_capabilities_container__diskSize
 		};
 
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_capabilities_endpoint = {
@@ -4301,17 +4293,14 @@ public class ToscaTables
 
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_compute = {
 			ToscaTables.Properties._Tosca_capabilities_operatingsystem__architecture,
-			ToscaTables.Properties._Tosca_capabilities_container__cpuFrequency,
 			ToscaTables.Properties._Tosca_capabilities_scalable__defaultInstances,
 			ToscaTables.Properties._Tosca_capabilities_container__diskSize,
 			ToscaTables.Properties._Tosca_capabilities_operatingsystem__distribution,
 			ToscaTables.Properties._Tosca_capabilities_endpoint__initiator,
 			ToscaTables.Properties._Tosca_capabilities_scalable__maxInstances,
-			ToscaTables.Properties._Tosca_capabilities_container__memSize,
 			ToscaTables.Properties._Tosca_capabilities_scalable__minInstances,
 			ToscaTables.Properties._Tosca_capabilities_endpoint__networkName,
 			ToscaTables.Properties._Tosca_nodes_compute__networks,
-			ToscaTables.Properties._Tosca_capabilities_container__numCpus,
 			ToscaTables.Properties._Tosca_capabilities_endpoint__port,
 			ToscaTables.Properties._Tosca_capabilities_endpoint__portName,
 			ToscaTables.Properties._Tosca_capabilities_endpoint__ports,
@@ -4329,13 +4318,10 @@ public class ToscaTables
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_container_runtime = {
 			ToscaTables.Properties._Tosca_nodes_softwarecomponent__adminCredential,
 			ToscaTables.Properties._Tosca_nodes_softwarecomponent__componentVersion,
-			ToscaTables.Properties._Tosca_capabilities_container__cpuFrequency,
 			ToscaTables.Properties._Tosca_capabilities_scalable__defaultInstances,
 			ToscaTables.Properties._Tosca_capabilities_container__diskSize,
 			ToscaTables.Properties._Tosca_capabilities_scalable__maxInstances,
-			ToscaTables.Properties._Tosca_capabilities_container__memSize,
-			ToscaTables.Properties._Tosca_capabilities_scalable__minInstances,
-			ToscaTables.Properties._Tosca_capabilities_container__numCpus
+			ToscaTables.Properties._Tosca_capabilities_scalable__minInstances
 		};
 
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_database = {
@@ -4355,10 +4341,7 @@ public class ToscaTables
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_dbms = {
 			ToscaTables.Properties._Tosca_nodes_softwarecomponent__adminCredential,
 			ToscaTables.Properties._Tosca_nodes_softwarecomponent__componentVersion,
-			ToscaTables.Properties._Tosca_capabilities_container__cpuFrequency,
 			ToscaTables.Properties._Tosca_capabilities_container__diskSize,
-			ToscaTables.Properties._Tosca_capabilities_container__memSize,
-			ToscaTables.Properties._Tosca_capabilities_container__numCpus,
 			ToscaTables.Properties._Tosca_nodes_dbms__port,
 			ToscaTables.Properties._Tosca_nodes_dbms__rootPassword
 		};
@@ -4412,12 +4395,9 @@ public class ToscaTables
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_webserver = {
 			ToscaTables.Properties._Tosca_nodes_softwarecomponent__adminCredential,
 			ToscaTables.Properties._Tosca_nodes_softwarecomponent__componentVersion,
-			ToscaTables.Properties._Tosca_capabilities_container__cpuFrequency,
 			ToscaTables.Properties._Tosca_capabilities_container__diskSize,
 			ToscaTables.Properties._Tosca_capabilities_endpoint__initiator,
-			ToscaTables.Properties._Tosca_capabilities_container__memSize,
 			ToscaTables.Properties._Tosca_capabilities_endpoint__networkName,
-			ToscaTables.Properties._Tosca_capabilities_container__numCpus,
 			ToscaTables.Properties._Tosca_capabilities_endpoint__port,
 			ToscaTables.Properties._Tosca_capabilities_endpoint__portName,
 			ToscaTables.Properties._Tosca_capabilities_endpoint__ports,
