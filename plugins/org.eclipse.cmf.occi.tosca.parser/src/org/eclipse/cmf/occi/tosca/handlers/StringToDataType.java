@@ -33,15 +33,6 @@ public class StringToDataType {
 	
 	public final static NumericType toscaDatatypesNetworkPortDef = OCCIFactory.eINSTANCE.createNumericType();
 	
-	public final static ArrayType typeArrayString = OCCIFactory.eINSTANCE.createArrayType();
-	public final static ArrayType typeArrayBoolean = OCCIFactory.eINSTANCE.createArrayType();
-	public final static ArrayType typeArrayByte = OCCIFactory.eINSTANCE.createArrayType();
-	public final static ArrayType typeArrayDouble = OCCIFactory.eINSTANCE.createArrayType();
-	public final static ArrayType typeArrayFloat = OCCIFactory.eINSTANCE.createArrayType();
-	public final static ArrayType typeArrayInteger = OCCIFactory.eINSTANCE.createArrayType();
-	public final static ArrayType typeArrayLong = OCCIFactory.eINSTANCE.createArrayType();
-	public final static ArrayType typeArrayShort = OCCIFactory.eINSTANCE.createArrayType();
-	
 	public final static EObjectType typeModelMap = OCCIFactory.eINSTANCE.createEObjectType();
 	
 	public final static StringType typeModelVersion = OCCIFactory.eINSTANCE.createStringType();
@@ -104,22 +95,6 @@ public class StringToDataType {
 		typeModelString.setName("string");
 		typeModelStringMinOne.setName("stringMinOne");
 		typeModelStringMinOne.setMinLength(1);
-		typeArrayString.setName("arrayString");
-		typeArrayString.setType(typeModelString);
-		typeArrayBoolean.setName("arrayBoolean");
-		typeArrayBoolean.setType(typeModelBoolean);
-		typeArrayByte.setName("arrayByte");
-		typeArrayByte.setType(typeModelByte);
-		typeArrayDouble.setName("arrayDouble");
-		typeArrayDouble.setType(typeModelDouble);
-		typeArrayFloat.setName("arrayFloat");
-		typeArrayFloat.setType(typeModelFloat);
-		typeArrayInteger.setName("arrayInteger");
-		typeArrayInteger.setType(typeModelInteger);
-		typeArrayLong.setName("arrayLong");
-		typeArrayLong.setType(typeModelLong);
-		typeArrayShort.setName("arrayShort");
-		typeArrayShort.setType(typeModelShort);
 		
 		typeModelMap.setName("map");
 		typeModelMap.setInstanceClassName("java.util.Map");
@@ -138,15 +113,6 @@ public class StringToDataType {
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelLong);
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelShort);
 		
-		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayString);
-		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayBoolean);
-		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayByte);
-		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayDouble);
-		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayFloat);
-		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayInteger);
-		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayLong);
-		ExtensionsManager.getExtension("tosca").getTypes().add(typeArrayShort);
-		
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelMap);
 		
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelVersion);
@@ -163,7 +129,6 @@ public class StringToDataType {
 		
 		ExtensionsManager.getExtension("tosca").getTypes().add(scalarSizeZeroMB);
 		
-		
 		map.put("string", typeModelString);
 		map.put("stringMinOne", typeModelStringMinOne);
 		map.put("boolean", typeModelBoolean);
@@ -178,8 +143,6 @@ public class StringToDataType {
 		map.put("long", typeModelLong);
 		map.put("short", typeModelShort);
 		
-		map.put("arraystring", typeArrayString);
-		
 		map.put("map", typeModelMap);
 		map.put("version", typeModelVersion);
 		map.put("range", typeModelRange);
@@ -191,6 +154,18 @@ public class StringToDataType {
 		map.put("scalar-unit.size0 GB", scalarSizeZeroGB);
 		map.put("scalar-unit.size0 MB", scalarSizeZeroMB);
 	}
+
+	public static DataType defineNewArrayType(String entrySchema) {
+		ArrayType newArrayType = OCCIFactory.eINSTANCE.createArrayType();
+		String [] split = entrySchema.split("\\.");
+		entrySchema = split[split.length - 1];
+		newArrayType.setName("array" + entrySchema);
+		newArrayType.setType(ExtensionsManager.getDataTypeFromItsName("tosca", entrySchema));
+		map.put("array" + entrySchema, newArrayType);
+		ExtensionsManager.getExtension("tosca").getTypes().add(newArrayType);
+		return newArrayType;
+	}
 }
+
 
 
