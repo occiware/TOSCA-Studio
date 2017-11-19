@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:infrastructure="http://schemas.ogf.org/occi/infrastructure/ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:platform="http://schemas.ogf.org/occi/platform/ecore" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis xmi:id="_ZrNEYMmEEeeck8h8gqwrVw" selectedViews="_enWOQMmEEeeck8h8gqwrVw" version="12.0.0.201704271200">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:extendedtosca="http://org.occi/tosca/ecore" xmlns:infrastructure="http://schemas.ogf.org/occi/infrastructure/ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:platform="http://schemas.ogf.org/occi/platform/ecore" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis xmi:id="_ZrNEYMmEEeeck8h8gqwrVw" selectedViews="_enWOQMmEEeeck8h8gqwrVw _0Ibt0M15EeeyR61BrMV1sQ" version="12.0.0.201704271200">
     <semanticResources>Config.tosca</semanticResources>
     <semanticResources>http://schemas.ogf.org/occi/core</semanticResources>
     <semanticResources>http://org.occi/tosca</semanticResources>
     <semanticResources>http://schemas.ogf.org/occi/infrastructure</semanticResources>
     <semanticResources>http://schemas.ogf.org/occi/platform</semanticResources>
     <semanticResources>http://schemas.ogf.org/occi/sla</semanticResources>
+    <semanticResources>file:/C:/Users/schallit/workspace-tosca/plugins/org.eclipse.cmf.occi.tosca.examples/Example1-HelloWorld.tosca</semanticResources>
+    <semanticResources>Example1-HelloWorld.tosca</semanticResources>
+    <semanticResources>Example10-SimpleDependencyRelationshipBetweenTwoNodes.tosca</semanticResources>
+    <semanticResources>Example11-AnAbstractHostRequirementUsingANodeFilter.tosca</semanticResources>
+    <semanticResources>Example12-AnAbstractComputeNodeTemplateWithANodeFilter.tosca</semanticResources>
+    <semanticResources>Example13-AnAbstractDatabaseRequirementUsingANodeFilter.tosca</semanticResources>
+    <semanticResources>Example14-AnAbstractDatabaseNodeTemplate.tosca</semanticResources>
+    <semanticResources>Example15-ReferencingAnAbstractDatabaseNodeTemplate.tosca</semanticResources>
+    <semanticResources>My.extendedTosca</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_enWOQMmEEeeck8h8gqwrVw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_e6sBAMmEEeeck8h8gqwrVw" name="Config" repPath="#_e6iQAMmEEeeck8h8gqwrVw">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']"/>
         <target xmi:type="occi:Configuration" href="Config.tosca#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_Xtcycc0YEeeL0daxQgdZDQ" name="new ToscaConfiguration Diagram" repPath="#_XtcyAM0YEeeL0daxQgdZDQ">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']"/>
+        <target xmi:type="occi:Configuration" href="Example1-HelloWorld.tosca#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" xmi:id="_0Ibt0M15EeeyR61BrMV1sQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.cmf.occi.tosca.extended.design.extended/description/extendedTosca.odesign#//@ownedViewpoints[name='ExtendedToscaConfiguration']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_1Ml5hc15EeeyR61BrMV1sQ" name="My" repPath="#_1Ml5gM15EeeyR61BrMV1sQ">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.extended.design.extended/description/extendedTosca.odesign#//@ownedViewpoints[name='ExtendedToscaConfiguration']/@ownedRepresentations[name='ExtendedToscaConfiguration%20Diagram']"/>
+        <target xmi:type="occi:Configuration" href="My.extendedTosca#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
@@ -438,5 +458,526 @@
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_e6iQBMmEEeeck8h8gqwrVw"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer"/>
     <target xmi:type="occi:Configuration" href="Config.tosca#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram xmi:id="_XtcyAM0YEeeL0daxQgdZDQ" name="new ToscaConfiguration Diagram">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_XtcyAc0YEeeL0daxQgdZDQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_XtcyAs0YEeeL0daxQgdZDQ"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_XtmjAM0YEeeL0daxQgdZDQ" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_XtmjAc0YEeeL0daxQgdZDQ" type="Sirius" element="_XtcyAM0YEeeL0daxQgdZDQ" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_Xtvs8M0YEeeL0daxQgdZDQ" type="2002" element="_XtcyBM0YEeeL0daxQgdZDQ">
+          <children xmi:type="notation:Node" xmi:id="_Xt5d8M0YEeeL0daxQgdZDQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_Xt5d8c0YEeeL0daxQgdZDQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_Xt5d9M0YEeeL0daxQgdZDQ" type="3009" element="_XtcyBs0YEeeL0daxQgdZDQ">
+              <children xmi:type="notation:Node" xmi:id="_Xt5d980YEeeL0daxQgdZDQ" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_Xt5d-M0YEeeL0daxQgdZDQ" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_Xt5eAs0YEeeL0daxQgdZDQ" type="3010" element="_XtcyCM0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_Xt5eA80YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_Xt5eBM0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_Xt5eBc0YEeeL0daxQgdZDQ" type="3010" element="_XtcyC80YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_Xt5eBs0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_Xt5eB80YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuDO8M0YEeeL0daxQgdZDQ" type="3010" element="_XtcyDs0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuDO8c0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuDO8s0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuDO880YEeeL0daxQgdZDQ" type="3010" element="_XtcyEc0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuDO9M0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuDO9c0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuDO9s0YEeeL0daxQgdZDQ" type="3010" element="_XtcyFM0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuDO980YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuDO-M0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuDO-c0YEeeL0daxQgdZDQ" type="3010" element="_XtcyF80YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuDO-s0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuDO-80YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuDO_M0YEeeL0daxQgdZDQ" type="3010" element="_XtcyGs0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuDO_c0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuDO_s0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuDO_80YEeeL0daxQgdZDQ" type="3010" element="_XtcyHc0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuDPAM0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuDPAc0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuDPAs0YEeeL0daxQgdZDQ" type="3010" element="_XtcyIM0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuDPA80YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuDPBM0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuDPBc0YEeeL0daxQgdZDQ" type="3010" element="_XtcyI80YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuDPBs0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuDPB80YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuDPCM0YEeeL0daxQgdZDQ" type="3010" element="_XtcyJs0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuDPCc0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuDPCs0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuDPC80YEeeL0daxQgdZDQ" type="3010" element="_XtcyKc0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuDPDM0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuDPDc0YEeeL0daxQgdZDQ"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_Xt5d-c0YEeeL0daxQgdZDQ"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_Xt5d-s0YEeeL0daxQgdZDQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Xt5d9c0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xt5d9s0YEeeL0daxQgdZDQ" x="31" y="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Xt5d-80YEeeL0daxQgdZDQ" type="3009" element="_XtcyLM0YEeeL0daxQgdZDQ">
+              <children xmi:type="notation:Node" xmi:id="_Xt5d_s0YEeeL0daxQgdZDQ" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_Xt5d_80YEeeL0daxQgdZDQ" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_XuDPDs0YEeeL0daxQgdZDQ" type="3010" element="_XtcyLs0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuDPD80YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuDPEM0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuDPEc0YEeeL0daxQgdZDQ" type="3010" element="_XtcyMc0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuDPEs0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuDPE80YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuDPFM0YEeeL0daxQgdZDQ" type="3010" element="_XtcyNM0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuDPFc0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuDPFs0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuMY4M0YEeeL0daxQgdZDQ" type="3010" element="_XtcyN80YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuMY4c0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuMY4s0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuMY480YEeeL0daxQgdZDQ" type="3010" element="_XtcyOs0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuMY5M0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuMY5c0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuMY5s0YEeeL0daxQgdZDQ" type="3010" element="_XtcyPc0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuMY580YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuMY6M0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuMY6c0YEeeL0daxQgdZDQ" type="3010" element="_XtcyQM0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuMY6s0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuMY680YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuMY7M0YEeeL0daxQgdZDQ" type="3010" element="_XtcyQ80YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuMY7c0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuMY7s0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuMY780YEeeL0daxQgdZDQ" type="3010" element="_XtcyRs0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuMY8M0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuMY8c0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuMY8s0YEeeL0daxQgdZDQ" type="3010" element="_XtcySc0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuMY880YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuMY9M0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuMY9c0YEeeL0daxQgdZDQ" type="3010" element="_XtcyTM0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuMY9s0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuMY980YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuMY-M0YEeeL0daxQgdZDQ" type="3010" element="_XtcyT80YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuMY-c0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuMY-s0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuMY-80YEeeL0daxQgdZDQ" type="3010" element="_XtcyUs0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuMY_M0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuMY_c0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuMY_s0YEeeL0daxQgdZDQ" type="3010" element="_XtcyVc0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuMY_80YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuMZAM0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuMZAc0YEeeL0daxQgdZDQ" type="3010" element="_XtcyWM0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuMZAs0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuMZA80YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuMZBM0YEeeL0daxQgdZDQ" type="3010" element="_XtcyW80YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuMZBc0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuMZBs0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuMZB80YEeeL0daxQgdZDQ" type="3010" element="_XtcyXs0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuMZCM0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuMZCc0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuMZCs0YEeeL0daxQgdZDQ" type="3010" element="_XtcyYc0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuMZC80YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuMZDM0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuMZDc0YEeeL0daxQgdZDQ" type="3010" element="_XtcyZM0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuMZDs0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuMZD80YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuWJ4M0YEeeL0daxQgdZDQ" type="3010" element="_XtcyZ80YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuWJ4c0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuWJ4s0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuWJ480YEeeL0daxQgdZDQ" type="3010" element="_Xtcyas0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuWJ5M0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuWJ5c0YEeeL0daxQgdZDQ"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_XuWJ5s0YEeeL0daxQgdZDQ" type="3010" element="_Xtcybc0YEeeL0daxQgdZDQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_XuWJ580YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_XuWJ6M0YEeeL0daxQgdZDQ"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_Xt5eAM0YEeeL0daxQgdZDQ"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_Xt5eAc0YEeeL0daxQgdZDQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Xt5d_M0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xt5d_c0YEeeL0daxQgdZDQ" x="511" y="30"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_Xt5d8s0YEeeL0daxQgdZDQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_Xt5d880YEeeL0daxQgdZDQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Xtvs8c0YEeeL0daxQgdZDQ" fontName="Segoe UI" fontHeight="10"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xtvs8s0YEeeL0daxQgdZDQ"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_XtmjAs0YEeeL0daxQgdZDQ"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_XtcyBM0YEeeL0daxQgdZDQ" name=": Compute">
+      <target xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+      <semanticElements xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_XtcyBc0YEeeL0daxQgdZDQ" labelSize="10" borderSize="1" borderSizeComputationExpression="1" foregroundColor="246,139,139">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@conditionnalStyles.1/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_XtcyBs0YEeeL0daxQgdZDQ" name="http://schemas.ogf.org/occi/infrastructure#compute">
+        <target xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+        <semanticElements xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_XtcyB80YEeeL0daxQgdZDQ" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyCM0YEeeL0daxQgdZDQ" name="id = urn:uuid:bb492bee-5015-4ff9-bd20-76db18a7627e">
+          <target xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <semanticElements xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyCc0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyCs0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeId']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeId']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyC80YEeeL0daxQgdZDQ" name="title = null">
+          <target xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <semanticElements xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyDM0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyDc0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeTitle']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeTitle']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyDs0YEeeL0daxQgdZDQ" name="location = null">
+          <target xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <semanticElements xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyD80YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyEM0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeLocation']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeLocation']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyEc0YEeeL0daxQgdZDQ" name="summary = null">
+          <target xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <semanticElements xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyEs0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyE80YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeSummary']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeSummary']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyFM0YEeeL0daxQgdZDQ" name="occiComputeArchitecture = x86">
+          <target xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <semanticElements xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyFc0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyFs0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeOcciComputeArchitecture']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeOcciComputeArchitecture']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyF80YEeeL0daxQgdZDQ" name="occiComputeCores = null">
+          <target xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <semanticElements xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyGM0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyGc0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeOcciComputeCores']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeOcciComputeCores']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyGs0YEeeL0daxQgdZDQ" name="occiComputeHostname = null">
+          <target xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <semanticElements xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyG80YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyHM0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeOcciComputeHostname']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeOcciComputeHostname']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyHc0YEeeL0daxQgdZDQ" name="occiComputeShare = null">
+          <target xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <semanticElements xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyHs0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyH80YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeOcciComputeShare']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeOcciComputeShare']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyIM0YEeeL0daxQgdZDQ" name="occiComputeSpeed = null">
+          <target xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <semanticElements xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyIc0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyIs0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeOcciComputeSpeed']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeOcciComputeSpeed']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyI80YEeeL0daxQgdZDQ" name="occiComputeMemory = null">
+          <target xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <semanticElements xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyJM0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyJc0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeOcciComputeMemory']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeOcciComputeMemory']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyJs0YEeeL0daxQgdZDQ" name="occiComputeState = inactive">
+          <target xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <semanticElements xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyJ80YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyKM0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeOcciComputeState']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeOcciComputeState']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyKc0YEeeL0daxQgdZDQ" name="occiComputeStateMessage = null">
+          <target xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <semanticElements xmi:type="infrastructure:Compute" href="Example1-HelloWorld.tosca#//@resources.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyKs0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyK80YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeOcciComputeStateMessage']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='SubComputeContainer']/@subNodeMappings[name='ComputeOcciComputeStateMessage']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_XtcyLM0YEeeL0daxQgdZDQ" name="http://org.occi/tosca#tosca_nodes_compute">
+        <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+        <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_XtcyLc0YEeeL0daxQgdZDQ" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyLs0YEeeL0daxQgdZDQ" name="minInstances = 1">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyL80YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyMM0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeminInstances']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeminInstances']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyMc0YEeeL0daxQgdZDQ" name="maxInstances = 1">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyMs0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyM80YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computemaxInstances']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computemaxInstances']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyNM0YEeeL0daxQgdZDQ" name="defaultInstances = 1">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyNc0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyNs0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computedefaultInstances']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computedefaultInstances']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyN80YEeeL0daxQgdZDQ" name="portName = null">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyOM0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyOc0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeportName']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeportName']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyOs0YEeeL0daxQgdZDQ" name="protocol = tcp">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyO80YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyPM0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeprotocol']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeprotocol']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyPc0YEeeL0daxQgdZDQ" name="port = null">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyPs0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyP80YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeport']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeport']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyQM0YEeeL0daxQgdZDQ" name="initiator = source">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyQc0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyQs0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeinitiator']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeinitiator']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyQ80YEeeL0daxQgdZDQ" name="networkName = PRIVATE">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyRM0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyRc0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computenetworkName']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computenetworkName']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyRs0YEeeL0daxQgdZDQ" name="secure = false">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyR80YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcySM0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computesecure']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computesecure']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcySc0YEeeL0daxQgdZDQ" name="ports = ">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcySs0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyS80YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeports']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeports']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyTM0YEeeL0daxQgdZDQ" name="urlPath = null">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyTc0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyTs0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeurlPath']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeurlPath']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyT80YEeeL0daxQgdZDQ" name="type = null">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyUM0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyUc0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computetype']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computetype']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyUs0YEeeL0daxQgdZDQ" name="distribution = null">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyU80YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyVM0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computedistribution']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computedistribution']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyVc0YEeeL0daxQgdZDQ" name="version = null">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyVs0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyV80YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeversion']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeversion']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyWM0YEeeL0daxQgdZDQ" name="architecture = null">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyWc0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyWs0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computearchitecture']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computearchitecture']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyW80YEeeL0daxQgdZDQ">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyXM0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyXc0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computenumCpus']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computenumCpus']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyXs0YEeeL0daxQgdZDQ" name="diskSize = null">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyX80YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyYM0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computediskSize']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computediskSize']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyYc0YEeeL0daxQgdZDQ">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyYs0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyY80YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computecpuFrequency']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computecpuFrequency']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyZM0YEeeL0daxQgdZDQ">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyZc0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcyZs0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computememSize']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computememSize']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_XtcyZ80YEeeL0daxQgdZDQ" name="privateAddress = null">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_XtcyaM0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_Xtcyac0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeprivateAddress']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computeprivateAddress']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Xtcyas0YEeeL0daxQgdZDQ" name="publicAddress = null">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_Xtcya80YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_XtcybM0YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computepublicAddress']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computepublicAddress']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Xtcybc0YEeeL0daxQgdZDQ" name="networks = ">
+          <target xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <semanticElements xmi:type="extendedtosca:Tosca_nodes_compute" href="Example1-HelloWorld.tosca#//@resources.0/@parts.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_Xtcybs0YEeeL0daxQgdZDQ"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_Xtcyb80YEeeL0daxQgdZDQ" labelSize="10" labelAlignment="LEFT" hideLabelByDefault="true" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computenetworks']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='ComputeContainer']/@subContainerMappings[name='tosca_nodes_ComputeMixin']/@subNodeMappings[name='Tosca_nodes_computenetworks']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_XtcycM0YEeeL0daxQgdZDQ"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']/@ownedRepresentations[name='ToscaConfiguration%20Diagram']/@defaultLayer"/>
+    <target xmi:type="occi:Configuration" href="Example1-HelloWorld.tosca#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram xmi:id="_1Ml5gM15EeeyR61BrMV1sQ" name="My">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_1Ml5gc15EeeyR61BrMV1sQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_1Ml5gs15EeeyR61BrMV1sQ"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_1NLvYM15EeeyR61BrMV1sQ" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_1NLvYc15EeeyR61BrMV1sQ" type="Sirius" element="_1Ml5gM15EeeyR61BrMV1sQ" measurementUnit="Pixel">
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_1NLvYs15EeeyR61BrMV1sQ"/>
+      </data>
+    </ownedAnnotationEntries>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.cmf.occi.tosca.extended.design.extended/description/extendedTosca.odesign#//@ownedViewpoints[name='ExtendedToscaConfiguration']/@ownedRepresentations[name='ExtendedToscaConfiguration%20Diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_1Ml5hM15EeeyR61BrMV1sQ"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.eclipse.cmf.occi.tosca.extended.design.extended/description/extendedTosca.odesign#//@ownedViewpoints[name='ExtendedToscaConfiguration']/@ownedRepresentations[name='ExtendedToscaConfiguration%20Diagram']/@defaultLayer"/>
+    <target xmi:type="occi:Configuration" href="My.extendedTosca#/"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>

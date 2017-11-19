@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:occi="http://schemas.ogf.org/occi/core/ecore">
+  <use href="http://schemas.ogf.org/occi/core#/"/>
+  <use href="http://schemas.ogf.org/occi/infrastructure#/"/>
+  <use href="http://schemas.ogf.org/occi/platform#/"/>
+  <use href="http://schemas.ogf.org/occi/sla#/"/>
+  <use href="http://org.occi/tosca#/"/>
+</occi:Configuration>
