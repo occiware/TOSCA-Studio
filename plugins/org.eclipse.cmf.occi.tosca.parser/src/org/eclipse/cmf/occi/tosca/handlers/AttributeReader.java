@@ -57,7 +57,18 @@ public class AttributeReader {
 			if (attributesValues.containsKey("default")) {
 				attribute.setDefault((String) attributesValues.get("default"));
 			}
-			DataType type = StringToDataType.map.get(attributesValues.get("type"));
+			
+			DataType type;
+			if ("list".equals(attributesValues.get("type"))
+					|| "array".equals(attributesValues.get("type"))) {
+				String entrySchema = (String)attributesValues.get("entry_schema");
+				type = StringToDataType.map.get("array" + entrySchema);
+				if (type == null) {
+					type = 	StringToDataType.defineNewArrayType(entrySchema);
+				}
+			} else {
+				type = StringToDataType.map.get(attributesValues.get("type"));
+			}
 			if (type != null || ((String)attributesValues.get("type")).startsWith("scalar")) {
 				if (attributesValues.get("constraints") != null) {
 					List<Map<String, ?>> constraints = (ArrayList<Map<String, ?>>) attributesValues.get("constraints");
