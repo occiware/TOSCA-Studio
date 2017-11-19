@@ -9,14 +9,16 @@ import org.eclipse.cmf.occi.core.OCCIFactory;
 public class MixinReader {
 
 	private Map<String, ?> mixins;
+	private Extension extension;
 
-	public MixinReader(Map<String, ?> mixins) {
+	public MixinReader(Extension extension, Map<String, ?> mixins) {
 		this.mixins = mixins;
+		this.extension = extension;
 	}
 
 	private Mixin getMixinByName(String name) {
 		name = name.replaceAll("\\.", "_");
-		for (Mixin mixin : ExtensionsManager.getExtension("tosca").getMixins()) {
+		for (Mixin mixin : extension.getMixins()) {
 			if (name.equals(mixin.getName())) {
 				return mixin;
 			}
@@ -35,21 +37,15 @@ public class MixinReader {
 
 	public void readMixin(String mixinData, Map<String, ?> map) {
 		String mixinStr = mixinData.replaceAll("\\.", "_");
-		boolean alreadyRegistered = false;
 		for (Mixin registeredMixin : ExtensionsManager.getExtension("tosca").getMixins()) {
 			if (registeredMixin.getName().equals(mixinStr)) {
-				alreadyRegistered = true;
+				return;
 			}
-		}
-		if (alreadyRegistered) {
-			return;
 		}
 
 		Mixin mixin = OCCIFactory.eINSTANCE.createMixin();
 		mixin.setName(mixinStr);
 
-		System.out.println(mixinStr);
-		
 		Object derived_from = map.get("derived_from");
 		if (derived_from != null) {
 			Mixin parent = getMixinByName(derived_from.toString());
@@ -72,11 +68,15 @@ public class MixinReader {
 					mixin.getDepends().add(mixinCapability);
 				} else {
 					Map<String, ?> valuesCapabilities = (Map<String, ?>) capabilities.get(capability);
-					Mixin mixinCapability = getMixinByName(valuesCapabilities.get("type").toString());
-					if (mixinCapability == null) {
-						System.err.println("Capability not found : " + mixinCapability);
+					if (valuesCapabilities.get("type") != null) {
+						Mixin mixinCapability = getMixinByName(valuesCapabilities.get("type").toString());
+						if (mixinCapability == null) {
+							System.err.println("Capability not found : " + mixinCapability);
+						}
+						mixin.getDepends().add(mixinCapability);
+					} else {
+						System.err.println("Capability ("+ capability +") is inherited from the parent Mixin");
 					}
-					mixin.getDepends().add(mixinCapability);
 				}
 			}
 		}
@@ -94,9 +94,9 @@ public class MixinReader {
 		if (mixinStr.startsWith("tosca_interfaces") && !mixinStr.endsWith("Root")) {
 			ActionReader.readActions(mixin, (Map<String, ?>) mixins.get(mixinData));
 		}
-
-		mixin.setScheme(ExtensionsManager.getExtension("tosca").getScheme());
-		ExtensionsManager.getExtension("tosca").getMixins().add(mixin);
+		
+		mixin.setScheme(this.extension.getScheme());
+		this.extension.getMixins().add(mixin);
 	}
 
 }
