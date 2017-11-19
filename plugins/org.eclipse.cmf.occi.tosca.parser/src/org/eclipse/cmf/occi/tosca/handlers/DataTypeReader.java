@@ -17,7 +17,9 @@ public class DataTypeReader {
 
 	public static void read(String dataTypeAsString, Map<String, ?> map) {
 		RecordType recordType = OCCIFactory.eINSTANCE.createRecordType();
-		recordType.setName(dataTypeAsString.replaceAll("\\.", ""));
+		String [] split = dataTypeAsString.split("\\.");
+		recordType.setName(split[split.length - 1]);
+		//recordType.setName(dataTypeAsString.replaceAll("\\.", ""));
 		Object description = map.get("description");
 		if (description != null) {
 			recordType.setDocumentation(description.toString());
@@ -74,7 +76,12 @@ public class DataTypeReader {
 						}
 					}
 				} else {
-					recordField.setType(StringToDataType.map.get(type));
+					if (StringToDataType.map.get(type) == null) {
+						recordField.setType(StringToDataType.defineNewArrayType((String) (((Map<String, ?>) recordFieldMap.get("entry_schema"))
+								.get("type"))));
+					} else {
+						recordField.setType(StringToDataType.map.get(type));
+					}
 				}
 
 			}
