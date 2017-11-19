@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.cmf.occi.core.DataType;
 import org.eclipse.cmf.occi.core.Extension;
 import org.eclipse.cmf.occi.core.Kind;
 import org.eclipse.cmf.occi.core.Mixin;
@@ -36,7 +37,6 @@ public class ExtensionsManager {
 		
 		URI modelURI = URI
 				.createURI("file:/C:/Users/schallit/workspace-tosca/plugins/org.eclipse.cmf.occi.tosca/model/tosca.occie");
-		//		.createURI("file:/C:/Users/schallit/runtime-EclipseApplication31072017/org.eclipse.cmf.occi.tosca/model/tosca.occie");
 		resource = resSet.createResource(modelURI);
 		Extension extension = OCCIFactory.eINSTANCE.createExtension();
 		extension.setDescription("Mon extension TOSCA");
@@ -49,7 +49,17 @@ public class ExtensionsManager {
 		resource.getContents().add(extension);
 		
 		extensionsPerName.put("tosca", extension);
-		
+	}
+	
+	public static void createExtendedTosca() {
+ResourceSet resSet = new ResourceSetImpl();
+		URI modelURI = URI
+				.createURI("file:/C:/Users/schallit/workspace-tosca/plugins/org.eclipse.cmf.occi.tosca.extended/model/extendedTosca.occie");
+		resource = resSet.createResource(modelURI);
+		Extension extension = extensionsPerName.get("tosca");
+		extension.setDescription("Extended TOSCA");
+		extension.setName("extendedTosca");
+		resource.getContents().add(extension);
 	}
 	
 	public static Extension getExtension(String extension) {
@@ -74,6 +84,16 @@ public class ExtensionsManager {
 			}
 		}
 		throw new RuntimeException("Kind with term: " + termOfTheKind + " not found in the extension:" + extension);
+	}
+	
+	public static DataType getDataTypeFromItsName(String extension, String datatypeName) {
+		List<DataType> types = extensionsPerName.get(extension).getTypes();
+		for (DataType type : types) {
+			if (type.getName().equals(datatypeName)) {
+				return type;
+			}
+		}
+		throw new RuntimeException("Type with name: " + datatypeName + " not found in the extension:" + extension);
 	}
 	
 	public static void save() {
