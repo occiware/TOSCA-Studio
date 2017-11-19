@@ -20,6 +20,14 @@ public class AttributeMapper extends Mapper {
 		attributeToRemoveFromNodeRoot.add("state");
 		this.mappings.put("tosca_nodes_Root", new AttributesMapping(attributeToRemoveFromNodeRoot));
 		
+		List<String> attributeToRemoveFromCapabilitiesContainer = new ArrayList<String>();
+		attributeToRemoveFromCapabilitiesContainer.add("num.cpus");
+		attributeToRemoveFromCapabilitiesContainer.add("cpu.frequency");
+		attributeToRemoveFromCapabilitiesContainer.add("mem.size");
+		this.mappings.put("tosca_capabilities_Container", new AttributesMapping(attributeToRemoveFromCapabilitiesContainer));
+		
+		this.mappings.put("tosca_capabilities_OperatingSystem", new AttributesMapping("architecture"));
+		
 		this.mappings.put("tosca_relationships_AttachesTo", new AttributesMapping("device"));
 
 		List<String> actionsToRemoveFromStandard = new ArrayList<String>();
