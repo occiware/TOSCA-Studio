@@ -55,36 +55,11 @@ public class Tosca_nodes_dbmsItemProvider extends Tosca_nodes_softwarecomponentI
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNumCpusPropertyDescriptor(object);
 			addDiskSizePropertyDescriptor(object);
-			addCpuFrequencyPropertyDescriptor(object);
-			addMemSizePropertyDescriptor(object);
 			addPortPropertyDescriptor(object);
 			addRootPasswordPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Num Cpus feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNumCpusPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Tosca_capabilities_container_numCpus_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_container_numCpus_feature", "_UI_Tosca_capabilities_container_type"),
-				 ToscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER__NUM_CPUS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -101,50 +76,6 @@ public class Tosca_nodes_dbmsItemProvider extends Tosca_nodes_softwarecomponentI
 				 getString("_UI_Tosca_capabilities_container_diskSize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_container_diskSize_feature", "_UI_Tosca_capabilities_container_type"),
 				 ToscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Cpu Frequency feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCpuFrequencyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Tosca_capabilities_container_cpuFrequency_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_container_cpuFrequency_feature", "_UI_Tosca_capabilities_container_type"),
-				 ToscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER__CPU_FREQUENCY,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Mem Size feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMemSizePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Tosca_capabilities_container_memSize_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_container_memSize_feature", "_UI_Tosca_capabilities_container_type"),
-				 ToscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER__MEM_SIZE,
 				 true,
 				 false,
 				 false,
@@ -235,10 +166,7 @@ public class Tosca_nodes_dbmsItemProvider extends Tosca_nodes_softwarecomponentI
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Tosca_nodes_dbms.class)) {
-			case ToscaPackage.TOSCA_NODES_DBMS__NUM_CPUS:
 			case ToscaPackage.TOSCA_NODES_DBMS__DISK_SIZE:
-			case ToscaPackage.TOSCA_NODES_DBMS__CPU_FREQUENCY:
-			case ToscaPackage.TOSCA_NODES_DBMS__MEM_SIZE:
 			case ToscaPackage.TOSCA_NODES_DBMS__PORT:
 			case ToscaPackage.TOSCA_NODES_DBMS__ROOT_PASSWORD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

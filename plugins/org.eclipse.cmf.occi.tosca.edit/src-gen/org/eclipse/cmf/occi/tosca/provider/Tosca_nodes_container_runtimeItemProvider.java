@@ -58,10 +58,7 @@ public class Tosca_nodes_container_runtimeItemProvider extends Tosca_nodes_softw
 			addMinInstancesPropertyDescriptor(object);
 			addMaxInstancesPropertyDescriptor(object);
 			addDefaultInstancesPropertyDescriptor(object);
-			addNumCpusPropertyDescriptor(object);
 			addDiskSizePropertyDescriptor(object);
-			addCpuFrequencyPropertyDescriptor(object);
-			addMemSizePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -133,28 +130,6 @@ public class Tosca_nodes_container_runtimeItemProvider extends Tosca_nodes_softw
 	}
 
 	/**
-	 * This adds a property descriptor for the Num Cpus feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNumCpusPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Tosca_capabilities_container_numCpus_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_container_numCpus_feature", "_UI_Tosca_capabilities_container_type"),
-				 ToscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER__NUM_CPUS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Disk Size feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -168,50 +143,6 @@ public class Tosca_nodes_container_runtimeItemProvider extends Tosca_nodes_softw
 				 getString("_UI_Tosca_capabilities_container_diskSize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_container_diskSize_feature", "_UI_Tosca_capabilities_container_type"),
 				 ToscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Cpu Frequency feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCpuFrequencyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Tosca_capabilities_container_cpuFrequency_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_container_cpuFrequency_feature", "_UI_Tosca_capabilities_container_type"),
-				 ToscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER__CPU_FREQUENCY,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Mem Size feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMemSizePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Tosca_capabilities_container_memSize_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_container_memSize_feature", "_UI_Tosca_capabilities_container_type"),
-				 ToscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER__MEM_SIZE,
 				 true,
 				 false,
 				 false,
@@ -261,10 +192,7 @@ public class Tosca_nodes_container_runtimeItemProvider extends Tosca_nodes_softw
 			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__MIN_INSTANCES:
 			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__MAX_INSTANCES:
 			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__DEFAULT_INSTANCES:
-			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__NUM_CPUS:
 			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__DISK_SIZE:
-			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__CPU_FREQUENCY:
-			case ToscaPackage.TOSCA_NODES_CONTAINER_RUNTIME__MEM_SIZE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
