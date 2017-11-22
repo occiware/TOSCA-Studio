@@ -26,25 +26,18 @@ public class StringToDataType {
 	public final static NumericType typeModelFloat = OCCIFactory.eINSTANCE.createNumericType();
 	public final static NumericType typeModelInteger = OCCIFactory.eINSTANCE.createNumericType();
 	public final static NumericType typeModelIntegerMinOne = OCCIFactory.eINSTANCE.createNumericType();
+	public final static NumericType typeModelIntegerMinZero = OCCIFactory.eINSTANCE.createNumericType();
 	public final static NumericType typeModelLong = OCCIFactory.eINSTANCE.createNumericType();
 	public final static NumericType typeModelShort = OCCIFactory.eINSTANCE.createNumericType();
-	
 	public final static NumericType typeModelRange = OCCIFactory.eINSTANCE.createNumericType();
-	
 	public final static NumericType toscaDatatypesNetworkPortDef = OCCIFactory.eINSTANCE.createNumericType();
-	
 	public final static EObjectType typeModelMap = OCCIFactory.eINSTANCE.createEObjectType();
-	
 	public final static StringType typeModelVersion = OCCIFactory.eINSTANCE.createStringType();
-	
 	public final static NumericType scalarFrequency = OCCIFactory.eINSTANCE.createNumericType();
-	
 	public final static NumericType scalarSizeZeroMB = OCCIFactory.eINSTANCE.createNumericType();
-	
 	public final static NumericType scalarSizeZeroGB = OCCIFactory.eINSTANCE.createNumericType();
-	
 	public final static NumericType scalarSizeOneMB = OCCIFactory.eINSTANCE.createNumericType();
-	
+
 	public final static Map<String, DataType> map = new HashMap<>();
 
 	static {
@@ -75,6 +68,9 @@ public class StringToDataType {
 		typeModelIntegerMinOne.setType(NumericTypeEnum.INTEGER);
 		typeModelIntegerMinOne.setName("integerMinOne");
 		typeModelIntegerMinOne.setMinInclusive("1");
+		typeModelIntegerMinZero.setType(NumericTypeEnum.INTEGER);
+		typeModelIntegerMinZero.setName("integerMinZero");
+		typeModelIntegerMinZero.setMinInclusive("0");
 		typeModelLong.setType(NumericTypeEnum.LONG);
 		typeModelLong.setName("long");
 		typeModelShort.setType(NumericTypeEnum.SHORT);
@@ -110,59 +106,49 @@ public class StringToDataType {
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelFloat);
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelInteger);
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelIntegerMinOne);
+		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelIntegerMinZero);
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelLong);
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelShort);
-		
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelMap);
-		
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelVersion);
-		
 		ExtensionsManager.getExtension("tosca").getTypes().add(typeModelRange);
-		
 		ExtensionsManager.getExtension("tosca").getTypes().add(toscaDatatypesNetworkPortDef);
-		
 		ExtensionsManager.getExtension("tosca").getTypes().add(scalarFrequency);
-		
 		ExtensionsManager.getExtension("tosca").getTypes().add(scalarSizeOneMB);
-		
 		ExtensionsManager.getExtension("tosca").getTypes().add(scalarSizeZeroGB);
-		
 		ExtensionsManager.getExtension("tosca").getTypes().add(scalarSizeZeroMB);
 		
 		map.put("string", typeModelString);
 		map.put("stringMinOne", typeModelStringMinOne);
 		map.put("boolean", typeModelBoolean);
-		
 		map.put("byte", typeModelByte);
 		map.put("double", typeModelDouble);
 		map.put("float", typeModelFloat);
 		map.put("integer", typeModelInteger);
 		map.put("integer1", typeModelIntegerMinOne);
+		map.put("integer0", typeModelIntegerMinZero);
 		map.put("number", typeModelInteger);
 		map.put("uint32", typeModelInteger);
 		map.put("long", typeModelLong);
 		map.put("short", typeModelShort);
-		
 		map.put("map", typeModelMap);
 		map.put("version", typeModelVersion);
 		map.put("range", typeModelRange);
 		map.put("tosca.datatypes.network.PortDef", toscaDatatypesNetworkPortDef);
-
 		map.put("scalar-unit.frequency0.1 GHz", scalarFrequency);
-		
 		map.put("scalar-unit.size1 MB", scalarSizeOneMB);
 		map.put("scalar-unit.size0 GB", scalarSizeZeroGB);
 		map.put("scalar-unit.size0 MB", scalarSizeZeroMB);
 	}
-
+	
 	public static DataType defineNewArrayType(String entrySchema) {
 		ArrayType newArrayType = OCCIFactory.eINSTANCE.createArrayType();
 		String [] split = entrySchema.split("\\.");
 		entrySchema = split[split.length - 1];
 		newArrayType.setName("array" + entrySchema);
-		newArrayType.setType(ExtensionsManager.getDataTypeFromItsName("tosca", entrySchema));
+		newArrayType.setType(ExtensionsManager.getDataTypeFromItsName(entrySchema));
 		map.put("array" + entrySchema, newArrayType);
-		ExtensionsManager.getExtension("tosca").getTypes().add(newArrayType);
+		ExtensionsManager.currentExtensionToBeBuild.getTypes().add(newArrayType);
 		return newArrayType;
 	}
 }
