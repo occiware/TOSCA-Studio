@@ -23,7 +23,7 @@ public class ConfigManager {
 		String name = convertPathToConfigName(path);
 		ResourceSet resSet = new ResourceSetImpl();
 		URI modelURI = URI
-				.createURI("file:/C:/Users/schallit/workspace-tosca/plugins/org.eclipse.cmf.occi.tosca.examples/" + name + ".tosca");
+				.createURI("file:/C:/Users/schallit/workspace-tosca/plugins/org.eclipse.cmf.occi.tosca.examples/" + name + ".extendedTosca");
 		resource = resSet.createResource(modelURI);
 		Configuration configuration = OCCIFactory.eINSTANCE.createConfiguration();
 		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/core#"));
@@ -31,6 +31,7 @@ public class ConfigManager {
 		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/platform#"));
 		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/sla#"));
 		configuration.getUse().add(OcciHelper.loadExtension("http://org.occi/tosca#"));
+		configuration.getUse().add(OcciHelper.loadExtension("http://org.occi/extendTosca#"));
 		resource.getContents().add(configuration);
 		return configuration;
 	}
