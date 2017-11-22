@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ASCII"?>
+<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:extendedtosca="http://org.occi/tosca/ecore" xmlns:infrastructure="http://schemas.ogf.org/occi/infrastructure/ecore" xmlns:occi="http://schemas.ogf.org/occi/core/ecore">
+  <use href="http://schemas.ogf.org/occi/core#/"/>
+  <use href="http://schemas.ogf.org/occi/infrastructure#/"/>
+  <use href="http://schemas.ogf.org/occi/platform#/"/>
+  <use href="http://schemas.ogf.org/occi/sla#/"/>
+  <use href="http://org.occi/tosca#/"/>
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:9ccceb0b-036a-4cf3-abc1-665d18c9040a">
+    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
+    <parts xsi:type="extendedtosca:Tosca_nodes_compute" type="Linux" distribution="Fedora">
+      <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_compute']"/>
+    </parts>
+  </resources>
+  <resources xsi:type="infrastructure:Storage" id="urn:uuid:277a1ed0-5302-4c85-aa89-e7fbe170d0e2">
+    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='storage']"/>
+    <parts xsi:type="extendedtosca:Tosca_nodes_blockstorage">
+      <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_blockstorage']"/>
+    </parts>
+  </resources>
+  <resources xsi:type="infrastructure:Storage" id="urn:uuid:deb48863-2310-48a4-97d4-bd63cf4d5c20">
+    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='storage']"/>
+    <parts xsi:type="extendedtosca:Tosca_nodes_blockstorage">
+      <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_blockstorage']"/>
+    </parts>
+  </resources>
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:d1382102-6c9f-47ce-b04c-26f2893776c2">
+    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
+    <parts xsi:type="extendedtosca:Tosca_nodes_compute" type="Linux" distribution="Fedora">
+      <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_compute']"/>
+    </parts>
+  </resources>
+</occi:Configuration>

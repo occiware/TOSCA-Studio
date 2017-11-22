@@ -16,6 +16,11 @@
     <semanticResources>Example14-AnAbstractDatabaseNodeTemplate.tosca</semanticResources>
     <semanticResources>Example15-ReferencingAnAbstractDatabaseNodeTemplate.tosca</semanticResources>
     <semanticResources>My.extendedTosca</semanticResources>
+    <semanticResources>BlockStorage1.extendedTosca</semanticResources>
+    <semanticResources>BlockStorage3.extendedTosca</semanticResources>
+    <semanticResources>BlockStorage6.extendedTosca</semanticResources>
+    <semanticResources>Example1-HelloWorld.extendedTosca</semanticResources>
+    <semanticResources>Example10-SimpleDependencyRelationshipBetweenTwoNodes.extendedTosca</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_enWOQMmEEeeck8h8gqwrVw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.cmf.occi.tosca.design.extended/description/tosca.odesign#//@ownedViewpoints[name='ToscaConfiguration']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_e6sBAMmEEeeck8h8gqwrVw" name="Config" repPath="#_e6iQAMmEEeeck8h8gqwrVw">

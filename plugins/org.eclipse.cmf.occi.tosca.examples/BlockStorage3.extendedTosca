@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:extendedtosca="http://org.occi/tosca/ecore" xmlns:infrastructure="http://schemas.ogf.org/occi/infrastructure/ecore" xmlns:occi="http://schemas.ogf.org/occi/core/ecore">
+  <use href="http://schemas.ogf.org/occi/core#/"/>
+  <use href="http://schemas.ogf.org/occi/infrastructure#/"/>
+  <use href="http://schemas.ogf.org/occi/platform#/"/>
+  <use href="http://schemas.ogf.org/occi/sla#/"/>
+  <use href="http://org.occi/tosca#/"/>
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:8360bed2-eef9-495c-ba00-983cfb521326">
+    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
+    <parts xsi:type="extendedtosca:Tosca_nodes_compute" type="Linux" distribution="Fedora">
+      <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_compute']"/>
+    </parts>
+  </resources>
+</occi:Configuration>

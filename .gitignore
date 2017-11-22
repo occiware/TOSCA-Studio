@@ -5,6 +5,4 @@ build.acceleo
 *.xtendbin
 *~
 .metadata/
-.project
-.classpath
 .settings/
