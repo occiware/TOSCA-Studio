@@ -9,11 +9,11 @@
   <mixins name="tosca_capabilities_Endpoint" scheme="http://org.occi/tosca#" title="This is the default TOSCA type that should be used or extended to define a network endpoint capability. This includes the information to express a basic endpoint with a single port or a complex endpoint with multiple ports. By default the Endpoint is assumed to represent an address on a private network unless otherwise specified." depends="//@mixins[term='tosca_capabilities_root']">
     <attributes name="port.name" description="The optional name (or ID) of the network port this endpoint should be bound to." type="//@types.0"/>
     <attributes name="protocol" default="tcp" description="The name of the protocol (i.e., the protocol prefix) that the endpoint accepts (any OSI Layer 4-7 protocols) Examples: http, https, ftp, tcp, udp, etc." type="//@types.0"/>
-    <attributes name="port" description="The optional port of the endpoint." type="//@types.13"/>
-    <attributes name="initiator" default="source" description="The optional indicator of the direction of the connection." type="//@types.24"/>
+    <attributes name="port" description="The optional port of the endpoint." type="//@types.14"/>
+    <attributes name="initiator" default="source" description="The optional indicator of the direction of the connection." type="//@types.25"/>
     <attributes name="network.name" default="PRIVATE" description="The optional name (or ID) of the network this endpoint should be bound to. network_name: PRIVATE | PUBLIC |&lt;network_name> | &lt;network_id>" type="//@types.0"/>
     <attributes name="secure" default="false" description="Requests for the endpoint to be secure and use credentials supplied on the ConnectsTo relationship." type="//@types.2"/>
-    <attributes name="ports" description="The optional map of ports the Endpoint supports (if more than one)." type="//@types.10"/>
+    <attributes name="ports" description="The optional map of ports the Endpoint supports (if more than one)." type="//@types.11"/>
     <attributes name="url.path" description="The optional URL path of the endpoint&#xe2;&#x20ac;&#x2122;s address if applicable for the protocol." type="//@types.0"/>
   </mixins>
   <mixins name="tosca_capabilities_Scalable" scheme="http://org.occi/tosca#" title="This is the default TOSCA type that should be used to express a scalability capability for a node." depends="//@mixins[term='tosca_capabilities_root']">
@@ -23,7 +23,7 @@
   </mixins>
   <mixins name="tosca_capabilities_network_Bindable" scheme="http://org.occi/tosca#" depends="//@mixins[term='tosca_capabilities_node']"/>
   <mixins name="tosca_capabilities_Container" scheme="http://org.occi/tosca#" title="The Container capability, when included on a Node Type or Template definition, indicates that the node can act as a container for (or a host for) one or more other declared Node Types." depends="//@mixins[term='tosca_capabilities_root']">
-    <attributes name="disk.size" description="Size of the local disk available to applications running on the Compute node (default unit is MB)." type="//@types.17"/>
+    <attributes name="disk.size" description="Size of the local disk available to applications running on the Compute node (default unit is MB)." type="//@types.18"/>
   </mixins>
   <mixins name="tosca_capabilities_Endpoint_Database" scheme="http://org.occi/tosca#" title="This is the default TOSCA type that should be used or extended to define a specialized database endpoint capability." depends="//@mixins[term='tosca_capabilities_endpoint']"/>
   <mixins name="tosca_capabilities_Endpoint_Public" scheme="http://org.occi/tosca#" title="This capability represents a public endpoint which is accessible to the general internet (and its public IP address ranges). This public endpoint capability also can be used to create a floating (IP) address that the underlying network assigns from a pool allocated from the application&#xe2;&#x20ac;&#x2122;s underlying public network.  This floating address is managed by the underlying network such that can be routed an application&#xe2;&#x20ac;&#x2122;s private address and remains reliable to internet clients." depends="//@mixins[term='tosca_capabilities_endpoint']">
@@ -34,7 +34,7 @@
   <mixins name="tosca_capabilities_OperatingSystem" scheme="http://org.occi/tosca#" title="This is the default TOSCA type that should be used to express an Operating System capability for a node." depends="//@mixins[term='tosca_capabilities_root']">
     <attributes name="type" description="The Operating System (OS) type. Examples of valid values include: linux, aix, mac, windows, etc." type="//@types.0"/>
     <attributes name="distribution" description="The Operating System (OS) distribution. Examples of valid values for an &#xe2;&#x20ac;&#x153;type&#xe2;&#x20ac;&#xfffd; of &#xe2;&#x20ac;&#x153;Linux&#xe2;&#x20ac;&#xfffd; would include:  debian, fedora, rhel and ubuntu." type="//@types.0"/>
-    <attributes name="version" description="The Operating System version." type="//@types.11"/>
+    <attributes name="version" description="The Operating System version." type="//@types.12"/>
   </mixins>
   <mixins name="tosca_capabilities_Attachment" scheme="http://org.occi/tosca#" title="This is the default TOSCA type that should be used or extended to define an attachment capability of a (logical) infrastructure device node (e.g., BlockStorage node)." depends="//@mixins[term='tosca_capabilities_root']"/>
   <mixins name="tosca_nodes_Root" scheme="http://org.occi/tosca#" title="This is the default (root) TOSCA Node Type that all other TOSCA nodes should extends. This allows all TOSCA nodes to have a consistent set of features for modeling and management (e.g, consistent definitions for requirements, capabilities, and lifecycle interfaces)." depends="//@mixins[term='tosca_capabilities_node'] //@mixins[term='tosca_interfaces_node_lifecycle_standard']">
@@ -45,8 +45,8 @@
     <applies href="http://schemas.ogf.org/occi/platform#//@kinds[term='component']"/>
   </mixins>
   <mixins name="tosca_nodes_SoftwareComponent" scheme="http://org.occi/tosca#" title="The TOSCA SoftwareComponent node represents a generic software component that can be managed and run by a TOSCA Compute Node Type." depends="//@mixins[term='tosca_nodes_root']">
-    <attributes name="admin.credential" description="The optional credential that can be used to authenticate to the software component." type="//@types.21"/>
-    <attributes name="component.version" description="The optional software component&#xe2;&#x20ac;&#x2122;s version." type="//@types.11"/>
+    <attributes name="admin.credential" description="The optional credential that can be used to authenticate to the software component." type="//@types.22"/>
+    <attributes name="component.version" description="The optional software component&#xe2;&#x20ac;&#x2122;s version." type="//@types.12"/>
     <applies href="http://schemas.ogf.org/occi/platform#//@kinds[term='component']"/>
   </mixins>
   <mixins name="tosca_nodes_DBMS" scheme="http://org.occi/tosca#" title="The TOSCA DBMS node represents a typical relational, SQL Database Management System software component or service." depends="//@mixins[term='tosca_nodes_softwarecomponent'] //@mixins[term='tosca_capabilities_container']">
@@ -55,14 +55,14 @@
     <constraints name="SourceMustBeDatabase" body="true"/>
   </mixins>
   <mixins name="tosca_nodes_ObjectStorage" scheme="http://org.occi/tosca#" depends="//@mixins[term='tosca_nodes_root'] //@mixins[term='tosca_capabilities_endpoint']">
-    <attributes name="size" type="//@types.16"/>
+    <attributes name="size" type="//@types.17"/>
     <attributes name="name" required="true" type="//@types.0"/>
     <applies href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='storage']"/>
   </mixins>
   <mixins name="tosca_nodes_Compute" scheme="http://org.occi/tosca#" title="The TOSCA Compute node represents one or more real or virtual processors of software applications or services along with other essential local resources. Collectively, the resources the compute node represents can logically be viewed as a (real or virtual) &#xe2;&#x20ac;&#x153;server&#xe2;&#x20ac;&#xfffd;." depends="//@mixins[term='tosca_nodes_root'] //@mixins[term='tosca_capabilities_scalable'] //@mixins[term='tosca_capabilities_endpoint_admin'] //@mixins[term='tosca_capabilities_operatingsystem'] //@mixins[term='tosca_capabilities_container'] //@mixins[term='tosca_capabilities_network_bindable']">
     <attributes name="private.address" description="The primary private IP address assigned by the cloud provider that applications may use to access the Compute node." type="//@types.0"/>
     <attributes name="public.address" description="The primary public IP address assigned by the cloud provider that applications may use to access the Compute node." type="//@types.0"/>
-    <attributes name="networks" type="//@types.10"/>
+    <attributes name="networks" type="//@types.11"/>
     <constraints name="SourceMustBeSoftwareComponent" body="true"/>
     <applies href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
   </mixins>
@@ -83,7 +83,7 @@
   </mixins>
   <mixins name="tosca_nodes_Container_Runtime" scheme="http://org.occi/tosca#" title="The TOSCA Container Runtime node represents operating system-level virtualization technology used to run multiple application services on a single Compute host." depends="//@mixins[term='tosca_nodes_softwarecomponent'] //@mixins[term='tosca_capabilities_scalable'] //@mixins[term='tosca_capabilities_container']"/>
   <mixins name="tosca_nodes_BlockStorage" scheme="http://org.occi/tosca#" title="The TOSCA BlockStorage node currently represents a server-local block storage device (i.e., not shared) offering evenly sized blocks of data from which raw storage volumes can be created." depends="//@mixins[term='tosca_nodes_root'] //@mixins[term='tosca_capabilities_attachment']">
-    <attributes name="size" description="The requested storage size (default unit is MB). Note: - Required when an existing volume (i.e., volume_id) is not available. - If volume_id is provided, size is ignored.  Resize of existing volumes is not considered at this time." type="//@types.15"/>
+    <attributes name="size" description="The requested storage size (default unit is MB). Note: - Required when an existing volume (i.e., volume_id) is not available. - If volume_id is provided, size is ignored.  Resize of existing volumes is not considered at this time." type="//@types.16"/>
     <attributes name="volume.id" description="ID of an existing volume (that is in the accessible scope of the requesting application)." type="//@types.0"/>
     <attributes name="snapshot.id" description="Some identifier that represents an existing snapshot that should be used when creating the block storage (volume)." type="//@types.0"/>
     <applies href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='storage']"/>
@@ -119,7 +119,7 @@
     <applies href="http://schemas.ogf.org/occi/core#//@kinds[term='link']"/>
   </mixins>
   <mixins name="tosca_relationships_ConnectsTo" scheme="http://org.occi/tosca#" title="This type represents a network connection relationship between two nodes." depends="//@mixins[term='tosca_relationships_root']">
-    <attributes name="credential" description="The security credential to use to present to the target endpoint to for either authentication or authorization purposes." type="//@types.21"/>
+    <attributes name="credential" description="The security credential to use to present to the target endpoint to for either authentication or authorization purposes." type="//@types.22"/>
   </mixins>
   <mixins name="tosca_relationships_RoutesTo" scheme="http://org.occi/tosca#" title="This type represents an intentional network routing between two Endpoints in different networks." depends="//@mixins[term='tosca_relationships_connectsto']">
     <constraints name="SourceMustBeLoadBalancer" body="true"/>
@@ -146,6 +146,7 @@
   <types xsi:type="occi:NumericType" name="float" type="Float"/>
   <types xsi:type="occi:NumericType" name="integer" type="Integer"/>
   <types xsi:type="occi:NumericType" name="integerMinOne" type="Integer" minInclusive="1"/>
+  <types xsi:type="occi:NumericType" name="integerMinZero" type="Integer" minInclusive="0"/>
   <types xsi:type="occi:NumericType" name="long" type="Long"/>
   <types xsi:type="occi:NumericType" name="short" type="Short"/>
   <types xsi:type="occi:EObjectType" name="map" instanceClassName="java.util.Map"/>
@@ -159,19 +160,19 @@
   <types xsi:type="occi:ArrayType" name="arraystring" type="//@types.0"/>
   <types xsi:type="occi:RecordType" name="NetworkInfo">
     <recordFields name="networkid" type="//@types.0"/>
-    <recordFields name="addresses" type="//@types.18"/>
+    <recordFields name="addresses" type="//@types.19"/>
     <recordFields name="networkname" type="//@types.0"/>
   </types>
   <types xsi:type="occi:RecordType" name="PortInfo">
     <recordFields name="portname" type="//@types.0"/>
     <recordFields name="networkid" type="//@types.0"/>
-    <recordFields name="addresses" type="//@types.18"/>
+    <recordFields name="addresses" type="//@types.19"/>
     <recordFields name="macaddress" type="//@types.0"/>
     <recordFields name="portid" type="//@types.0"/>
   </types>
   <types xsi:type="occi:RecordType" name="Credential" documentation="The Credential type is a complex TOSCA data Type used when describing authorization credentials used to access network accessible resources.">
     <recordFields name="protocol" description="The optional protocol name." type="//@types.0"/>
-    <recordFields name="keys" description="The optional list of protocol-specific keys or assertions." type="//@types.10"/>
+    <recordFields name="keys" description="The optional list of protocol-specific keys or assertions." type="//@types.11"/>
     <recordFields name="tokentype" default="The required token type." description="The required token type." type="//@types.0"/>
     <recordFields name="user" description="The optional user (name or ID) used for non-token based credentials." type="//@types.0"/>
     <recordFields name="token" description="The required token used as a credential for authorization or access to a networked resource." type="//@types.0"/>
@@ -182,11 +183,11 @@
     <literals name="igmp"/>
   </types>
   <types xsi:type="occi:RecordType" name="PortSpec">
-    <recordFields name="protocol" required="true" type="//@types.22"/>
-    <recordFields name="targetrange" type="//@types.12"/>
-    <recordFields name="sourcerange" type="//@types.12"/>
-    <recordFields name="source" type="//@types.13"/>
-    <recordFields name="target" type="//@types.13"/>
+    <recordFields name="protocol" required="true" type="//@types.23"/>
+    <recordFields name="targetrange" type="//@types.13"/>
+    <recordFields name="sourcerange" type="//@types.13"/>
+    <recordFields name="source" type="//@types.14"/>
+    <recordFields name="target" type="//@types.14"/>
   </types>
   <types xsi:type="occi:EnumerationType" name="initiatorEnum">
     <literals name="source"/>

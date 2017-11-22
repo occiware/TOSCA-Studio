@@ -55,6 +55,9 @@
       <ecoreDataType href="tosca.ecore#//integerMinOne"/>
     </genDataTypes>
     <genDataTypes>
+      <ecoreDataType href="tosca.ecore#//integerMinZero"/>
+    </genDataTypes>
+    <genDataTypes>
       <ecoreDataType href="tosca.ecore#//long"/>
     </genDataTypes>
     <genDataTypes>
@@ -85,117 +88,75 @@
       <ecoreDataType href="tosca.ecore#//scalarSizeMinZeroMB"/>
     </genDataTypes>
     <genClasses>
-      <ecoreClass href="tosca.ecore#//arrayString"/>
+      <ecoreClass href="tosca.ecore#//arraystring"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//arrayString/values"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//arraystring/values"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="tosca.ecore#//arrayBoolean"/>
+      <ecoreClass href="tosca.ecore#//NetworkInfo"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//arrayBoolean/values"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="tosca.ecore#//arrayByte"/>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//arrayByte/values"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="tosca.ecore#//arrayDouble"/>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//arrayDouble/values"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="tosca.ecore#//arrayFloat"/>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//arrayFloat/values"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="tosca.ecore#//arrayInteger"/>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//arrayInteger/values"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="tosca.ecore#//arrayLong"/>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//arrayLong/values"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="tosca.ecore#//arrayShort"/>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//arrayShort/values"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="tosca.ecore#//toscadatatypesnetworkNetworkInfo"/>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//toscadatatypesnetworkNetworkInfo/networkid"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//NetworkInfo/networkid"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="tosca.ecore#//toscadatatypesnetworkNetworkInfo/addresses"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="tosca.ecore#//NetworkInfo/addresses"/>
       </genFeatures>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//toscadatatypesnetworkNetworkInfo/networkname"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//NetworkInfo/networkname"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="tosca.ecore#//toscadatatypesnetworkPortInfo"/>
+      <ecoreClass href="tosca.ecore#//PortInfo"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//toscadatatypesnetworkPortInfo/portname"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//PortInfo/portname"/>
       </genFeatures>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//toscadatatypesnetworkPortInfo/networkid"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//PortInfo/networkid"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="tosca.ecore#//toscadatatypesnetworkPortInfo/addresses"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="tosca.ecore#//PortInfo/addresses"/>
       </genFeatures>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//toscadatatypesnetworkPortInfo/macaddress"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//PortInfo/macaddress"/>
       </genFeatures>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//toscadatatypesnetworkPortInfo/portid"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="tosca.ecore#//toscadatatypesCredential"/>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//toscadatatypesCredential/protocol"/>
-      </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//toscadatatypesCredential/keys"/>
-      </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//toscadatatypesCredential/tokentype"/>
-      </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//toscadatatypesCredential/user"/>
-      </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//toscadatatypesCredential/token"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//PortInfo/portid"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="tosca.ecore#//toscadatatypesnetworkPortSpec"/>
+      <ecoreClass href="tosca.ecore#//Credential"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//toscadatatypesnetworkPortSpec/protocol"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//Credential/protocol"/>
       </genFeatures>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//toscadatatypesnetworkPortSpec/targetrange"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//Credential/keys"/>
       </genFeatures>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//toscadatatypesnetworkPortSpec/sourcerange"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//Credential/tokentype"/>
       </genFeatures>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//toscadatatypesnetworkPortSpec/source"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//Credential/user"/>
       </genFeatures>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//toscadatatypesnetworkPortSpec/target"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//Credential/token"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="tosca.ecore#//PortSpec"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//PortSpec/protocol"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//PortSpec/targetrange"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//PortSpec/sourcerange"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//PortSpec/source"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//PortSpec/target"/>
       </genFeatures>
     </genClasses>
     <genClasses>
@@ -277,9 +238,6 @@
       </genFeatures>
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//Tosca_capabilities_operatingsystem/version"/>
-      </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//Tosca_capabilities_operatingsystem/architecture"/>
       </genFeatures>
     </genClasses>
     <genClasses>

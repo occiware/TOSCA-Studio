@@ -16,6 +16,7 @@
   <eClassifiers xsi:type="ecore:EDataType" name="stringMinOne" instanceClassName="java.lang.String">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="minLength" value="1"/>
+      <details key="pattern"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="boolean" instanceClassName="java.lang.Boolean"/>
@@ -28,40 +29,13 @@
       <details key="MinInclusive" value="1"/>
     </eAnnotations>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="integerMinZero" instanceClassName="java.lang.Integer">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="MinInclusive" value="0"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="long" instanceClassName="java.lang.Long"/>
   <eClassifiers xsi:type="ecore:EDataType" name="short" instanceClassName="java.lang.Short"/>
-  <eClassifiers xsi:type="ecore:EClass" name="arrayString">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
-        upperBound="-1" eType="#//string"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="arrayBoolean">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
-        upperBound="-1" eType="#//boolean"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="arrayByte">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
-        upperBound="-1" eType="#//byte"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="arrayDouble">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
-        upperBound="-1" eType="#//double"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="arrayFloat">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
-        upperBound="-1" eType="#//float"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="arrayInteger">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
-        upperBound="-1" eType="#//integer"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="arrayLong">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
-        upperBound="-1" eType="#//long"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="arrayShort">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
-        upperBound="-1" eType="#//short"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="map" instanceClassName="java.util.Map"/>
   <eClassifiers xsi:type="ecore:EDataType" name="version" instanceClassName="java.lang.String">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -100,14 +74,18 @@
       <details key="MinInclusive" value="0 MB"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="toscadatatypesnetworkNetworkInfo">
+  <eClassifiers xsi:type="ecore:EClass" name="arraystring">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
+        upperBound="-1" eType="#//string"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkInfo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="networkid" lowerBound="1"
         eType="#//string">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=""/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="addresses" eType="#//arrayString"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="addresses" eType="#//arraystring"
         containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=""/>
@@ -120,7 +98,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="toscadatatypesnetworkPortInfo">
+  <eClassifiers xsi:type="ecore:EClass" name="PortInfo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="portname" lowerBound="1"
         eType="#//string">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -133,7 +111,7 @@
         <details key="documentation" value=""/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="addresses" eType="#//arrayString"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="addresses" eType="#//arraystring"
         containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=""/>
@@ -152,7 +130,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="toscadatatypesCredential">
+  <eClassifiers xsi:type="ecore:EClass" name="Credential">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The Credential type is a complex TOSCA data Type used when describing authorization credentials used to access network accessible resources."/>
     </eAnnotations>
@@ -189,7 +167,7 @@
     <eLiterals name="tcp" value="1" literal="tcp"/>
     <eLiterals name="igmp" value="2" literal="igmp"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="toscadatatypesnetworkPortSpec">
+  <eClassifiers xsi:type="ecore:EClass" name="PortSpec">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="protocol" lowerBound="1"
         eType="#//protocolEnum">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -337,11 +315,6 @@
         <details key="documentation" value="The Operating System version."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="architecture" eType="#//string">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The Operating System (OS) architecture. Examples of valid values include: x86_32, x86_64, etc."/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_capabilities_attachment" eSuperTypes="#//Tosca_capabilities_root platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_root" eSuperTypes="#//Tosca_capabilities_node #//Tosca_interfaces_node_lifecycle_standard platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
@@ -372,7 +345,7 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="appliesConstraint" value="self.entity.oclIsKindOf(platform::Component)"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="adminCredential" eType="#//toscadatatypesCredential"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="adminCredential" eType="#//Credential"
         containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The optional credential that can be used to authenticate to the software component."/>
@@ -607,7 +580,7 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_relationships_connectsto" eSuperTypes="#//Tosca_relationships_root platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="credential" eType="#//toscadatatypesCredential"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="credential" eType="#//Credential"
         containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The security credential to use to present to the target endpoint to for either authentication or authorization purposes."/>
