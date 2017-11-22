@@ -8,6 +8,7 @@ import java.util.Map;
 import org.eclipse.cmf.occi.core.DataType;
 import org.eclipse.cmf.occi.core.EnumerationLiteral;
 import org.eclipse.cmf.occi.core.EnumerationType;
+import org.eclipse.cmf.occi.core.Extension;
 import org.eclipse.cmf.occi.core.Kind;
 import org.eclipse.cmf.occi.core.OCCIFactory;
 import org.eclipse.cmf.occi.core.RecordField;
@@ -30,7 +31,7 @@ public class DataTypeReader {
 			recordType.getRecordFields().addAll(readRecordField((Map<String, ?>) map.get("properties")));
 		}
 
-		ExtensionsManager.getExtension("tosca").getTypes().add(recordType);
+		ExtensionsManager.currentExtensionToBeBuild.getTypes().add(recordType);
 		StringToDataType.map.put(dataTypeAsString, recordType);
 	}
 
@@ -71,7 +72,7 @@ public class DataTypeReader {
 								((EnumerationType) enumType).getLiterals().add(enumLit);
 							}
 							StringToDataType.map.put(recordFieldName + "Enum", enumType);
-							ExtensionsManager.getExtension("tosca").getTypes().add(enumType);
+							ExtensionsManager.currentExtensionToBeBuild.getTypes().add(enumType);
 							recordField.setType(enumType);
 						}
 					}
@@ -83,7 +84,6 @@ public class DataTypeReader {
 						recordField.setType(StringToDataType.map.get(type));
 					}
 				}
-
 			}
 
 			String required = (String) recordFieldMap.get("required");

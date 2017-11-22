@@ -10,6 +10,7 @@ import org.eclipse.cmf.occi.core.Category;
 import org.eclipse.cmf.occi.core.DataType;
 import org.eclipse.cmf.occi.core.EnumerationLiteral;
 import org.eclipse.cmf.occi.core.EnumerationType;
+import org.eclipse.cmf.occi.core.Extension;
 import org.eclipse.cmf.occi.core.Mixin;
 import org.eclipse.cmf.occi.core.OCCIFactory;
 import org.eclipse.cmf.occi.core.StringType;
@@ -84,7 +85,7 @@ public class AttributeReader {
 								((EnumerationType) type).getLiterals().add(enumLit);
 							}
 							StringToDataType.map.put(attributeName + "Enum", type);
-							ExtensionsManager.getExtension("tosca").getTypes().add(type);
+							ExtensionsManager.currentExtensionToBeBuild.getTypes().add(type);
 						}
 						if (constraint.get("min_length") != null && type instanceof StringType) {
 							type = StringToDataType.map.get("stringMinOne");

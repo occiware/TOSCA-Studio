@@ -18,6 +18,7 @@ import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 
+import com.esotericsoftware.yamlbeans.YamlConfig;
 import com.esotericsoftware.yamlbeans.YamlReader;
 import com.esotericsoftware.yamlbeans.YamlWriter;
 
@@ -70,7 +71,7 @@ public class Main extends AbstractHandler {
 
 		// capabilities
 		Map<String, ?> capabilites = (Map<String, ?>) map.get("capability_types");
-		MixinReader mixinReader = new MixinReader(ExtensionsManager.getExtension("tosca"), capabilites);
+		MixinReader mixinReader = new MixinReader(capabilites);
 		for (String capability : capabilites.keySet()) {
 			mixinReader.readMixin(capability, (Map<String, ?>) capabilites.get(capability));
 		}
@@ -80,7 +81,7 @@ public class Main extends AbstractHandler {
 					&& !"data_types".equals(collection) && !"artifact_types".equals(collection)
 					&& !"capability_types".equals(collection)) {
 				Map<String, ?> mixins = (Map<String, ?>) map.get(collection);
-				mixinReader = new MixinReader(ExtensionsManager.getExtension("tosca"), mixins);
+				mixinReader = new MixinReader(mixins);
 				for (String mixinStr : mixins.keySet()) {
 					mixinReader.readMixin(mixinStr, (Map<String, ?>) mixins.get(mixinStr));
 				}
@@ -89,14 +90,14 @@ public class Main extends AbstractHandler {
 
 		// links / relationship
 		Map<String, ?> links = (Map<String, ?>) map.get("relationship_types");
-		mixinReader = new MixinReader(ExtensionsManager.getExtension("tosca"), links);
+		mixinReader = new MixinReader(links);
 		for (String link : links.keySet()) {
 			mixinReader.readMixin(link, (Map<String, ?>) links.get(link));
 		}
 	}
 
 	private void executeMapping() {
-		Extension extension = ExtensionsManager.getExtension("tosca");
+		Extension extension = ExtensionsManager.currentExtensionToBeBuild;
 		Mapper mapper = new TypeMapper();
 		for (Kind kind : extension.getKinds()) {
 			mapper.map(kind);
