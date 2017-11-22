@@ -15,6 +15,9 @@ node_types:
          test: 
             type: integer
             required: false
+   capabilities: 
+      link: 
+         type: tosca.capabilities.network.Linkable
    tosca.nodes.SoftwareComponent.Elasticsearch: 
       capabilities: 
          search_endpoint: 
@@ -65,6 +68,44 @@ node_types:
             type: string
          admin_user: 
             type: string
+   tosca.nodes.network.Network: 
+      physical_network: 
+         type: string
+         required: false
+      segmentation_id: 
+         type: string
+         required: false
+      network_id: 
+         type: string
+         required: false
+      derived_from: tosca.nodes.Root
+      start_ip: 
+         type: string
+         required: false
+      network_name: 
+         type: string
+         required: false
+      cidr: 
+         type: string
+         required: false
+      gateway_ip: 
+         type: string
+         required: false
+      network_type: 
+         type: string
+         required: false
+      constraints: 
+      -  valid_values: 
+         - '4'
+         - '6'
+      end_ip: 
+         type: string
+         required: false
+      properties: 
+         ip_version: 
+            default: '4'
+            type: integer
+            required: false
    tosca.nodes.NodeWithCap: 
       capabilities: 
          some_req: 
@@ -100,6 +141,35 @@ node_types:
             entry_schema: 
                type: string
             type: map
+   tosca.nodes.network.Port: 
+      requirements: 
+      -  link: 
+            capability: tosca.capabilities.network.Linkable
+            relationship: tosca.relationships.network.LinksTo
+      -  binding: 
+            capability: tosca.capabilities.network.Bindable
+            relationship: tosca.relationships.network.BindsTo
+      derived_from: tosca.nodes.Root
+      properties: 
+         ip_range_end: 
+            type: string
+            required: false
+         ip_range_start: 
+            type: string
+            required: false
+         ip_address: 
+            type: string
+            required: false
+         is_default: 
+            default: false
+            type: boolean
+            required: false
+         order: 
+            default: '0'
+            type: integer
+            constraints: 
+            -  greater_or_equal: '0'
+            required: true
    tosca.nodes.SoftwareComponent.Logstash: 
       requirements: 
       -  search_endpoint: 
@@ -177,28 +247,6 @@ node_types:
             default: some
             type: string
             required: false
-   tosca.capabilities.Container.Docker: 
-      derived_from: tosca.capabilities.Container
-      properties: 
-         publish_all: 
-            default: false
-            type: boolean
-            required: false
-         publish_ports: 
-            entry_schema: PortSpec
-            type: list
-            required: false
-         expose_ports: 
-            entry_schema: PortSpec
-            type: list
-            required: false
-         volumes: 
-            entry_schema: string
-            type: list
-         version: 
-            entry_schema: version
-            type: list
-            required: false
    tosca.nodes.WebServer.Nodejs: 
       interfaces: 
          Standard: 
@@ -254,18 +302,48 @@ capability_types:
       valid_source_types: 
       - tosca.nodes.HACompute
       derived_from: tosca.capabilities.Root
+   tosca.capabilities.Container.Docker: 
+      derived_from: tosca.capabilities.Container
+      properties: 
+         publish_all: 
+            default: false
+            type: boolean
+            required: false
+         publish_ports: 
+            entry_schema: PortSpec
+            type: list
+            required: false
+         expose_ports: 
+            entry_schema: PortSpec
+            type: list
+            required: false
+         volumes: 
+            entry_schema: string
+            type: list
+         version: 
+            entry_schema: version
+            type: list
+            required: false
    tosca.capabilities.ContainerChild: 
       derived_from: tosca.capabilities.Container
       description: Define a capability class that inherits from tosca.capabilities.Container
    tosca.capabilities.SomeChildCap: 
       derived_from: tosca.capabilities.SomeCap
 relationship_types: 
+   test.relation.connects: 
+      derived_from4: tosca.relationships.ConnectsTo
+   tosca.relationships.network.BindsTo: 
+      valid_target_types: 
+      - tosca.capabilities.network.Bindable
+      derived_from: tosca.relationships.DependsOn
    tosca.relationships.HA: 
       valid_target_types: 
       - tosca.capabilities.HA
       derived_from: tosca.relationships.Root
-   test.relation.connects: 
-      derived_from4: tosca.relationships.ConnectsTo
+   tosca.relationships.network.LinksTo: 
+      valid_target_types: 
+      - tosca.capabilities.network.Linkable
+      derived_from: tosca.relationships.DependsOn
 policy_types: 
    mycompany.mytypes.myScalingPolicy: 
       derived1_from: tosca.policies.Scaling

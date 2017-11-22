@@ -1,4 +1,10 @@
 node_types:
+    tosca.nodes.Container.Application.Docker:
+        derived_from: tosca.nodes.Container.Application
+        requirements:
+            - host:
+        capability: tosca.capabilities.Container.Docker
+capability_types:
     tosca.capabilities.Container.Docker:
         derived_from: tosca.capabilities.Container
         properties:
@@ -21,8 +27,3 @@ node_types:
             volumes:
                 type: list
                 entry_schema: string
-    tosca.nodes.Container.Application.Docker:
-        derived_from: tosca.nodes.Container.Application
-        requirements:
-            - host:
-        capability: tosca.capabilities.Container.Docker
