@@ -12,7 +12,6 @@ public class ActionReader {
 	
 		public static void readActions(Type type, Map<String, ?> actions) {
 			for (String actionName : actions.keySet()) {
-				System.out.println(actionName);
 				if (! "derived_from".equals(actionName)) {
 					Action action = OCCIFactory.eINSTANCE.createAction();
 					Map<String, ?> actionValues = (Map<String, ?> ) actions.get(actionName);
@@ -22,7 +21,7 @@ public class ActionReader {
 						action.setTitle(description.toString());	
 					}
 					type.getActions().add(action);
-					action.setScheme(ExtensionsManager.getExtension("tosca").getScheme().split("#")[0] + 
+					action.setScheme(ExtensionsManager.currentExtensionToBeBuild.getScheme().split("#")[0] + 
 							"/" + type.getTerm() + "/action#");
 				}
 			}

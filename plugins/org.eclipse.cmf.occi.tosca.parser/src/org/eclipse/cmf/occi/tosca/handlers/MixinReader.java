@@ -5,22 +5,28 @@ import java.util.Map;
 import org.eclipse.cmf.occi.core.Extension;
 import org.eclipse.cmf.occi.core.Mixin;
 import org.eclipse.cmf.occi.core.OCCIFactory;
+import org.eclipse.cmf.occi.core.util.OcciHelper;
 
 public class MixinReader {
 
 	private Map<String, ?> mixins;
-	private Extension extension;
 
-	public MixinReader(Extension extension, Map<String, ?> mixins) {
+	public MixinReader(Map<String, ?> mixins) {
 		this.mixins = mixins;
-		this.extension = extension;
 	}
 
 	private Mixin getMixinByName(String name) {
 		name = name.replaceAll("\\.", "_");
-		for (Mixin mixin : extension.getMixins()) {
+		for (Mixin mixin : ExtensionsManager.getExtension("tosca").getMixins()) {
 			if (name.equals(mixin.getName())) {
 				return mixin;
+			}
+		}
+		if (ExtensionsManager.currentExtensionToBeBuild.getName().equals("extendedTosca")) {
+			for (Mixin mixin : ExtensionsManager.currentExtensionToBeBuild.getMixins()) {
+				if (name.equals(mixin.getName())) {
+					return mixin;
+				}
 			}
 		}
 		Map<String, ?> maps = (Map<String, ?>) mixins.get(name.replaceAll("_", "\\."));
@@ -37,12 +43,11 @@ public class MixinReader {
 
 	public void readMixin(String mixinData, Map<String, ?> map) {
 		String mixinStr = mixinData.replaceAll("\\.", "_");
-		for (Mixin registeredMixin : ExtensionsManager.getExtension("tosca").getMixins()) {
+		for (Mixin registeredMixin : ExtensionsManager.currentExtensionToBeBuild.getMixins()) {
 			if (registeredMixin.getName().equals(mixinStr)) {
 				return;
 			}
 		}
-
 		Mixin mixin = OCCIFactory.eINSTANCE.createMixin();
 		mixin.setName(mixinStr);
 
@@ -95,8 +100,8 @@ public class MixinReader {
 			ActionReader.readActions(mixin, (Map<String, ?>) mixins.get(mixinData));
 		}
 		
-		mixin.setScheme(this.extension.getScheme());
-		this.extension.getMixins().add(mixin);
+		mixin.setScheme(ExtensionsManager.currentExtensionToBeBuild.getScheme());
+		ExtensionsManager.currentExtensionToBeBuild.getMixins().add(mixin);
 	}
 
 }
