@@ -69,7 +69,6 @@ public class Tosca_nodes_computeItemProvider extends Tosca_nodes_rootItemProvide
 			addTypePropertyDescriptor(object);
 			addDistributionPropertyDescriptor(object);
 			addVersionPropertyDescriptor(object);
-			addArchitecturePropertyDescriptor(object);
 			addDiskSizePropertyDescriptor(object);
 			addPrivateAddressPropertyDescriptor(object);
 			addPublicAddressPropertyDescriptor(object);
@@ -387,28 +386,6 @@ public class Tosca_nodes_computeItemProvider extends Tosca_nodes_rootItemProvide
 	}
 
 	/**
-	 * This adds a property descriptor for the Architecture feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addArchitecturePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Tosca_capabilities_operatingsystem_architecture_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_operatingsystem_architecture_feature", "_UI_Tosca_capabilities_operatingsystem_type"),
-				 ToscaPackage.Literals.TOSCA_CAPABILITIES_OPERATINGSYSTEM__ARCHITECTURE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Disk Size feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -548,7 +525,6 @@ public class Tosca_nodes_computeItemProvider extends Tosca_nodes_rootItemProvide
 			case ToscaPackage.TOSCA_NODES_COMPUTE__TYPE:
 			case ToscaPackage.TOSCA_NODES_COMPUTE__DISTRIBUTION:
 			case ToscaPackage.TOSCA_NODES_COMPUTE__VERSION:
-			case ToscaPackage.TOSCA_NODES_COMPUTE__ARCHITECTURE:
 			case ToscaPackage.TOSCA_NODES_COMPUTE__DISK_SIZE:
 			case ToscaPackage.TOSCA_NODES_COMPUTE__PRIVATE_ADDRESS:
 			case ToscaPackage.TOSCA_NODES_COMPUTE__PUBLIC_ADDRESS:

@@ -82,279 +82,118 @@ public class ToscaItemProviderAdapterFactory extends ToscaAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.arrayString} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.arraystring} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected arrayStringItemProvider arrayStringItemProvider;
+	protected arraystringItemProvider arraystringItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.arrayString}.
+	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.arraystring}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createarrayStringAdapter() {
-		if (arrayStringItemProvider == null) {
-			arrayStringItemProvider = new arrayStringItemProvider(this);
+	public Adapter createarraystringAdapter() {
+		if (arraystringItemProvider == null) {
+			arraystringItemProvider = new arraystringItemProvider(this);
 		}
 
-		return arrayStringItemProvider;
+		return arraystringItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.arrayBoolean} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.NetworkInfo} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected arrayBooleanItemProvider arrayBooleanItemProvider;
+	protected NetworkInfoItemProvider networkInfoItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.arrayBoolean}.
+	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.NetworkInfo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createarrayBooleanAdapter() {
-		if (arrayBooleanItemProvider == null) {
-			arrayBooleanItemProvider = new arrayBooleanItemProvider(this);
+	public Adapter createNetworkInfoAdapter() {
+		if (networkInfoItemProvider == null) {
+			networkInfoItemProvider = new NetworkInfoItemProvider(this);
 		}
 
-		return arrayBooleanItemProvider;
+		return networkInfoItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.arrayByte} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.PortInfo} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected arrayByteItemProvider arrayByteItemProvider;
+	protected PortInfoItemProvider portInfoItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.arrayByte}.
+	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.PortInfo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createarrayByteAdapter() {
-		if (arrayByteItemProvider == null) {
-			arrayByteItemProvider = new arrayByteItemProvider(this);
+	public Adapter createPortInfoAdapter() {
+		if (portInfoItemProvider == null) {
+			portInfoItemProvider = new PortInfoItemProvider(this);
 		}
 
-		return arrayByteItemProvider;
+		return portInfoItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.arrayDouble} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.Credential} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected arrayDoubleItemProvider arrayDoubleItemProvider;
+	protected CredentialItemProvider credentialItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.arrayDouble}.
+	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.Credential}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createarrayDoubleAdapter() {
-		if (arrayDoubleItemProvider == null) {
-			arrayDoubleItemProvider = new arrayDoubleItemProvider(this);
+	public Adapter createCredentialAdapter() {
+		if (credentialItemProvider == null) {
+			credentialItemProvider = new CredentialItemProvider(this);
 		}
 
-		return arrayDoubleItemProvider;
+		return credentialItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.arrayFloat} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.PortSpec} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected arrayFloatItemProvider arrayFloatItemProvider;
+	protected PortSpecItemProvider portSpecItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.arrayFloat}.
+	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.PortSpec}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createarrayFloatAdapter() {
-		if (arrayFloatItemProvider == null) {
-			arrayFloatItemProvider = new arrayFloatItemProvider(this);
+	public Adapter createPortSpecAdapter() {
+		if (portSpecItemProvider == null) {
+			portSpecItemProvider = new PortSpecItemProvider(this);
 		}
 
-		return arrayFloatItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.arrayInteger} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected arrayIntegerItemProvider arrayIntegerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.arrayInteger}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createarrayIntegerAdapter() {
-		if (arrayIntegerItemProvider == null) {
-			arrayIntegerItemProvider = new arrayIntegerItemProvider(this);
-		}
-
-		return arrayIntegerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.arrayLong} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected arrayLongItemProvider arrayLongItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.arrayLong}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createarrayLongAdapter() {
-		if (arrayLongItemProvider == null) {
-			arrayLongItemProvider = new arrayLongItemProvider(this);
-		}
-
-		return arrayLongItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.arrayShort} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected arrayShortItemProvider arrayShortItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.arrayShort}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createarrayShortAdapter() {
-		if (arrayShortItemProvider == null) {
-			arrayShortItemProvider = new arrayShortItemProvider(this);
-		}
-
-		return arrayShortItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected toscadatatypesnetworkNetworkInfoItemProvider toscadatatypesnetworkNetworkInfoItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createtoscadatatypesnetworkNetworkInfoAdapter() {
-		if (toscadatatypesnetworkNetworkInfoItemProvider == null) {
-			toscadatatypesnetworkNetworkInfoItemProvider = new toscadatatypesnetworkNetworkInfoItemProvider(this);
-		}
-
-		return toscadatatypesnetworkNetworkInfoItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected toscadatatypesnetworkPortInfoItemProvider toscadatatypesnetworkPortInfoItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createtoscadatatypesnetworkPortInfoAdapter() {
-		if (toscadatatypesnetworkPortInfoItemProvider == null) {
-			toscadatatypesnetworkPortInfoItemProvider = new toscadatatypesnetworkPortInfoItemProvider(this);
-		}
-
-		return toscadatatypesnetworkPortInfoItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected toscadatatypesCredentialItemProvider toscadatatypesCredentialItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createtoscadatatypesCredentialAdapter() {
-		if (toscadatatypesCredentialItemProvider == null) {
-			toscadatatypesCredentialItemProvider = new toscadatatypesCredentialItemProvider(this);
-		}
-
-		return toscadatatypesCredentialItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected toscadatatypesnetworkPortSpecItemProvider toscadatatypesnetworkPortSpecItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createtoscadatatypesnetworkPortSpecAdapter() {
-		if (toscadatatypesnetworkPortSpecItemProvider == null) {
-			toscadatatypesnetworkPortSpecItemProvider = new toscadatatypesnetworkPortSpecItemProvider(this);
-		}
-
-		return toscadatatypesnetworkPortSpecItemProvider;
+		return portSpecItemProvider;
 	}
 
 	/**
@@ -1330,18 +1169,11 @@ public class ToscaItemProviderAdapterFactory extends ToscaAdapterFactory impleme
 	 * @generated
 	 */
 	public void dispose() {
-		if (arrayStringItemProvider != null) arrayStringItemProvider.dispose();
-		if (arrayBooleanItemProvider != null) arrayBooleanItemProvider.dispose();
-		if (arrayByteItemProvider != null) arrayByteItemProvider.dispose();
-		if (arrayDoubleItemProvider != null) arrayDoubleItemProvider.dispose();
-		if (arrayFloatItemProvider != null) arrayFloatItemProvider.dispose();
-		if (arrayIntegerItemProvider != null) arrayIntegerItemProvider.dispose();
-		if (arrayLongItemProvider != null) arrayLongItemProvider.dispose();
-		if (arrayShortItemProvider != null) arrayShortItemProvider.dispose();
-		if (toscadatatypesnetworkNetworkInfoItemProvider != null) toscadatatypesnetworkNetworkInfoItemProvider.dispose();
-		if (toscadatatypesnetworkPortInfoItemProvider != null) toscadatatypesnetworkPortInfoItemProvider.dispose();
-		if (toscadatatypesCredentialItemProvider != null) toscadatatypesCredentialItemProvider.dispose();
-		if (toscadatatypesnetworkPortSpecItemProvider != null) toscadatatypesnetworkPortSpecItemProvider.dispose();
+		if (arraystringItemProvider != null) arraystringItemProvider.dispose();
+		if (networkInfoItemProvider != null) networkInfoItemProvider.dispose();
+		if (portInfoItemProvider != null) portInfoItemProvider.dispose();
+		if (credentialItemProvider != null) credentialItemProvider.dispose();
+		if (portSpecItemProvider != null) portSpecItemProvider.dispose();
 		if (tosca_capabilities_rootItemProvider != null) tosca_capabilities_rootItemProvider.dispose();
 		if (tosca_capabilities_nodeItemProvider != null) tosca_capabilities_nodeItemProvider.dispose();
 		if (tosca_capabilities_endpointItemProvider != null) tosca_capabilities_endpointItemProvider.dispose();

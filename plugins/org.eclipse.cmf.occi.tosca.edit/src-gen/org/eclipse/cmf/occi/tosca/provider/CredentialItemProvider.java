@@ -16,8 +16,8 @@ package org.eclipse.cmf.occi.tosca.provider;
 import java.util.Collection;
 import java.util.List;
 
+import org.eclipse.cmf.occi.tosca.Credential;
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
-import org.eclipse.cmf.occi.tosca.toscadatatypesCredential;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -36,12 +36,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential} object.
+ * This is the item provider adapter for a {@link org.eclipse.cmf.occi.tosca.Credential} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class toscadatatypesCredentialItemProvider 
+public class CredentialItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -55,7 +55,7 @@ public class toscadatatypesCredentialItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public toscadatatypesCredentialItemProvider(AdapterFactory adapterFactory) {
+	public CredentialItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -90,9 +90,9 @@ public class toscadatatypesCredentialItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_toscadatatypesCredential_protocol_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_toscadatatypesCredential_protocol_feature", "_UI_toscadatatypesCredential_type"),
-				 ToscaPackage.Literals.TOSCADATATYPES_CREDENTIAL__PROTOCOL,
+				 getString("_UI_Credential_protocol_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Credential_protocol_feature", "_UI_Credential_type"),
+				 ToscaPackage.Literals.CREDENTIAL__PROTOCOL,
 				 true,
 				 false,
 				 false,
@@ -112,9 +112,9 @@ public class toscadatatypesCredentialItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_toscadatatypesCredential_keys_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_toscadatatypesCredential_keys_feature", "_UI_toscadatatypesCredential_type"),
-				 ToscaPackage.Literals.TOSCADATATYPES_CREDENTIAL__KEYS,
+				 getString("_UI_Credential_keys_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Credential_keys_feature", "_UI_Credential_type"),
+				 ToscaPackage.Literals.CREDENTIAL__KEYS,
 				 true,
 				 false,
 				 false,
@@ -134,9 +134,9 @@ public class toscadatatypesCredentialItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_toscadatatypesCredential_tokentype_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_toscadatatypesCredential_tokentype_feature", "_UI_toscadatatypesCredential_type"),
-				 ToscaPackage.Literals.TOSCADATATYPES_CREDENTIAL__TOKENTYPE,
+				 getString("_UI_Credential_tokentype_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Credential_tokentype_feature", "_UI_Credential_type"),
+				 ToscaPackage.Literals.CREDENTIAL__TOKENTYPE,
 				 true,
 				 false,
 				 false,
@@ -156,9 +156,9 @@ public class toscadatatypesCredentialItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_toscadatatypesCredential_user_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_toscadatatypesCredential_user_feature", "_UI_toscadatatypesCredential_type"),
-				 ToscaPackage.Literals.TOSCADATATYPES_CREDENTIAL__USER,
+				 getString("_UI_Credential_user_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Credential_user_feature", "_UI_Credential_type"),
+				 ToscaPackage.Literals.CREDENTIAL__USER,
 				 true,
 				 false,
 				 false,
@@ -178,9 +178,9 @@ public class toscadatatypesCredentialItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_toscadatatypesCredential_token_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_toscadatatypesCredential_token_feature", "_UI_toscadatatypesCredential_type"),
-				 ToscaPackage.Literals.TOSCADATATYPES_CREDENTIAL__TOKEN,
+				 getString("_UI_Credential_token_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Credential_token_feature", "_UI_Credential_type"),
+				 ToscaPackage.Literals.CREDENTIAL__TOKEN,
 				 true,
 				 false,
 				 false,
@@ -190,14 +190,14 @@ public class toscadatatypesCredentialItemProvider
 	}
 
 	/**
-	 * This returns toscadatatypesCredential.gif.
+	 * This returns Credential.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/toscadatatypesCredential"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Credential"));
 	}
 
 	/**
@@ -208,10 +208,10 @@ public class toscadatatypesCredentialItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((toscadatatypesCredential)object).getProtocol();
+		String label = ((Credential)object).getProtocol();
 		return label == null || label.length() == 0 ?
-			getString("_UI_toscadatatypesCredential_type") :
-			getString("_UI_toscadatatypesCredential_type") + " " + label;
+			getString("_UI_Credential_type") :
+			getString("_UI_Credential_type") + " " + label;
 	}
 	
 
@@ -226,12 +226,12 @@ public class toscadatatypesCredentialItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(toscadatatypesCredential.class)) {
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__PROTOCOL:
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__KEYS:
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__TOKENTYPE:
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__USER:
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__TOKEN:
+		switch (notification.getFeatureID(Credential.class)) {
+			case ToscaPackage.CREDENTIAL__PROTOCOL:
+			case ToscaPackage.CREDENTIAL__KEYS:
+			case ToscaPackage.CREDENTIAL__TOKENTYPE:
+			case ToscaPackage.CREDENTIAL__USER:
+			case ToscaPackage.CREDENTIAL__TOKEN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

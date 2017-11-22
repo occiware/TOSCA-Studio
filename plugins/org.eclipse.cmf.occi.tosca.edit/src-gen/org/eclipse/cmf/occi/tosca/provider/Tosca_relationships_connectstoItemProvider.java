@@ -149,7 +149,7 @@ public class Tosca_relationships_connectstoItemProvider extends Tosca_relationsh
 		newChildDescriptors.add
 			(createChildParameter
 				(ToscaPackage.Literals.TOSCA_RELATIONSHIPS_CONNECTSTO__CREDENTIAL,
-				 ToscaFactory.eINSTANCE.createtoscadatatypesCredential()));
+				 ToscaFactory.eINSTANCE.createCredential()));
 	}
 
 }

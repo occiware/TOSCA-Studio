@@ -16,16 +16,14 @@ package org.eclipse.cmf.occi.tosca.provider;
 import java.util.Collection;
 import java.util.List;
 
-import org.eclipse.cmf.occi.tosca.ToscaFactory;
+import org.eclipse.cmf.occi.tosca.PortSpec;
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
-import org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo;
+import org.eclipse.cmf.occi.tosca.protocolEnum;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -39,12 +37,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo} object.
+ * This is the item provider adapter for a {@link org.eclipse.cmf.occi.tosca.PortSpec} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class toscadatatypesnetworkPortInfoItemProvider 
+public class PortSpecItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -58,7 +56,7 @@ public class toscadatatypesnetworkPortInfoItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public toscadatatypesnetworkPortInfoItemProvider(AdapterFactory adapterFactory) {
+	public PortSpecItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -73,28 +71,29 @@ public class toscadatatypesnetworkPortInfoItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPortnamePropertyDescriptor(object);
-			addNetworkidPropertyDescriptor(object);
-			addMacaddressPropertyDescriptor(object);
-			addPortidPropertyDescriptor(object);
+			addProtocolPropertyDescriptor(object);
+			addTargetrangePropertyDescriptor(object);
+			addSourcerangePropertyDescriptor(object);
+			addSourcePropertyDescriptor(object);
+			addTargetPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Portname feature.
+	 * This adds a property descriptor for the Protocol feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPortnamePropertyDescriptor(Object object) {
+	protected void addProtocolPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_toscadatatypesnetworkPortInfo_portname_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_toscadatatypesnetworkPortInfo_portname_feature", "_UI_toscadatatypesnetworkPortInfo_type"),
-				 ToscaPackage.Literals.TOSCADATATYPESNETWORK_PORT_INFO__PORTNAME,
+				 getString("_UI_PortSpec_protocol_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PortSpec_protocol_feature", "_UI_PortSpec_type"),
+				 ToscaPackage.Literals.PORT_SPEC__PROTOCOL,
 				 true,
 				 false,
 				 false,
@@ -104,19 +103,19 @@ public class toscadatatypesnetworkPortInfoItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Networkid feature.
+	 * This adds a property descriptor for the Targetrange feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNetworkidPropertyDescriptor(Object object) {
+	protected void addTargetrangePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_toscadatatypesnetworkPortInfo_networkid_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_toscadatatypesnetworkPortInfo_networkid_feature", "_UI_toscadatatypesnetworkPortInfo_type"),
-				 ToscaPackage.Literals.TOSCADATATYPESNETWORK_PORT_INFO__NETWORKID,
+				 getString("_UI_PortSpec_targetrange_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PortSpec_targetrange_feature", "_UI_PortSpec_type"),
+				 ToscaPackage.Literals.PORT_SPEC__TARGETRANGE,
 				 true,
 				 false,
 				 false,
@@ -126,19 +125,19 @@ public class toscadatatypesnetworkPortInfoItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Macaddress feature.
+	 * This adds a property descriptor for the Sourcerange feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMacaddressPropertyDescriptor(Object object) {
+	protected void addSourcerangePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_toscadatatypesnetworkPortInfo_macaddress_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_toscadatatypesnetworkPortInfo_macaddress_feature", "_UI_toscadatatypesnetworkPortInfo_type"),
-				 ToscaPackage.Literals.TOSCADATATYPESNETWORK_PORT_INFO__MACADDRESS,
+				 getString("_UI_PortSpec_sourcerange_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PortSpec_sourcerange_feature", "_UI_PortSpec_type"),
+				 ToscaPackage.Literals.PORT_SPEC__SOURCERANGE,
 				 true,
 				 false,
 				 false,
@@ -148,19 +147,19 @@ public class toscadatatypesnetworkPortInfoItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Portid feature.
+	 * This adds a property descriptor for the Source feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPortidPropertyDescriptor(Object object) {
+	protected void addSourcePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_toscadatatypesnetworkPortInfo_portid_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_toscadatatypesnetworkPortInfo_portid_feature", "_UI_toscadatatypesnetworkPortInfo_type"),
-				 ToscaPackage.Literals.TOSCADATATYPESNETWORK_PORT_INFO__PORTID,
+				 getString("_UI_PortSpec_source_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PortSpec_source_feature", "_UI_PortSpec_type"),
+				 ToscaPackage.Literals.PORT_SPEC__SOURCE,
 				 true,
 				 false,
 				 false,
@@ -170,44 +169,36 @@ public class toscadatatypesnetworkPortInfoItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This adds a property descriptor for the Target feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(ToscaPackage.Literals.TOSCADATATYPESNETWORK_PORT_INFO__ADDRESSES);
-		}
-		return childrenFeatures;
+	protected void addTargetPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PortSpec_target_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PortSpec_target_feature", "_UI_PortSpec_type"),
+				 ToscaPackage.Literals.PORT_SPEC__TARGET,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns toscadatatypesnetworkPortInfo.gif.
+	 * This returns PortSpec.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/toscadatatypesnetworkPortInfo"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/PortSpec"));
 	}
 
 	/**
@@ -218,10 +209,11 @@ public class toscadatatypesnetworkPortInfoItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((toscadatatypesnetworkPortInfo)object).getPortname();
+		protocolEnum labelValue = ((PortSpec)object).getProtocol();
+		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
-			getString("_UI_toscadatatypesnetworkPortInfo_type") :
-			getString("_UI_toscadatatypesnetworkPortInfo_type") + " " + label;
+			getString("_UI_PortSpec_type") :
+			getString("_UI_PortSpec_type") + " " + label;
 	}
 	
 
@@ -236,15 +228,13 @@ public class toscadatatypesnetworkPortInfoItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(toscadatatypesnetworkPortInfo.class)) {
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__PORTNAME:
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__NETWORKID:
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__MACADDRESS:
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__PORTID:
+		switch (notification.getFeatureID(PortSpec.class)) {
+			case ToscaPackage.PORT_SPEC__PROTOCOL:
+			case ToscaPackage.PORT_SPEC__TARGETRANGE:
+			case ToscaPackage.PORT_SPEC__SOURCERANGE:
+			case ToscaPackage.PORT_SPEC__SOURCE:
+			case ToscaPackage.PORT_SPEC__TARGET:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__ADDRESSES:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -260,11 +250,6 @@ public class toscadatatypesnetworkPortInfoItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToscaPackage.Literals.TOSCADATATYPESNETWORK_PORT_INFO__ADDRESSES,
-				 ToscaFactory.eINSTANCE.createarrayString()));
 	}
 
 	/**

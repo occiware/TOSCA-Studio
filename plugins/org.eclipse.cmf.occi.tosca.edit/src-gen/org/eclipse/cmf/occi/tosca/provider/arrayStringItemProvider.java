@@ -17,7 +17,7 @@ import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
-import org.eclipse.cmf.occi.tosca.arrayString;
+import org.eclipse.cmf.occi.tosca.arraystring;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -36,12 +36,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.cmf.occi.tosca.arrayString} object.
+ * This is the item provider adapter for a {@link org.eclipse.cmf.occi.tosca.arraystring} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class arrayStringItemProvider 
+public class arraystringItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -55,7 +55,7 @@ public class arrayStringItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public arrayStringItemProvider(AdapterFactory adapterFactory) {
+	public arraystringItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -86,9 +86,9 @@ public class arrayStringItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_arrayString_values_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_arrayString_values_feature", "_UI_arrayString_type"),
-				 ToscaPackage.Literals.ARRAY_STRING__VALUES,
+				 getString("_UI_arraystring_values_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_arraystring_values_feature", "_UI_arraystring_type"),
+				 ToscaPackage.Literals.ARRAYSTRING__VALUES,
 				 true,
 				 false,
 				 false,
@@ -98,14 +98,14 @@ public class arrayStringItemProvider
 	}
 
 	/**
-	 * This returns arrayString.gif.
+	 * This returns arraystring.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/arrayString"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/arraystring"));
 	}
 
 	/**
@@ -116,7 +116,7 @@ public class arrayStringItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_arrayString_type");
+		return getString("_UI_arraystring_type");
 	}
 	
 
@@ -131,8 +131,8 @@ public class arrayStringItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(arrayString.class)) {
-			case ToscaPackage.ARRAY_STRING__VALUES:
+		switch (notification.getFeatureID(arraystring.class)) {
+			case ToscaPackage.ARRAYSTRING__VALUES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

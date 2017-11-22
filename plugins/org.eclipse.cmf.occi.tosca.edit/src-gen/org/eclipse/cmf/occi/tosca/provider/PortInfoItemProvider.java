@@ -16,9 +16,9 @@ package org.eclipse.cmf.occi.tosca.provider;
 import java.util.Collection;
 import java.util.List;
 
+import org.eclipse.cmf.occi.tosca.PortInfo;
 import org.eclipse.cmf.occi.tosca.ToscaFactory;
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
-import org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -39,12 +39,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo} object.
+ * This is the item provider adapter for a {@link org.eclipse.cmf.occi.tosca.PortInfo} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class toscadatatypesnetworkNetworkInfoItemProvider 
+public class PortInfoItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -58,7 +58,7 @@ public class toscadatatypesnetworkNetworkInfoItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public toscadatatypesnetworkNetworkInfoItemProvider(AdapterFactory adapterFactory) {
+	public PortInfoItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -73,10 +73,34 @@ public class toscadatatypesnetworkNetworkInfoItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addPortnamePropertyDescriptor(object);
 			addNetworkidPropertyDescriptor(object);
-			addNetworknamePropertyDescriptor(object);
+			addMacaddressPropertyDescriptor(object);
+			addPortidPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Portname feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPortnamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PortInfo_portname_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PortInfo_portname_feature", "_UI_PortInfo_type"),
+				 ToscaPackage.Literals.PORT_INFO__PORTNAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -90,9 +114,9 @@ public class toscadatatypesnetworkNetworkInfoItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_toscadatatypesnetworkNetworkInfo_networkid_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_toscadatatypesnetworkNetworkInfo_networkid_feature", "_UI_toscadatatypesnetworkNetworkInfo_type"),
-				 ToscaPackage.Literals.TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKID,
+				 getString("_UI_PortInfo_networkid_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PortInfo_networkid_feature", "_UI_PortInfo_type"),
+				 ToscaPackage.Literals.PORT_INFO__NETWORKID,
 				 true,
 				 false,
 				 false,
@@ -102,19 +126,41 @@ public class toscadatatypesnetworkNetworkInfoItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Networkname feature.
+	 * This adds a property descriptor for the Macaddress feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNetworknamePropertyDescriptor(Object object) {
+	protected void addMacaddressPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_toscadatatypesnetworkNetworkInfo_networkname_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_toscadatatypesnetworkNetworkInfo_networkname_feature", "_UI_toscadatatypesnetworkNetworkInfo_type"),
-				 ToscaPackage.Literals.TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKNAME,
+				 getString("_UI_PortInfo_macaddress_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PortInfo_macaddress_feature", "_UI_PortInfo_type"),
+				 ToscaPackage.Literals.PORT_INFO__MACADDRESS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Portid feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPortidPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PortInfo_portid_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PortInfo_portid_feature", "_UI_PortInfo_type"),
+				 ToscaPackage.Literals.PORT_INFO__PORTID,
 				 true,
 				 false,
 				 false,
@@ -135,7 +181,7 @@ public class toscadatatypesnetworkNetworkInfoItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ToscaPackage.Literals.TOSCADATATYPESNETWORK_NETWORK_INFO__ADDRESSES);
+			childrenFeatures.add(ToscaPackage.Literals.PORT_INFO__ADDRESSES);
 		}
 		return childrenFeatures;
 	}
@@ -154,14 +200,14 @@ public class toscadatatypesnetworkNetworkInfoItemProvider
 	}
 
 	/**
-	 * This returns toscadatatypesnetworkNetworkInfo.gif.
+	 * This returns PortInfo.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/toscadatatypesnetworkNetworkInfo"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/PortInfo"));
 	}
 
 	/**
@@ -172,10 +218,10 @@ public class toscadatatypesnetworkNetworkInfoItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((toscadatatypesnetworkNetworkInfo)object).getNetworkname();
+		String label = ((PortInfo)object).getPortname();
 		return label == null || label.length() == 0 ?
-			getString("_UI_toscadatatypesnetworkNetworkInfo_type") :
-			getString("_UI_toscadatatypesnetworkNetworkInfo_type") + " " + label;
+			getString("_UI_PortInfo_type") :
+			getString("_UI_PortInfo_type") + " " + label;
 	}
 	
 
@@ -190,12 +236,14 @@ public class toscadatatypesnetworkNetworkInfoItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(toscadatatypesnetworkNetworkInfo.class)) {
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKID:
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKNAME:
+		switch (notification.getFeatureID(PortInfo.class)) {
+			case ToscaPackage.PORT_INFO__PORTNAME:
+			case ToscaPackage.PORT_INFO__NETWORKID:
+			case ToscaPackage.PORT_INFO__MACADDRESS:
+			case ToscaPackage.PORT_INFO__PORTID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__ADDRESSES:
+			case ToscaPackage.PORT_INFO__ADDRESSES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -215,8 +263,8 @@ public class toscadatatypesnetworkNetworkInfoItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ToscaPackage.Literals.TOSCADATATYPESNETWORK_NETWORK_INFO__ADDRESSES,
-				 ToscaFactory.eINSTANCE.createarrayString()));
+				(ToscaPackage.Literals.PORT_INFO__ADDRESSES,
+				 ToscaFactory.eINSTANCE.createarraystring()));
 	}
 
 	/**

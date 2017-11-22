@@ -58,7 +58,6 @@ public class Tosca_capabilities_operatingsystemItemProvider extends Tosca_capabi
 			addTypePropertyDescriptor(object);
 			addDistributionPropertyDescriptor(object);
 			addVersionPropertyDescriptor(object);
-			addArchitecturePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -130,28 +129,6 @@ public class Tosca_capabilities_operatingsystemItemProvider extends Tosca_capabi
 	}
 
 	/**
-	 * This adds a property descriptor for the Architecture feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addArchitecturePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Tosca_capabilities_operatingsystem_architecture_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_operatingsystem_architecture_feature", "_UI_Tosca_capabilities_operatingsystem_type"),
-				 ToscaPackage.Literals.TOSCA_CAPABILITIES_OPERATINGSYSTEM__ARCHITECTURE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This returns Tosca_capabilities_operatingsystem.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -192,7 +169,6 @@ public class Tosca_capabilities_operatingsystemItemProvider extends Tosca_capabi
 			case ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__TYPE:
 			case ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__DISTRIBUTION:
 			case ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__VERSION:
-			case ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__ARCHITECTURE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

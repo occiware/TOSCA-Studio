@@ -177,7 +177,7 @@ public class Tosca_nodes_softwarecomponentItemProvider extends Tosca_nodes_rootI
 		newChildDescriptors.add
 			(createChildParameter
 				(ToscaPackage.Literals.TOSCA_NODES_SOFTWARECOMPONENT__ADMIN_CREDENTIAL,
-				 ToscaFactory.eINSTANCE.createtoscadatatypesCredential()));
+				 ToscaFactory.eINSTANCE.createCredential()));
 	}
 
 }
