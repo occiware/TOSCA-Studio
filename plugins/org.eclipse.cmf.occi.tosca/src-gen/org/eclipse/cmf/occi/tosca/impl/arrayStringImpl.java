@@ -15,7 +15,7 @@ package org.eclipse.cmf.occi.tosca.impl;
 import java.util.Collection;
 
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
-import org.eclipse.cmf.occi.tosca.arrayString;
+import org.eclipse.cmf.occi.tosca.arraystring;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -27,18 +27,18 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>array String</b></em>'.
+ * An implementation of the model object '<em><b>arraystring</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.arrayStringImpl#getValues <em>Values</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.arraystringImpl#getValues <em>Values</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class arrayStringImpl extends EObjectImpl implements arrayString {
+public class arraystringImpl extends EObjectImpl implements arraystring {
 	/**
 	 * The cached value of the '{@link #getValues() <em>Values</em>}' attribute list.
 	 * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class arrayStringImpl extends EObjectImpl implements arrayString {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected arrayStringImpl() {
+	protected arraystringImpl() {
 		super();
 	}
 
@@ -65,7 +65,7 @@ public class arrayStringImpl extends EObjectImpl implements arrayString {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ToscaPackage.Literals.ARRAY_STRING;
+		return ToscaPackage.Literals.ARRAYSTRING;
 	}
 
 	/**
@@ -75,7 +75,7 @@ public class arrayStringImpl extends EObjectImpl implements arrayString {
 	 */
 	public EList<String> getValues() {
 		if (values == null) {
-			values = new EDataTypeEList<String>(String.class, this, ToscaPackage.ARRAY_STRING__VALUES);
+			values = new EDataTypeEList<String>(String.class, this, ToscaPackage.ARRAYSTRING__VALUES);
 		}
 		return values;
 	}
@@ -88,7 +88,7 @@ public class arrayStringImpl extends EObjectImpl implements arrayString {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToscaPackage.ARRAY_STRING__VALUES:
+			case ToscaPackage.ARRAYSTRING__VALUES:
 				return getValues();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -103,7 +103,7 @@ public class arrayStringImpl extends EObjectImpl implements arrayString {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToscaPackage.ARRAY_STRING__VALUES:
+			case ToscaPackage.ARRAYSTRING__VALUES:
 				getValues().clear();
 				getValues().addAll((Collection<? extends String>)newValue);
 				return;
@@ -119,7 +119,7 @@ public class arrayStringImpl extends EObjectImpl implements arrayString {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToscaPackage.ARRAY_STRING__VALUES:
+			case ToscaPackage.ARRAYSTRING__VALUES:
 				getValues().clear();
 				return;
 		}
@@ -134,7 +134,7 @@ public class arrayStringImpl extends EObjectImpl implements arrayString {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToscaPackage.ARRAY_STRING__VALUES:
+			case ToscaPackage.ARRAYSTRING__VALUES:
 				return values != null && !values.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -156,4 +156,4 @@ public class arrayStringImpl extends EObjectImpl implements arrayString {
 		return result.toString();
 	}
 
-} //arrayStringImpl
+} //arraystringImpl

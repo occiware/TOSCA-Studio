@@ -12,9 +12,9 @@
  */
 package org.eclipse.cmf.occi.tosca.impl;
 
+import org.eclipse.cmf.occi.tosca.Credential;
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
 import org.eclipse.cmf.occi.tosca.Tosca_relationships_connectsto;
-import org.eclipse.cmf.occi.tosca.toscadatatypesCredential;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -46,7 +46,7 @@ public class Tosca_relationships_connectstoImpl extends Tosca_relationships_root
 	 * @generated
 	 * @ordered
 	 */
-	protected toscadatatypesCredential credential;
+	protected Credential credential;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -72,7 +72,7 @@ public class Tosca_relationships_connectstoImpl extends Tosca_relationships_root
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public toscadatatypesCredential getCredential() {
+	public Credential getCredential() {
 		return credential;
 	}
 
@@ -81,8 +81,8 @@ public class Tosca_relationships_connectstoImpl extends Tosca_relationships_root
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCredential(toscadatatypesCredential newCredential, NotificationChain msgs) {
-		toscadatatypesCredential oldCredential = credential;
+	public NotificationChain basicSetCredential(Credential newCredential, NotificationChain msgs) {
+		Credential oldCredential = credential;
 		credential = newCredential;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCA_RELATIONSHIPS_CONNECTSTO__CREDENTIAL, oldCredential, newCredential);
@@ -96,7 +96,7 @@ public class Tosca_relationships_connectstoImpl extends Tosca_relationships_root
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCredential(toscadatatypesCredential newCredential) {
+	public void setCredential(Credential newCredential) {
 		if (newCredential != credential) {
 			NotificationChain msgs = null;
 			if (credential != null)
@@ -147,7 +147,7 @@ public class Tosca_relationships_connectstoImpl extends Tosca_relationships_root
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ToscaPackage.TOSCA_RELATIONSHIPS_CONNECTSTO__CREDENTIAL:
-				setCredential((toscadatatypesCredential)newValue);
+				setCredential((Credential)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -162,7 +162,7 @@ public class Tosca_relationships_connectstoImpl extends Tosca_relationships_root
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ToscaPackage.TOSCA_RELATIONSHIPS_CONNECTSTO__CREDENTIAL:
-				setCredential((toscadatatypesCredential)null);
+				setCredential((Credential)null);
 				return;
 		}
 		super.eUnset(featureID);

@@ -16,25 +16,25 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>toscadatatypesnetwork Port Info</b></em>'.
+ * A representation of the model object '<em><b>Port Info</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getPortname <em>Portname</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getNetworkid <em>Networkid</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getAddresses <em>Addresses</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getMacaddress <em>Macaddress</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getPortid <em>Portid</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.PortInfo#getPortname <em>Portname</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.PortInfo#getNetworkid <em>Networkid</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.PortInfo#getAddresses <em>Addresses</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.PortInfo#getMacaddress <em>Macaddress</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.PortInfo#getPortid <em>Portid</em>}</li>
  * </ul>
  *
- * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesnetworkPortInfo()
+ * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortInfo()
  * @model
  * @generated
  */
-public interface toscadatatypesnetworkPortInfo extends EObject {
+public interface PortInfo extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Portname</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -44,15 +44,15 @@ public interface toscadatatypesnetworkPortInfo extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Portname</em>' attribute.
 	 * @see #setPortname(String)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesnetworkPortInfo_Portname()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortInfo_Portname()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesnetworkPortInfo!portname'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortInfo!portname'"
 	 * @generated
 	 */
 	String getPortname();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getPortname <em>Portname</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.PortInfo#getPortname <em>Portname</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Portname</em>' attribute.
@@ -70,15 +70,15 @@ public interface toscadatatypesnetworkPortInfo extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Networkid</em>' attribute.
 	 * @see #setNetworkid(String)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesnetworkPortInfo_Networkid()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortInfo_Networkid()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesnetworkPortInfo!networkid'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortInfo!networkid'"
 	 * @generated
 	 */
 	String getNetworkid();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getNetworkid <em>Networkid</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.PortInfo#getNetworkid <em>Networkid</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Networkid</em>' attribute.
@@ -95,23 +95,23 @@ public interface toscadatatypesnetworkPortInfo extends EObject {
 	 * 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Addresses</em>' containment reference.
-	 * @see #setAddresses(arrayString)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesnetworkPortInfo_Addresses()
+	 * @see #setAddresses(arraystring)
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortInfo_Addresses()
 	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesnetworkPortInfo!addresses'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortInfo!addresses'"
 	 * @generated
 	 */
-	arrayString getAddresses();
+	arraystring getAddresses();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getAddresses <em>Addresses</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.PortInfo#getAddresses <em>Addresses</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Addresses</em>' containment reference.
 	 * @see #getAddresses()
 	 * @generated
 	 */
-	void setAddresses(arrayString value);
+	void setAddresses(arraystring value);
 
 	/**
 	 * Returns the value of the '<em><b>Macaddress</b></em>' attribute.
@@ -122,15 +122,15 @@ public interface toscadatatypesnetworkPortInfo extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Macaddress</em>' attribute.
 	 * @see #setMacaddress(String)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesnetworkPortInfo_Macaddress()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortInfo_Macaddress()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesnetworkPortInfo!macaddress'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortInfo!macaddress'"
 	 * @generated
 	 */
 	String getMacaddress();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getMacaddress <em>Macaddress</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.PortInfo#getMacaddress <em>Macaddress</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Macaddress</em>' attribute.
@@ -148,15 +148,15 @@ public interface toscadatatypesnetworkPortInfo extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Portid</em>' attribute.
 	 * @see #setPortid(String)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesnetworkPortInfo_Portid()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortInfo_Portid()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesnetworkPortInfo!portid'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortInfo!portid'"
 	 * @generated
 	 */
 	String getPortid();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getPortid <em>Portid</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.PortInfo#getPortid <em>Portid</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Portid</em>' attribute.
@@ -165,4 +165,4 @@ public interface toscadatatypesnetworkPortInfo extends EObject {
 	 */
 	void setPortid(String value);
 
-} // toscadatatypesnetworkPortInfo
+} // PortInfo

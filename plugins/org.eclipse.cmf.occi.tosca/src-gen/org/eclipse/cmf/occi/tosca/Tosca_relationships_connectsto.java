@@ -39,13 +39,13 @@ public interface Tosca_relationships_connectsto extends Tosca_relationships_root
 	 * The security credential to use to present to the target endpoint to for either authentication or authorization purposes.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Credential</em>' containment reference.
-	 * @see #setCredential(toscadatatypesCredential)
+	 * @see #setCredential(Credential)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_relationships_connectsto_Credential()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_relationships_connectsto!credential'"
 	 * @generated
 	 */
-	toscadatatypesCredential getCredential();
+	Credential getCredential();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.Tosca_relationships_connectsto#getCredential <em>Credential</em>}' containment reference.
@@ -55,6 +55,6 @@ public interface Tosca_relationships_connectsto extends Tosca_relationships_root
 	 * @see #getCredential()
 	 * @generated
 	 */
-	void setCredential(toscadatatypesCredential value);
+	void setCredential(Credential value);
 
 } // Tosca_relationships_connectsto

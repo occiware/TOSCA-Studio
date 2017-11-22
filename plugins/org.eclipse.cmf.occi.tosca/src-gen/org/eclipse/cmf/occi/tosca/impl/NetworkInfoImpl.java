@@ -12,9 +12,9 @@
  */
 package org.eclipse.cmf.occi.tosca.impl;
 
+import org.eclipse.cmf.occi.tosca.NetworkInfo;
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
-import org.eclipse.cmf.occi.tosca.arrayString;
-import org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo;
+import org.eclipse.cmf.occi.tosca.arraystring;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -27,20 +27,20 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>toscadatatypesnetwork Network Info</b></em>'.
+ * An implementation of the model object '<em><b>Network Info</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkNetworkInfoImpl#getNetworkid <em>Networkid</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkNetworkInfoImpl#getAddresses <em>Addresses</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkNetworkInfoImpl#getNetworkname <em>Networkname</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.NetworkInfoImpl#getNetworkid <em>Networkid</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.NetworkInfoImpl#getAddresses <em>Addresses</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.NetworkInfoImpl#getNetworkname <em>Networkname</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class toscadatatypesnetworkNetworkInfoImpl extends EObjectImpl implements toscadatatypesnetworkNetworkInfo {
+public class NetworkInfoImpl extends EObjectImpl implements NetworkInfo {
 	/**
 	 * The default value of the '{@link #getNetworkid() <em>Networkid</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class toscadatatypesnetworkNetworkInfoImpl extends EObjectImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected arrayString addresses;
+	protected arraystring addresses;
 
 	/**
 	 * The default value of the '{@link #getNetworkname() <em>Networkname</em>}' attribute.
@@ -96,7 +96,7 @@ public class toscadatatypesnetworkNetworkInfoImpl extends EObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected toscadatatypesnetworkNetworkInfoImpl() {
+	protected NetworkInfoImpl() {
 		super();
 	}
 
@@ -107,7 +107,7 @@ public class toscadatatypesnetworkNetworkInfoImpl extends EObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ToscaPackage.Literals.TOSCADATATYPESNETWORK_NETWORK_INFO;
+		return ToscaPackage.Literals.NETWORK_INFO;
 	}
 
 	/**
@@ -128,7 +128,7 @@ public class toscadatatypesnetworkNetworkInfoImpl extends EObjectImpl implements
 		String oldNetworkid = networkid;
 		networkid = newNetworkid;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKID, oldNetworkid, networkid));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.NETWORK_INFO__NETWORKID, oldNetworkid, networkid));
 	}
 
 	/**
@@ -136,7 +136,7 @@ public class toscadatatypesnetworkNetworkInfoImpl extends EObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public arrayString getAddresses() {
+	public arraystring getAddresses() {
 		return addresses;
 	}
 
@@ -145,11 +145,11 @@ public class toscadatatypesnetworkNetworkInfoImpl extends EObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAddresses(arrayString newAddresses, NotificationChain msgs) {
-		arrayString oldAddresses = addresses;
+	public NotificationChain basicSetAddresses(arraystring newAddresses, NotificationChain msgs) {
+		arraystring oldAddresses = addresses;
 		addresses = newAddresses;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__ADDRESSES, oldAddresses, newAddresses);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToscaPackage.NETWORK_INFO__ADDRESSES, oldAddresses, newAddresses);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -160,18 +160,18 @@ public class toscadatatypesnetworkNetworkInfoImpl extends EObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAddresses(arrayString newAddresses) {
+	public void setAddresses(arraystring newAddresses) {
 		if (newAddresses != addresses) {
 			NotificationChain msgs = null;
 			if (addresses != null)
-				msgs = ((InternalEObject)addresses).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__ADDRESSES, null, msgs);
+				msgs = ((InternalEObject)addresses).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToscaPackage.NETWORK_INFO__ADDRESSES, null, msgs);
 			if (newAddresses != null)
-				msgs = ((InternalEObject)newAddresses).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__ADDRESSES, null, msgs);
+				msgs = ((InternalEObject)newAddresses).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ToscaPackage.NETWORK_INFO__ADDRESSES, null, msgs);
 			msgs = basicSetAddresses(newAddresses, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__ADDRESSES, newAddresses, newAddresses));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.NETWORK_INFO__ADDRESSES, newAddresses, newAddresses));
 	}
 
 	/**
@@ -192,7 +192,7 @@ public class toscadatatypesnetworkNetworkInfoImpl extends EObjectImpl implements
 		String oldNetworkname = networkname;
 		networkname = newNetworkname;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKNAME, oldNetworkname, networkname));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.NETWORK_INFO__NETWORKNAME, oldNetworkname, networkname));
 	}
 
 	/**
@@ -203,7 +203,7 @@ public class toscadatatypesnetworkNetworkInfoImpl extends EObjectImpl implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__ADDRESSES:
+			case ToscaPackage.NETWORK_INFO__ADDRESSES:
 				return basicSetAddresses(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -217,11 +217,11 @@ public class toscadatatypesnetworkNetworkInfoImpl extends EObjectImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKID:
+			case ToscaPackage.NETWORK_INFO__NETWORKID:
 				return getNetworkid();
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__ADDRESSES:
+			case ToscaPackage.NETWORK_INFO__ADDRESSES:
 				return getAddresses();
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKNAME:
+			case ToscaPackage.NETWORK_INFO__NETWORKNAME:
 				return getNetworkname();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -235,13 +235,13 @@ public class toscadatatypesnetworkNetworkInfoImpl extends EObjectImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKID:
+			case ToscaPackage.NETWORK_INFO__NETWORKID:
 				setNetworkid((String)newValue);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__ADDRESSES:
-				setAddresses((arrayString)newValue);
+			case ToscaPackage.NETWORK_INFO__ADDRESSES:
+				setAddresses((arraystring)newValue);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKNAME:
+			case ToscaPackage.NETWORK_INFO__NETWORKNAME:
 				setNetworkname((String)newValue);
 				return;
 		}
@@ -256,13 +256,13 @@ public class toscadatatypesnetworkNetworkInfoImpl extends EObjectImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKID:
+			case ToscaPackage.NETWORK_INFO__NETWORKID:
 				setNetworkid(NETWORKID_EDEFAULT);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__ADDRESSES:
-				setAddresses((arrayString)null);
+			case ToscaPackage.NETWORK_INFO__ADDRESSES:
+				setAddresses((arraystring)null);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKNAME:
+			case ToscaPackage.NETWORK_INFO__NETWORKNAME:
 				setNetworkname(NETWORKNAME_EDEFAULT);
 				return;
 		}
@@ -277,11 +277,11 @@ public class toscadatatypesnetworkNetworkInfoImpl extends EObjectImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKID:
+			case ToscaPackage.NETWORK_INFO__NETWORKID:
 				return NETWORKID_EDEFAULT == null ? networkid != null : !NETWORKID_EDEFAULT.equals(networkid);
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__ADDRESSES:
+			case ToscaPackage.NETWORK_INFO__ADDRESSES:
 				return addresses != null;
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKNAME:
+			case ToscaPackage.NETWORK_INFO__NETWORKNAME:
 				return NETWORKNAME_EDEFAULT == null ? networkname != null : !NETWORKNAME_EDEFAULT.equals(networkname);
 		}
 		return super.eIsSet(featureID);
@@ -305,4 +305,4 @@ public class toscadatatypesnetworkNetworkInfoImpl extends EObjectImpl implements
 		return result.toString();
 	}
 
-} //toscadatatypesnetworkNetworkInfoImpl
+} //NetworkInfoImpl

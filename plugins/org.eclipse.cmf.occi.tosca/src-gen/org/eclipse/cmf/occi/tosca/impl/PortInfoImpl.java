@@ -12,9 +12,9 @@
  */
 package org.eclipse.cmf.occi.tosca.impl;
 
+import org.eclipse.cmf.occi.tosca.PortInfo;
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
-import org.eclipse.cmf.occi.tosca.arrayString;
-import org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo;
+import org.eclipse.cmf.occi.tosca.arraystring;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -27,22 +27,22 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>toscadatatypesnetwork Port Info</b></em>'.
+ * An implementation of the model object '<em><b>Port Info</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortInfoImpl#getPortname <em>Portname</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortInfoImpl#getNetworkid <em>Networkid</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortInfoImpl#getAddresses <em>Addresses</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortInfoImpl#getMacaddress <em>Macaddress</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortInfoImpl#getPortid <em>Portid</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.PortInfoImpl#getPortname <em>Portname</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.PortInfoImpl#getNetworkid <em>Networkid</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.PortInfoImpl#getAddresses <em>Addresses</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.PortInfoImpl#getMacaddress <em>Macaddress</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.PortInfoImpl#getPortid <em>Portid</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements toscadatatypesnetworkPortInfo {
+public class PortInfoImpl extends EObjectImpl implements PortInfo {
 	/**
 	 * The default value of the '{@link #getPortname() <em>Portname</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -91,7 +91,7 @@ public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements to
 	 * @generated
 	 * @ordered
 	 */
-	protected arrayString addresses;
+	protected arraystring addresses;
 
 	/**
 	 * The default value of the '{@link #getMacaddress() <em>Macaddress</em>}' attribute.
@@ -138,7 +138,7 @@ public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements to
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected toscadatatypesnetworkPortInfoImpl() {
+	protected PortInfoImpl() {
 		super();
 	}
 
@@ -149,7 +149,7 @@ public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements to
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ToscaPackage.Literals.TOSCADATATYPESNETWORK_PORT_INFO;
+		return ToscaPackage.Literals.PORT_INFO;
 	}
 
 	/**
@@ -170,7 +170,7 @@ public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements to
 		String oldPortname = portname;
 		portname = newPortname;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__PORTNAME, oldPortname, portname));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.PORT_INFO__PORTNAME, oldPortname, portname));
 	}
 
 	/**
@@ -191,7 +191,7 @@ public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements to
 		String oldNetworkid = networkid;
 		networkid = newNetworkid;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__NETWORKID, oldNetworkid, networkid));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.PORT_INFO__NETWORKID, oldNetworkid, networkid));
 	}
 
 	/**
@@ -199,7 +199,7 @@ public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements to
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public arrayString getAddresses() {
+	public arraystring getAddresses() {
 		return addresses;
 	}
 
@@ -208,11 +208,11 @@ public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements to
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAddresses(arrayString newAddresses, NotificationChain msgs) {
-		arrayString oldAddresses = addresses;
+	public NotificationChain basicSetAddresses(arraystring newAddresses, NotificationChain msgs) {
+		arraystring oldAddresses = addresses;
 		addresses = newAddresses;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__ADDRESSES, oldAddresses, newAddresses);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToscaPackage.PORT_INFO__ADDRESSES, oldAddresses, newAddresses);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -223,18 +223,18 @@ public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements to
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAddresses(arrayString newAddresses) {
+	public void setAddresses(arraystring newAddresses) {
 		if (newAddresses != addresses) {
 			NotificationChain msgs = null;
 			if (addresses != null)
-				msgs = ((InternalEObject)addresses).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__ADDRESSES, null, msgs);
+				msgs = ((InternalEObject)addresses).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToscaPackage.PORT_INFO__ADDRESSES, null, msgs);
 			if (newAddresses != null)
-				msgs = ((InternalEObject)newAddresses).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__ADDRESSES, null, msgs);
+				msgs = ((InternalEObject)newAddresses).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ToscaPackage.PORT_INFO__ADDRESSES, null, msgs);
 			msgs = basicSetAddresses(newAddresses, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__ADDRESSES, newAddresses, newAddresses));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.PORT_INFO__ADDRESSES, newAddresses, newAddresses));
 	}
 
 	/**
@@ -255,7 +255,7 @@ public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements to
 		String oldMacaddress = macaddress;
 		macaddress = newMacaddress;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__MACADDRESS, oldMacaddress, macaddress));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.PORT_INFO__MACADDRESS, oldMacaddress, macaddress));
 	}
 
 	/**
@@ -276,7 +276,7 @@ public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements to
 		String oldPortid = portid;
 		portid = newPortid;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__PORTID, oldPortid, portid));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.PORT_INFO__PORTID, oldPortid, portid));
 	}
 
 	/**
@@ -287,7 +287,7 @@ public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements to
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__ADDRESSES:
+			case ToscaPackage.PORT_INFO__ADDRESSES:
 				return basicSetAddresses(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -301,15 +301,15 @@ public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements to
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__PORTNAME:
+			case ToscaPackage.PORT_INFO__PORTNAME:
 				return getPortname();
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__NETWORKID:
+			case ToscaPackage.PORT_INFO__NETWORKID:
 				return getNetworkid();
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__ADDRESSES:
+			case ToscaPackage.PORT_INFO__ADDRESSES:
 				return getAddresses();
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__MACADDRESS:
+			case ToscaPackage.PORT_INFO__MACADDRESS:
 				return getMacaddress();
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__PORTID:
+			case ToscaPackage.PORT_INFO__PORTID:
 				return getPortid();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -323,19 +323,19 @@ public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements to
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__PORTNAME:
+			case ToscaPackage.PORT_INFO__PORTNAME:
 				setPortname((String)newValue);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__NETWORKID:
+			case ToscaPackage.PORT_INFO__NETWORKID:
 				setNetworkid((String)newValue);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__ADDRESSES:
-				setAddresses((arrayString)newValue);
+			case ToscaPackage.PORT_INFO__ADDRESSES:
+				setAddresses((arraystring)newValue);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__MACADDRESS:
+			case ToscaPackage.PORT_INFO__MACADDRESS:
 				setMacaddress((String)newValue);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__PORTID:
+			case ToscaPackage.PORT_INFO__PORTID:
 				setPortid((String)newValue);
 				return;
 		}
@@ -350,19 +350,19 @@ public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements to
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__PORTNAME:
+			case ToscaPackage.PORT_INFO__PORTNAME:
 				setPortname(PORTNAME_EDEFAULT);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__NETWORKID:
+			case ToscaPackage.PORT_INFO__NETWORKID:
 				setNetworkid(NETWORKID_EDEFAULT);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__ADDRESSES:
-				setAddresses((arrayString)null);
+			case ToscaPackage.PORT_INFO__ADDRESSES:
+				setAddresses((arraystring)null);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__MACADDRESS:
+			case ToscaPackage.PORT_INFO__MACADDRESS:
 				setMacaddress(MACADDRESS_EDEFAULT);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__PORTID:
+			case ToscaPackage.PORT_INFO__PORTID:
 				setPortid(PORTID_EDEFAULT);
 				return;
 		}
@@ -377,15 +377,15 @@ public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements to
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__PORTNAME:
+			case ToscaPackage.PORT_INFO__PORTNAME:
 				return PORTNAME_EDEFAULT == null ? portname != null : !PORTNAME_EDEFAULT.equals(portname);
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__NETWORKID:
+			case ToscaPackage.PORT_INFO__NETWORKID:
 				return NETWORKID_EDEFAULT == null ? networkid != null : !NETWORKID_EDEFAULT.equals(networkid);
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__ADDRESSES:
+			case ToscaPackage.PORT_INFO__ADDRESSES:
 				return addresses != null;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__MACADDRESS:
+			case ToscaPackage.PORT_INFO__MACADDRESS:
 				return MACADDRESS_EDEFAULT == null ? macaddress != null : !MACADDRESS_EDEFAULT.equals(macaddress);
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO__PORTID:
+			case ToscaPackage.PORT_INFO__PORTID:
 				return PORTID_EDEFAULT == null ? portid != null : !PORTID_EDEFAULT.equals(portid);
 		}
 		return super.eIsSet(featureID);
@@ -413,4 +413,4 @@ public class toscadatatypesnetworkPortInfoImpl extends EObjectImpl implements to
 		return result.toString();
 	}
 
-} //toscadatatypesnetworkPortInfoImpl
+} //PortInfoImpl

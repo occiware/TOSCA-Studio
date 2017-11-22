@@ -22,6 +22,10 @@ import org.eclipse.cmf.occi.platform.PlatformPackage;
 
 import org.eclipse.cmf.occi.sla.SlaPackage;
 
+import org.eclipse.cmf.occi.tosca.Credential;
+import org.eclipse.cmf.occi.tosca.NetworkInfo;
+import org.eclipse.cmf.occi.tosca.PortInfo;
+import org.eclipse.cmf.occi.tosca.PortSpec;
 import org.eclipse.cmf.occi.tosca.ToscaFactory;
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
 import org.eclipse.cmf.occi.tosca.Tosca_capabilities_attachment;
@@ -62,20 +66,9 @@ import org.eclipse.cmf.occi.tosca.Tosca_relationships_dependson;
 import org.eclipse.cmf.occi.tosca.Tosca_relationships_hostedon;
 import org.eclipse.cmf.occi.tosca.Tosca_relationships_root;
 import org.eclipse.cmf.occi.tosca.Tosca_relationships_routesto;
-import org.eclipse.cmf.occi.tosca.arrayBoolean;
-import org.eclipse.cmf.occi.tosca.arrayByte;
-import org.eclipse.cmf.occi.tosca.arrayDouble;
-import org.eclipse.cmf.occi.tosca.arrayFloat;
-import org.eclipse.cmf.occi.tosca.arrayInteger;
-import org.eclipse.cmf.occi.tosca.arrayLong;
-import org.eclipse.cmf.occi.tosca.arrayShort;
-import org.eclipse.cmf.occi.tosca.arrayString;
+import org.eclipse.cmf.occi.tosca.arraystring;
 import org.eclipse.cmf.occi.tosca.initiatorEnum;
 import org.eclipse.cmf.occi.tosca.protocolEnum;
-import org.eclipse.cmf.occi.tosca.toscadatatypesCredential;
-import org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo;
-import org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo;
-import org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec;
 
 import org.eclipse.cmf.occi.tosca.util.ToscaValidator;
 
@@ -103,84 +96,35 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass arrayStringEClass = null;
+	private EClass arraystringEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass arrayBooleanEClass = null;
+	private EClass networkInfoEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass arrayByteEClass = null;
+	private EClass portInfoEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass arrayDoubleEClass = null;
+	private EClass credentialEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass arrayFloatEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass arrayIntegerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass arrayLongEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass arrayShortEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass toscadatatypesnetworkNetworkInfoEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass toscadatatypesnetworkPortInfoEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass toscadatatypesCredentialEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass toscadatatypesnetworkPortSpecEClass = null;
+	private EClass portSpecEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -523,6 +467,13 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EDataType integerMinZeroEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType longEDataType = null;
 
 	/**
@@ -669,8 +620,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getarrayString() {
-		return arrayStringEClass;
+	public EClass getarraystring() {
+		return arraystringEClass;
 	}
 
 	/**
@@ -678,8 +629,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getarrayString_Values() {
-		return (EAttribute)arrayStringEClass.getEStructuralFeatures().get(0);
+	public EAttribute getarraystring_Values() {
+		return (EAttribute)arraystringEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -687,8 +638,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getarrayBoolean() {
-		return arrayBooleanEClass;
+	public EClass getNetworkInfo() {
+		return networkInfoEClass;
 	}
 
 	/**
@@ -696,8 +647,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getarrayBoolean_Values() {
-		return (EAttribute)arrayBooleanEClass.getEStructuralFeatures().get(0);
+	public EAttribute getNetworkInfo_Networkid() {
+		return (EAttribute)networkInfoEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -705,8 +656,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getarrayByte() {
-		return arrayByteEClass;
+	public EReference getNetworkInfo_Addresses() {
+		return (EReference)networkInfoEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -714,8 +665,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getarrayByte_Values() {
-		return (EAttribute)arrayByteEClass.getEStructuralFeatures().get(0);
+	public EAttribute getNetworkInfo_Networkname() {
+		return (EAttribute)networkInfoEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -723,8 +674,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getarrayDouble() {
-		return arrayDoubleEClass;
+	public EClass getPortInfo() {
+		return portInfoEClass;
 	}
 
 	/**
@@ -732,8 +683,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getarrayDouble_Values() {
-		return (EAttribute)arrayDoubleEClass.getEStructuralFeatures().get(0);
+	public EAttribute getPortInfo_Portname() {
+		return (EAttribute)portInfoEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -741,8 +692,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getarrayFloat() {
-		return arrayFloatEClass;
+	public EAttribute getPortInfo_Networkid() {
+		return (EAttribute)portInfoEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -750,8 +701,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getarrayFloat_Values() {
-		return (EAttribute)arrayFloatEClass.getEStructuralFeatures().get(0);
+	public EReference getPortInfo_Addresses() {
+		return (EReference)portInfoEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -759,8 +710,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getarrayInteger() {
-		return arrayIntegerEClass;
+	public EAttribute getPortInfo_Macaddress() {
+		return (EAttribute)portInfoEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -768,8 +719,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getarrayInteger_Values() {
-		return (EAttribute)arrayIntegerEClass.getEStructuralFeatures().get(0);
+	public EAttribute getPortInfo_Portid() {
+		return (EAttribute)portInfoEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -777,8 +728,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getarrayLong() {
-		return arrayLongEClass;
+	public EClass getCredential() {
+		return credentialEClass;
 	}
 
 	/**
@@ -786,8 +737,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getarrayLong_Values() {
-		return (EAttribute)arrayLongEClass.getEStructuralFeatures().get(0);
+	public EAttribute getCredential_Protocol() {
+		return (EAttribute)credentialEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -795,8 +746,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getarrayShort() {
-		return arrayShortEClass;
+	public EAttribute getCredential_Keys() {
+		return (EAttribute)credentialEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -804,8 +755,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getarrayShort_Values() {
-		return (EAttribute)arrayShortEClass.getEStructuralFeatures().get(0);
+	public EAttribute getCredential_Tokentype() {
+		return (EAttribute)credentialEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -813,8 +764,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass gettoscadatatypesnetworkNetworkInfo() {
-		return toscadatatypesnetworkNetworkInfoEClass;
+	public EAttribute getCredential_User() {
+		return (EAttribute)credentialEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -822,8 +773,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute gettoscadatatypesnetworkNetworkInfo_Networkid() {
-		return (EAttribute)toscadatatypesnetworkNetworkInfoEClass.getEStructuralFeatures().get(0);
+	public EAttribute getCredential_Token() {
+		return (EAttribute)credentialEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -831,8 +782,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference gettoscadatatypesnetworkNetworkInfo_Addresses() {
-		return (EReference)toscadatatypesnetworkNetworkInfoEClass.getEStructuralFeatures().get(1);
+	public EClass getPortSpec() {
+		return portSpecEClass;
 	}
 
 	/**
@@ -840,8 +791,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute gettoscadatatypesnetworkNetworkInfo_Networkname() {
-		return (EAttribute)toscadatatypesnetworkNetworkInfoEClass.getEStructuralFeatures().get(2);
+	public EAttribute getPortSpec_Protocol() {
+		return (EAttribute)portSpecEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -849,8 +800,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass gettoscadatatypesnetworkPortInfo() {
-		return toscadatatypesnetworkPortInfoEClass;
+	public EAttribute getPortSpec_Targetrange() {
+		return (EAttribute)portSpecEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -858,8 +809,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute gettoscadatatypesnetworkPortInfo_Portname() {
-		return (EAttribute)toscadatatypesnetworkPortInfoEClass.getEStructuralFeatures().get(0);
+	public EAttribute getPortSpec_Sourcerange() {
+		return (EAttribute)portSpecEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -867,8 +818,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute gettoscadatatypesnetworkPortInfo_Networkid() {
-		return (EAttribute)toscadatatypesnetworkPortInfoEClass.getEStructuralFeatures().get(1);
+	public EAttribute getPortSpec_Source() {
+		return (EAttribute)portSpecEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -876,134 +827,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference gettoscadatatypesnetworkPortInfo_Addresses() {
-		return (EReference)toscadatatypesnetworkPortInfoEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute gettoscadatatypesnetworkPortInfo_Macaddress() {
-		return (EAttribute)toscadatatypesnetworkPortInfoEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute gettoscadatatypesnetworkPortInfo_Portid() {
-		return (EAttribute)toscadatatypesnetworkPortInfoEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass gettoscadatatypesCredential() {
-		return toscadatatypesCredentialEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute gettoscadatatypesCredential_Protocol() {
-		return (EAttribute)toscadatatypesCredentialEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute gettoscadatatypesCredential_Keys() {
-		return (EAttribute)toscadatatypesCredentialEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute gettoscadatatypesCredential_Tokentype() {
-		return (EAttribute)toscadatatypesCredentialEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute gettoscadatatypesCredential_User() {
-		return (EAttribute)toscadatatypesCredentialEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute gettoscadatatypesCredential_Token() {
-		return (EAttribute)toscadatatypesCredentialEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass gettoscadatatypesnetworkPortSpec() {
-		return toscadatatypesnetworkPortSpecEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute gettoscadatatypesnetworkPortSpec_Protocol() {
-		return (EAttribute)toscadatatypesnetworkPortSpecEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute gettoscadatatypesnetworkPortSpec_Targetrange() {
-		return (EAttribute)toscadatatypesnetworkPortSpecEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute gettoscadatatypesnetworkPortSpec_Sourcerange() {
-		return (EAttribute)toscadatatypesnetworkPortSpecEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute gettoscadatatypesnetworkPortSpec_Source() {
-		return (EAttribute)toscadatatypesnetworkPortSpecEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute gettoscadatatypesnetworkPortSpec_Target() {
-		return (EAttribute)toscadatatypesnetworkPortSpecEClass.getEStructuralFeatures().get(4);
+	public EAttribute getPortSpec_Target() {
+		return (EAttribute)portSpecEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1247,15 +1072,6 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 */
 	public EAttribute getTosca_capabilities_operatingsystem_Version() {
 		return (EAttribute)tosca_capabilities_operatingsystemEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTosca_capabilities_operatingsystem_Architecture() {
-		return (EAttribute)tosca_capabilities_operatingsystemEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2082,6 +1898,15 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getintegerMinZero() {
+		return integerMinZeroEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getlong() {
 		return longEDataType;
 	}
@@ -2195,55 +2020,34 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		isCreated = true;
 
 		// Create classes and their features
-		arrayStringEClass = createEClass(ARRAY_STRING);
-		createEAttribute(arrayStringEClass, ARRAY_STRING__VALUES);
+		arraystringEClass = createEClass(ARRAYSTRING);
+		createEAttribute(arraystringEClass, ARRAYSTRING__VALUES);
 
-		arrayBooleanEClass = createEClass(ARRAY_BOOLEAN);
-		createEAttribute(arrayBooleanEClass, ARRAY_BOOLEAN__VALUES);
+		networkInfoEClass = createEClass(NETWORK_INFO);
+		createEAttribute(networkInfoEClass, NETWORK_INFO__NETWORKID);
+		createEReference(networkInfoEClass, NETWORK_INFO__ADDRESSES);
+		createEAttribute(networkInfoEClass, NETWORK_INFO__NETWORKNAME);
 
-		arrayByteEClass = createEClass(ARRAY_BYTE);
-		createEAttribute(arrayByteEClass, ARRAY_BYTE__VALUES);
+		portInfoEClass = createEClass(PORT_INFO);
+		createEAttribute(portInfoEClass, PORT_INFO__PORTNAME);
+		createEAttribute(portInfoEClass, PORT_INFO__NETWORKID);
+		createEReference(portInfoEClass, PORT_INFO__ADDRESSES);
+		createEAttribute(portInfoEClass, PORT_INFO__MACADDRESS);
+		createEAttribute(portInfoEClass, PORT_INFO__PORTID);
 
-		arrayDoubleEClass = createEClass(ARRAY_DOUBLE);
-		createEAttribute(arrayDoubleEClass, ARRAY_DOUBLE__VALUES);
+		credentialEClass = createEClass(CREDENTIAL);
+		createEAttribute(credentialEClass, CREDENTIAL__PROTOCOL);
+		createEAttribute(credentialEClass, CREDENTIAL__KEYS);
+		createEAttribute(credentialEClass, CREDENTIAL__TOKENTYPE);
+		createEAttribute(credentialEClass, CREDENTIAL__USER);
+		createEAttribute(credentialEClass, CREDENTIAL__TOKEN);
 
-		arrayFloatEClass = createEClass(ARRAY_FLOAT);
-		createEAttribute(arrayFloatEClass, ARRAY_FLOAT__VALUES);
-
-		arrayIntegerEClass = createEClass(ARRAY_INTEGER);
-		createEAttribute(arrayIntegerEClass, ARRAY_INTEGER__VALUES);
-
-		arrayLongEClass = createEClass(ARRAY_LONG);
-		createEAttribute(arrayLongEClass, ARRAY_LONG__VALUES);
-
-		arrayShortEClass = createEClass(ARRAY_SHORT);
-		createEAttribute(arrayShortEClass, ARRAY_SHORT__VALUES);
-
-		toscadatatypesnetworkNetworkInfoEClass = createEClass(TOSCADATATYPESNETWORK_NETWORK_INFO);
-		createEAttribute(toscadatatypesnetworkNetworkInfoEClass, TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKID);
-		createEReference(toscadatatypesnetworkNetworkInfoEClass, TOSCADATATYPESNETWORK_NETWORK_INFO__ADDRESSES);
-		createEAttribute(toscadatatypesnetworkNetworkInfoEClass, TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKNAME);
-
-		toscadatatypesnetworkPortInfoEClass = createEClass(TOSCADATATYPESNETWORK_PORT_INFO);
-		createEAttribute(toscadatatypesnetworkPortInfoEClass, TOSCADATATYPESNETWORK_PORT_INFO__PORTNAME);
-		createEAttribute(toscadatatypesnetworkPortInfoEClass, TOSCADATATYPESNETWORK_PORT_INFO__NETWORKID);
-		createEReference(toscadatatypesnetworkPortInfoEClass, TOSCADATATYPESNETWORK_PORT_INFO__ADDRESSES);
-		createEAttribute(toscadatatypesnetworkPortInfoEClass, TOSCADATATYPESNETWORK_PORT_INFO__MACADDRESS);
-		createEAttribute(toscadatatypesnetworkPortInfoEClass, TOSCADATATYPESNETWORK_PORT_INFO__PORTID);
-
-		toscadatatypesCredentialEClass = createEClass(TOSCADATATYPES_CREDENTIAL);
-		createEAttribute(toscadatatypesCredentialEClass, TOSCADATATYPES_CREDENTIAL__PROTOCOL);
-		createEAttribute(toscadatatypesCredentialEClass, TOSCADATATYPES_CREDENTIAL__KEYS);
-		createEAttribute(toscadatatypesCredentialEClass, TOSCADATATYPES_CREDENTIAL__TOKENTYPE);
-		createEAttribute(toscadatatypesCredentialEClass, TOSCADATATYPES_CREDENTIAL__USER);
-		createEAttribute(toscadatatypesCredentialEClass, TOSCADATATYPES_CREDENTIAL__TOKEN);
-
-		toscadatatypesnetworkPortSpecEClass = createEClass(TOSCADATATYPESNETWORK_PORT_SPEC);
-		createEAttribute(toscadatatypesnetworkPortSpecEClass, TOSCADATATYPESNETWORK_PORT_SPEC__PROTOCOL);
-		createEAttribute(toscadatatypesnetworkPortSpecEClass, TOSCADATATYPESNETWORK_PORT_SPEC__TARGETRANGE);
-		createEAttribute(toscadatatypesnetworkPortSpecEClass, TOSCADATATYPESNETWORK_PORT_SPEC__SOURCERANGE);
-		createEAttribute(toscadatatypesnetworkPortSpecEClass, TOSCADATATYPESNETWORK_PORT_SPEC__SOURCE);
-		createEAttribute(toscadatatypesnetworkPortSpecEClass, TOSCADATATYPESNETWORK_PORT_SPEC__TARGET);
+		portSpecEClass = createEClass(PORT_SPEC);
+		createEAttribute(portSpecEClass, PORT_SPEC__PROTOCOL);
+		createEAttribute(portSpecEClass, PORT_SPEC__TARGETRANGE);
+		createEAttribute(portSpecEClass, PORT_SPEC__SOURCERANGE);
+		createEAttribute(portSpecEClass, PORT_SPEC__SOURCE);
+		createEAttribute(portSpecEClass, PORT_SPEC__TARGET);
 
 		tosca_capabilities_rootEClass = createEClass(TOSCA_CAPABILITIES_ROOT);
 
@@ -2281,7 +2085,6 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		createEAttribute(tosca_capabilities_operatingsystemEClass, TOSCA_CAPABILITIES_OPERATINGSYSTEM__TYPE);
 		createEAttribute(tosca_capabilities_operatingsystemEClass, TOSCA_CAPABILITIES_OPERATINGSYSTEM__DISTRIBUTION);
 		createEAttribute(tosca_capabilities_operatingsystemEClass, TOSCA_CAPABILITIES_OPERATINGSYSTEM__VERSION);
-		createEAttribute(tosca_capabilities_operatingsystemEClass, TOSCA_CAPABILITIES_OPERATINGSYSTEM__ARCHITECTURE);
 
 		tosca_capabilities_attachmentEClass = createEClass(TOSCA_CAPABILITIES_ATTACHMENT);
 
@@ -2405,6 +2208,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		floatEDataType = createEDataType(FLOAT);
 		integerEDataType = createEDataType(INTEGER);
 		integerMinOneEDataType = createEDataType(INTEGER_MIN_ONE);
+		integerMinZeroEDataType = createEDataType(INTEGER_MIN_ZERO);
 		longEDataType = createEDataType(LONG);
 		shortEDataType = createEDataType(SHORT);
 		mapEDataType = createEDataType(MAP);
@@ -2540,55 +2344,34 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		tosca_relationships_dependsonEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(arrayStringEClass, arrayString.class, "arrayString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getarrayString_Values(), this.getstring(), "values", null, 0, -1, arrayString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(arraystringEClass, arraystring.class, "arraystring", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getarraystring_Values(), this.getstring(), "values", null, 0, -1, arraystring.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(arrayBooleanEClass, arrayBoolean.class, "arrayBoolean", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getarrayBoolean_Values(), this.getboolean(), "values", null, 0, -1, arrayBoolean.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(networkInfoEClass, NetworkInfo.class, "NetworkInfo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNetworkInfo_Networkid(), this.getstring(), "networkid", null, 1, 1, NetworkInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNetworkInfo_Addresses(), this.getarraystring(), null, "addresses", null, 0, 1, NetworkInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNetworkInfo_Networkname(), this.getstring(), "networkname", null, 1, 1, NetworkInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(arrayByteEClass, arrayByte.class, "arrayByte", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getarrayByte_Values(), this.getbyte(), "values", null, 0, -1, arrayByte.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(portInfoEClass, PortInfo.class, "PortInfo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPortInfo_Portname(), this.getstring(), "portname", null, 1, 1, PortInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPortInfo_Networkid(), this.getstring(), "networkid", null, 1, 1, PortInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPortInfo_Addresses(), this.getarraystring(), null, "addresses", null, 0, 1, PortInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPortInfo_Macaddress(), this.getstring(), "macaddress", null, 1, 1, PortInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPortInfo_Portid(), this.getstring(), "portid", null, 1, 1, PortInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(arrayDoubleEClass, arrayDouble.class, "arrayDouble", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getarrayDouble_Values(), this.getdouble(), "values", null, 0, -1, arrayDouble.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(credentialEClass, Credential.class, "Credential", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCredential_Protocol(), this.getstring(), "protocol", null, 1, 1, Credential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCredential_Keys(), this.getmap(), "keys", null, 1, 1, Credential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCredential_Tokentype(), this.getstring(), "tokentype", "The required token type.", 1, 1, Credential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCredential_User(), this.getstring(), "user", null, 1, 1, Credential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCredential_Token(), this.getstring(), "token", null, 1, 1, Credential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(arrayFloatEClass, arrayFloat.class, "arrayFloat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getarrayFloat_Values(), this.getfloat(), "values", null, 0, -1, arrayFloat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(arrayIntegerEClass, arrayInteger.class, "arrayInteger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getarrayInteger_Values(), this.getinteger(), "values", null, 0, -1, arrayInteger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(arrayLongEClass, arrayLong.class, "arrayLong", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getarrayLong_Values(), this.getlong(), "values", null, 0, -1, arrayLong.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(arrayShortEClass, arrayShort.class, "arrayShort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getarrayShort_Values(), this.getshort(), "values", null, 0, -1, arrayShort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(toscadatatypesnetworkNetworkInfoEClass, toscadatatypesnetworkNetworkInfo.class, "toscadatatypesnetworkNetworkInfo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(gettoscadatatypesnetworkNetworkInfo_Networkid(), this.getstring(), "networkid", null, 1, 1, toscadatatypesnetworkNetworkInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(gettoscadatatypesnetworkNetworkInfo_Addresses(), this.getarrayString(), null, "addresses", null, 0, 1, toscadatatypesnetworkNetworkInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(gettoscadatatypesnetworkNetworkInfo_Networkname(), this.getstring(), "networkname", null, 1, 1, toscadatatypesnetworkNetworkInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(toscadatatypesnetworkPortInfoEClass, toscadatatypesnetworkPortInfo.class, "toscadatatypesnetworkPortInfo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(gettoscadatatypesnetworkPortInfo_Portname(), this.getstring(), "portname", null, 1, 1, toscadatatypesnetworkPortInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(gettoscadatatypesnetworkPortInfo_Networkid(), this.getstring(), "networkid", null, 1, 1, toscadatatypesnetworkPortInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(gettoscadatatypesnetworkPortInfo_Addresses(), this.getarrayString(), null, "addresses", null, 0, 1, toscadatatypesnetworkPortInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(gettoscadatatypesnetworkPortInfo_Macaddress(), this.getstring(), "macaddress", null, 1, 1, toscadatatypesnetworkPortInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(gettoscadatatypesnetworkPortInfo_Portid(), this.getstring(), "portid", null, 1, 1, toscadatatypesnetworkPortInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(toscadatatypesCredentialEClass, toscadatatypesCredential.class, "toscadatatypesCredential", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(gettoscadatatypesCredential_Protocol(), this.getstring(), "protocol", null, 1, 1, toscadatatypesCredential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(gettoscadatatypesCredential_Keys(), this.getmap(), "keys", null, 1, 1, toscadatatypesCredential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(gettoscadatatypesCredential_Tokentype(), this.getstring(), "tokentype", "The required token type.", 1, 1, toscadatatypesCredential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(gettoscadatatypesCredential_User(), this.getstring(), "user", null, 1, 1, toscadatatypesCredential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(gettoscadatatypesCredential_Token(), this.getstring(), "token", null, 1, 1, toscadatatypesCredential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(toscadatatypesnetworkPortSpecEClass, toscadatatypesnetworkPortSpec.class, "toscadatatypesnetworkPortSpec", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(gettoscadatatypesnetworkPortSpec_Protocol(), this.getprotocolEnum(), "protocol", null, 1, 1, toscadatatypesnetworkPortSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(gettoscadatatypesnetworkPortSpec_Targetrange(), this.getrange(), "targetrange", null, 1, 1, toscadatatypesnetworkPortSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(gettoscadatatypesnetworkPortSpec_Sourcerange(), this.getrange(), "sourcerange", null, 1, 1, toscadatatypesnetworkPortSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(gettoscadatatypesnetworkPortSpec_Source(), this.gettoscadatatypesnetworkPortDef(), "source", null, 1, 1, toscadatatypesnetworkPortSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(gettoscadatatypesnetworkPortSpec_Target(), this.gettoscadatatypesnetworkPortDef(), "target", null, 1, 1, toscadatatypesnetworkPortSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(portSpecEClass, PortSpec.class, "PortSpec", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPortSpec_Protocol(), this.getprotocolEnum(), "protocol", null, 1, 1, PortSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPortSpec_Targetrange(), this.getrange(), "targetrange", null, 1, 1, PortSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPortSpec_Sourcerange(), this.getrange(), "sourcerange", null, 1, 1, PortSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPortSpec_Source(), this.gettoscadatatypesnetworkPortDef(), "source", null, 1, 1, PortSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPortSpec_Target(), this.gettoscadatatypesnetworkPortDef(), "target", null, 1, 1, PortSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tosca_capabilities_rootEClass, Tosca_capabilities_root.class, "Tosca_capabilities_root", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2626,7 +2409,6 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		initEAttribute(getTosca_capabilities_operatingsystem_Type(), this.getstring(), "type", null, 0, 1, Tosca_capabilities_operatingsystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTosca_capabilities_operatingsystem_Distribution(), this.getstring(), "distribution", null, 0, 1, Tosca_capabilities_operatingsystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTosca_capabilities_operatingsystem_Version(), this.getversion(), "version", null, 0, 1, Tosca_capabilities_operatingsystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTosca_capabilities_operatingsystem_Architecture(), this.getstring(), "architecture", null, 0, 1, Tosca_capabilities_operatingsystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tosca_capabilities_attachmentEClass, Tosca_capabilities_attachment.class, "Tosca_capabilities_attachment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2654,7 +2436,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(tosca_nodes_softwarecomponentEClass, Tosca_nodes_softwarecomponent.class, "Tosca_nodes_softwarecomponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTosca_nodes_softwarecomponent_AdminCredential(), this.gettoscadatatypesCredential(), null, "adminCredential", null, 0, 1, Tosca_nodes_softwarecomponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTosca_nodes_softwarecomponent_AdminCredential(), this.getCredential(), null, "adminCredential", null, 0, 1, Tosca_nodes_softwarecomponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTosca_nodes_softwarecomponent_ComponentVersion(), this.getversion(), "componentVersion", null, 0, 1, Tosca_nodes_softwarecomponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getTosca_nodes_softwarecomponent__AppliesConstraint__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "appliesConstraint", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -2825,7 +2607,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(tosca_relationships_connectstoEClass, Tosca_relationships_connectsto.class, "Tosca_relationships_connectsto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTosca_relationships_connectsto_Credential(), this.gettoscadatatypesCredential(), null, "credential", null, 0, 1, Tosca_relationships_connectsto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTosca_relationships_connectsto_Credential(), this.getCredential(), null, "credential", null, 0, 1, Tosca_relationships_connectsto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tosca_relationships_routestoEClass, Tosca_relationships_routesto.class, "Tosca_relationships_routesto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2928,6 +2710,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		initEDataType(floatEDataType, Float.class, "float", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(integerEDataType, Integer.class, "integer", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(integerMinOneEDataType, Integer.class, "integerMinOne", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(integerMinZeroEDataType, Integer.class, "integerMinZero", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(longEDataType, Long.class, "long", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(shortEDataType, Short.class, "short", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(mapEDataType, Map.class, "map", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -3074,6 +2857,12 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		   source, 
 		   new String[] {
 			 "MinInclusive", "1"
+		   });	
+		addAnnotation
+		  (integerMinZeroEDataType, 
+		   source, 
+		   new String[] {
+			 "MinInclusive", "0"
 		   });	
 		addAnnotation
 		  (versionEDataType, 

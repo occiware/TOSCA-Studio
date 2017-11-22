@@ -69,18 +69,11 @@ public class ToscaFactoryImpl extends EFactoryImpl implements ToscaFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ToscaPackage.ARRAY_STRING: return createarrayString();
-			case ToscaPackage.ARRAY_BOOLEAN: return createarrayBoolean();
-			case ToscaPackage.ARRAY_BYTE: return createarrayByte();
-			case ToscaPackage.ARRAY_DOUBLE: return createarrayDouble();
-			case ToscaPackage.ARRAY_FLOAT: return createarrayFloat();
-			case ToscaPackage.ARRAY_INTEGER: return createarrayInteger();
-			case ToscaPackage.ARRAY_LONG: return createarrayLong();
-			case ToscaPackage.ARRAY_SHORT: return createarrayShort();
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO: return createtoscadatatypesnetworkNetworkInfo();
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO: return createtoscadatatypesnetworkPortInfo();
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL: return createtoscadatatypesCredential();
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC: return createtoscadatatypesnetworkPortSpec();
+			case ToscaPackage.ARRAYSTRING: return createarraystring();
+			case ToscaPackage.NETWORK_INFO: return createNetworkInfo();
+			case ToscaPackage.PORT_INFO: return createPortInfo();
+			case ToscaPackage.CREDENTIAL: return createCredential();
+			case ToscaPackage.PORT_SPEC: return createPortSpec();
 			case ToscaPackage.TOSCA_CAPABILITIES_ROOT: return createTosca_capabilities_root();
 			case ToscaPackage.TOSCA_CAPABILITIES_NODE: return createTosca_capabilities_node();
 			case ToscaPackage.TOSCA_CAPABILITIES_ENDPOINT: return createTosca_capabilities_endpoint();
@@ -152,6 +145,8 @@ public class ToscaFactoryImpl extends EFactoryImpl implements ToscaFactory {
 				return createintegerFromString(eDataType, initialValue);
 			case ToscaPackage.INTEGER_MIN_ONE:
 				return createintegerMinOneFromString(eDataType, initialValue);
+			case ToscaPackage.INTEGER_MIN_ZERO:
+				return createintegerMinZeroFromString(eDataType, initialValue);
 			case ToscaPackage.LONG:
 				return createlongFromString(eDataType, initialValue);
 			case ToscaPackage.SHORT:
@@ -205,6 +200,8 @@ public class ToscaFactoryImpl extends EFactoryImpl implements ToscaFactory {
 				return convertintegerToString(eDataType, instanceValue);
 			case ToscaPackage.INTEGER_MIN_ONE:
 				return convertintegerMinOneToString(eDataType, instanceValue);
+			case ToscaPackage.INTEGER_MIN_ZERO:
+				return convertintegerMinZeroToString(eDataType, instanceValue);
 			case ToscaPackage.LONG:
 				return convertlongToString(eDataType, instanceValue);
 			case ToscaPackage.SHORT:
@@ -235,9 +232,9 @@ public class ToscaFactoryImpl extends EFactoryImpl implements ToscaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public arrayString createarrayString() {
-		arrayStringImpl arrayString = new arrayStringImpl();
-		return arrayString;
+	public arraystring createarraystring() {
+		arraystringImpl arraystring = new arraystringImpl();
+		return arraystring;
 	}
 
 	/**
@@ -245,9 +242,9 @@ public class ToscaFactoryImpl extends EFactoryImpl implements ToscaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public arrayBoolean createarrayBoolean() {
-		arrayBooleanImpl arrayBoolean = new arrayBooleanImpl();
-		return arrayBoolean;
+	public NetworkInfo createNetworkInfo() {
+		NetworkInfoImpl networkInfo = new NetworkInfoImpl();
+		return networkInfo;
 	}
 
 	/**
@@ -255,9 +252,9 @@ public class ToscaFactoryImpl extends EFactoryImpl implements ToscaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public arrayByte createarrayByte() {
-		arrayByteImpl arrayByte = new arrayByteImpl();
-		return arrayByte;
+	public PortInfo createPortInfo() {
+		PortInfoImpl portInfo = new PortInfoImpl();
+		return portInfo;
 	}
 
 	/**
@@ -265,9 +262,9 @@ public class ToscaFactoryImpl extends EFactoryImpl implements ToscaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public arrayDouble createarrayDouble() {
-		arrayDoubleImpl arrayDouble = new arrayDoubleImpl();
-		return arrayDouble;
+	public Credential createCredential() {
+		CredentialImpl credential = new CredentialImpl();
+		return credential;
 	}
 
 	/**
@@ -275,79 +272,9 @@ public class ToscaFactoryImpl extends EFactoryImpl implements ToscaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public arrayFloat createarrayFloat() {
-		arrayFloatImpl arrayFloat = new arrayFloatImpl();
-		return arrayFloat;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public arrayInteger createarrayInteger() {
-		arrayIntegerImpl arrayInteger = new arrayIntegerImpl();
-		return arrayInteger;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public arrayLong createarrayLong() {
-		arrayLongImpl arrayLong = new arrayLongImpl();
-		return arrayLong;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public arrayShort createarrayShort() {
-		arrayShortImpl arrayShort = new arrayShortImpl();
-		return arrayShort;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public toscadatatypesnetworkNetworkInfo createtoscadatatypesnetworkNetworkInfo() {
-		toscadatatypesnetworkNetworkInfoImpl toscadatatypesnetworkNetworkInfo = new toscadatatypesnetworkNetworkInfoImpl();
-		return toscadatatypesnetworkNetworkInfo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public toscadatatypesnetworkPortInfo createtoscadatatypesnetworkPortInfo() {
-		toscadatatypesnetworkPortInfoImpl toscadatatypesnetworkPortInfo = new toscadatatypesnetworkPortInfoImpl();
-		return toscadatatypesnetworkPortInfo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public toscadatatypesCredential createtoscadatatypesCredential() {
-		toscadatatypesCredentialImpl toscadatatypesCredential = new toscadatatypesCredentialImpl();
-		return toscadatatypesCredential;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public toscadatatypesnetworkPortSpec createtoscadatatypesnetworkPortSpec() {
-		toscadatatypesnetworkPortSpecImpl toscadatatypesnetworkPortSpec = new toscadatatypesnetworkPortSpecImpl();
-		return toscadatatypesnetworkPortSpec;
+	public PortSpec createPortSpec() {
+		PortSpecImpl portSpec = new PortSpecImpl();
+		return portSpec;
 	}
 
 	/**
@@ -911,6 +838,24 @@ public class ToscaFactoryImpl extends EFactoryImpl implements ToscaFactory {
 	 * @generated
 	 */
 	public String convertintegerMinOneToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Integer createintegerMinZeroFromString(EDataType eDataType, String initialValue) {
+		return (Integer)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertintegerMinZeroToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

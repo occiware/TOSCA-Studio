@@ -82,52 +82,24 @@ public class ToscaAdapterFactory extends AdapterFactoryImpl {
 	protected ToscaSwitch<Adapter> modelSwitch =
 		new ToscaSwitch<Adapter>() {
 			@Override
-			public Adapter casearrayString(arrayString object) {
-				return createarrayStringAdapter();
+			public Adapter casearraystring(arraystring object) {
+				return createarraystringAdapter();
 			}
 			@Override
-			public Adapter casearrayBoolean(arrayBoolean object) {
-				return createarrayBooleanAdapter();
+			public Adapter caseNetworkInfo(NetworkInfo object) {
+				return createNetworkInfoAdapter();
 			}
 			@Override
-			public Adapter casearrayByte(arrayByte object) {
-				return createarrayByteAdapter();
+			public Adapter casePortInfo(PortInfo object) {
+				return createPortInfoAdapter();
 			}
 			@Override
-			public Adapter casearrayDouble(arrayDouble object) {
-				return createarrayDoubleAdapter();
+			public Adapter caseCredential(Credential object) {
+				return createCredentialAdapter();
 			}
 			@Override
-			public Adapter casearrayFloat(arrayFloat object) {
-				return createarrayFloatAdapter();
-			}
-			@Override
-			public Adapter casearrayInteger(arrayInteger object) {
-				return createarrayIntegerAdapter();
-			}
-			@Override
-			public Adapter casearrayLong(arrayLong object) {
-				return createarrayLongAdapter();
-			}
-			@Override
-			public Adapter casearrayShort(arrayShort object) {
-				return createarrayShortAdapter();
-			}
-			@Override
-			public Adapter casetoscadatatypesnetworkNetworkInfo(toscadatatypesnetworkNetworkInfo object) {
-				return createtoscadatatypesnetworkNetworkInfoAdapter();
-			}
-			@Override
-			public Adapter casetoscadatatypesnetworkPortInfo(toscadatatypesnetworkPortInfo object) {
-				return createtoscadatatypesnetworkPortInfoAdapter();
-			}
-			@Override
-			public Adapter casetoscadatatypesCredential(toscadatatypesCredential object) {
-				return createtoscadatatypesCredentialAdapter();
-			}
-			@Override
-			public Adapter casetoscadatatypesnetworkPortSpec(toscadatatypesnetworkPortSpec object) {
-				return createtoscadatatypesnetworkPortSpecAdapter();
+			public Adapter casePortSpec(PortSpec object) {
+				return createPortSpecAdapter();
 			}
 			@Override
 			public Adapter caseTosca_capabilities_root(Tosca_capabilities_root object) {
@@ -310,170 +282,72 @@ public class ToscaAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.arrayString <em>array String</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.arraystring <em>arraystring</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.cmf.occi.tosca.arrayString
+	 * @see org.eclipse.cmf.occi.tosca.arraystring
 	 * @generated
 	 */
-	public Adapter createarrayStringAdapter() {
+	public Adapter createarraystringAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.arrayBoolean <em>array Boolean</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.NetworkInfo <em>Network Info</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.cmf.occi.tosca.arrayBoolean
+	 * @see org.eclipse.cmf.occi.tosca.NetworkInfo
 	 * @generated
 	 */
-	public Adapter createarrayBooleanAdapter() {
+	public Adapter createNetworkInfoAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.arrayByte <em>array Byte</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.PortInfo <em>Port Info</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.cmf.occi.tosca.arrayByte
+	 * @see org.eclipse.cmf.occi.tosca.PortInfo
 	 * @generated
 	 */
-	public Adapter createarrayByteAdapter() {
+	public Adapter createPortInfoAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.arrayDouble <em>array Double</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.Credential <em>Credential</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.cmf.occi.tosca.arrayDouble
+	 * @see org.eclipse.cmf.occi.tosca.Credential
 	 * @generated
 	 */
-	public Adapter createarrayDoubleAdapter() {
+	public Adapter createCredentialAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.arrayFloat <em>array Float</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.PortSpec <em>Port Spec</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.cmf.occi.tosca.arrayFloat
+	 * @see org.eclipse.cmf.occi.tosca.PortSpec
 	 * @generated
 	 */
-	public Adapter createarrayFloatAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.arrayInteger <em>array Integer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.cmf.occi.tosca.arrayInteger
-	 * @generated
-	 */
-	public Adapter createarrayIntegerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.arrayLong <em>array Long</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.cmf.occi.tosca.arrayLong
-	 * @generated
-	 */
-	public Adapter createarrayLongAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.arrayShort <em>array Short</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.cmf.occi.tosca.arrayShort
-	 * @generated
-	 */
-	public Adapter createarrayShortAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo <em>toscadatatypesnetwork Network Info</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo
-	 * @generated
-	 */
-	public Adapter createtoscadatatypesnetworkNetworkInfoAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo <em>toscadatatypesnetwork Port Info</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo
-	 * @generated
-	 */
-	public Adapter createtoscadatatypesnetworkPortInfoAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential <em>toscadatatypes Credential</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesCredential
-	 * @generated
-	 */
-	public Adapter createtoscadatatypesCredentialAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec <em>toscadatatypesnetwork Port Spec</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec
-	 * @generated
-	 */
-	public Adapter createtoscadatatypesnetworkPortSpecAdapter() {
+	public Adapter createPortSpecAdapter() {
 		return null;
 	}
 

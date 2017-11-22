@@ -12,9 +12,9 @@
  */
 package org.eclipse.cmf.occi.tosca.impl;
 
+import org.eclipse.cmf.occi.tosca.PortSpec;
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
 import org.eclipse.cmf.occi.tosca.protocolEnum;
-import org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -25,22 +25,22 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>toscadatatypesnetwork Port Spec</b></em>'.
+ * An implementation of the model object '<em><b>Port Spec</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortSpecImpl#getProtocol <em>Protocol</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortSpecImpl#getTargetrange <em>Targetrange</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortSpecImpl#getSourcerange <em>Sourcerange</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortSpecImpl#getSource <em>Source</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortSpecImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.PortSpecImpl#getProtocol <em>Protocol</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.PortSpecImpl#getTargetrange <em>Targetrange</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.PortSpecImpl#getSourcerange <em>Sourcerange</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.PortSpecImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.PortSpecImpl#getTarget <em>Target</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class toscadatatypesnetworkPortSpecImpl extends EObjectImpl implements toscadatatypesnetworkPortSpec {
+public class PortSpecImpl extends EObjectImpl implements PortSpec {
 	/**
 	 * The default value of the '{@link #getProtocol() <em>Protocol</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -146,7 +146,7 @@ public class toscadatatypesnetworkPortSpecImpl extends EObjectImpl implements to
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected toscadatatypesnetworkPortSpecImpl() {
+	protected PortSpecImpl() {
 		super();
 	}
 
@@ -157,7 +157,7 @@ public class toscadatatypesnetworkPortSpecImpl extends EObjectImpl implements to
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ToscaPackage.Literals.TOSCADATATYPESNETWORK_PORT_SPEC;
+		return ToscaPackage.Literals.PORT_SPEC;
 	}
 
 	/**
@@ -178,7 +178,7 @@ public class toscadatatypesnetworkPortSpecImpl extends EObjectImpl implements to
 		protocolEnum oldProtocol = protocol;
 		protocol = newProtocol == null ? PROTOCOL_EDEFAULT : newProtocol;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__PROTOCOL, oldProtocol, protocol));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.PORT_SPEC__PROTOCOL, oldProtocol, protocol));
 	}
 
 	/**
@@ -199,7 +199,7 @@ public class toscadatatypesnetworkPortSpecImpl extends EObjectImpl implements to
 		Short oldTargetrange = targetrange;
 		targetrange = newTargetrange;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__TARGETRANGE, oldTargetrange, targetrange));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.PORT_SPEC__TARGETRANGE, oldTargetrange, targetrange));
 	}
 
 	/**
@@ -220,7 +220,7 @@ public class toscadatatypesnetworkPortSpecImpl extends EObjectImpl implements to
 		Short oldSourcerange = sourcerange;
 		sourcerange = newSourcerange;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__SOURCERANGE, oldSourcerange, sourcerange));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.PORT_SPEC__SOURCERANGE, oldSourcerange, sourcerange));
 	}
 
 	/**
@@ -241,7 +241,7 @@ public class toscadatatypesnetworkPortSpecImpl extends EObjectImpl implements to
 		Short oldSource = source;
 		source = newSource;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__SOURCE, oldSource, source));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.PORT_SPEC__SOURCE, oldSource, source));
 	}
 
 	/**
@@ -262,7 +262,7 @@ public class toscadatatypesnetworkPortSpecImpl extends EObjectImpl implements to
 		Short oldTarget = target;
 		target = newTarget;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__TARGET, oldTarget, target));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.PORT_SPEC__TARGET, oldTarget, target));
 	}
 
 	/**
@@ -273,15 +273,15 @@ public class toscadatatypesnetworkPortSpecImpl extends EObjectImpl implements to
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__PROTOCOL:
+			case ToscaPackage.PORT_SPEC__PROTOCOL:
 				return getProtocol();
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__TARGETRANGE:
+			case ToscaPackage.PORT_SPEC__TARGETRANGE:
 				return getTargetrange();
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__SOURCERANGE:
+			case ToscaPackage.PORT_SPEC__SOURCERANGE:
 				return getSourcerange();
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__SOURCE:
+			case ToscaPackage.PORT_SPEC__SOURCE:
 				return getSource();
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__TARGET:
+			case ToscaPackage.PORT_SPEC__TARGET:
 				return getTarget();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -295,19 +295,19 @@ public class toscadatatypesnetworkPortSpecImpl extends EObjectImpl implements to
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__PROTOCOL:
+			case ToscaPackage.PORT_SPEC__PROTOCOL:
 				setProtocol((protocolEnum)newValue);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__TARGETRANGE:
+			case ToscaPackage.PORT_SPEC__TARGETRANGE:
 				setTargetrange((Short)newValue);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__SOURCERANGE:
+			case ToscaPackage.PORT_SPEC__SOURCERANGE:
 				setSourcerange((Short)newValue);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__SOURCE:
+			case ToscaPackage.PORT_SPEC__SOURCE:
 				setSource((Short)newValue);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__TARGET:
+			case ToscaPackage.PORT_SPEC__TARGET:
 				setTarget((Short)newValue);
 				return;
 		}
@@ -322,19 +322,19 @@ public class toscadatatypesnetworkPortSpecImpl extends EObjectImpl implements to
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__PROTOCOL:
+			case ToscaPackage.PORT_SPEC__PROTOCOL:
 				setProtocol(PROTOCOL_EDEFAULT);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__TARGETRANGE:
+			case ToscaPackage.PORT_SPEC__TARGETRANGE:
 				setTargetrange(TARGETRANGE_EDEFAULT);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__SOURCERANGE:
+			case ToscaPackage.PORT_SPEC__SOURCERANGE:
 				setSourcerange(SOURCERANGE_EDEFAULT);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__SOURCE:
+			case ToscaPackage.PORT_SPEC__SOURCE:
 				setSource(SOURCE_EDEFAULT);
 				return;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__TARGET:
+			case ToscaPackage.PORT_SPEC__TARGET:
 				setTarget(TARGET_EDEFAULT);
 				return;
 		}
@@ -349,15 +349,15 @@ public class toscadatatypesnetworkPortSpecImpl extends EObjectImpl implements to
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__PROTOCOL:
+			case ToscaPackage.PORT_SPEC__PROTOCOL:
 				return protocol != PROTOCOL_EDEFAULT;
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__TARGETRANGE:
+			case ToscaPackage.PORT_SPEC__TARGETRANGE:
 				return TARGETRANGE_EDEFAULT == null ? targetrange != null : !TARGETRANGE_EDEFAULT.equals(targetrange);
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__SOURCERANGE:
+			case ToscaPackage.PORT_SPEC__SOURCERANGE:
 				return SOURCERANGE_EDEFAULT == null ? sourcerange != null : !SOURCERANGE_EDEFAULT.equals(sourcerange);
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__SOURCE:
+			case ToscaPackage.PORT_SPEC__SOURCE:
 				return SOURCE_EDEFAULT == null ? source != null : !SOURCE_EDEFAULT.equals(source);
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC__TARGET:
+			case ToscaPackage.PORT_SPEC__TARGET:
 				return TARGET_EDEFAULT == null ? target != null : !TARGET_EDEFAULT.equals(target);
 		}
 		return super.eIsSet(featureID);
@@ -387,4 +387,4 @@ public class toscadatatypesnetworkPortSpecImpl extends EObjectImpl implements to
 		return result.toString();
 	}
 
-} //toscadatatypesnetworkPortSpecImpl
+} //PortSpecImpl

@@ -32,112 +32,49 @@ public interface ToscaFactory extends EFactory {
 	ToscaFactory eINSTANCE = org.eclipse.cmf.occi.tosca.impl.ToscaFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>array String</em>'.
+	 * Returns a new object of class '<em>arraystring</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>array String</em>'.
+	 * @return a new object of class '<em>arraystring</em>'.
 	 * @generated
 	 */
-	arrayString createarrayString();
+	arraystring createarraystring();
 
 	/**
-	 * Returns a new object of class '<em>array Boolean</em>'.
+	 * Returns a new object of class '<em>Network Info</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>array Boolean</em>'.
+	 * @return a new object of class '<em>Network Info</em>'.
 	 * @generated
 	 */
-	arrayBoolean createarrayBoolean();
+	NetworkInfo createNetworkInfo();
 
 	/**
-	 * Returns a new object of class '<em>array Byte</em>'.
+	 * Returns a new object of class '<em>Port Info</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>array Byte</em>'.
+	 * @return a new object of class '<em>Port Info</em>'.
 	 * @generated
 	 */
-	arrayByte createarrayByte();
+	PortInfo createPortInfo();
 
 	/**
-	 * Returns a new object of class '<em>array Double</em>'.
+	 * Returns a new object of class '<em>Credential</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>array Double</em>'.
+	 * @return a new object of class '<em>Credential</em>'.
 	 * @generated
 	 */
-	arrayDouble createarrayDouble();
+	Credential createCredential();
 
 	/**
-	 * Returns a new object of class '<em>array Float</em>'.
+	 * Returns a new object of class '<em>Port Spec</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>array Float</em>'.
+	 * @return a new object of class '<em>Port Spec</em>'.
 	 * @generated
 	 */
-	arrayFloat createarrayFloat();
-
-	/**
-	 * Returns a new object of class '<em>array Integer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>array Integer</em>'.
-	 * @generated
-	 */
-	arrayInteger createarrayInteger();
-
-	/**
-	 * Returns a new object of class '<em>array Long</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>array Long</em>'.
-	 * @generated
-	 */
-	arrayLong createarrayLong();
-
-	/**
-	 * Returns a new object of class '<em>array Short</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>array Short</em>'.
-	 * @generated
-	 */
-	arrayShort createarrayShort();
-
-	/**
-	 * Returns a new object of class '<em>toscadatatypesnetwork Network Info</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>toscadatatypesnetwork Network Info</em>'.
-	 * @generated
-	 */
-	toscadatatypesnetworkNetworkInfo createtoscadatatypesnetworkNetworkInfo();
-
-	/**
-	 * Returns a new object of class '<em>toscadatatypesnetwork Port Info</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>toscadatatypesnetwork Port Info</em>'.
-	 * @generated
-	 */
-	toscadatatypesnetworkPortInfo createtoscadatatypesnetworkPortInfo();
-
-	/**
-	 * Returns a new object of class '<em>toscadatatypes Credential</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>toscadatatypes Credential</em>'.
-	 * @generated
-	 */
-	toscadatatypesCredential createtoscadatatypesCredential();
-
-	/**
-	 * Returns a new object of class '<em>toscadatatypesnetwork Port Spec</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>toscadatatypesnetwork Port Spec</em>'.
-	 * @generated
-	 */
-	toscadatatypesnetworkPortSpec createtoscadatatypesnetworkPortSpec();
+	PortSpec createPortSpec();
 
 	/**
 	 * Returns a new object of class '<em>Tosca capabilities root</em>'.

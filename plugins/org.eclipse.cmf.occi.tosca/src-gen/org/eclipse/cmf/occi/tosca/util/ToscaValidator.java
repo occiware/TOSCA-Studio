@@ -268,30 +268,16 @@ public class ToscaValidator extends EObjectValidator {
 	@Override
 	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		switch (classifierID) {
-			case ToscaPackage.ARRAY_STRING:
-				return validatearrayString((arrayString)value, diagnostics, context);
-			case ToscaPackage.ARRAY_BOOLEAN:
-				return validatearrayBoolean((arrayBoolean)value, diagnostics, context);
-			case ToscaPackage.ARRAY_BYTE:
-				return validatearrayByte((arrayByte)value, diagnostics, context);
-			case ToscaPackage.ARRAY_DOUBLE:
-				return validatearrayDouble((arrayDouble)value, diagnostics, context);
-			case ToscaPackage.ARRAY_FLOAT:
-				return validatearrayFloat((arrayFloat)value, diagnostics, context);
-			case ToscaPackage.ARRAY_INTEGER:
-				return validatearrayInteger((arrayInteger)value, diagnostics, context);
-			case ToscaPackage.ARRAY_LONG:
-				return validatearrayLong((arrayLong)value, diagnostics, context);
-			case ToscaPackage.ARRAY_SHORT:
-				return validatearrayShort((arrayShort)value, diagnostics, context);
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO:
-				return validatetoscadatatypesnetworkNetworkInfo((toscadatatypesnetworkNetworkInfo)value, diagnostics, context);
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO:
-				return validatetoscadatatypesnetworkPortInfo((toscadatatypesnetworkPortInfo)value, diagnostics, context);
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL:
-				return validatetoscadatatypesCredential((toscadatatypesCredential)value, diagnostics, context);
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC:
-				return validatetoscadatatypesnetworkPortSpec((toscadatatypesnetworkPortSpec)value, diagnostics, context);
+			case ToscaPackage.ARRAYSTRING:
+				return validatearraystring((arraystring)value, diagnostics, context);
+			case ToscaPackage.NETWORK_INFO:
+				return validateNetworkInfo((NetworkInfo)value, diagnostics, context);
+			case ToscaPackage.PORT_INFO:
+				return validatePortInfo((PortInfo)value, diagnostics, context);
+			case ToscaPackage.CREDENTIAL:
+				return validateCredential((Credential)value, diagnostics, context);
+			case ToscaPackage.PORT_SPEC:
+				return validatePortSpec((PortSpec)value, diagnostics, context);
 			case ToscaPackage.TOSCA_CAPABILITIES_ROOT:
 				return validateTosca_capabilities_root((Tosca_capabilities_root)value, diagnostics, context);
 			case ToscaPackage.TOSCA_CAPABILITIES_NODE:
@@ -388,6 +374,8 @@ public class ToscaValidator extends EObjectValidator {
 				return validateinteger((Integer)value, diagnostics, context);
 			case ToscaPackage.INTEGER_MIN_ONE:
 				return validateintegerMinOne((Integer)value, diagnostics, context);
+			case ToscaPackage.INTEGER_MIN_ZERO:
+				return validateintegerMinZero((Integer)value, diagnostics, context);
 			case ToscaPackage.LONG:
 				return validatelong((Long)value, diagnostics, context);
 			case ToscaPackage.SHORT:
@@ -418,8 +406,8 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatearrayString(arrayString arrayString, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(arrayString, diagnostics, context);
+	public boolean validatearraystring(arraystring arraystring, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(arraystring, diagnostics, context);
 	}
 
 	/**
@@ -427,8 +415,8 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatearrayBoolean(arrayBoolean arrayBoolean, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(arrayBoolean, diagnostics, context);
+	public boolean validateNetworkInfo(NetworkInfo networkInfo, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(networkInfo, diagnostics, context);
 	}
 
 	/**
@@ -436,8 +424,8 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatearrayByte(arrayByte arrayByte, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(arrayByte, diagnostics, context);
+	public boolean validatePortInfo(PortInfo portInfo, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(portInfo, diagnostics, context);
 	}
 
 	/**
@@ -445,8 +433,8 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatearrayDouble(arrayDouble arrayDouble, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(arrayDouble, diagnostics, context);
+	public boolean validateCredential(Credential credential, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(credential, diagnostics, context);
 	}
 
 	/**
@@ -454,71 +442,8 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatearrayFloat(arrayFloat arrayFloat, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(arrayFloat, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatearrayInteger(arrayInteger arrayInteger, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(arrayInteger, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatearrayLong(arrayLong arrayLong, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(arrayLong, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatearrayShort(arrayShort arrayShort, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(arrayShort, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatetoscadatatypesnetworkNetworkInfo(toscadatatypesnetworkNetworkInfo toscadatatypesnetworkNetworkInfo, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(toscadatatypesnetworkNetworkInfo, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatetoscadatatypesnetworkPortInfo(toscadatatypesnetworkPortInfo toscadatatypesnetworkPortInfo, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(toscadatatypesnetworkPortInfo, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatetoscadatatypesCredential(toscadatatypesCredential toscadatatypesCredential, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(toscadatatypesCredential, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatetoscadatatypesnetworkPortSpec(toscadatatypesnetworkPortSpec toscadatatypesnetworkPortSpec, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(toscadatatypesnetworkPortSpec, diagnostics, context);
+	public boolean validatePortSpec(PortSpec portSpec, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(portSpec, diagnostics, context);
 	}
 
 	/**
@@ -1405,6 +1330,15 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateintegerMinOne(Integer integerMinOne, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateintegerMinZero(Integer integerMinZero, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

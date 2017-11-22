@@ -14,8 +14,8 @@ package org.eclipse.cmf.occi.tosca.impl;
 
 import java.util.Map;
 
+import org.eclipse.cmf.occi.tosca.Credential;
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
-import org.eclipse.cmf.occi.tosca.toscadatatypesCredential;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -26,22 +26,22 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>toscadatatypes Credential</b></em>'.
+ * An implementation of the model object '<em><b>Credential</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesCredentialImpl#getProtocol <em>Protocol</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesCredentialImpl#getKeys <em>Keys</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesCredentialImpl#getTokentype <em>Tokentype</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesCredentialImpl#getUser <em>User</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesCredentialImpl#getToken <em>Token</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.CredentialImpl#getProtocol <em>Protocol</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.CredentialImpl#getKeys <em>Keys</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.CredentialImpl#getTokentype <em>Tokentype</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.CredentialImpl#getUser <em>User</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.CredentialImpl#getToken <em>Token</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class toscadatatypesCredentialImpl extends EObjectImpl implements toscadatatypesCredential {
+public class CredentialImpl extends EObjectImpl implements Credential {
 	/**
 	 * The default value of the '{@link #getProtocol() <em>Protocol</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -147,7 +147,7 @@ public class toscadatatypesCredentialImpl extends EObjectImpl implements toscada
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected toscadatatypesCredentialImpl() {
+	protected CredentialImpl() {
 		super();
 	}
 
@@ -158,7 +158,7 @@ public class toscadatatypesCredentialImpl extends EObjectImpl implements toscada
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ToscaPackage.Literals.TOSCADATATYPES_CREDENTIAL;
+		return ToscaPackage.Literals.CREDENTIAL;
 	}
 
 	/**
@@ -179,7 +179,7 @@ public class toscadatatypesCredentialImpl extends EObjectImpl implements toscada
 		String oldProtocol = protocol;
 		protocol = newProtocol;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPES_CREDENTIAL__PROTOCOL, oldProtocol, protocol));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.CREDENTIAL__PROTOCOL, oldProtocol, protocol));
 	}
 
 	/**
@@ -200,7 +200,7 @@ public class toscadatatypesCredentialImpl extends EObjectImpl implements toscada
 		Map oldKeys = keys;
 		keys = newKeys;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPES_CREDENTIAL__KEYS, oldKeys, keys));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.CREDENTIAL__KEYS, oldKeys, keys));
 	}
 
 	/**
@@ -221,7 +221,7 @@ public class toscadatatypesCredentialImpl extends EObjectImpl implements toscada
 		String oldTokentype = tokentype;
 		tokentype = newTokentype;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPES_CREDENTIAL__TOKENTYPE, oldTokentype, tokentype));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.CREDENTIAL__TOKENTYPE, oldTokentype, tokentype));
 	}
 
 	/**
@@ -242,7 +242,7 @@ public class toscadatatypesCredentialImpl extends EObjectImpl implements toscada
 		String oldUser = user;
 		user = newUser;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPES_CREDENTIAL__USER, oldUser, user));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.CREDENTIAL__USER, oldUser, user));
 	}
 
 	/**
@@ -263,7 +263,7 @@ public class toscadatatypesCredentialImpl extends EObjectImpl implements toscada
 		String oldToken = token;
 		token = newToken;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCADATATYPES_CREDENTIAL__TOKEN, oldToken, token));
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.CREDENTIAL__TOKEN, oldToken, token));
 	}
 
 	/**
@@ -274,15 +274,15 @@ public class toscadatatypesCredentialImpl extends EObjectImpl implements toscada
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__PROTOCOL:
+			case ToscaPackage.CREDENTIAL__PROTOCOL:
 				return getProtocol();
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__KEYS:
+			case ToscaPackage.CREDENTIAL__KEYS:
 				return getKeys();
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__TOKENTYPE:
+			case ToscaPackage.CREDENTIAL__TOKENTYPE:
 				return getTokentype();
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__USER:
+			case ToscaPackage.CREDENTIAL__USER:
 				return getUser();
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__TOKEN:
+			case ToscaPackage.CREDENTIAL__TOKEN:
 				return getToken();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -296,19 +296,19 @@ public class toscadatatypesCredentialImpl extends EObjectImpl implements toscada
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__PROTOCOL:
+			case ToscaPackage.CREDENTIAL__PROTOCOL:
 				setProtocol((String)newValue);
 				return;
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__KEYS:
+			case ToscaPackage.CREDENTIAL__KEYS:
 				setKeys((Map)newValue);
 				return;
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__TOKENTYPE:
+			case ToscaPackage.CREDENTIAL__TOKENTYPE:
 				setTokentype((String)newValue);
 				return;
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__USER:
+			case ToscaPackage.CREDENTIAL__USER:
 				setUser((String)newValue);
 				return;
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__TOKEN:
+			case ToscaPackage.CREDENTIAL__TOKEN:
 				setToken((String)newValue);
 				return;
 		}
@@ -323,19 +323,19 @@ public class toscadatatypesCredentialImpl extends EObjectImpl implements toscada
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__PROTOCOL:
+			case ToscaPackage.CREDENTIAL__PROTOCOL:
 				setProtocol(PROTOCOL_EDEFAULT);
 				return;
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__KEYS:
+			case ToscaPackage.CREDENTIAL__KEYS:
 				setKeys(KEYS_EDEFAULT);
 				return;
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__TOKENTYPE:
+			case ToscaPackage.CREDENTIAL__TOKENTYPE:
 				setTokentype(TOKENTYPE_EDEFAULT);
 				return;
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__USER:
+			case ToscaPackage.CREDENTIAL__USER:
 				setUser(USER_EDEFAULT);
 				return;
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__TOKEN:
+			case ToscaPackage.CREDENTIAL__TOKEN:
 				setToken(TOKEN_EDEFAULT);
 				return;
 		}
@@ -350,15 +350,15 @@ public class toscadatatypesCredentialImpl extends EObjectImpl implements toscada
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__PROTOCOL:
+			case ToscaPackage.CREDENTIAL__PROTOCOL:
 				return PROTOCOL_EDEFAULT == null ? protocol != null : !PROTOCOL_EDEFAULT.equals(protocol);
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__KEYS:
+			case ToscaPackage.CREDENTIAL__KEYS:
 				return KEYS_EDEFAULT == null ? keys != null : !KEYS_EDEFAULT.equals(keys);
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__TOKENTYPE:
+			case ToscaPackage.CREDENTIAL__TOKENTYPE:
 				return TOKENTYPE_EDEFAULT == null ? tokentype != null : !TOKENTYPE_EDEFAULT.equals(tokentype);
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__USER:
+			case ToscaPackage.CREDENTIAL__USER:
 				return USER_EDEFAULT == null ? user != null : !USER_EDEFAULT.equals(user);
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL__TOKEN:
+			case ToscaPackage.CREDENTIAL__TOKEN:
 				return TOKEN_EDEFAULT == null ? token != null : !TOKEN_EDEFAULT.equals(token);
 		}
 		return super.eIsSet(featureID);
@@ -388,4 +388,4 @@ public class toscadatatypesCredentialImpl extends EObjectImpl implements toscada
 		return result.toString();
 	}
 
-} //toscadatatypesCredentialImpl
+} //CredentialImpl

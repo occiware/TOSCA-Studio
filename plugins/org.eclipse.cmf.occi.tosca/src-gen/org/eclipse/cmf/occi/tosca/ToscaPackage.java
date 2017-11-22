@@ -74,14 +74,14 @@ public interface ToscaPackage extends EPackage {
 	ToscaPackage eINSTANCE = org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.arrayStringImpl <em>array String</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.arraystringImpl <em>arraystring</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.cmf.occi.tosca.impl.arrayStringImpl
-	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarrayString()
+	 * @see org.eclipse.cmf.occi.tosca.impl.arraystringImpl
+	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarraystring()
 	 * @generated
 	 */
-	int ARRAY_STRING = 0;
+	int ARRAYSTRING = 0;
 
 	/**
 	 * The feature id for the '<em><b>Values</b></em>' attribute list.
@@ -90,294 +90,35 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARRAY_STRING__VALUES = 0;
+	int ARRAYSTRING__VALUES = 0;
 
 	/**
-	 * The number of structural features of the '<em>array String</em>' class.
+	 * The number of structural features of the '<em>arraystring</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARRAY_STRING_FEATURE_COUNT = 1;
+	int ARRAYSTRING_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of operations of the '<em>array String</em>' class.
+	 * The number of operations of the '<em>arraystring</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARRAY_STRING_OPERATION_COUNT = 0;
+	int ARRAYSTRING_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.arrayBooleanImpl <em>array Boolean</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.NetworkInfoImpl <em>Network Info</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.cmf.occi.tosca.impl.arrayBooleanImpl
-	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarrayBoolean()
+	 * @see org.eclipse.cmf.occi.tosca.impl.NetworkInfoImpl
+	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getNetworkInfo()
 	 * @generated
 	 */
-	int ARRAY_BOOLEAN = 1;
-
-	/**
-	 * The feature id for the '<em><b>Values</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_BOOLEAN__VALUES = 0;
-
-	/**
-	 * The number of structural features of the '<em>array Boolean</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_BOOLEAN_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>array Boolean</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_BOOLEAN_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.arrayByteImpl <em>array Byte</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.cmf.occi.tosca.impl.arrayByteImpl
-	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarrayByte()
-	 * @generated
-	 */
-	int ARRAY_BYTE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Values</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_BYTE__VALUES = 0;
-
-	/**
-	 * The number of structural features of the '<em>array Byte</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_BYTE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>array Byte</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_BYTE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.arrayDoubleImpl <em>array Double</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.cmf.occi.tosca.impl.arrayDoubleImpl
-	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarrayDouble()
-	 * @generated
-	 */
-	int ARRAY_DOUBLE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Values</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_DOUBLE__VALUES = 0;
-
-	/**
-	 * The number of structural features of the '<em>array Double</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_DOUBLE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>array Double</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_DOUBLE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.arrayFloatImpl <em>array Float</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.cmf.occi.tosca.impl.arrayFloatImpl
-	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarrayFloat()
-	 * @generated
-	 */
-	int ARRAY_FLOAT = 4;
-
-	/**
-	 * The feature id for the '<em><b>Values</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_FLOAT__VALUES = 0;
-
-	/**
-	 * The number of structural features of the '<em>array Float</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_FLOAT_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>array Float</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_FLOAT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.arrayIntegerImpl <em>array Integer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.cmf.occi.tosca.impl.arrayIntegerImpl
-	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarrayInteger()
-	 * @generated
-	 */
-	int ARRAY_INTEGER = 5;
-
-	/**
-	 * The feature id for the '<em><b>Values</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_INTEGER__VALUES = 0;
-
-	/**
-	 * The number of structural features of the '<em>array Integer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_INTEGER_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>array Integer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_INTEGER_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.arrayLongImpl <em>array Long</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.cmf.occi.tosca.impl.arrayLongImpl
-	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarrayLong()
-	 * @generated
-	 */
-	int ARRAY_LONG = 6;
-
-	/**
-	 * The feature id for the '<em><b>Values</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_LONG__VALUES = 0;
-
-	/**
-	 * The number of structural features of the '<em>array Long</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_LONG_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>array Long</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_LONG_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.arrayShortImpl <em>array Short</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.cmf.occi.tosca.impl.arrayShortImpl
-	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarrayShort()
-	 * @generated
-	 */
-	int ARRAY_SHORT = 7;
-
-	/**
-	 * The feature id for the '<em><b>Values</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_SHORT__VALUES = 0;
-
-	/**
-	 * The number of structural features of the '<em>array Short</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_SHORT_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>array Short</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_SHORT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkNetworkInfoImpl <em>toscadatatypesnetwork Network Info</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkNetworkInfoImpl
-	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#gettoscadatatypesnetworkNetworkInfo()
-	 * @generated
-	 */
-	int TOSCADATATYPESNETWORK_NETWORK_INFO = 8;
+	int NETWORK_INFO = 1;
 
 	/**
 	 * The feature id for the '<em><b>Networkid</b></em>' attribute.
@@ -386,7 +127,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKID = 0;
+	int NETWORK_INFO__NETWORKID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Addresses</b></em>' containment reference.
@@ -395,7 +136,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_NETWORK_INFO__ADDRESSES = 1;
+	int NETWORK_INFO__ADDRESSES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Networkname</b></em>' attribute.
@@ -404,35 +145,35 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKNAME = 2;
+	int NETWORK_INFO__NETWORKNAME = 2;
 
 	/**
-	 * The number of structural features of the '<em>toscadatatypesnetwork Network Info</em>' class.
+	 * The number of structural features of the '<em>Network Info</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_NETWORK_INFO_FEATURE_COUNT = 3;
+	int NETWORK_INFO_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>toscadatatypesnetwork Network Info</em>' class.
+	 * The number of operations of the '<em>Network Info</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_NETWORK_INFO_OPERATION_COUNT = 0;
+	int NETWORK_INFO_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortInfoImpl <em>toscadatatypesnetwork Port Info</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.PortInfoImpl <em>Port Info</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortInfoImpl
-	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#gettoscadatatypesnetworkPortInfo()
+	 * @see org.eclipse.cmf.occi.tosca.impl.PortInfoImpl
+	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getPortInfo()
 	 * @generated
 	 */
-	int TOSCADATATYPESNETWORK_PORT_INFO = 9;
+	int PORT_INFO = 2;
 
 	/**
 	 * The feature id for the '<em><b>Portname</b></em>' attribute.
@@ -441,7 +182,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_PORT_INFO__PORTNAME = 0;
+	int PORT_INFO__PORTNAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Networkid</b></em>' attribute.
@@ -450,7 +191,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_PORT_INFO__NETWORKID = 1;
+	int PORT_INFO__NETWORKID = 1;
 
 	/**
 	 * The feature id for the '<em><b>Addresses</b></em>' containment reference.
@@ -459,7 +200,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_PORT_INFO__ADDRESSES = 2;
+	int PORT_INFO__ADDRESSES = 2;
 
 	/**
 	 * The feature id for the '<em><b>Macaddress</b></em>' attribute.
@@ -468,7 +209,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_PORT_INFO__MACADDRESS = 3;
+	int PORT_INFO__MACADDRESS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Portid</b></em>' attribute.
@@ -477,35 +218,35 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_PORT_INFO__PORTID = 4;
+	int PORT_INFO__PORTID = 4;
 
 	/**
-	 * The number of structural features of the '<em>toscadatatypesnetwork Port Info</em>' class.
+	 * The number of structural features of the '<em>Port Info</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_PORT_INFO_FEATURE_COUNT = 5;
+	int PORT_INFO_FEATURE_COUNT = 5;
 
 	/**
-	 * The number of operations of the '<em>toscadatatypesnetwork Port Info</em>' class.
+	 * The number of operations of the '<em>Port Info</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_PORT_INFO_OPERATION_COUNT = 0;
+	int PORT_INFO_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesCredentialImpl <em>toscadatatypes Credential</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.CredentialImpl <em>Credential</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.cmf.occi.tosca.impl.toscadatatypesCredentialImpl
-	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#gettoscadatatypesCredential()
+	 * @see org.eclipse.cmf.occi.tosca.impl.CredentialImpl
+	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getCredential()
 	 * @generated
 	 */
-	int TOSCADATATYPES_CREDENTIAL = 10;
+	int CREDENTIAL = 3;
 
 	/**
 	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
@@ -514,7 +255,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPES_CREDENTIAL__PROTOCOL = 0;
+	int CREDENTIAL__PROTOCOL = 0;
 
 	/**
 	 * The feature id for the '<em><b>Keys</b></em>' attribute.
@@ -523,7 +264,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPES_CREDENTIAL__KEYS = 1;
+	int CREDENTIAL__KEYS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Tokentype</b></em>' attribute.
@@ -532,7 +273,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPES_CREDENTIAL__TOKENTYPE = 2;
+	int CREDENTIAL__TOKENTYPE = 2;
 
 	/**
 	 * The feature id for the '<em><b>User</b></em>' attribute.
@@ -541,7 +282,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPES_CREDENTIAL__USER = 3;
+	int CREDENTIAL__USER = 3;
 
 	/**
 	 * The feature id for the '<em><b>Token</b></em>' attribute.
@@ -550,35 +291,35 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPES_CREDENTIAL__TOKEN = 4;
+	int CREDENTIAL__TOKEN = 4;
 
 	/**
-	 * The number of structural features of the '<em>toscadatatypes Credential</em>' class.
+	 * The number of structural features of the '<em>Credential</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPES_CREDENTIAL_FEATURE_COUNT = 5;
+	int CREDENTIAL_FEATURE_COUNT = 5;
 
 	/**
-	 * The number of operations of the '<em>toscadatatypes Credential</em>' class.
+	 * The number of operations of the '<em>Credential</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPES_CREDENTIAL_OPERATION_COUNT = 0;
+	int CREDENTIAL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortSpecImpl <em>toscadatatypesnetwork Port Spec</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.PortSpecImpl <em>Port Spec</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortSpecImpl
-	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#gettoscadatatypesnetworkPortSpec()
+	 * @see org.eclipse.cmf.occi.tosca.impl.PortSpecImpl
+	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getPortSpec()
 	 * @generated
 	 */
-	int TOSCADATATYPESNETWORK_PORT_SPEC = 11;
+	int PORT_SPEC = 4;
 
 	/**
 	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
@@ -587,7 +328,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_PORT_SPEC__PROTOCOL = 0;
+	int PORT_SPEC__PROTOCOL = 0;
 
 	/**
 	 * The feature id for the '<em><b>Targetrange</b></em>' attribute.
@@ -596,7 +337,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_PORT_SPEC__TARGETRANGE = 1;
+	int PORT_SPEC__TARGETRANGE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Sourcerange</b></em>' attribute.
@@ -605,7 +346,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_PORT_SPEC__SOURCERANGE = 2;
+	int PORT_SPEC__SOURCERANGE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' attribute.
@@ -614,7 +355,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_PORT_SPEC__SOURCE = 3;
+	int PORT_SPEC__SOURCE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' attribute.
@@ -623,25 +364,25 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_PORT_SPEC__TARGET = 4;
+	int PORT_SPEC__TARGET = 4;
 
 	/**
-	 * The number of structural features of the '<em>toscadatatypesnetwork Port Spec</em>' class.
+	 * The number of structural features of the '<em>Port Spec</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_PORT_SPEC_FEATURE_COUNT = 5;
+	int PORT_SPEC_FEATURE_COUNT = 5;
 
 	/**
-	 * The number of operations of the '<em>toscadatatypesnetwork Port Spec</em>' class.
+	 * The number of operations of the '<em>Port Spec</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCADATATYPESNETWORK_PORT_SPEC_OPERATION_COUNT = 0;
+	int PORT_SPEC_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_capabilities_rootImpl <em>Tosca capabilities root</em>}' class.
@@ -651,7 +392,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_capabilities_root()
 	 * @generated
 	 */
-	int TOSCA_CAPABILITIES_ROOT = 12;
+	int TOSCA_CAPABILITIES_ROOT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -706,7 +447,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_capabilities_node()
 	 * @generated
 	 */
-	int TOSCA_CAPABILITIES_NODE = 13;
+	int TOSCA_CAPABILITIES_NODE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -761,7 +502,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_capabilities_endpoint()
 	 * @generated
 	 */
-	int TOSCA_CAPABILITIES_ENDPOINT = 14;
+	int TOSCA_CAPABILITIES_ENDPOINT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -888,7 +629,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_capabilities_scalable()
 	 * @generated
 	 */
-	int TOSCA_CAPABILITIES_SCALABLE = 15;
+	int TOSCA_CAPABILITIES_SCALABLE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -970,7 +711,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_capabilities_network_bindable()
 	 * @generated
 	 */
-	int TOSCA_CAPABILITIES_NETWORK_BINDABLE = 16;
+	int TOSCA_CAPABILITIES_NETWORK_BINDABLE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -1025,7 +766,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_capabilities_container()
 	 * @generated
 	 */
-	int TOSCA_CAPABILITIES_CONTAINER = 17;
+	int TOSCA_CAPABILITIES_CONTAINER = 10;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -1089,7 +830,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_capabilities_endpoint_database()
 	 * @generated
 	 */
-	int TOSCA_CAPABILITIES_ENDPOINT_DATABASE = 18;
+	int TOSCA_CAPABILITIES_ENDPOINT_DATABASE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -1216,7 +957,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_capabilities_endpoint_public()
 	 * @generated
 	 */
-	int TOSCA_CAPABILITIES_ENDPOINT_PUBLIC = 19;
+	int TOSCA_CAPABILITIES_ENDPOINT_PUBLIC = 12;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -1361,7 +1102,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_capabilities_endpoint_admin()
 	 * @generated
 	 */
-	int TOSCA_CAPABILITIES_ENDPOINT_ADMIN = 20;
+	int TOSCA_CAPABILITIES_ENDPOINT_ADMIN = 13;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -1488,7 +1229,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_capabilities_operatingsystem()
 	 * @generated
 	 */
-	int TOSCA_CAPABILITIES_OPERATINGSYSTEM = 21;
+	int TOSCA_CAPABILITIES_OPERATINGSYSTEM = 14;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -1545,22 +1286,13 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_CAPABILITIES_OPERATINGSYSTEM__VERSION = TOSCA_CAPABILITIES_ROOT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Architecture</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_CAPABILITIES_OPERATINGSYSTEM__ARCHITECTURE = TOSCA_CAPABILITIES_ROOT_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>Tosca capabilities operatingsystem</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_CAPABILITIES_OPERATINGSYSTEM_FEATURE_COUNT = TOSCA_CAPABILITIES_ROOT_FEATURE_COUNT + 4;
+	int TOSCA_CAPABILITIES_OPERATINGSYSTEM_FEATURE_COUNT = TOSCA_CAPABILITIES_ROOT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Tosca capabilities operatingsystem</em>' class.
@@ -1579,7 +1311,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_capabilities_attachment()
 	 * @generated
 	 */
-	int TOSCA_CAPABILITIES_ATTACHMENT = 22;
+	int TOSCA_CAPABILITIES_ATTACHMENT = 15;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -1634,7 +1366,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_nodes_root()
 	 * @generated
 	 */
-	int TOSCA_NODES_ROOT = 23;
+	int TOSCA_NODES_ROOT = 16;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -1725,7 +1457,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_nodes_webapplication()
 	 * @generated
 	 */
-	int TOSCA_NODES_WEBAPPLICATION = 24;
+	int TOSCA_NODES_WEBAPPLICATION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -1897,7 +1629,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_nodes_softwarecomponent()
 	 * @generated
 	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT = 25;
+	int TOSCA_NODES_SOFTWARECOMPONENT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -2006,7 +1738,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_nodes_dbms()
 	 * @generated
 	 */
-	int TOSCA_NODES_DBMS = 26;
+	int TOSCA_NODES_DBMS = 19;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -2151,7 +1883,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_nodes_objectstorage()
 	 * @generated
 	 */
-	int TOSCA_NODES_OBJECTSTORAGE = 27;
+	int TOSCA_NODES_OBJECTSTORAGE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -2332,7 +2064,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_nodes_compute()
 	 * @generated
 	 */
-	int TOSCA_NODES_COMPUTE = 28;
+	int TOSCA_NODES_COMPUTE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -2488,22 +2220,13 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_COMPUTE__VERSION = TOSCA_NODES_ROOT_FEATURE_COUNT + 13;
 
 	/**
-	 * The feature id for the '<em><b>Architecture</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_COMPUTE__ARCHITECTURE = TOSCA_NODES_ROOT_FEATURE_COUNT + 14;
-
-	/**
 	 * The feature id for the '<em><b>Disk Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_COMPUTE__DISK_SIZE = TOSCA_NODES_ROOT_FEATURE_COUNT + 15;
+	int TOSCA_NODES_COMPUTE__DISK_SIZE = TOSCA_NODES_ROOT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Private Address</b></em>' attribute.
@@ -2512,7 +2235,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_COMPUTE__PRIVATE_ADDRESS = TOSCA_NODES_ROOT_FEATURE_COUNT + 16;
+	int TOSCA_NODES_COMPUTE__PRIVATE_ADDRESS = TOSCA_NODES_ROOT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Public Address</b></em>' attribute.
@@ -2521,7 +2244,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_COMPUTE__PUBLIC_ADDRESS = TOSCA_NODES_ROOT_FEATURE_COUNT + 17;
+	int TOSCA_NODES_COMPUTE__PUBLIC_ADDRESS = TOSCA_NODES_ROOT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Networks</b></em>' attribute.
@@ -2530,7 +2253,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_COMPUTE__NETWORKS = TOSCA_NODES_ROOT_FEATURE_COUNT + 18;
+	int TOSCA_NODES_COMPUTE__NETWORKS = TOSCA_NODES_ROOT_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of structural features of the '<em>Tosca nodes compute</em>' class.
@@ -2539,7 +2262,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_COMPUTE_FEATURE_COUNT = TOSCA_NODES_ROOT_FEATURE_COUNT + 19;
+	int TOSCA_NODES_COMPUTE_FEATURE_COUNT = TOSCA_NODES_ROOT_FEATURE_COUNT + 18;
 
 	/**
 	 * The operation id for the '<em>Create</em>' operation.
@@ -2603,7 +2326,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_nodes_loadbalancer()
 	 * @generated
 	 */
-	int TOSCA_NODES_LOADBALANCER = 29;
+	int TOSCA_NODES_LOADBALANCER = 22;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -2793,7 +2516,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_nodes_webserver()
 	 * @generated
 	 */
-	int TOSCA_NODES_WEBSERVER = 30;
+	int TOSCA_NODES_WEBSERVER = 23;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -2992,7 +2715,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_nodes_database()
 	 * @generated
 	 */
-	int TOSCA_NODES_DATABASE = 31;
+	int TOSCA_NODES_DATABASE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -3182,7 +2905,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_nodes_container_application()
 	 * @generated
 	 */
-	int TOSCA_NODES_CONTAINER_APPLICATION = 32;
+	int TOSCA_NODES_CONTAINER_APPLICATION = 25;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -3273,7 +2996,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_nodes_container_runtime()
 	 * @generated
 	 */
-	int TOSCA_NODES_CONTAINER_RUNTIME = 33;
+	int TOSCA_NODES_CONTAINER_RUNTIME = 26;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -3418,7 +3141,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_nodes_blockstorage()
 	 * @generated
 	 */
-	int TOSCA_NODES_BLOCKSTORAGE = 34;
+	int TOSCA_NODES_BLOCKSTORAGE = 27;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -3536,7 +3259,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_policies_root()
 	 * @generated
 	 */
-	int TOSCA_POLICIES_ROOT = 35;
+	int TOSCA_POLICIES_ROOT = 28;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -3627,7 +3350,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_policies_update()
 	 * @generated
 	 */
-	int TOSCA_POLICIES_UPDATE = 36;
+	int TOSCA_POLICIES_UPDATE = 29;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -3718,7 +3441,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_policies_placement()
 	 * @generated
 	 */
-	int TOSCA_POLICIES_PLACEMENT = 37;
+	int TOSCA_POLICIES_PLACEMENT = 30;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -3809,7 +3532,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_policies_scaling()
 	 * @generated
 	 */
-	int TOSCA_POLICIES_SCALING = 38;
+	int TOSCA_POLICIES_SCALING = 31;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -3900,7 +3623,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_policies_performance()
 	 * @generated
 	 */
-	int TOSCA_POLICIES_PERFORMANCE = 39;
+	int TOSCA_POLICIES_PERFORMANCE = 32;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -3991,7 +3714,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_groups_root()
 	 * @generated
 	 */
-	int TOSCA_GROUPS_ROOT = 40;
+	int TOSCA_GROUPS_ROOT = 33;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4046,7 +3769,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_interfaces_root()
 	 * @generated
 	 */
-	int TOSCA_INTERFACES_ROOT = 41;
+	int TOSCA_INTERFACES_ROOT = 34;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4101,7 +3824,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_interfaces_relationship_configure()
 	 * @generated
 	 */
-	int TOSCA_INTERFACES_RELATIONSHIP_CONFIGURE = 42;
+	int TOSCA_INTERFACES_RELATIONSHIP_CONFIGURE = 35;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4228,7 +3951,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_interfaces_node_lifecycle_standard()
 	 * @generated
 	 */
-	int TOSCA_INTERFACES_NODE_LIFECYCLE_STANDARD = 43;
+	int TOSCA_INTERFACES_NODE_LIFECYCLE_STANDARD = 36;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4310,7 +4033,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_relationships_root()
 	 * @generated
 	 */
-	int TOSCA_RELATIONSHIPS_ROOT = 44;
+	int TOSCA_RELATIONSHIPS_ROOT = 37;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4401,7 +4124,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_relationships_connectsto()
 	 * @generated
 	 */
-	int TOSCA_RELATIONSHIPS_CONNECTSTO = 45;
+	int TOSCA_RELATIONSHIPS_CONNECTSTO = 38;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4501,7 +4224,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_relationships_routesto()
 	 * @generated
 	 */
-	int TOSCA_RELATIONSHIPS_ROUTESTO = 46;
+	int TOSCA_RELATIONSHIPS_ROUTESTO = 39;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4610,7 +4333,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_relationships_attachesto()
 	 * @generated
 	 */
-	int TOSCA_RELATIONSHIPS_ATTACHESTO = 47;
+	int TOSCA_RELATIONSHIPS_ATTACHESTO = 40;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4719,7 +4442,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_relationships_hostedon()
 	 * @generated
 	 */
-	int TOSCA_RELATIONSHIPS_HOSTEDON = 48;
+	int TOSCA_RELATIONSHIPS_HOSTEDON = 41;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4846,7 +4569,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getTosca_relationships_dependson()
 	 * @generated
 	 */
-	int TOSCA_RELATIONSHIPS_DEPENDSON = 49;
+	int TOSCA_RELATIONSHIPS_DEPENDSON = 42;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4946,7 +4669,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getprotocolEnum()
 	 * @generated
 	 */
-	int PROTOCOL_ENUM = 50;
+	int PROTOCOL_ENUM = 43;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.initiatorEnum <em>initiator Enum</em>}' enum.
@@ -4956,7 +4679,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getinitiatorEnum()
 	 * @generated
 	 */
-	int INITIATOR_ENUM = 51;
+	int INITIATOR_ENUM = 44;
 
 	/**
 	 * The meta object id for the '<em>string</em>' data type.
@@ -4966,7 +4689,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getstring()
 	 * @generated
 	 */
-	int STRING = 52;
+	int STRING = 45;
 
 	/**
 	 * The meta object id for the '<em>string Min One</em>' data type.
@@ -4976,7 +4699,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getstringMinOne()
 	 * @generated
 	 */
-	int STRING_MIN_ONE = 53;
+	int STRING_MIN_ONE = 46;
 
 	/**
 	 * The meta object id for the '<em>boolean</em>' data type.
@@ -4986,7 +4709,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getboolean()
 	 * @generated
 	 */
-	int BOOLEAN = 54;
+	int BOOLEAN = 47;
 
 	/**
 	 * The meta object id for the '<em>byte</em>' data type.
@@ -4996,7 +4719,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getbyte()
 	 * @generated
 	 */
-	int BYTE = 55;
+	int BYTE = 48;
 
 	/**
 	 * The meta object id for the '<em>double</em>' data type.
@@ -5006,7 +4729,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getdouble()
 	 * @generated
 	 */
-	int DOUBLE = 56;
+	int DOUBLE = 49;
 
 	/**
 	 * The meta object id for the '<em>float</em>' data type.
@@ -5016,7 +4739,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getfloat()
 	 * @generated
 	 */
-	int FLOAT = 57;
+	int FLOAT = 50;
 
 	/**
 	 * The meta object id for the '<em>integer</em>' data type.
@@ -5026,7 +4749,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getinteger()
 	 * @generated
 	 */
-	int INTEGER = 58;
+	int INTEGER = 51;
 
 	/**
 	 * The meta object id for the '<em>integer Min One</em>' data type.
@@ -5036,7 +4759,17 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getintegerMinOne()
 	 * @generated
 	 */
-	int INTEGER_MIN_ONE = 59;
+	int INTEGER_MIN_ONE = 52;
+
+	/**
+	 * The meta object id for the '<em>integer Min Zero</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.Integer
+	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getintegerMinZero()
+	 * @generated
+	 */
+	int INTEGER_MIN_ZERO = 53;
 
 	/**
 	 * The meta object id for the '<em>long</em>' data type.
@@ -5046,7 +4779,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getlong()
 	 * @generated
 	 */
-	int LONG = 60;
+	int LONG = 54;
 
 	/**
 	 * The meta object id for the '<em>short</em>' data type.
@@ -5056,7 +4789,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getshort()
 	 * @generated
 	 */
-	int SHORT = 61;
+	int SHORT = 55;
 
 	/**
 	 * The meta object id for the '<em>map</em>' data type.
@@ -5066,7 +4799,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getmap()
 	 * @generated
 	 */
-	int MAP = 62;
+	int MAP = 56;
 
 	/**
 	 * The meta object id for the '<em>version</em>' data type.
@@ -5076,7 +4809,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getversion()
 	 * @generated
 	 */
-	int VERSION = 63;
+	int VERSION = 57;
 
 	/**
 	 * The meta object id for the '<em>range</em>' data type.
@@ -5086,7 +4819,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getrange()
 	 * @generated
 	 */
-	int RANGE = 64;
+	int RANGE = 58;
 
 	/**
 	 * The meta object id for the '<em>toscadatatypesnetwork Port Def</em>' data type.
@@ -5096,7 +4829,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#gettoscadatatypesnetworkPortDef()
 	 * @generated
 	 */
-	int TOSCADATATYPESNETWORK_PORT_DEF = 65;
+	int TOSCADATATYPESNETWORK_PORT_DEF = 59;
 
 	/**
 	 * The meta object id for the '<em>scalar Frequency</em>' data type.
@@ -5106,7 +4839,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getscalarFrequency()
 	 * @generated
 	 */
-	int SCALAR_FREQUENCY = 66;
+	int SCALAR_FREQUENCY = 60;
 
 	/**
 	 * The meta object id for the '<em>scalar Size Min One MB</em>' data type.
@@ -5116,7 +4849,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getscalarSizeMinOneMB()
 	 * @generated
 	 */
-	int SCALAR_SIZE_MIN_ONE_MB = 67;
+	int SCALAR_SIZE_MIN_ONE_MB = 61;
 
 	/**
 	 * The meta object id for the '<em>scalar Size Min Zero GB</em>' data type.
@@ -5126,7 +4859,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getscalarSizeMinZeroGB()
 	 * @generated
 	 */
-	int SCALAR_SIZE_MIN_ZERO_GB = 68;
+	int SCALAR_SIZE_MIN_ZERO_GB = 62;
 
 	/**
 	 * The meta object id for the '<em>scalar Size Min Zero MB</em>' data type.
@@ -5136,414 +4869,267 @@ public interface ToscaPackage extends EPackage {
 	 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getscalarSizeMinZeroMB()
 	 * @generated
 	 */
-	int SCALAR_SIZE_MIN_ZERO_MB = 69;
+	int SCALAR_SIZE_MIN_ZERO_MB = 63;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.arrayString <em>array String</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.arraystring <em>arraystring</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>array String</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.arrayString
+	 * @return the meta object for class '<em>arraystring</em>'.
+	 * @see org.eclipse.cmf.occi.tosca.arraystring
 	 * @generated
 	 */
-	EClass getarrayString();
+	EClass getarraystring();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link org.eclipse.cmf.occi.tosca.arrayString#getValues <em>Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Values</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.arrayString#getValues()
-	 * @see #getarrayString()
-	 * @generated
-	 */
-	EAttribute getarrayString_Values();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.arrayBoolean <em>array Boolean</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>array Boolean</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.arrayBoolean
-	 * @generated
-	 */
-	EClass getarrayBoolean();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link org.eclipse.cmf.occi.tosca.arrayBoolean#getValues <em>Values</em>}'.
+	 * Returns the meta object for the attribute list '{@link org.eclipse.cmf.occi.tosca.arraystring#getValues <em>Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute list '<em>Values</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.arrayBoolean#getValues()
-	 * @see #getarrayBoolean()
+	 * @see org.eclipse.cmf.occi.tosca.arraystring#getValues()
+	 * @see #getarraystring()
 	 * @generated
 	 */
-	EAttribute getarrayBoolean_Values();
+	EAttribute getarraystring_Values();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.arrayByte <em>array Byte</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.NetworkInfo <em>Network Info</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>array Byte</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.arrayByte
+	 * @return the meta object for class '<em>Network Info</em>'.
+	 * @see org.eclipse.cmf.occi.tosca.NetworkInfo
 	 * @generated
 	 */
-	EClass getarrayByte();
+	EClass getNetworkInfo();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link org.eclipse.cmf.occi.tosca.arrayByte#getValues <em>Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Values</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.arrayByte#getValues()
-	 * @see #getarrayByte()
-	 * @generated
-	 */
-	EAttribute getarrayByte_Values();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.arrayDouble <em>array Double</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>array Double</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.arrayDouble
-	 * @generated
-	 */
-	EClass getarrayDouble();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link org.eclipse.cmf.occi.tosca.arrayDouble#getValues <em>Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Values</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.arrayDouble#getValues()
-	 * @see #getarrayDouble()
-	 * @generated
-	 */
-	EAttribute getarrayDouble_Values();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.arrayFloat <em>array Float</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>array Float</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.arrayFloat
-	 * @generated
-	 */
-	EClass getarrayFloat();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link org.eclipse.cmf.occi.tosca.arrayFloat#getValues <em>Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Values</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.arrayFloat#getValues()
-	 * @see #getarrayFloat()
-	 * @generated
-	 */
-	EAttribute getarrayFloat_Values();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.arrayInteger <em>array Integer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>array Integer</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.arrayInteger
-	 * @generated
-	 */
-	EClass getarrayInteger();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link org.eclipse.cmf.occi.tosca.arrayInteger#getValues <em>Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Values</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.arrayInteger#getValues()
-	 * @see #getarrayInteger()
-	 * @generated
-	 */
-	EAttribute getarrayInteger_Values();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.arrayLong <em>array Long</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>array Long</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.arrayLong
-	 * @generated
-	 */
-	EClass getarrayLong();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link org.eclipse.cmf.occi.tosca.arrayLong#getValues <em>Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Values</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.arrayLong#getValues()
-	 * @see #getarrayLong()
-	 * @generated
-	 */
-	EAttribute getarrayLong_Values();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.arrayShort <em>array Short</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>array Short</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.arrayShort
-	 * @generated
-	 */
-	EClass getarrayShort();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link org.eclipse.cmf.occi.tosca.arrayShort#getValues <em>Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Values</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.arrayShort#getValues()
-	 * @see #getarrayShort()
-	 * @generated
-	 */
-	EAttribute getarrayShort_Values();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo <em>toscadatatypesnetwork Network Info</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>toscadatatypesnetwork Network Info</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo
-	 * @generated
-	 */
-	EClass gettoscadatatypesnetworkNetworkInfo();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo#getNetworkid <em>Networkid</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.NetworkInfo#getNetworkid <em>Networkid</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Networkid</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo#getNetworkid()
-	 * @see #gettoscadatatypesnetworkNetworkInfo()
+	 * @see org.eclipse.cmf.occi.tosca.NetworkInfo#getNetworkid()
+	 * @see #getNetworkInfo()
 	 * @generated
 	 */
-	EAttribute gettoscadatatypesnetworkNetworkInfo_Networkid();
+	EAttribute getNetworkInfo_Networkid();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo#getAddresses <em>Addresses</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.cmf.occi.tosca.NetworkInfo#getAddresses <em>Addresses</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Addresses</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo#getAddresses()
-	 * @see #gettoscadatatypesnetworkNetworkInfo()
+	 * @see org.eclipse.cmf.occi.tosca.NetworkInfo#getAddresses()
+	 * @see #getNetworkInfo()
 	 * @generated
 	 */
-	EReference gettoscadatatypesnetworkNetworkInfo_Addresses();
+	EReference getNetworkInfo_Addresses();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo#getNetworkname <em>Networkname</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.NetworkInfo#getNetworkname <em>Networkname</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Networkname</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo#getNetworkname()
-	 * @see #gettoscadatatypesnetworkNetworkInfo()
+	 * @see org.eclipse.cmf.occi.tosca.NetworkInfo#getNetworkname()
+	 * @see #getNetworkInfo()
 	 * @generated
 	 */
-	EAttribute gettoscadatatypesnetworkNetworkInfo_Networkname();
+	EAttribute getNetworkInfo_Networkname();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo <em>toscadatatypesnetwork Port Info</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.PortInfo <em>Port Info</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>toscadatatypesnetwork Port Info</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo
+	 * @return the meta object for class '<em>Port Info</em>'.
+	 * @see org.eclipse.cmf.occi.tosca.PortInfo
 	 * @generated
 	 */
-	EClass gettoscadatatypesnetworkPortInfo();
+	EClass getPortInfo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getPortname <em>Portname</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.PortInfo#getPortname <em>Portname</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Portname</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getPortname()
-	 * @see #gettoscadatatypesnetworkPortInfo()
+	 * @see org.eclipse.cmf.occi.tosca.PortInfo#getPortname()
+	 * @see #getPortInfo()
 	 * @generated
 	 */
-	EAttribute gettoscadatatypesnetworkPortInfo_Portname();
+	EAttribute getPortInfo_Portname();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getNetworkid <em>Networkid</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.PortInfo#getNetworkid <em>Networkid</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Networkid</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getNetworkid()
-	 * @see #gettoscadatatypesnetworkPortInfo()
+	 * @see org.eclipse.cmf.occi.tosca.PortInfo#getNetworkid()
+	 * @see #getPortInfo()
 	 * @generated
 	 */
-	EAttribute gettoscadatatypesnetworkPortInfo_Networkid();
+	EAttribute getPortInfo_Networkid();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getAddresses <em>Addresses</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.cmf.occi.tosca.PortInfo#getAddresses <em>Addresses</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Addresses</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getAddresses()
-	 * @see #gettoscadatatypesnetworkPortInfo()
+	 * @see org.eclipse.cmf.occi.tosca.PortInfo#getAddresses()
+	 * @see #getPortInfo()
 	 * @generated
 	 */
-	EReference gettoscadatatypesnetworkPortInfo_Addresses();
+	EReference getPortInfo_Addresses();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getMacaddress <em>Macaddress</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.PortInfo#getMacaddress <em>Macaddress</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Macaddress</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getMacaddress()
-	 * @see #gettoscadatatypesnetworkPortInfo()
+	 * @see org.eclipse.cmf.occi.tosca.PortInfo#getMacaddress()
+	 * @see #getPortInfo()
 	 * @generated
 	 */
-	EAttribute gettoscadatatypesnetworkPortInfo_Macaddress();
+	EAttribute getPortInfo_Macaddress();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getPortid <em>Portid</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.PortInfo#getPortid <em>Portid</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Portid</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortInfo#getPortid()
-	 * @see #gettoscadatatypesnetworkPortInfo()
+	 * @see org.eclipse.cmf.occi.tosca.PortInfo#getPortid()
+	 * @see #getPortInfo()
 	 * @generated
 	 */
-	EAttribute gettoscadatatypesnetworkPortInfo_Portid();
+	EAttribute getPortInfo_Portid();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential <em>toscadatatypes Credential</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.Credential <em>Credential</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>toscadatatypes Credential</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesCredential
+	 * @return the meta object for class '<em>Credential</em>'.
+	 * @see org.eclipse.cmf.occi.tosca.Credential
 	 * @generated
 	 */
-	EClass gettoscadatatypesCredential();
+	EClass getCredential();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getProtocol <em>Protocol</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.Credential#getProtocol <em>Protocol</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Protocol</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getProtocol()
-	 * @see #gettoscadatatypesCredential()
+	 * @see org.eclipse.cmf.occi.tosca.Credential#getProtocol()
+	 * @see #getCredential()
 	 * @generated
 	 */
-	EAttribute gettoscadatatypesCredential_Protocol();
+	EAttribute getCredential_Protocol();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getKeys <em>Keys</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.Credential#getKeys <em>Keys</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Keys</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getKeys()
-	 * @see #gettoscadatatypesCredential()
+	 * @see org.eclipse.cmf.occi.tosca.Credential#getKeys()
+	 * @see #getCredential()
 	 * @generated
 	 */
-	EAttribute gettoscadatatypesCredential_Keys();
+	EAttribute getCredential_Keys();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getTokentype <em>Tokentype</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.Credential#getTokentype <em>Tokentype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Tokentype</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getTokentype()
-	 * @see #gettoscadatatypesCredential()
+	 * @see org.eclipse.cmf.occi.tosca.Credential#getTokentype()
+	 * @see #getCredential()
 	 * @generated
 	 */
-	EAttribute gettoscadatatypesCredential_Tokentype();
+	EAttribute getCredential_Tokentype();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getUser <em>User</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.Credential#getUser <em>User</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>User</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getUser()
-	 * @see #gettoscadatatypesCredential()
+	 * @see org.eclipse.cmf.occi.tosca.Credential#getUser()
+	 * @see #getCredential()
 	 * @generated
 	 */
-	EAttribute gettoscadatatypesCredential_User();
+	EAttribute getCredential_User();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getToken <em>Token</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.Credential#getToken <em>Token</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Token</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getToken()
-	 * @see #gettoscadatatypesCredential()
+	 * @see org.eclipse.cmf.occi.tosca.Credential#getToken()
+	 * @see #getCredential()
 	 * @generated
 	 */
-	EAttribute gettoscadatatypesCredential_Token();
+	EAttribute getCredential_Token();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec <em>toscadatatypesnetwork Port Spec</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.PortSpec <em>Port Spec</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>toscadatatypesnetwork Port Spec</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec
+	 * @return the meta object for class '<em>Port Spec</em>'.
+	 * @see org.eclipse.cmf.occi.tosca.PortSpec
 	 * @generated
 	 */
-	EClass gettoscadatatypesnetworkPortSpec();
+	EClass getPortSpec();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getProtocol <em>Protocol</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.PortSpec#getProtocol <em>Protocol</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Protocol</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getProtocol()
-	 * @see #gettoscadatatypesnetworkPortSpec()
+	 * @see org.eclipse.cmf.occi.tosca.PortSpec#getProtocol()
+	 * @see #getPortSpec()
 	 * @generated
 	 */
-	EAttribute gettoscadatatypesnetworkPortSpec_Protocol();
+	EAttribute getPortSpec_Protocol();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getTargetrange <em>Targetrange</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.PortSpec#getTargetrange <em>Targetrange</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Targetrange</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getTargetrange()
-	 * @see #gettoscadatatypesnetworkPortSpec()
+	 * @see org.eclipse.cmf.occi.tosca.PortSpec#getTargetrange()
+	 * @see #getPortSpec()
 	 * @generated
 	 */
-	EAttribute gettoscadatatypesnetworkPortSpec_Targetrange();
+	EAttribute getPortSpec_Targetrange();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getSourcerange <em>Sourcerange</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.PortSpec#getSourcerange <em>Sourcerange</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Sourcerange</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getSourcerange()
-	 * @see #gettoscadatatypesnetworkPortSpec()
+	 * @see org.eclipse.cmf.occi.tosca.PortSpec#getSourcerange()
+	 * @see #getPortSpec()
 	 * @generated
 	 */
-	EAttribute gettoscadatatypesnetworkPortSpec_Sourcerange();
+	EAttribute getPortSpec_Sourcerange();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getSource <em>Source</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.PortSpec#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Source</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getSource()
-	 * @see #gettoscadatatypesnetworkPortSpec()
+	 * @see org.eclipse.cmf.occi.tosca.PortSpec#getSource()
+	 * @see #getPortSpec()
 	 * @generated
 	 */
-	EAttribute gettoscadatatypesnetworkPortSpec_Source();
+	EAttribute getPortSpec_Source();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getTarget <em>Target</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.PortSpec#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Target</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getTarget()
-	 * @see #gettoscadatatypesnetworkPortSpec()
+	 * @see org.eclipse.cmf.occi.tosca.PortSpec#getTarget()
+	 * @see #getPortSpec()
 	 * @generated
 	 */
-	EAttribute gettoscadatatypesnetworkPortSpec_Target();
+	EAttribute getPortSpec_Target();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.Tosca_capabilities_root <em>Tosca capabilities root</em>}'.
@@ -5831,17 +5417,6 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTosca_capabilities_operatingsystem_Version();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.Tosca_capabilities_operatingsystem#getArchitecture <em>Architecture</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Architecture</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.Tosca_capabilities_operatingsystem#getArchitecture()
-	 * @see #getTosca_capabilities_operatingsystem()
-	 * @generated
-	 */
-	EAttribute getTosca_capabilities_operatingsystem_Architecture();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.Tosca_capabilities_attachment <em>Tosca capabilities attachment</em>}'.
@@ -6786,6 +6361,18 @@ public interface ToscaPackage extends EPackage {
 	EDataType getintegerMinOne();
 
 	/**
+	 * Returns the meta object for data type '{@link java.lang.Integer <em>integer Min Zero</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>integer Min Zero</em>'.
+	 * @see java.lang.Integer
+	 * @model instanceClass="java.lang.Integer"
+	 *        extendedMetaData="MinInclusive='0'"
+	 * @generated
+	 */
+	EDataType getintegerMinZero();
+
+	/**
 	 * Returns the meta object for data type '{@link java.lang.Long <em>long</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6926,14 +6513,14 @@ public interface ToscaPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.arrayStringImpl <em>array String</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.arraystringImpl <em>arraystring</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.cmf.occi.tosca.impl.arrayStringImpl
-		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarrayString()
+		 * @see org.eclipse.cmf.occi.tosca.impl.arraystringImpl
+		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarraystring()
 		 * @generated
 		 */
-		EClass ARRAY_STRING = eINSTANCE.getarrayString();
+		EClass ARRAYSTRING = eINSTANCE.getarraystring();
 
 		/**
 		 * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
@@ -6941,143 +6528,17 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ARRAY_STRING__VALUES = eINSTANCE.getarrayString_Values();
+		EAttribute ARRAYSTRING__VALUES = eINSTANCE.getarraystring_Values();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.arrayBooleanImpl <em>array Boolean</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.NetworkInfoImpl <em>Network Info</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.cmf.occi.tosca.impl.arrayBooleanImpl
-		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarrayBoolean()
+		 * @see org.eclipse.cmf.occi.tosca.impl.NetworkInfoImpl
+		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getNetworkInfo()
 		 * @generated
 		 */
-		EClass ARRAY_BOOLEAN = eINSTANCE.getarrayBoolean();
-
-		/**
-		 * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ARRAY_BOOLEAN__VALUES = eINSTANCE.getarrayBoolean_Values();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.arrayByteImpl <em>array Byte</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.cmf.occi.tosca.impl.arrayByteImpl
-		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarrayByte()
-		 * @generated
-		 */
-		EClass ARRAY_BYTE = eINSTANCE.getarrayByte();
-
-		/**
-		 * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ARRAY_BYTE__VALUES = eINSTANCE.getarrayByte_Values();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.arrayDoubleImpl <em>array Double</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.cmf.occi.tosca.impl.arrayDoubleImpl
-		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarrayDouble()
-		 * @generated
-		 */
-		EClass ARRAY_DOUBLE = eINSTANCE.getarrayDouble();
-
-		/**
-		 * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ARRAY_DOUBLE__VALUES = eINSTANCE.getarrayDouble_Values();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.arrayFloatImpl <em>array Float</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.cmf.occi.tosca.impl.arrayFloatImpl
-		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarrayFloat()
-		 * @generated
-		 */
-		EClass ARRAY_FLOAT = eINSTANCE.getarrayFloat();
-
-		/**
-		 * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ARRAY_FLOAT__VALUES = eINSTANCE.getarrayFloat_Values();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.arrayIntegerImpl <em>array Integer</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.cmf.occi.tosca.impl.arrayIntegerImpl
-		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarrayInteger()
-		 * @generated
-		 */
-		EClass ARRAY_INTEGER = eINSTANCE.getarrayInteger();
-
-		/**
-		 * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ARRAY_INTEGER__VALUES = eINSTANCE.getarrayInteger_Values();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.arrayLongImpl <em>array Long</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.cmf.occi.tosca.impl.arrayLongImpl
-		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarrayLong()
-		 * @generated
-		 */
-		EClass ARRAY_LONG = eINSTANCE.getarrayLong();
-
-		/**
-		 * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ARRAY_LONG__VALUES = eINSTANCE.getarrayLong_Values();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.arrayShortImpl <em>array Short</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.cmf.occi.tosca.impl.arrayShortImpl
-		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getarrayShort()
-		 * @generated
-		 */
-		EClass ARRAY_SHORT = eINSTANCE.getarrayShort();
-
-		/**
-		 * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ARRAY_SHORT__VALUES = eINSTANCE.getarrayShort_Values();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkNetworkInfoImpl <em>toscadatatypesnetwork Network Info</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkNetworkInfoImpl
-		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#gettoscadatatypesnetworkNetworkInfo()
-		 * @generated
-		 */
-		EClass TOSCADATATYPESNETWORK_NETWORK_INFO = eINSTANCE.gettoscadatatypesnetworkNetworkInfo();
+		EClass NETWORK_INFO = eINSTANCE.getNetworkInfo();
 
 		/**
 		 * The meta object literal for the '<em><b>Networkid</b></em>' attribute feature.
@@ -7085,7 +6546,7 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKID = eINSTANCE.gettoscadatatypesnetworkNetworkInfo_Networkid();
+		EAttribute NETWORK_INFO__NETWORKID = eINSTANCE.getNetworkInfo_Networkid();
 
 		/**
 		 * The meta object literal for the '<em><b>Addresses</b></em>' containment reference feature.
@@ -7093,7 +6554,7 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TOSCADATATYPESNETWORK_NETWORK_INFO__ADDRESSES = eINSTANCE.gettoscadatatypesnetworkNetworkInfo_Addresses();
+		EReference NETWORK_INFO__ADDRESSES = eINSTANCE.getNetworkInfo_Addresses();
 
 		/**
 		 * The meta object literal for the '<em><b>Networkname</b></em>' attribute feature.
@@ -7101,17 +6562,17 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TOSCADATATYPESNETWORK_NETWORK_INFO__NETWORKNAME = eINSTANCE.gettoscadatatypesnetworkNetworkInfo_Networkname();
+		EAttribute NETWORK_INFO__NETWORKNAME = eINSTANCE.getNetworkInfo_Networkname();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortInfoImpl <em>toscadatatypesnetwork Port Info</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.PortInfoImpl <em>Port Info</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortInfoImpl
-		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#gettoscadatatypesnetworkPortInfo()
+		 * @see org.eclipse.cmf.occi.tosca.impl.PortInfoImpl
+		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getPortInfo()
 		 * @generated
 		 */
-		EClass TOSCADATATYPESNETWORK_PORT_INFO = eINSTANCE.gettoscadatatypesnetworkPortInfo();
+		EClass PORT_INFO = eINSTANCE.getPortInfo();
 
 		/**
 		 * The meta object literal for the '<em><b>Portname</b></em>' attribute feature.
@@ -7119,7 +6580,7 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TOSCADATATYPESNETWORK_PORT_INFO__PORTNAME = eINSTANCE.gettoscadatatypesnetworkPortInfo_Portname();
+		EAttribute PORT_INFO__PORTNAME = eINSTANCE.getPortInfo_Portname();
 
 		/**
 		 * The meta object literal for the '<em><b>Networkid</b></em>' attribute feature.
@@ -7127,7 +6588,7 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TOSCADATATYPESNETWORK_PORT_INFO__NETWORKID = eINSTANCE.gettoscadatatypesnetworkPortInfo_Networkid();
+		EAttribute PORT_INFO__NETWORKID = eINSTANCE.getPortInfo_Networkid();
 
 		/**
 		 * The meta object literal for the '<em><b>Addresses</b></em>' containment reference feature.
@@ -7135,7 +6596,7 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TOSCADATATYPESNETWORK_PORT_INFO__ADDRESSES = eINSTANCE.gettoscadatatypesnetworkPortInfo_Addresses();
+		EReference PORT_INFO__ADDRESSES = eINSTANCE.getPortInfo_Addresses();
 
 		/**
 		 * The meta object literal for the '<em><b>Macaddress</b></em>' attribute feature.
@@ -7143,7 +6604,7 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TOSCADATATYPESNETWORK_PORT_INFO__MACADDRESS = eINSTANCE.gettoscadatatypesnetworkPortInfo_Macaddress();
+		EAttribute PORT_INFO__MACADDRESS = eINSTANCE.getPortInfo_Macaddress();
 
 		/**
 		 * The meta object literal for the '<em><b>Portid</b></em>' attribute feature.
@@ -7151,17 +6612,17 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TOSCADATATYPESNETWORK_PORT_INFO__PORTID = eINSTANCE.gettoscadatatypesnetworkPortInfo_Portid();
+		EAttribute PORT_INFO__PORTID = eINSTANCE.getPortInfo_Portid();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesCredentialImpl <em>toscadatatypes Credential</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.CredentialImpl <em>Credential</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.cmf.occi.tosca.impl.toscadatatypesCredentialImpl
-		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#gettoscadatatypesCredential()
+		 * @see org.eclipse.cmf.occi.tosca.impl.CredentialImpl
+		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getCredential()
 		 * @generated
 		 */
-		EClass TOSCADATATYPES_CREDENTIAL = eINSTANCE.gettoscadatatypesCredential();
+		EClass CREDENTIAL = eINSTANCE.getCredential();
 
 		/**
 		 * The meta object literal for the '<em><b>Protocol</b></em>' attribute feature.
@@ -7169,7 +6630,7 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TOSCADATATYPES_CREDENTIAL__PROTOCOL = eINSTANCE.gettoscadatatypesCredential_Protocol();
+		EAttribute CREDENTIAL__PROTOCOL = eINSTANCE.getCredential_Protocol();
 
 		/**
 		 * The meta object literal for the '<em><b>Keys</b></em>' attribute feature.
@@ -7177,7 +6638,7 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TOSCADATATYPES_CREDENTIAL__KEYS = eINSTANCE.gettoscadatatypesCredential_Keys();
+		EAttribute CREDENTIAL__KEYS = eINSTANCE.getCredential_Keys();
 
 		/**
 		 * The meta object literal for the '<em><b>Tokentype</b></em>' attribute feature.
@@ -7185,7 +6646,7 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TOSCADATATYPES_CREDENTIAL__TOKENTYPE = eINSTANCE.gettoscadatatypesCredential_Tokentype();
+		EAttribute CREDENTIAL__TOKENTYPE = eINSTANCE.getCredential_Tokentype();
 
 		/**
 		 * The meta object literal for the '<em><b>User</b></em>' attribute feature.
@@ -7193,7 +6654,7 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TOSCADATATYPES_CREDENTIAL__USER = eINSTANCE.gettoscadatatypesCredential_User();
+		EAttribute CREDENTIAL__USER = eINSTANCE.getCredential_User();
 
 		/**
 		 * The meta object literal for the '<em><b>Token</b></em>' attribute feature.
@@ -7201,17 +6662,17 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TOSCADATATYPES_CREDENTIAL__TOKEN = eINSTANCE.gettoscadatatypesCredential_Token();
+		EAttribute CREDENTIAL__TOKEN = eINSTANCE.getCredential_Token();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortSpecImpl <em>toscadatatypesnetwork Port Spec</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.PortSpecImpl <em>Port Spec</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.cmf.occi.tosca.impl.toscadatatypesnetworkPortSpecImpl
-		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#gettoscadatatypesnetworkPortSpec()
+		 * @see org.eclipse.cmf.occi.tosca.impl.PortSpecImpl
+		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getPortSpec()
 		 * @generated
 		 */
-		EClass TOSCADATATYPESNETWORK_PORT_SPEC = eINSTANCE.gettoscadatatypesnetworkPortSpec();
+		EClass PORT_SPEC = eINSTANCE.getPortSpec();
 
 		/**
 		 * The meta object literal for the '<em><b>Protocol</b></em>' attribute feature.
@@ -7219,7 +6680,7 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TOSCADATATYPESNETWORK_PORT_SPEC__PROTOCOL = eINSTANCE.gettoscadatatypesnetworkPortSpec_Protocol();
+		EAttribute PORT_SPEC__PROTOCOL = eINSTANCE.getPortSpec_Protocol();
 
 		/**
 		 * The meta object literal for the '<em><b>Targetrange</b></em>' attribute feature.
@@ -7227,7 +6688,7 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TOSCADATATYPESNETWORK_PORT_SPEC__TARGETRANGE = eINSTANCE.gettoscadatatypesnetworkPortSpec_Targetrange();
+		EAttribute PORT_SPEC__TARGETRANGE = eINSTANCE.getPortSpec_Targetrange();
 
 		/**
 		 * The meta object literal for the '<em><b>Sourcerange</b></em>' attribute feature.
@@ -7235,7 +6696,7 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TOSCADATATYPESNETWORK_PORT_SPEC__SOURCERANGE = eINSTANCE.gettoscadatatypesnetworkPortSpec_Sourcerange();
+		EAttribute PORT_SPEC__SOURCERANGE = eINSTANCE.getPortSpec_Sourcerange();
 
 		/**
 		 * The meta object literal for the '<em><b>Source</b></em>' attribute feature.
@@ -7243,7 +6704,7 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TOSCADATATYPESNETWORK_PORT_SPEC__SOURCE = eINSTANCE.gettoscadatatypesnetworkPortSpec_Source();
+		EAttribute PORT_SPEC__SOURCE = eINSTANCE.getPortSpec_Source();
 
 		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' attribute feature.
@@ -7251,7 +6712,7 @@ public interface ToscaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TOSCADATATYPESNETWORK_PORT_SPEC__TARGET = eINSTANCE.gettoscadatatypesnetworkPortSpec_Target();
+		EAttribute PORT_SPEC__TARGET = eINSTANCE.getPortSpec_Target();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_capabilities_rootImpl <em>Tosca capabilities root</em>}' class.
@@ -7488,14 +6949,6 @@ public interface ToscaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TOSCA_CAPABILITIES_OPERATINGSYSTEM__VERSION = eINSTANCE.getTosca_capabilities_operatingsystem_Version();
-
-		/**
-		 * The meta object literal for the '<em><b>Architecture</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TOSCA_CAPABILITIES_OPERATINGSYSTEM__ARCHITECTURE = eINSTANCE.getTosca_capabilities_operatingsystem_Architecture();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_capabilities_attachmentImpl <em>Tosca capabilities attachment</em>}' class.
@@ -8300,6 +7753,16 @@ public interface ToscaPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType INTEGER_MIN_ONE = eINSTANCE.getintegerMinOne();
+
+		/**
+		 * The meta object literal for the '<em>integer Min Zero</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.Integer
+		 * @see org.eclipse.cmf.occi.tosca.impl.ToscaPackageImpl#getintegerMinZero()
+		 * @generated
+		 */
+		EDataType INTEGER_MIN_ZERO = eINSTANCE.getintegerMinZero();
 
 		/**
 		 * The meta object literal for the '<em>long</em>' data type.

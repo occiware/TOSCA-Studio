@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>toscadatatypes Credential</b></em>'.
+ * A representation of the model object '<em><b>Credential</b></em>'.
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
@@ -29,18 +29,18 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getProtocol <em>Protocol</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getKeys <em>Keys</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getTokentype <em>Tokentype</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getUser <em>User</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getToken <em>Token</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.Credential#getProtocol <em>Protocol</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.Credential#getKeys <em>Keys</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.Credential#getTokentype <em>Tokentype</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.Credential#getUser <em>User</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.Credential#getToken <em>Token</em>}</li>
  * </ul>
  *
- * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesCredential()
+ * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getCredential()
  * @model
  * @generated
  */
-public interface toscadatatypesCredential extends EObject {
+public interface Credential extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Protocol</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,15 +50,15 @@ public interface toscadatatypesCredential extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Protocol</em>' attribute.
 	 * @see #setProtocol(String)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesCredential_Protocol()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getCredential_Protocol()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesCredential!protocol'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Credential!protocol'"
 	 * @generated
 	 */
 	String getProtocol();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getProtocol <em>Protocol</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.Credential#getProtocol <em>Protocol</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Protocol</em>' attribute.
@@ -76,15 +76,15 @@ public interface toscadatatypesCredential extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Keys</em>' attribute.
 	 * @see #setKeys(Map)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesCredential_Keys()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getCredential_Keys()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.map" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesCredential!keys'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Credential!keys'"
 	 * @generated
 	 */
 	Map getKeys();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getKeys <em>Keys</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.Credential#getKeys <em>Keys</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Keys</em>' attribute.
@@ -103,15 +103,15 @@ public interface toscadatatypesCredential extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tokentype</em>' attribute.
 	 * @see #setTokentype(String)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesCredential_Tokentype()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getCredential_Tokentype()
 	 * @model default="The required token type." dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesCredential!tokentype'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Credential!tokentype'"
 	 * @generated
 	 */
 	String getTokentype();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getTokentype <em>Tokentype</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.Credential#getTokentype <em>Tokentype</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tokentype</em>' attribute.
@@ -129,15 +129,15 @@ public interface toscadatatypesCredential extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>User</em>' attribute.
 	 * @see #setUser(String)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesCredential_User()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getCredential_User()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesCredential!user'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Credential!user'"
 	 * @generated
 	 */
 	String getUser();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getUser <em>User</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.Credential#getUser <em>User</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>User</em>' attribute.
@@ -155,15 +155,15 @@ public interface toscadatatypesCredential extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Token</em>' attribute.
 	 * @see #setToken(String)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesCredential_Token()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getCredential_Token()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesCredential!token'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Credential!token'"
 	 * @generated
 	 */
 	String getToken();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesCredential#getToken <em>Token</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.Credential#getToken <em>Token</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Token</em>' attribute.
@@ -172,4 +172,4 @@ public interface toscadatatypesCredential extends EObject {
 	 */
 	void setToken(String value);
 
-} // toscadatatypesCredential
+} // Credential

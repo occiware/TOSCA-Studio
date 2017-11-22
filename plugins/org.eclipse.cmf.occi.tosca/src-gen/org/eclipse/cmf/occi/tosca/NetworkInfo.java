@@ -16,23 +16,23 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>toscadatatypesnetwork Network Info</b></em>'.
+ * A representation of the model object '<em><b>Network Info</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo#getNetworkid <em>Networkid</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo#getAddresses <em>Addresses</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo#getNetworkname <em>Networkname</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.NetworkInfo#getNetworkid <em>Networkid</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.NetworkInfo#getAddresses <em>Addresses</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.NetworkInfo#getNetworkname <em>Networkname</em>}</li>
  * </ul>
  *
- * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesnetworkNetworkInfo()
+ * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getNetworkInfo()
  * @model
  * @generated
  */
-public interface toscadatatypesnetworkNetworkInfo extends EObject {
+public interface NetworkInfo extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Networkid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -42,15 +42,15 @@ public interface toscadatatypesnetworkNetworkInfo extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Networkid</em>' attribute.
 	 * @see #setNetworkid(String)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesnetworkNetworkInfo_Networkid()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getNetworkInfo_Networkid()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesnetworkNetworkInfo!networkid'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!NetworkInfo!networkid'"
 	 * @generated
 	 */
 	String getNetworkid();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo#getNetworkid <em>Networkid</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.NetworkInfo#getNetworkid <em>Networkid</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Networkid</em>' attribute.
@@ -67,23 +67,23 @@ public interface toscadatatypesnetworkNetworkInfo extends EObject {
 	 * 
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Addresses</em>' containment reference.
-	 * @see #setAddresses(arrayString)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesnetworkNetworkInfo_Addresses()
+	 * @see #setAddresses(arraystring)
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getNetworkInfo_Addresses()
 	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesnetworkNetworkInfo!addresses'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!NetworkInfo!addresses'"
 	 * @generated
 	 */
-	arrayString getAddresses();
+	arraystring getAddresses();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo#getAddresses <em>Addresses</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.NetworkInfo#getAddresses <em>Addresses</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Addresses</em>' containment reference.
 	 * @see #getAddresses()
 	 * @generated
 	 */
-	void setAddresses(arrayString value);
+	void setAddresses(arraystring value);
 
 	/**
 	 * Returns the value of the '<em><b>Networkname</b></em>' attribute.
@@ -94,15 +94,15 @@ public interface toscadatatypesnetworkNetworkInfo extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Networkname</em>' attribute.
 	 * @see #setNetworkname(String)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesnetworkNetworkInfo_Networkname()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getNetworkInfo_Networkname()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesnetworkNetworkInfo!networkname'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!NetworkInfo!networkname'"
 	 * @generated
 	 */
 	String getNetworkname();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkNetworkInfo#getNetworkname <em>Networkname</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.NetworkInfo#getNetworkname <em>Networkname</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Networkname</em>' attribute.
@@ -111,4 +111,4 @@ public interface toscadatatypesnetworkNetworkInfo extends EObject {
 	 */
 	void setNetworkname(String value);
 
-} // toscadatatypesnetworkNetworkInfo
+} // NetworkInfo

@@ -18,21 +18,21 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>array String</b></em>'.
+ * A representation of the model object '<em><b>arraystring</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.cmf.occi.tosca.arrayString#getValues <em>Values</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.arraystring#getValues <em>Values</em>}</li>
  * </ul>
  *
- * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getarrayString()
+ * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getarraystring()
  * @model
  * @generated
  */
-public interface arrayString extends EObject {
+public interface arraystring extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Values</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.
@@ -43,11 +43,11 @@ public interface arrayString extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Values</em>' attribute list.
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getarrayString_Values()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getarraystring_Values()
 	 * @model unique="false" dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!arrayString!values'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!arraystring!values'"
 	 * @generated
 	 */
 	EList<String> getValues();
 
-} // arrayString
+} // arraystring

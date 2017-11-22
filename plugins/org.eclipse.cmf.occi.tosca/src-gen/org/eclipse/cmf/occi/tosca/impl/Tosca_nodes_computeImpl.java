@@ -78,7 +78,6 @@ import org.eclipse.ocl.pivot.values.IntegerValue;
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_computeImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_computeImpl#getDistribution <em>Distribution</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_computeImpl#getVersion <em>Version</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_computeImpl#getArchitecture <em>Architecture</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_computeImpl#getDiskSize <em>Disk Size</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_computeImpl#getPrivateAddress <em>Private Address</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_computeImpl#getPublicAddress <em>Public Address</em>}</li>
@@ -367,26 +366,6 @@ public class Tosca_nodes_computeImpl extends Tosca_nodes_rootImpl implements Tos
 	 * @ordered
 	 */
 	protected String version = VERSION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getArchitecture() <em>Architecture</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getArchitecture()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ARCHITECTURE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getArchitecture() <em>Architecture</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getArchitecture()
-	 * @generated
-	 * @ordered
-	 */
-	protected String architecture = ARCHITECTURE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDiskSize() <em>Disk Size</em>}' attribute.
@@ -786,27 +765,6 @@ public class Tosca_nodes_computeImpl extends Tosca_nodes_rootImpl implements Tos
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getArchitecture() {
-		return architecture;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setArchitecture(String newArchitecture) {
-		String oldArchitecture = architecture;
-		architecture = newArchitecture;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCA_NODES_COMPUTE__ARCHITECTURE, oldArchitecture, architecture));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Integer getDiskSize() {
 		return diskSize;
 	}
@@ -973,8 +931,6 @@ public class Tosca_nodes_computeImpl extends Tosca_nodes_rootImpl implements Tos
 				return getDistribution();
 			case ToscaPackage.TOSCA_NODES_COMPUTE__VERSION:
 				return getVersion();
-			case ToscaPackage.TOSCA_NODES_COMPUTE__ARCHITECTURE:
-				return getArchitecture();
 			case ToscaPackage.TOSCA_NODES_COMPUTE__DISK_SIZE:
 				return getDiskSize();
 			case ToscaPackage.TOSCA_NODES_COMPUTE__PRIVATE_ADDRESS:
@@ -1036,9 +992,6 @@ public class Tosca_nodes_computeImpl extends Tosca_nodes_rootImpl implements Tos
 				return;
 			case ToscaPackage.TOSCA_NODES_COMPUTE__VERSION:
 				setVersion((String)newValue);
-				return;
-			case ToscaPackage.TOSCA_NODES_COMPUTE__ARCHITECTURE:
-				setArchitecture((String)newValue);
 				return;
 			case ToscaPackage.TOSCA_NODES_COMPUTE__DISK_SIZE:
 				setDiskSize((Integer)newValue);
@@ -1106,9 +1059,6 @@ public class Tosca_nodes_computeImpl extends Tosca_nodes_rootImpl implements Tos
 			case ToscaPackage.TOSCA_NODES_COMPUTE__VERSION:
 				setVersion(VERSION_EDEFAULT);
 				return;
-			case ToscaPackage.TOSCA_NODES_COMPUTE__ARCHITECTURE:
-				setArchitecture(ARCHITECTURE_EDEFAULT);
-				return;
 			case ToscaPackage.TOSCA_NODES_COMPUTE__DISK_SIZE:
 				setDiskSize(DISK_SIZE_EDEFAULT);
 				return;
@@ -1161,8 +1111,6 @@ public class Tosca_nodes_computeImpl extends Tosca_nodes_rootImpl implements Tos
 				return DISTRIBUTION_EDEFAULT == null ? distribution != null : !DISTRIBUTION_EDEFAULT.equals(distribution);
 			case ToscaPackage.TOSCA_NODES_COMPUTE__VERSION:
 				return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
-			case ToscaPackage.TOSCA_NODES_COMPUTE__ARCHITECTURE:
-				return ARCHITECTURE_EDEFAULT == null ? architecture != null : !ARCHITECTURE_EDEFAULT.equals(architecture);
 			case ToscaPackage.TOSCA_NODES_COMPUTE__DISK_SIZE:
 				return DISK_SIZE_EDEFAULT == null ? diskSize != null : !DISK_SIZE_EDEFAULT.equals(diskSize);
 			case ToscaPackage.TOSCA_NODES_COMPUTE__PRIVATE_ADDRESS:
@@ -1213,7 +1161,6 @@ public class Tosca_nodes_computeImpl extends Tosca_nodes_rootImpl implements Tos
 				case ToscaPackage.TOSCA_NODES_COMPUTE__TYPE: return ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__TYPE;
 				case ToscaPackage.TOSCA_NODES_COMPUTE__DISTRIBUTION: return ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__DISTRIBUTION;
 				case ToscaPackage.TOSCA_NODES_COMPUTE__VERSION: return ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__VERSION;
-				case ToscaPackage.TOSCA_NODES_COMPUTE__ARCHITECTURE: return ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__ARCHITECTURE;
 				default: return -1;
 			}
 		}
@@ -1269,7 +1216,6 @@ public class Tosca_nodes_computeImpl extends Tosca_nodes_rootImpl implements Tos
 				case ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__TYPE: return ToscaPackage.TOSCA_NODES_COMPUTE__TYPE;
 				case ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__DISTRIBUTION: return ToscaPackage.TOSCA_NODES_COMPUTE__DISTRIBUTION;
 				case ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__VERSION: return ToscaPackage.TOSCA_NODES_COMPUTE__VERSION;
-				case ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__ARCHITECTURE: return ToscaPackage.TOSCA_NODES_COMPUTE__ARCHITECTURE;
 				default: return -1;
 			}
 		}
@@ -1388,8 +1334,6 @@ public class Tosca_nodes_computeImpl extends Tosca_nodes_rootImpl implements Tos
 		result.append(distribution);
 		result.append(", version: ");
 		result.append(version);
-		result.append(", architecture: ");
-		result.append(architecture);
 		result.append(", diskSize: ");
 		result.append(diskSize);
 		result.append(", privateAddress: ");

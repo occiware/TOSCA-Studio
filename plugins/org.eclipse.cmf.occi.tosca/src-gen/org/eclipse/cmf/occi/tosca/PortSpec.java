@@ -16,25 +16,25 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>toscadatatypesnetwork Port Spec</b></em>'.
+ * A representation of the model object '<em><b>Port Spec</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getProtocol <em>Protocol</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getTargetrange <em>Targetrange</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getSourcerange <em>Sourcerange</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getSource <em>Source</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getTarget <em>Target</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.PortSpec#getProtocol <em>Protocol</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.PortSpec#getTargetrange <em>Targetrange</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.PortSpec#getSourcerange <em>Sourcerange</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.PortSpec#getSource <em>Source</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.PortSpec#getTarget <em>Target</em>}</li>
  * </ul>
  *
- * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesnetworkPortSpec()
+ * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortSpec()
  * @model
  * @generated
  */
-public interface toscadatatypesnetworkPortSpec extends EObject {
+public interface PortSpec extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Protocol</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.eclipse.cmf.occi.tosca.protocolEnum}.
@@ -46,15 +46,15 @@ public interface toscadatatypesnetworkPortSpec extends EObject {
 	 * @return the value of the '<em>Protocol</em>' attribute.
 	 * @see org.eclipse.cmf.occi.tosca.protocolEnum
 	 * @see #setProtocol(protocolEnum)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesnetworkPortSpec_Protocol()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortSpec_Protocol()
 	 * @model required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesnetworkPortSpec!protocol'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortSpec!protocol'"
 	 * @generated
 	 */
 	protocolEnum getProtocol();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getProtocol <em>Protocol</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.PortSpec#getProtocol <em>Protocol</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Protocol</em>' attribute.
@@ -73,15 +73,15 @@ public interface toscadatatypesnetworkPortSpec extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Targetrange</em>' attribute.
 	 * @see #setTargetrange(Short)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesnetworkPortSpec_Targetrange()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortSpec_Targetrange()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.range" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesnetworkPortSpec!targetrange'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortSpec!targetrange'"
 	 * @generated
 	 */
 	Short getTargetrange();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getTargetrange <em>Targetrange</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.PortSpec#getTargetrange <em>Targetrange</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Targetrange</em>' attribute.
@@ -99,15 +99,15 @@ public interface toscadatatypesnetworkPortSpec extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Sourcerange</em>' attribute.
 	 * @see #setSourcerange(Short)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesnetworkPortSpec_Sourcerange()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortSpec_Sourcerange()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.range" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesnetworkPortSpec!sourcerange'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortSpec!sourcerange'"
 	 * @generated
 	 */
 	Short getSourcerange();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getSourcerange <em>Sourcerange</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.PortSpec#getSourcerange <em>Sourcerange</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Sourcerange</em>' attribute.
@@ -125,15 +125,15 @@ public interface toscadatatypesnetworkPortSpec extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Source</em>' attribute.
 	 * @see #setSource(Short)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesnetworkPortSpec_Source()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortSpec_Source()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortDef" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesnetworkPortSpec!source'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortSpec!source'"
 	 * @generated
 	 */
 	Short getSource();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getSource <em>Source</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.PortSpec#getSource <em>Source</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Source</em>' attribute.
@@ -151,15 +151,15 @@ public interface toscadatatypesnetworkPortSpec extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Target</em>' attribute.
 	 * @see #setTarget(Short)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#gettoscadatatypesnetworkPortSpec_Target()
+	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortSpec_Target()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortDef" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!toscadatatypesnetworkPortSpec!target'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortSpec!target'"
 	 * @generated
 	 */
 	Short getTarget();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortSpec#getTarget <em>Target</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.PortSpec#getTarget <em>Target</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Target</em>' attribute.
@@ -168,4 +168,4 @@ public interface toscadatatypesnetworkPortSpec extends EObject {
 	 */
 	void setTarget(Short value);
 
-} // toscadatatypesnetworkPortSpec
+} // PortSpec

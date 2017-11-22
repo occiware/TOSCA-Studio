@@ -18,11 +18,11 @@ import java.util.Map;
 
 import org.eclipse.cmf.occi.core.Entity;
 
+import org.eclipse.cmf.occi.tosca.Credential;
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
 import org.eclipse.cmf.occi.tosca.ToscaTables;
 import org.eclipse.cmf.occi.tosca.Tosca_nodes_root;
 import org.eclipse.cmf.occi.tosca.Tosca_nodes_softwarecomponent;
-import org.eclipse.cmf.occi.tosca.toscadatatypesCredential;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -75,7 +75,7 @@ public class Tosca_nodes_softwarecomponentImpl extends Tosca_nodes_rootImpl impl
 	 * @generated
 	 * @ordered
 	 */
-	protected toscadatatypesCredential adminCredential;
+	protected Credential adminCredential;
 
 	/**
 	 * The default value of the '{@link #getComponentVersion() <em>Component Version</em>}' attribute.
@@ -121,7 +121,7 @@ public class Tosca_nodes_softwarecomponentImpl extends Tosca_nodes_rootImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public toscadatatypesCredential getAdminCredential() {
+	public Credential getAdminCredential() {
 		return adminCredential;
 	}
 
@@ -130,8 +130,8 @@ public class Tosca_nodes_softwarecomponentImpl extends Tosca_nodes_rootImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAdminCredential(toscadatatypesCredential newAdminCredential, NotificationChain msgs) {
-		toscadatatypesCredential oldAdminCredential = adminCredential;
+	public NotificationChain basicSetAdminCredential(Credential newAdminCredential, NotificationChain msgs) {
+		Credential oldAdminCredential = adminCredential;
 		adminCredential = newAdminCredential;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ADMIN_CREDENTIAL, oldAdminCredential, newAdminCredential);
@@ -145,7 +145,7 @@ public class Tosca_nodes_softwarecomponentImpl extends Tosca_nodes_rootImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAdminCredential(toscadatatypesCredential newAdminCredential) {
+	public void setAdminCredential(Credential newAdminCredential) {
 		if (newAdminCredential != adminCredential) {
 			NotificationChain msgs = null;
 			if (adminCredential != null)
@@ -258,7 +258,7 @@ public class Tosca_nodes_softwarecomponentImpl extends Tosca_nodes_rootImpl impl
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ADMIN_CREDENTIAL:
-				setAdminCredential((toscadatatypesCredential)newValue);
+				setAdminCredential((Credential)newValue);
 				return;
 			case ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__COMPONENT_VERSION:
 				setComponentVersion((String)newValue);
@@ -276,7 +276,7 @@ public class Tosca_nodes_softwarecomponentImpl extends Tosca_nodes_rootImpl impl
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ADMIN_CREDENTIAL:
-				setAdminCredential((toscadatatypesCredential)null);
+				setAdminCredential((Credential)null);
 				return;
 			case ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__COMPONENT_VERSION:
 				setComponentVersion(COMPONENT_VERSION_EDEFAULT);

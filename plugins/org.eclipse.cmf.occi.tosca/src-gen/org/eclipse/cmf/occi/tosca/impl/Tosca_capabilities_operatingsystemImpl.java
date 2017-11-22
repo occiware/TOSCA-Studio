@@ -32,7 +32,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_capabilities_operatingsystemImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_capabilities_operatingsystemImpl#getDistribution <em>Distribution</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_capabilities_operatingsystemImpl#getVersion <em>Version</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_capabilities_operatingsystemImpl#getArchitecture <em>Architecture</em>}</li>
  * </ul>
  *
  * @generated
@@ -97,26 +96,6 @@ public class Tosca_capabilities_operatingsystemImpl extends Tosca_capabilities_r
 	 * @ordered
 	 */
 	protected String version = VERSION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getArchitecture() <em>Architecture</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getArchitecture()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ARCHITECTURE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getArchitecture() <em>Architecture</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getArchitecture()
-	 * @generated
-	 * @ordered
-	 */
-	protected String architecture = ARCHITECTURE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -205,27 +184,6 @@ public class Tosca_capabilities_operatingsystemImpl extends Tosca_capabilities_r
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getArchitecture() {
-		return architecture;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setArchitecture(String newArchitecture) {
-		String oldArchitecture = architecture;
-		architecture = newArchitecture;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__ARCHITECTURE, oldArchitecture, architecture));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -235,8 +193,6 @@ public class Tosca_capabilities_operatingsystemImpl extends Tosca_capabilities_r
 				return getDistribution();
 			case ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__VERSION:
 				return getVersion();
-			case ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__ARCHITECTURE:
-				return getArchitecture();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -257,9 +213,6 @@ public class Tosca_capabilities_operatingsystemImpl extends Tosca_capabilities_r
 				return;
 			case ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__VERSION:
 				setVersion((String)newValue);
-				return;
-			case ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__ARCHITECTURE:
-				setArchitecture((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -282,9 +235,6 @@ public class Tosca_capabilities_operatingsystemImpl extends Tosca_capabilities_r
 			case ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__VERSION:
 				setVersion(VERSION_EDEFAULT);
 				return;
-			case ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__ARCHITECTURE:
-				setArchitecture(ARCHITECTURE_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -303,8 +253,6 @@ public class Tosca_capabilities_operatingsystemImpl extends Tosca_capabilities_r
 				return DISTRIBUTION_EDEFAULT == null ? distribution != null : !DISTRIBUTION_EDEFAULT.equals(distribution);
 			case ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__VERSION:
 				return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
-			case ToscaPackage.TOSCA_CAPABILITIES_OPERATINGSYSTEM__ARCHITECTURE:
-				return ARCHITECTURE_EDEFAULT == null ? architecture != null : !ARCHITECTURE_EDEFAULT.equals(architecture);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -325,8 +273,6 @@ public class Tosca_capabilities_operatingsystemImpl extends Tosca_capabilities_r
 		result.append(distribution);
 		result.append(", version: ");
 		result.append(version);
-		result.append(", architecture: ");
-		result.append(architecture);
 		result.append(')');
 		return result.toString();
 	}

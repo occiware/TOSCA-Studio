@@ -26,7 +26,6 @@ import org.eclipse.cmf.occi.core.MixinBase;
  *   <li>{@link org.eclipse.cmf.occi.tosca.Tosca_capabilities_operatingsystem#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.Tosca_capabilities_operatingsystem#getDistribution <em>Distribution</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.Tosca_capabilities_operatingsystem#getVersion <em>Version</em>}</li>
- *   <li>{@link org.eclipse.cmf.occi.tosca.Tosca_capabilities_operatingsystem#getArchitecture <em>Architecture</em>}</li>
  * </ul>
  *
  * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_operatingsystem()
@@ -111,31 +110,5 @@ public interface Tosca_capabilities_operatingsystem extends Tosca_capabilities_r
 	 * @generated
 	 */
 	void setVersion(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Architecture</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * The Operating System (OS) architecture. Examples of valid values include: x86_32, x86_64, etc.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Architecture</em>' attribute.
-	 * @see #setArchitecture(String)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_operatingsystem_Architecture()
-	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_operatingsystem!architecture'"
-	 * @generated
-	 */
-	String getArchitecture();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.Tosca_capabilities_operatingsystem#getArchitecture <em>Architecture</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Architecture</em>' attribute.
-	 * @see #getArchitecture()
-	 * @generated
-	 */
-	void setArchitecture(String value);
 
 } // Tosca_capabilities_operatingsystem

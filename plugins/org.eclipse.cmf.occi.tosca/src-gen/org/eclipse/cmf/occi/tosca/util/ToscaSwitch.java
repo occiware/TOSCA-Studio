@@ -80,75 +80,33 @@ public class ToscaSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case ToscaPackage.ARRAY_STRING: {
-				arrayString arrayString = (arrayString)theEObject;
-				T result = casearrayString(arrayString);
+			case ToscaPackage.ARRAYSTRING: {
+				arraystring arraystring = (arraystring)theEObject;
+				T result = casearraystring(arraystring);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToscaPackage.ARRAY_BOOLEAN: {
-				arrayBoolean arrayBoolean = (arrayBoolean)theEObject;
-				T result = casearrayBoolean(arrayBoolean);
+			case ToscaPackage.NETWORK_INFO: {
+				NetworkInfo networkInfo = (NetworkInfo)theEObject;
+				T result = caseNetworkInfo(networkInfo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToscaPackage.ARRAY_BYTE: {
-				arrayByte arrayByte = (arrayByte)theEObject;
-				T result = casearrayByte(arrayByte);
+			case ToscaPackage.PORT_INFO: {
+				PortInfo portInfo = (PortInfo)theEObject;
+				T result = casePortInfo(portInfo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToscaPackage.ARRAY_DOUBLE: {
-				arrayDouble arrayDouble = (arrayDouble)theEObject;
-				T result = casearrayDouble(arrayDouble);
+			case ToscaPackage.CREDENTIAL: {
+				Credential credential = (Credential)theEObject;
+				T result = caseCredential(credential);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToscaPackage.ARRAY_FLOAT: {
-				arrayFloat arrayFloat = (arrayFloat)theEObject;
-				T result = casearrayFloat(arrayFloat);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToscaPackage.ARRAY_INTEGER: {
-				arrayInteger arrayInteger = (arrayInteger)theEObject;
-				T result = casearrayInteger(arrayInteger);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToscaPackage.ARRAY_LONG: {
-				arrayLong arrayLong = (arrayLong)theEObject;
-				T result = casearrayLong(arrayLong);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToscaPackage.ARRAY_SHORT: {
-				arrayShort arrayShort = (arrayShort)theEObject;
-				T result = casearrayShort(arrayShort);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToscaPackage.TOSCADATATYPESNETWORK_NETWORK_INFO: {
-				toscadatatypesnetworkNetworkInfo toscadatatypesnetworkNetworkInfo = (toscadatatypesnetworkNetworkInfo)theEObject;
-				T result = casetoscadatatypesnetworkNetworkInfo(toscadatatypesnetworkNetworkInfo);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_INFO: {
-				toscadatatypesnetworkPortInfo toscadatatypesnetworkPortInfo = (toscadatatypesnetworkPortInfo)theEObject;
-				T result = casetoscadatatypesnetworkPortInfo(toscadatatypesnetworkPortInfo);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToscaPackage.TOSCADATATYPES_CREDENTIAL: {
-				toscadatatypesCredential toscadatatypesCredential = (toscadatatypesCredential)theEObject;
-				T result = casetoscadatatypesCredential(toscadatatypesCredential);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToscaPackage.TOSCADATATYPESNETWORK_PORT_SPEC: {
-				toscadatatypesnetworkPortSpec toscadatatypesnetworkPortSpec = (toscadatatypesnetworkPortSpec)theEObject;
-				T result = casetoscadatatypesnetworkPortSpec(toscadatatypesnetworkPortSpec);
+			case ToscaPackage.PORT_SPEC: {
+				PortSpec portSpec = (PortSpec)theEObject;
+				T result = casePortSpec(portSpec);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -535,182 +493,77 @@ public class ToscaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>array String</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>arraystring</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>array String</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>arraystring</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casearrayString(arrayString object) {
+	public T casearraystring(arraystring object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>array Boolean</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Network Info</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>array Boolean</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Network Info</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casearrayBoolean(arrayBoolean object) {
+	public T caseNetworkInfo(NetworkInfo object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>array Byte</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Port Info</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>array Byte</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Port Info</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casearrayByte(arrayByte object) {
+	public T casePortInfo(PortInfo object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>array Double</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Credential</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>array Double</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Credential</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casearrayDouble(arrayDouble object) {
+	public T caseCredential(Credential object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>array Float</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Port Spec</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>array Float</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Port Spec</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casearrayFloat(arrayFloat object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>array Integer</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>array Integer</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casearrayInteger(arrayInteger object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>array Long</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>array Long</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casearrayLong(arrayLong object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>array Short</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>array Short</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casearrayShort(arrayShort object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>toscadatatypesnetwork Network Info</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>toscadatatypesnetwork Network Info</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casetoscadatatypesnetworkNetworkInfo(toscadatatypesnetworkNetworkInfo object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>toscadatatypesnetwork Port Info</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>toscadatatypesnetwork Port Info</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casetoscadatatypesnetworkPortInfo(toscadatatypesnetworkPortInfo object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>toscadatatypes Credential</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>toscadatatypes Credential</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casetoscadatatypesCredential(toscadatatypesCredential object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>toscadatatypesnetwork Port Spec</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>toscadatatypesnetwork Port Spec</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casetoscadatatypesnetworkPortSpec(toscadatatypesnetworkPortSpec object) {
+	public T casePortSpec(PortSpec object) {
 		return null;
 	}
 

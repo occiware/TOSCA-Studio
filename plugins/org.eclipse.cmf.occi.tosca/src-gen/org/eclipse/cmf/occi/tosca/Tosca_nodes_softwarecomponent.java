@@ -44,13 +44,13 @@ public interface Tosca_nodes_softwarecomponent extends Tosca_nodes_root, MixinBa
 	 * The optional credential that can be used to authenticate to the software component.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Admin Credential</em>' containment reference.
-	 * @see #setAdminCredential(toscadatatypesCredential)
+	 * @see #setAdminCredential(Credential)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_softwarecomponent_AdminCredential()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_softwarecomponent!adminCredential'"
 	 * @generated
 	 */
-	toscadatatypesCredential getAdminCredential();
+	Credential getAdminCredential();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_softwarecomponent#getAdminCredential <em>Admin Credential</em>}' containment reference.
@@ -60,7 +60,7 @@ public interface Tosca_nodes_softwarecomponent extends Tosca_nodes_root, MixinBa
 	 * @see #getAdminCredential()
 	 * @generated
 	 */
-	void setAdminCredential(toscadatatypesCredential value);
+	void setAdminCredential(Credential value);
 
 	/**
 	 * Returns the value of the '<em><b>Component Version</b></em>' attribute.
