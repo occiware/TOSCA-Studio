@@ -4,9 +4,11 @@ Bundle-Name: Config
 Bundle-SymbolicName: org.eclipse.cmf.occi.tosca.config;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Require-Bundle: org.eclipse.ui,
- org.eclipse.cmf.occi.tosca;bundle-version="1.0.0",
- org.eclipse.cmf.occi.tosca.design.extended;bundle-version="1.0.0",
- org.eclipse.cmf.occi.tosca.edit;bundle-version="1.0.0"
+ org.eclipse.cmf.occi.core;bundle-version="1.0.0",
+ org.eclipse.cmf.occi.tosca.extended;bundle-version="1.0.0",
+ org.eclipse.cmf.occi.tosca.extended.design.extended;bundle-version="1.0.0",
+ org.eclipse.cmf.occi.tosca.extended.edit;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ClassPath: yamlbeans-1.12.jar,
  .
+Import-Package: extendedtosca
