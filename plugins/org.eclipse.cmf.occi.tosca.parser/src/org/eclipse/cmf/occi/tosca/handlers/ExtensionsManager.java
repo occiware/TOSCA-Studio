@@ -64,6 +64,7 @@ public class ExtensionsManager {
 		extension.setScheme("http://org.occi/extendedTosca#");
 		extension.setName("extendedTosca");
 		Extension toscaExtension = OcciHelper.loadExtension("http://org.occi/tosca#");
+		extension.getImport().add(extensionsPerName.get("core"));
 		extension.getImport().add(toscaExtension);
 		copy(toscaExtension);
 		extensionsPerName.replace("tosca", toscaExtension);

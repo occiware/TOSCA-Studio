@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.eclipse.cmf.occi.tosca.extended
+Bundle-SymbolicName: org.eclipse.cmf.occi.tosca.extended;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: OCCIware
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.cmf.occi.core;visibility:=reexport,
+ org.eclipse.cmf.occi.core.ui,
+ org.eclipse.cmf.occi.core.gen.emf.ui
