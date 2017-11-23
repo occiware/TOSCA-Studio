@@ -16,12 +16,12 @@
 
    <!-- Register the extendedTosca extension. -->
    <extension point="org.eclipse.cmf.occi.core.occie">
-      <occie scheme="http://org.occi/extendedtosca#" file="model/extendedTosca.occie"/>
+      <occie scheme="http://org.occi/extendedTosca#" file="model/extendedTosca.occie"/>
    </extension>
 
    <!-- Define URI mapping. -->
    <extension point="org.eclipse.emf.ecore.uri_mapping">
-      <mapping source="http://org.occi/extendedtosca" target="platform:/plugin/org.eclipse.cmf.occi.tosca.extended/model/extendedTosca.occie"/>
+      <mapping source="http://org.occi/extendedTosca" target="platform:/plugin/org.eclipse.cmf.occi.tosca.extended/model/extendedTosca.occie"/>
    </extension>
 
    <!-- Register the parser for .extendedTosca files. -->
@@ -50,4 +50,11 @@
          </action>
       </objectContribution>
    </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated extendedtosca -->
+      <package
+            uri="http://org.occi/extendedTosca/ecore"
+            class="extendedtosca.ExtendedtoscaPackage"/>
+   </extension>
+
 </plugin>

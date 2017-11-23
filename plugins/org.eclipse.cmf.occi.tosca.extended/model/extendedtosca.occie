@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
-<occi:Extension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" name="extendedTosca" scheme="http://org.occi/extendedTosca#" description="Extended TOSCA">
-  <import href="http://schemas.ogf.org/occi/core#/"/>
+<occi:Extension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" name="extendedTosca" scheme="http://org.occi/extendedTosca#">
   <import href="http://org.occi/tosca#/"/>
-  <mixins name="tosca_capabilities_indigo_Endpoint" scheme="http://org.occi/extendedTosca#">
+   <mixins name="tosca_capabilities_indigo_Endpoint" scheme="http://org.occi/extendedTosca#">
     <attributes name="credential" type="//@types.0"/>
     <depends href="http://org.occi/tosca#//@mixins[term='tosca_capabilities_endpoint']"/>
   </mixins>
@@ -173,4 +172,5 @@
   <types xsi:type="occi:ArrayType" name="arrayinteger">
     <type xsi:type="occi:NumericType" href="http://org.occi/tosca#//@types.6"/>
   </types>
+  
 </occi:Extension>

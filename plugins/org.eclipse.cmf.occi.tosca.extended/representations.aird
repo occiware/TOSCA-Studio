@@ -8,7 +8,20 @@
     <semanticResources>http://org.occi/tosca</semanticResources>
     <semanticResources>http://schemas.ogf.org/occi/monitoring</semanticResources>
     <semanticResources>http://schemas.ogf.org/occi/platform</semanticResources>
-    <semanticResources>model/extendedTosca.occie</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.cmf.occi.sla/model/sla.ecore</semanticResources>
+    <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.genmodel</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.cmf.occi.infrastructure/model/Infrastructure.genmodel</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.cmf.occi.platform/model/Platform.genmodel</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.cmf.occi.sla/model/sla.genmodel</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.cmf.occi.infrastructure/model/Infrastructure.ecore</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.cmf.occi.platform/model/Platform.ecore</semanticResources>
+    <semanticResources>platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore</semanticResources>
+    <semanticResources>model/extendedtosca.ecore</semanticResources>
+    <semanticResources>model/extendedtosca.genmodel</semanticResources>
+    <semanticResources>platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.genmodel</semanticResources>
+    <semanticResources>model/extendedtosca.occie</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_af2tgNBgEeeZUuwGrxtlRg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.cmf.occi.core.design/description/OCCIware.odesign#//@ownedViewpoints[name='OCCI%20Extension']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_a0ikENBgEeeZUuwGrxtlRg" name="extendedTosca" repPath="#_a0YzENBgEeeZUuwGrxtlRg">
