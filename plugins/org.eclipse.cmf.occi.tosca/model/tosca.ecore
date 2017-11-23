@@ -16,7 +16,6 @@
   <eClassifiers xsi:type="ecore:EDataType" name="stringMinOne" instanceClassName="java.lang.String">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="minLength" value="1"/>
-      <details key="pattern"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="boolean" instanceClassName="java.lang.Boolean"/>

@@ -40,7 +40,7 @@ public interface Tosca_nodes_webapplication extends Tosca_nodes_root, Tosca_capa
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The web application’s context root which designates the application’s URL path within the web server it is hosted on.
+	 * The web applicationâ€™s context root which designates the applicationâ€™s URL path within the web server it is hosted on.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Context Root</em>' attribute.
 	 * @see #setContextRoot(String)

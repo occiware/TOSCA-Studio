@@ -2849,8 +2849,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		  (stringMinOneEDataType, 
 		   source, 
 		   new String[] {
-			 "minLength", "1",
-			 "pattern", null
+			 "minLength", "1"
 		   });	
 		addAnnotation
 		  (integerMinOneEDataType, 

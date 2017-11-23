@@ -67,7 +67,7 @@ public interface Tosca_nodes_softwarecomponent extends Tosca_nodes_root, MixinBa
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The optional software component’s version.
+	 * The optional software componentâ€™s version.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Component Version</em>' attribute.
 	 * @see #setComponentVersion(String)

@@ -6288,7 +6288,7 @@ public interface ToscaPackage extends EPackage {
 	 * @return the meta object for data type '<em>string Min One</em>'.
 	 * @see java.lang.String
 	 * @model instanceClass="java.lang.String"
-	 *        extendedMetaData="minLength='1' pattern='null'"
+	 *        extendedMetaData="minLength='1'"
 	 * @generated
 	 */
 	EDataType getstringMinOne();
