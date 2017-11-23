@@ -3,16 +3,22 @@ package org.eclipse.cmf.occi.tosca.config;
 import java.io.File;
 import java.io.FileReader;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
 import org.eclipse.cmf.occi.core.Configuration;
 import org.eclipse.cmf.occi.core.Entity;
 import org.eclipse.cmf.occi.core.Kind;
+import org.eclipse.cmf.occi.core.Mixin;
 import org.eclipse.cmf.occi.core.MixinBase;
+import org.eclipse.cmf.occi.core.OCCIFactory;
 import org.eclipse.cmf.occi.core.Resource;
 import org.eclipse.cmf.occi.core.util.OcciHelper;
+import org.eclipse.cmf.occi.tosca.ToscaFactory;
 import org.eclipse.cmf.occi.tosca.config.Mapper.Mapping;
+import org.eclipse.cmf.occi.tosca.config.Mapper.MappingToCreateType;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
@@ -68,33 +74,70 @@ public class Main extends AbstractHandler {
 			try {
 				node = (MixinBase) ExtendedtoscaFactory.class.getMethod(methodNameToCreate)
 						.invoke(ExtendedtoscaFactory.eINSTANCE);
-			} catch (NoSuchMethodException e) {
-				System.err.println("Could not find the method " + methodNameToCreate + " in the TOSCA Factory");
-				Method m = Mapper.mappingOfType.get(typeName);
-				if (m == null) {
-					System.err.println("Must add a mapping for " + typeName);
-					return;
+			} catch (NoSuchMethodException e1) {
+				try {
+					node = (MixinBase) ToscaFactory.class.getMethod(methodNameToCreate).invoke(ToscaFactory.eINSTANCE);
+				} catch (NoSuchMethodException e2) {
+					System.err.println("Could not find the method " + methodNameToCreate + " in the TOSCA Factory");
+					MappingToCreateType mapping = Mapper.mappingOfType.get(typeName);
+					if (mapping == null) {
+						System.err.println("Must add a mapping for " + typeName);
+						return;
+					}
+					node = (MixinBase) mapping.invoke();
 				}
-				node = (MixinBase) m.invoke(ExtendedtoscaFactory.eINSTANCE);
 			}
 
 			// parsing capabilities
 			if (node_map.get("capabilities") != null) {
 				readCapabilities(node, (Map<String, ?>) node_map.get("capabilities"));
-			} else {
-				System.err.println("WARNING no capabilities in " + configuration.toString());
 			}
 
-			List<Kind> kinds = node.getMixin().getApplies();
-			for (Kind kind : kinds) {
-				Entity entity = OcciHelper.createEntity(kind);
-				entity.setKind(kind);
-				entity.getParts().add(node);
+			List<Entity> entities = readApplies(configuration, node.getMixin(), new ArrayList<>());
+			entities.get(0).getParts().add(node);
+			for (Entity entity : entities) {
 				if (entity instanceof Resource) {
 					configuration.getResources().add((Resource) entity);
 				}
 			}
 		}
+	}
+
+	private static List<Entity> readApplies(Configuration configuration, Mixin mixin,
+			List<Mixin> mixinsToBeAddedToResource) {
+		for (Kind kind : mixin.getApplies()) {
+			Entity entity = null;
+			for (Resource resource : configuration.getResources()) {
+				if (kind.getTerm().equals(resource.getKind().getTerm())) {
+					entity = resource;
+					break;
+				}
+			}
+			if (entity == null) {
+				entity = OcciHelper.createEntity(kind);
+			}
+			entity.setKind(kind);
+			for (Mixin mixinToBeAdded : mixinsToBeAddedToResource) {
+				List<MixinBase> copy = entity.getParts();
+				boolean alreadyInParts = false;
+				for (MixinBase part : copy) {
+					if (part.getMixin().getTerm().equals(mixinToBeAdded.getTerm())) {
+						alreadyInParts = true;
+					}
+				}
+				if (!alreadyInParts) {
+					entity.getParts().add(OcciHelper.createMixinBase(entity, mixinToBeAdded));
+				}
+			}
+			return Collections.singletonList(entity);
+		}
+		List<Entity> entities = new ArrayList<>();
+		for (Mixin depend : mixin.getDepends()) {
+			List<Mixin> copy = new ArrayList<>(mixinsToBeAddedToResource);
+			copy.add(depend);
+			entities.addAll(readApplies(configuration, depend, copy));
+		}
+		return entities;
 	}
 
 	private static void readCapabilities(MixinBase node, Map<String, ?> capabilities) throws Exception {
@@ -161,7 +204,7 @@ public class Main extends AbstractHandler {
 					}
 				}
 			} else {
-				System.err.println("Error could not find mapping for" + methodName + " in "
+				System.err.println("Error could not find mapping for " + methodName + " in "
 						+ classOfNode.getSimpleName() + " for property value " + propertyValue);
 			}
 		}

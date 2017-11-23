@@ -1,16 +1,18 @@
 package org.eclipse.cmf.occi.tosca.config;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.eclipse.cmf.occi.infrastructure.Compute;
+import org.eclipse.cmf.occi.tosca.ToscaFactory;
 
 import extendedtosca.ExtendedtoscaFactory;
 
 public class Mapper {
 	
-	public static final Map<String, Method> mappingOfType = new HashMap<>();
+	public static final Map<String, MappingToCreateType> mappingOfType = new HashMap<>();
 	
 	public static final Map<String, Mapping> mappingOfCapabilities = new HashMap<>();
 	
@@ -24,11 +26,29 @@ public class Mapper {
 	}
 
 	private static void initMappingOfType() throws Exception {
-		mappingOfType.put("Compute", ExtendedtoscaFactory.class.getMethod("createTosca_nodes_compute"));
+		mappingOfType.put("Compute", 
+				new MappingToCreateType(ToscaFactory.class.getMethod("createTosca_nodes_compute"), ToscaFactory.eINSTANCE)
+				);
 	}
 
 	private static void initMappingOfCapabilities() throws Exception {
 		mappingOfCapabilities.put("setNumCpus", new Mapping(Compute.class, "setOcciComputeCores", Integer.class));
+	}
+	
+	public static class MappingToCreateType {
+		public final Method methodToBeInvoked;
+		public final Object objectOnWhichInvoke;
+		public MappingToCreateType(Method methodToBeInvoked, Object objectOnWhichInvoke) {
+			this.methodToBeInvoked = methodToBeInvoked;
+			this.objectOnWhichInvoke = objectOnWhichInvoke;
+		}
+		public Object invoke() {
+			try {
+				return this.methodToBeInvoked.invoke(this.objectOnWhichInvoke);
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		}
 	}
 	
 	public static class Mapping {
