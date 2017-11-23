@@ -13,6 +13,8 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 
+import extendedtosca.ExtendedtoscaFactory;
+
 public class ConfigManager {
 	
 	public static List<Configuration> configurations = new ArrayList<>();
@@ -31,7 +33,7 @@ public class ConfigManager {
 		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/platform#"));
 		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/sla#"));
 		configuration.getUse().add(OcciHelper.loadExtension("http://org.occi/tosca#"));
-		configuration.getUse().add(OcciHelper.loadExtension("http://org.occi/extendTosca#"));
+		configuration.getUse().add(OcciHelper.loadExtension("http://org.occi/extendedTosca#"));
 		resource.getContents().add(configuration);
 		return configuration;
 	}
