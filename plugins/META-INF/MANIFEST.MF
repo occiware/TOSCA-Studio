@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: Extended
-Bundle-SymbolicName: org.eclipse.cmf.occi.tosca.extended
-Bundle-Version: 1.0.0.qualifier
