@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.cmf.occi.core.Configuration;
+import org.eclipse.cmf.occi.core.Kind;
 import org.eclipse.cmf.occi.core.OCCIFactory;
 import org.eclipse.cmf.occi.core.util.OcciHelper;
 import org.eclipse.emf.common.util.URI;
@@ -17,11 +18,11 @@ import extendedtosca.ExtendedtoscaFactory;
 
 public class ConfigManager {
 	
-	public static List<Configuration> configurations = new ArrayList<>();
+	public static Configuration currentConfiguration;
 	
 	private static Resource resource;
 	
-	public static Configuration createConfiguration(String path) {
+	public static void createConfiguration(String path) {
 		String name = convertPathToConfigName(path);
 		ResourceSet resSet = new ResourceSetImpl();
 		URI modelURI = URI
@@ -35,7 +36,7 @@ public class ConfigManager {
 		configuration.getUse().add(OcciHelper.loadExtension("http://org.occi/tosca#"));
 		configuration.getUse().add(OcciHelper.loadExtension("http://org.occi/extendedTosca#"));
 		resource.getContents().add(configuration);
-		return configuration;
+		currentConfiguration = configuration;
 	}
 	
 	public static void save() {
@@ -45,6 +46,15 @@ public class ConfigManager {
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	public static org.eclipse.cmf.occi.core.Resource getResourceOfGivenKind(Kind kind) {
+		for (org.eclipse.cmf.occi.core.Resource resource : currentConfiguration.getResources()) {
+			if (resource.getKind().getTerm().endsWith(kind.getTerm())) {
+				return resource;
+			}
+		}
+		throw new RuntimeException("Could not find any resources corresponding to the Kind: " + kind.getName());
 	}
 	
 	private static String convertPathToConfigName(String path) {
