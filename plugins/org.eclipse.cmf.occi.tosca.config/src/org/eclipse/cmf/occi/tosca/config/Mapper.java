@@ -5,8 +5,12 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.eclipse.cmf.occi.core.OCCIFactory;
+import org.eclipse.cmf.occi.infrastructure.Architecture;
 import org.eclipse.cmf.occi.infrastructure.Compute;
+import org.eclipse.cmf.occi.infrastructure.Storage;
 import org.eclipse.cmf.occi.tosca.ToscaFactory;
+import org.eclipse.cmf.occi.tosca.Tosca_nodes_compute;
 
 import extendedtosca.ExtendedtoscaFactory;
 
@@ -29,10 +33,18 @@ public class Mapper {
 		mappingOfType.put("Compute", 
 				new MappingToCreateType(ToscaFactory.class.getMethod("createTosca_nodes_compute"), ToscaFactory.eINSTANCE)
 				);
+		mappingOfType.put("BlockStorage", 
+				new MappingToCreateType(ToscaFactory.class.getMethod("createTosca_nodes_blockstorage"), ToscaFactory.eINSTANCE)
+				);
+		mappingOfType.put("SoftwareComponent", 
+				new MappingToCreateType(ToscaFactory.class.getMethod("createTosca_nodes_softwarecomponent"), ToscaFactory.eINSTANCE)
+				);
 	}
 
 	private static void initMappingOfCapabilities() throws Exception {
 		mappingOfCapabilities.put("setNumCpus", new Mapping(Compute.class, "setOcciComputeCores", Integer.class));
+		mappingOfCapabilities.put("setMemSize", new Mapping(Compute.class, "setOcciComputeMemory", Float.class));
+		mappingOfCapabilities.put("setArchitecture", new Mapping(Compute.class, "setOcciComputeArchitecture", Architecture.class));
 	}
 	
 	public static class MappingToCreateType {
