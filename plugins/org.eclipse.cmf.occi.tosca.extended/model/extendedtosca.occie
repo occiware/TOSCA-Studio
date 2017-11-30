@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
-<occi:Extension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" name="extendedTosca" scheme="http://org.occi/extendedTosca#">
+<occi:Extension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" name="extendedTosca" scheme="http://org.occi/extendedTosca#" description="Extended TOSCA">
+  <import href="http://schemas.ogf.org/occi/core#/"/>
   <import href="http://org.occi/tosca#/"/>
-   <mixins name="tosca_capabilities_indigo_Endpoint" scheme="http://org.occi/extendedTosca#">
+  <mixins name="tosca_capabilities_indigo_Endpoint" scheme="http://org.occi/extendedTosca#">
     <attributes name="credential" type="//@types.0"/>
     <depends href="http://org.occi/tosca#//@mixins[term='tosca_capabilities_endpoint']"/>
   </mixins>
@@ -30,23 +31,11 @@
     <depends href="http://org.occi/tosca#//@mixins[term='tosca_capabilities_container']"/>
   </mixins>
   <mixins name="tosca_capabilities_SomeChildCap" scheme="http://org.occi/extendedTosca#" depends="//@mixins[term='tosca_capabilities_somecap']"/>
-  <mixins name="tosca_nodes_Database_MySQL" scheme="http://org.occi/extendedTosca#">
-    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_database']"/>
-  </mixins>
   <mixins name="tosca_nodes_ComputeWithProp" scheme="http://org.occi/extendedTosca#" title="Compute node type with a parameter for the get property with host test">
     <attributes name="test">
       <type xsi:type="occi:NumericType" href="http://org.occi/tosca#//@types.6"/>
     </attributes>
     <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_compute']"/>
-  </mixins>
-  <mixins name="capabilities" scheme="http://org.occi/extendedTosca#"/>
-  <mixins name="tosca_nodes_SoftwareComponent_Elasticsearch" scheme="http://org.occi/extendedTosca#" title="Elasticsearch is an open-source search engine built on top of Apache Lucene, a full-text search-engine library.">
-    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_softwarecomponent']"/>
-    <depends href="http://org.occi/tosca#//@mixins[term='tosca_capabilities_endpoint']"/>
-  </mixins>
-  <mixins name="tosca_nodes_DatabaseWithListParam" scheme="http://org.occi/extendedTosca#">
-    <attributes name="list.prop" type="//@types.3"/>
-    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_database']"/>
   </mixins>
   <mixins name="tosca_nodes_WebApplication_PayPalPizzaStore" scheme="http://org.occi/extendedTosca#" title="Pizza store app that allows you to explore the features provided by PayPal's REST APIs. More detail can be found at https://github.com/paypal/rest-api-sample-app-nodejs/">
     <attributes name="github.url" default="https://github.com/sample.git" description="location of the application on the github.">
@@ -67,14 +56,35 @@
     <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_webapplication']"/>
   </mixins>
   <mixins name="tosca_nodes_network_Network" scheme="http://org.occi/extendedTosca#">
-    <attributes name="ip.version" default="4">
-      <type xsi:type="occi:NumericType" href="http://org.occi/tosca#//@types.6"/>
+    <attributes name="physical.network">
+      <type xsi:type="occi:StringType" href="http://org.occi/tosca#//@types.0"/>
+    </attributes>
+    <attributes name="segmentation.id">
+      <type xsi:type="occi:StringType" href="http://org.occi/tosca#//@types.0"/>
+    </attributes>
+    <attributes name="network.id">
+      <type xsi:type="occi:StringType" href="http://org.occi/tosca#//@types.0"/>
+    </attributes>
+    <attributes name="ip.version" default="4" type="//@types.3"/>
+    <attributes name="start.ip">
+      <type xsi:type="occi:StringType" href="http://org.occi/tosca#//@types.0"/>
+    </attributes>
+    <attributes name="network.name">
+      <type xsi:type="occi:StringType" href="http://org.occi/tosca#//@types.0"/>
+    </attributes>
+    <attributes name="cidr">
+      <type xsi:type="occi:StringType" href="http://org.occi/tosca#//@types.0"/>
+    </attributes>
+    <attributes name="gateway.ip">
+      <type xsi:type="occi:StringType" href="http://org.occi/tosca#//@types.0"/>
+    </attributes>
+    <attributes name="network.type">
+      <type xsi:type="occi:StringType" href="http://org.occi/tosca#//@types.0"/>
+    </attributes>
+    <attributes name="end.ip">
+      <type xsi:type="occi:StringType" href="http://org.occi/tosca#//@types.0"/>
     </attributes>
     <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_root']"/>
-  </mixins>
-  <mixins name="tosca_nodes_NodeWithCap" scheme="http://org.occi/extendedTosca#">
-    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_root']"/>
-    <depends href="#//@mixins[term='tosca_capabilities_somecap']"/>
   </mixins>
   <mixins name="tosca_nodes_Container_Application_Docker" scheme="http://org.occi/extendedTosca#">
     <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_container_application']"/>
@@ -82,14 +92,65 @@
   <mixins name="tosca_nodes_SoftwareComponent_Kibana" scheme="http://org.occi/extendedTosca#" title="Kibana is an open source analytics and visualization platform designed to work with Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch.">
     <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_softwarecomponent']"/>
   </mixins>
-  <mixins name="Rsyslog" scheme="http://org.occi/extendedTosca#" title="RSYSLOG is the Rocket-fast SYStem for LOG processing.">
-    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_softwarecomponent']"/>
-  </mixins>
   <mixins name="tosca_nodes_ComputeWithAttrList" scheme="http://org.occi/extendedTosca#" title="Compute node type with a list attribute">
     <attributes name="attr.list">
       <type xsi:type="occi:EObjectType" href="http://org.occi/tosca#//@types.11"/>
     </attributes>
     <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_compute']"/>
+  </mixins>
+  <mixins name="tosca_nodes_SoftwareComponent_Logstash" scheme="http://org.occi/extendedTosca#" title="Logstash is a tool for receiving, processing and outputting logs. All kinds of logs. System logs, webserver logs, error logs, application logs, and just about anything you can throw at it.">
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_softwarecomponent']"/>
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_capabilities_endpoint']"/>
+  </mixins>
+  <mixins name="example_DatabaseSubsystem" scheme="http://org.occi/extendedTosca#">
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_root']"/>
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_capabilities_endpoint_database']"/>
+  </mixins>
+  <mixins name="tosca_nodes_SoftwareComponent_Collectd" scheme="http://org.occi/extendedTosca#" title="collectd is a daemon which gathers statistics about the system it is running on.">
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_softwarecomponent']"/>
+  </mixins>
+  <mixins name="tosca_nodes_NodeWithReq" scheme="http://org.occi/extendedTosca#">
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_softwarecomponent']"/>
+  </mixins>
+  <mixins name="tosca_nodes_SomeNode2" scheme="http://org.occi/extendedTosca#">
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_root']"/>
+    <depends href="#//@mixins[term='tosca_capabilities_containerchild']"/>
+  </mixins>
+  <mixins name="tosca_nodes_Database_MySQL" scheme="http://org.occi/extendedTosca#">
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_database']"/>
+  </mixins>
+  <mixins name="example_QueuingSubsystem" scheme="http://org.occi/extendedTosca#">
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_root']"/>
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_capabilities_endpoint']"/>
+  </mixins>
+  <mixins name="example_TransactionSubsystem" scheme="http://org.occi/extendedTosca#">
+    <attributes name="receiver.port">
+      <type xsi:type="occi:NumericType" href="http://org.occi/tosca#//@types.6"/>
+    </attributes>
+    <attributes name="mq.service.ip">
+      <type xsi:type="occi:StringType" href="http://org.occi/tosca#//@types.0"/>
+    </attributes>
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_root']"/>
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_capabilities_endpoint']"/>
+  </mixins>
+  <mixins name="tosca_nodes_SoftwareComponent_Elasticsearch" scheme="http://org.occi/extendedTosca#" title="Elasticsearch is an open-source search engine built on top of Apache Lucene, a full-text search-engine library.">
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_softwarecomponent']"/>
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_capabilities_endpoint']"/>
+  </mixins>
+  <mixins name="tosca_nodes_DatabaseWithListParam" scheme="http://org.occi/extendedTosca#">
+    <attributes name="list.prop" type="//@types.4"/>
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_database']"/>
+  </mixins>
+  <mixins name="example_SomeApp" scheme="http://org.occi/extendedTosca#" title="taken from tosca-topologies/Example18-ImplementationOfATransactionSubsytemNodeTypeUsingSubstitutionMappings">
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_root']"/>
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_capabilities_endpoint']"/>
+  </mixins>
+  <mixins name="tosca_nodes_NodeWithCap" scheme="http://org.occi/extendedTosca#">
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_root']"/>
+    <depends href="#//@mixins[term='tosca_capabilities_somecap']"/>
+  </mixins>
+  <mixins name="Rsyslog" scheme="http://org.occi/extendedTosca#" title="RSYSLOG is the Rocket-fast SYStem for LOG processing.">
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_softwarecomponent']"/>
   </mixins>
   <mixins name="tosca_nodes_network_Port" scheme="http://org.occi/extendedTosca#">
     <attributes name="ip.range.end">
@@ -109,19 +170,9 @@
     </attributes>
     <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_root']"/>
   </mixins>
-  <mixins name="tosca_nodes_SoftwareComponent_Logstash" scheme="http://org.occi/extendedTosca#" title="Logstash is a tool for receiving, processing and outputting logs. All kinds of logs. System logs, webserver logs, error logs, application logs, and just about anything you can throw at it.">
-    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_softwarecomponent']"/>
-    <depends href="http://org.occi/tosca#//@mixins[term='tosca_capabilities_endpoint']"/>
-  </mixins>
-  <mixins name="tosca_nodes_SoftwareComponent_Collectd" scheme="http://org.occi/extendedTosca#" title="collectd is a daemon which gathers statistics about the system it is running on.">
-    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_softwarecomponent']"/>
-  </mixins>
   <mixins name="tosca_nodes_ComputeWithCapWithAttr" scheme="http://org.occi/extendedTosca#" title="Compute node type with capability with an attribute of type list">
     <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_compute']"/>
     <depends href="#//@mixins[term='tosca_capabilities_indigo_endpoint']"/>
-  </mixins>
-  <mixins name="tosca_nodes_NodeWithReq" scheme="http://org.occi/extendedTosca#">
-    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_softwarecomponent']"/>
   </mixins>
   <mixins name="tosca_nodes_SoftwareComponent_Rsyslog" scheme="http://org.occi/extendedTosca#" title="RSYSLOG is the Rocket-fast SYStem for LOG processing.">
     <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_softwarecomponent']"/>
@@ -142,10 +193,6 @@
     </attributes>
     <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_webserver']"/>
   </mixins>
-  <mixins name="tosca_nodes_SomeNode2" scheme="http://org.occi/extendedTosca#">
-    <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_root']"/>
-    <depends href="#//@mixins[term='tosca_capabilities_containerchild']"/>
-  </mixins>
   <mixins name="tosca_nodes_DBMS_MySQL" scheme="http://org.occi/extendedTosca#">
     <depends href="http://org.occi/tosca#//@mixins[term='tosca_nodes_dbms']"/>
   </mixins>
@@ -156,6 +203,9 @@
   </mixins>
   <mixins name="tosca_relationships_HA" scheme="http://org.occi/extendedTosca#">
     <depends href="http://org.occi/tosca#//@mixins[term='tosca_relationships_root']"/>
+  </mixins>
+  <mixins name="MyAttachesTo" scheme="http://org.occi/extendedTosca#" title="taken from tosca-topologies/BlockStorage4">
+    <depends href="http://org.occi/tosca#//@mixins[term='tosca_relationships_attachesto']"/>
   </mixins>
   <mixins name="tosca_relationships_network_LinksTo" scheme="http://org.occi/extendedTosca#">
     <depends href="http://org.occi/tosca#//@mixins[term='tosca_relationships_dependson']"/>
@@ -169,8 +219,11 @@
   <types xsi:type="occi:ArrayType" name="arrayversion">
     <type xsi:type="occi:StringType" href="http://org.occi/tosca#//@types.12"/>
   </types>
+  <types xsi:type="occi:EnumerationType" name="ip.versionEnum">
+    <literals name="4"/>
+    <literals name="6"/>
+  </types>
   <types xsi:type="occi:ArrayType" name="arrayinteger">
     <type xsi:type="occi:NumericType" href="http://org.occi/tosca#//@types.6"/>
   </types>
-  
 </occi:Extension>
