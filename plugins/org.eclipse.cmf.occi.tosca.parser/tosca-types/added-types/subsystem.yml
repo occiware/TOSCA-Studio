@@ -1,0 +1,34 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+description: definition of the types in tosca-topologies/Example17-DeclaringATransactionSubsystemAsAChainOfSubstitutable
+
+node_types:
+    example.QueuingSubsystem:
+        derived_from: tosca.nodes.Root
+        capabilities:
+            message_queue_endpoint: 
+                type: tosca.capabilities.Endpoint
+        requirements:
+            - receiver:
+                node: example.TransactionSubsystem
+                capabilities: tosca.capabilities.Endpoint
+    example.TransactionSubsystem:
+        derived_from: tosca.nodes.Root
+        properties:
+            mq_service_ip:
+                type: string
+            receiver_port:
+                type: integer
+        attributes:
+            receiver_ip:
+                type: string
+            receiver_port:
+                type: integer
+        capabilities:
+            message_receiver: tosca.capabilities.Endpoint
+        requirements:
+            - database_endpoint: tosca.capabilities.Endpoint.Database
+    example.DatabaseSubsystem:
+        derived_from: tosca.nodes.Root
+        capabilities:
+            database_endpoint: 
+                type: tosca.capabilities.Endpoint.Database

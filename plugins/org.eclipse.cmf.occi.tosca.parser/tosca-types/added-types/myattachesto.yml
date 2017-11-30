@@ -1,0 +1,8 @@
+relationship_types:
+    MyAttachesTo:
+        derived_from: tosca.relationships.AttachesTo
+        description: taken from tosca-topologies/BlockStorage4
+        properties:
+            location:
+                type: string
+                default: /default_location
