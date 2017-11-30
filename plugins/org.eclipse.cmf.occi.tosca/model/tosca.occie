@@ -83,7 +83,6 @@
   </mixins>
   <mixins name="tosca_nodes_Container_Runtime" scheme="http://org.occi/tosca#" title="The TOSCA Container Runtime node represents operating system-level virtualization technology used to run multiple application services on a single Compute host." depends="//@mixins[term='tosca_nodes_softwarecomponent'] //@mixins[term='tosca_capabilities_scalable'] //@mixins[term='tosca_capabilities_container']"/>
   <mixins name="tosca_nodes_BlockStorage" scheme="http://org.occi/tosca#" title="The TOSCA BlockStorage node currently represents a server-local block storage device (i.e., not shared) offering evenly sized blocks of data from which raw storage volumes can be created." depends="//@mixins[term='tosca_nodes_root'] //@mixins[term='tosca_capabilities_attachment']">
-    <attributes name="size" description="The requested storage size (default unit is MB). Note: - Required when an existing volume (i.e., volume_id) is not available. - If volume_id is provided, size is ignored.  Resize of existing volumes is not considered at this time." type="//@types.16"/>
     <attributes name="volume.id" description="ID of an existing volume (that is in the accessible scope of the requesting application)." type="//@types.0"/>
     <attributes name="snapshot.id" description="Some identifier that represents an existing snapshot that should be used when creating the block storage (volume)." type="//@types.0"/>
     <applies href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='storage']"/>
