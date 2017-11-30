@@ -38,7 +38,7 @@ public class ExtensionsManager {
 		ResourceSet resSet = new ResourceSetImpl();
 		
 		URI modelURI = URI
-				.createURI("file:/C:/Users/schallit/workspace-tosca/plugins/org.eclipse.cmf.occi.tosca/model/tosca.occie");
+				.createURI("file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca/model/tosca.occie");
 		resource = resSet.createResource(modelURI);
 		Extension extension = OCCIFactory.eINSTANCE.createExtension();
 		extension.setDescription("Mon extension TOSCA");
@@ -57,7 +57,7 @@ public class ExtensionsManager {
 	public static void createExtendedTosca() {
 		ResourceSet resSet = new ResourceSetImpl();
 		URI modelURI = URI
-				.createURI("file:/C:/Users/schallit/workspace-tosca/plugins/org.eclipse.cmf.occi.tosca.extended/model/extendedTosca.occie");
+				.createURI("file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.extended/model/extendedTosca.occie");
 		resource = resSet.createResource(modelURI);
 		Extension extension = OCCIFactory.eINSTANCE.createExtension();
 		extension.setDescription("Extended TOSCA");

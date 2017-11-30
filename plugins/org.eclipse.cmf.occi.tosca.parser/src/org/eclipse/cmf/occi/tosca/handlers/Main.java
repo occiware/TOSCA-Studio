@@ -2,6 +2,7 @@
 package org.eclipse.cmf.occi.tosca.handlers;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.FilenameFilter;
@@ -43,7 +44,7 @@ public class Main extends AbstractHandler {
 			ExtensionsManager.save();
 
 			ExtensionsManager.createExtendedTosca();
-			Map<String, ?> customTypesMap = concatAllCustomTypes();
+			Map<String, ?> customTypesMap = concatCustomAndAddedTypes();
 			readYamlFile(customTypesMap);
 			ExtensionsManager.save();
 
@@ -116,30 +117,16 @@ public class Main extends AbstractHandler {
 		}
 	}
 
-	private Map<String, ?> concatAllCustomTypes() throws Exception {
+	private Map<String, ?> concatCustomAndAddedTypes() throws Exception {
 		Map customTypesMap = new LinkedHashMap<>(); // LinkedHashMap keeps the insertion order 
 		Map nodes = new HashMap<>();
 		Map capabilities = new HashMap<>();
 		Map relationships = new HashMap<>();
 		Map policies = new HashMap<>();
-		File directory = new File(
-				"C:/Users/schallit/workspace-tosca/plugins/org.eclipse.cmf.occi.tosca.parser/tosca-types/custom-types/");
-		File[] yamlFiles = directory.listFiles();
-		for (File path : yamlFiles) {
-			YamlReader reader = new YamlReader(new FileReader(path));
-			Map<String, ?> map = (Map<String, ?>) reader.read();
-			nodes.putAll((Map) map.get("node_types"));
-			if (map.containsKey("capability_types")) {
-				capabilities.putAll((Map) map.get("capability_types"));
-			}
-			if (map.containsKey("relationship_types")) {
-				relationships.putAll((Map) map.get("relationship_types"));
-			}
-			if (map.containsKey("policy_types")) {
-				policies.putAll((Map) map.get("policy_types"));
-			}
-			reader.close();
-		}
+		readCustomAndAddedTypesInGivenDirectory("C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.parser/tosca-types/custom-types/", 
+				nodes, capabilities, relationships, policies);
+		readCustomAndAddedTypesInGivenDirectory("C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.parser/tosca-types/added-types/", 
+				nodes, capabilities, relationships, policies);
 		customTypesMap.put("tosca_definitions_version", "tosca_simple_yaml_1_0");
 		customTypesMap.put("description",
 				"This TOSCA definitions document contains the custom types definitions as expressed in the TOSCA specification document. It is composed by the files in the directory custom-types");
@@ -152,6 +139,28 @@ public class Main extends AbstractHandler {
 		writerNodes.write(customTypesMap);
 		writerNodes.close();
 		return customTypesMap;
+	}
+	
+	private static void readCustomAndAddedTypesInGivenDirectory(String directoryPath, 
+			Map nodes, Map capabilities, Map relationships, Map policies) throws Exception {
+		File[] yamlFiles = new File(directoryPath).listFiles();
+		for (File path : yamlFiles) {
+			YamlReader reader = new YamlReader(new FileReader(path));
+			Map<String, ?> map = (Map<String, ?>) reader.read();
+			if (map.containsKey("node_types")) {
+				nodes.putAll((Map) map.get("node_types"));
+			}
+			if (map.containsKey("capability_types")) {
+				capabilities.putAll((Map) map.get("capability_types"));
+			}
+			if (map.containsKey("relationship_types")) {
+				relationships.putAll((Map) map.get("relationship_types"));
+			}
+			if (map.containsKey("policy_types")) {
+				policies.putAll((Map) map.get("policy_types"));
+			}
+			reader.close();
+		}
 	}
 
 }

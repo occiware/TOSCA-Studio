@@ -14,6 +14,8 @@ public class AttributeMapper extends Mapper {
 		
 		this.mappings.put("tosca_nodes_ObjectStorage", new AttributesMapping("maxsize"));
 		
+		this.mappings.put("tosca_nodes_BlockStorage", new AttributesMapping("size"));
+		
 		List<String> attributeToRemoveFromNodeRoot = new ArrayList<String>();
 		attributeToRemoveFromNodeRoot.add("tosca.id");
 		attributeToRemoveFromNodeRoot.add("tosca.name");
