@@ -1,6 +1,14 @@
 tosca_definitions_version: tosca_simple_yaml_1_0
 description: >
-    TOSCA simple profile with 2 servers each with different attached block storage.
+    TOSCA simple profile with a single Block Storage node shared by 2-Tier Application with
+    custom AttachesTo Type and explicit Relationship Templates.
+relationship_types:
+    MyAttachesTo:
+        derived_from: tosca.relationships.AttachesTo
+        properties:
+            location:
+                type: string
+                default: /default_location
 topology_template:
     inputs:
         cpus:
@@ -21,7 +29,7 @@ topology_template:
             description: >
                 Block storage mount point (filesystem path).
     node_templates:
-        my_server:
+        my_web_app_tier_1:
             type: tosca.nodes.Compute
             capabilities:
                 host:
@@ -38,16 +46,8 @@ topology_template:
             requirements:
                 - local_storage:
                     node: my_storage
-                    relationship:
-                        type: AttachesTo
-                        properties:
-                            location: { get_input: storage_location }
-        my_storage:
-            type: tosca.nodes.BlockStorage
-            properties:
-                size: { get_input: storage_size }
-                snapshot_id: { get_input: storage_snapshot_id }
-        my_server2:
+                    relationship: storage_attachesto_1
+        my_web_app_tier_2:
             type: tosca.nodes.Compute
             capabilities:
                 host:
@@ -63,26 +63,29 @@ topology_template:
                         version: 18.0
             requirements:
                 - local_storage:
-                    node: my_storage2
-                    relationship:
-                        type: tosca.relationships.AttachesTo
-                        properties:
-                            location: { get_input: storage_location }
-        my_storage2:
+                    node: my_storage
+                    relationship: storage_attachesto_2
+        my_storage:
             type: tosca.nodes.BlockStorage
             properties:
                 size: { get_input: storage_size }
                 snapshot_id: { get_input: storage_snapshot_id }
+    relationship_templates:
+        storage_attachesto_1:
+            type: MyAttachesTo
+            properties:
+                location: /my_data_location
+        storage_attachesto_2:
+            type: MyAttachesTo
+            properties:
+                location: /some_other_data_location
     outputs:
-        server_ip_1:
-            description: The private IP address of the application’s first server.
-            value: { get_attribute: [my_server, private_address] }
-        server_ip_2:
-            description: The private IP address of the application’s second server.
-            value: { get_attribute: [my_server2, private_address] }
-        volume_id_1:
-            description: The volume id of the first block storage instance.
+        private_ip_1:
+            description: The private IP address of the application’s first tier.
+            value: { get_attribute: [my_web_app_tier_1, private_address] }
+        private_ip_2:
+            description: The private IP address of the application’s second tier.
+            value: { get_attribute: [my_web_app_tier_2, private_address] }
+        volume_id:
+            description: The volume id of the block storage instance.
             value: { get_attribute: [my_storage, volume_id] }
-        volume_id_2:
-            description: The volume id of the second block storage instance.
-            value: { get_attribute: [my_storage2, volume_id] }

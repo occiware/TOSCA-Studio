@@ -1,7 +1,10 @@
 tosca_definitions_version: tosca_simple_yaml_1_0
 description: >
-    TOSCA simple profile with server and attached block storage using a named
-    Relationship Template for the storage attachment.
+    TOSCA simple profile with server and attached block storage using a custom
+    AttachesTo Relationship Type.
+relationship_types:
+    MyCustomAttachesTo:
+        derived_from: tosca.relationships.AttachesTo
 topology_template:
     inputs:
         cpus:
@@ -13,6 +16,10 @@ topology_template:
             type: scalar-unit.size
             description: Size of the storage to be created.
             default: 1 GB
+        storage_snapshot_id:
+            type: string
+            description: >
+                Optional identifier for an existing snapshot to use when creating storage.
         storage_location:
             type: string
             description: Block storage mount point (filesystem path).
@@ -27,28 +34,26 @@ topology_template:
                         mem_size: 4 GB
                 os:
                     properties:
-                        architecture: x86_64
-                        type: Linux
-                        distribution: Fedora
-                        version: 18.0
+                    architecture: x86_64
+                    type: Linux
+                    distribution: Fedora
+                    version: 18.0
             requirements:
                 - local_storage:
                     node: my_storage
-                    # Declare template to use with ‘relationship’ keyword
-                    relationship: storage_attachment
+                    # Declare custom AttachesTo type using the ‘relationship’ keyword
+                    relationship:
+                        type: MyCustomAttachesTo
+                        properties:
+                            location: { get_input: storage_location }
         my_storage:
             type: tosca.nodes.BlockStorage
             properties:
                 size: { get_input: storage_size }
-    relationship_templates:
-        storage_attachment:
-            type: AttachesTo
-            properties:
-                location: { get_input: storage_location }
+                snapshot_id: { get_input: storage_snapshot_id }
     outputs:
         private_ip:
-            description: The private IP address of the newly created compute instance.
-            value: { get_attribute: [my_server, private_address] }
+        description: The private IP address of the newly created compute instance.
+        value: { get_attribute: [my_server, private_address] }
         volume_id:
             description: The volume id of the block storage instance.
-            value: { get_attribute: [my_storage, volume_id] }

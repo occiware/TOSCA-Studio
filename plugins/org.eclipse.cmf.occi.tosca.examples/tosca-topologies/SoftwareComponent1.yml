@@ -6,7 +6,7 @@ description: >
 topology_template:
     node_templates:
         my_virtual_machine:
-            type: SoftwareComponent
+            type: tosca.nodes.SoftwareComponent
             artifacts:
                 my_vm_image:
                     file: images/fedora-18-x86_64.qcow2
@@ -19,7 +19,7 @@ topology_template:
                     create: my_vm_image
             # Compute instance with no Operating System guest host
             my_server:
-                type: Compute
+                type: tosca.nodes.Compute
                 capabilities:
                 # Note: no guest OperatingSystem requirements as these are in the image.
                     host:

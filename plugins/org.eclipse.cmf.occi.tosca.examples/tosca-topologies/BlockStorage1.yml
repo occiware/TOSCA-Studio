@@ -22,7 +22,7 @@ topology_template:
             description: Block storage mount point (filesystem path).
     node_templates:
         my_server:
-            type: Compute
+            type: tosca.nodes.Compute
             capabilities:
                 host:
                     properties:
@@ -39,11 +39,11 @@ topology_template:
                 - local_storage:
                     node: my_storage
                     relationship:
-                        type: AttachesTo
+                        type: tosca.relationships.AttachesTo
                         properties:
                             location: { get_input: storage_location }
         my_storage:
-            type: BlockStorage
+            type: tosca.nodes.BlockStorage
             properties:
                 size: { get_input: storage_size }
                 snapshot_id: { get_input: storage_snapshot_id }

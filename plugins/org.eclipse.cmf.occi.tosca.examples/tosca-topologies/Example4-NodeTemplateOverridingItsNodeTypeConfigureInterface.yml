@@ -11,7 +11,7 @@ topology_template:
         port:
           get_input: my_mysql_port
       requirements:
-      - host: db_server
+        - host: db_server
       interfaces:
         Standard:
           configure: scripts/my_own_configure.sh

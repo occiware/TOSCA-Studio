@@ -12,12 +12,12 @@ topology_template:
     node_type: example.TransactionSubsystem
     capabilities:
       message_receiver:
-      - app
-      - message_receiver
+        - app
+        - message_receiver
     requirements:
       database_endpoint:
-      - app
-      - database
+        - app
+        - database
   node_templates:
     app:
       type: example.SomeApp
@@ -28,8 +28,8 @@ topology_template:
           service_ip:
             get_input: mq_service_ip
       requirements:
-      - database: null
-      - host: websrv
+        - database: null
+        - host: websrv
     websrv:
       type: tosca.nodes.WebServer
       properties: null
@@ -39,7 +39,7 @@ topology_template:
             port_name:
               get_input: receiver_port
       requirements:
-      - host: server
+        - host: server
     server:
       type: tosca.nodes.Compute
   outputs:
@@ -47,12 +47,12 @@ topology_template:
       description: private IP address of the message receiver application
       value:
         get_attribute:
-        - server
-        - private_address
+            - server
+            - private_address
     receiver_port:
       description: Port of the message receiver endpoint
       value:
         get_attribute:
-        - app
-        - app_endpoint
-        - port
+            - app
+            - app_endpoint
+            - port

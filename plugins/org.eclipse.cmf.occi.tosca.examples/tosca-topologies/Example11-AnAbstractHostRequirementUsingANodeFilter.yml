@@ -20,7 +20,7 @@ topology_template:
                     greater_or_equal: 2 GB
             - os:
                 properties:
-                - architecture:
-                    equal: x86_64
-                - type: linux
-                - distribution: ubuntu
+                    - architecture:
+                        equal: x86_64
+                    - type: linux
+                    - distribution: ubuntu

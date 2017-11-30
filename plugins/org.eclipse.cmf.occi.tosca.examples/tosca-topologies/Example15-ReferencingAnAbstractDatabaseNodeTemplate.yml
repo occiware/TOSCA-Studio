@@ -5,12 +5,12 @@ topology_template:
     web_app:
       type: tosca.nodes.WebApplication.MyWebApp
       requirements:
-      - host: web_server
-      - database_endpoint: db
+        - host: web_server
+        - database_endpoint: db
     web_server:
       type: tosca.nodes.WebServer
       requirements:
-      - host: server
+        - host: server
     server:
       type: tosca.nodes.Compute
     db:

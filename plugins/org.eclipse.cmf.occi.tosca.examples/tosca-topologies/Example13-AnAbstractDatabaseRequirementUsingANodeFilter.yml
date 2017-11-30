@@ -12,13 +12,13 @@ topology_template:
           get_input: admin_password
         db_endpoint_url:
           get_property:
-          - SELF
-          - database_endpoint
-          - url_path
+            - SELF
+            - database_endpoint
+            - url_path
       requirements:
-      - database_endpoint:
+        - database_endpoint:
           node: my.types.nodes.MyDatabase
           node_filter:
             properties:
-            - db_version:
-                greater_or_equal: 5.5
+                - db_version:
+                    greater_or_equal: 5.5

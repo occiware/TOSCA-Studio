@@ -7,7 +7,7 @@ topology_template:
       type: my.types.MyApplication
       properties: null
       requirements:
-      - dependency: some_service
+       - dependency: some_service
     some_service:
       type: some.nodetype.SomeService
       properties: null

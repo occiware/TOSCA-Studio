@@ -8,15 +8,15 @@ topology_template:
       capabilities:
         message_queue_endpoint: null
       requirements:
-      - receiver: trans1
-      - receiver: trans2
+        - receiver: trans1
+        - receiver: trans2
     trans1:
       type: example.TransactionSubsystem
       properties:
         mq_service_ip:
           get_attribute:
-          - mq
-          - service_ip
+            - mq
+            - service_ip
         receiver_port: 8080
       capabilities:
         message_receiver: null
@@ -27,13 +27,13 @@ topology_template:
       properties:
         mq_service_ip:
           get_attribute:
-          - mq
-          - service_ip
+            - mq
+            - service_ip
         receiver_port: 8080
       capabilities:
         message_receiver: null
       requirements:
-      - database_endpoint: dbsys
+        - database_endpoint: dbsys
     dbsys:
       type: example.DatabaseSubsystem
       properties: null
