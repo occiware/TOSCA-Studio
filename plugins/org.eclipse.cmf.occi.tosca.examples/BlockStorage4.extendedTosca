@@ -6,25 +6,22 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://org.occi/tosca#/"/>
   <use href="http://org.occi/extendedTosca#/"/>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:113c9f4a-047d-4465-a47b-03ef8e50ca25" occiComputeArchitecture="x64" occiComputeCores="8" occiComputeMemory="4.0">
+  <resources xsi:type="infrastructure:Storage" id="urn:uuid:75355d24-8311-408a-9b4d-109da430ee50">
+    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='storage']"/>
+    <parts xsi:type="tosca:Tosca_nodes_blockstorage" size="2" snapshotId="MySnapshot">
+      <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_blockstorage']"/>
+    </parts>
+  </resources>
+  <resources id="urn:uuid:067340ed-654c-4296-994b-052637e5c897">
+    <kind href="http://schemas.ogf.org/occi/core#//@kinds[term='resource']"/>
+  </resources>
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:5d98107a-9af4-42ba-9502-a818be07390e" occiComputeArchitecture="x64" occiComputeCores="8" occiComputeMemory="4.0">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
     <parts xsi:type="tosca:Tosca_nodes_compute" type="Linux" distribution="Fedora" version="18.0" diskSize="10">
       <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_compute']"/>
     </parts>
     <parts xsi:type="tosca:Tosca_nodes_compute" type="Linux" distribution="Fedora" version="18.0" diskSize="10">
       <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_compute']"/>
-    </parts>
-  </resources>
-  <resources id="urn:uuid:8cd00756-313a-432e-baa5-15be9bc08c42">
-    <kind href="http://schemas.ogf.org/occi/core#//@kinds[term='resource']"/>
-  </resources>
-  <resources xsi:type="infrastructure:Storage" id="urn:uuid:c8cb4a3a-d54a-4f32-99d1-3aa477b2edc5">
-    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='storage']"/>
-    <parts xsi:type="tosca:Tosca_nodes_blockstorage" size="2" snapshotId="MySnapshot">
-      <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_blockstorage']"/>
-    </parts>
-    <parts xsi:type="tosca:Tosca_nodes_blockstorage" size="2" snapshotId="MySnapshot">
-      <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_blockstorage']"/>
     </parts>
   </resources>
 </occi:Configuration>

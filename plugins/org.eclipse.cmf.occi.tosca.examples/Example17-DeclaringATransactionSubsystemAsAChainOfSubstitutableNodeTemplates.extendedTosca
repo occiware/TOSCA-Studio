@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:occi="http://schemas.ogf.org/occi/core/ecore">
+<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" description="Template of online transaction processing service.">
   <use href="http://schemas.ogf.org/occi/core#/"/>
   <use href="http://schemas.ogf.org/occi/infrastructure#/"/>
   <use href="http://schemas.ogf.org/occi/platform#/"/>

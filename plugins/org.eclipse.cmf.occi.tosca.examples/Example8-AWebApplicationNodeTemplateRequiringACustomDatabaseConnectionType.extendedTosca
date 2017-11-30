@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:extendedtosca="http://org.occi/extendedTosca/ecore" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:platform="http://schemas.ogf.org/occi/platform/ecore">
+  <use href="http://schemas.ogf.org/occi/core#/"/>
+  <use href="http://schemas.ogf.org/occi/infrastructure#/"/>
+  <use href="http://schemas.ogf.org/occi/platform#/"/>
+  <use href="http://schemas.ogf.org/occi/sla#/"/>
+  <use href="http://org.occi/tosca#/"/>
+  <use href="http://org.occi/extendedTosca#/"/>
+  <resources xsi:type="platform:Component" id="urn:uuid:02df073f-646e-43f6-a982-1b03df86ebcf">
+    <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="extendedtosca:Tosca_nodes_webapplication_wordpress">
+      <mixin href="http://org.occi/extendedTosca#//@mixins[term='tosca_nodes_webapplication_wordpress']"/>
+    </parts>
+  </resources>
+  <resources id="urn:uuid:b56e08f8-d473-4437-b82f-8fb47538bd7c">
+    <kind href="http://schemas.ogf.org/occi/core#//@kinds[term='resource']"/>
+  </resources>
+</occi:Configuration>

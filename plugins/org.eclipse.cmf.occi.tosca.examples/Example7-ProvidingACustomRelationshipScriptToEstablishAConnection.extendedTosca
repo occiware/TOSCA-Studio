@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ASCII"?>
+<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:extendedtosca="http://org.occi/extendedTosca/ecore" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:platform="http://schemas.ogf.org/occi/platform/ecore">
+  <use href="http://schemas.ogf.org/occi/core#/"/>
+  <use href="http://schemas.ogf.org/occi/infrastructure#/"/>
+  <use href="http://schemas.ogf.org/occi/platform#/"/>
+  <use href="http://schemas.ogf.org/occi/sla#/"/>
+  <use href="http://org.occi/tosca#/"/>
+  <use href="http://org.occi/extendedTosca#/"/>
+  <resources xsi:type="platform:Component" id="urn:uuid:7ed89d4d-c698-4136-8594-b3c44687395a">
+    <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="extendedtosca:Tosca_nodes_webapplication_wordpress">
+      <mixin href="http://org.occi/extendedTosca#//@mixins[term='tosca_nodes_webapplication_wordpress']"/>
+    </parts>
+    <parts xsi:type="extendedtosca:Tosca_nodes_database_mysql">
+      <mixin href="http://org.occi/extendedTosca#//@mixins[term='tosca_nodes_database_mysql']"/>
+    </parts>
+  </resources>
+  <resources id="urn:uuid:7e23257b-de72-40d8-95bb-04252522bf42">
+    <kind href="http://schemas.ogf.org/occi/core#//@kinds[term='resource']"/>
+  </resources>
+</occi:Configuration>
