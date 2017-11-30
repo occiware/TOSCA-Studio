@@ -1,0 +1,4 @@
+cpus:8
+storage_size:2 GB
+storage_snapshot_id:MySnapshot
+storage_location:my/storage/location
