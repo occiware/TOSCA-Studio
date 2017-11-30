@@ -26,7 +26,7 @@ public class ConfigManager {
 		String name = convertPathToConfigName(path);
 		ResourceSet resSet = new ResourceSetImpl();
 		URI modelURI = URI
-				.createURI("file:/C:/Users/schallit/workspace-tosca/plugins/org.eclipse.cmf.occi.tosca.examples/" + name + ".extendedTosca");
+				.createURI("file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.examples/" + name + ".extendedTosca");
 		resource = resSet.createResource(modelURI);
 		Configuration configuration = OCCIFactory.eINSTANCE.createConfiguration();
 		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/core#"));
@@ -57,7 +57,7 @@ public class ConfigManager {
 		throw new RuntimeException("Could not find any resources corresponding to the Kind: " + kind.getName());
 	}
 	
-	private static String convertPathToConfigName(String path) {
+	public static String convertPathToConfigName(String path) {
 		String[] splittedPath = path.split("/");
 		return splittedPath[splittedPath.length - 1].split("\\.")[0];
 	}

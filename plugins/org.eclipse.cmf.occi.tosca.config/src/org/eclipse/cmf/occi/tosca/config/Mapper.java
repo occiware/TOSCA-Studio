@@ -45,6 +45,8 @@ public class Mapper {
 		mappingOfCapabilities.put("setNumCpus", new Mapping(Compute.class, "setOcciComputeCores", Integer.class));
 		mappingOfCapabilities.put("setMemSize", new Mapping(Compute.class, "setOcciComputeMemory", Float.class));
 		mappingOfCapabilities.put("setArchitecture", new Mapping(Compute.class, "setOcciComputeArchitecture", Architecture.class));
+		
+		mappingOfCapabilities.put("setSize", new Mapping(Storage.class, "setOcciStorageSize", Float.class));
 	}
 	
 	public static class MappingToCreateType {

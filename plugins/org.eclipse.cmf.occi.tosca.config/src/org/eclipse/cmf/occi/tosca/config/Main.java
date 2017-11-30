@@ -7,6 +7,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+import javax.sound.midi.Soundbank;
+
 import org.eclipse.cmf.occi.core.Configuration;
 import org.eclipse.cmf.occi.core.Entity;
 import org.eclipse.cmf.occi.core.Kind;
@@ -37,12 +39,14 @@ public class Main extends AbstractHandler {
 		String pathOfDirectory = "C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.examples/tosca-topologies/";
 		String[] yamlFilesPath = new File(pathOfDirectory).list();
 		for (String yamlFilePath : yamlFilesPath) {
-			if (!yamlFilePath.equals("Example16-UsingSubstitutionMappingsToExportADatabaseImplementation.yml") 
-					&& !yamlFilePath.equals("Example3-SimpleMySQLInstallationOnATOSCAComputeNode.yml") 
-					&& !yamlFilePath.equals("Example4-NodeTemplateOverridingItsNodeTypeConfigureInterface.yml")  
-					&& !yamlFilePath.equals("Example5-TemplateForDeployingDatabaseContentOnTopOfMySQLDBMSMiddleware.yml") 
-					&& !yamlFilePath.equals("Example9-DefiningACustomRelationshipType.yml") 
-					&& !yamlFilePath.equals("Multi-Tier1-ElasticsearchLogstashKibana.yml")) {
+			if (!yamlFilePath.equals("Example16-UsingSubstitutionMappingsToExportADatabaseImplementation.yml")
+					&& !yamlFilePath.equals("Example3-SimpleMySQLInstallationOnATOSCAComputeNode.yml")
+					&& !yamlFilePath.equals("Example4-NodeTemplateOverridingItsNodeTypeConfigureInterface.yml")
+					&& !yamlFilePath
+							.equals("Example5-TemplateForDeployingDatabaseContentOnTopOfMySQLDBMSMiddleware.yml")
+					&& !yamlFilePath.equals("Example9-DefiningACustomRelationshipType.yml")
+					&& !yamlFilePath.equals("Multi-Tier1-ElasticsearchLogstashKibana.yml")
+					&& !yamlFilePath.equals("BlockStorage2.yml")) {
 				readYamlFile(pathOfDirectory + "/" + yamlFilePath);
 			}
 		}
@@ -57,6 +61,10 @@ public class Main extends AbstractHandler {
 			ConfigManager.createConfiguration(path);
 			Configuration configuration = ConfigManager.currentConfiguration;
 			Map<String, ?> topology_template = (Map<String, ?>) yamlFileAsMap.get("topology_template");
+			if (topology_template.get("inputs") != null && topology_template.get("inputs") instanceof Map) {
+				InputsReader.read(ConfigManager.convertPathToConfigName(path),
+						(Map<String, ?>) topology_template.get("inputs"));
+			}
 			if (topology_template.get("description") != null) {
 				configuration.setDescription((String) topology_template.get("description"));
 			}
@@ -104,10 +112,23 @@ public class Main extends AbstractHandler {
 					configuration.getResources().add((Resource) entity);
 				}
 			}
-			
-			// parsing capabilities
+
+			if (node_map.get("properties") != null && node_map.get("properties") instanceof Map) {
+				PropertyReader.readProperties(node, (Map<String, ?>) node_map.get("properties"));
+			}
+
 			if (node_map.get("capabilities") != null) {
-				PropertyReader.readProperties(node, (Map<String, ?>) node_map.get("capabilities"));
+				readCapabilities(node, (Map<String, ?>) node_map.get("capabilities"));
+			}
+		}
+	}
+
+	private static void readCapabilities(MixinBase node, Map<String, ?> capabilities) throws Exception {
+		for (String capability : capabilities.keySet()) {
+			Map<String, ?> capabilityMap = (Map<String, ?>) capabilities.get(capability);
+			Map<String, ?> properties = (Map<String, ?>) capabilityMap.get("properties");
+			if (properties != null) {
+				PropertyReader.readProperties(node, properties);
 			}
 		}
 	}

@@ -9,22 +9,28 @@ import org.eclipse.cmf.occi.tosca.config.Mapper.Mapping;
 
 public class PropertyReader {
 
-	public static void readProperties(MixinBase node, Map<String, ?> capabilities) throws Exception {
-		for (String capability : capabilities.keySet()) {
-			Map<String, ?> capabilityMap = (Map<String, ?>) capabilities.get(capability);
-			Map<String, ?> properties = (Map<String, ?>) capabilityMap.get("properties");
-			for (String property : properties.keySet()) {
-				if (!(properties.get(property) instanceof String)) {
+	public static void readProperties(MixinBase node, Map<String, ?> properties) throws Exception {
+		for (String property : properties.keySet()) {
+			String propertyValue;
+			if (!(properties.get(property) instanceof String)) {
+				if (properties.get(property) instanceof Map) { // it means this is a input
+					propertyValue = InputsReader.inputs.get(((Map) properties.get(property)).get("get_input"));
+				} else {
 					System.err.println(property + " skipped (" + properties.get(property).getClass() + ")");
 					continue;
 				}
-				String[] splittedProperty = property.split("_");
-				String setterNameMethod = "set";
-				for (String partProperty : splittedProperty) {
-					setterNameMethod += Character.toUpperCase(partProperty.charAt(0)) + partProperty.substring(1);
+				if (propertyValue == null) {
+					continue;
 				}
-				invokeRightMethod(node.getClass(), setterNameMethod, (String) properties.get(property), node);
+			} else {
+				propertyValue = (String) properties.get(property);
 			}
+			String[] splittedProperty = property.split("_");
+			String setterNameMethod = "set";
+			for (String partProperty : splittedProperty) {
+				setterNameMethod += Character.toUpperCase(partProperty.charAt(0)) + partProperty.substring(1);
+			}
+			invokeRightMethod(node.getClass(), setterNameMethod, propertyValue, node);
 		}
 	}
 
