@@ -27,7 +27,6 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_blockstorage#getSize <em>Size</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_blockstorage#getVolumeId <em>Volume Id</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_blockstorage#getSnapshotId <em>Snapshot Id</em>}</li>
  * </ul>
@@ -37,32 +36,6 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * @generated
  */
 public interface Tosca_nodes_blockstorage extends Tosca_nodes_root, Tosca_capabilities_attachment, MixinBase {
-	/**
-	 * Returns the value of the '<em><b>Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * The requested storage size (default unit is MB). Note: - Required when an existing volume (i.e., volume_id) is not available. - If volume_id is provided, size is ignored.  Resize of existing volumes is not considered at this time.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Size</em>' attribute.
-	 * @see #setSize(Integer)
-	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_blockstorage_Size()
-	 * @model dataType="org.eclipse.cmf.occi.tosca.scalarSizeMinOneMB"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_blockstorage!size'"
-	 * @generated
-	 */
-	Integer getSize();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_blockstorage#getSize <em>Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Size</em>' attribute.
-	 * @see #getSize()
-	 * @generated
-	 */
-	void setSize(Integer value);
-
 	/**
 	 * Returns the value of the '<em><b>Volume Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->

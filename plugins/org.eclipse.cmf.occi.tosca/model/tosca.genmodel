@@ -321,9 +321,6 @@
     <genClasses>
       <ecoreClass href="tosca.ecore#//Tosca_nodes_blockstorage"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//Tosca_nodes_blockstorage/size"/>
-      </genFeatures>
-      <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="tosca.ecore#//Tosca_nodes_blockstorage/volumeId"/>
       </genFeatures>
       <genFeatures createChild="false">

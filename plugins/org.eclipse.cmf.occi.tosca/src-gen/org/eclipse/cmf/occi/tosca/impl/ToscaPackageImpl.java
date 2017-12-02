@@ -1412,7 +1412,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTosca_nodes_blockstorage_Size() {
+	public EAttribute getTosca_nodes_blockstorage_VolumeId() {
 		return (EAttribute)tosca_nodes_blockstorageEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1421,17 +1421,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTosca_nodes_blockstorage_VolumeId() {
-		return (EAttribute)tosca_nodes_blockstorageEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getTosca_nodes_blockstorage_SnapshotId() {
-		return (EAttribute)tosca_nodes_blockstorageEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)tosca_nodes_blockstorageEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2135,7 +2126,6 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		tosca_nodes_container_runtimeEClass = createEClass(TOSCA_NODES_CONTAINER_RUNTIME);
 
 		tosca_nodes_blockstorageEClass = createEClass(TOSCA_NODES_BLOCKSTORAGE);
-		createEAttribute(tosca_nodes_blockstorageEClass, TOSCA_NODES_BLOCKSTORAGE__SIZE);
 		createEAttribute(tosca_nodes_blockstorageEClass, TOSCA_NODES_BLOCKSTORAGE__VOLUME_ID);
 		createEAttribute(tosca_nodes_blockstorageEClass, TOSCA_NODES_BLOCKSTORAGE__SNAPSHOT_ID);
 		createEOperation(tosca_nodes_blockstorageEClass, TOSCA_NODES_BLOCKSTORAGE___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP);
@@ -2539,7 +2529,6 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		initEClass(tosca_nodes_container_runtimeEClass, Tosca_nodes_container_runtime.class, "Tosca_nodes_container_runtime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(tosca_nodes_blockstorageEClass, Tosca_nodes_blockstorage.class, "Tosca_nodes_blockstorage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTosca_nodes_blockstorage_Size(), this.getscalarSizeMinOneMB(), "size", null, 0, 1, Tosca_nodes_blockstorage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTosca_nodes_blockstorage_VolumeId(), this.getstring(), "volumeId", null, 0, 1, Tosca_nodes_blockstorage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTosca_nodes_blockstorage_SnapshotId(), this.getstring(), "snapshotId", null, 0, 1, Tosca_nodes_blockstorage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
