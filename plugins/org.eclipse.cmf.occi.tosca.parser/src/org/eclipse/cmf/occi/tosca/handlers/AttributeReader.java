@@ -77,7 +77,7 @@ public class AttributeReader {
 						if (constraint.get("valid_values") != null) {
 							List<String> literals = (ArrayList) constraint.get("valid_values");
 							type = OCCIFactory.eINSTANCE.createEnumerationType();
-							type.setName(attributeName + "Enum");
+							type.setName(attributeName.replaceAll("\\.", "_") + "Enum");
 							for (String literal : literals) {
 								EnumerationLiteral enumLit = OCCIFactory.eINSTANCE.createEnumerationLiteral();
 								enumLit.setName(literal);

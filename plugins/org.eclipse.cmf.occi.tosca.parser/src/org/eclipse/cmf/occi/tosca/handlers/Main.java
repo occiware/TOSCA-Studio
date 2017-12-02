@@ -135,7 +135,7 @@ public class Main extends AbstractHandler {
 		customTypesMap.put("relationship_types", relationships);
 		customTypesMap.put("policy_types", policies);
 		YamlWriter writerNodes = new YamlWriter(new FileWriter(
-				"C:/Users/schallit/workspace-tosca/plugins/org.eclipse.cmf.occi.tosca.parser/tosca-types/custom-types.yml"));
+				"C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.parser/tosca-types/custom-types.yml"));
 		writerNodes.write(customTypesMap);
 		writerNodes.close();
 		return customTypesMap;

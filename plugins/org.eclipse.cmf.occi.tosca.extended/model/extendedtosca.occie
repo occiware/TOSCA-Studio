@@ -65,7 +65,7 @@
     <attributes name="network.id">
       <type xsi:type="occi:StringType" href="http://org.occi/tosca#//@types.0"/>
     </attributes>
-    <attributes name="ip.version" default="4" type="//@types.3"/>
+    <attributes name="ip.version" default="IPv4" type="//@types.3"/>
     <attributes name="start.ip">
       <type xsi:type="occi:StringType" href="http://org.occi/tosca#//@types.0"/>
     </attributes>
@@ -219,9 +219,9 @@
   <types xsi:type="occi:ArrayType" name="arrayversion">
     <type xsi:type="occi:StringType" href="http://org.occi/tosca#//@types.12"/>
   </types>
-  <types xsi:type="occi:EnumerationType" name="ip.versionEnum">
-    <literals name="4"/>
-    <literals name="6"/>
+  <types xsi:type="occi:EnumerationType" name="ip_versionEnum">
+    <literals name="IPv4"/>
+    <literals name="IPv6"/>
   </types>
   <types xsi:type="occi:ArrayType" name="arrayinteger">
     <type xsi:type="occi:NumericType" href="http://org.occi/tosca#//@types.6"/>

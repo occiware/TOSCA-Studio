@@ -3,11 +3,11 @@ node_types:
         derived_from: tosca.nodes.Root
         properties:
             ip_version:
-                type: integer
+                type: string
                 required: false
-                default: 4
+                default: IPv4
                 constraints:
-                    - valid_values: [ 4, 6 ]
+                    - valid_values: [ IPv4, IPv6 ]
             cidr:
                 type: string
                 required: false

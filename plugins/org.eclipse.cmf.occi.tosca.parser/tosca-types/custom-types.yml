@@ -3,11 +3,6 @@ tosca_definitions_version: tosca_simple_yaml_1_0
 description: This TOSCA definitions document contains the custom types definitions as expressed in the
    TOSCA specification document. It is composed by the files in the directory custom-types
 node_types: 
-   tosca.nodes.Database.MySQL: 
-      requirements: 
-      -  host: 
-            node: tosca.nodes.DBMS.MySQL
-      derived_from: tosca.nodes.Database
    tosca.nodes.ComputeWithProp: 
       derived_from: tosca.nodes.Compute
       description: Compute node type with a parameter for the get property with host test
@@ -15,22 +10,6 @@ node_types:
          test: 
             type: integer
             required: false
-   capabilities: 
-      link: 
-         type: tosca.capabilities.network.Linkable
-   tosca.nodes.SoftwareComponent.Elasticsearch: 
-      capabilities: 
-         search_endpoint: 
-            type: tosca.capabilities.Endpoint
-      derived_from: tosca.nodes.SoftwareComponent
-      description: Elasticsearch is an open-source search engine built on top of Apache Lucene, a full-text
-         search-engine library.
-   tosca.nodes.DatabaseWithListParam: 
-      derived_from: tosca.nodes.Database
-      properties: 
-         list_prop: 
-            entry_schema: integer
-            type: list
    tosca.nodes.WebApplication.PayPalPizzaStore: 
       requirements: 
       -  database_connection: 
@@ -69,48 +48,43 @@ node_types:
          admin_user: 
             type: string
    tosca.nodes.network.Network: 
-      physical_network: 
-         type: string
-         required: false
-      segmentation_id: 
-         type: string
-         required: false
-      network_id: 
-         type: string
-         required: false
       derived_from: tosca.nodes.Root
-      start_ip: 
-         type: string
-         required: false
-      network_name: 
-         type: string
-         required: false
-      cidr: 
-         type: string
-         required: false
-      gateway_ip: 
-         type: string
-         required: false
-      network_type: 
-         type: string
-         required: false
-      constraints: 
-      -  valid_values: 
-         - '4'
-         - '6'
-      end_ip: 
-         type: string
-         required: false
       properties: 
-         ip_version: 
-            default: '4'
-            type: integer
+         physical_network: 
+            type: string
             required: false
-   tosca.nodes.NodeWithCap: 
-      capabilities: 
-         some_req: 
-            type: tosca.capabilities.SomeCap
-      derived_from: tosca.nodes.Root
+         segmentation_id: 
+            type: string
+            required: false
+         network_id: 
+            type: string
+            required: false
+         ip_version: 
+            default: IPv4
+            type: string
+            constraints: 
+            -  valid_values: 
+               - IPv4
+               - IPv6
+            required: false
+         start_ip: 
+            type: string
+            required: false
+         network_name: 
+            type: string
+            required: false
+         cidr: 
+            type: string
+            required: false
+         gateway_ip: 
+            type: string
+            required: false
+         network_type: 
+            type: string
+            required: false
+         end_ip: 
+            type: string
+            required: false
    tosca.nodes.Container.Application.Docker: 
       requirements: 
       -  host: 
@@ -125,14 +99,6 @@ node_types:
       derived_from: tosca.nodes.SoftwareComponent
       description: Kibana is an open source analytics and visualization platform designed to work with
          Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch.
-   Rsyslog: 
-      requirements: 
-      -  log_endpoint: 
-            node: tosca.nodes.SoftwareComponent.Logstash
-            capability: tosca.capabilities.Endpoint
-            relationship: tosca.relationships.ConnectsTo
-      derived_from: tosca.nodes.SoftwareComponent
-      description: RSYSLOG is the Rocket-fast SYStem for LOG processing.
    tosca.nodes.ComputeWithAttrList: 
       derived_from: tosca.nodes.Compute
       description: Compute node type with a list attribute
@@ -141,6 +107,124 @@ node_types:
             entry_schema: 
                type: string
             type: map
+   tosca.nodes.SoftwareComponent.Logstash: 
+      requirements: 
+      -  search_endpoint: 
+            node: tosca.nodes.SoftwareComponent.Elasticsearch
+            capability: tosca.capabilities.Endpoint
+            relationship: 
+               interfaces: 
+                  Configure: 
+                     pre_configure_source: 
+                        inputs: 
+                           elasticsearch_ip: 
+                              type: string
+               type: tosca.relationships.ConnectsTo
+      capabilities: 
+         log_endpoint: 
+            type: tosca.capabilities.Endpoint
+      derived_from: tosca.nodes.SoftwareComponent
+      description: Logstash is a tool for receiving, processing and outputting logs. All kinds of logs.
+         System logs, webserver logs, error logs, application logs, and just about anything you can throw
+         at it.
+   example.DatabaseSubsystem: 
+      capabilities: 
+         database_endpoint: 
+            type: tosca.capabilities.Endpoint.Database
+      derived_from: tosca.nodes.Root
+   tosca.nodes.SoftwareComponent.Collectd: 
+      requirements: 
+      -  log_endpoint: 
+            node: tosca.nodes.SoftwareComponent.Logstash
+            capability: tosca.capabilities.Endpoint
+            relationship: tosca.relationships.ConnectsTo
+      derived_from: tosca.nodes.SoftwareComponent
+      description: collectd is a daemon which gathers statistics about the system it is running on.
+   tosca.nodes.NodeWithReq: 
+      requirements: 
+      -  host: 
+            occurrences: 
+            - '1'
+            - '1'
+            capability: tosca.capabilities.SomeCap
+            relationship: tosca.relationships.HostedOn
+      derived_from: tosca.nodes.SoftwareComponent
+   tosca.nodes.SomeNode2: 
+      requirements: 
+      -  host: 
+            node: tosca.nodes.Compute
+            capability: tosca.capabilities.Container
+            relationship: tosca.relationships.HostedOn
+      capabilities: 
+         host_child: 
+            type: tosca.capabilities.ContainerChild
+      derived_from: tosca.nodes.Root
+   tosca.nodes.Database.MySQL: 
+      requirements: 
+      -  host: 
+            node: tosca.nodes.DBMS.MySQL
+      derived_from: tosca.nodes.Database
+   example.QueuingSubsystem: 
+      requirements: 
+      -  receiver: 
+            node: example.TransactionSubsystem
+            capabilities: tosca.capabilities.Endpoint
+      capabilities: 
+         message_queue_endpoint: 
+            type: tosca.capabilities.Endpoint
+      derived_from: tosca.nodes.Root
+   example.TransactionSubsystem: 
+      requirements: 
+      -  database_endpoint: tosca.capabilities.Endpoint.Database
+      capabilities: 
+         message_receiver: tosca.capabilities.Endpoint
+      derived_from: tosca.nodes.Root
+      attributes: 
+         receiver_port: 
+            type: integer
+         receiver_ip: 
+            type: string
+      properties: 
+         receiver_port: 
+            type: integer
+         mq_service_ip: 
+            type: string
+   tosca.nodes.SoftwareComponent.Elasticsearch: 
+      capabilities: 
+         search_endpoint: 
+            type: tosca.capabilities.Endpoint
+      derived_from: tosca.nodes.SoftwareComponent
+      description: Elasticsearch is an open-source search engine built on top of Apache Lucene, a full-text
+         search-engine library.
+   tosca.nodes.DatabaseWithListParam: 
+      derived_from: tosca.nodes.Database
+      properties: 
+         list_prop: 
+            entry_schema: integer
+            type: list
+   example.SomeApp: 
+      requirements: 
+      -  database: 
+            capability: tosca.capabilities.Endpoint.Database
+      -  host: 
+            node: tosca.nodes.WebServer
+      capabilities: 
+         message_receiver: tosca.capabilities.Endpoint
+      derived_from: tosca.nodes.Root
+      description: taken from tosca-topologies/Example18-ImplementationOfATransactionSubsytemNodeTypeUsingSubstitutionMappings
+   tosca.nodes.NodeWithCap: 
+      capabilities: 
+         some_req: 
+            type: tosca.capabilities.SomeCap
+      derived_from: tosca.nodes.Root
+   Rsyslog: 
+      requirements: 
+      -  log_endpoint: 
+            node: tosca.nodes.SoftwareComponent.Logstash
+            capability: tosca.capabilities.Endpoint
+            relationship: tosca.relationships.ConnectsTo
+      derived_from: tosca.nodes.SoftwareComponent
+      description: RSYSLOG is the Rocket-fast SYStem for LOG processing.
    tosca.nodes.network.Port: 
       requirements: 
       -  link: 
@@ -170,49 +254,12 @@ node_types:
             constraints: 
             -  greater_or_equal: '0'
             required: true
-   tosca.nodes.SoftwareComponent.Logstash: 
-      requirements: 
-      -  search_endpoint: 
-            node: tosca.nodes.SoftwareComponent.Elasticsearch
-            capability: tosca.capabilities.Endpoint
-            relationship: 
-               interfaces: 
-                  Configure: 
-                     pre_configure_source: 
-                        inputs: 
-                           elasticsearch_ip: 
-                              type: string
-               type: tosca.relationships.ConnectsTo
-      capabilities: 
-         log_endpoint: 
-            type: tosca.capabilities.Endpoint
-      derived_from: tosca.nodes.SoftwareComponent
-      description: Logstash is a tool for receiving, processing and outputting logs. All kinds of logs.
-         System logs, webserver logs, error logs, application logs, and just about anything you can throw
-         at it.
-   tosca.nodes.SoftwareComponent.Collectd: 
-      requirements: 
-      -  log_endpoint: 
-            node: tosca.nodes.SoftwareComponent.Logstash
-            capability: tosca.capabilities.Endpoint
-            relationship: tosca.relationships.ConnectsTo
-      derived_from: tosca.nodes.SoftwareComponent
-      description: collectd is a daemon which gathers statistics about the system it is running on.
    tosca.nodes.ComputeWithCapWithAttr: 
       capabilities: 
          endpoint: 
             type: tosca.capabilities.indigo.Endpoint
       derived_from: tosca.nodes.Compute
       description: Compute node type with capability with an attribute of type list
-   tosca.nodes.NodeWithReq: 
-      requirements: 
-      -  host: 
-            occurrences: 
-            - '1'
-            - '1'
-            capability: tosca.capabilities.SomeCap
-            relationship: tosca.relationships.HostedOn
-      derived_from: tosca.nodes.SoftwareComponent
    tosca.nodes.SoftwareComponent.Rsyslog: 
       requirements: 
       -  log_endpoint: 
@@ -260,16 +307,6 @@ node_types:
             description: location of the application on the github.
             type: string
             required: no
-   tosca.nodes.SomeNode2: 
-      requirements: 
-      -  host: 
-            node: tosca.nodes.Compute
-            capability: tosca.capabilities.Container
-            relationship: tosca.relationships.HostedOn
-      capabilities: 
-         host_child: 
-            type: tosca.capabilities.ContainerChild
-      derived_from: tosca.nodes.Root
    tosca.nodes.DBMS.MySQL: 
       capabilities: 
          host: 
@@ -340,6 +377,13 @@ relationship_types:
       valid_target_types: 
       - tosca.capabilities.HA
       derived_from: tosca.relationships.Root
+   MyAttachesTo: 
+      derived_from: tosca.relationships.AttachesTo
+      description: taken from tosca-topologies/BlockStorage4
+      properties: 
+         location: 
+            default: /default_location
+            type: string
    tosca.relationships.network.LinksTo: 
       valid_target_types: 
       - tosca.capabilities.network.Linkable
