@@ -102,7 +102,6 @@ public class ToscaTables
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_integer = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("integer", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_map = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("map", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_range = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("range", 0);
-	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_scalarSizeMinOneMB = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("scalarSizeMinOneMB", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_scalarSizeMinZeroGB = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("scalarSizeMinZeroGB", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_scalarSizeMinZeroMB = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("scalarSizeMinZeroMB", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_string = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("string", 0);
@@ -838,9 +837,8 @@ public class ToscaTables
 		public static final /*@NonNull*/ ExecutorProperty _Tosca_capabilities_scalable__maxInstances = new EcoreExecutorProperty(ToscaPackage.Literals.TOSCA_CAPABILITIES_SCALABLE__MAX_INSTANCES, Types._Tosca_capabilities_scalable, 1);
 		public static final /*@NonNull*/ ExecutorProperty _Tosca_capabilities_scalable__minInstances = new EcoreExecutorProperty(ToscaPackage.Literals.TOSCA_CAPABILITIES_SCALABLE__MIN_INSTANCES, Types._Tosca_capabilities_scalable, 2);
 
-		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_blockstorage__size = new EcoreExecutorProperty(ToscaPackage.Literals.TOSCA_NODES_BLOCKSTORAGE__SIZE, Types._Tosca_nodes_blockstorage, 0);
-		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_blockstorage__snapshotId = new EcoreExecutorProperty(ToscaPackage.Literals.TOSCA_NODES_BLOCKSTORAGE__SNAPSHOT_ID, Types._Tosca_nodes_blockstorage, 1);
-		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_blockstorage__volumeId = new EcoreExecutorProperty(ToscaPackage.Literals.TOSCA_NODES_BLOCKSTORAGE__VOLUME_ID, Types._Tosca_nodes_blockstorage, 2);
+		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_blockstorage__snapshotId = new EcoreExecutorProperty(ToscaPackage.Literals.TOSCA_NODES_BLOCKSTORAGE__SNAPSHOT_ID, Types._Tosca_nodes_blockstorage, 0);
+		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_blockstorage__volumeId = new EcoreExecutorProperty(ToscaPackage.Literals.TOSCA_NODES_BLOCKSTORAGE__VOLUME_ID, Types._Tosca_nodes_blockstorage, 1);
 
 		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_compute__networks = new EcoreExecutorProperty(ToscaPackage.Literals.TOSCA_NODES_COMPUTE__NETWORKS, Types._Tosca_nodes_compute, 0);
 		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_compute__privateAddress = new EcoreExecutorProperty(ToscaPackage.Literals.TOSCA_NODES_COMPUTE__PRIVATE_ADDRESS, Types._Tosca_nodes_compute, 1);
@@ -3993,7 +3991,6 @@ public class ToscaTables
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_interfaces_root = {};
 
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_blockstorage = {
-			ToscaTables.Properties._Tosca_nodes_blockstorage__size,
 			ToscaTables.Properties._Tosca_nodes_blockstorage__snapshotId,
 			ToscaTables.Properties._Tosca_nodes_blockstorage__volumeId
 		};

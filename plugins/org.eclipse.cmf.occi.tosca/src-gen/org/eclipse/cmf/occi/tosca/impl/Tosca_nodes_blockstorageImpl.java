@@ -58,7 +58,6 @@ import org.eclipse.ocl.pivot.values.IntegerValue;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_blockstorageImpl#getSize <em>Size</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_blockstorageImpl#getVolumeId <em>Volume Id</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_blockstorageImpl#getSnapshotId <em>Snapshot Id</em>}</li>
  * </ul>
@@ -66,26 +65,6 @@ import org.eclipse.ocl.pivot.values.IntegerValue;
  * @generated
  */
 public class Tosca_nodes_blockstorageImpl extends Tosca_nodes_rootImpl implements Tosca_nodes_blockstorage {
-	/**
-	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSize()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Integer SIZE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSize()
-	 * @generated
-	 * @ordered
-	 */
-	protected Integer size = SIZE_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getVolumeId() <em>Volume Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -143,27 +122,6 @@ public class Tosca_nodes_blockstorageImpl extends Tosca_nodes_rootImpl implement
 	@Override
 	protected EClass eStaticClass() {
 		return ToscaPackage.Literals.TOSCA_NODES_BLOCKSTORAGE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Integer getSize() {
-		return size;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSize(Integer newSize) {
-		Integer oldSize = size;
-		size = newSize;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCA_NODES_BLOCKSTORAGE__SIZE, oldSize, size));
 	}
 
 	/**
@@ -255,8 +213,6 @@ public class Tosca_nodes_blockstorageImpl extends Tosca_nodes_rootImpl implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToscaPackage.TOSCA_NODES_BLOCKSTORAGE__SIZE:
-				return getSize();
 			case ToscaPackage.TOSCA_NODES_BLOCKSTORAGE__VOLUME_ID:
 				return getVolumeId();
 			case ToscaPackage.TOSCA_NODES_BLOCKSTORAGE__SNAPSHOT_ID:
@@ -273,9 +229,6 @@ public class Tosca_nodes_blockstorageImpl extends Tosca_nodes_rootImpl implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToscaPackage.TOSCA_NODES_BLOCKSTORAGE__SIZE:
-				setSize((Integer)newValue);
-				return;
 			case ToscaPackage.TOSCA_NODES_BLOCKSTORAGE__VOLUME_ID:
 				setVolumeId((String)newValue);
 				return;
@@ -294,9 +247,6 @@ public class Tosca_nodes_blockstorageImpl extends Tosca_nodes_rootImpl implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToscaPackage.TOSCA_NODES_BLOCKSTORAGE__SIZE:
-				setSize(SIZE_EDEFAULT);
-				return;
 			case ToscaPackage.TOSCA_NODES_BLOCKSTORAGE__VOLUME_ID:
 				setVolumeId(VOLUME_ID_EDEFAULT);
 				return;
@@ -315,8 +265,6 @@ public class Tosca_nodes_blockstorageImpl extends Tosca_nodes_rootImpl implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToscaPackage.TOSCA_NODES_BLOCKSTORAGE__SIZE:
-				return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
 			case ToscaPackage.TOSCA_NODES_BLOCKSTORAGE__VOLUME_ID:
 				return VOLUME_ID_EDEFAULT == null ? volumeId != null : !VOLUME_ID_EDEFAULT.equals(volumeId);
 			case ToscaPackage.TOSCA_NODES_BLOCKSTORAGE__SNAPSHOT_ID:
@@ -371,9 +319,7 @@ public class Tosca_nodes_blockstorageImpl extends Tosca_nodes_rootImpl implement
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (size: ");
-		result.append(size);
-		result.append(", volumeId: ");
+		result.append(" (volumeId: ");
 		result.append(volumeId);
 		result.append(", snapshotId: ");
 		result.append(snapshotId);

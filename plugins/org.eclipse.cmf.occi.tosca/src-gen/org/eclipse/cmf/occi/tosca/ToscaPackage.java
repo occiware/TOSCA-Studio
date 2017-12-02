@@ -3171,22 +3171,13 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_BLOCKSTORAGE__ATTRIBUTES = TOSCA_NODES_ROOT__ATTRIBUTES;
 
 	/**
-	 * The feature id for the '<em><b>Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_BLOCKSTORAGE__SIZE = TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Volume Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_BLOCKSTORAGE__VOLUME_ID = TOSCA_NODES_ROOT_FEATURE_COUNT + 1;
+	int TOSCA_NODES_BLOCKSTORAGE__VOLUME_ID = TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Snapshot Id</b></em>' attribute.
@@ -3195,7 +3186,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_BLOCKSTORAGE__SNAPSHOT_ID = TOSCA_NODES_ROOT_FEATURE_COUNT + 2;
+	int TOSCA_NODES_BLOCKSTORAGE__SNAPSHOT_ID = TOSCA_NODES_ROOT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Tosca nodes blockstorage</em>' class.
@@ -3204,7 +3195,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_BLOCKSTORAGE_FEATURE_COUNT = TOSCA_NODES_ROOT_FEATURE_COUNT + 3;
+	int TOSCA_NODES_BLOCKSTORAGE_FEATURE_COUNT = TOSCA_NODES_ROOT_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Create</em>' operation.
@@ -5803,17 +5794,6 @@ public interface ToscaPackage extends EPackage {
 	EClass getTosca_nodes_blockstorage();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_blockstorage#getSize <em>Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Size</em>'.
-	 * @see org.eclipse.cmf.occi.tosca.Tosca_nodes_blockstorage#getSize()
-	 * @see #getTosca_nodes_blockstorage()
-	 * @generated
-	 */
-	EAttribute getTosca_nodes_blockstorage_Size();
-
-	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_blockstorage#getVolumeId <em>Volume Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7271,14 +7251,6 @@ public interface ToscaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TOSCA_NODES_BLOCKSTORAGE = eINSTANCE.getTosca_nodes_blockstorage();
-
-		/**
-		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TOSCA_NODES_BLOCKSTORAGE__SIZE = eINSTANCE.getTosca_nodes_blockstorage_Size();
 
 		/**
 		 * The meta object literal for the '<em><b>Volume Id</b></em>' attribute feature.
