@@ -55,33 +55,10 @@ public class Tosca_nodes_blockstorageItemProvider extends Tosca_nodes_rootItemPr
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSizePropertyDescriptor(object);
 			addVolumeIdPropertyDescriptor(object);
 			addSnapshotIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Size feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSizePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Tosca_nodes_blockstorage_size_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_nodes_blockstorage_size_feature", "_UI_Tosca_nodes_blockstorage_type"),
-				 ToscaPackage.Literals.TOSCA_NODES_BLOCKSTORAGE__SIZE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -147,8 +124,7 @@ public class Tosca_nodes_blockstorageItemProvider extends Tosca_nodes_rootItemPr
 	 */
 	@Override
 	public String getText(Object object) {
-		Integer labelValue = ((Tosca_nodes_blockstorage)object).getSize();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((Tosca_nodes_blockstorage)object).getVolumeId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tosca_nodes_blockstorage_type") :
 			getString("_UI_Tosca_nodes_blockstorage_type") + " " + label;
@@ -167,7 +143,6 @@ public class Tosca_nodes_blockstorageItemProvider extends Tosca_nodes_rootItemPr
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Tosca_nodes_blockstorage.class)) {
-			case ToscaPackage.TOSCA_NODES_BLOCKSTORAGE__SIZE:
 			case ToscaPackage.TOSCA_NODES_BLOCKSTORAGE__VOLUME_ID:
 			case ToscaPackage.TOSCA_NODES_BLOCKSTORAGE__SNAPSHOT_ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
