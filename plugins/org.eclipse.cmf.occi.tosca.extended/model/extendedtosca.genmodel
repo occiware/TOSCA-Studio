@@ -256,6 +256,9 @@
       <ecoreClass href="extendedtosca.ecore#//Tosca_relationships_network_linksto"/>
     </genClasses>
   </genPackages>
+  <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.infrastructure/model/Infrastructure.genmodel#//infrastructure"/>
+  <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.platform/model/Platform.genmodel#//platform"/>
+  <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.sla/model/sla.genmodel#//sla"/>
   <usedGenPackages href="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.genmodel#//tosca"/>
   <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.genmodel#//occi"/>
 </genmodel:GenModel>

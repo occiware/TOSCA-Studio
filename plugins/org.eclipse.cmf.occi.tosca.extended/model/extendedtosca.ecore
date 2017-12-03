@@ -8,6 +8,9 @@
   </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="occi" value="http://schemas.ogf.org/occi/core/ecore"/>
+    <details key="infrastructure" value="http://schemas.ogf.org/occi/infrastructure/ecore"/>
+    <details key="platform" value="http://schemas.ogf.org/occi/platform/ecore"/>
+    <details key="sla" value="http://schemas.ogf.org/occi/sla/ecore"/>
     <details key="tosca" value="http://org.occi/tosca/ecore"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="arrayCredential">

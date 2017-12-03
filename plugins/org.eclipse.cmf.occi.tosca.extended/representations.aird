@@ -18,10 +18,10 @@
     <semanticResources>platform:/plugin/org.eclipse.cmf.occi.infrastructure/model/Infrastructure.ecore</semanticResources>
     <semanticResources>platform:/plugin/org.eclipse.cmf.occi.platform/model/Platform.ecore</semanticResources>
     <semanticResources>platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore</semanticResources>
-    <semanticResources>model/extendedtosca.ecore</semanticResources>
-    <semanticResources>model/extendedtosca.genmodel</semanticResources>
     <semanticResources>platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.genmodel</semanticResources>
     <semanticResources>model/extendedtosca.occie</semanticResources>
+    <semanticResources>model/extendedtosca.ecore</semanticResources>
+    <semanticResources>model/extendedtosca.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_af2tgNBgEeeZUuwGrxtlRg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.cmf.occi.core.design/description/OCCIware.odesign#//@ownedViewpoints[name='OCCI%20Extension']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_a0ikENBgEeeZUuwGrxtlRg" name="extendedTosca" repPath="#_a0YzENBgEeeZUuwGrxtlRg">
