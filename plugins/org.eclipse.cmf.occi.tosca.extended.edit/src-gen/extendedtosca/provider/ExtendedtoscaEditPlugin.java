@@ -56,11 +56,9 @@ public final class ExtendedtoscaEditPlugin extends EMFPlugin {
 	public ExtendedtoscaEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     InfrastructureEditPlugin.INSTANCE,
-		     PlatformEditPlugin.INSTANCE,
-		     SlaEditPlugin.INSTANCE,
 		     ToscaEditPlugin.INSTANCE,
 		     OCCIEditPlugin.INSTANCE,
+		     SlaEditPlugin.INSTANCE,
 		   });
 	}
 

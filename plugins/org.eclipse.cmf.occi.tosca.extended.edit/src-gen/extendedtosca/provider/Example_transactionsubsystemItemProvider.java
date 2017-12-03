@@ -13,11 +13,13 @@
 package extendedtosca.provider;
 
 
+import extendedtosca.Example_transactionsubsystem;
 import extendedtosca.ExtendedtoscaPackage;
-import extendedtosca.Tosca_nodes_network_network;
 
 import java.util.Collection;
 import java.util.List;
+
+import org.eclipse.cmf.occi.tosca.ToscaPackage;
 
 import org.eclipse.cmf.occi.tosca.provider.Tosca_nodes_rootItemProvider;
 
@@ -32,19 +34,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link extendedtosca.Tosca_nodes_network_network} object.
+ * This is the item provider adapter for a {@link extendedtosca.Example_transactionsubsystem} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Tosca_nodes_network_networkItemProvider extends Tosca_nodes_rootItemProvider {
+public class Example_transactionsubsystemItemProvider extends Tosca_nodes_rootItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tosca_nodes_network_networkItemProvider(AdapterFactory adapterFactory) {
+	public Example_transactionsubsystemItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -59,34 +61,34 @@ public class Tosca_nodes_network_networkItemProvider extends Tosca_nodes_rootIte
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPhysicalNetworkPropertyDescriptor(object);
-			addSegmentationIdPropertyDescriptor(object);
-			addNetworkIdPropertyDescriptor(object);
-			addIpVersionPropertyDescriptor(object);
-			addStartIpPropertyDescriptor(object);
+			addPortNamePropertyDescriptor(object);
+			addProtocolPropertyDescriptor(object);
+			addPortPropertyDescriptor(object);
+			addInitiatorPropertyDescriptor(object);
 			addNetworkNamePropertyDescriptor(object);
-			addCidrPropertyDescriptor(object);
-			addGatewayIpPropertyDescriptor(object);
-			addNetworkTypePropertyDescriptor(object);
-			addEndIpPropertyDescriptor(object);
+			addSecurePropertyDescriptor(object);
+			addPortsPropertyDescriptor(object);
+			addUrlPathPropertyDescriptor(object);
+			addReceiverPortPropertyDescriptor(object);
+			addMqServiceIpPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Physical Network feature.
+	 * This adds a property descriptor for the Port Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPhysicalNetworkPropertyDescriptor(Object object) {
+	protected void addPortNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Tosca_nodes_network_network_physicalNetwork_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_nodes_network_network_physicalNetwork_feature", "_UI_Tosca_nodes_network_network_type"),
-				 ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__PHYSICAL_NETWORK,
+				 getString("_UI_Tosca_capabilities_endpoint_portName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_endpoint_portName_feature", "_UI_Tosca_capabilities_endpoint_type"),
+				 ToscaPackage.Literals.TOSCA_CAPABILITIES_ENDPOINT__PORT_NAME,
 				 true,
 				 false,
 				 false,
@@ -96,19 +98,19 @@ public class Tosca_nodes_network_networkItemProvider extends Tosca_nodes_rootIte
 	}
 
 	/**
-	 * This adds a property descriptor for the Segmentation Id feature.
+	 * This adds a property descriptor for the Protocol feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSegmentationIdPropertyDescriptor(Object object) {
+	protected void addProtocolPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Tosca_nodes_network_network_segmentationId_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_nodes_network_network_segmentationId_feature", "_UI_Tosca_nodes_network_network_type"),
-				 ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__SEGMENTATION_ID,
+				 getString("_UI_Tosca_capabilities_endpoint_protocol_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_endpoint_protocol_feature", "_UI_Tosca_capabilities_endpoint_type"),
+				 ToscaPackage.Literals.TOSCA_CAPABILITIES_ENDPOINT__PROTOCOL,
 				 true,
 				 false,
 				 false,
@@ -118,19 +120,19 @@ public class Tosca_nodes_network_networkItemProvider extends Tosca_nodes_rootIte
 	}
 
 	/**
-	 * This adds a property descriptor for the Network Id feature.
+	 * This adds a property descriptor for the Port feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNetworkIdPropertyDescriptor(Object object) {
+	protected void addPortPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Tosca_nodes_network_network_networkId_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_nodes_network_network_networkId_feature", "_UI_Tosca_nodes_network_network_type"),
-				 ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__NETWORK_ID,
+				 getString("_UI_Tosca_capabilities_endpoint_port_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_endpoint_port_feature", "_UI_Tosca_capabilities_endpoint_type"),
+				 ToscaPackage.Literals.TOSCA_CAPABILITIES_ENDPOINT__PORT,
 				 true,
 				 false,
 				 false,
@@ -140,41 +142,19 @@ public class Tosca_nodes_network_networkItemProvider extends Tosca_nodes_rootIte
 	}
 
 	/**
-	 * This adds a property descriptor for the Ip Version feature.
+	 * This adds a property descriptor for the Initiator feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIpVersionPropertyDescriptor(Object object) {
+	protected void addInitiatorPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Tosca_nodes_network_network_ipVersion_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_nodes_network_network_ipVersion_feature", "_UI_Tosca_nodes_network_network_type"),
-				 ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__IP_VERSION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Start Ip feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStartIpPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Tosca_nodes_network_network_startIp_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_nodes_network_network_startIp_feature", "_UI_Tosca_nodes_network_network_type"),
-				 ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__START_IP,
+				 getString("_UI_Tosca_capabilities_endpoint_initiator_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_endpoint_initiator_feature", "_UI_Tosca_capabilities_endpoint_type"),
+				 ToscaPackage.Literals.TOSCA_CAPABILITIES_ENDPOINT__INITIATOR,
 				 true,
 				 false,
 				 false,
@@ -194,9 +174,9 @@ public class Tosca_nodes_network_networkItemProvider extends Tosca_nodes_rootIte
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Tosca_nodes_network_network_networkName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_nodes_network_network_networkName_feature", "_UI_Tosca_nodes_network_network_type"),
-				 ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__NETWORK_NAME,
+				 getString("_UI_Tosca_capabilities_endpoint_networkName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_endpoint_networkName_feature", "_UI_Tosca_capabilities_endpoint_type"),
+				 ToscaPackage.Literals.TOSCA_CAPABILITIES_ENDPOINT__NETWORK_NAME,
 				 true,
 				 false,
 				 false,
@@ -206,19 +186,19 @@ public class Tosca_nodes_network_networkItemProvider extends Tosca_nodes_rootIte
 	}
 
 	/**
-	 * This adds a property descriptor for the Cidr feature.
+	 * This adds a property descriptor for the Secure feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCidrPropertyDescriptor(Object object) {
+	protected void addSecurePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Tosca_nodes_network_network_cidr_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_nodes_network_network_cidr_feature", "_UI_Tosca_nodes_network_network_type"),
-				 ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__CIDR,
+				 getString("_UI_Tosca_capabilities_endpoint_secure_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_endpoint_secure_feature", "_UI_Tosca_capabilities_endpoint_type"),
+				 ToscaPackage.Literals.TOSCA_CAPABILITIES_ENDPOINT__SECURE,
 				 true,
 				 false,
 				 false,
@@ -228,19 +208,19 @@ public class Tosca_nodes_network_networkItemProvider extends Tosca_nodes_rootIte
 	}
 
 	/**
-	 * This adds a property descriptor for the Gateway Ip feature.
+	 * This adds a property descriptor for the Ports feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addGatewayIpPropertyDescriptor(Object object) {
+	protected void addPortsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Tosca_nodes_network_network_gatewayIp_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_nodes_network_network_gatewayIp_feature", "_UI_Tosca_nodes_network_network_type"),
-				 ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__GATEWAY_IP,
+				 getString("_UI_Tosca_capabilities_endpoint_ports_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_endpoint_ports_feature", "_UI_Tosca_capabilities_endpoint_type"),
+				 ToscaPackage.Literals.TOSCA_CAPABILITIES_ENDPOINT__PORTS,
 				 true,
 				 false,
 				 false,
@@ -250,19 +230,19 @@ public class Tosca_nodes_network_networkItemProvider extends Tosca_nodes_rootIte
 	}
 
 	/**
-	 * This adds a property descriptor for the Network Type feature.
+	 * This adds a property descriptor for the Url Path feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNetworkTypePropertyDescriptor(Object object) {
+	protected void addUrlPathPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Tosca_nodes_network_network_networkType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_nodes_network_network_networkType_feature", "_UI_Tosca_nodes_network_network_type"),
-				 ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__NETWORK_TYPE,
+				 getString("_UI_Tosca_capabilities_endpoint_urlPath_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_endpoint_urlPath_feature", "_UI_Tosca_capabilities_endpoint_type"),
+				 ToscaPackage.Literals.TOSCA_CAPABILITIES_ENDPOINT__URL_PATH,
 				 true,
 				 false,
 				 false,
@@ -272,19 +252,19 @@ public class Tosca_nodes_network_networkItemProvider extends Tosca_nodes_rootIte
 	}
 
 	/**
-	 * This adds a property descriptor for the End Ip feature.
+	 * This adds a property descriptor for the Receiver Port feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addEndIpPropertyDescriptor(Object object) {
+	protected void addReceiverPortPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Tosca_nodes_network_network_endIp_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_nodes_network_network_endIp_feature", "_UI_Tosca_nodes_network_network_type"),
-				 ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__END_IP,
+				 getString("_UI_Example_transactionsubsystem_receiverPort_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Example_transactionsubsystem_receiverPort_feature", "_UI_Example_transactionsubsystem_type"),
+				 ExtendedtoscaPackage.Literals.EXAMPLE_TRANSACTIONSUBSYSTEM__RECEIVER_PORT,
 				 true,
 				 false,
 				 false,
@@ -294,14 +274,36 @@ public class Tosca_nodes_network_networkItemProvider extends Tosca_nodes_rootIte
 	}
 
 	/**
-	 * This returns Tosca_nodes_network_network.gif.
+	 * This adds a property descriptor for the Mq Service Ip feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMqServiceIpPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Example_transactionsubsystem_mqServiceIp_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Example_transactionsubsystem_mqServiceIp_feature", "_UI_Example_transactionsubsystem_type"),
+				 ExtendedtoscaPackage.Literals.EXAMPLE_TRANSACTIONSUBSYSTEM__MQ_SERVICE_IP,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns Example_transactionsubsystem.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Tosca_nodes_network_network"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Example_transactionsubsystem"));
 	}
 
 	/**
@@ -312,10 +314,10 @@ public class Tosca_nodes_network_networkItemProvider extends Tosca_nodes_rootIte
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Tosca_nodes_network_network)object).getNetworkName();
+		String label = ((Example_transactionsubsystem)object).getPortName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Tosca_nodes_network_network_type") :
-			getString("_UI_Tosca_nodes_network_network_type") + " " + label;
+			getString("_UI_Example_transactionsubsystem_type") :
+			getString("_UI_Example_transactionsubsystem_type") + " " + label;
 	}
 	
 
@@ -330,17 +332,17 @@ public class Tosca_nodes_network_networkItemProvider extends Tosca_nodes_rootIte
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Tosca_nodes_network_network.class)) {
-			case ExtendedtoscaPackage.TOSCA_NODES_NETWORK_NETWORK__PHYSICAL_NETWORK:
-			case ExtendedtoscaPackage.TOSCA_NODES_NETWORK_NETWORK__SEGMENTATION_ID:
-			case ExtendedtoscaPackage.TOSCA_NODES_NETWORK_NETWORK__NETWORK_ID:
-			case ExtendedtoscaPackage.TOSCA_NODES_NETWORK_NETWORK__IP_VERSION:
-			case ExtendedtoscaPackage.TOSCA_NODES_NETWORK_NETWORK__START_IP:
-			case ExtendedtoscaPackage.TOSCA_NODES_NETWORK_NETWORK__NETWORK_NAME:
-			case ExtendedtoscaPackage.TOSCA_NODES_NETWORK_NETWORK__CIDR:
-			case ExtendedtoscaPackage.TOSCA_NODES_NETWORK_NETWORK__GATEWAY_IP:
-			case ExtendedtoscaPackage.TOSCA_NODES_NETWORK_NETWORK__NETWORK_TYPE:
-			case ExtendedtoscaPackage.TOSCA_NODES_NETWORK_NETWORK__END_IP:
+		switch (notification.getFeatureID(Example_transactionsubsystem.class)) {
+			case ExtendedtoscaPackage.EXAMPLE_TRANSACTIONSUBSYSTEM__PORT_NAME:
+			case ExtendedtoscaPackage.EXAMPLE_TRANSACTIONSUBSYSTEM__PROTOCOL:
+			case ExtendedtoscaPackage.EXAMPLE_TRANSACTIONSUBSYSTEM__PORT:
+			case ExtendedtoscaPackage.EXAMPLE_TRANSACTIONSUBSYSTEM__INITIATOR:
+			case ExtendedtoscaPackage.EXAMPLE_TRANSACTIONSUBSYSTEM__NETWORK_NAME:
+			case ExtendedtoscaPackage.EXAMPLE_TRANSACTIONSUBSYSTEM__SECURE:
+			case ExtendedtoscaPackage.EXAMPLE_TRANSACTIONSUBSYSTEM__PORTS:
+			case ExtendedtoscaPackage.EXAMPLE_TRANSACTIONSUBSYSTEM__URL_PATH:
+			case ExtendedtoscaPackage.EXAMPLE_TRANSACTIONSUBSYSTEM__RECEIVER_PORT:
+			case ExtendedtoscaPackage.EXAMPLE_TRANSACTIONSUBSYSTEM__MQ_SERVICE_IP:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

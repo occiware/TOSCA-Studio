@@ -335,6 +335,52 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Example_queuingsubsystem} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Example_queuingsubsystemItemProvider example_queuingsubsystemItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Example_queuingsubsystem}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExample_queuingsubsystemAdapter() {
+		if (example_queuingsubsystemItemProvider == null) {
+			example_queuingsubsystemItemProvider = new Example_queuingsubsystemItemProvider(this);
+		}
+
+		return example_queuingsubsystemItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Example_transactionsubsystem} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Example_transactionsubsystemItemProvider example_transactionsubsystemItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Example_transactionsubsystem}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExample_transactionsubsystemAdapter() {
+		if (example_transactionsubsystemItemProvider == null) {
+			example_transactionsubsystemItemProvider = new Example_transactionsubsystemItemProvider(this);
+		}
+
+		return example_transactionsubsystemItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_computewithprop} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -355,29 +401,6 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		}
 
 		return tosca_nodes_computewithpropItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Capabilities} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CapabilitiesItemProvider capabilitiesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link extendedtosca.Capabilities}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCapabilitiesAdapter() {
-		if (capabilitiesItemProvider == null) {
-			capabilitiesItemProvider = new CapabilitiesItemProvider(this);
-		}
-
-		return capabilitiesItemProvider;
 	}
 
 	/**
@@ -424,6 +447,29 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		}
 
 		return tosca_nodes_databasewithlistparamItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Example_someapp} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Example_someappItemProvider example_someappItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Example_someapp}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExample_someappAdapter() {
+		if (example_someappItemProvider == null) {
+			example_someappItemProvider = new Example_someappItemProvider(this);
+		}
+
+		return example_someappItemProvider;
 	}
 
 	/**
@@ -654,6 +700,29 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		}
 
 		return tosca_nodes_softwarecomponent_logstashItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Example_databasesubsystem} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Example_databasesubsystemItemProvider example_databasesubsystemItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Example_databasesubsystem}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExample_databasesubsystemAdapter() {
+		if (example_databasesubsystemItemProvider == null) {
+			example_databasesubsystemItemProvider = new Example_databasesubsystemItemProvider(this);
+		}
+
+		return example_databasesubsystemItemProvider;
 	}
 
 	/**
@@ -956,6 +1025,29 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Myattachesto} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MyattachestoItemProvider myattachestoItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Myattachesto}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMyattachestoAdapter() {
+		if (myattachestoItemProvider == null) {
+			myattachestoItemProvider = new MyattachestoItemProvider(this);
+		}
+
+		return myattachestoItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_relationships_network_linksto} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1087,34 +1179,38 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		if (tosca_capabilities_container_dockerItemProvider != null) tosca_capabilities_container_dockerItemProvider.dispose();
 		if (tosca_capabilities_containerchildItemProvider != null) tosca_capabilities_containerchildItemProvider.dispose();
 		if (tosca_capabilities_somechildcapItemProvider != null) tosca_capabilities_somechildcapItemProvider.dispose();
-		if (tosca_nodes_database_mysqlItemProvider != null) tosca_nodes_database_mysqlItemProvider.dispose();
 		if (tosca_nodes_computewithpropItemProvider != null) tosca_nodes_computewithpropItemProvider.dispose();
-		if (capabilitiesItemProvider != null) capabilitiesItemProvider.dispose();
-		if (tosca_nodes_softwarecomponent_elasticsearchItemProvider != null) tosca_nodes_softwarecomponent_elasticsearchItemProvider.dispose();
-		if (tosca_nodes_databasewithlistparamItemProvider != null) tosca_nodes_databasewithlistparamItemProvider.dispose();
 		if (tosca_nodes_webapplication_paypalpizzastoreItemProvider != null) tosca_nodes_webapplication_paypalpizzastoreItemProvider.dispose();
 		if (tosca_nodes_webapplication_wordpressItemProvider != null) tosca_nodes_webapplication_wordpressItemProvider.dispose();
 		if (tosca_nodes_network_networkItemProvider != null) tosca_nodes_network_networkItemProvider.dispose();
-		if (tosca_nodes_nodewithcapItemProvider != null) tosca_nodes_nodewithcapItemProvider.dispose();
 		if (tosca_nodes_container_application_dockerItemProvider != null) tosca_nodes_container_application_dockerItemProvider.dispose();
 		if (tosca_nodes_softwarecomponent_kibanaItemProvider != null) tosca_nodes_softwarecomponent_kibanaItemProvider.dispose();
-		if (rsyslogItemProvider != null) rsyslogItemProvider.dispose();
 		if (tosca_nodes_computewithattrlistItemProvider != null) tosca_nodes_computewithattrlistItemProvider.dispose();
-		if (tosca_nodes_network_portItemProvider != null) tosca_nodes_network_portItemProvider.dispose();
 		if (tosca_nodes_softwarecomponent_logstashItemProvider != null) tosca_nodes_softwarecomponent_logstashItemProvider.dispose();
+		if (example_databasesubsystemItemProvider != null) example_databasesubsystemItemProvider.dispose();
 		if (tosca_nodes_softwarecomponent_collectdItemProvider != null) tosca_nodes_softwarecomponent_collectdItemProvider.dispose();
-		if (tosca_nodes_computewithcapwithattrItemProvider != null) tosca_nodes_computewithcapwithattrItemProvider.dispose();
 		if (tosca_nodes_nodewithreqItemProvider != null) tosca_nodes_nodewithreqItemProvider.dispose();
+		if (tosca_nodes_somenode2ItemProvider != null) tosca_nodes_somenode2ItemProvider.dispose();
+		if (tosca_nodes_database_mysqlItemProvider != null) tosca_nodes_database_mysqlItemProvider.dispose();
+		if (example_queuingsubsystemItemProvider != null) example_queuingsubsystemItemProvider.dispose();
+		if (example_transactionsubsystemItemProvider != null) example_transactionsubsystemItemProvider.dispose();
+		if (tosca_nodes_softwarecomponent_elasticsearchItemProvider != null) tosca_nodes_softwarecomponent_elasticsearchItemProvider.dispose();
+		if (tosca_nodes_databasewithlistparamItemProvider != null) tosca_nodes_databasewithlistparamItemProvider.dispose();
+		if (example_someappItemProvider != null) example_someappItemProvider.dispose();
+		if (tosca_nodes_nodewithcapItemProvider != null) tosca_nodes_nodewithcapItemProvider.dispose();
+		if (rsyslogItemProvider != null) rsyslogItemProvider.dispose();
+		if (tosca_nodes_network_portItemProvider != null) tosca_nodes_network_portItemProvider.dispose();
+		if (tosca_nodes_computewithcapwithattrItemProvider != null) tosca_nodes_computewithcapwithattrItemProvider.dispose();
 		if (tosca_nodes_softwarecomponent_rsyslogItemProvider != null) tosca_nodes_softwarecomponent_rsyslogItemProvider.dispose();
 		if (tosca_nodes_hacomputeItemProvider != null) tosca_nodes_hacomputeItemProvider.dispose();
 		if (tosca_nodes_somenodeItemProvider != null) tosca_nodes_somenodeItemProvider.dispose();
 		if (tosca_nodes_webserver_nodejsItemProvider != null) tosca_nodes_webserver_nodejsItemProvider.dispose();
-		if (tosca_nodes_somenode2ItemProvider != null) tosca_nodes_somenode2ItemProvider.dispose();
 		if (tosca_nodes_dbms_mysqlItemProvider != null) tosca_nodes_dbms_mysqlItemProvider.dispose();
 		if (mycompany_mytypes_myscalingpolicyItemProvider != null) mycompany_mytypes_myscalingpolicyItemProvider.dispose();
 		if (test_relation_connectsItemProvider != null) test_relation_connectsItemProvider.dispose();
 		if (tosca_relationships_network_bindstoItemProvider != null) tosca_relationships_network_bindstoItemProvider.dispose();
 		if (tosca_relationships_haItemProvider != null) tosca_relationships_haItemProvider.dispose();
+		if (myattachestoItemProvider != null) myattachestoItemProvider.dispose();
 		if (tosca_relationships_network_linkstoItemProvider != null) tosca_relationships_network_linkstoItemProvider.dispose();
 	}
 
