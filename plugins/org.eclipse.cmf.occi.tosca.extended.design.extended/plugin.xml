@@ -4,10 +4,10 @@
   <extension point="org.eclipse.sirius.componentization">
     <component class="org.eclipse.cmf.occi.tosca.extended.design.extended.Activator"
                id="org.eclipse.cmf.occi.tosca.extended.design.extended"
-	       name="extendedTosca">
+	       name="extendedtosca">
     </component>
   </extension>
-   <!-- Popup menu for creating a extendedTosca configuration file. -->
+   <!-- Popup menu for creating a extendedtosca configuration file. -->
    <extension point="org.eclipse.ui.newWizards">
       <category
             id="org.eclipse.cmf.occi.core.category.ID"
@@ -17,6 +17,6 @@
             class="org.eclipse.cmf.occi.tosca.extended.design.extended.wizard.NewConfigurationWizard"
             icon="platform:/plugin/org.eclipse.cmf.occi.core.edit/icons/full/obj16/Configuration.gif"
             id="org.eclipse.cmf.occi.tosca.extended.design.extended.wizard.NewConfigurationWizard"
-            name="Extended extendedTosca Configuration File"/>
+            name="Extended extendedtosca Configuration File"/>
    </extension>
 </plugin>

@@ -16,13 +16,13 @@ package org.eclipse.cmf.occi.tosca.extended.design.extended.wizard;
 import org.eclipse.cmf.occi.core.design.utils.NewDiagramWizard;
 
 /**
- * This is a simple wizard for creating a new extendedTosca model file.
+ * This is a simple wizard for creating a new extendedtosca model file.
  */
 
 public class NewConfigurationWizard extends NewDiagramWizard
 {
 	public NewConfigurationWizard()
 	{
-		super("http://org.occi/extendedTosca#", "viewpoint:/org.eclipse.cmf.occi.tosca.extended.design.extended/ExtendedToscaConfiguration", "extendedTosca", "ExtendedToscaConfiguration Diagram");
+		super("http://org.occi/extendedTosca#", "viewpoint:/org.eclipse.cmf.occi.tosca.extended.design.extended/ExtendedtoscaConfiguration", "extendedtosca", "ExtendedtoscaConfiguration Diagram");
 	}
 }

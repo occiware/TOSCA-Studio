@@ -61,6 +61,8 @@ import extendedtosca.ip_versionEnum;
 
 import org.eclipse.cmf.occi.core.OCCIPackage;
 
+import org.eclipse.cmf.occi.infrastructure.InfrastructurePackage;
+import org.eclipse.cmf.occi.platform.PlatformPackage;
 import org.eclipse.cmf.occi.sla.SlaPackage;
 
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
@@ -435,9 +437,11 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		isInited = true;
 
 		// Initialize simple dependencies
+		InfrastructurePackage.eINSTANCE.eClass();
+		PlatformPackage.eINSTANCE.eClass();
+		SlaPackage.eINSTANCE.eClass();
 		ToscaPackage.eINSTANCE.eClass();
 		OCCIPackage.eINSTANCE.eClass();
-		SlaPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theExtendedtoscaPackage.createPackageContents();
