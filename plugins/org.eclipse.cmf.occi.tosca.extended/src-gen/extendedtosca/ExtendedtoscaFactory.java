@@ -122,15 +122,6 @@ public interface ExtendedtoscaFactory extends EFactory {
 	Tosca_capabilities_somechildcap createTosca_capabilities_somechildcap();
 
 	/**
-	 * Returns a new object of class '<em>Tosca nodes database mysql</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tosca nodes database mysql</em>'.
-	 * @generated
-	 */
-	Tosca_nodes_database_mysql createTosca_nodes_database_mysql();
-
-	/**
 	 * Returns a new object of class '<em>Tosca nodes computewithprop</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -138,33 +129,6 @@ public interface ExtendedtoscaFactory extends EFactory {
 	 * @generated
 	 */
 	Tosca_nodes_computewithprop createTosca_nodes_computewithprop();
-
-	/**
-	 * Returns a new object of class '<em>Capabilities</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Capabilities</em>'.
-	 * @generated
-	 */
-	Capabilities createCapabilities();
-
-	/**
-	 * Returns a new object of class '<em>Tosca nodes softwarecomponent elasticsearch</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tosca nodes softwarecomponent elasticsearch</em>'.
-	 * @generated
-	 */
-	Tosca_nodes_softwarecomponent_elasticsearch createTosca_nodes_softwarecomponent_elasticsearch();
-
-	/**
-	 * Returns a new object of class '<em>Tosca nodes databasewithlistparam</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tosca nodes databasewithlistparam</em>'.
-	 * @generated
-	 */
-	Tosca_nodes_databasewithlistparam createTosca_nodes_databasewithlistparam();
 
 	/**
 	 * Returns a new object of class '<em>Tosca nodes webapplication paypalpizzastore</em>'.
@@ -194,15 +158,6 @@ public interface ExtendedtoscaFactory extends EFactory {
 	Tosca_nodes_network_network createTosca_nodes_network_network();
 
 	/**
-	 * Returns a new object of class '<em>Tosca nodes nodewithcap</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tosca nodes nodewithcap</em>'.
-	 * @generated
-	 */
-	Tosca_nodes_nodewithcap createTosca_nodes_nodewithcap();
-
-	/**
 	 * Returns a new object of class '<em>Tosca nodes container application docker</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -221,15 +176,6 @@ public interface ExtendedtoscaFactory extends EFactory {
 	Tosca_nodes_softwarecomponent_kibana createTosca_nodes_softwarecomponent_kibana();
 
 	/**
-	 * Returns a new object of class '<em>Rsyslog</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Rsyslog</em>'.
-	 * @generated
-	 */
-	Rsyslog createRsyslog();
-
-	/**
 	 * Returns a new object of class '<em>Tosca nodes computewithattrlist</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -237,15 +183,6 @@ public interface ExtendedtoscaFactory extends EFactory {
 	 * @generated
 	 */
 	Tosca_nodes_computewithattrlist createTosca_nodes_computewithattrlist();
-
-	/**
-	 * Returns a new object of class '<em>Tosca nodes network port</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tosca nodes network port</em>'.
-	 * @generated
-	 */
-	Tosca_nodes_network_port createTosca_nodes_network_port();
 
 	/**
 	 * Returns a new object of class '<em>Tosca nodes softwarecomponent logstash</em>'.
@@ -257,6 +194,15 @@ public interface ExtendedtoscaFactory extends EFactory {
 	Tosca_nodes_softwarecomponent_logstash createTosca_nodes_softwarecomponent_logstash();
 
 	/**
+	 * Returns a new object of class '<em>Example databasesubsystem</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Example databasesubsystem</em>'.
+	 * @generated
+	 */
+	Example_databasesubsystem createExample_databasesubsystem();
+
+	/**
 	 * Returns a new object of class '<em>Tosca nodes softwarecomponent collectd</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -266,15 +212,6 @@ public interface ExtendedtoscaFactory extends EFactory {
 	Tosca_nodes_softwarecomponent_collectd createTosca_nodes_softwarecomponent_collectd();
 
 	/**
-	 * Returns a new object of class '<em>Tosca nodes computewithcapwithattr</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tosca nodes computewithcapwithattr</em>'.
-	 * @generated
-	 */
-	Tosca_nodes_computewithcapwithattr createTosca_nodes_computewithcapwithattr();
-
-	/**
 	 * Returns a new object of class '<em>Tosca nodes nodewithreq</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -282,6 +219,105 @@ public interface ExtendedtoscaFactory extends EFactory {
 	 * @generated
 	 */
 	Tosca_nodes_nodewithreq createTosca_nodes_nodewithreq();
+
+	/**
+	 * Returns a new object of class '<em>Tosca nodes somenode2</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes somenode2</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_somenode2 createTosca_nodes_somenode2();
+
+	/**
+	 * Returns a new object of class '<em>Tosca nodes database mysql</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes database mysql</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_database_mysql createTosca_nodes_database_mysql();
+
+	/**
+	 * Returns a new object of class '<em>Example queuingsubsystem</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Example queuingsubsystem</em>'.
+	 * @generated
+	 */
+	Example_queuingsubsystem createExample_queuingsubsystem();
+
+	/**
+	 * Returns a new object of class '<em>Example transactionsubsystem</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Example transactionsubsystem</em>'.
+	 * @generated
+	 */
+	Example_transactionsubsystem createExample_transactionsubsystem();
+
+	/**
+	 * Returns a new object of class '<em>Tosca nodes softwarecomponent elasticsearch</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes softwarecomponent elasticsearch</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_softwarecomponent_elasticsearch createTosca_nodes_softwarecomponent_elasticsearch();
+
+	/**
+	 * Returns a new object of class '<em>Tosca nodes databasewithlistparam</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes databasewithlistparam</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_databasewithlistparam createTosca_nodes_databasewithlistparam();
+
+	/**
+	 * Returns a new object of class '<em>Example someapp</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Example someapp</em>'.
+	 * @generated
+	 */
+	Example_someapp createExample_someapp();
+
+	/**
+	 * Returns a new object of class '<em>Tosca nodes nodewithcap</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes nodewithcap</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_nodewithcap createTosca_nodes_nodewithcap();
+
+	/**
+	 * Returns a new object of class '<em>Rsyslog</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rsyslog</em>'.
+	 * @generated
+	 */
+	Rsyslog createRsyslog();
+
+	/**
+	 * Returns a new object of class '<em>Tosca nodes network port</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes network port</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_network_port createTosca_nodes_network_port();
+
+	/**
+	 * Returns a new object of class '<em>Tosca nodes computewithcapwithattr</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes computewithcapwithattr</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_computewithcapwithattr createTosca_nodes_computewithcapwithattr();
 
 	/**
 	 * Returns a new object of class '<em>Tosca nodes softwarecomponent rsyslog</em>'.
@@ -318,15 +354,6 @@ public interface ExtendedtoscaFactory extends EFactory {
 	 * @generated
 	 */
 	Tosca_nodes_webserver_nodejs createTosca_nodes_webserver_nodejs();
-
-	/**
-	 * Returns a new object of class '<em>Tosca nodes somenode2</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tosca nodes somenode2</em>'.
-	 * @generated
-	 */
-	Tosca_nodes_somenode2 createTosca_nodes_somenode2();
 
 	/**
 	 * Returns a new object of class '<em>Tosca nodes dbms mysql</em>'.
@@ -372,6 +399,15 @@ public interface ExtendedtoscaFactory extends EFactory {
 	 * @generated
 	 */
 	Tosca_relationships_ha createTosca_relationships_ha();
+
+	/**
+	 * Returns a new object of class '<em>Myattachesto</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Myattachesto</em>'.
+	 * @generated
+	 */
+	Myattachesto createMyattachesto();
 
 	/**
 	 * Returns a new object of class '<em>Tosca relationships network linksto</em>'.

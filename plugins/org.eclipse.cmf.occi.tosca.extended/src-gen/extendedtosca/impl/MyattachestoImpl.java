@@ -12,27 +12,27 @@
  */
 package extendedtosca.impl;
 
-import extendedtosca.Capabilities;
 import extendedtosca.ExtendedtoscaPackage;
+import extendedtosca.Myattachesto;
 
-import org.eclipse.cmf.occi.core.impl.MixinBaseImpl;
+import org.eclipse.cmf.occi.tosca.impl.Tosca_relationships_attachestoImpl;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Capabilities</b></em>'.
+ * An implementation of the model object '<em><b>Myattachesto</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class CapabilitiesImpl extends MixinBaseImpl implements Capabilities {
+public class MyattachestoImpl extends Tosca_relationships_attachestoImpl implements Myattachesto {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CapabilitiesImpl() {
+	protected MyattachestoImpl() {
 		super();
 	}
 
@@ -43,7 +43,7 @@ public class CapabilitiesImpl extends MixinBaseImpl implements Capabilities {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ExtendedtoscaPackage.Literals.CAPABILITIES;
+		return ExtendedtoscaPackage.Literals.MYATTACHESTO;
 	}
 
-} //CapabilitiesImpl
+} //MyattachestoImpl

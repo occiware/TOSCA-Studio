@@ -18,6 +18,7 @@ import org.eclipse.cmf.occi.tosca.ToscaPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -729,187 +730,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	int TOSCA_CAPABILITIES_SOMECHILDCAP_OPERATION_COUNT = TOSCA_CAPABILITIES_SOMECAP_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_database_mysqlImpl <em>Tosca nodes database mysql</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see extendedtosca.impl.Tosca_nodes_database_mysqlImpl
-	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_database_mysql()
-	 * @generated
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL = 10;
-
-	/**
-	 * The feature id for the '<em><b>Mixin</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL__MIXIN = ToscaPackage.TOSCA_NODES_DATABASE__MIXIN;
-
-	/**
-	 * The feature id for the '<em><b>Entity</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL__ENTITY = ToscaPackage.TOSCA_NODES_DATABASE__ENTITY;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL__ATTRIBUTES = ToscaPackage.TOSCA_NODES_DATABASE__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL__PORT_NAME = ToscaPackage.TOSCA_NODES_DATABASE__PORT_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL__PROTOCOL = ToscaPackage.TOSCA_NODES_DATABASE__PROTOCOL;
-
-	/**
-	 * The feature id for the '<em><b>Port</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL__PORT = ToscaPackage.TOSCA_NODES_DATABASE__PORT;
-
-	/**
-	 * The feature id for the '<em><b>Initiator</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL__INITIATOR = ToscaPackage.TOSCA_NODES_DATABASE__INITIATOR;
-
-	/**
-	 * The feature id for the '<em><b>Network Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL__NETWORK_NAME = ToscaPackage.TOSCA_NODES_DATABASE__NETWORK_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Secure</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL__SECURE = ToscaPackage.TOSCA_NODES_DATABASE__SECURE;
-
-	/**
-	 * The feature id for the '<em><b>Ports</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL__PORTS = ToscaPackage.TOSCA_NODES_DATABASE__PORTS;
-
-	/**
-	 * The feature id for the '<em><b>Url Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL__URL_PATH = ToscaPackage.TOSCA_NODES_DATABASE__URL_PATH;
-
-	/**
-	 * The feature id for the '<em><b>Password</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL__PASSWORD = ToscaPackage.TOSCA_NODES_DATABASE__PASSWORD;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL__NAME = ToscaPackage.TOSCA_NODES_DATABASE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>User</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL__USER = ToscaPackage.TOSCA_NODES_DATABASE__USER;
-
-	/**
-	 * The number of structural features of the '<em>Tosca nodes database mysql</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_DATABASE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL___CREATE = ToscaPackage.TOSCA_NODES_DATABASE___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL___CONFIGURE = ToscaPackage.TOSCA_NODES_DATABASE___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL___DELETE = ToscaPackage.TOSCA_NODES_DATABASE___DELETE;
-
-	/**
-	 * The number of operations of the '<em>Tosca nodes database mysql</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE_MYSQL_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_DATABASE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_computewithpropImpl <em>Tosca nodes computewithprop</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -917,7 +737,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_computewithprop()
 	 * @generated
 	 */
-	int TOSCA_NODES_COMPUTEWITHPROP = 11;
+	int TOSCA_NODES_COMPUTEWITHPROP = 10;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -1163,423 +983,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	int TOSCA_NODES_COMPUTEWITHPROP_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_COMPUTE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link extendedtosca.impl.CapabilitiesImpl <em>Capabilities</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see extendedtosca.impl.CapabilitiesImpl
-	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getCapabilities()
-	 * @generated
-	 */
-	int CAPABILITIES = 12;
-
-	/**
-	 * The feature id for the '<em><b>Mixin</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITIES__MIXIN = OCCIPackage.MIXIN_BASE__MIXIN;
-
-	/**
-	 * The feature id for the '<em><b>Entity</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITIES__ENTITY = OCCIPackage.MIXIN_BASE__ENTITY;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITIES__ATTRIBUTES = OCCIPackage.MIXIN_BASE__ATTRIBUTES;
-
-	/**
-	 * The number of structural features of the '<em>Capabilities</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITIES_FEATURE_COUNT = OCCIPackage.MIXIN_BASE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Capabilities</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITIES_OPERATION_COUNT = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_softwarecomponent_elasticsearchImpl <em>Tosca nodes softwarecomponent elasticsearch</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see extendedtosca.impl.Tosca_nodes_softwarecomponent_elasticsearchImpl
-	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_softwarecomponent_elasticsearch()
-	 * @generated
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH = 13;
-
-	/**
-	 * The feature id for the '<em><b>Mixin</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__MIXIN = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__MIXIN;
-
-	/**
-	 * The feature id for the '<em><b>Entity</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__ENTITY = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ENTITY;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__ATTRIBUTES = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Admin Credential</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__ADMIN_CREDENTIAL = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ADMIN_CREDENTIAL;
-
-	/**
-	 * The feature id for the '<em><b>Component Version</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__COMPONENT_VERSION = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__COMPONENT_VERSION;
-
-	/**
-	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__PORT_NAME = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__PROTOCOL = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Port</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__PORT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Initiator</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__INITIATOR = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Network Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__NETWORK_NAME = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Secure</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__SECURE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Ports</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__PORTS = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Url Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__URL_PATH = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 7;
-
-	/**
-	 * The number of structural features of the '<em>Tosca nodes softwarecomponent elasticsearch</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 8;
-
-	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH___CREATE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH___CONFIGURE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH___DELETE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___DELETE;
-
-	/**
-	 * The number of operations of the '<em>Tosca nodes softwarecomponent elasticsearch</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_databasewithlistparamImpl <em>Tosca nodes databasewithlistparam</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see extendedtosca.impl.Tosca_nodes_databasewithlistparamImpl
-	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_databasewithlistparam()
-	 * @generated
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM = 14;
-
-	/**
-	 * The feature id for the '<em><b>Mixin</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM__MIXIN = ToscaPackage.TOSCA_NODES_DATABASE__MIXIN;
-
-	/**
-	 * The feature id for the '<em><b>Entity</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM__ENTITY = ToscaPackage.TOSCA_NODES_DATABASE__ENTITY;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM__ATTRIBUTES = ToscaPackage.TOSCA_NODES_DATABASE__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM__PORT_NAME = ToscaPackage.TOSCA_NODES_DATABASE__PORT_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM__PROTOCOL = ToscaPackage.TOSCA_NODES_DATABASE__PROTOCOL;
-
-	/**
-	 * The feature id for the '<em><b>Port</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM__PORT = ToscaPackage.TOSCA_NODES_DATABASE__PORT;
-
-	/**
-	 * The feature id for the '<em><b>Initiator</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM__INITIATOR = ToscaPackage.TOSCA_NODES_DATABASE__INITIATOR;
-
-	/**
-	 * The feature id for the '<em><b>Network Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM__NETWORK_NAME = ToscaPackage.TOSCA_NODES_DATABASE__NETWORK_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Secure</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM__SECURE = ToscaPackage.TOSCA_NODES_DATABASE__SECURE;
-
-	/**
-	 * The feature id for the '<em><b>Ports</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM__PORTS = ToscaPackage.TOSCA_NODES_DATABASE__PORTS;
-
-	/**
-	 * The feature id for the '<em><b>Url Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM__URL_PATH = ToscaPackage.TOSCA_NODES_DATABASE__URL_PATH;
-
-	/**
-	 * The feature id for the '<em><b>Password</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM__PASSWORD = ToscaPackage.TOSCA_NODES_DATABASE__PASSWORD;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM__NAME = ToscaPackage.TOSCA_NODES_DATABASE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>User</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM__USER = ToscaPackage.TOSCA_NODES_DATABASE__USER;
-
-	/**
-	 * The feature id for the '<em><b>List Prop</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM__LIST_PROP = ToscaPackage.TOSCA_NODES_DATABASE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Tosca nodes databasewithlistparam</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_DATABASE_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM___CREATE = ToscaPackage.TOSCA_NODES_DATABASE___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM___CONFIGURE = ToscaPackage.TOSCA_NODES_DATABASE___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM___DELETE = ToscaPackage.TOSCA_NODES_DATABASE___DELETE;
-
-	/**
-	 * The number of operations of the '<em>Tosca nodes databasewithlistparam</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASEWITHLISTPARAM_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_DATABASE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_webapplication_paypalpizzastoreImpl <em>Tosca nodes webapplication paypalpizzastore</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1587,7 +990,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_webapplication_paypalpizzastore()
 	 * @generated
 	 */
-	int TOSCA_NODES_WEBAPPLICATION_PAYPALPIZZASTORE = 15;
+	int TOSCA_NODES_WEBAPPLICATION_PAYPALPIZZASTORE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -1759,7 +1162,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_webapplication_wordpress()
 	 * @generated
 	 */
-	int TOSCA_NODES_WEBAPPLICATION_WORDPRESS = 16;
+	int TOSCA_NODES_WEBAPPLICATION_WORDPRESS = 12;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -1949,7 +1352,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_network_network()
 	 * @generated
 	 */
-	int TOSCA_NODES_NETWORK_NETWORK = 17;
+	int TOSCA_NODES_NETWORK_NETWORK = 13;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -1979,13 +1382,94 @@ public interface ExtendedtoscaPackage extends EPackage {
 	int TOSCA_NODES_NETWORK_NETWORK__ATTRIBUTES = ToscaPackage.TOSCA_NODES_ROOT__ATTRIBUTES;
 
 	/**
+	 * The feature id for the '<em><b>Physical Network</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_NETWORK__PHYSICAL_NETWORK = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Segmentation Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_NETWORK__SEGMENTATION_ID = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Network Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_NETWORK__NETWORK_ID = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Ip Version</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_NETWORK_NETWORK__IP_VERSION = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
+	int TOSCA_NODES_NETWORK_NETWORK__IP_VERSION = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Start Ip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_NETWORK__START_IP = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Network Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_NETWORK__NETWORK_NAME = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Cidr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_NETWORK__CIDR = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Gateway Ip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_NETWORK__GATEWAY_IP = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Network Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_NETWORK__NETWORK_TYPE = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>End Ip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_NETWORK__END_IP = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Tosca nodes network network</em>' class.
@@ -1994,7 +1478,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_NETWORK_NETWORK_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 1;
+	int TOSCA_NODES_NETWORK_NETWORK_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 10;
 
 	/**
 	 * The operation id for the '<em>Create</em>' operation.
@@ -2033,106 +1517,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	int TOSCA_NODES_NETWORK_NETWORK_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_nodewithcapImpl <em>Tosca nodes nodewithcap</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see extendedtosca.impl.Tosca_nodes_nodewithcapImpl
-	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_nodewithcap()
-	 * @generated
-	 */
-	int TOSCA_NODES_NODEWITHCAP = 18;
-
-	/**
-	 * The feature id for the '<em><b>Mixin</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP__MIXIN = ToscaPackage.TOSCA_NODES_ROOT__MIXIN;
-
-	/**
-	 * The feature id for the '<em><b>Entity</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP__ENTITY = ToscaPackage.TOSCA_NODES_ROOT__ENTITY;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP__ATTRIBUTES = ToscaPackage.TOSCA_NODES_ROOT__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Disk Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP__DISK_SIZE = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP__TYPE = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Tosca nodes nodewithcap</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP___CREATE = ToscaPackage.TOSCA_NODES_ROOT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP___CONFIGURE = ToscaPackage.TOSCA_NODES_ROOT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP___DELETE = ToscaPackage.TOSCA_NODES_ROOT___DELETE;
-
-	/**
-	 * The number of operations of the '<em>Tosca nodes nodewithcap</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_container_application_dockerImpl <em>Tosca nodes container application docker</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2140,7 +1524,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_container_application_docker()
 	 * @generated
 	 */
-	int TOSCA_NODES_CONTAINER_APPLICATION_DOCKER = 19;
+	int TOSCA_NODES_CONTAINER_APPLICATION_DOCKER = 14;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -2222,7 +1606,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_softwarecomponent_kibana()
 	 * @generated
 	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_KIBANA = 20;
+	int TOSCA_NODES_SOFTWARECOMPONENT_KIBANA = 15;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -2315,106 +1699,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	int TOSCA_NODES_SOFTWARECOMPONENT_KIBANA_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link extendedtosca.impl.RsyslogImpl <em>Rsyslog</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see extendedtosca.impl.RsyslogImpl
-	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getRsyslog()
-	 * @generated
-	 */
-	int RSYSLOG = 21;
-
-	/**
-	 * The feature id for the '<em><b>Mixin</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RSYSLOG__MIXIN = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__MIXIN;
-
-	/**
-	 * The feature id for the '<em><b>Entity</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RSYSLOG__ENTITY = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ENTITY;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RSYSLOG__ATTRIBUTES = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Admin Credential</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RSYSLOG__ADMIN_CREDENTIAL = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ADMIN_CREDENTIAL;
-
-	/**
-	 * The feature id for the '<em><b>Component Version</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RSYSLOG__COMPONENT_VERSION = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__COMPONENT_VERSION;
-
-	/**
-	 * The number of structural features of the '<em>Rsyslog</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RSYSLOG_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RSYSLOG___CREATE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RSYSLOG___CONFIGURE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RSYSLOG___DELETE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___DELETE;
-
-	/**
-	 * The number of operations of the '<em>Rsyslog</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RSYSLOG_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_computewithattrlistImpl <em>Tosca nodes computewithattrlist</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2422,7 +1706,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_computewithattrlist()
 	 * @generated
 	 */
-	int TOSCA_NODES_COMPUTEWITHATTRLIST = 22;
+	int TOSCA_NODES_COMPUTEWITHATTRLIST = 16;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -2668,133 +1952,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	int TOSCA_NODES_COMPUTEWITHATTRLIST_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_COMPUTE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_network_portImpl <em>Tosca nodes network port</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see extendedtosca.impl.Tosca_nodes_network_portImpl
-	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_network_port()
-	 * @generated
-	 */
-	int TOSCA_NODES_NETWORK_PORT = 23;
-
-	/**
-	 * The feature id for the '<em><b>Mixin</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NETWORK_PORT__MIXIN = ToscaPackage.TOSCA_NODES_ROOT__MIXIN;
-
-	/**
-	 * The feature id for the '<em><b>Entity</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NETWORK_PORT__ENTITY = ToscaPackage.TOSCA_NODES_ROOT__ENTITY;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NETWORK_PORT__ATTRIBUTES = ToscaPackage.TOSCA_NODES_ROOT__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Ip Range End</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NETWORK_PORT__IP_RANGE_END = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Ip Range Start</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NETWORK_PORT__IP_RANGE_START = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Ip Address</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NETWORK_PORT__IP_ADDRESS = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Is Default</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NETWORK_PORT__IS_DEFAULT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Order</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NETWORK_PORT__ORDER = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 4;
-
-	/**
-	 * The number of structural features of the '<em>Tosca nodes network port</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NETWORK_PORT_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 5;
-
-	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NETWORK_PORT___CREATE = ToscaPackage.TOSCA_NODES_ROOT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NETWORK_PORT___CONFIGURE = ToscaPackage.TOSCA_NODES_ROOT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NETWORK_PORT___DELETE = ToscaPackage.TOSCA_NODES_ROOT___DELETE;
-
-	/**
-	 * The number of operations of the '<em>Tosca nodes network port</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NETWORK_PORT_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_softwarecomponent_logstashImpl <em>Tosca nodes softwarecomponent logstash</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2802,7 +1959,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_softwarecomponent_logstash()
 	 * @generated
 	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_LOGSTASH = 24;
+	int TOSCA_NODES_SOFTWARECOMPONENT_LOGSTASH = 17;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -2967,6 +2124,160 @@ public interface ExtendedtoscaPackage extends EPackage {
 	int TOSCA_NODES_SOFTWARECOMPONENT_LOGSTASH_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link extendedtosca.impl.Example_databasesubsystemImpl <em>Example databasesubsystem</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see extendedtosca.impl.Example_databasesubsystemImpl
+	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getExample_databasesubsystem()
+	 * @generated
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM = 18;
+
+	/**
+	 * The feature id for the '<em><b>Mixin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM__MIXIN = ToscaPackage.TOSCA_NODES_ROOT__MIXIN;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM__ENTITY = ToscaPackage.TOSCA_NODES_ROOT__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM__ATTRIBUTES = ToscaPackage.TOSCA_NODES_ROOT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM__PORT_NAME = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM__PROTOCOL = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM__PORT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Initiator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM__INITIATOR = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Network Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM__NETWORK_NAME = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Secure</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM__SECURE = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Ports</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM__PORTS = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Url Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM__URL_PATH = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 7;
+
+	/**
+	 * The number of structural features of the '<em>Example databasesubsystem</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 8;
+
+	/**
+	 * The operation id for the '<em>Create</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM___CREATE = ToscaPackage.TOSCA_NODES_ROOT___CREATE;
+
+	/**
+	 * The operation id for the '<em>Configure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM___CONFIGURE = ToscaPackage.TOSCA_NODES_ROOT___CONFIGURE;
+
+	/**
+	 * The operation id for the '<em>Delete</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM___DELETE = ToscaPackage.TOSCA_NODES_ROOT___DELETE;
+
+	/**
+	 * The number of operations of the '<em>Example databasesubsystem</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_DATABASESUBSYSTEM_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_softwarecomponent_collectdImpl <em>Tosca nodes softwarecomponent collectd</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2974,7 +2285,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_softwarecomponent_collectd()
 	 * @generated
 	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_COLLECTD = 25;
+	int TOSCA_NODES_SOFTWARECOMPONENT_COLLECTD = 19;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -3067,6 +2378,1547 @@ public interface ExtendedtoscaPackage extends EPackage {
 	int TOSCA_NODES_SOFTWARECOMPONENT_COLLECTD_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_nodewithreqImpl <em>Tosca nodes nodewithreq</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see extendedtosca.impl.Tosca_nodes_nodewithreqImpl
+	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_nodewithreq()
+	 * @generated
+	 */
+	int TOSCA_NODES_NODEWITHREQ = 20;
+
+	/**
+	 * The feature id for the '<em><b>Mixin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHREQ__MIXIN = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__MIXIN;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHREQ__ENTITY = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHREQ__ATTRIBUTES = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Admin Credential</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHREQ__ADMIN_CREDENTIAL = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ADMIN_CREDENTIAL;
+
+	/**
+	 * The feature id for the '<em><b>Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHREQ__COMPONENT_VERSION = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__COMPONENT_VERSION;
+
+	/**
+	 * The number of structural features of the '<em>Tosca nodes nodewithreq</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHREQ_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Create</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHREQ___CREATE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___CREATE;
+
+	/**
+	 * The operation id for the '<em>Configure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHREQ___CONFIGURE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___CONFIGURE;
+
+	/**
+	 * The operation id for the '<em>Delete</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHREQ___DELETE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___DELETE;
+
+	/**
+	 * The number of operations of the '<em>Tosca nodes nodewithreq</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHREQ_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_somenode2Impl <em>Tosca nodes somenode2</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see extendedtosca.impl.Tosca_nodes_somenode2Impl
+	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_somenode2()
+	 * @generated
+	 */
+	int TOSCA_NODES_SOMENODE2 = 21;
+
+	/**
+	 * The feature id for the '<em><b>Mixin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOMENODE2__MIXIN = ToscaPackage.TOSCA_NODES_ROOT__MIXIN;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOMENODE2__ENTITY = ToscaPackage.TOSCA_NODES_ROOT__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOMENODE2__ATTRIBUTES = ToscaPackage.TOSCA_NODES_ROOT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Disk Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOMENODE2__DISK_SIZE = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Tosca nodes somenode2</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOMENODE2_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Create</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOMENODE2___CREATE = ToscaPackage.TOSCA_NODES_ROOT___CREATE;
+
+	/**
+	 * The operation id for the '<em>Configure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOMENODE2___CONFIGURE = ToscaPackage.TOSCA_NODES_ROOT___CONFIGURE;
+
+	/**
+	 * The operation id for the '<em>Delete</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOMENODE2___DELETE = ToscaPackage.TOSCA_NODES_ROOT___DELETE;
+
+	/**
+	 * The number of operations of the '<em>Tosca nodes somenode2</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOMENODE2_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_database_mysqlImpl <em>Tosca nodes database mysql</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see extendedtosca.impl.Tosca_nodes_database_mysqlImpl
+	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_database_mysql()
+	 * @generated
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL = 22;
+
+	/**
+	 * The feature id for the '<em><b>Mixin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL__MIXIN = ToscaPackage.TOSCA_NODES_DATABASE__MIXIN;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL__ENTITY = ToscaPackage.TOSCA_NODES_DATABASE__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL__ATTRIBUTES = ToscaPackage.TOSCA_NODES_DATABASE__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL__PORT_NAME = ToscaPackage.TOSCA_NODES_DATABASE__PORT_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL__PROTOCOL = ToscaPackage.TOSCA_NODES_DATABASE__PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL__PORT = ToscaPackage.TOSCA_NODES_DATABASE__PORT;
+
+	/**
+	 * The feature id for the '<em><b>Initiator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL__INITIATOR = ToscaPackage.TOSCA_NODES_DATABASE__INITIATOR;
+
+	/**
+	 * The feature id for the '<em><b>Network Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL__NETWORK_NAME = ToscaPackage.TOSCA_NODES_DATABASE__NETWORK_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Secure</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL__SECURE = ToscaPackage.TOSCA_NODES_DATABASE__SECURE;
+
+	/**
+	 * The feature id for the '<em><b>Ports</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL__PORTS = ToscaPackage.TOSCA_NODES_DATABASE__PORTS;
+
+	/**
+	 * The feature id for the '<em><b>Url Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL__URL_PATH = ToscaPackage.TOSCA_NODES_DATABASE__URL_PATH;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL__PASSWORD = ToscaPackage.TOSCA_NODES_DATABASE__PASSWORD;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL__NAME = ToscaPackage.TOSCA_NODES_DATABASE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>User</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL__USER = ToscaPackage.TOSCA_NODES_DATABASE__USER;
+
+	/**
+	 * The number of structural features of the '<em>Tosca nodes database mysql</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_DATABASE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Create</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL___CREATE = ToscaPackage.TOSCA_NODES_DATABASE___CREATE;
+
+	/**
+	 * The operation id for the '<em>Configure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL___CONFIGURE = ToscaPackage.TOSCA_NODES_DATABASE___CONFIGURE;
+
+	/**
+	 * The operation id for the '<em>Delete</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL___DELETE = ToscaPackage.TOSCA_NODES_DATABASE___DELETE;
+
+	/**
+	 * The number of operations of the '<em>Tosca nodes database mysql</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE_MYSQL_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_DATABASE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link extendedtosca.impl.Example_queuingsubsystemImpl <em>Example queuingsubsystem</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see extendedtosca.impl.Example_queuingsubsystemImpl
+	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getExample_queuingsubsystem()
+	 * @generated
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM = 23;
+
+	/**
+	 * The feature id for the '<em><b>Mixin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM__MIXIN = ToscaPackage.TOSCA_NODES_ROOT__MIXIN;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM__ENTITY = ToscaPackage.TOSCA_NODES_ROOT__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM__ATTRIBUTES = ToscaPackage.TOSCA_NODES_ROOT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM__PORT_NAME = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM__PROTOCOL = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM__PORT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Initiator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM__INITIATOR = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Network Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM__NETWORK_NAME = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Secure</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM__SECURE = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Ports</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM__PORTS = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Url Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM__URL_PATH = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 7;
+
+	/**
+	 * The number of structural features of the '<em>Example queuingsubsystem</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 8;
+
+	/**
+	 * The operation id for the '<em>Create</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM___CREATE = ToscaPackage.TOSCA_NODES_ROOT___CREATE;
+
+	/**
+	 * The operation id for the '<em>Configure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM___CONFIGURE = ToscaPackage.TOSCA_NODES_ROOT___CONFIGURE;
+
+	/**
+	 * The operation id for the '<em>Delete</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM___DELETE = ToscaPackage.TOSCA_NODES_ROOT___DELETE;
+
+	/**
+	 * The number of operations of the '<em>Example queuingsubsystem</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_QUEUINGSUBSYSTEM_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link extendedtosca.impl.Example_transactionsubsystemImpl <em>Example transactionsubsystem</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see extendedtosca.impl.Example_transactionsubsystemImpl
+	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getExample_transactionsubsystem()
+	 * @generated
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM = 24;
+
+	/**
+	 * The feature id for the '<em><b>Mixin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM__MIXIN = ToscaPackage.TOSCA_NODES_ROOT__MIXIN;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM__ENTITY = ToscaPackage.TOSCA_NODES_ROOT__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM__ATTRIBUTES = ToscaPackage.TOSCA_NODES_ROOT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM__PORT_NAME = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM__PROTOCOL = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM__PORT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Initiator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM__INITIATOR = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Network Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM__NETWORK_NAME = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Secure</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM__SECURE = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Ports</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM__PORTS = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Url Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM__URL_PATH = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Receiver Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM__RECEIVER_PORT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Mq Service Ip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM__MQ_SERVICE_IP = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 9;
+
+	/**
+	 * The number of structural features of the '<em>Example transactionsubsystem</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 10;
+
+	/**
+	 * The operation id for the '<em>Create</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM___CREATE = ToscaPackage.TOSCA_NODES_ROOT___CREATE;
+
+	/**
+	 * The operation id for the '<em>Configure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM___CONFIGURE = ToscaPackage.TOSCA_NODES_ROOT___CONFIGURE;
+
+	/**
+	 * The operation id for the '<em>Delete</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM___DELETE = ToscaPackage.TOSCA_NODES_ROOT___DELETE;
+
+	/**
+	 * The number of operations of the '<em>Example transactionsubsystem</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_TRANSACTIONSUBSYSTEM_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_softwarecomponent_elasticsearchImpl <em>Tosca nodes softwarecomponent elasticsearch</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see extendedtosca.impl.Tosca_nodes_softwarecomponent_elasticsearchImpl
+	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_softwarecomponent_elasticsearch()
+	 * @generated
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH = 25;
+
+	/**
+	 * The feature id for the '<em><b>Mixin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__MIXIN = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__MIXIN;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__ENTITY = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__ATTRIBUTES = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Admin Credential</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__ADMIN_CREDENTIAL = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ADMIN_CREDENTIAL;
+
+	/**
+	 * The feature id for the '<em><b>Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__COMPONENT_VERSION = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__COMPONENT_VERSION;
+
+	/**
+	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__PORT_NAME = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__PROTOCOL = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__PORT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Initiator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__INITIATOR = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Network Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__NETWORK_NAME = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Secure</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__SECURE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Ports</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__PORTS = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Url Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH__URL_PATH = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 7;
+
+	/**
+	 * The number of structural features of the '<em>Tosca nodes softwarecomponent elasticsearch</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 8;
+
+	/**
+	 * The operation id for the '<em>Create</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH___CREATE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___CREATE;
+
+	/**
+	 * The operation id for the '<em>Configure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH___CONFIGURE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___CONFIGURE;
+
+	/**
+	 * The operation id for the '<em>Delete</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH___DELETE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___DELETE;
+
+	/**
+	 * The number of operations of the '<em>Tosca nodes softwarecomponent elasticsearch</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_databasewithlistparamImpl <em>Tosca nodes databasewithlistparam</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see extendedtosca.impl.Tosca_nodes_databasewithlistparamImpl
+	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_databasewithlistparam()
+	 * @generated
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM = 26;
+
+	/**
+	 * The feature id for the '<em><b>Mixin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM__MIXIN = ToscaPackage.TOSCA_NODES_DATABASE__MIXIN;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM__ENTITY = ToscaPackage.TOSCA_NODES_DATABASE__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM__ATTRIBUTES = ToscaPackage.TOSCA_NODES_DATABASE__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM__PORT_NAME = ToscaPackage.TOSCA_NODES_DATABASE__PORT_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM__PROTOCOL = ToscaPackage.TOSCA_NODES_DATABASE__PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM__PORT = ToscaPackage.TOSCA_NODES_DATABASE__PORT;
+
+	/**
+	 * The feature id for the '<em><b>Initiator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM__INITIATOR = ToscaPackage.TOSCA_NODES_DATABASE__INITIATOR;
+
+	/**
+	 * The feature id for the '<em><b>Network Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM__NETWORK_NAME = ToscaPackage.TOSCA_NODES_DATABASE__NETWORK_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Secure</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM__SECURE = ToscaPackage.TOSCA_NODES_DATABASE__SECURE;
+
+	/**
+	 * The feature id for the '<em><b>Ports</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM__PORTS = ToscaPackage.TOSCA_NODES_DATABASE__PORTS;
+
+	/**
+	 * The feature id for the '<em><b>Url Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM__URL_PATH = ToscaPackage.TOSCA_NODES_DATABASE__URL_PATH;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM__PASSWORD = ToscaPackage.TOSCA_NODES_DATABASE__PASSWORD;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM__NAME = ToscaPackage.TOSCA_NODES_DATABASE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>User</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM__USER = ToscaPackage.TOSCA_NODES_DATABASE__USER;
+
+	/**
+	 * The feature id for the '<em><b>List Prop</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM__LIST_PROP = ToscaPackage.TOSCA_NODES_DATABASE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Tosca nodes databasewithlistparam</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_DATABASE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Create</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM___CREATE = ToscaPackage.TOSCA_NODES_DATABASE___CREATE;
+
+	/**
+	 * The operation id for the '<em>Configure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM___CONFIGURE = ToscaPackage.TOSCA_NODES_DATABASE___CONFIGURE;
+
+	/**
+	 * The operation id for the '<em>Delete</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM___DELETE = ToscaPackage.TOSCA_NODES_DATABASE___DELETE;
+
+	/**
+	 * The number of operations of the '<em>Tosca nodes databasewithlistparam</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASEWITHLISTPARAM_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_DATABASE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link extendedtosca.impl.Example_someappImpl <em>Example someapp</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see extendedtosca.impl.Example_someappImpl
+	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getExample_someapp()
+	 * @generated
+	 */
+	int EXAMPLE_SOMEAPP = 27;
+
+	/**
+	 * The feature id for the '<em><b>Mixin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_SOMEAPP__MIXIN = ToscaPackage.TOSCA_NODES_ROOT__MIXIN;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_SOMEAPP__ENTITY = ToscaPackage.TOSCA_NODES_ROOT__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_SOMEAPP__ATTRIBUTES = ToscaPackage.TOSCA_NODES_ROOT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_SOMEAPP__PORT_NAME = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_SOMEAPP__PROTOCOL = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_SOMEAPP__PORT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Initiator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_SOMEAPP__INITIATOR = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Network Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_SOMEAPP__NETWORK_NAME = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Secure</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_SOMEAPP__SECURE = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Ports</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_SOMEAPP__PORTS = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Url Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_SOMEAPP__URL_PATH = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 7;
+
+	/**
+	 * The number of structural features of the '<em>Example someapp</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_SOMEAPP_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 8;
+
+	/**
+	 * The operation id for the '<em>Create</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_SOMEAPP___CREATE = ToscaPackage.TOSCA_NODES_ROOT___CREATE;
+
+	/**
+	 * The operation id for the '<em>Configure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_SOMEAPP___CONFIGURE = ToscaPackage.TOSCA_NODES_ROOT___CONFIGURE;
+
+	/**
+	 * The operation id for the '<em>Delete</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_SOMEAPP___DELETE = ToscaPackage.TOSCA_NODES_ROOT___DELETE;
+
+	/**
+	 * The number of operations of the '<em>Example someapp</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMPLE_SOMEAPP_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_nodewithcapImpl <em>Tosca nodes nodewithcap</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see extendedtosca.impl.Tosca_nodes_nodewithcapImpl
+	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_nodewithcap()
+	 * @generated
+	 */
+	int TOSCA_NODES_NODEWITHCAP = 28;
+
+	/**
+	 * The feature id for the '<em><b>Mixin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHCAP__MIXIN = ToscaPackage.TOSCA_NODES_ROOT__MIXIN;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHCAP__ENTITY = ToscaPackage.TOSCA_NODES_ROOT__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHCAP__ATTRIBUTES = ToscaPackage.TOSCA_NODES_ROOT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Disk Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHCAP__DISK_SIZE = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHCAP__TYPE = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Tosca nodes nodewithcap</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHCAP_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Create</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHCAP___CREATE = ToscaPackage.TOSCA_NODES_ROOT___CREATE;
+
+	/**
+	 * The operation id for the '<em>Configure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHCAP___CONFIGURE = ToscaPackage.TOSCA_NODES_ROOT___CONFIGURE;
+
+	/**
+	 * The operation id for the '<em>Delete</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHCAP___DELETE = ToscaPackage.TOSCA_NODES_ROOT___DELETE;
+
+	/**
+	 * The number of operations of the '<em>Tosca nodes nodewithcap</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHCAP_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link extendedtosca.impl.RsyslogImpl <em>Rsyslog</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see extendedtosca.impl.RsyslogImpl
+	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getRsyslog()
+	 * @generated
+	 */
+	int RSYSLOG = 29;
+
+	/**
+	 * The feature id for the '<em><b>Mixin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RSYSLOG__MIXIN = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__MIXIN;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RSYSLOG__ENTITY = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RSYSLOG__ATTRIBUTES = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Admin Credential</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RSYSLOG__ADMIN_CREDENTIAL = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ADMIN_CREDENTIAL;
+
+	/**
+	 * The feature id for the '<em><b>Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RSYSLOG__COMPONENT_VERSION = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__COMPONENT_VERSION;
+
+	/**
+	 * The number of structural features of the '<em>Rsyslog</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RSYSLOG_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Create</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RSYSLOG___CREATE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___CREATE;
+
+	/**
+	 * The operation id for the '<em>Configure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RSYSLOG___CONFIGURE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___CONFIGURE;
+
+	/**
+	 * The operation id for the '<em>Delete</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RSYSLOG___DELETE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___DELETE;
+
+	/**
+	 * The number of operations of the '<em>Rsyslog</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RSYSLOG_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_network_portImpl <em>Tosca nodes network port</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see extendedtosca.impl.Tosca_nodes_network_portImpl
+	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_network_port()
+	 * @generated
+	 */
+	int TOSCA_NODES_NETWORK_PORT = 30;
+
+	/**
+	 * The feature id for the '<em><b>Mixin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_PORT__MIXIN = ToscaPackage.TOSCA_NODES_ROOT__MIXIN;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_PORT__ENTITY = ToscaPackage.TOSCA_NODES_ROOT__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_PORT__ATTRIBUTES = ToscaPackage.TOSCA_NODES_ROOT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Ip Range End</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_PORT__IP_RANGE_END = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Ip Range Start</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_PORT__IP_RANGE_START = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Ip Address</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_PORT__IP_ADDRESS = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Is Default</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_PORT__IS_DEFAULT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_PORT__ORDER = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Tosca nodes network port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_PORT_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Create</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_PORT___CREATE = ToscaPackage.TOSCA_NODES_ROOT___CREATE;
+
+	/**
+	 * The operation id for the '<em>Configure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_PORT___CONFIGURE = ToscaPackage.TOSCA_NODES_ROOT___CONFIGURE;
+
+	/**
+	 * The operation id for the '<em>Delete</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_PORT___DELETE = ToscaPackage.TOSCA_NODES_ROOT___DELETE;
+
+	/**
+	 * The number of operations of the '<em>Tosca nodes network port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_PORT_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_computewithcapwithattrImpl <em>Tosca nodes computewithcapwithattr</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3074,7 +3926,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_computewithcapwithattr()
 	 * @generated
 	 */
-	int TOSCA_NODES_COMPUTEWITHCAPWITHATTR = 26;
+	int TOSCA_NODES_COMPUTEWITHCAPWITHATTR = 31;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -3320,106 +4172,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	int TOSCA_NODES_COMPUTEWITHCAPWITHATTR_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_COMPUTE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_nodewithreqImpl <em>Tosca nodes nodewithreq</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see extendedtosca.impl.Tosca_nodes_nodewithreqImpl
-	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_nodewithreq()
-	 * @generated
-	 */
-	int TOSCA_NODES_NODEWITHREQ = 27;
-
-	/**
-	 * The feature id for the '<em><b>Mixin</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHREQ__MIXIN = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__MIXIN;
-
-	/**
-	 * The feature id for the '<em><b>Entity</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHREQ__ENTITY = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ENTITY;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHREQ__ATTRIBUTES = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Admin Credential</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHREQ__ADMIN_CREDENTIAL = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__ADMIN_CREDENTIAL;
-
-	/**
-	 * The feature id for the '<em><b>Component Version</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHREQ__COMPONENT_VERSION = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT__COMPONENT_VERSION;
-
-	/**
-	 * The number of structural features of the '<em>Tosca nodes nodewithreq</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHREQ_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHREQ___CREATE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHREQ___CONFIGURE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHREQ___DELETE = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT___DELETE;
-
-	/**
-	 * The number of operations of the '<em>Tosca nodes nodewithreq</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHREQ_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_softwarecomponent_rsyslogImpl <em>Tosca nodes softwarecomponent rsyslog</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3427,7 +4179,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_softwarecomponent_rsyslog()
 	 * @generated
 	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_RSYSLOG = 28;
+	int TOSCA_NODES_SOFTWARECOMPONENT_RSYSLOG = 32;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -3527,7 +4279,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_hacompute()
 	 * @generated
 	 */
-	int TOSCA_NODES_HACOMPUTE = 29;
+	int TOSCA_NODES_HACOMPUTE = 33;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -3771,7 +4523,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_somenode()
 	 * @generated
 	 */
-	int TOSCA_NODES_SOMENODE = 30;
+	int TOSCA_NODES_SOMENODE = 34;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -3862,7 +4614,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_webserver_nodejs()
 	 * @generated
 	 */
-	int TOSCA_NODES_WEBSERVER_NODEJS = 31;
+	int TOSCA_NODES_WEBSERVER_NODEJS = 35;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4045,97 +4797,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	int TOSCA_NODES_WEBSERVER_NODEJS_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_WEBSERVER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_somenode2Impl <em>Tosca nodes somenode2</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see extendedtosca.impl.Tosca_nodes_somenode2Impl
-	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_somenode2()
-	 * @generated
-	 */
-	int TOSCA_NODES_SOMENODE2 = 32;
-
-	/**
-	 * The feature id for the '<em><b>Mixin</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOMENODE2__MIXIN = ToscaPackage.TOSCA_NODES_ROOT__MIXIN;
-
-	/**
-	 * The feature id for the '<em><b>Entity</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOMENODE2__ENTITY = ToscaPackage.TOSCA_NODES_ROOT__ENTITY;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOMENODE2__ATTRIBUTES = ToscaPackage.TOSCA_NODES_ROOT__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Disk Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOMENODE2__DISK_SIZE = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Tosca nodes somenode2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOMENODE2_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOMENODE2___CREATE = ToscaPackage.TOSCA_NODES_ROOT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOMENODE2___CONFIGURE = ToscaPackage.TOSCA_NODES_ROOT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOMENODE2___DELETE = ToscaPackage.TOSCA_NODES_ROOT___DELETE;
-
-	/**
-	 * The number of operations of the '<em>Tosca nodes somenode2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOMENODE2_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_dbms_mysqlImpl <em>Tosca nodes dbms mysql</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4143,7 +4804,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_dbms_mysql()
 	 * @generated
 	 */
-	int TOSCA_NODES_DBMS_MYSQL = 33;
+	int TOSCA_NODES_DBMS_MYSQL = 36;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4270,7 +4931,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getMycompany_mytypes_myscalingpolicy()
 	 * @generated
 	 */
-	int MYCOMPANY_MYTYPES_MYSCALINGPOLICY = 34;
+	int MYCOMPANY_MYTYPES_MYSCALINGPOLICY = 37;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4325,7 +4986,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTest_relation_connects()
 	 * @generated
 	 */
-	int TEST_RELATION_CONNECTS = 35;
+	int TEST_RELATION_CONNECTS = 38;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4380,7 +5041,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_relationships_network_bindsto()
 	 * @generated
 	 */
-	int TOSCA_RELATIONSHIPS_NETWORK_BINDSTO = 36;
+	int TOSCA_RELATIONSHIPS_NETWORK_BINDSTO = 39;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4462,7 +5123,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_relationships_ha()
 	 * @generated
 	 */
-	int TOSCA_RELATIONSHIPS_HA = 37;
+	int TOSCA_RELATIONSHIPS_HA = 40;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4537,6 +5198,97 @@ public interface ExtendedtoscaPackage extends EPackage {
 	int TOSCA_RELATIONSHIPS_HA_OPERATION_COUNT = ToscaPackage.TOSCA_RELATIONSHIPS_ROOT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link extendedtosca.impl.MyattachestoImpl <em>Myattachesto</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see extendedtosca.impl.MyattachestoImpl
+	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getMyattachesto()
+	 * @generated
+	 */
+	int MYATTACHESTO = 41;
+
+	/**
+	 * The feature id for the '<em><b>Mixin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MYATTACHESTO__MIXIN = ToscaPackage.TOSCA_RELATIONSHIPS_ATTACHESTO__MIXIN;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MYATTACHESTO__ENTITY = ToscaPackage.TOSCA_RELATIONSHIPS_ATTACHESTO__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MYATTACHESTO__ATTRIBUTES = ToscaPackage.TOSCA_RELATIONSHIPS_ATTACHESTO__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Tosca Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MYATTACHESTO__TOSCA_NAME = ToscaPackage.TOSCA_RELATIONSHIPS_ATTACHESTO__TOSCA_NAME;
+
+	/**
+	 * The feature id for the '<em><b>State</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MYATTACHESTO__STATE = ToscaPackage.TOSCA_RELATIONSHIPS_ATTACHESTO__STATE;
+
+	/**
+	 * The feature id for the '<em><b>Tosca Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MYATTACHESTO__TOSCA_ID = ToscaPackage.TOSCA_RELATIONSHIPS_ATTACHESTO__TOSCA_ID;
+
+	/**
+	 * The feature id for the '<em><b>Location</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MYATTACHESTO__LOCATION = ToscaPackage.TOSCA_RELATIONSHIPS_ATTACHESTO__LOCATION;
+
+	/**
+	 * The number of structural features of the '<em>Myattachesto</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MYATTACHESTO_FEATURE_COUNT = ToscaPackage.TOSCA_RELATIONSHIPS_ATTACHESTO_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Myattachesto</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MYATTACHESTO_OPERATION_COUNT = ToscaPackage.TOSCA_RELATIONSHIPS_ATTACHESTO_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link extendedtosca.impl.Tosca_relationships_network_linkstoImpl <em>Tosca relationships network linksto</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4544,7 +5296,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_relationships_network_linksto()
 	 * @generated
 	 */
-	int TOSCA_RELATIONSHIPS_NETWORK_LINKSTO = 38;
+	int TOSCA_RELATIONSHIPS_NETWORK_LINKSTO = 42;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -4617,6 +5369,16 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_RELATIONSHIPS_NETWORK_LINKSTO_OPERATION_COUNT = ToscaPackage.TOSCA_RELATIONSHIPS_DEPENDSON_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link extendedtosca.ip_versionEnum <em>ip version Enum</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see extendedtosca.ip_versionEnum
+	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getip_versionEnum()
+	 * @generated
+	 */
+	int IP_VERSION_ENUM = 43;
 
 
 	/**
@@ -4841,16 +5603,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	EClass getTosca_capabilities_somechildcap();
 
 	/**
-	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_database_mysql <em>Tosca nodes database mysql</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tosca nodes database mysql</em>'.
-	 * @see extendedtosca.Tosca_nodes_database_mysql
-	 * @generated
-	 */
-	EClass getTosca_nodes_database_mysql();
-
-	/**
 	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_computewithprop <em>Tosca nodes computewithprop</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4870,47 +5622,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTosca_nodes_computewithprop_Test();
-
-	/**
-	 * Returns the meta object for class '{@link extendedtosca.Capabilities <em>Capabilities</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Capabilities</em>'.
-	 * @see extendedtosca.Capabilities
-	 * @generated
-	 */
-	EClass getCapabilities();
-
-	/**
-	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_softwarecomponent_elasticsearch <em>Tosca nodes softwarecomponent elasticsearch</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tosca nodes softwarecomponent elasticsearch</em>'.
-	 * @see extendedtosca.Tosca_nodes_softwarecomponent_elasticsearch
-	 * @generated
-	 */
-	EClass getTosca_nodes_softwarecomponent_elasticsearch();
-
-	/**
-	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_databasewithlistparam <em>Tosca nodes databasewithlistparam</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tosca nodes databasewithlistparam</em>'.
-	 * @see extendedtosca.Tosca_nodes_databasewithlistparam
-	 * @generated
-	 */
-	EClass getTosca_nodes_databasewithlistparam();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link extendedtosca.Tosca_nodes_databasewithlistparam#getListProp <em>List Prop</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>List Prop</em>'.
-	 * @see extendedtosca.Tosca_nodes_databasewithlistparam#getListProp()
-	 * @see #getTosca_nodes_databasewithlistparam()
-	 * @generated
-	 */
-	EReference getTosca_nodes_databasewithlistparam_ListProp();
 
 	/**
 	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_webapplication_paypalpizzastore <em>Tosca nodes webapplication paypalpizzastore</em>}'.
@@ -4987,6 +5698,39 @@ public interface ExtendedtoscaPackage extends EPackage {
 	EClass getTosca_nodes_network_network();
 
 	/**
+	 * Returns the meta object for the attribute '{@link extendedtosca.Tosca_nodes_network_network#getPhysicalNetwork <em>Physical Network</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Physical Network</em>'.
+	 * @see extendedtosca.Tosca_nodes_network_network#getPhysicalNetwork()
+	 * @see #getTosca_nodes_network_network()
+	 * @generated
+	 */
+	EAttribute getTosca_nodes_network_network_PhysicalNetwork();
+
+	/**
+	 * Returns the meta object for the attribute '{@link extendedtosca.Tosca_nodes_network_network#getSegmentationId <em>Segmentation Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Segmentation Id</em>'.
+	 * @see extendedtosca.Tosca_nodes_network_network#getSegmentationId()
+	 * @see #getTosca_nodes_network_network()
+	 * @generated
+	 */
+	EAttribute getTosca_nodes_network_network_SegmentationId();
+
+	/**
+	 * Returns the meta object for the attribute '{@link extendedtosca.Tosca_nodes_network_network#getNetworkId <em>Network Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Network Id</em>'.
+	 * @see extendedtosca.Tosca_nodes_network_network#getNetworkId()
+	 * @see #getTosca_nodes_network_network()
+	 * @generated
+	 */
+	EAttribute getTosca_nodes_network_network_NetworkId();
+
+	/**
 	 * Returns the meta object for the attribute '{@link extendedtosca.Tosca_nodes_network_network#getIpVersion <em>Ip Version</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4998,14 +5742,70 @@ public interface ExtendedtoscaPackage extends EPackage {
 	EAttribute getTosca_nodes_network_network_IpVersion();
 
 	/**
-	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_nodewithcap <em>Tosca nodes nodewithcap</em>}'.
+	 * Returns the meta object for the attribute '{@link extendedtosca.Tosca_nodes_network_network#getStartIp <em>Start Ip</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tosca nodes nodewithcap</em>'.
-	 * @see extendedtosca.Tosca_nodes_nodewithcap
+	 * @return the meta object for the attribute '<em>Start Ip</em>'.
+	 * @see extendedtosca.Tosca_nodes_network_network#getStartIp()
+	 * @see #getTosca_nodes_network_network()
 	 * @generated
 	 */
-	EClass getTosca_nodes_nodewithcap();
+	EAttribute getTosca_nodes_network_network_StartIp();
+
+	/**
+	 * Returns the meta object for the attribute '{@link extendedtosca.Tosca_nodes_network_network#getNetworkName <em>Network Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Network Name</em>'.
+	 * @see extendedtosca.Tosca_nodes_network_network#getNetworkName()
+	 * @see #getTosca_nodes_network_network()
+	 * @generated
+	 */
+	EAttribute getTosca_nodes_network_network_NetworkName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link extendedtosca.Tosca_nodes_network_network#getCidr <em>Cidr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cidr</em>'.
+	 * @see extendedtosca.Tosca_nodes_network_network#getCidr()
+	 * @see #getTosca_nodes_network_network()
+	 * @generated
+	 */
+	EAttribute getTosca_nodes_network_network_Cidr();
+
+	/**
+	 * Returns the meta object for the attribute '{@link extendedtosca.Tosca_nodes_network_network#getGatewayIp <em>Gateway Ip</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Gateway Ip</em>'.
+	 * @see extendedtosca.Tosca_nodes_network_network#getGatewayIp()
+	 * @see #getTosca_nodes_network_network()
+	 * @generated
+	 */
+	EAttribute getTosca_nodes_network_network_GatewayIp();
+
+	/**
+	 * Returns the meta object for the attribute '{@link extendedtosca.Tosca_nodes_network_network#getNetworkType <em>Network Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Network Type</em>'.
+	 * @see extendedtosca.Tosca_nodes_network_network#getNetworkType()
+	 * @see #getTosca_nodes_network_network()
+	 * @generated
+	 */
+	EAttribute getTosca_nodes_network_network_NetworkType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link extendedtosca.Tosca_nodes_network_network#getEndIp <em>End Ip</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>End Ip</em>'.
+	 * @see extendedtosca.Tosca_nodes_network_network#getEndIp()
+	 * @see #getTosca_nodes_network_network()
+	 * @generated
+	 */
+	EAttribute getTosca_nodes_network_network_EndIp();
 
 	/**
 	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_container_application_docker <em>Tosca nodes container application docker</em>}'.
@@ -5028,16 +5828,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	EClass getTosca_nodes_softwarecomponent_kibana();
 
 	/**
-	 * Returns the meta object for class '{@link extendedtosca.Rsyslog <em>Rsyslog</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Rsyslog</em>'.
-	 * @see extendedtosca.Rsyslog
-	 * @generated
-	 */
-	EClass getRsyslog();
-
-	/**
 	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_computewithattrlist <em>Tosca nodes computewithattrlist</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5057,6 +5847,169 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTosca_nodes_computewithattrlist_AttrList();
+
+	/**
+	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_softwarecomponent_logstash <em>Tosca nodes softwarecomponent logstash</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tosca nodes softwarecomponent logstash</em>'.
+	 * @see extendedtosca.Tosca_nodes_softwarecomponent_logstash
+	 * @generated
+	 */
+	EClass getTosca_nodes_softwarecomponent_logstash();
+
+	/**
+	 * Returns the meta object for class '{@link extendedtosca.Example_databasesubsystem <em>Example databasesubsystem</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Example databasesubsystem</em>'.
+	 * @see extendedtosca.Example_databasesubsystem
+	 * @generated
+	 */
+	EClass getExample_databasesubsystem();
+
+	/**
+	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_softwarecomponent_collectd <em>Tosca nodes softwarecomponent collectd</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tosca nodes softwarecomponent collectd</em>'.
+	 * @see extendedtosca.Tosca_nodes_softwarecomponent_collectd
+	 * @generated
+	 */
+	EClass getTosca_nodes_softwarecomponent_collectd();
+
+	/**
+	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_nodewithreq <em>Tosca nodes nodewithreq</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tosca nodes nodewithreq</em>'.
+	 * @see extendedtosca.Tosca_nodes_nodewithreq
+	 * @generated
+	 */
+	EClass getTosca_nodes_nodewithreq();
+
+	/**
+	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_somenode2 <em>Tosca nodes somenode2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tosca nodes somenode2</em>'.
+	 * @see extendedtosca.Tosca_nodes_somenode2
+	 * @generated
+	 */
+	EClass getTosca_nodes_somenode2();
+
+	/**
+	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_database_mysql <em>Tosca nodes database mysql</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tosca nodes database mysql</em>'.
+	 * @see extendedtosca.Tosca_nodes_database_mysql
+	 * @generated
+	 */
+	EClass getTosca_nodes_database_mysql();
+
+	/**
+	 * Returns the meta object for class '{@link extendedtosca.Example_queuingsubsystem <em>Example queuingsubsystem</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Example queuingsubsystem</em>'.
+	 * @see extendedtosca.Example_queuingsubsystem
+	 * @generated
+	 */
+	EClass getExample_queuingsubsystem();
+
+	/**
+	 * Returns the meta object for class '{@link extendedtosca.Example_transactionsubsystem <em>Example transactionsubsystem</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Example transactionsubsystem</em>'.
+	 * @see extendedtosca.Example_transactionsubsystem
+	 * @generated
+	 */
+	EClass getExample_transactionsubsystem();
+
+	/**
+	 * Returns the meta object for the attribute '{@link extendedtosca.Example_transactionsubsystem#getReceiverPort <em>Receiver Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Receiver Port</em>'.
+	 * @see extendedtosca.Example_transactionsubsystem#getReceiverPort()
+	 * @see #getExample_transactionsubsystem()
+	 * @generated
+	 */
+	EAttribute getExample_transactionsubsystem_ReceiverPort();
+
+	/**
+	 * Returns the meta object for the attribute '{@link extendedtosca.Example_transactionsubsystem#getMqServiceIp <em>Mq Service Ip</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Mq Service Ip</em>'.
+	 * @see extendedtosca.Example_transactionsubsystem#getMqServiceIp()
+	 * @see #getExample_transactionsubsystem()
+	 * @generated
+	 */
+	EAttribute getExample_transactionsubsystem_MqServiceIp();
+
+	/**
+	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_softwarecomponent_elasticsearch <em>Tosca nodes softwarecomponent elasticsearch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tosca nodes softwarecomponent elasticsearch</em>'.
+	 * @see extendedtosca.Tosca_nodes_softwarecomponent_elasticsearch
+	 * @generated
+	 */
+	EClass getTosca_nodes_softwarecomponent_elasticsearch();
+
+	/**
+	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_databasewithlistparam <em>Tosca nodes databasewithlistparam</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tosca nodes databasewithlistparam</em>'.
+	 * @see extendedtosca.Tosca_nodes_databasewithlistparam
+	 * @generated
+	 */
+	EClass getTosca_nodes_databasewithlistparam();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link extendedtosca.Tosca_nodes_databasewithlistparam#getListProp <em>List Prop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>List Prop</em>'.
+	 * @see extendedtosca.Tosca_nodes_databasewithlistparam#getListProp()
+	 * @see #getTosca_nodes_databasewithlistparam()
+	 * @generated
+	 */
+	EReference getTosca_nodes_databasewithlistparam_ListProp();
+
+	/**
+	 * Returns the meta object for class '{@link extendedtosca.Example_someapp <em>Example someapp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Example someapp</em>'.
+	 * @see extendedtosca.Example_someapp
+	 * @generated
+	 */
+	EClass getExample_someapp();
+
+	/**
+	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_nodewithcap <em>Tosca nodes nodewithcap</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tosca nodes nodewithcap</em>'.
+	 * @see extendedtosca.Tosca_nodes_nodewithcap
+	 * @generated
+	 */
+	EClass getTosca_nodes_nodewithcap();
+
+	/**
+	 * Returns the meta object for class '{@link extendedtosca.Rsyslog <em>Rsyslog</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Rsyslog</em>'.
+	 * @see extendedtosca.Rsyslog
+	 * @generated
+	 */
+	EClass getRsyslog();
 
 	/**
 	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_network_port <em>Tosca nodes network port</em>}'.
@@ -5124,26 +6077,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	EAttribute getTosca_nodes_network_port_Order();
 
 	/**
-	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_softwarecomponent_logstash <em>Tosca nodes softwarecomponent logstash</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tosca nodes softwarecomponent logstash</em>'.
-	 * @see extendedtosca.Tosca_nodes_softwarecomponent_logstash
-	 * @generated
-	 */
-	EClass getTosca_nodes_softwarecomponent_logstash();
-
-	/**
-	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_softwarecomponent_collectd <em>Tosca nodes softwarecomponent collectd</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tosca nodes softwarecomponent collectd</em>'.
-	 * @see extendedtosca.Tosca_nodes_softwarecomponent_collectd
-	 * @generated
-	 */
-	EClass getTosca_nodes_softwarecomponent_collectd();
-
-	/**
 	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_computewithcapwithattr <em>Tosca nodes computewithcapwithattr</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5152,16 +6085,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTosca_nodes_computewithcapwithattr();
-
-	/**
-	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_nodewithreq <em>Tosca nodes nodewithreq</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tosca nodes nodewithreq</em>'.
-	 * @see extendedtosca.Tosca_nodes_nodewithreq
-	 * @generated
-	 */
-	EClass getTosca_nodes_nodewithreq();
 
 	/**
 	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_softwarecomponent_rsyslog <em>Tosca nodes softwarecomponent rsyslog</em>}'.
@@ -5226,16 +6149,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	EAttribute getTosca_nodes_webserver_nodejs_GithubUrl();
 
 	/**
-	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_somenode2 <em>Tosca nodes somenode2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tosca nodes somenode2</em>'.
-	 * @see extendedtosca.Tosca_nodes_somenode2
-	 * @generated
-	 */
-	EClass getTosca_nodes_somenode2();
-
-	/**
 	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_dbms_mysql <em>Tosca nodes dbms mysql</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5286,6 +6199,16 @@ public interface ExtendedtoscaPackage extends EPackage {
 	EClass getTosca_relationships_ha();
 
 	/**
+	 * Returns the meta object for class '{@link extendedtosca.Myattachesto <em>Myattachesto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Myattachesto</em>'.
+	 * @see extendedtosca.Myattachesto
+	 * @generated
+	 */
+	EClass getMyattachesto();
+
+	/**
 	 * Returns the meta object for class '{@link extendedtosca.Tosca_relationships_network_linksto <em>Tosca relationships network linksto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5294,6 +6217,16 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTosca_relationships_network_linksto();
+
+	/**
+	 * Returns the meta object for enum '{@link extendedtosca.ip_versionEnum <em>ip version Enum</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ip version Enum</em>'.
+	 * @see extendedtosca.ip_versionEnum
+	 * @generated
+	 */
+	EEnum getip_versionEnum();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -5507,16 +6440,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 		EClass TOSCA_CAPABILITIES_SOMECHILDCAP = eINSTANCE.getTosca_capabilities_somechildcap();
 
 		/**
-		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_database_mysqlImpl <em>Tosca nodes database mysql</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see extendedtosca.impl.Tosca_nodes_database_mysqlImpl
-		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_database_mysql()
-		 * @generated
-		 */
-		EClass TOSCA_NODES_DATABASE_MYSQL = eINSTANCE.getTosca_nodes_database_mysql();
-
-		/**
 		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_computewithpropImpl <em>Tosca nodes computewithprop</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5533,44 +6456,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TOSCA_NODES_COMPUTEWITHPROP__TEST = eINSTANCE.getTosca_nodes_computewithprop_Test();
-
-		/**
-		 * The meta object literal for the '{@link extendedtosca.impl.CapabilitiesImpl <em>Capabilities</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see extendedtosca.impl.CapabilitiesImpl
-		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getCapabilities()
-		 * @generated
-		 */
-		EClass CAPABILITIES = eINSTANCE.getCapabilities();
-
-		/**
-		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_softwarecomponent_elasticsearchImpl <em>Tosca nodes softwarecomponent elasticsearch</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see extendedtosca.impl.Tosca_nodes_softwarecomponent_elasticsearchImpl
-		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_softwarecomponent_elasticsearch()
-		 * @generated
-		 */
-		EClass TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH = eINSTANCE.getTosca_nodes_softwarecomponent_elasticsearch();
-
-		/**
-		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_databasewithlistparamImpl <em>Tosca nodes databasewithlistparam</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see extendedtosca.impl.Tosca_nodes_databasewithlistparamImpl
-		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_databasewithlistparam()
-		 * @generated
-		 */
-		EClass TOSCA_NODES_DATABASEWITHLISTPARAM = eINSTANCE.getTosca_nodes_databasewithlistparam();
-
-		/**
-		 * The meta object literal for the '<em><b>List Prop</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TOSCA_NODES_DATABASEWITHLISTPARAM__LIST_PROP = eINSTANCE.getTosca_nodes_databasewithlistparam_ListProp();
 
 		/**
 		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_webapplication_paypalpizzastoreImpl <em>Tosca nodes webapplication paypalpizzastore</em>}' class.
@@ -5635,6 +6520,30 @@ public interface ExtendedtoscaPackage extends EPackage {
 		EClass TOSCA_NODES_NETWORK_NETWORK = eINSTANCE.getTosca_nodes_network_network();
 
 		/**
+		 * The meta object literal for the '<em><b>Physical Network</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOSCA_NODES_NETWORK_NETWORK__PHYSICAL_NETWORK = eINSTANCE.getTosca_nodes_network_network_PhysicalNetwork();
+
+		/**
+		 * The meta object literal for the '<em><b>Segmentation Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOSCA_NODES_NETWORK_NETWORK__SEGMENTATION_ID = eINSTANCE.getTosca_nodes_network_network_SegmentationId();
+
+		/**
+		 * The meta object literal for the '<em><b>Network Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOSCA_NODES_NETWORK_NETWORK__NETWORK_ID = eINSTANCE.getTosca_nodes_network_network_NetworkId();
+
+		/**
 		 * The meta object literal for the '<em><b>Ip Version</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5643,14 +6552,52 @@ public interface ExtendedtoscaPackage extends EPackage {
 		EAttribute TOSCA_NODES_NETWORK_NETWORK__IP_VERSION = eINSTANCE.getTosca_nodes_network_network_IpVersion();
 
 		/**
-		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_nodewithcapImpl <em>Tosca nodes nodewithcap</em>}' class.
+		 * The meta object literal for the '<em><b>Start Ip</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see extendedtosca.impl.Tosca_nodes_nodewithcapImpl
-		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_nodewithcap()
 		 * @generated
 		 */
-		EClass TOSCA_NODES_NODEWITHCAP = eINSTANCE.getTosca_nodes_nodewithcap();
+		EAttribute TOSCA_NODES_NETWORK_NETWORK__START_IP = eINSTANCE.getTosca_nodes_network_network_StartIp();
+
+		/**
+		 * The meta object literal for the '<em><b>Network Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOSCA_NODES_NETWORK_NETWORK__NETWORK_NAME = eINSTANCE.getTosca_nodes_network_network_NetworkName();
+
+		/**
+		 * The meta object literal for the '<em><b>Cidr</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOSCA_NODES_NETWORK_NETWORK__CIDR = eINSTANCE.getTosca_nodes_network_network_Cidr();
+
+		/**
+		 * The meta object literal for the '<em><b>Gateway Ip</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOSCA_NODES_NETWORK_NETWORK__GATEWAY_IP = eINSTANCE.getTosca_nodes_network_network_GatewayIp();
+
+		/**
+		 * The meta object literal for the '<em><b>Network Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOSCA_NODES_NETWORK_NETWORK__NETWORK_TYPE = eINSTANCE.getTosca_nodes_network_network_NetworkType();
+
+		/**
+		 * The meta object literal for the '<em><b>End Ip</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOSCA_NODES_NETWORK_NETWORK__END_IP = eINSTANCE.getTosca_nodes_network_network_EndIp();
 
 		/**
 		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_container_application_dockerImpl <em>Tosca nodes container application docker</em>}' class.
@@ -5673,16 +6620,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 		EClass TOSCA_NODES_SOFTWARECOMPONENT_KIBANA = eINSTANCE.getTosca_nodes_softwarecomponent_kibana();
 
 		/**
-		 * The meta object literal for the '{@link extendedtosca.impl.RsyslogImpl <em>Rsyslog</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see extendedtosca.impl.RsyslogImpl
-		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getRsyslog()
-		 * @generated
-		 */
-		EClass RSYSLOG = eINSTANCE.getRsyslog();
-
-		/**
 		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_computewithattrlistImpl <em>Tosca nodes computewithattrlist</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5699,6 +6636,160 @@ public interface ExtendedtoscaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TOSCA_NODES_COMPUTEWITHATTRLIST__ATTR_LIST = eINSTANCE.getTosca_nodes_computewithattrlist_AttrList();
+
+		/**
+		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_softwarecomponent_logstashImpl <em>Tosca nodes softwarecomponent logstash</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.impl.Tosca_nodes_softwarecomponent_logstashImpl
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_softwarecomponent_logstash()
+		 * @generated
+		 */
+		EClass TOSCA_NODES_SOFTWARECOMPONENT_LOGSTASH = eINSTANCE.getTosca_nodes_softwarecomponent_logstash();
+
+		/**
+		 * The meta object literal for the '{@link extendedtosca.impl.Example_databasesubsystemImpl <em>Example databasesubsystem</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.impl.Example_databasesubsystemImpl
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getExample_databasesubsystem()
+		 * @generated
+		 */
+		EClass EXAMPLE_DATABASESUBSYSTEM = eINSTANCE.getExample_databasesubsystem();
+
+		/**
+		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_softwarecomponent_collectdImpl <em>Tosca nodes softwarecomponent collectd</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.impl.Tosca_nodes_softwarecomponent_collectdImpl
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_softwarecomponent_collectd()
+		 * @generated
+		 */
+		EClass TOSCA_NODES_SOFTWARECOMPONENT_COLLECTD = eINSTANCE.getTosca_nodes_softwarecomponent_collectd();
+
+		/**
+		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_nodewithreqImpl <em>Tosca nodes nodewithreq</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.impl.Tosca_nodes_nodewithreqImpl
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_nodewithreq()
+		 * @generated
+		 */
+		EClass TOSCA_NODES_NODEWITHREQ = eINSTANCE.getTosca_nodes_nodewithreq();
+
+		/**
+		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_somenode2Impl <em>Tosca nodes somenode2</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.impl.Tosca_nodes_somenode2Impl
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_somenode2()
+		 * @generated
+		 */
+		EClass TOSCA_NODES_SOMENODE2 = eINSTANCE.getTosca_nodes_somenode2();
+
+		/**
+		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_database_mysqlImpl <em>Tosca nodes database mysql</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.impl.Tosca_nodes_database_mysqlImpl
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_database_mysql()
+		 * @generated
+		 */
+		EClass TOSCA_NODES_DATABASE_MYSQL = eINSTANCE.getTosca_nodes_database_mysql();
+
+		/**
+		 * The meta object literal for the '{@link extendedtosca.impl.Example_queuingsubsystemImpl <em>Example queuingsubsystem</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.impl.Example_queuingsubsystemImpl
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getExample_queuingsubsystem()
+		 * @generated
+		 */
+		EClass EXAMPLE_QUEUINGSUBSYSTEM = eINSTANCE.getExample_queuingsubsystem();
+
+		/**
+		 * The meta object literal for the '{@link extendedtosca.impl.Example_transactionsubsystemImpl <em>Example transactionsubsystem</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.impl.Example_transactionsubsystemImpl
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getExample_transactionsubsystem()
+		 * @generated
+		 */
+		EClass EXAMPLE_TRANSACTIONSUBSYSTEM = eINSTANCE.getExample_transactionsubsystem();
+
+		/**
+		 * The meta object literal for the '<em><b>Receiver Port</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXAMPLE_TRANSACTIONSUBSYSTEM__RECEIVER_PORT = eINSTANCE.getExample_transactionsubsystem_ReceiverPort();
+
+		/**
+		 * The meta object literal for the '<em><b>Mq Service Ip</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXAMPLE_TRANSACTIONSUBSYSTEM__MQ_SERVICE_IP = eINSTANCE.getExample_transactionsubsystem_MqServiceIp();
+
+		/**
+		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_softwarecomponent_elasticsearchImpl <em>Tosca nodes softwarecomponent elasticsearch</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.impl.Tosca_nodes_softwarecomponent_elasticsearchImpl
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_softwarecomponent_elasticsearch()
+		 * @generated
+		 */
+		EClass TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH = eINSTANCE.getTosca_nodes_softwarecomponent_elasticsearch();
+
+		/**
+		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_databasewithlistparamImpl <em>Tosca nodes databasewithlistparam</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.impl.Tosca_nodes_databasewithlistparamImpl
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_databasewithlistparam()
+		 * @generated
+		 */
+		EClass TOSCA_NODES_DATABASEWITHLISTPARAM = eINSTANCE.getTosca_nodes_databasewithlistparam();
+
+		/**
+		 * The meta object literal for the '<em><b>List Prop</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TOSCA_NODES_DATABASEWITHLISTPARAM__LIST_PROP = eINSTANCE.getTosca_nodes_databasewithlistparam_ListProp();
+
+		/**
+		 * The meta object literal for the '{@link extendedtosca.impl.Example_someappImpl <em>Example someapp</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.impl.Example_someappImpl
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getExample_someapp()
+		 * @generated
+		 */
+		EClass EXAMPLE_SOMEAPP = eINSTANCE.getExample_someapp();
+
+		/**
+		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_nodewithcapImpl <em>Tosca nodes nodewithcap</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.impl.Tosca_nodes_nodewithcapImpl
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_nodewithcap()
+		 * @generated
+		 */
+		EClass TOSCA_NODES_NODEWITHCAP = eINSTANCE.getTosca_nodes_nodewithcap();
+
+		/**
+		 * The meta object literal for the '{@link extendedtosca.impl.RsyslogImpl <em>Rsyslog</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.impl.RsyslogImpl
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getRsyslog()
+		 * @generated
+		 */
+		EClass RSYSLOG = eINSTANCE.getRsyslog();
 
 		/**
 		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_network_portImpl <em>Tosca nodes network port</em>}' class.
@@ -5751,26 +6842,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 		EAttribute TOSCA_NODES_NETWORK_PORT__ORDER = eINSTANCE.getTosca_nodes_network_port_Order();
 
 		/**
-		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_softwarecomponent_logstashImpl <em>Tosca nodes softwarecomponent logstash</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see extendedtosca.impl.Tosca_nodes_softwarecomponent_logstashImpl
-		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_softwarecomponent_logstash()
-		 * @generated
-		 */
-		EClass TOSCA_NODES_SOFTWARECOMPONENT_LOGSTASH = eINSTANCE.getTosca_nodes_softwarecomponent_logstash();
-
-		/**
-		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_softwarecomponent_collectdImpl <em>Tosca nodes softwarecomponent collectd</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see extendedtosca.impl.Tosca_nodes_softwarecomponent_collectdImpl
-		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_softwarecomponent_collectd()
-		 * @generated
-		 */
-		EClass TOSCA_NODES_SOFTWARECOMPONENT_COLLECTD = eINSTANCE.getTosca_nodes_softwarecomponent_collectd();
-
-		/**
 		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_computewithcapwithattrImpl <em>Tosca nodes computewithcapwithattr</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5779,16 +6850,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TOSCA_NODES_COMPUTEWITHCAPWITHATTR = eINSTANCE.getTosca_nodes_computewithcapwithattr();
-
-		/**
-		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_nodewithreqImpl <em>Tosca nodes nodewithreq</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see extendedtosca.impl.Tosca_nodes_nodewithreqImpl
-		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_nodewithreq()
-		 * @generated
-		 */
-		EClass TOSCA_NODES_NODEWITHREQ = eINSTANCE.getTosca_nodes_nodewithreq();
 
 		/**
 		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_softwarecomponent_rsyslogImpl <em>Tosca nodes softwarecomponent rsyslog</em>}' class.
@@ -5847,16 +6908,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 		EAttribute TOSCA_NODES_WEBSERVER_NODEJS__GITHUB_URL = eINSTANCE.getTosca_nodes_webserver_nodejs_GithubUrl();
 
 		/**
-		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_somenode2Impl <em>Tosca nodes somenode2</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see extendedtosca.impl.Tosca_nodes_somenode2Impl
-		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_somenode2()
-		 * @generated
-		 */
-		EClass TOSCA_NODES_SOMENODE2 = eINSTANCE.getTosca_nodes_somenode2();
-
-		/**
 		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_dbms_mysqlImpl <em>Tosca nodes dbms mysql</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5907,6 +6958,16 @@ public interface ExtendedtoscaPackage extends EPackage {
 		EClass TOSCA_RELATIONSHIPS_HA = eINSTANCE.getTosca_relationships_ha();
 
 		/**
+		 * The meta object literal for the '{@link extendedtosca.impl.MyattachestoImpl <em>Myattachesto</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.impl.MyattachestoImpl
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getMyattachesto()
+		 * @generated
+		 */
+		EClass MYATTACHESTO = eINSTANCE.getMyattachesto();
+
+		/**
 		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_relationships_network_linkstoImpl <em>Tosca relationships network linksto</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5915,6 +6976,16 @@ public interface ExtendedtoscaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TOSCA_RELATIONSHIPS_NETWORK_LINKSTO = eINSTANCE.getTosca_relationships_network_linksto();
+
+		/**
+		 * The meta object literal for the '{@link extendedtosca.ip_versionEnum <em>ip version Enum</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.ip_versionEnum
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getip_versionEnum()
+		 * @generated
+		 */
+		EEnum IP_VERSION_ENUM = eINSTANCE.getip_versionEnum();
 
 	}
 

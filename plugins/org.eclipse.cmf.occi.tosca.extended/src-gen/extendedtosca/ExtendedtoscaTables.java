@@ -24,6 +24,8 @@ package extendedtosca;
 import extendedtosca.ExtendedtoscaTables;
 import org.eclipse.cmf.occi.core.OCCITables;
 import org.eclipse.cmf.occi.tosca.ToscaTables;
+import org.eclipse.ocl.pivot.internal.library.ecore.EcoreExecutorEnumeration;
+import org.eclipse.ocl.pivot.internal.library.ecore.EcoreExecutorEnumerationLiteral;
 import org.eclipse.ocl.pivot.internal.library.ecore.EcoreExecutorPackage;
 import org.eclipse.ocl.pivot.internal.library.ecore.EcoreExecutorProperty;
 import org.eclipse.ocl.pivot.internal.library.ecore.EcoreExecutorType;
@@ -79,6 +81,7 @@ public class ExtendedtoscaTables
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_map = extendedtosca.ExtendedtoscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("map", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_string = extendedtosca.ExtendedtoscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("string", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_version = extendedtosca.ExtendedtoscaTables.PACKid_http_c_s_s_org_occi_s_tosca_s_ecore.getDataTypeId("version", 0);
+	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.EnumerationId ENUMid_ip_versionEnum = extendedtosca.ExtendedtoscaTables.PACKid_http_c_s_s_org_occi_s_extendedTosca_s_ecore.getEnumerationId("ip_versionEnum");
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId ORD_CLSSid_Credential = org.eclipse.ocl.pivot.ids.TypeId.ORDERED_SET.getSpecializedId(extendedtosca.ExtendedtoscaTables.CLSSid_Credential);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId ORD_CLSSid_PortSpec = org.eclipse.ocl.pivot.ids.TypeId.ORDERED_SET.getSpecializedId(extendedtosca.ExtendedtoscaTables.CLSSid_PortSpec);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId SEQ_DATAid_integer = org.eclipse.ocl.pivot.ids.TypeId.SEQUENCE.getSpecializedId(extendedtosca.ExtendedtoscaTables.DATAid_integer);
@@ -112,7 +115,11 @@ public class ExtendedtoscaTables
 			TypeParameters.init();
 		}
 
-		public static final /*@NonNull*/ EcoreExecutorType _Capabilities = new EcoreExecutorType(ExtendedtoscaPackage.Literals.CAPABILITIES, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _Example_databasesubsystem = new EcoreExecutorType(ExtendedtoscaPackage.Literals.EXAMPLE_DATABASESUBSYSTEM, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _Example_queuingsubsystem = new EcoreExecutorType(ExtendedtoscaPackage.Literals.EXAMPLE_QUEUINGSUBSYSTEM, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _Example_someapp = new EcoreExecutorType(ExtendedtoscaPackage.Literals.EXAMPLE_SOMEAPP, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _Example_transactionsubsystem = new EcoreExecutorType(ExtendedtoscaPackage.Literals.EXAMPLE_TRANSACTIONSUBSYSTEM, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _Myattachesto = new EcoreExecutorType(ExtendedtoscaPackage.Literals.MYATTACHESTO, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Mycompany_mytypes_myscalingpolicy = new EcoreExecutorType(ExtendedtoscaPackage.Literals.MYCOMPANY_MYTYPES_MYSCALINGPOLICY, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Rsyslog = new EcoreExecutorType(ExtendedtoscaPackage.Literals.RSYSLOG, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Test_relation_connects = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TEST_RELATION_CONNECTS, PACKAGE, 0);
@@ -151,9 +158,14 @@ public class ExtendedtoscaTables
 		public static final /*@NonNull*/ EcoreExecutorType _arrayPortSpec = new EcoreExecutorType(ExtendedtoscaPackage.Literals.ARRAY_PORT_SPEC, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _arrayinteger = new EcoreExecutorType(ExtendedtoscaPackage.Literals.ARRAYINTEGER, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _arrayversion = new EcoreExecutorType(ExtendedtoscaPackage.Literals.ARRAYVERSION, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorEnumeration _ip_versionEnum = new EcoreExecutorEnumeration(ExtendedtoscaPackage.Literals.IP_VERSION_ENUM, PACKAGE, 0);
 
 		private static final /*@NonNull*/ EcoreExecutorType /*@NonNull*/ [] types = {
-			_Capabilities,
+			_Example_databasesubsystem,
+			_Example_queuingsubsystem,
+			_Example_someapp,
+			_Example_transactionsubsystem,
+			_Myattachesto,
 			_Mycompany_mytypes_myscalingpolicy,
 			_Rsyslog,
 			_Test_relation_connects,
@@ -191,7 +203,8 @@ public class ExtendedtoscaTables
 			_arrayCredential,
 			_arrayPortSpec,
 			_arrayinteger,
-			_arrayversion
+			_arrayversion,
+			_ip_versionEnum
 		};
 
 		/*
@@ -217,10 +230,57 @@ public class ExtendedtoscaTables
 			Types.init();
 		}
 
-		private static final /*@NonNull*/ ExecutorFragment _Capabilities__Capabilities = new ExecutorFragment(Types._Capabilities, ExtendedtoscaTables.Types._Capabilities);
-		private static final /*@NonNull*/ ExecutorFragment _Capabilities__MixinBase = new ExecutorFragment(Types._Capabilities, OCCITables.Types._MixinBase);
-		private static final /*@NonNull*/ ExecutorFragment _Capabilities__OclAny = new ExecutorFragment(Types._Capabilities, OCLstdlibTables.Types._OclAny);
-		private static final /*@NonNull*/ ExecutorFragment _Capabilities__OclElement = new ExecutorFragment(Types._Capabilities, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _Example_databasesubsystem__Example_databasesubsystem = new ExecutorFragment(Types._Example_databasesubsystem, ExtendedtoscaTables.Types._Example_databasesubsystem);
+		private static final /*@NonNull*/ ExecutorFragment _Example_databasesubsystem__MixinBase = new ExecutorFragment(Types._Example_databasesubsystem, OCCITables.Types._MixinBase);
+		private static final /*@NonNull*/ ExecutorFragment _Example_databasesubsystem__OclAny = new ExecutorFragment(Types._Example_databasesubsystem, OCLstdlibTables.Types._OclAny);
+		private static final /*@NonNull*/ ExecutorFragment _Example_databasesubsystem__OclElement = new ExecutorFragment(Types._Example_databasesubsystem, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _Example_databasesubsystem__Tosca_capabilities_endpoint = new ExecutorFragment(Types._Example_databasesubsystem, ToscaTables.Types._Tosca_capabilities_endpoint);
+		private static final /*@NonNull*/ ExecutorFragment _Example_databasesubsystem__Tosca_capabilities_endpoint_database = new ExecutorFragment(Types._Example_databasesubsystem, ToscaTables.Types._Tosca_capabilities_endpoint_database);
+		private static final /*@NonNull*/ ExecutorFragment _Example_databasesubsystem__Tosca_capabilities_node = new ExecutorFragment(Types._Example_databasesubsystem, ToscaTables.Types._Tosca_capabilities_node);
+		private static final /*@NonNull*/ ExecutorFragment _Example_databasesubsystem__Tosca_capabilities_root = new ExecutorFragment(Types._Example_databasesubsystem, ToscaTables.Types._Tosca_capabilities_root);
+		private static final /*@NonNull*/ ExecutorFragment _Example_databasesubsystem__Tosca_interfaces_node_lifecycle_standard = new ExecutorFragment(Types._Example_databasesubsystem, ToscaTables.Types._Tosca_interfaces_node_lifecycle_standard);
+		private static final /*@NonNull*/ ExecutorFragment _Example_databasesubsystem__Tosca_interfaces_root = new ExecutorFragment(Types._Example_databasesubsystem, ToscaTables.Types._Tosca_interfaces_root);
+		private static final /*@NonNull*/ ExecutorFragment _Example_databasesubsystem__Tosca_nodes_root = new ExecutorFragment(Types._Example_databasesubsystem, ToscaTables.Types._Tosca_nodes_root);
+
+		private static final /*@NonNull*/ ExecutorFragment _Example_queuingsubsystem__Example_queuingsubsystem = new ExecutorFragment(Types._Example_queuingsubsystem, ExtendedtoscaTables.Types._Example_queuingsubsystem);
+		private static final /*@NonNull*/ ExecutorFragment _Example_queuingsubsystem__MixinBase = new ExecutorFragment(Types._Example_queuingsubsystem, OCCITables.Types._MixinBase);
+		private static final /*@NonNull*/ ExecutorFragment _Example_queuingsubsystem__OclAny = new ExecutorFragment(Types._Example_queuingsubsystem, OCLstdlibTables.Types._OclAny);
+		private static final /*@NonNull*/ ExecutorFragment _Example_queuingsubsystem__OclElement = new ExecutorFragment(Types._Example_queuingsubsystem, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _Example_queuingsubsystem__Tosca_capabilities_endpoint = new ExecutorFragment(Types._Example_queuingsubsystem, ToscaTables.Types._Tosca_capabilities_endpoint);
+		private static final /*@NonNull*/ ExecutorFragment _Example_queuingsubsystem__Tosca_capabilities_node = new ExecutorFragment(Types._Example_queuingsubsystem, ToscaTables.Types._Tosca_capabilities_node);
+		private static final /*@NonNull*/ ExecutorFragment _Example_queuingsubsystem__Tosca_capabilities_root = new ExecutorFragment(Types._Example_queuingsubsystem, ToscaTables.Types._Tosca_capabilities_root);
+		private static final /*@NonNull*/ ExecutorFragment _Example_queuingsubsystem__Tosca_interfaces_node_lifecycle_standard = new ExecutorFragment(Types._Example_queuingsubsystem, ToscaTables.Types._Tosca_interfaces_node_lifecycle_standard);
+		private static final /*@NonNull*/ ExecutorFragment _Example_queuingsubsystem__Tosca_interfaces_root = new ExecutorFragment(Types._Example_queuingsubsystem, ToscaTables.Types._Tosca_interfaces_root);
+		private static final /*@NonNull*/ ExecutorFragment _Example_queuingsubsystem__Tosca_nodes_root = new ExecutorFragment(Types._Example_queuingsubsystem, ToscaTables.Types._Tosca_nodes_root);
+
+		private static final /*@NonNull*/ ExecutorFragment _Example_someapp__Example_someapp = new ExecutorFragment(Types._Example_someapp, ExtendedtoscaTables.Types._Example_someapp);
+		private static final /*@NonNull*/ ExecutorFragment _Example_someapp__MixinBase = new ExecutorFragment(Types._Example_someapp, OCCITables.Types._MixinBase);
+		private static final /*@NonNull*/ ExecutorFragment _Example_someapp__OclAny = new ExecutorFragment(Types._Example_someapp, OCLstdlibTables.Types._OclAny);
+		private static final /*@NonNull*/ ExecutorFragment _Example_someapp__OclElement = new ExecutorFragment(Types._Example_someapp, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _Example_someapp__Tosca_capabilities_endpoint = new ExecutorFragment(Types._Example_someapp, ToscaTables.Types._Tosca_capabilities_endpoint);
+		private static final /*@NonNull*/ ExecutorFragment _Example_someapp__Tosca_capabilities_node = new ExecutorFragment(Types._Example_someapp, ToscaTables.Types._Tosca_capabilities_node);
+		private static final /*@NonNull*/ ExecutorFragment _Example_someapp__Tosca_capabilities_root = new ExecutorFragment(Types._Example_someapp, ToscaTables.Types._Tosca_capabilities_root);
+		private static final /*@NonNull*/ ExecutorFragment _Example_someapp__Tosca_interfaces_node_lifecycle_standard = new ExecutorFragment(Types._Example_someapp, ToscaTables.Types._Tosca_interfaces_node_lifecycle_standard);
+		private static final /*@NonNull*/ ExecutorFragment _Example_someapp__Tosca_interfaces_root = new ExecutorFragment(Types._Example_someapp, ToscaTables.Types._Tosca_interfaces_root);
+		private static final /*@NonNull*/ ExecutorFragment _Example_someapp__Tosca_nodes_root = new ExecutorFragment(Types._Example_someapp, ToscaTables.Types._Tosca_nodes_root);
+
+		private static final /*@NonNull*/ ExecutorFragment _Example_transactionsubsystem__Example_transactionsubsystem = new ExecutorFragment(Types._Example_transactionsubsystem, ExtendedtoscaTables.Types._Example_transactionsubsystem);
+		private static final /*@NonNull*/ ExecutorFragment _Example_transactionsubsystem__MixinBase = new ExecutorFragment(Types._Example_transactionsubsystem, OCCITables.Types._MixinBase);
+		private static final /*@NonNull*/ ExecutorFragment _Example_transactionsubsystem__OclAny = new ExecutorFragment(Types._Example_transactionsubsystem, OCLstdlibTables.Types._OclAny);
+		private static final /*@NonNull*/ ExecutorFragment _Example_transactionsubsystem__OclElement = new ExecutorFragment(Types._Example_transactionsubsystem, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _Example_transactionsubsystem__Tosca_capabilities_endpoint = new ExecutorFragment(Types._Example_transactionsubsystem, ToscaTables.Types._Tosca_capabilities_endpoint);
+		private static final /*@NonNull*/ ExecutorFragment _Example_transactionsubsystem__Tosca_capabilities_node = new ExecutorFragment(Types._Example_transactionsubsystem, ToscaTables.Types._Tosca_capabilities_node);
+		private static final /*@NonNull*/ ExecutorFragment _Example_transactionsubsystem__Tosca_capabilities_root = new ExecutorFragment(Types._Example_transactionsubsystem, ToscaTables.Types._Tosca_capabilities_root);
+		private static final /*@NonNull*/ ExecutorFragment _Example_transactionsubsystem__Tosca_interfaces_node_lifecycle_standard = new ExecutorFragment(Types._Example_transactionsubsystem, ToscaTables.Types._Tosca_interfaces_node_lifecycle_standard);
+		private static final /*@NonNull*/ ExecutorFragment _Example_transactionsubsystem__Tosca_interfaces_root = new ExecutorFragment(Types._Example_transactionsubsystem, ToscaTables.Types._Tosca_interfaces_root);
+		private static final /*@NonNull*/ ExecutorFragment _Example_transactionsubsystem__Tosca_nodes_root = new ExecutorFragment(Types._Example_transactionsubsystem, ToscaTables.Types._Tosca_nodes_root);
+
+		private static final /*@NonNull*/ ExecutorFragment _Myattachesto__MixinBase = new ExecutorFragment(Types._Myattachesto, OCCITables.Types._MixinBase);
+		private static final /*@NonNull*/ ExecutorFragment _Myattachesto__Myattachesto = new ExecutorFragment(Types._Myattachesto, ExtendedtoscaTables.Types._Myattachesto);
+		private static final /*@NonNull*/ ExecutorFragment _Myattachesto__OclAny = new ExecutorFragment(Types._Myattachesto, OCLstdlibTables.Types._OclAny);
+		private static final /*@NonNull*/ ExecutorFragment _Myattachesto__OclElement = new ExecutorFragment(Types._Myattachesto, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _Myattachesto__Tosca_relationships_attachesto = new ExecutorFragment(Types._Myattachesto, ToscaTables.Types._Tosca_relationships_attachesto);
+		private static final /*@NonNull*/ ExecutorFragment _Myattachesto__Tosca_relationships_root = new ExecutorFragment(Types._Myattachesto, ToscaTables.Types._Tosca_relationships_root);
 
 		private static final /*@NonNull*/ ExecutorFragment _Mycompany_mytypes_myscalingpolicy__MixinBase = new ExecutorFragment(Types._Mycompany_mytypes_myscalingpolicy, OCCITables.Types._MixinBase);
 		private static final /*@NonNull*/ ExecutorFragment _Mycompany_mytypes_myscalingpolicy__Mycompany_mytypes_myscalingpolicy = new ExecutorFragment(Types._Mycompany_mytypes_myscalingpolicy, ExtendedtoscaTables.Types._Mycompany_mytypes_myscalingpolicy);
@@ -602,6 +662,12 @@ public class ExtendedtoscaTables
 		private static final /*@NonNull*/ ExecutorFragment _arrayversion__OclElement = new ExecutorFragment(Types._arrayversion, OCLstdlibTables.Types._OclElement);
 		private static final /*@NonNull*/ ExecutorFragment _arrayversion__arrayversion = new ExecutorFragment(Types._arrayversion, ExtendedtoscaTables.Types._arrayversion);
 
+		private static final /*@NonNull*/ ExecutorFragment _ip_versionEnum__OclAny = new ExecutorFragment(Types._ip_versionEnum, OCLstdlibTables.Types._OclAny);
+		private static final /*@NonNull*/ ExecutorFragment _ip_versionEnum__OclElement = new ExecutorFragment(Types._ip_versionEnum, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _ip_versionEnum__OclEnumeration = new ExecutorFragment(Types._ip_versionEnum, OCLstdlibTables.Types._OclEnumeration);
+		private static final /*@NonNull*/ ExecutorFragment _ip_versionEnum__OclType = new ExecutorFragment(Types._ip_versionEnum, OCLstdlibTables.Types._OclType);
+		private static final /*@NonNull*/ ExecutorFragment _ip_versionEnum__ip_versionEnum = new ExecutorFragment(Types._ip_versionEnum, ExtendedtoscaTables.Types._ip_versionEnum);
+
 		static {
 			Init.initEnd();
 		}
@@ -673,6 +739,9 @@ public class ExtendedtoscaTables
 		}
 
 
+		public static final /*@NonNull*/ ExecutorProperty _Example_transactionsubsystem__mqServiceIp = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.EXAMPLE_TRANSACTIONSUBSYSTEM__MQ_SERVICE_IP, Types._Example_transactionsubsystem, 0);
+		public static final /*@NonNull*/ ExecutorProperty _Example_transactionsubsystem__receiverPort = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.EXAMPLE_TRANSACTIONSUBSYSTEM__RECEIVER_PORT, Types._Example_transactionsubsystem, 1);
+
 		public static final /*@NonNull*/ ExecutorProperty _Tosca_capabilities_container_docker__exposePorts = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER_DOCKER__EXPOSE_PORTS, Types._Tosca_capabilities_container_docker, 0);
 		public static final /*@NonNull*/ ExecutorProperty _Tosca_capabilities_container_docker__publishAll = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER_DOCKER__PUBLISH_ALL, Types._Tosca_capabilities_container_docker, 1);
 		public static final /*@NonNull*/ ExecutorProperty _Tosca_capabilities_container_docker__publishPorts = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER_DOCKER__PUBLISH_PORTS, Types._Tosca_capabilities_container_docker, 2);
@@ -689,7 +758,16 @@ public class ExtendedtoscaTables
 
 		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_databasewithlistparam__listProp = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_DATABASEWITHLISTPARAM__LIST_PROP, Types._Tosca_nodes_databasewithlistparam, 0);
 
-		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_network_network__ipVersion = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__IP_VERSION, Types._Tosca_nodes_network_network, 0);
+		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_network_network__cidr = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__CIDR, Types._Tosca_nodes_network_network, 0);
+		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_network_network__endIp = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__END_IP, Types._Tosca_nodes_network_network, 1);
+		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_network_network__gatewayIp = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__GATEWAY_IP, Types._Tosca_nodes_network_network, 2);
+		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_network_network__ipVersion = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__IP_VERSION, Types._Tosca_nodes_network_network, 3);
+		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_network_network__networkId = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__NETWORK_ID, Types._Tosca_nodes_network_network, 4);
+		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_network_network__networkName = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__NETWORK_NAME, Types._Tosca_nodes_network_network, 5);
+		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_network_network__networkType = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__NETWORK_TYPE, Types._Tosca_nodes_network_network, 6);
+		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_network_network__physicalNetwork = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__PHYSICAL_NETWORK, Types._Tosca_nodes_network_network, 7);
+		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_network_network__segmentationId = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__SEGMENTATION_ID, Types._Tosca_nodes_network_network, 8);
+		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_network_network__startIp = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK__START_IP, Types._Tosca_nodes_network_network, 9);
 
 		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_network_port__ipAddress = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_PORT__IP_ADDRESS, Types._Tosca_nodes_network_port, 0);
 		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_network_port__ipRangeEnd = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_PORT__IP_RANGE_END, Types._Tosca_nodes_network_port, 1);
@@ -738,14 +816,77 @@ public class ExtendedtoscaTables
 			Properties.init();
 		}
 
-		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Capabilities =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Example_databasesubsystem =
 		{
-			Fragments._Capabilities__OclAny /* 0 */,
-			Fragments._Capabilities__OclElement /* 1 */,
-			Fragments._Capabilities__MixinBase /* 2 */,
-			Fragments._Capabilities__Capabilities /* 3 */
+			Fragments._Example_databasesubsystem__OclAny /* 0 */,
+			Fragments._Example_databasesubsystem__OclElement /* 1 */,
+			Fragments._Example_databasesubsystem__MixinBase /* 2 */,
+			Fragments._Example_databasesubsystem__Tosca_capabilities_root /* 3 */,
+			Fragments._Example_databasesubsystem__Tosca_interfaces_root /* 3 */,
+			Fragments._Example_databasesubsystem__Tosca_capabilities_endpoint /* 4 */,
+			Fragments._Example_databasesubsystem__Tosca_capabilities_node /* 4 */,
+			Fragments._Example_databasesubsystem__Tosca_interfaces_node_lifecycle_standard /* 4 */,
+			Fragments._Example_databasesubsystem__Tosca_capabilities_endpoint_database /* 5 */,
+			Fragments._Example_databasesubsystem__Tosca_nodes_root /* 5 */,
+			Fragments._Example_databasesubsystem__Example_databasesubsystem /* 6 */
 		};
-		private static final int /*@NonNull*/ [] __Capabilities = { 1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Example_databasesubsystem = { 1,1,1,2,3,2,1 };
+
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Example_queuingsubsystem =
+		{
+			Fragments._Example_queuingsubsystem__OclAny /* 0 */,
+			Fragments._Example_queuingsubsystem__OclElement /* 1 */,
+			Fragments._Example_queuingsubsystem__MixinBase /* 2 */,
+			Fragments._Example_queuingsubsystem__Tosca_capabilities_root /* 3 */,
+			Fragments._Example_queuingsubsystem__Tosca_interfaces_root /* 3 */,
+			Fragments._Example_queuingsubsystem__Tosca_capabilities_endpoint /* 4 */,
+			Fragments._Example_queuingsubsystem__Tosca_capabilities_node /* 4 */,
+			Fragments._Example_queuingsubsystem__Tosca_interfaces_node_lifecycle_standard /* 4 */,
+			Fragments._Example_queuingsubsystem__Tosca_nodes_root /* 5 */,
+			Fragments._Example_queuingsubsystem__Example_queuingsubsystem /* 6 */
+		};
+		private static final int /*@NonNull*/ [] __Example_queuingsubsystem = { 1,1,1,2,3,1,1 };
+
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Example_someapp =
+		{
+			Fragments._Example_someapp__OclAny /* 0 */,
+			Fragments._Example_someapp__OclElement /* 1 */,
+			Fragments._Example_someapp__MixinBase /* 2 */,
+			Fragments._Example_someapp__Tosca_capabilities_root /* 3 */,
+			Fragments._Example_someapp__Tosca_interfaces_root /* 3 */,
+			Fragments._Example_someapp__Tosca_capabilities_endpoint /* 4 */,
+			Fragments._Example_someapp__Tosca_capabilities_node /* 4 */,
+			Fragments._Example_someapp__Tosca_interfaces_node_lifecycle_standard /* 4 */,
+			Fragments._Example_someapp__Tosca_nodes_root /* 5 */,
+			Fragments._Example_someapp__Example_someapp /* 6 */
+		};
+		private static final int /*@NonNull*/ [] __Example_someapp = { 1,1,1,2,3,1,1 };
+
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Example_transactionsubsystem =
+		{
+			Fragments._Example_transactionsubsystem__OclAny /* 0 */,
+			Fragments._Example_transactionsubsystem__OclElement /* 1 */,
+			Fragments._Example_transactionsubsystem__MixinBase /* 2 */,
+			Fragments._Example_transactionsubsystem__Tosca_capabilities_root /* 3 */,
+			Fragments._Example_transactionsubsystem__Tosca_interfaces_root /* 3 */,
+			Fragments._Example_transactionsubsystem__Tosca_capabilities_endpoint /* 4 */,
+			Fragments._Example_transactionsubsystem__Tosca_capabilities_node /* 4 */,
+			Fragments._Example_transactionsubsystem__Tosca_interfaces_node_lifecycle_standard /* 4 */,
+			Fragments._Example_transactionsubsystem__Tosca_nodes_root /* 5 */,
+			Fragments._Example_transactionsubsystem__Example_transactionsubsystem /* 6 */
+		};
+		private static final int /*@NonNull*/ [] __Example_transactionsubsystem = { 1,1,1,2,3,1,1 };
+
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Myattachesto =
+		{
+			Fragments._Myattachesto__OclAny /* 0 */,
+			Fragments._Myattachesto__OclElement /* 1 */,
+			Fragments._Myattachesto__MixinBase /* 2 */,
+			Fragments._Myattachesto__Tosca_relationships_root /* 3 */,
+			Fragments._Myattachesto__Tosca_relationships_attachesto /* 4 */,
+			Fragments._Myattachesto__Myattachesto /* 5 */
+		};
+		private static final int /*@NonNull*/ [] __Myattachesto = { 1,1,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Mycompany_mytypes_myscalingpolicy =
 		{
@@ -1279,11 +1420,25 @@ public class ExtendedtoscaTables
 		};
 		private static final int /*@NonNull*/ [] __arrayversion = { 1,1,1 };
 
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ip_versionEnum =
+		{
+			Fragments._ip_versionEnum__OclAny /* 0 */,
+			Fragments._ip_versionEnum__OclElement /* 1 */,
+			Fragments._ip_versionEnum__OclType /* 2 */,
+			Fragments._ip_versionEnum__OclEnumeration /* 3 */,
+			Fragments._ip_versionEnum__ip_versionEnum /* 4 */
+		};
+		private static final int /*@NonNull*/ [] __ip_versionEnum = { 1,1,1,1,1 };
+
 		/**
 		 *	Install the fragment descriptors in the class descriptors.
 		 */
 		static {
-			Types._Capabilities.initFragments(_Capabilities, __Capabilities);
+			Types._Example_databasesubsystem.initFragments(_Example_databasesubsystem, __Example_databasesubsystem);
+			Types._Example_queuingsubsystem.initFragments(_Example_queuingsubsystem, __Example_queuingsubsystem);
+			Types._Example_someapp.initFragments(_Example_someapp, __Example_someapp);
+			Types._Example_transactionsubsystem.initFragments(_Example_transactionsubsystem, __Example_transactionsubsystem);
+			Types._Myattachesto.initFragments(_Myattachesto, __Myattachesto);
 			Types._Mycompany_mytypes_myscalingpolicy.initFragments(_Mycompany_mytypes_myscalingpolicy, __Mycompany_mytypes_myscalingpolicy);
 			Types._Rsyslog.initFragments(_Rsyslog, __Rsyslog);
 			Types._Test_relation_connects.initFragments(_Test_relation_connects, __Test_relation_connects);
@@ -1322,6 +1477,7 @@ public class ExtendedtoscaTables
 			Types._arrayPortSpec.initFragments(_arrayPortSpec, __arrayPortSpec);
 			Types._arrayinteger.initFragments(_arrayinteger, __arrayinteger);
 			Types._arrayversion.initFragments(_arrayversion, __arrayversion);
+			Types._ip_versionEnum.initFragments(_ip_versionEnum, __ip_versionEnum);
 
 			Init.initEnd();
 		}
@@ -1341,9 +1497,9 @@ public class ExtendedtoscaTables
 			TypeFragments.init();
 		}
 
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Capabilities__Capabilities = {};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Capabilities__MixinBase = {};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Capabilities__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_databasesubsystem__Example_databasesubsystem = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_databasesubsystem__MixinBase = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_databasesubsystem__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1360,7 +1516,7 @@ public class ExtendedtoscaTables
 			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Capabilities__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_databasesubsystem__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
 			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
@@ -1369,6 +1525,165 @@ public class ExtendedtoscaTables
 			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
 			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_databasesubsystem__Tosca_capabilities_endpoint = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_databasesubsystem__Tosca_capabilities_endpoint_database = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_databasesubsystem__Tosca_capabilities_node = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_databasesubsystem__Tosca_capabilities_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_databasesubsystem__Tosca_interfaces_node_lifecycle_standard = {
+			ToscaTables.Operations._Tosca_interfaces_node_lifecycle_standard__configure /* configure() */,
+			ToscaTables.Operations._Tosca_interfaces_node_lifecycle_standard__create /* create() */,
+			ToscaTables.Operations._Tosca_interfaces_node_lifecycle_standard__delete /* delete() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_databasesubsystem__Tosca_interfaces_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_databasesubsystem__Tosca_nodes_root = {};
+
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_queuingsubsystem__Example_queuingsubsystem = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_queuingsubsystem__MixinBase = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_queuingsubsystem__OclAny = {
+			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
+			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
+			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
+			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
+			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
+			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
+			OCLstdlibTables.Operations._OclAny__toString /* toString() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_queuingsubsystem__OclElement = {
+			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_queuingsubsystem__Tosca_capabilities_endpoint = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_queuingsubsystem__Tosca_capabilities_node = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_queuingsubsystem__Tosca_capabilities_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_queuingsubsystem__Tosca_interfaces_node_lifecycle_standard = {
+			ToscaTables.Operations._Tosca_interfaces_node_lifecycle_standard__configure /* configure() */,
+			ToscaTables.Operations._Tosca_interfaces_node_lifecycle_standard__create /* create() */,
+			ToscaTables.Operations._Tosca_interfaces_node_lifecycle_standard__delete /* delete() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_queuingsubsystem__Tosca_interfaces_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_queuingsubsystem__Tosca_nodes_root = {};
+
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_someapp__Example_someapp = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_someapp__MixinBase = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_someapp__OclAny = {
+			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
+			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
+			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
+			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
+			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
+			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
+			OCLstdlibTables.Operations._OclAny__toString /* toString() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_someapp__OclElement = {
+			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_someapp__Tosca_capabilities_endpoint = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_someapp__Tosca_capabilities_node = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_someapp__Tosca_capabilities_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_someapp__Tosca_interfaces_node_lifecycle_standard = {
+			ToscaTables.Operations._Tosca_interfaces_node_lifecycle_standard__configure /* configure() */,
+			ToscaTables.Operations._Tosca_interfaces_node_lifecycle_standard__create /* create() */,
+			ToscaTables.Operations._Tosca_interfaces_node_lifecycle_standard__delete /* delete() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_someapp__Tosca_interfaces_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_someapp__Tosca_nodes_root = {};
+
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_transactionsubsystem__Example_transactionsubsystem = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_transactionsubsystem__MixinBase = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_transactionsubsystem__OclAny = {
+			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
+			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
+			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
+			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
+			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
+			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
+			OCLstdlibTables.Operations._OclAny__toString /* toString() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_transactionsubsystem__OclElement = {
+			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_transactionsubsystem__Tosca_capabilities_endpoint = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_transactionsubsystem__Tosca_capabilities_node = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_transactionsubsystem__Tosca_capabilities_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_transactionsubsystem__Tosca_interfaces_node_lifecycle_standard = {
+			ToscaTables.Operations._Tosca_interfaces_node_lifecycle_standard__configure /* configure() */,
+			ToscaTables.Operations._Tosca_interfaces_node_lifecycle_standard__create /* create() */,
+			ToscaTables.Operations._Tosca_interfaces_node_lifecycle_standard__delete /* delete() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_transactionsubsystem__Tosca_interfaces_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Example_transactionsubsystem__Tosca_nodes_root = {};
+
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Myattachesto__Myattachesto = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Myattachesto__MixinBase = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Myattachesto__OclAny = {
+			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
+			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
+			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
+			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
+			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
+			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
+			OCLstdlibTables.Operations._OclAny__toString /* toString() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Myattachesto__OclElement = {
+			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Myattachesto__Tosca_relationships_attachesto = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Myattachesto__Tosca_relationships_root = {};
 
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Mycompany_mytypes_myscalingpolicy__Mycompany_mytypes_myscalingpolicy = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Mycompany_mytypes_myscalingpolicy__MixinBase = {};
@@ -2754,14 +3069,95 @@ public class ExtendedtoscaTables
 			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
 
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ip_versionEnum__ip_versionEnum = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ip_versionEnum__OclAny = {
+			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
+			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
+			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
+			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
+			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
+			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
+			OCLstdlibTables.Operations._OclAny__toString /* toString() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ip_versionEnum__OclElement = {
+			OCLstdlibTables.Operations._OclEnumeration__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ip_versionEnum__OclEnumeration = {
+			OCLstdlibTables.Operations._OclEnumeration__allInstances /* allInstances() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ip_versionEnum__OclType = {
+			OCLstdlibTables.Operations._OclType__conformsTo /* conformsTo(OclType[?]) */
+		};
+
 		/*
 		 *	Install the operation descriptors in the fragment descriptors.
 		 */
 		static {
-			Fragments._Capabilities__Capabilities.initOperations(_Capabilities__Capabilities);
-			Fragments._Capabilities__MixinBase.initOperations(_Capabilities__MixinBase);
-			Fragments._Capabilities__OclAny.initOperations(_Capabilities__OclAny);
-			Fragments._Capabilities__OclElement.initOperations(_Capabilities__OclElement);
+			Fragments._Example_databasesubsystem__Example_databasesubsystem.initOperations(_Example_databasesubsystem__Example_databasesubsystem);
+			Fragments._Example_databasesubsystem__MixinBase.initOperations(_Example_databasesubsystem__MixinBase);
+			Fragments._Example_databasesubsystem__OclAny.initOperations(_Example_databasesubsystem__OclAny);
+			Fragments._Example_databasesubsystem__OclElement.initOperations(_Example_databasesubsystem__OclElement);
+			Fragments._Example_databasesubsystem__Tosca_capabilities_endpoint.initOperations(_Example_databasesubsystem__Tosca_capabilities_endpoint);
+			Fragments._Example_databasesubsystem__Tosca_capabilities_endpoint_database.initOperations(_Example_databasesubsystem__Tosca_capabilities_endpoint_database);
+			Fragments._Example_databasesubsystem__Tosca_capabilities_node.initOperations(_Example_databasesubsystem__Tosca_capabilities_node);
+			Fragments._Example_databasesubsystem__Tosca_capabilities_root.initOperations(_Example_databasesubsystem__Tosca_capabilities_root);
+			Fragments._Example_databasesubsystem__Tosca_interfaces_node_lifecycle_standard.initOperations(_Example_databasesubsystem__Tosca_interfaces_node_lifecycle_standard);
+			Fragments._Example_databasesubsystem__Tosca_interfaces_root.initOperations(_Example_databasesubsystem__Tosca_interfaces_root);
+			Fragments._Example_databasesubsystem__Tosca_nodes_root.initOperations(_Example_databasesubsystem__Tosca_nodes_root);
+
+			Fragments._Example_queuingsubsystem__Example_queuingsubsystem.initOperations(_Example_queuingsubsystem__Example_queuingsubsystem);
+			Fragments._Example_queuingsubsystem__MixinBase.initOperations(_Example_queuingsubsystem__MixinBase);
+			Fragments._Example_queuingsubsystem__OclAny.initOperations(_Example_queuingsubsystem__OclAny);
+			Fragments._Example_queuingsubsystem__OclElement.initOperations(_Example_queuingsubsystem__OclElement);
+			Fragments._Example_queuingsubsystem__Tosca_capabilities_endpoint.initOperations(_Example_queuingsubsystem__Tosca_capabilities_endpoint);
+			Fragments._Example_queuingsubsystem__Tosca_capabilities_node.initOperations(_Example_queuingsubsystem__Tosca_capabilities_node);
+			Fragments._Example_queuingsubsystem__Tosca_capabilities_root.initOperations(_Example_queuingsubsystem__Tosca_capabilities_root);
+			Fragments._Example_queuingsubsystem__Tosca_interfaces_node_lifecycle_standard.initOperations(_Example_queuingsubsystem__Tosca_interfaces_node_lifecycle_standard);
+			Fragments._Example_queuingsubsystem__Tosca_interfaces_root.initOperations(_Example_queuingsubsystem__Tosca_interfaces_root);
+			Fragments._Example_queuingsubsystem__Tosca_nodes_root.initOperations(_Example_queuingsubsystem__Tosca_nodes_root);
+
+			Fragments._Example_someapp__Example_someapp.initOperations(_Example_someapp__Example_someapp);
+			Fragments._Example_someapp__MixinBase.initOperations(_Example_someapp__MixinBase);
+			Fragments._Example_someapp__OclAny.initOperations(_Example_someapp__OclAny);
+			Fragments._Example_someapp__OclElement.initOperations(_Example_someapp__OclElement);
+			Fragments._Example_someapp__Tosca_capabilities_endpoint.initOperations(_Example_someapp__Tosca_capabilities_endpoint);
+			Fragments._Example_someapp__Tosca_capabilities_node.initOperations(_Example_someapp__Tosca_capabilities_node);
+			Fragments._Example_someapp__Tosca_capabilities_root.initOperations(_Example_someapp__Tosca_capabilities_root);
+			Fragments._Example_someapp__Tosca_interfaces_node_lifecycle_standard.initOperations(_Example_someapp__Tosca_interfaces_node_lifecycle_standard);
+			Fragments._Example_someapp__Tosca_interfaces_root.initOperations(_Example_someapp__Tosca_interfaces_root);
+			Fragments._Example_someapp__Tosca_nodes_root.initOperations(_Example_someapp__Tosca_nodes_root);
+
+			Fragments._Example_transactionsubsystem__Example_transactionsubsystem.initOperations(_Example_transactionsubsystem__Example_transactionsubsystem);
+			Fragments._Example_transactionsubsystem__MixinBase.initOperations(_Example_transactionsubsystem__MixinBase);
+			Fragments._Example_transactionsubsystem__OclAny.initOperations(_Example_transactionsubsystem__OclAny);
+			Fragments._Example_transactionsubsystem__OclElement.initOperations(_Example_transactionsubsystem__OclElement);
+			Fragments._Example_transactionsubsystem__Tosca_capabilities_endpoint.initOperations(_Example_transactionsubsystem__Tosca_capabilities_endpoint);
+			Fragments._Example_transactionsubsystem__Tosca_capabilities_node.initOperations(_Example_transactionsubsystem__Tosca_capabilities_node);
+			Fragments._Example_transactionsubsystem__Tosca_capabilities_root.initOperations(_Example_transactionsubsystem__Tosca_capabilities_root);
+			Fragments._Example_transactionsubsystem__Tosca_interfaces_node_lifecycle_standard.initOperations(_Example_transactionsubsystem__Tosca_interfaces_node_lifecycle_standard);
+			Fragments._Example_transactionsubsystem__Tosca_interfaces_root.initOperations(_Example_transactionsubsystem__Tosca_interfaces_root);
+			Fragments._Example_transactionsubsystem__Tosca_nodes_root.initOperations(_Example_transactionsubsystem__Tosca_nodes_root);
+
+			Fragments._Myattachesto__MixinBase.initOperations(_Myattachesto__MixinBase);
+			Fragments._Myattachesto__Myattachesto.initOperations(_Myattachesto__Myattachesto);
+			Fragments._Myattachesto__OclAny.initOperations(_Myattachesto__OclAny);
+			Fragments._Myattachesto__OclElement.initOperations(_Myattachesto__OclElement);
+			Fragments._Myattachesto__Tosca_relationships_attachesto.initOperations(_Myattachesto__Tosca_relationships_attachesto);
+			Fragments._Myattachesto__Tosca_relationships_root.initOperations(_Myattachesto__Tosca_relationships_root);
 
 			Fragments._Mycompany_mytypes_myscalingpolicy__MixinBase.initOperations(_Mycompany_mytypes_myscalingpolicy__MixinBase);
 			Fragments._Mycompany_mytypes_myscalingpolicy__Mycompany_mytypes_myscalingpolicy.initOperations(_Mycompany_mytypes_myscalingpolicy__Mycompany_mytypes_myscalingpolicy);
@@ -3143,6 +3539,12 @@ public class ExtendedtoscaTables
 			Fragments._arrayversion__OclElement.initOperations(_arrayversion__OclElement);
 			Fragments._arrayversion__arrayversion.initOperations(_arrayversion__arrayversion);
 
+			Fragments._ip_versionEnum__OclAny.initOperations(_ip_versionEnum__OclAny);
+			Fragments._ip_versionEnum__OclElement.initOperations(_ip_versionEnum__OclElement);
+			Fragments._ip_versionEnum__OclEnumeration.initOperations(_ip_versionEnum__OclEnumeration);
+			Fragments._ip_versionEnum__OclType.initOperations(_ip_versionEnum__OclType);
+			Fragments._ip_versionEnum__ip_versionEnum.initOperations(_ip_versionEnum__ip_versionEnum);
+
 			Init.initEnd();
 		}
 
@@ -3161,7 +3563,18 @@ public class ExtendedtoscaTables
 			FragmentOperations.init();
 		}
 
-		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Capabilities = {};
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Example_databasesubsystem = {};
+
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Example_queuingsubsystem = {};
+
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Example_someapp = {};
+
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Example_transactionsubsystem = {
+			ExtendedtoscaTables.Properties._Example_transactionsubsystem__mqServiceIp,
+			ExtendedtoscaTables.Properties._Example_transactionsubsystem__receiverPort
+		};
+
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Myattachesto = {};
 
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Mycompany_mytypes_myscalingpolicy = {};
 
@@ -3218,7 +3631,16 @@ public class ExtendedtoscaTables
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_hacompute = {};
 
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_network_network = {
-			ExtendedtoscaTables.Properties._Tosca_nodes_network_network__ipVersion
+			ExtendedtoscaTables.Properties._Tosca_nodes_network_network__cidr,
+			ExtendedtoscaTables.Properties._Tosca_nodes_network_network__endIp,
+			ExtendedtoscaTables.Properties._Tosca_nodes_network_network__gatewayIp,
+			ExtendedtoscaTables.Properties._Tosca_nodes_network_network__ipVersion,
+			ExtendedtoscaTables.Properties._Tosca_nodes_network_network__networkId,
+			ExtendedtoscaTables.Properties._Tosca_nodes_network_network__networkName,
+			ExtendedtoscaTables.Properties._Tosca_nodes_network_network__networkType,
+			ExtendedtoscaTables.Properties._Tosca_nodes_network_network__physicalNetwork,
+			ExtendedtoscaTables.Properties._Tosca_nodes_network_network__segmentationId,
+			ExtendedtoscaTables.Properties._Tosca_nodes_network_network__startIp
 		};
 
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_network_port = {
@@ -3287,11 +3709,17 @@ public class ExtendedtoscaTables
 			ExtendedtoscaTables.Properties._arrayversion__values
 		};
 
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _ip_versionEnum = {};
+
 		/**
 		 *	Install the property descriptors in the fragment descriptors.
 		 */
 		static {
-			Fragments._Capabilities__Capabilities.initProperties(_Capabilities);
+			Fragments._Example_databasesubsystem__Example_databasesubsystem.initProperties(_Example_databasesubsystem);
+			Fragments._Example_queuingsubsystem__Example_queuingsubsystem.initProperties(_Example_queuingsubsystem);
+			Fragments._Example_someapp__Example_someapp.initProperties(_Example_someapp);
+			Fragments._Example_transactionsubsystem__Example_transactionsubsystem.initProperties(_Example_transactionsubsystem);
+			Fragments._Myattachesto__Myattachesto.initProperties(_Myattachesto);
 			Fragments._Mycompany_mytypes_myscalingpolicy__Mycompany_mytypes_myscalingpolicy.initProperties(_Mycompany_mytypes_myscalingpolicy);
 			Fragments._Rsyslog__Rsyslog.initProperties(_Rsyslog);
 			Fragments._Test_relation_connects__Test_relation_connects.initProperties(_Test_relation_connects);
@@ -3330,6 +3758,7 @@ public class ExtendedtoscaTables
 			Fragments._arrayPortSpec__arrayPortSpec.initProperties(_arrayPortSpec);
 			Fragments._arrayinteger__arrayinteger.initProperties(_arrayinteger);
 			Fragments._arrayversion__arrayversion.initProperties(_arrayversion);
+			Fragments._ip_versionEnum__ip_versionEnum.initProperties(_ip_versionEnum);
 
 			Init.initEnd();
 		}
@@ -3349,10 +3778,18 @@ public class ExtendedtoscaTables
 			FragmentProperties.init();
 		}
 
+		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _ip_versionEnum__IPv4 = new EcoreExecutorEnumerationLiteral(ExtendedtoscaPackage.Literals.IP_VERSION_ENUM.getEEnumLiteral("IPv4"), Types._ip_versionEnum, 0);
+		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _ip_versionEnum__IPv6 = new EcoreExecutorEnumerationLiteral(ExtendedtoscaPackage.Literals.IP_VERSION_ENUM.getEEnumLiteral("IPv6"), Types._ip_versionEnum, 1);
+		private static final /*@NonNull*/ EcoreExecutorEnumerationLiteral /*@NonNull*/ [] _ip_versionEnum = {
+			_ip_versionEnum__IPv4,
+			_ip_versionEnum__IPv6
+		};
+
 		/**
 		 *	Install the enumeration literals in the enumerations.
 		 */
 		static {
+			Types._ip_versionEnum.initLiterals(_ip_versionEnum);
 
 			Init.initEnd();
 		}

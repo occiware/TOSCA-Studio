@@ -14,15 +14,17 @@ package extendedtosca;
 
 import org.eclipse.cmf.occi.core.MixinBase;
 
+import org.eclipse.cmf.occi.tosca.Tosca_relationships_attachesto;
+
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Capabilities</b></em>'.
+ * A representation of the model object '<em><b>Myattachesto</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see extendedtosca.ExtendedtoscaPackage#getCapabilities()
+ * @see extendedtosca.ExtendedtoscaPackage#getMyattachesto()
  * @model
  * @generated
  */
-public interface Capabilities extends MixinBase {
-} // Capabilities
+public interface Myattachesto extends Tosca_relationships_attachesto, MixinBase {
+} // Myattachesto
