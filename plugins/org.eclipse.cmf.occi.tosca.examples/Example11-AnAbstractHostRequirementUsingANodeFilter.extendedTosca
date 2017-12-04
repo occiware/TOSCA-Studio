@@ -6,13 +6,16 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://org.occi/tosca#/"/>
   <use href="http://org.occi/extendedTosca#/"/>
-  <resources xsi:type="platform:Component" id="urn:uuid:24261d6c-107f-4976-b1fb-3d360e9a37ae">
+  <resources xsi:type="platform:Component" id="urn:uuid:391a5114-ca5c-46e5-9598-66fffa44c6df" rlinks="//@resources.1/@links.0">
     <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_dbms_mysql">
       <mixin href="http://org.occi/extendedTosca#//@mixins[term='tosca_nodes_dbms_mysql']"/>
     </parts>
   </resources>
-  <resources id="urn:uuid:3bb62109-e093-4dc6-9918-67c52855241a">
-    <kind href="http://schemas.ogf.org/occi/core#//@kinds[term='resource']"/>
+  <resources xsi:type="platform:Application" id="urn:uuid:a9b48ae0-cda7-4581-9b97-e34b583ee069">
+    <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='application']"/>
+    <links xsi:type="platform:Componentlink" id="urn:uuid:40a80190-dafb-4a92-987f-9170806e863f" target="//@resources.0">
+      <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='componentlink']"/>
+    </links>
   </resources>
 </occi:Configuration>

@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="ASCII"?>
-<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:extendedtosca="http://org.occi/extendedTosca/ecore" xmlns:infrastructure="http://schemas.ogf.org/occi/infrastructure/ecore" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:tosca="http://org.occi/tosca/ecore">
+<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:extendedtosca="http://org.occi/extendedTosca/ecore" xmlns:infrastructure="http://schemas.ogf.org/occi/infrastructure/ecore" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:platform="http://schemas.ogf.org/occi/platform/ecore" xmlns:tosca="http://org.occi/tosca/ecore">
   <use href="http://schemas.ogf.org/occi/core#/"/>
   <use href="http://schemas.ogf.org/occi/infrastructure#/"/>
   <use href="http://schemas.ogf.org/occi/platform#/"/>
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://org.occi/tosca#/"/>
   <use href="http://org.occi/extendedTosca#/"/>
-  <resources id="urn:uuid:b8562999-1a3f-448c-91df-c9958c56f58b">
+  <resources id="urn:uuid:cb02c07c-fc1a-474c-82ff-f66a1237d2bd">
     <kind href="http://schemas.ogf.org/occi/core#//@kinds[term='resource']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_network_port">
       <mixin href="http://org.occi/extendedTosca#//@mixins[term='tosca_nodes_network_port']"/>
     </parts>
-    <parts xsi:type="extendedtosca:Tosca_nodes_network_network">
-      <mixin href="http://org.occi/extendedTosca#//@mixins[term='tosca_nodes_network_network']"/>
-    </parts>
   </resources>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:898d1f84-6ee4-4ef7-a1ea-e93b9277ae3e" occiComputeArchitecture="x64" occiComputeCores="1" occiComputeMemory="4.0">
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:121c666d-950b-4233-8075-3904dcb73407" occiComputeArchitecture="x64" occiComputeCores="1" occiComputeMemory="4.0">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
     <parts xsi:type="tosca:Tosca_nodes_compute" type="Linux" distribution="CirrOS" version="0.3.2" diskSize="10">
       <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_compute']"/>
     </parts>
+  </resources>
+  <resources id="urn:uuid:19fe4826-e925-4dc4-b41f-1fe2db128d82">
+    <kind href="http://schemas.ogf.org/occi/core#//@kinds[term='resource']"/>
+    <parts xsi:type="extendedtosca:Tosca_nodes_network_network">
+      <mixin href="http://org.occi/extendedTosca#//@mixins[term='tosca_nodes_network_network']"/>
+    </parts>
+  </resources>
+  <resources xsi:type="platform:Application" id="urn:uuid:ea845ca5-38b8-4637-a2b0-1bb9f7073859">
+    <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='application']"/>
   </resources>
 </occi:Configuration>

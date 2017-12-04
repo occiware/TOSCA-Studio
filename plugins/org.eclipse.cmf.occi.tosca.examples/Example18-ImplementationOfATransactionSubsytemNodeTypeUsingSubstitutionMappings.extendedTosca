@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="ASCII"?>
-<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" description="Template of a database including its hosting stack.">
+<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:extendedtosca="http://org.occi/extendedTosca/ecore" xmlns:infrastructure="http://schemas.ogf.org/occi/infrastructure/ecore" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:platform="http://schemas.ogf.org/occi/platform/ecore" xmlns:tosca="http://org.occi/tosca/ecore" description="Template of a database including its hosting stack.">
   <use href="http://schemas.ogf.org/occi/core#/"/>
   <use href="http://schemas.ogf.org/occi/infrastructure#/"/>
   <use href="http://schemas.ogf.org/occi/platform#/"/>
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://org.occi/tosca#/"/>
   <use href="http://org.occi/extendedTosca#/"/>
+  <resources id="urn:uuid:134c0474-7ff5-4c9b-aa4d-5f0aaf5f5f77">
+    <kind href="http://schemas.ogf.org/occi/core#//@kinds[term='resource']"/>
+    <parts xsi:type="extendedtosca:Example_someapp">
+      <mixin href="http://org.occi/extendedTosca#//@mixins[term='example_someapp']"/>
+    </parts>
+  </resources>
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:275ccd71-8507-409d-89db-d1fe497095e2">
+    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
+    <parts xsi:type="tosca:Tosca_nodes_compute">
+      <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_compute']"/>
+    </parts>
+  </resources>
+  <resources xsi:type="platform:Component" id="urn:uuid:407a5351-de26-46d1-b0b5-db208f3adadc" rlinks="//@resources.3/@links.0">
+    <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="tosca:Tosca_nodes_webserver">
+      <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_webserver']"/>
+    </parts>
+  </resources>
+  <resources xsi:type="platform:Application" id="urn:uuid:acb3a9d2-3713-4dc0-bc54-6bbb3868284c">
+    <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='application']"/>
+    <links xsi:type="platform:Componentlink" id="urn:uuid:8d11b80f-63f7-45f2-9b6d-ce37be2e6b46" target="//@resources.2">
+      <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='componentlink']"/>
+    </links>
+  </resources>
 </occi:Configuration>

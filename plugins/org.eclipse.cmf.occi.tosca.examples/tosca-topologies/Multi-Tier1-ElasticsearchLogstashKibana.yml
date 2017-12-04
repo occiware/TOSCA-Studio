@@ -90,15 +90,14 @@ topology_template:
                 - search_endpoint: elasticsearch
             interfaces:
                 tosca.interfaces.relationship.Configure:
-                pre_configure_source:
-                    implementation: python/logstash/configure_elasticsearch.py
-                    input:
-                        elasticsearch_ip: { get_attribute: [elasticsearch_server, ip_address] }
-        interfaces:
-            tosca.interfaces.node.lifecycle.Standard:
-                create: scripts/lostash/create.sh
-                configure: scripts/logstash/config.sh
-                start: scripts/logstash/start.sh
+                    pre_configure_source:
+                        implementation: python/logstash/configure_elasticsearch.py
+                        input:
+                            elasticsearch_ip: { get_attribute: [elasticsearch_server, ip_address] }
+                tosca.interfaces.node.lifecycle.Standard:
+                    create: scripts/lostash/create.sh
+                    configure: scripts/logstash/config.sh
+                    start: scripts/logstash/start.sh
         kibana:
             type: tosca.nodes.SoftwareComponent.Kibana
             requirements:
@@ -118,10 +117,10 @@ topology_template:
             requirements:
                 - host: app_server
                 - collectd_endpoint: logstash
-                interfaces:
-                    tosca.interfaces.relationship.Configure:
-                        pre_configure_target:
-                            implementation: python/logstash/configure_collectd.py
+            interfaces:
+                tosca.interfaces.relationship.Configure:
+                    pre_configure_target:
+                        implementation: python/logstash/configure_collectd.py
             interfaces:
                 tosca.interfaces.node.lifecycle.Standard:
                     create: scripts/collectd/create.sh
@@ -135,10 +134,10 @@ topology_template:
             requirements:
                 - host: app_server
                 - rsyslog_endpoint: logstash
-                interfaces:
-                    tosca.interfaces.relationship.Configure:
-                        pre_configure_target:
-                            implementation: python/logstash/configure_rsyslog.py
+            interfaces:
+                tosca.interfaces.relationship.Configure:
+                    pre_configure_target:
+                        implementation: python/logstash/configure_rsyslog.py
             interfaces:
                 tosca.interfaces.node.lifecycle.Standard:
                     create: scripts/rsyslog/create.sh

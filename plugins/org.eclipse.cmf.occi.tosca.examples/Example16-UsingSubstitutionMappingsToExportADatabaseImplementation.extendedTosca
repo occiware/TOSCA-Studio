@@ -6,15 +6,15 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://org.occi/tosca#/"/>
   <use href="http://org.occi/extendedTosca#/"/>
-  <resources xsi:type="platform:Component" id="urn:uuid:9994168f-7071-4d00-ae01-28f88d52615b" rlinks="//@resources.1/@links.0">
+  <resources xsi:type="platform:Component" id="urn:uuid:1716c1da-a790-443b-b59e-7d748caadfa5" rlinks="//@resources.1/@links.0">
     <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='component']"/>
-    <parts xsi:type="tosca:Tosca_nodes_softwarecomponent">
-      <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_softwarecomponent']"/>
+    <parts xsi:type="tosca:Tosca_nodes_database">
+      <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_database']"/>
     </parts>
   </resources>
-  <resources xsi:type="platform:Application" id="urn:uuid:105c4b9f-9fb6-4643-ac1b-593f96c54c44">
+  <resources xsi:type="platform:Application" id="urn:uuid:25f8c1c6-5a36-4300-ac07-8cb2137272fa">
     <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='application']"/>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:17d8e5ba-c82e-4107-b19b-c67ba2b67250" target="//@resources.0">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:4423e9f6-c32d-4519-bf16-b7783812e35b" target="//@resources.0">
       <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
   </resources>

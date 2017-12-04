@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="ASCII"?>
-<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" description="Template of online transaction processing service.">
+<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:extendedtosca="http://org.occi/extendedTosca/ecore" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:platform="http://schemas.ogf.org/occi/platform/ecore" description="Template of online transaction processing service.">
   <use href="http://schemas.ogf.org/occi/core#/"/>
   <use href="http://schemas.ogf.org/occi/infrastructure#/"/>
   <use href="http://schemas.ogf.org/occi/platform#/"/>
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://org.occi/tosca#/"/>
   <use href="http://org.occi/extendedTosca#/"/>
+  <resources id="urn:uuid:92b43c50-83f9-49b1-b4b2-3630d6e54440">
+    <kind href="http://schemas.ogf.org/occi/core#//@kinds[term='resource']"/>
+    <parts xsi:type="extendedtosca:Example_databasesubsystem">
+      <mixin href="http://org.occi/extendedTosca#//@mixins[term='example_databasesubsystem']"/>
+    </parts>
+  </resources>
+  <resources id="urn:uuid:9af77305-899d-40b7-a26c-ccd06213e80d">
+    <kind href="http://schemas.ogf.org/occi/core#//@kinds[term='resource']"/>
+    <parts xsi:type="extendedtosca:Example_queuingsubsystem">
+      <mixin href="http://org.occi/extendedTosca#//@mixins[term='example_queuingsubsystem']"/>
+    </parts>
+  </resources>
+  <resources id="urn:uuid:f32287f4-8070-4b62-8bbe-1583ba360dfd">
+    <kind href="http://schemas.ogf.org/occi/core#//@kinds[term='resource']"/>
+    <parts xsi:type="extendedtosca:Example_transactionsubsystem" receiverPort="8080">
+      <mixin href="http://org.occi/extendedTosca#//@mixins[term='example_transactionsubsystem']"/>
+    </parts>
+  </resources>
+  <resources id="urn:uuid:84bf826b-4af0-475c-9050-fa5c44151b74">
+    <kind href="http://schemas.ogf.org/occi/core#//@kinds[term='resource']"/>
+    <parts xsi:type="extendedtosca:Example_transactionsubsystem" receiverPort="8080">
+      <mixin href="http://org.occi/extendedTosca#//@mixins[term='example_transactionsubsystem']"/>
+    </parts>
+  </resources>
+  <resources xsi:type="platform:Application" id="urn:uuid:34cc7156-4ebc-407f-a369-3dccbf13e1d2">
+    <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='application']"/>
+  </resources>
 </occi:Configuration>

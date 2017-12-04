@@ -6,21 +6,21 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://org.occi/tosca#/"/>
   <use href="http://org.occi/extendedTosca#/"/>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:6b624f96-127c-4597-8e71-59cd6a0084cb">
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:b8e8d438-874b-4190-9efb-83a0fa21bd0e">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
     <parts xsi:type="tosca:Tosca_nodes_compute">
       <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_compute']"/>
     </parts>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:6bd4c43e-7d8a-44a5-a33e-3af2345137e6" rlinks="//@resources.2/@links.0">
+  <resources xsi:type="platform:Component" id="urn:uuid:4e8aa830-f09b-467d-b5a6-74e1e7f008d9" rlinks="//@resources.2/@links.0">
     <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_dbms_mysql">
       <mixin href="http://org.occi/extendedTosca#//@mixins[term='tosca_nodes_dbms_mysql']"/>
     </parts>
   </resources>
-  <resources xsi:type="platform:Application" id="urn:uuid:5c6976cb-c34d-4b3c-a7e4-c52f9fede3e0">
+  <resources xsi:type="platform:Application" id="urn:uuid:118cb4ef-9944-4533-989c-f9efa887af21">
     <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='application']"/>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:b2aa0684-6314-426b-ab8f-08713236edf7" target="//@resources.1">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:d3665264-daad-45cb-af91-375652f6c59b" target="//@resources.1">
       <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
   </resources>

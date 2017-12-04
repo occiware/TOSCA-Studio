@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="ASCII"?>
-<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:infrastructure="http://schemas.ogf.org/occi/infrastructure/ecore" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:tosca="http://org.occi/tosca/ecore" description="Template of an application connecting to a database.">
+<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:infrastructure="http://schemas.ogf.org/occi/infrastructure/ecore" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:platform="http://schemas.ogf.org/occi/platform/ecore" xmlns:tosca="http://org.occi/tosca/ecore" description="Template of an application connecting to a database.">
   <use href="http://schemas.ogf.org/occi/core#/"/>
   <use href="http://schemas.ogf.org/occi/infrastructure#/"/>
   <use href="http://schemas.ogf.org/occi/platform#/"/>
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://org.occi/tosca#/"/>
   <use href="http://org.occi/extendedTosca#/"/>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:f73807e2-2ae7-4505-9057-3b1ea3604313">
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:ee549ae9-5a4c-4dd9-8411-54799ef5a579">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
     <parts xsi:type="tosca:Tosca_nodes_compute">
       <mixin href="http://org.occi/tosca#//@mixins[term='tosca_nodes_compute']"/>
     </parts>
   </resources>
-  <resources id="urn:uuid:bb4213bf-f8c6-4079-acab-643fa09ae935">
-    <kind href="http://schemas.ogf.org/occi/core#//@kinds[term='resource']"/>
+  <resources xsi:type="platform:Application" id="urn:uuid:5421befd-6c07-45da-b260-64557cb0796d">
+    <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='application']"/>
   </resources>
 </occi:Configuration>
