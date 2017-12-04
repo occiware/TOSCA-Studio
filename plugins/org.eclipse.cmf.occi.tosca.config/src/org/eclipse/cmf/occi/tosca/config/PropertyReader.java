@@ -67,9 +67,9 @@ public class PropertyReader {
 	}
 
 	private static String convertPropertyValue(String propertyValue) {
-		if (propertyValue.endsWith("GB")) {
+		if (propertyValue.endsWith("GB") || propertyValue.endsWith("GHz")) {
 			return propertyValue.substring(0, propertyValue.length() - 3);
-		} else if (propertyValue.endsWith("MB")) {
+		} else if (propertyValue.endsWith("MB") || propertyValue.endsWith("MHz")) {
 			return "" + Double.parseDouble(propertyValue.substring(0, propertyValue.length() - 3)) / 1024.0D;
 		} else {
 			return propertyValue;
