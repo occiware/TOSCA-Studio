@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.eclipse.cmf.occi.core.OCCIFactory;
+import org.eclipse.cmf.occi.core.util.OcciKindResolver;
 import org.eclipse.cmf.occi.infrastructure.Architecture;
 import org.eclipse.cmf.occi.infrastructure.Compute;
 import org.eclipse.cmf.occi.infrastructure.Storage;
@@ -45,6 +46,7 @@ public class Mapper {
 		mappingOfCapabilities.put("setNumCpus", new Mapping(Compute.class, "setOcciComputeCores", Integer.class));
 		mappingOfCapabilities.put("setMemSize", new Mapping(Compute.class, "setOcciComputeMemory", Float.class));
 		mappingOfCapabilities.put("setArchitecture", new Mapping(Compute.class, "setOcciComputeArchitecture", Architecture.class));
+		mappingOfCapabilities.put("setCpuFrequency", new Mapping(Compute.class, "setOcciComputeSpeed", Float.class));
 		
 		mappingOfCapabilities.put("setSize", new Mapping(Storage.class, "setOcciStorageSize", Float.class));
 	}
