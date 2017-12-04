@@ -12,10 +12,12 @@ import javax.sound.midi.Soundbank;
 import org.eclipse.cmf.occi.core.Configuration;
 import org.eclipse.cmf.occi.core.Entity;
 import org.eclipse.cmf.occi.core.Kind;
+import org.eclipse.cmf.occi.core.Link;
 import org.eclipse.cmf.occi.core.Mixin;
 import org.eclipse.cmf.occi.core.MixinBase;
 import org.eclipse.cmf.occi.core.Resource;
 import org.eclipse.cmf.occi.core.util.OcciHelper;
+import org.eclipse.cmf.occi.platform.Component;
 import org.eclipse.cmf.occi.tosca.ToscaFactory;
 import org.eclipse.cmf.occi.tosca.config.Mapper.Mapping;
 import org.eclipse.cmf.occi.tosca.config.Mapper.MappingToCreateType;
@@ -39,14 +41,20 @@ public class Main extends AbstractHandler {
 		String pathOfDirectory = "C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.examples/tosca-topologies/";
 		String[] yamlFilesPath = new File(pathOfDirectory).list();
 		for (String yamlFilePath : yamlFilesPath) {
-			if (!yamlFilePath.equals("Example16-UsingSubstitutionMappingsToExportADatabaseImplementation.yml")
-					&& !yamlFilePath.equals("Example3-SimpleMySQLInstallationOnATOSCAComputeNode.yml")
-					&& !yamlFilePath.equals("Example4-NodeTemplateOverridingItsNodeTypeConfigureInterface.yml")
-					&& !yamlFilePath
-							.equals("Example5-TemplateForDeployingDatabaseContentOnTopOfMySQLDBMSMiddleware.yml")
-					&& !yamlFilePath.equals("Example9-DefiningACustomRelationshipType.yml")
-					&& !yamlFilePath.equals("Multi-Tier1-ElasticsearchLogstashKibana.yml")
-					&& !yamlFilePath.equals("BlockStorage2.yml")) {
+			if (!yamlFilePath.equals("Example9-DefiningACustomRelationshipType.yml")) {
+				/*
+				 * if (!yamlFilePath.equals(
+				 * "Example16-UsingSubstitutionMappingsToExportADatabaseImplementation.yml") &&
+				 * !yamlFilePath.equals(
+				 * "Example3-SimpleMySQLInstallationOnATOSCAComputeNode.yml") &&
+				 * !yamlFilePath.equals(
+				 * "Example4-NodeTemplateOverridingItsNodeTypeConfigureInterface.yml") &&
+				 * !yamlFilePath .equals(
+				 * "Example5-TemplateForDeployingDatabaseContentOnTopOfMySQLDBMSMiddleware.yml")
+				 * && !yamlFilePath.equals("Example9-DefiningACustomRelationshipType.yml") &&
+				 * !yamlFilePath.equals("Multi-Tier1-ElasticsearchLogstashKibana.yml") &&
+				 * !yamlFilePath.equals("BlockStorage2.yml")) {
+				 */
 				readYamlFile(pathOfDirectory + "/" + yamlFilePath);
 			}
 		}
@@ -69,10 +77,33 @@ public class Main extends AbstractHandler {
 				configuration.setDescription((String) topology_template.get("description"));
 			}
 			readNodeTemplate(configuration, (Map<String, ?>) topology_template.get("node_templates"));
+			createApplication(configuration);
 			ConfigManager.save();
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	private static void createApplication(Configuration configuration) {
+		Resource applicationEntity = (Resource) OcciHelper.createEntity(OcciHelper
+				.getKindByTerm(OcciHelper.loadExtension("http://schemas.ogf.org/occi/platform#"), "application"));
+		for (Resource resource : configuration.getResources()) {
+			try {
+				Link link = (Link) OcciHelper
+						.createEntity(OcciHelper.getKindByTerm(OcciHelper.loadExtension(resource.getKind().getScheme()),
+								resource.getKind().getTerm() + "link"));
+				if (link != null) {
+					link.setSource(applicationEntity);
+					link.setTarget(resource);
+				} else {
+					System.err.println("Could not find " + resource.getKind().getTerm() + "link in "
+							+ resource.getKind().getScheme() + "extension");
+				}
+			} catch (Exception e) {
+				continue;
+			}
+		}
+		configuration.getResources().add((Resource) applicationEntity);
 	}
 
 	private static void readNodeTemplate(Configuration configuration, Map<String, ?> node_templates) throws Exception {
@@ -81,6 +112,10 @@ public class Main extends AbstractHandler {
 
 			// setting type, using Mapper.mappingOfType
 			String typeName = (String) node_map.get("type");
+
+			if (typeName == null) {
+				continue;
+			}
 
 			String methodNameToCreate = "create" + Character.toUpperCase(typeName.charAt(0))
 					+ typeName.substring(1).replaceAll("\\.", "_").toLowerCase();
@@ -108,7 +143,9 @@ public class Main extends AbstractHandler {
 			}
 			entities.get(0).getParts().add(node);
 			for (Entity entity : entities) {
-				if (entity instanceof Resource) {
+				if (entity instanceof Resource
+						&& (((Resource) entity).getKind().getTerm().equals("resource") && !entity.getParts().isEmpty()
+								|| !((Resource) entity).getKind().getTerm().equals("resource"))) {
 					configuration.getResources().add((Resource) entity);
 				}
 			}
@@ -117,7 +154,7 @@ public class Main extends AbstractHandler {
 				PropertyReader.readProperties(node, (Map<String, ?>) node_map.get("properties"));
 			}
 
-			if (node_map.get("capabilities") != null) {
+			if (node_map.get("capabilities") != null && node_map.get("capabilities") instanceof Map) {
 				readCapabilities(node, (Map<String, ?>) node_map.get("capabilities"));
 			}
 		}
@@ -125,7 +162,13 @@ public class Main extends AbstractHandler {
 
 	private static void readCapabilities(MixinBase node, Map<String, ?> capabilities) throws Exception {
 		for (String capability : capabilities.keySet()) {
+			if (!(capabilities.get(capability) instanceof Map)) {
+				continue;// it is equals to null
+			}
 			Map<String, ?> capabilityMap = (Map<String, ?>) capabilities.get(capability);
+			if (!(capabilityMap.get("properties") instanceof Map)) {
+				continue;// it is equals to null
+			}
 			Map<String, ?> properties = (Map<String, ?>) capabilityMap.get("properties");
 			if (properties != null) {
 				PropertyReader.readProperties(node, properties);
@@ -136,17 +179,8 @@ public class Main extends AbstractHandler {
 	private static List<Entity> readApplies(Configuration configuration, Mixin mixin) {
 		List<Entity> entities = new ArrayList<>();
 		for (Kind kind : mixin.getApplies()) {
-			Entity entity = null;
-			for (Resource resource : configuration.getResources()) {
-				if (kind.getTerm().equals(resource.getKind().getTerm())) {
-					entity = resource;
-					break;
-				}
-			}
-			if (entity == null) {
-				entity = OcciHelper.createEntity(kind);
-				entity.setKind(kind);
-			}
+			Entity entity = OcciHelper.createEntity(kind);
+			entity.setKind(kind);
 			entities.add(entity);
 		}
 		for (Mixin depend : mixin.getDepends()) {
