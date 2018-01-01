@@ -8,6 +8,7 @@ import java.util.Map;
 import org.eclipse.cmf.occi.core.Constraint;
 import org.eclipse.cmf.occi.core.Extension;
 import org.eclipse.cmf.occi.core.Kind;
+import org.eclipse.cmf.occi.core.Link;
 import org.eclipse.cmf.occi.core.Mixin;
 import org.eclipse.cmf.occi.core.OCCIFactory;
 import org.eclipse.cmf.occi.core.Type;
@@ -215,8 +216,8 @@ public class TypeMapper extends Mapper {
 		}
 		public void mapTo(Kind kindToBeMapped) {
 			kindToBeMapped.setParent(parent);
-			kindToBeMapped.setSource(source);
-			kindToBeMapped.setTarget(target);
+			kindToBeMapped.getTarget().add(target);
+			kindToBeMapped.getSource().add(source);
 			for (Mixin mixin : mixins) {
 				mixin.getApplies().add(kindToBeMapped);
 			}
