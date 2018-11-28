@@ -12,6 +12,7 @@ import org.eclipse.cmf.occi.core.Kind;
 import org.eclipse.cmf.occi.core.Mixin;
 import org.eclipse.cmf.occi.core.OCCIFactory;
 import org.eclipse.cmf.occi.core.util.OcciHelper;
+import org.eclipse.cmf.occi.core.util.OcciRegistry;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -63,7 +64,10 @@ public class ExtensionsManager {
 		extension.setDescription("Extended TOSCA");
 		extension.setScheme("http://org.occi/extendedTosca#");
 		extension.setName("extendedTosca");
-		Extension toscaExtension = OcciHelper.loadExtension("http://org.occi/tosca#");
+		System.out.println(OcciRegistry.getInstance().getRegisteredExtensions());
+		Extension toscaExtension = OcciHelper.loadExtension(
+				"file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca/model/tosca.occie"
+		);	
 		extension.getImport().add(extensionsPerName.get("core"));
 		extension.getImport().add(extensionsPerName.get("infrastructure"));
 		extension.getImport().add(extensionsPerName.get("platform"));
@@ -127,7 +131,10 @@ public class ExtensionsManager {
 	public static void save() {
 		System.out.println("Saving...");
 		try {
+			System.out.println(OcciRegistry.getInstance().getRegisteredExtensions());
 			resource.save(Collections.emptyMap());
+			OcciRegistry.getInstance().registerExtension(currentExtensionToBeBuild.getScheme(), resource.getURI().toFileString());
+			System.out.println(OcciRegistry.getInstance().getRegisteredExtensions());
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
