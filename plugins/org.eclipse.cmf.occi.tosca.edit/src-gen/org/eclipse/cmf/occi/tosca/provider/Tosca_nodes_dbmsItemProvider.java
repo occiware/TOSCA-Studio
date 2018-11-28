@@ -152,7 +152,7 @@ public class Tosca_nodes_dbmsItemProvider extends Tosca_nodes_softwarecomponentI
 			getString("_UI_Tosca_nodes_dbms_type") :
 			getString("_UI_Tosca_nodes_dbms_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

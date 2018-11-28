@@ -106,7 +106,7 @@ public class Tosca_relationships_attachestoItemProvider extends Tosca_relationsh
 			getString("_UI_Tosca_relationships_attachesto_type") :
 			getString("_UI_Tosca_relationships_attachesto_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -318,7 +318,7 @@ public class Tosca_nodes_blockstorageImpl extends Tosca_nodes_rootImpl implement
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (volumeId: ");
 		result.append(volumeId);
 		result.append(", snapshotId: ");

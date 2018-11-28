@@ -62,7 +62,9 @@ import extendedtosca.ip_versionEnum;
 import org.eclipse.cmf.occi.core.OCCIPackage;
 
 import org.eclipse.cmf.occi.infrastructure.InfrastructurePackage;
+
 import org.eclipse.cmf.occi.platform.PlatformPackage;
+
 import org.eclipse.cmf.occi.sla.SlaPackage;
 
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
@@ -418,7 +420,7 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link ExtendedtoscaPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -432,7 +434,8 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		if (isInited) return (ExtendedtoscaPackage)EPackage.Registry.INSTANCE.getEPackage(ExtendedtoscaPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ExtendedtoscaPackageImpl theExtendedtoscaPackage = (ExtendedtoscaPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ExtendedtoscaPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ExtendedtoscaPackageImpl());
+		Object registeredExtendedtoscaPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		ExtendedtoscaPackageImpl theExtendedtoscaPackage = registeredExtendedtoscaPackage instanceof ExtendedtoscaPackageImpl ? (ExtendedtoscaPackageImpl)registeredExtendedtoscaPackage : new ExtendedtoscaPackageImpl();
 
 		isInited = true;
 
@@ -452,7 +455,6 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		// Mark meta-data to indicate it can't be changed
 		theExtendedtoscaPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ExtendedtoscaPackage.eNS_URI, theExtendedtoscaPackage);
 		return theExtendedtoscaPackage;
@@ -1605,10 +1607,10 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 * @generated
 	 */
 	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
 		   });
 	}

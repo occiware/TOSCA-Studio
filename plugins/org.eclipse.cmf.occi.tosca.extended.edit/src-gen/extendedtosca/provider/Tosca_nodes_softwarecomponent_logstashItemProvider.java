@@ -273,7 +273,7 @@ public class Tosca_nodes_softwarecomponent_logstashItemProvider extends Tosca_no
 			getString("_UI_Tosca_nodes_softwarecomponent_logstash_type") :
 			getString("_UI_Tosca_nodes_softwarecomponent_logstash_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -79,7 +79,7 @@ public class Tosca_capabilities_endpoint_databaseItemProvider extends Tosca_capa
 			getString("_UI_Tosca_capabilities_endpoint_database_type") :
 			getString("_UI_Tosca_capabilities_endpoint_database_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

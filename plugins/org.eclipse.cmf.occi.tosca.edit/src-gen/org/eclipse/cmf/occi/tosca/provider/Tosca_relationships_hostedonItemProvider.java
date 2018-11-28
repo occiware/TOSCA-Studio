@@ -79,7 +79,7 @@ public class Tosca_relationships_hostedonItemProvider extends Tosca_relationship
 			getString("_UI_Tosca_relationships_hostedon_type") :
 			getString("_UI_Tosca_relationships_hostedon_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

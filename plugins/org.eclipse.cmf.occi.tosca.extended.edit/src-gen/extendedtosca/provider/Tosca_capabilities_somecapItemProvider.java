@@ -111,7 +111,7 @@ public class Tosca_capabilities_somecapItemProvider extends Tosca_capabilities_c
 			getString("_UI_Tosca_capabilities_somecap_type") :
 			getString("_UI_Tosca_capabilities_somecap_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

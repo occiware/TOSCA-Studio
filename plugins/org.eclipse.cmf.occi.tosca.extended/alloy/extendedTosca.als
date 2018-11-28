@@ -1,15 +1,15 @@
-// Generated at Mon Jan 01 19:29:44 CET 2018 from  by org.eclipse.cmf.occi.core.gen.alloy
+// Generated at Wed Nov 28 23:01:18 CET 2018 from  by org.eclipse.cmf.occi.core.gen.alloy
 
 // ======================================================================
 //
-// Static Semantics for OCCI Extension 'extendedTosca'
+// Static Semantics for fclouds 'extendedTosca'
 //
 // ======================================================================
 
 module extendedTosca
 
 open util/boolean
-open OCCI
+open fclouds
 
 // ======================================================================
 //
@@ -21,18 +21,18 @@ open core
 open infrastructure
 open platform
 open sla
-open 
+open tosca
 
 // ======================================================================
 //
-// OCCI extension 'extendedTosca'
+// fclouds extension 'extendedTosca'
 //
 // ======================================================================
 
 one sig extension extends Extension {} {
     name = "extendedTosca"
     scheme = "http://org.occi/extendedTosca#"
-    import = core/extension + infrastructure/extension + platform/extension + sla/extension + /extension
+    import = core/extension + infrastructure/extension + platform/extension + sla/extension + tosca/extension
     no kinds
     mixins = tosca_capabilities_indigo_endpoint + tosca_capabilities_somecap + tosca_capabilities_ha + tosca_capabilities_container_docker + tosca_capabilities_containerchild + tosca_capabilities_somechildcap + tosca_nodes_computewithprop + tosca_nodes_webapplication_paypalpizzastore + tosca_nodes_webapplication_wordpress + tosca_nodes_network_network + tosca_nodes_container_application_docker + tosca_nodes_softwarecomponent_kibana + tosca_nodes_computewithattrlist + tosca_nodes_softwarecomponent_logstash + example_databasesubsystem + tosca_nodes_softwarecomponent_collectd + tosca_nodes_nodewithreq + tosca_nodes_somenode2 + tosca_nodes_database_mysql + example_queuingsubsystem + example_transactionsubsystem + tosca_nodes_softwarecomponent_elasticsearch + tosca_nodes_databasewithlistparam + example_someapp + tosca_nodes_nodewithcap + rsyslog + tosca_nodes_network_port + tosca_nodes_computewithcapwithattr + tosca_nodes_softwarecomponent_rsyslog + tosca_nodes_hacompute + tosca_nodes_somenode + tosca_nodes_webserver_nodejs + tosca_nodes_dbms_mysql + mycompany_mytypes_myscalingpolicy + test_relation_connects + tosca_relationships_network_bindsto + tosca_relationships_ha + myattachesto + tosca_relationships_network_linksto
     types = arrayCredential_DataType + arrayPortSpec_DataType + arrayversion_DataType + ip_versionEnum_DataType + arrayinteger_DataType
@@ -48,11 +48,11 @@ one sig tosca_capabilities_indigo_endpoint extends Mixin {} {
     term = "tosca_capabilities_indigo_endpoint"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid
+    depends = tosca/tosca_capabilities_endpoint
     no applies
     attributes = tosca_capabilities_indigo_endpoint_credential
     no actions
-    entities in Tosca_capabilities_indigo_endpoint
+    entities.Time in this/Tosca_capabilities_indigo_endpoint
 }
 
 //
@@ -65,7 +65,7 @@ one sig tosca_capabilities_indigo_endpoint_credential extends Attribute {} {
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -86,11 +86,11 @@ one sig tosca_capabilities_somecap extends Mixin {} {
     term = "tosca_capabilities_somecap"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid
+    depends = tosca/tosca_capabilities_container
     no applies
     attributes = tosca_capabilities_somecap_type
     no actions
-    entities in Tosca_capabilities_somecap
+    entities.Time in this/Tosca_capabilities_somecap
 }
 
 //
@@ -98,12 +98,12 @@ one sig tosca_capabilities_somecap extends Mixin {} {
 //
 one sig tosca_capabilities_somecap_type extends Attribute {} {
     name = "type"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = True
     default = "someval"
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -111,7 +111,7 @@ one sig tosca_capabilities_somecap_type extends Attribute {} {
 // ======================================================================
 
 sig Tosca_capabilities_somecap in core/Entity {
-    type : one ,
+    type : one tosca/string,
 }
 
 // ======================================================================
@@ -124,11 +124,11 @@ one sig tosca_capabilities_ha extends Mixin {} {
     term = "tosca_capabilities_ha"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid
+    depends = tosca/tosca_capabilities_root
     no applies
     no attributes
     no actions
-    entities in Tosca_capabilities_ha
+    entities.Time in this/Tosca_capabilities_ha
 }
 
 // ======================================================================
@@ -148,11 +148,11 @@ one sig tosca_capabilities_container_docker extends Mixin {} {
     term = "tosca_capabilities_container_docker"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid
+    depends = tosca/tosca_capabilities_container
     no applies
     attributes = tosca_capabilities_container_docker_publish_all + tosca_capabilities_container_docker_publish_ports + tosca_capabilities_container_docker_expose_ports + tosca_capabilities_container_docker_volumes + tosca_capabilities_container_docker_version
     no actions
-    entities in Tosca_capabilities_container_docker
+    entities.Time in this/Tosca_capabilities_container_docker
 }
 
 //
@@ -160,12 +160,12 @@ one sig tosca_capabilities_container_docker extends Mixin {} {
 //
 one sig tosca_capabilities_container_docker_publish_all extends Attribute {} {
     name = "publish.all"
-    type = 
+    type = tosca/boolean_DataType
     mutable = True
     required = False
     default = "false"
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -178,7 +178,7 @@ one sig tosca_capabilities_container_docker_publish_ports extends Attribute {} {
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -191,7 +191,7 @@ one sig tosca_capabilities_container_docker_expose_ports extends Attribute {} {
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -199,12 +199,12 @@ one sig tosca_capabilities_container_docker_expose_ports extends Attribute {} {
 //
 one sig tosca_capabilities_container_docker_volumes extends Attribute {} {
     name = "volumes"
-    type = 
+    type = tosca/arraystring_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -217,7 +217,7 @@ one sig tosca_capabilities_container_docker_version extends Attribute {} {
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -225,10 +225,10 @@ one sig tosca_capabilities_container_docker_version extends Attribute {} {
 // ======================================================================
 
 sig Tosca_capabilities_container_docker in core/Entity {
-    publish_all : lone ,
+    publish_all : lone tosca/boolean,
     publish_ports : lone arrayPortSpec,
     expose_ports : lone arrayPortSpec,
-    volumes : lone ,
+    volumes : lone tosca/arraystring,
     version : lone arrayversion,
 }
 
@@ -242,11 +242,11 @@ one sig tosca_capabilities_containerchild extends Mixin {} {
     term = "tosca_capabilities_containerchild"
     scheme = "http://org.occi/extendedTosca#"
     title = "Define a capability class that inherits from tosca.capabilities.Container"
-    depends = invalid
+    depends = tosca/tosca_capabilities_container
     no applies
     no attributes
     no actions
-    entities in Tosca_capabilities_containerchild
+    entities.Time in this/Tosca_capabilities_containerchild
 }
 
 // ======================================================================
@@ -270,7 +270,7 @@ one sig tosca_capabilities_somechildcap extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_capabilities_somechildcap
+    entities.Time in this/Tosca_capabilities_somechildcap
 }
 
 // ======================================================================
@@ -290,11 +290,11 @@ one sig tosca_nodes_computewithprop extends Mixin {} {
     term = "tosca_nodes_computewithprop"
     scheme = "http://org.occi/extendedTosca#"
     title = "Compute node type with a parameter for the get property with host test"
-    depends = invalid
+    depends = tosca/tosca_nodes_compute
     no applies
     attributes = tosca_nodes_computewithprop_test
     no actions
-    entities in Tosca_nodes_computewithprop
+    entities.Time in this/Tosca_nodes_computewithprop
 }
 
 //
@@ -302,12 +302,12 @@ one sig tosca_nodes_computewithprop extends Mixin {} {
 //
 one sig tosca_nodes_computewithprop_test extends Attribute {} {
     name = "test"
-    type = 
+    type = tosca/integer_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -315,7 +315,7 @@ one sig tosca_nodes_computewithprop_test extends Attribute {} {
 // ======================================================================
 
 sig Tosca_nodes_computewithprop in core/Entity {
-    test : lone ,
+    test : lone tosca/integer,
 }
 
 // ======================================================================
@@ -328,11 +328,11 @@ one sig tosca_nodes_webapplication_paypalpizzastore extends Mixin {} {
     term = "tosca_nodes_webapplication_paypalpizzastore"
     scheme = "http://org.occi/extendedTosca#"
     title = "Pizza store app that allows you to explore the features provided by PayPal's REST APIs. More detail can be found at https://github.com/paypal/rest-api-sample-app-nodejs/"
-    depends = invalid
+    depends = tosca/tosca_nodes_webapplication
     no applies
     attributes = tosca_nodes_webapplication_paypalpizzastore_github_url
     no actions
-    entities in Tosca_nodes_webapplication_paypalpizzastore
+    entities.Time in this/Tosca_nodes_webapplication_paypalpizzastore
 }
 
 //
@@ -340,12 +340,12 @@ one sig tosca_nodes_webapplication_paypalpizzastore extends Mixin {} {
 //
 one sig tosca_nodes_webapplication_paypalpizzastore_github_url extends Attribute {} {
     name = "github.url"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     default = "https://github.com/sample.git"
     description = "location of the application on the github."
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -353,7 +353,7 @@ one sig tosca_nodes_webapplication_paypalpizzastore_github_url extends Attribute
 // ======================================================================
 
 sig Tosca_nodes_webapplication_paypalpizzastore in core/Entity {
-    github_url : lone ,
+    github_url : lone tosca/string,
 }
 
 // ======================================================================
@@ -366,11 +366,11 @@ one sig tosca_nodes_webapplication_wordpress extends Mixin {} {
     term = "tosca_nodes_webapplication_wordpress"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid
+    depends = tosca/tosca_nodes_webapplication
     no applies
     attributes = tosca_nodes_webapplication_wordpress_db_host + tosca_nodes_webapplication_wordpress_admin_password + tosca_nodes_webapplication_wordpress_admin_user
     no actions
-    entities in Tosca_nodes_webapplication_wordpress
+    entities.Time in this/Tosca_nodes_webapplication_wordpress
 }
 
 //
@@ -378,12 +378,12 @@ one sig tosca_nodes_webapplication_wordpress extends Mixin {} {
 //
 one sig tosca_nodes_webapplication_wordpress_db_host extends Attribute {} {
     name = "db.host"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -391,12 +391,12 @@ one sig tosca_nodes_webapplication_wordpress_db_host extends Attribute {} {
 //
 one sig tosca_nodes_webapplication_wordpress_admin_password extends Attribute {} {
     name = "admin.password"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -404,12 +404,12 @@ one sig tosca_nodes_webapplication_wordpress_admin_password extends Attribute {}
 //
 one sig tosca_nodes_webapplication_wordpress_admin_user extends Attribute {} {
     name = "admin.user"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -417,9 +417,9 @@ one sig tosca_nodes_webapplication_wordpress_admin_user extends Attribute {} {
 // ======================================================================
 
 sig Tosca_nodes_webapplication_wordpress in core/Entity {
-    db_host : lone ,
-    admin_password : lone ,
-    admin_user : lone ,
+    db_host : lone tosca/string,
+    admin_password : lone tosca/string,
+    admin_user : lone tosca/string,
 }
 
 // ======================================================================
@@ -432,11 +432,11 @@ one sig tosca_nodes_network_network extends Mixin {} {
     term = "tosca_nodes_network_network"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid
+    depends = tosca/tosca_nodes_root
     no applies
     attributes = tosca_nodes_network_network_physical_network + tosca_nodes_network_network_segmentation_id + tosca_nodes_network_network_network_id + tosca_nodes_network_network_ip_version + tosca_nodes_network_network_start_ip + tosca_nodes_network_network_network_name + tosca_nodes_network_network_cidr + tosca_nodes_network_network_gateway_ip + tosca_nodes_network_network_network_type + tosca_nodes_network_network_end_ip
     no actions
-    entities in Tosca_nodes_network_network
+    entities.Time in this/Tosca_nodes_network_network
 }
 
 //
@@ -444,12 +444,12 @@ one sig tosca_nodes_network_network extends Mixin {} {
 //
 one sig tosca_nodes_network_network_physical_network extends Attribute {} {
     name = "physical.network"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -457,12 +457,12 @@ one sig tosca_nodes_network_network_physical_network extends Attribute {} {
 //
 one sig tosca_nodes_network_network_segmentation_id extends Attribute {} {
     name = "segmentation.id"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -470,12 +470,12 @@ one sig tosca_nodes_network_network_segmentation_id extends Attribute {} {
 //
 one sig tosca_nodes_network_network_network_id extends Attribute {} {
     name = "network.id"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -488,7 +488,7 @@ one sig tosca_nodes_network_network_ip_version extends Attribute {} {
     required = False
     default = "IPv4"
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -496,12 +496,12 @@ one sig tosca_nodes_network_network_ip_version extends Attribute {} {
 //
 one sig tosca_nodes_network_network_start_ip extends Attribute {} {
     name = "start.ip"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -509,12 +509,12 @@ one sig tosca_nodes_network_network_start_ip extends Attribute {} {
 //
 one sig tosca_nodes_network_network_network_name extends Attribute {} {
     name = "network.name"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -522,12 +522,12 @@ one sig tosca_nodes_network_network_network_name extends Attribute {} {
 //
 one sig tosca_nodes_network_network_cidr extends Attribute {} {
     name = "cidr"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -535,12 +535,12 @@ one sig tosca_nodes_network_network_cidr extends Attribute {} {
 //
 one sig tosca_nodes_network_network_gateway_ip extends Attribute {} {
     name = "gateway.ip"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -548,12 +548,12 @@ one sig tosca_nodes_network_network_gateway_ip extends Attribute {} {
 //
 one sig tosca_nodes_network_network_network_type extends Attribute {} {
     name = "network.type"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -561,12 +561,12 @@ one sig tosca_nodes_network_network_network_type extends Attribute {} {
 //
 one sig tosca_nodes_network_network_end_ip extends Attribute {} {
     name = "end.ip"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -574,16 +574,16 @@ one sig tosca_nodes_network_network_end_ip extends Attribute {} {
 // ======================================================================
 
 sig Tosca_nodes_network_network in core/Entity {
-    physical_network : lone ,
-    segmentation_id : lone ,
-    network_id : lone ,
+    physical_network : lone tosca/string,
+    segmentation_id : lone tosca/string,
+    network_id : lone tosca/string,
     ip_version : lone ip_versionEnum,
-    start_ip : lone ,
-    network_name : lone ,
-    cidr : lone ,
-    gateway_ip : lone ,
-    network_type : lone ,
-    end_ip : lone ,
+    start_ip : lone tosca/string,
+    network_name : lone tosca/string,
+    cidr : lone tosca/string,
+    gateway_ip : lone tosca/string,
+    network_type : lone tosca/string,
+    end_ip : lone tosca/string,
 }
 
 // ======================================================================
@@ -596,11 +596,11 @@ one sig tosca_nodes_container_application_docker extends Mixin {} {
     term = "tosca_nodes_container_application_docker"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid
+    depends = tosca/tosca_nodes_container_application
     no applies
     no attributes
     no actions
-    entities in Tosca_nodes_container_application_docker
+    entities.Time in this/Tosca_nodes_container_application_docker
 }
 
 // ======================================================================
@@ -620,11 +620,11 @@ one sig tosca_nodes_softwarecomponent_kibana extends Mixin {} {
     term = "tosca_nodes_softwarecomponent_kibana"
     scheme = "http://org.occi/extendedTosca#"
     title = "Kibana is an open source analytics and visualization platform designed to work with Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch."
-    depends = invalid
+    depends = tosca/tosca_nodes_softwarecomponent
     no applies
     no attributes
     no actions
-    entities in Tosca_nodes_softwarecomponent_kibana
+    entities.Time in this/Tosca_nodes_softwarecomponent_kibana
 }
 
 // ======================================================================
@@ -644,11 +644,11 @@ one sig tosca_nodes_computewithattrlist extends Mixin {} {
     term = "tosca_nodes_computewithattrlist"
     scheme = "http://org.occi/extendedTosca#"
     title = "Compute node type with a list attribute"
-    depends = invalid
+    depends = tosca/tosca_nodes_compute
     no applies
     attributes = tosca_nodes_computewithattrlist_attr_list
     no actions
-    entities in Tosca_nodes_computewithattrlist
+    entities.Time in this/Tosca_nodes_computewithattrlist
 }
 
 //
@@ -656,12 +656,12 @@ one sig tosca_nodes_computewithattrlist extends Mixin {} {
 //
 one sig tosca_nodes_computewithattrlist_attr_list extends Attribute {} {
     name = "attr.list"
-    type = 
+    type = tosca/map_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -669,7 +669,7 @@ one sig tosca_nodes_computewithattrlist_attr_list extends Attribute {} {
 // ======================================================================
 
 sig Tosca_nodes_computewithattrlist in core/Entity {
-    attr_list : lone ,
+    attr_list : lone tosca/map,
 }
 
 // ======================================================================
@@ -682,11 +682,11 @@ one sig tosca_nodes_softwarecomponent_logstash extends Mixin {} {
     term = "tosca_nodes_softwarecomponent_logstash"
     scheme = "http://org.occi/extendedTosca#"
     title = "Logstash is a tool for receiving, processing and outputting logs. All kinds of logs. System logs, webserver logs, error logs, application logs, and just about anything you can throw at it."
-    depends = invalid + invalid
+    depends = tosca/tosca_nodes_softwarecomponent + tosca/tosca_capabilities_endpoint
     no applies
     no attributes
     no actions
-    entities in Tosca_nodes_softwarecomponent_logstash
+    entities.Time in this/Tosca_nodes_softwarecomponent_logstash
 }
 
 // ======================================================================
@@ -706,11 +706,11 @@ one sig example_databasesubsystem extends Mixin {} {
     term = "example_databasesubsystem"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid + invalid
+    depends = tosca/tosca_nodes_root + tosca/tosca_capabilities_endpoint_database
     no applies
     no attributes
     no actions
-    entities in Example_databasesubsystem
+    entities.Time in this/Example_databasesubsystem
 }
 
 // ======================================================================
@@ -730,11 +730,11 @@ one sig tosca_nodes_softwarecomponent_collectd extends Mixin {} {
     term = "tosca_nodes_softwarecomponent_collectd"
     scheme = "http://org.occi/extendedTosca#"
     title = "collectd is a daemon which gathers statistics about the system it is running on."
-    depends = invalid
+    depends = tosca/tosca_nodes_softwarecomponent
     no applies
     no attributes
     no actions
-    entities in Tosca_nodes_softwarecomponent_collectd
+    entities.Time in this/Tosca_nodes_softwarecomponent_collectd
 }
 
 // ======================================================================
@@ -754,11 +754,11 @@ one sig tosca_nodes_nodewithreq extends Mixin {} {
     term = "tosca_nodes_nodewithreq"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid
+    depends = tosca/tosca_nodes_softwarecomponent
     no applies
     no attributes
     no actions
-    entities in Tosca_nodes_nodewithreq
+    entities.Time in this/Tosca_nodes_nodewithreq
 }
 
 // ======================================================================
@@ -778,11 +778,11 @@ one sig tosca_nodes_somenode2 extends Mixin {} {
     term = "tosca_nodes_somenode2"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid + tosca_capabilities_containerchild
+    depends = tosca/tosca_nodes_root + tosca_capabilities_containerchild
     no applies
     no attributes
     no actions
-    entities in Tosca_nodes_somenode2
+    entities.Time in this/Tosca_nodes_somenode2
 }
 
 // ======================================================================
@@ -802,11 +802,11 @@ one sig tosca_nodes_database_mysql extends Mixin {} {
     term = "tosca_nodes_database_mysql"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid
+    depends = tosca/tosca_nodes_database
     no applies
     no attributes
     no actions
-    entities in Tosca_nodes_database_mysql
+    entities.Time in this/Tosca_nodes_database_mysql
 }
 
 // ======================================================================
@@ -826,11 +826,11 @@ one sig example_queuingsubsystem extends Mixin {} {
     term = "example_queuingsubsystem"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid + invalid
+    depends = tosca/tosca_nodes_root + tosca/tosca_capabilities_endpoint
     no applies
     no attributes
     no actions
-    entities in Example_queuingsubsystem
+    entities.Time in this/Example_queuingsubsystem
 }
 
 // ======================================================================
@@ -850,11 +850,11 @@ one sig example_transactionsubsystem extends Mixin {} {
     term = "example_transactionsubsystem"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid + invalid
+    depends = tosca/tosca_nodes_root + tosca/tosca_capabilities_endpoint
     no applies
     attributes = example_transactionsubsystem_receiver_port + example_transactionsubsystem_mq_service_ip
     no actions
-    entities in Example_transactionsubsystem
+    entities.Time in this/Example_transactionsubsystem
 }
 
 //
@@ -862,12 +862,12 @@ one sig example_transactionsubsystem extends Mixin {} {
 //
 one sig example_transactionsubsystem_receiver_port extends Attribute {} {
     name = "receiver.port"
-    type = 
+    type = tosca/integer_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -875,12 +875,12 @@ one sig example_transactionsubsystem_receiver_port extends Attribute {} {
 //
 one sig example_transactionsubsystem_mq_service_ip extends Attribute {} {
     name = "mq.service.ip"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -888,8 +888,8 @@ one sig example_transactionsubsystem_mq_service_ip extends Attribute {} {
 // ======================================================================
 
 sig Example_transactionsubsystem in core/Entity {
-    receiver_port : lone ,
-    mq_service_ip : lone ,
+    receiver_port : lone tosca/integer,
+    mq_service_ip : lone tosca/string,
 }
 
 // ======================================================================
@@ -902,11 +902,11 @@ one sig tosca_nodes_softwarecomponent_elasticsearch extends Mixin {} {
     term = "tosca_nodes_softwarecomponent_elasticsearch"
     scheme = "http://org.occi/extendedTosca#"
     title = "Elasticsearch is an open-source search engine built on top of Apache Lucene, a full-text search-engine library."
-    depends = invalid + invalid
+    depends = tosca/tosca_nodes_softwarecomponent + tosca/tosca_capabilities_endpoint
     no applies
     no attributes
     no actions
-    entities in Tosca_nodes_softwarecomponent_elasticsearch
+    entities.Time in this/Tosca_nodes_softwarecomponent_elasticsearch
 }
 
 // ======================================================================
@@ -926,11 +926,11 @@ one sig tosca_nodes_databasewithlistparam extends Mixin {} {
     term = "tosca_nodes_databasewithlistparam"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid
+    depends = tosca/tosca_nodes_database
     no applies
     attributes = tosca_nodes_databasewithlistparam_list_prop
     no actions
-    entities in Tosca_nodes_databasewithlistparam
+    entities.Time in this/Tosca_nodes_databasewithlistparam
 }
 
 //
@@ -943,7 +943,7 @@ one sig tosca_nodes_databasewithlistparam_list_prop extends Attribute {} {
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -964,11 +964,11 @@ one sig example_someapp extends Mixin {} {
     term = "example_someapp"
     scheme = "http://org.occi/extendedTosca#"
     title = "taken from tosca-topologies/Example18-ImplementationOfATransactionSubsytemNodeTypeUsingSubstitutionMappings"
-    depends = invalid + invalid
+    depends = tosca/tosca_nodes_root + tosca/tosca_capabilities_endpoint
     no applies
     no attributes
     no actions
-    entities in Example_someapp
+    entities.Time in this/Example_someapp
 }
 
 // ======================================================================
@@ -988,11 +988,11 @@ one sig tosca_nodes_nodewithcap extends Mixin {} {
     term = "tosca_nodes_nodewithcap"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid + tosca_capabilities_somecap
+    depends = tosca/tosca_nodes_root + tosca_capabilities_somecap
     no applies
     no attributes
     no actions
-    entities in Tosca_nodes_nodewithcap
+    entities.Time in this/Tosca_nodes_nodewithcap
 }
 
 // ======================================================================
@@ -1012,11 +1012,11 @@ one sig rsyslog extends Mixin {} {
     term = "rsyslog"
     scheme = "http://org.occi/extendedTosca#"
     title = "RSYSLOG is the Rocket-fast SYStem for LOG processing."
-    depends = invalid
+    depends = tosca/tosca_nodes_softwarecomponent
     no applies
     no attributes
     no actions
-    entities in Rsyslog
+    entities.Time in this/Rsyslog
 }
 
 // ======================================================================
@@ -1036,11 +1036,11 @@ one sig tosca_nodes_network_port extends Mixin {} {
     term = "tosca_nodes_network_port"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid
+    depends = tosca/tosca_nodes_root
     no applies
     attributes = tosca_nodes_network_port_ip_range_end + tosca_nodes_network_port_ip_range_start + tosca_nodes_network_port_ip_address + tosca_nodes_network_port_is_default + tosca_nodes_network_port_order
     no actions
-    entities in Tosca_nodes_network_port
+    entities.Time in this/Tosca_nodes_network_port
 }
 
 //
@@ -1048,12 +1048,12 @@ one sig tosca_nodes_network_port extends Mixin {} {
 //
 one sig tosca_nodes_network_port_ip_range_end extends Attribute {} {
     name = "ip.range.end"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -1061,12 +1061,12 @@ one sig tosca_nodes_network_port_ip_range_end extends Attribute {} {
 //
 one sig tosca_nodes_network_port_ip_range_start extends Attribute {} {
     name = "ip.range.start"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -1074,12 +1074,12 @@ one sig tosca_nodes_network_port_ip_range_start extends Attribute {} {
 //
 one sig tosca_nodes_network_port_ip_address extends Attribute {} {
     name = "ip.address"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -1087,12 +1087,12 @@ one sig tosca_nodes_network_port_ip_address extends Attribute {} {
 //
 one sig tosca_nodes_network_port_is_default extends Attribute {} {
     name = "is.default"
-    type = 
+    type = tosca/boolean_DataType
     mutable = True
     required = False
     default = "false"
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -1100,12 +1100,12 @@ one sig tosca_nodes_network_port_is_default extends Attribute {} {
 //
 one sig tosca_nodes_network_port_order extends Attribute {} {
     name = "order"
-    type = 
+    type = tosca/integerMinZero_DataType
     mutable = True
     required = True
     default = "0"
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -1113,11 +1113,11 @@ one sig tosca_nodes_network_port_order extends Attribute {} {
 // ======================================================================
 
 sig Tosca_nodes_network_port in core/Entity {
-    ip_range_end : lone ,
-    ip_range_start : lone ,
-    ip_address : lone ,
-    is_default : lone ,
-    order : one ,
+    ip_range_end : lone tosca/string,
+    ip_range_start : lone tosca/string,
+    ip_address : lone tosca/string,
+    is_default : lone tosca/boolean,
+    order : one tosca/integerMinZero,
 }
 
 // ======================================================================
@@ -1130,11 +1130,11 @@ one sig tosca_nodes_computewithcapwithattr extends Mixin {} {
     term = "tosca_nodes_computewithcapwithattr"
     scheme = "http://org.occi/extendedTosca#"
     title = "Compute node type with capability with an attribute of type list"
-    depends = invalid + tosca_capabilities_indigo_endpoint
+    depends = tosca/tosca_nodes_compute + tosca_capabilities_indigo_endpoint
     no applies
     no attributes
     no actions
-    entities in Tosca_nodes_computewithcapwithattr
+    entities.Time in this/Tosca_nodes_computewithcapwithattr
 }
 
 // ======================================================================
@@ -1154,11 +1154,11 @@ one sig tosca_nodes_softwarecomponent_rsyslog extends Mixin {} {
     term = "tosca_nodes_softwarecomponent_rsyslog"
     scheme = "http://org.occi/extendedTosca#"
     title = "RSYSLOG is the Rocket-fast SYStem for LOG processing."
-    depends = invalid
+    depends = tosca/tosca_nodes_softwarecomponent
     no applies
     no attributes
     no actions
-    entities in Tosca_nodes_softwarecomponent_rsyslog
+    entities.Time in this/Tosca_nodes_softwarecomponent_rsyslog
 }
 
 // ======================================================================
@@ -1178,11 +1178,11 @@ one sig tosca_nodes_hacompute extends Mixin {} {
     term = "tosca_nodes_hacompute"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid + tosca_capabilities_ha
+    depends = tosca/tosca_nodes_compute + tosca_capabilities_ha
     no applies
     no attributes
     no actions
-    entities in Tosca_nodes_hacompute
+    entities.Time in this/Tosca_nodes_hacompute
 }
 
 // ======================================================================
@@ -1202,11 +1202,11 @@ one sig tosca_nodes_somenode extends Mixin {} {
     term = "tosca_nodes_somenode"
     scheme = "http://org.occi/extendedTosca#"
     title = "Node type that has a requirement of a capability with a defined value"
-    depends = invalid
+    depends = tosca/tosca_nodes_root
     no applies
     attributes = tosca_nodes_somenode_some_prop
     no actions
-    entities in Tosca_nodes_somenode
+    entities.Time in this/Tosca_nodes_somenode
 }
 
 //
@@ -1214,12 +1214,12 @@ one sig tosca_nodes_somenode extends Mixin {} {
 //
 one sig tosca_nodes_somenode_some_prop extends Attribute {} {
     name = "some.prop"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     default = "some"
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -1227,7 +1227,7 @@ one sig tosca_nodes_somenode_some_prop extends Attribute {} {
 // ======================================================================
 
 sig Tosca_nodes_somenode in core/Entity {
-    some_prop : lone ,
+    some_prop : lone tosca/string,
 }
 
 // ======================================================================
@@ -1240,11 +1240,11 @@ one sig tosca_nodes_webserver_nodejs extends Mixin {} {
     term = "tosca_nodes_webserver_nodejs"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid
+    depends = tosca/tosca_nodes_webserver
     no applies
     attributes = tosca_nodes_webserver_nodejs_github_url
     no actions
-    entities in Tosca_nodes_webserver_nodejs
+    entities.Time in this/Tosca_nodes_webserver_nodejs
 }
 
 //
@@ -1252,12 +1252,12 @@ one sig tosca_nodes_webserver_nodejs extends Mixin {} {
 //
 one sig tosca_nodes_webserver_nodejs_github_url extends Attribute {} {
     name = "github.url"
-    type = 
+    type = tosca/string_DataType
     mutable = True
     required = False
     default = "https://github.com/mmm/testnode.git"
     description = "location of the application on the github."
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -1265,7 +1265,7 @@ one sig tosca_nodes_webserver_nodejs_github_url extends Attribute {} {
 // ======================================================================
 
 sig Tosca_nodes_webserver_nodejs in core/Entity {
-    github_url : lone ,
+    github_url : lone tosca/string,
 }
 
 // ======================================================================
@@ -1278,11 +1278,11 @@ one sig tosca_nodes_dbms_mysql extends Mixin {} {
     term = "tosca_nodes_dbms_mysql"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid
+    depends = tosca/tosca_nodes_dbms
     no applies
     no attributes
     no actions
-    entities in Tosca_nodes_dbms_mysql
+    entities.Time in this/Tosca_nodes_dbms_mysql
 }
 
 // ======================================================================
@@ -1306,7 +1306,7 @@ one sig mycompany_mytypes_myscalingpolicy extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Mycompany_mytypes_myscalingpolicy
+    entities.Time in this/Mycompany_mytypes_myscalingpolicy
 }
 
 // ======================================================================
@@ -1330,7 +1330,7 @@ one sig test_relation_connects extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Test_relation_connects
+    entities.Time in this/Test_relation_connects
 }
 
 // ======================================================================
@@ -1350,11 +1350,11 @@ one sig tosca_relationships_network_bindsto extends Mixin {} {
     term = "tosca_relationships_network_bindsto"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid
+    depends = tosca/tosca_relationships_dependson
     no applies
     no attributes
     no actions
-    entities in Tosca_relationships_network_bindsto
+    entities.Time in this/Tosca_relationships_network_bindsto
 }
 
 // ======================================================================
@@ -1374,11 +1374,11 @@ one sig tosca_relationships_ha extends Mixin {} {
     term = "tosca_relationships_ha"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid
+    depends = tosca/tosca_relationships_root
     no applies
     no attributes
     no actions
-    entities in Tosca_relationships_ha
+    entities.Time in this/Tosca_relationships_ha
 }
 
 // ======================================================================
@@ -1398,11 +1398,11 @@ one sig myattachesto extends Mixin {} {
     term = "myattachesto"
     scheme = "http://org.occi/extendedTosca#"
     title = "taken from tosca-topologies/BlockStorage4"
-    depends = invalid
+    depends = tosca/tosca_relationships_attachesto
     no applies
     no attributes
     no actions
-    entities in Myattachesto
+    entities.Time in this/Myattachesto
 }
 
 // ======================================================================
@@ -1422,11 +1422,11 @@ one sig tosca_relationships_network_linksto extends Mixin {} {
     term = "tosca_relationships_network_linksto"
     scheme = "http://org.occi/extendedTosca#"
     no title
-    depends = invalid
+    depends = tosca/tosca_relationships_dependson
     no applies
     no attributes
     no actions
-    entities in Tosca_relationships_network_linksto
+    entities.Time in this/Tosca_relationships_network_linksto
 }
 
 // ======================================================================
@@ -1492,4 +1492,46 @@ run Consistency {} for 10
 // ======================================================================
 
 run The_OCCI_Type_System {} for 0
+
+// ======================================================================
+// imported check
+// ======================================================================
+
+check GetAllCategoriesIsSafe for 10
+check GetAllCategoriesIsIdempotent for 10
+check GetAllCategoriesOnConfigurationWithoutExtensionsAndUserMixinsReturnsNoCategory for 10
+check GetAllCategoriesOnConfigurationWithoutExtensionsReturnsUserMixins for 10
+check GetAllCategoriesOnConfigurationWithoutUserMixinsReturnsAllExtensionsKindsAndMixins for 10
+check CreateResourceIsIdempotent for 10
+check CreateResourceImpliesResourceAddedToKind for 10
+check RetrieveResourceIsSafe for 10
+check RetrieveResourceIsIdempotent for 10
+check CreateResourceAndRetrieveResourceAreSequential for 10 //but exactly 1 Configuration, exactly 2 Resource, exactly 3 Time
+check UpdateResourceIsIdempotent for 10
+check DeleteResourceIsIdempotent for 10
+check DeleteResourceImpliesResourceRemovedFromConfiguration for 10
+check CreateResourceAndDeleteResourceAreReversible for 10
+check CreateLinkIsIdempotent for 10
+check CreateLinkImpliesLinkAddedToKind for 10
+check RetrieveLinkIsSafe for 10
+check RetrieveLinkIsIdempotent for 10
+check CreateLinkAndRetrieveLinkAreSequential for 10
+check DeleteLinkIsIdempotent for 10
+check DeleteLinkImpliesLinkRemovedFromConfiguration for 10
+check CreateLinkAndDeleteLinkAreReversible for 10
+check UpdateLinkIsIdempotent for 10
+check AddUserMixinDoesNotModifyConfigurationExtensionsAndResources for 10
+check AddUserMixinCanNotAddAlreadyExistingMixin for 10
+check AddUserMixinDoesTheWork for 10
+check RemoveUserMixinDoesNotModifyConfigurationExtensionsAndResources for 10
+check RemoveUserMixinCanNotRemoveNotExistingMixin for 10
+check RemoveUserMixinDoesTheWork for 10
+check AddUserMixinAndRemoveUserMixinAreReversibleOperations_v2 for 10
+check AssociateMixinToResourceIsIdempotent for 10
+check DissociateMixinFromResourceIsIdempotent for 10
+check AssociateMixinToResourceAndDissociateMixinFromResourceAreReversible for 10
+check RetrieveCollectionIsSafe for 10
+check RetrieveCollectionOnConfigurationWithoutExtensionsAndUserMixinsReturnsNoCategory for 10
+check RetrieveCollectionOnConfigurationWithoutExtensionsReturnsUserMixins for 10
+check RetrieveCollectionOnConfigurationWithoutUserMixinsReturnsAllExtensionsKindsAndMixins for 10
 

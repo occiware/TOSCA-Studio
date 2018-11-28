@@ -74,7 +74,7 @@ public class Tosca_interfaces_relationship_configureItemProvider extends Tosca_i
 	public String getText(Object object) {
 		return getString("_UI_Tosca_interfaces_relationship_configure_type");
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

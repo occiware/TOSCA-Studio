@@ -78,7 +78,7 @@ public class Mycompany_mytypes_myscalingpolicyItemProvider extends MixinBaseItem
 	public String getText(Object object) {
 		return getString("_UI_Mycompany_mytypes_myscalingpolicy_type");
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

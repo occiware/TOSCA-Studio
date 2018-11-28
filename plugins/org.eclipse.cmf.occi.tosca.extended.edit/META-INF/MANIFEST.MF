@@ -2,6 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.cmf.occi.tosca.extended.edit;singleton:=true
+Automatic-Module-Name: org.eclipse.cmf.occi.tosca.extended.edit
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: extendedtosca.provider.ExtendedtoscaEditPlugin$Implementation
@@ -16,10 +17,10 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.cmf.occi.infrastructure.edit;visibility:=reexport,
  org.eclipse.cmf.occi.platform;visibility:=reexport,
  org.eclipse.cmf.occi.platform.edit;visibility:=reexport,
+ org.eclipse.cmf.occi.sla;visibility:=reexport,
+ org.eclipse.cmf.occi.sla.edit;visibility:=reexport,
  org.eclipse.cmf.occi.tosca;visibility:=reexport,
  org.eclipse.cmf.occi.tosca.edit;visibility:=reexport,
  org.eclipse.cmf.occi.core;visibility:=reexport,
- org.eclipse.cmf.occi.core.edit;visibility:=reexport,
- org.eclipse.cmf.occi.sla;visibility:=reexport,
- org.eclipse.cmf.occi.sla.edit;visibility:=reexport
+ org.eclipse.cmf.occi.core.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

@@ -80,7 +80,7 @@ public class Tosca_capabilities_somechildcapItemProvider extends Tosca_capabilit
 			getString("_UI_Tosca_capabilities_somechildcap_type") :
 			getString("_UI_Tosca_capabilities_somechildcap_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

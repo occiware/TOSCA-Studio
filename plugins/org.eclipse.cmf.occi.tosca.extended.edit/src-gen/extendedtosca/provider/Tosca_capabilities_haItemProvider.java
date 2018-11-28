@@ -78,7 +78,7 @@ public class Tosca_capabilities_haItemProvider extends Tosca_capabilities_rootIt
 	public String getText(Object object) {
 		return getString("_UI_Tosca_capabilities_ha_type");
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

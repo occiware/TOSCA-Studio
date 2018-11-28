@@ -86,7 +86,7 @@ public class Tosca_policies_rootItemProvider extends Agreement_termItemProvider 
 			getString("_UI_Tosca_policies_root_type") :
 			getString("_UI_Tosca_policies_root_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

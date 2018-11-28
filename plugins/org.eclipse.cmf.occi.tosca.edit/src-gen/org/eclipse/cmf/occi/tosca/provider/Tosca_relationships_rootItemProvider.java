@@ -156,7 +156,7 @@ public class Tosca_relationships_rootItemProvider extends MixinBaseItemProvider 
 			getString("_UI_Tosca_relationships_root_type") :
 			getString("_UI_Tosca_relationships_root_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -118,7 +118,7 @@ public class Tosca_nodes_computewithcapwithattrItemProvider extends Tosca_nodes_
 			getString("_UI_Tosca_nodes_computewithcapwithattr_type") :
 			getString("_UI_Tosca_nodes_computewithcapwithattr_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

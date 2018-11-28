@@ -497,7 +497,7 @@ public class Tosca_nodes_computeItemProvider extends Tosca_nodes_rootItemProvide
 			getString("_UI_Tosca_nodes_compute_type") :
 			getString("_UI_Tosca_nodes_compute_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -118,7 +118,7 @@ public class arrayintegerItemProvider
 	public String getText(Object object) {
 		return getString("_UI_arrayinteger_type");
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

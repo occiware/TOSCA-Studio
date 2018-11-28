@@ -312,75 +312,6 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_database_mysql} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Tosca_nodes_database_mysqlItemProvider tosca_nodes_database_mysqlItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_database_mysql}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTosca_nodes_database_mysqlAdapter() {
-		if (tosca_nodes_database_mysqlItemProvider == null) {
-			tosca_nodes_database_mysqlItemProvider = new Tosca_nodes_database_mysqlItemProvider(this);
-		}
-
-		return tosca_nodes_database_mysqlItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Example_queuingsubsystem} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Example_queuingsubsystemItemProvider example_queuingsubsystemItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link extendedtosca.Example_queuingsubsystem}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createExample_queuingsubsystemAdapter() {
-		if (example_queuingsubsystemItemProvider == null) {
-			example_queuingsubsystemItemProvider = new Example_queuingsubsystemItemProvider(this);
-		}
-
-		return example_queuingsubsystemItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Example_transactionsubsystem} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Example_transactionsubsystemItemProvider example_transactionsubsystemItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link extendedtosca.Example_transactionsubsystem}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createExample_transactionsubsystemAdapter() {
-		if (example_transactionsubsystemItemProvider == null) {
-			example_transactionsubsystemItemProvider = new Example_transactionsubsystemItemProvider(this);
-		}
-
-		return example_transactionsubsystemItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_computewithprop} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -401,75 +332,6 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		}
 
 		return tosca_nodes_computewithpropItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_softwarecomponent_elasticsearch} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Tosca_nodes_softwarecomponent_elasticsearchItemProvider tosca_nodes_softwarecomponent_elasticsearchItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_softwarecomponent_elasticsearch}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTosca_nodes_softwarecomponent_elasticsearchAdapter() {
-		if (tosca_nodes_softwarecomponent_elasticsearchItemProvider == null) {
-			tosca_nodes_softwarecomponent_elasticsearchItemProvider = new Tosca_nodes_softwarecomponent_elasticsearchItemProvider(this);
-		}
-
-		return tosca_nodes_softwarecomponent_elasticsearchItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_databasewithlistparam} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Tosca_nodes_databasewithlistparamItemProvider tosca_nodes_databasewithlistparamItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_databasewithlistparam}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTosca_nodes_databasewithlistparamAdapter() {
-		if (tosca_nodes_databasewithlistparamItemProvider == null) {
-			tosca_nodes_databasewithlistparamItemProvider = new Tosca_nodes_databasewithlistparamItemProvider(this);
-		}
-
-		return tosca_nodes_databasewithlistparamItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Example_someapp} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Example_someappItemProvider example_someappItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link extendedtosca.Example_someapp}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createExample_someappAdapter() {
-		if (example_someappItemProvider == null) {
-			example_someappItemProvider = new Example_someappItemProvider(this);
-		}
-
-		return example_someappItemProvider;
 	}
 
 	/**
@@ -542,29 +404,6 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_nodewithcap} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Tosca_nodes_nodewithcapItemProvider tosca_nodes_nodewithcapItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_nodewithcap}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTosca_nodes_nodewithcapAdapter() {
-		if (tosca_nodes_nodewithcapItemProvider == null) {
-			tosca_nodes_nodewithcapItemProvider = new Tosca_nodes_nodewithcapItemProvider(this);
-		}
-
-		return tosca_nodes_nodewithcapItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_container_application_docker} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -611,29 +450,6 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Rsyslog} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RsyslogItemProvider rsyslogItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link extendedtosca.Rsyslog}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRsyslogAdapter() {
-		if (rsyslogItemProvider == null) {
-			rsyslogItemProvider = new RsyslogItemProvider(this);
-		}
-
-		return rsyslogItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_computewithattrlist} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -654,29 +470,6 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		}
 
 		return tosca_nodes_computewithattrlistItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_network_port} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Tosca_nodes_network_portItemProvider tosca_nodes_network_portItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_network_port}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTosca_nodes_network_portAdapter() {
-		if (tosca_nodes_network_portItemProvider == null) {
-			tosca_nodes_network_portItemProvider = new Tosca_nodes_network_portItemProvider(this);
-		}
-
-		return tosca_nodes_network_portItemProvider;
 	}
 
 	/**
@@ -749,29 +542,6 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_computewithcapwithattr} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Tosca_nodes_computewithcapwithattrItemProvider tosca_nodes_computewithcapwithattrItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_computewithcapwithattr}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTosca_nodes_computewithcapwithattrAdapter() {
-		if (tosca_nodes_computewithcapwithattrItemProvider == null) {
-			tosca_nodes_computewithcapwithattrItemProvider = new Tosca_nodes_computewithcapwithattrItemProvider(this);
-		}
-
-		return tosca_nodes_computewithcapwithattrItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_nodewithreq} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -792,6 +562,259 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		}
 
 		return tosca_nodes_nodewithreqItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_somenode2} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_nodes_somenode2ItemProvider tosca_nodes_somenode2ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_somenode2}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_nodes_somenode2Adapter() {
+		if (tosca_nodes_somenode2ItemProvider == null) {
+			tosca_nodes_somenode2ItemProvider = new Tosca_nodes_somenode2ItemProvider(this);
+		}
+
+		return tosca_nodes_somenode2ItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_database_mysql} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_nodes_database_mysqlItemProvider tosca_nodes_database_mysqlItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_database_mysql}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_nodes_database_mysqlAdapter() {
+		if (tosca_nodes_database_mysqlItemProvider == null) {
+			tosca_nodes_database_mysqlItemProvider = new Tosca_nodes_database_mysqlItemProvider(this);
+		}
+
+		return tosca_nodes_database_mysqlItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Example_queuingsubsystem} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Example_queuingsubsystemItemProvider example_queuingsubsystemItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Example_queuingsubsystem}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExample_queuingsubsystemAdapter() {
+		if (example_queuingsubsystemItemProvider == null) {
+			example_queuingsubsystemItemProvider = new Example_queuingsubsystemItemProvider(this);
+		}
+
+		return example_queuingsubsystemItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Example_transactionsubsystem} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Example_transactionsubsystemItemProvider example_transactionsubsystemItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Example_transactionsubsystem}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExample_transactionsubsystemAdapter() {
+		if (example_transactionsubsystemItemProvider == null) {
+			example_transactionsubsystemItemProvider = new Example_transactionsubsystemItemProvider(this);
+		}
+
+		return example_transactionsubsystemItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_softwarecomponent_elasticsearch} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_nodes_softwarecomponent_elasticsearchItemProvider tosca_nodes_softwarecomponent_elasticsearchItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_softwarecomponent_elasticsearch}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_nodes_softwarecomponent_elasticsearchAdapter() {
+		if (tosca_nodes_softwarecomponent_elasticsearchItemProvider == null) {
+			tosca_nodes_softwarecomponent_elasticsearchItemProvider = new Tosca_nodes_softwarecomponent_elasticsearchItemProvider(this);
+		}
+
+		return tosca_nodes_softwarecomponent_elasticsearchItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_databasewithlistparam} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_nodes_databasewithlistparamItemProvider tosca_nodes_databasewithlistparamItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_databasewithlistparam}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_nodes_databasewithlistparamAdapter() {
+		if (tosca_nodes_databasewithlistparamItemProvider == null) {
+			tosca_nodes_databasewithlistparamItemProvider = new Tosca_nodes_databasewithlistparamItemProvider(this);
+		}
+
+		return tosca_nodes_databasewithlistparamItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Example_someapp} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Example_someappItemProvider example_someappItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Example_someapp}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExample_someappAdapter() {
+		if (example_someappItemProvider == null) {
+			example_someappItemProvider = new Example_someappItemProvider(this);
+		}
+
+		return example_someappItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_nodewithcap} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_nodes_nodewithcapItemProvider tosca_nodes_nodewithcapItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_nodewithcap}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_nodes_nodewithcapAdapter() {
+		if (tosca_nodes_nodewithcapItemProvider == null) {
+			tosca_nodes_nodewithcapItemProvider = new Tosca_nodes_nodewithcapItemProvider(this);
+		}
+
+		return tosca_nodes_nodewithcapItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Rsyslog} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RsyslogItemProvider rsyslogItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Rsyslog}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRsyslogAdapter() {
+		if (rsyslogItemProvider == null) {
+			rsyslogItemProvider = new RsyslogItemProvider(this);
+		}
+
+		return rsyslogItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_network_port} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_nodes_network_portItemProvider tosca_nodes_network_portItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_network_port}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_nodes_network_portAdapter() {
+		if (tosca_nodes_network_portItemProvider == null) {
+			tosca_nodes_network_portItemProvider = new Tosca_nodes_network_portItemProvider(this);
+		}
+
+		return tosca_nodes_network_portItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_computewithcapwithattr} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_nodes_computewithcapwithattrItemProvider tosca_nodes_computewithcapwithattrItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_computewithcapwithattr}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_nodes_computewithcapwithattrAdapter() {
+		if (tosca_nodes_computewithcapwithattrItemProvider == null) {
+			tosca_nodes_computewithcapwithattrItemProvider = new Tosca_nodes_computewithcapwithattrItemProvider(this);
+		}
+
+		return tosca_nodes_computewithcapwithattrItemProvider;
 	}
 
 	/**
@@ -884,29 +907,6 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		}
 
 		return tosca_nodes_webserver_nodejsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_somenode2} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Tosca_nodes_somenode2ItemProvider tosca_nodes_somenode2ItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_somenode2}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTosca_nodes_somenode2Adapter() {
-		if (tosca_nodes_somenode2ItemProvider == null) {
-			tosca_nodes_somenode2ItemProvider = new Tosca_nodes_somenode2ItemProvider(this);
-		}
-
-		return tosca_nodes_somenode2ItemProvider;
 	}
 
 	/**

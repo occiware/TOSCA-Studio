@@ -83,7 +83,7 @@ public class Tosca_nodes_nodewithreqItemProvider extends Tosca_nodes_softwarecom
 			getString("_UI_Tosca_nodes_nodewithreq_type") :
 			getString("_UI_Tosca_nodes_nodewithreq_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

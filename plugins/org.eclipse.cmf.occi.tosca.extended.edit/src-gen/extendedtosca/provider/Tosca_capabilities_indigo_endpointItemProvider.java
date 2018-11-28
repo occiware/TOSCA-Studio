@@ -118,7 +118,7 @@ public class Tosca_capabilities_indigo_endpointItemProvider extends Tosca_capabi
 			getString("_UI_Tosca_capabilities_indigo_endpoint_type") :
 			getString("_UI_Tosca_capabilities_indigo_endpoint_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

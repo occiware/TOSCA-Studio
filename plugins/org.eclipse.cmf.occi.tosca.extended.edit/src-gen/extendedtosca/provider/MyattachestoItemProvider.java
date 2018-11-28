@@ -83,7 +83,7 @@ public class MyattachestoItemProvider extends Tosca_relationships_attachestoItem
 			getString("_UI_Myattachesto_type") :
 			getString("_UI_Myattachesto_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

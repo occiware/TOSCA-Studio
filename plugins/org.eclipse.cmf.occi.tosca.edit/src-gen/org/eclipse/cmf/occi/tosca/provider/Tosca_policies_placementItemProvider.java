@@ -82,7 +82,7 @@ public class Tosca_policies_placementItemProvider extends Tosca_policies_rootIte
 			getString("_UI_Tosca_policies_placement_type") :
 			getString("_UI_Tosca_policies_placement_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

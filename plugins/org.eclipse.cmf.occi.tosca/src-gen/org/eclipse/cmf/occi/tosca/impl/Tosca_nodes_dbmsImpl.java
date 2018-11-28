@@ -335,7 +335,7 @@ public class Tosca_nodes_dbmsImpl extends Tosca_nodes_softwarecomponentImpl impl
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (diskSize: ");
 		result.append(diskSize);
 		result.append(", port: ");

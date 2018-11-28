@@ -268,7 +268,7 @@ public class Tosca_nodes_webapplication_wordpressImpl extends Tosca_nodes_webapp
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (dbHost: ");
 		result.append(dbHost);
 		result.append(", adminPassword: ");

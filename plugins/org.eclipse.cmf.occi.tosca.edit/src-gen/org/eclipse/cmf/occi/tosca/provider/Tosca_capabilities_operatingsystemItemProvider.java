@@ -152,7 +152,7 @@ public class Tosca_capabilities_operatingsystemItemProvider extends Tosca_capabi
 			getString("_UI_Tosca_capabilities_operatingsystem_type") :
 			getString("_UI_Tosca_capabilities_operatingsystem_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -273,7 +273,7 @@ public class Example_queuingsubsystemItemProvider extends Tosca_nodes_rootItemPr
 			getString("_UI_Example_queuingsubsystem_type") :
 			getString("_UI_Example_queuingsubsystem_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

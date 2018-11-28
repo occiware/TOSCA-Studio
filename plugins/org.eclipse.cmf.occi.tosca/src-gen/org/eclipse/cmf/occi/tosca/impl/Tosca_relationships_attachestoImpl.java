@@ -274,7 +274,7 @@ public class Tosca_relationships_attachestoImpl extends Tosca_relationships_root
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (location: ");
 		result.append(location);
 		result.append(')');

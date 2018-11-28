@@ -129,7 +129,7 @@ public class Tosca_nodes_blockstorageItemProvider extends Tosca_nodes_rootItemPr
 			getString("_UI_Tosca_nodes_blockstorage_type") :
 			getString("_UI_Tosca_nodes_blockstorage_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -149,7 +149,7 @@ public class Tosca_capabilities_container_dockerItemProvider extends Tosca_capab
 			getString("_UI_Tosca_capabilities_container_docker_type") :
 			getString("_UI_Tosca_capabilities_container_docker_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

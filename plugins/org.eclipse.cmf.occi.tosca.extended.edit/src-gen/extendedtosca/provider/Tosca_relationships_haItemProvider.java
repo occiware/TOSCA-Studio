@@ -83,7 +83,7 @@ public class Tosca_relationships_haItemProvider extends Tosca_relationships_root
 			getString("_UI_Tosca_relationships_ha_type") :
 			getString("_UI_Tosca_relationships_ha_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

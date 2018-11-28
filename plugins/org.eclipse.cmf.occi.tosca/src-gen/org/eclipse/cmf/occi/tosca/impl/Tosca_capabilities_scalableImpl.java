@@ -266,7 +266,7 @@ public class Tosca_capabilities_scalableImpl extends Tosca_capabilities_rootImpl
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (minInstances: ");
 		result.append(minInstances);
 		result.append(", maxInstances: ");

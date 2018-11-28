@@ -273,7 +273,7 @@ public class Tosca_nodes_softwarecomponent_elasticsearchItemProvider extends Tos
 			getString("_UI_Tosca_nodes_softwarecomponent_elasticsearch_type") :
 			getString("_UI_Tosca_nodes_softwarecomponent_elasticsearch_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

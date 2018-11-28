@@ -567,7 +567,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link ToscaPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -581,7 +581,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		if (isInited) return (ToscaPackage)EPackage.Registry.INSTANCE.getEPackage(ToscaPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ToscaPackageImpl theToscaPackage = (ToscaPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ToscaPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ToscaPackageImpl());
+		Object registeredToscaPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		ToscaPackageImpl theToscaPackage = registeredToscaPackage instanceof ToscaPackageImpl ? (ToscaPackageImpl)registeredToscaPackage : new ToscaPackageImpl();
 
 		isInited = true;
 
@@ -599,7 +600,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
-			(theToscaPackage, 
+			(theToscaPackage,
 			 new EValidator.Descriptor() {
 				 public EValidator getEValidator() {
 					 return ToscaValidator.INSTANCE;
@@ -609,7 +610,6 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		// Mark meta-data to indicate it can't be changed
 		theToscaPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ToscaPackage.eNS_URI, theToscaPackage);
 		return theToscaPackage;
@@ -2728,101 +2728,101 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * @generated
 	 */
 	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
-		   });	
+		   });
 		addAnnotation
-		  (tosca_nodes_rootEClass, 
-		   source, 
+		  (tosca_nodes_rootEClass,
+		   source,
 		   new String[] {
-			 "constraints", "appliesConstraint"
-		   });	
+			   "constraints", "appliesConstraint"
+		   });
 		addAnnotation
-		  (tosca_nodes_webapplicationEClass, 
-		   source, 
+		  (tosca_nodes_webapplicationEClass,
+		   source,
 		   new String[] {
-			 "constraints", "appliesConstraint"
-		   });	
+			   "constraints", "appliesConstraint"
+		   });
 		addAnnotation
-		  (tosca_nodes_softwarecomponentEClass, 
-		   source, 
+		  (tosca_nodes_softwarecomponentEClass,
+		   source,
 		   new String[] {
-			 "constraints", "appliesConstraint"
-		   });	
+			   "constraints", "appliesConstraint"
+		   });
 		addAnnotation
-		  (tosca_nodes_dbmsEClass, 
-		   source, 
+		  (tosca_nodes_dbmsEClass,
+		   source,
 		   new String[] {
-			 "constraints", "SourceMustBeDatabase"
-		   });	
+			   "constraints", "SourceMustBeDatabase"
+		   });
 		addAnnotation
-		  (tosca_nodes_objectstorageEClass, 
-		   source, 
+		  (tosca_nodes_objectstorageEClass,
+		   source,
 		   new String[] {
-			 "constraints", "appliesConstraint"
-		   });	
+			   "constraints", "appliesConstraint"
+		   });
 		addAnnotation
-		  (tosca_nodes_computeEClass, 
-		   source, 
+		  (tosca_nodes_computeEClass,
+		   source,
 		   new String[] {
-			 "constraints", "appliesConstraint"
-		   });	
+			   "constraints", "appliesConstraint"
+		   });
 		addAnnotation
-		  (tosca_nodes_webserverEClass, 
-		   source, 
+		  (tosca_nodes_webserverEClass,
+		   source,
 		   new String[] {
-			 "constraints", "SourceMustBeWebApplication"
-		   });	
+			   "constraints", "SourceMustBeWebApplication"
+		   });
 		addAnnotation
-		  (tosca_nodes_databaseEClass, 
-		   source, 
+		  (tosca_nodes_databaseEClass,
+		   source,
 		   new String[] {
-			 "constraints", "appliesConstraint"
-		   });	
+			   "constraints", "appliesConstraint"
+		   });
 		addAnnotation
-		  (tosca_nodes_container_applicationEClass, 
-		   source, 
+		  (tosca_nodes_container_applicationEClass,
+		   source,
 		   new String[] {
-			 "constraints", "appliesConstraint"
-		   });	
+			   "constraints", "appliesConstraint"
+		   });
 		addAnnotation
-		  (tosca_nodes_blockstorageEClass, 
-		   source, 
+		  (tosca_nodes_blockstorageEClass,
+		   source,
 		   new String[] {
-			 "constraints", "appliesConstraint"
-		   });	
+			   "constraints", "appliesConstraint"
+		   });
 		addAnnotation
-		  (tosca_relationships_rootEClass, 
-		   source, 
+		  (tosca_relationships_rootEClass,
+		   source,
 		   new String[] {
-			 "constraints", "appliesConstraint"
-		   });	
+			   "constraints", "appliesConstraint"
+		   });
 		addAnnotation
-		  (tosca_relationships_routestoEClass, 
-		   source, 
+		  (tosca_relationships_routestoEClass,
+		   source,
 		   new String[] {
-			 "constraints", "SourceMustBeLoadBalancer"
-		   });	
+			   "constraints", "SourceMustBeLoadBalancer"
+		   });
 		addAnnotation
-		  (tosca_relationships_attachestoEClass, 
-		   source, 
+		  (tosca_relationships_attachestoEClass,
+		   source,
 		   new String[] {
-			 "constraints", "SourceMustBeComputeAndTargetMustBeBlockStorage"
-		   });	
+			   "constraints", "SourceMustBeComputeAndTargetMustBeBlockStorage"
+		   });
 		addAnnotation
-		  (tosca_relationships_hostedonEClass, 
-		   source, 
+		  (tosca_relationships_hostedonEClass,
+		   source,
 		   new String[] {
-			 "constraints", "SourceMustBeDatabaseAndTargetMustBeDBMS"
-		   });	
+			   "constraints", "SourceMustBeDatabaseAndTargetMustBeDBMS"
+		   });
 		addAnnotation
-		  (tosca_relationships_dependsonEClass, 
-		   source, 
+		  (tosca_relationships_dependsonEClass,
+		   source,
 		   new String[] {
-			 "constraints", "SourceMustBeNodeAndTargetMustBeNode"
+			   "constraints", "SourceMustBeNodeAndTargetMustBeNode"
 		   });
 	}
 
@@ -2833,68 +2833,68 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * @generated
 	 */
 	protected void createExtendedMetaDataAnnotations() {
-		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";	
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
 		addAnnotation
-		  (stringMinOneEDataType, 
-		   source, 
+		  (stringMinOneEDataType,
+		   source,
 		   new String[] {
-			 "minLength", "1"
-		   });	
+			   "minLength", "1"
+		   });
 		addAnnotation
-		  (integerMinOneEDataType, 
-		   source, 
+		  (integerMinOneEDataType,
+		   source,
 		   new String[] {
-			 "MinInclusive", "1"
-		   });	
+			   "minInclusive", "1"
+		   });
 		addAnnotation
-		  (integerMinZeroEDataType, 
-		   source, 
+		  (integerMinZeroEDataType,
+		   source,
 		   new String[] {
-			 "MinInclusive", "0"
-		   });	
+			   "minInclusive", "0"
+		   });
 		addAnnotation
-		  (versionEDataType, 
-		   source, 
+		  (versionEDataType,
+		   source,
 		   new String[] {
-			 "pattern", "((\\d+)((\\.\\d+)+)?)"
-		   });	
+			   "pattern", "((\\d+)((\\.\\d+)+)?)"
+		   });
 		addAnnotation
-		  (rangeEDataType, 
-		   source, 
+		  (rangeEDataType,
+		   source,
 		   new String[] {
-			 "MinInclusive", "1",
-			 "MaxInclusive", "65535"
-		   });	
+			   "minInclusive", "1",
+			   "maxInclusive", "65535"
+		   });
 		addAnnotation
-		  (toscadatatypesnetworkPortDefEDataType, 
-		   source, 
+		  (toscadatatypesnetworkPortDefEDataType,
+		   source,
 		   new String[] {
-			 "MinInclusive", "1",
-			 "MaxInclusive", "65535"
-		   });	
+			   "minInclusive", "1",
+			   "maxInclusive", "65535"
+		   });
 		addAnnotation
-		  (scalarFrequencyEDataType, 
-		   source, 
+		  (scalarFrequencyEDataType,
+		   source,
 		   new String[] {
-			 "MinInclusive", "0.1 GHz"
-		   });	
+			   "minInclusive", "0.1 GHz"
+		   });
 		addAnnotation
-		  (scalarSizeMinOneMBEDataType, 
-		   source, 
+		  (scalarSizeMinOneMBEDataType,
+		   source,
 		   new String[] {
-			 "MinInclusive", "1 MB"
-		   });	
+			   "minInclusive", "1 MB"
+		   });
 		addAnnotation
-		  (scalarSizeMinZeroGBEDataType, 
-		   source, 
+		  (scalarSizeMinZeroGBEDataType,
+		   source,
 		   new String[] {
-			 "MinInclusive", "0 GB"
-		   });	
+			   "minInclusive", "0 GB"
+		   });
 		addAnnotation
-		  (scalarSizeMinZeroMBEDataType, 
-		   source, 
+		  (scalarSizeMinZeroMBEDataType,
+		   source,
 		   new String[] {
-			 "MinInclusive", "0 MB"
+			   "minInclusive", "0 MB"
 		   });
 	}
 

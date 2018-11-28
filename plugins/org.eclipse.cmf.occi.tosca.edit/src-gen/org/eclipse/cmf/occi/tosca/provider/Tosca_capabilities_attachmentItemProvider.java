@@ -74,7 +74,7 @@ public class Tosca_capabilities_attachmentItemProvider extends Tosca_capabilitie
 	public String getText(Object object) {
 		return getString("_UI_Tosca_capabilities_attachment_type");
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

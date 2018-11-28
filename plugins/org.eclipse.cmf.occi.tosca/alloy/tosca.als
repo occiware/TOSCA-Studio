@@ -1,15 +1,15 @@
-// Generated at Mon Jan 01 19:26:26 CET 2018 from  by org.eclipse.cmf.occi.core.gen.alloy
+// Generated at Wed Nov 28 22:59:40 CET 2018 from  by org.eclipse.cmf.occi.core.gen.alloy
 
 // ======================================================================
 //
-// Static Semantics for OCCI Extension 'tosca'
+// Static Semantics for fclouds 'tosca'
 //
 // ======================================================================
 
 module tosca
 
 open util/boolean
-open OCCI
+open fclouds
 
 // ======================================================================
 //
@@ -24,7 +24,7 @@ open sla
 
 // ======================================================================
 //
-// OCCI extension 'tosca'
+// fclouds extension 'tosca'
 //
 // ======================================================================
 
@@ -51,7 +51,7 @@ one sig tosca_capabilities_root extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_capabilities_root
+    entities.Time in this/Tosca_capabilities_root
 }
 
 // ======================================================================
@@ -75,7 +75,7 @@ one sig tosca_capabilities_node extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_capabilities_node
+    entities.Time in this/Tosca_capabilities_node
 }
 
 // ======================================================================
@@ -99,7 +99,7 @@ one sig tosca_capabilities_endpoint extends Mixin {} {
     no applies
     attributes = tosca_capabilities_endpoint_port_name + tosca_capabilities_endpoint_protocol + tosca_capabilities_endpoint_port + tosca_capabilities_endpoint_initiator + tosca_capabilities_endpoint_network_name + tosca_capabilities_endpoint_secure + tosca_capabilities_endpoint_ports + tosca_capabilities_endpoint_url_path
     no actions
-    entities in Tosca_capabilities_endpoint
+    entities.Time in this/Tosca_capabilities_endpoint
 }
 
 //
@@ -112,7 +112,7 @@ one sig tosca_capabilities_endpoint_port_name extends Attribute {} {
     required = False
     no default
     description = "The optional name (or ID) of the network port this endpoint should be bound to."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -125,7 +125,7 @@ one sig tosca_capabilities_endpoint_protocol extends Attribute {} {
     required = False
     default = "tcp"
     description = "The name of the protocol (i.e., the protocol prefix) that the endpoint accepts (any OSI Layer 4-7 protocols) Examples: http, https, ftp, tcp, udp, etc."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -138,7 +138,7 @@ one sig tosca_capabilities_endpoint_port extends Attribute {} {
     required = False
     no default
     description = "The optional port of the endpoint."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -151,7 +151,7 @@ one sig tosca_capabilities_endpoint_initiator extends Attribute {} {
     required = False
     default = "source"
     description = "The optional indicator of the direction of the connection."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -164,7 +164,7 @@ one sig tosca_capabilities_endpoint_network_name extends Attribute {} {
     required = False
     default = "PRIVATE"
     description = "The optional name (or ID) of the network this endpoint should be bound to. network_name: PRIVATE | PUBLIC |<network_name> | <network_id>"
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -177,7 +177,7 @@ one sig tosca_capabilities_endpoint_secure extends Attribute {} {
     required = False
     default = "false"
     description = "Requests for the endpoint to be secure and use credentials supplied on the ConnectsTo relationship."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -190,7 +190,7 @@ one sig tosca_capabilities_endpoint_ports extends Attribute {} {
     required = False
     no default
     description = "The optional map of ports the Endpoint supports (if more than one)."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -203,7 +203,7 @@ one sig tosca_capabilities_endpoint_url_path extends Attribute {} {
     required = False
     no default
     description = "The optional URL path of the endpointâ€™s address if applicable for the protocol."
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -235,7 +235,7 @@ one sig tosca_capabilities_scalable extends Mixin {} {
     no applies
     attributes = tosca_capabilities_scalable_min_instances + tosca_capabilities_scalable_max_instances + tosca_capabilities_scalable_default_instances
     no actions
-    entities in Tosca_capabilities_scalable
+    entities.Time in this/Tosca_capabilities_scalable
 }
 
 //
@@ -248,7 +248,7 @@ one sig tosca_capabilities_scalable_min_instances extends Attribute {} {
     required = False
     default = "1"
     description = "This property is used to indicate the minimum number of instances that should be created for the associated TOSCA Node Template by a TOSCA orchestrator."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -261,7 +261,7 @@ one sig tosca_capabilities_scalable_max_instances extends Attribute {} {
     required = False
     default = "1"
     description = "This property is used to indicate the maximum number of instances that should be created for the associated TOSCA Node Template by a TOSCA orchestrator."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -274,7 +274,7 @@ one sig tosca_capabilities_scalable_default_instances extends Attribute {} {
     required = False
     default = "1"
     description = "An optional property that indicates the requested default number of instances that should be the starting number of instances a TOSCA orchestrator should attempt to allocate. Note: The value for this property MUST be in the range between the values set for â€˜min_instancesâ€™ and â€˜max_instancesâ€™ properties."
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -301,7 +301,7 @@ one sig tosca_capabilities_network_bindable extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_capabilities_network_bindable
+    entities.Time in this/Tosca_capabilities_network_bindable
 }
 
 // ======================================================================
@@ -325,7 +325,7 @@ one sig tosca_capabilities_container extends Mixin {} {
     no applies
     attributes = tosca_capabilities_container_disk_size
     no actions
-    entities in Tosca_capabilities_container
+    entities.Time in this/Tosca_capabilities_container
 }
 
 //
@@ -338,7 +338,7 @@ one sig tosca_capabilities_container_disk_size extends Attribute {} {
     required = False
     no default
     description = "Size of the local disk available to applications running on the Compute node (default unit is MB)."
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -363,7 +363,7 @@ one sig tosca_capabilities_endpoint_database extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_capabilities_endpoint_database
+    entities.Time in this/Tosca_capabilities_endpoint_database
 }
 
 // ======================================================================
@@ -387,7 +387,7 @@ one sig tosca_capabilities_endpoint_public extends Mixin {} {
     no applies
     attributes = tosca_capabilities_endpoint_public_floating + tosca_capabilities_endpoint_public_dns_name
     no actions
-    entities in Tosca_capabilities_endpoint_public
+    entities.Time in this/Tosca_capabilities_endpoint_public
 }
 
 //
@@ -400,7 +400,7 @@ one sig tosca_capabilities_endpoint_public_floating extends Attribute {} {
     required = False
     default = "false"
     description = "Indicates that the public address should be allocated from a pool of floating IPs that are associated with the network."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -413,7 +413,7 @@ one sig tosca_capabilities_endpoint_public_dns_name extends Attribute {} {
     required = False
     no default
     description = "The optional name to register with DNS"
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -439,7 +439,7 @@ one sig tosca_capabilities_endpoint_admin extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_capabilities_endpoint_admin
+    entities.Time in this/Tosca_capabilities_endpoint_admin
 }
 
 // ======================================================================
@@ -463,7 +463,7 @@ one sig tosca_capabilities_operatingsystem extends Mixin {} {
     no applies
     attributes = tosca_capabilities_operatingsystem_type + tosca_capabilities_operatingsystem_distribution + tosca_capabilities_operatingsystem_version
     no actions
-    entities in Tosca_capabilities_operatingsystem
+    entities.Time in this/Tosca_capabilities_operatingsystem
 }
 
 //
@@ -476,7 +476,7 @@ one sig tosca_capabilities_operatingsystem_type extends Attribute {} {
     required = False
     no default
     description = "The Operating System (OS) type. Examples of valid values include: linux, aix, mac, windows, etc."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -489,7 +489,7 @@ one sig tosca_capabilities_operatingsystem_distribution extends Attribute {} {
     required = False
     no default
     description = "The Operating System (OS) distribution. Examples of valid values for an â€œtypeâ€� of â€œLinuxâ€� would include:  debian, fedora, rhel and ubuntu."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -502,7 +502,7 @@ one sig tosca_capabilities_operatingsystem_version extends Attribute {} {
     required = False
     no default
     description = "The Operating System version."
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -529,7 +529,7 @@ one sig tosca_capabilities_attachment extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_capabilities_attachment
+    entities.Time in this/Tosca_capabilities_attachment
 }
 
 // ======================================================================
@@ -553,7 +553,7 @@ one sig tosca_nodes_root extends Mixin {} {
     applies = core/resource
     no attributes
     no actions
-    entities in Tosca_nodes_root
+    entities.Time in this/Tosca_nodes_root
 }
 
 // ======================================================================
@@ -577,7 +577,7 @@ one sig tosca_nodes_webapplication extends Mixin {} {
     applies = platform/component
     attributes = tosca_nodes_webapplication_context_root
     no actions
-    entities in Tosca_nodes_webapplication
+    entities.Time in this/Tosca_nodes_webapplication
 }
 
 //
@@ -590,7 +590,7 @@ one sig tosca_nodes_webapplication_context_root extends Attribute {} {
     required = False
     no default
     description = "The web applicationâ€™s context root which designates the applicationâ€™s URL path within the web server it is hosted on."
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -611,11 +611,11 @@ one sig tosca_nodes_softwarecomponent extends Mixin {} {
     term = "tosca_nodes_softwarecomponent"
     scheme = "http://org.occi/tosca#"
     title = "The TOSCA SoftwareComponent node represents a generic software component that can be managed and run by a TOSCA Compute Node Type."
-    depends = tosca_nodes_root + tosca_capabilities_container
+    depends = tosca_nodes_root
     applies = platform/component
     attributes = tosca_nodes_softwarecomponent_admin_credential + tosca_nodes_softwarecomponent_component_version
     no actions
-    entities in Tosca_nodes_softwarecomponent
+    entities.Time in this/Tosca_nodes_softwarecomponent
 }
 
 //
@@ -628,7 +628,7 @@ one sig tosca_nodes_softwarecomponent_admin_credential extends Attribute {} {
     required = False
     no default
     description = "The optional credential that can be used to authenticate to the software component."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -641,7 +641,7 @@ one sig tosca_nodes_softwarecomponent_component_version extends Attribute {} {
     required = False
     no default
     description = "The optional software componentâ€™s version."
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -667,7 +667,7 @@ one sig tosca_nodes_dbms extends Mixin {} {
     no applies
     attributes = tosca_nodes_dbms_port + tosca_nodes_dbms_root_password
     no actions
-    entities in Tosca_nodes_dbms
+    entities.Time in this/Tosca_nodes_dbms
 }
 
 //
@@ -680,7 +680,7 @@ one sig tosca_nodes_dbms_port extends Attribute {} {
     required = False
     no default
     description = "the port the DBMS service will listen to for data and requests"
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -693,7 +693,7 @@ one sig tosca_nodes_dbms_root_password extends Attribute {} {
     required = False
     no default
     description = "the optional root password for the DBMS service"
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -719,7 +719,7 @@ one sig tosca_nodes_objectstorage extends Mixin {} {
     applies = infrastructure/storage
     attributes = tosca_nodes_objectstorage_size + tosca_nodes_objectstorage_name
     no actions
-    entities in Tosca_nodes_objectstorage
+    entities.Time in this/Tosca_nodes_objectstorage
 }
 
 //
@@ -732,7 +732,7 @@ one sig tosca_nodes_objectstorage_size extends Attribute {} {
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -745,7 +745,7 @@ one sig tosca_nodes_objectstorage_name extends Attribute {} {
     required = True
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -771,7 +771,7 @@ one sig tosca_nodes_compute extends Mixin {} {
     applies = infrastructure/compute
     attributes = tosca_nodes_compute_private_address + tosca_nodes_compute_public_address + tosca_nodes_compute_networks
     no actions
-    entities in Tosca_nodes_compute
+    entities.Time in this/Tosca_nodes_compute
 }
 
 //
@@ -784,7 +784,7 @@ one sig tosca_nodes_compute_private_address extends Attribute {} {
     required = False
     no default
     description = "The primary private IP address assigned by the cloud provider that applications may use to access the Compute node."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -797,7 +797,7 @@ one sig tosca_nodes_compute_public_address extends Attribute {} {
     required = False
     no default
     description = "The primary public IP address assigned by the cloud provider that applications may use to access the Compute node."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -810,7 +810,7 @@ one sig tosca_nodes_compute_networks extends Attribute {} {
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -837,7 +837,7 @@ one sig tosca_nodes_loadbalancer extends Mixin {} {
     no applies
     attributes = tosca_nodes_loadbalancer_algorithm
     no actions
-    entities in Tosca_nodes_loadbalancer
+    entities.Time in this/Tosca_nodes_loadbalancer
 }
 
 //
@@ -850,7 +850,7 @@ one sig tosca_nodes_loadbalancer_algorithm extends Attribute {} {
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -875,7 +875,7 @@ one sig tosca_nodes_webserver extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_nodes_webserver
+    entities.Time in this/Tosca_nodes_webserver
 }
 
 // ======================================================================
@@ -899,7 +899,7 @@ one sig tosca_nodes_database extends Mixin {} {
     applies = platform/component
     attributes = tosca_nodes_database_password + tosca_nodes_database_name + tosca_nodes_database_user
     no actions
-    entities in Tosca_nodes_database
+    entities.Time in this/Tosca_nodes_database
 }
 
 //
@@ -912,7 +912,7 @@ one sig tosca_nodes_database_password extends Attribute {} {
     required = False
     no default
     description = "the optional password for the DB user account"
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -925,7 +925,7 @@ one sig tosca_nodes_database_name extends Attribute {} {
     required = True
     no default
     description = "the logical name of the database"
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -938,7 +938,7 @@ one sig tosca_nodes_database_user extends Attribute {} {
     required = False
     no default
     description = "the optional user account name for DB administration"
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -965,7 +965,7 @@ one sig tosca_nodes_container_application extends Mixin {} {
     applies = platform/component
     no attributes
     no actions
-    entities in Tosca_nodes_container_application
+    entities.Time in this/Tosca_nodes_container_application
 }
 
 // ======================================================================
@@ -989,7 +989,7 @@ one sig tosca_nodes_container_runtime extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_nodes_container_runtime
+    entities.Time in this/Tosca_nodes_container_runtime
 }
 
 // ======================================================================
@@ -1013,7 +1013,7 @@ one sig tosca_nodes_blockstorage extends Mixin {} {
     applies = infrastructure/storage
     attributes = tosca_nodes_blockstorage_volume_id + tosca_nodes_blockstorage_snapshot_id
     no actions
-    entities in Tosca_nodes_blockstorage
+    entities.Time in this/Tosca_nodes_blockstorage
 }
 
 //
@@ -1026,7 +1026,7 @@ one sig tosca_nodes_blockstorage_volume_id extends Attribute {} {
     required = False
     no default
     description = "ID of an existing volume (that is in the accessible scope of the requesting application)."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -1039,7 +1039,7 @@ one sig tosca_nodes_blockstorage_snapshot_id extends Attribute {} {
     required = False
     no default
     description = "Some identifier that represents an existing snapshot that should be used when creating the block storage (volume)."
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -1065,7 +1065,7 @@ one sig tosca_policies_root extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_policies_root
+    entities.Time in this/Tosca_policies_root
 }
 
 // ======================================================================
@@ -1089,7 +1089,7 @@ one sig tosca_policies_update extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_policies_update
+    entities.Time in this/Tosca_policies_update
 }
 
 // ======================================================================
@@ -1113,7 +1113,7 @@ one sig tosca_policies_placement extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_policies_placement
+    entities.Time in this/Tosca_policies_placement
 }
 
 // ======================================================================
@@ -1137,7 +1137,7 @@ one sig tosca_policies_scaling extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_policies_scaling
+    entities.Time in this/Tosca_policies_scaling
 }
 
 // ======================================================================
@@ -1161,7 +1161,7 @@ one sig tosca_policies_performance extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_policies_performance
+    entities.Time in this/Tosca_policies_performance
 }
 
 // ======================================================================
@@ -1185,7 +1185,7 @@ one sig tosca_groups_root extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_groups_root
+    entities.Time in this/Tosca_groups_root
 }
 
 // ======================================================================
@@ -1209,7 +1209,7 @@ one sig tosca_interfaces_root extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_interfaces_root
+    entities.Time in this/Tosca_interfaces_root
 }
 
 // ======================================================================
@@ -1233,7 +1233,7 @@ one sig tosca_interfaces_relationship_configure extends Mixin {} {
     no applies
     no attributes
     actions = tosca_interfaces_relationship_configure_pre_configure_source + tosca_interfaces_relationship_configure_pre_configure_target + tosca_interfaces_relationship_configure_post_configure_source + tosca_interfaces_relationship_configure_post_configure_target + tosca_interfaces_relationship_configure_remove_target + tosca_interfaces_relationship_configure_add_target + tosca_interfaces_relationship_configure_add_source + tosca_interfaces_relationship_configure_target_changed
-    entities in Tosca_interfaces_relationship_configure
+    entities.Time in this/Tosca_interfaces_relationship_configure
 }
 
 //
@@ -1345,7 +1345,7 @@ one sig tosca_interfaces_node_lifecycle_standard extends Mixin {} {
     no applies
     no attributes
     actions = tosca_interfaces_node_lifecycle_standard_create + tosca_interfaces_node_lifecycle_standard_configure + tosca_interfaces_node_lifecycle_standard_delete
-    entities in Tosca_interfaces_node_lifecycle_standard
+    entities.Time in this/Tosca_interfaces_node_lifecycle_standard
 }
 
 //
@@ -1402,7 +1402,7 @@ one sig tosca_relationships_root extends Mixin {} {
     applies = core/link
     attributes = tosca_relationships_root_tosca_name + tosca_relationships_root_state + tosca_relationships_root_tosca_id
     no actions
-    entities in Tosca_relationships_root
+    entities.Time in this/Tosca_relationships_root
 }
 
 //
@@ -1415,7 +1415,7 @@ one sig tosca_relationships_root_tosca_name extends Attribute {} {
     required = False
     no default
     description = "This attribute reflects the name of the Relationship Template as defined in the TOSCA service template. This name is not unique to the realized instance model of corresponding deployed application as each template in the model can result in one or more instances (e.g., scaled) when orchestrated to a provider environment."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -1428,7 +1428,7 @@ one sig tosca_relationships_root_state extends Attribute {} {
     required = False
     default = "initial"
     description = "The state of the relationship instance."
-    multiple_values = 
+    multiple_values = False
 }
 
 //
@@ -1441,7 +1441,7 @@ one sig tosca_relationships_root_tosca_id extends Attribute {} {
     required = False
     no default
     description = "A unique identifier of the realized instance of a Relationship Template that derives from any TOSCA normative type."
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -1468,7 +1468,7 @@ one sig tosca_relationships_connectsto extends Mixin {} {
     no applies
     attributes = tosca_relationships_connectsto_credential
     no actions
-    entities in Tosca_relationships_connectsto
+    entities.Time in this/Tosca_relationships_connectsto
 }
 
 //
@@ -1481,7 +1481,7 @@ one sig tosca_relationships_connectsto_credential extends Attribute {} {
     required = False
     no default
     description = "The security credential to use to present to the target endpoint to for either authentication or authorization purposes."
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -1506,7 +1506,7 @@ one sig tosca_relationships_routesto extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_relationships_routesto
+    entities.Time in this/Tosca_relationships_routesto
 }
 
 // ======================================================================
@@ -1530,7 +1530,7 @@ one sig tosca_relationships_attachesto extends Mixin {} {
     applies = infrastructure/storagelink
     attributes = tosca_relationships_attachesto_location
     no actions
-    entities in Tosca_relationships_attachesto
+    entities.Time in this/Tosca_relationships_attachesto
 }
 
 //
@@ -1543,7 +1543,7 @@ one sig tosca_relationships_attachesto_location extends Attribute {} {
     required = False
     no default
     no description
-    multiple_values = 
+    multiple_values = False
 }
 
 // ======================================================================
@@ -1568,7 +1568,7 @@ one sig tosca_relationships_hostedon extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_relationships_hostedon
+    entities.Time in this/Tosca_relationships_hostedon
 }
 
 // ======================================================================
@@ -1592,7 +1592,7 @@ one sig tosca_relationships_dependson extends Mixin {} {
     no applies
     no attributes
     no actions
-    entities in Tosca_relationships_dependson
+    entities.Time in this/Tosca_relationships_dependson
 }
 
 // ======================================================================
@@ -1847,4 +1847,46 @@ run Consistency {} for 10
 // ======================================================================
 
 run The_OCCI_Type_System {} for 0
+
+// ======================================================================
+// imported check
+// ======================================================================
+
+check GetAllCategoriesIsSafe for 10
+check GetAllCategoriesIsIdempotent for 10
+check GetAllCategoriesOnConfigurationWithoutExtensionsAndUserMixinsReturnsNoCategory for 10
+check GetAllCategoriesOnConfigurationWithoutExtensionsReturnsUserMixins for 10
+check GetAllCategoriesOnConfigurationWithoutUserMixinsReturnsAllExtensionsKindsAndMixins for 10
+check CreateResourceIsIdempotent for 10
+check CreateResourceImpliesResourceAddedToKind for 10
+check RetrieveResourceIsSafe for 10
+check RetrieveResourceIsIdempotent for 10
+check CreateResourceAndRetrieveResourceAreSequential for 10 //but exactly 1 Configuration, exactly 2 Resource, exactly 3 Time
+check UpdateResourceIsIdempotent for 10
+check DeleteResourceIsIdempotent for 10
+check DeleteResourceImpliesResourceRemovedFromConfiguration for 10
+check CreateResourceAndDeleteResourceAreReversible for 10
+check CreateLinkIsIdempotent for 10
+check CreateLinkImpliesLinkAddedToKind for 10
+check RetrieveLinkIsSafe for 10
+check RetrieveLinkIsIdempotent for 10
+check CreateLinkAndRetrieveLinkAreSequential for 10
+check DeleteLinkIsIdempotent for 10
+check DeleteLinkImpliesLinkRemovedFromConfiguration for 10
+check CreateLinkAndDeleteLinkAreReversible for 10
+check UpdateLinkIsIdempotent for 10
+check AddUserMixinDoesNotModifyConfigurationExtensionsAndResources for 10
+check AddUserMixinCanNotAddAlreadyExistingMixin for 10
+check AddUserMixinDoesTheWork for 10
+check RemoveUserMixinDoesNotModifyConfigurationExtensionsAndResources for 10
+check RemoveUserMixinCanNotRemoveNotExistingMixin for 10
+check RemoveUserMixinDoesTheWork for 10
+check AddUserMixinAndRemoveUserMixinAreReversibleOperations_v2 for 10
+check AssociateMixinToResourceIsIdempotent for 10
+check DissociateMixinFromResourceIsIdempotent for 10
+check AssociateMixinToResourceAndDissociateMixinFromResourceAreReversible for 10
+check RetrieveCollectionIsSafe for 10
+check RetrieveCollectionOnConfigurationWithoutExtensionsAndUserMixinsReturnsNoCategory for 10
+check RetrieveCollectionOnConfigurationWithoutExtensionsReturnsUserMixins for 10
+check RetrieveCollectionOnConfigurationWithoutUserMixinsReturnsAllExtensionsKindsAndMixins for 10
 

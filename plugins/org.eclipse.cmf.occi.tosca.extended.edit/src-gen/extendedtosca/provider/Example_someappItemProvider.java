@@ -273,7 +273,7 @@ public class Example_someappItemProvider extends Tosca_nodes_rootItemProvider {
 			getString("_UI_Example_someapp_type") :
 			getString("_UI_Example_someapp_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

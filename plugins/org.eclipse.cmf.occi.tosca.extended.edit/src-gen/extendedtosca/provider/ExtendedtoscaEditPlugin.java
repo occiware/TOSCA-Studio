@@ -15,7 +15,9 @@ package extendedtosca.provider;
 import org.eclipse.cmf.occi.core.provider.OCCIEditPlugin;
 
 import org.eclipse.cmf.occi.infrastructure.provider.InfrastructureEditPlugin;
+
 import org.eclipse.cmf.occi.platform.provider.PlatformEditPlugin;
+
 import org.eclipse.cmf.occi.sla.provider.SlaEditPlugin;
 
 import org.eclipse.cmf.occi.tosca.provider.ToscaEditPlugin;

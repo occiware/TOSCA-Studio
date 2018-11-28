@@ -273,7 +273,7 @@ public class Example_databasesubsystemItemProvider extends Tosca_nodes_rootItemP
 			getString("_UI_Example_databasesubsystem_type") :
 			getString("_UI_Example_databasesubsystem_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

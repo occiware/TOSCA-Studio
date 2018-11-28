@@ -79,7 +79,7 @@ public class Tosca_relationships_routestoItemProvider extends Tosca_relationship
 			getString("_UI_Tosca_relationships_routesto_type") :
 			getString("_UI_Tosca_relationships_routesto_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

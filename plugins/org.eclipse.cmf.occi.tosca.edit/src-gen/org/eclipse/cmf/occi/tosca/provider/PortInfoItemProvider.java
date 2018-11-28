@@ -223,7 +223,7 @@ public class PortInfoItemProvider
 			getString("_UI_PortInfo_type") :
 			getString("_UI_PortInfo_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

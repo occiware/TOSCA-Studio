@@ -214,7 +214,7 @@ public class Tosca_capabilities_endpoint_publicImpl extends Tosca_capabilities_e
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (floating: ");
 		result.append(floating);
 		result.append(", dnsName: ");

@@ -83,7 +83,7 @@ public class Tosca_nodes_dbms_mysqlItemProvider extends Tosca_nodes_dbmsItemProv
 			getString("_UI_Tosca_nodes_dbms_mysql_type") :
 			getString("_UI_Tosca_nodes_dbms_mysql_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

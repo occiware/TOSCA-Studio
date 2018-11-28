@@ -110,7 +110,7 @@ public class Tosca_nodes_webapplication_paypalpizzastoreItemProvider extends Tos
 			getString("_UI_Tosca_nodes_webapplication_paypalpizzastore_type") :
 			getString("_UI_Tosca_nodes_webapplication_paypalpizzastore_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

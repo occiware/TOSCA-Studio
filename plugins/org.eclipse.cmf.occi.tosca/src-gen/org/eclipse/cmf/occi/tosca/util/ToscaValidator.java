@@ -1330,7 +1330,29 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateintegerMinOne(Integer integerMinOne, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
+		boolean result = validateintegerMinOne_Min(integerMinOne, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validateintegerMinOne_Min
+	 */
+	public static final Integer INTEGER_MIN_ONE__MIN__VALUE = new Integer(1);
+
+	/**
+	 * Validates the Min constraint of '<em>integer Min One</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateintegerMinOne_Min(Integer integerMinOne, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = integerMinOne.compareTo(INTEGER_MIN_ONE__MIN__VALUE) >= 0;
+		if (!result && diagnostics != null)
+			reportMinViolation(ToscaPackage.Literals.INTEGER_MIN_ONE, integerMinOne, INTEGER_MIN_ONE__MIN__VALUE, true, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -1339,7 +1361,29 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateintegerMinZero(Integer integerMinZero, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
+		boolean result = validateintegerMinZero_Min(integerMinZero, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validateintegerMinZero_Min
+	 */
+	public static final Integer INTEGER_MIN_ZERO__MIN__VALUE = new Integer(0);
+
+	/**
+	 * Validates the Min constraint of '<em>integer Min Zero</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateintegerMinZero_Min(Integer integerMinZero, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = integerMinZero.compareTo(INTEGER_MIN_ZERO__MIN__VALUE) >= 0;
+		if (!result && diagnostics != null)
+			reportMinViolation(ToscaPackage.Literals.INTEGER_MIN_ZERO, integerMinZero, INTEGER_MIN_ZERO__MIN__VALUE, true, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -1408,7 +1452,51 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validaterange(Short range, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
+		boolean result = validaterange_Min(range, diagnostics, context);
+		if (result || diagnostics != null) result &= validaterange_Max(range, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validaterange_Min
+	 */
+	public static final Short RANGE__MIN__VALUE = new Short((short)1);
+
+	/**
+	 * Validates the Min constraint of '<em>range</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validaterange_Min(Short range, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = range.compareTo(RANGE__MIN__VALUE) >= 0;
+		if (!result && diagnostics != null)
+			reportMinViolation(ToscaPackage.Literals.RANGE, range, RANGE__MIN__VALUE, true, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validaterange_Max
+	 */
+	public static final Short RANGE__MAX__VALUE = ;
+
+	/**
+	 * Validates the Max constraint of '<em>range</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validaterange_Max(Short range, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = range.compareTo(RANGE__MAX__VALUE) <= 0;
+		if (!result && diagnostics != null)
+			reportMaxViolation(ToscaPackage.Literals.RANGE, range, RANGE__MAX__VALUE, true, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -1417,7 +1505,51 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validatetoscadatatypesnetworkPortDef(Short toscadatatypesnetworkPortDef, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
+		boolean result = validatetoscadatatypesnetworkPortDef_Min(toscadatatypesnetworkPortDef, diagnostics, context);
+		if (result || diagnostics != null) result &= validatetoscadatatypesnetworkPortDef_Max(toscadatatypesnetworkPortDef, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validatetoscadatatypesnetworkPortDef_Min
+	 */
+	public static final Short TOSCADATATYPESNETWORK_PORT_DEF__MIN__VALUE = new Short((short)1);
+
+	/**
+	 * Validates the Min constraint of '<em>toscadatatypesnetwork Port Def</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatetoscadatatypesnetworkPortDef_Min(Short toscadatatypesnetworkPortDef, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = toscadatatypesnetworkPortDef.compareTo(TOSCADATATYPESNETWORK_PORT_DEF__MIN__VALUE) >= 0;
+		if (!result && diagnostics != null)
+			reportMinViolation(ToscaPackage.Literals.TOSCADATATYPESNETWORK_PORT_DEF, toscadatatypesnetworkPortDef, TOSCADATATYPESNETWORK_PORT_DEF__MIN__VALUE, true, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validatetoscadatatypesnetworkPortDef_Max
+	 */
+	public static final Short TOSCADATATYPESNETWORK_PORT_DEF__MAX__VALUE = ;
+
+	/**
+	 * Validates the Max constraint of '<em>toscadatatypesnetwork Port Def</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatetoscadatatypesnetworkPortDef_Max(Short toscadatatypesnetworkPortDef, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = toscadatatypesnetworkPortDef.compareTo(TOSCADATATYPESNETWORK_PORT_DEF__MAX__VALUE) <= 0;
+		if (!result && diagnostics != null)
+			reportMaxViolation(ToscaPackage.Literals.TOSCADATATYPESNETWORK_PORT_DEF, toscadatatypesnetworkPortDef, TOSCADATATYPESNETWORK_PORT_DEF__MAX__VALUE, true, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -1426,7 +1558,29 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validatescalarFrequency(Double scalarFrequency, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
+		boolean result = validatescalarFrequency_Min(scalarFrequency, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validatescalarFrequency_Min
+	 */
+	public static final Double SCALAR_FREQUENCY__MIN__VALUE = ;
+
+	/**
+	 * Validates the Min constraint of '<em>scalar Frequency</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatescalarFrequency_Min(Double scalarFrequency, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = scalarFrequency.compareTo(SCALAR_FREQUENCY__MIN__VALUE) >= 0;
+		if (!result && diagnostics != null)
+			reportMinViolation(ToscaPackage.Literals.SCALAR_FREQUENCY, scalarFrequency, SCALAR_FREQUENCY__MIN__VALUE, true, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -1435,7 +1589,29 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validatescalarSizeMinOneMB(Integer scalarSizeMinOneMB, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
+		boolean result = validatescalarSizeMinOneMB_Min(scalarSizeMinOneMB, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validatescalarSizeMinOneMB_Min
+	 */
+	public static final Integer SCALAR_SIZE_MIN_ONE_MB__MIN__VALUE = ;
+
+	/**
+	 * Validates the Min constraint of '<em>scalar Size Min One MB</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatescalarSizeMinOneMB_Min(Integer scalarSizeMinOneMB, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = scalarSizeMinOneMB.compareTo(SCALAR_SIZE_MIN_ONE_MB__MIN__VALUE) >= 0;
+		if (!result && diagnostics != null)
+			reportMinViolation(ToscaPackage.Literals.SCALAR_SIZE_MIN_ONE_MB, scalarSizeMinOneMB, SCALAR_SIZE_MIN_ONE_MB__MIN__VALUE, true, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -1444,7 +1620,29 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validatescalarSizeMinZeroGB(Integer scalarSizeMinZeroGB, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
+		boolean result = validatescalarSizeMinZeroGB_Min(scalarSizeMinZeroGB, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validatescalarSizeMinZeroGB_Min
+	 */
+	public static final Integer SCALAR_SIZE_MIN_ZERO_GB__MIN__VALUE = ;
+
+	/**
+	 * Validates the Min constraint of '<em>scalar Size Min Zero GB</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatescalarSizeMinZeroGB_Min(Integer scalarSizeMinZeroGB, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = scalarSizeMinZeroGB.compareTo(SCALAR_SIZE_MIN_ZERO_GB__MIN__VALUE) >= 0;
+		if (!result && diagnostics != null)
+			reportMinViolation(ToscaPackage.Literals.SCALAR_SIZE_MIN_ZERO_GB, scalarSizeMinZeroGB, SCALAR_SIZE_MIN_ZERO_GB__MIN__VALUE, true, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -1453,7 +1651,29 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validatescalarSizeMinZeroMB(Integer scalarSizeMinZeroMB, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
+		boolean result = validatescalarSizeMinZeroMB_Min(scalarSizeMinZeroMB, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validatescalarSizeMinZeroMB_Min
+	 */
+	public static final Integer SCALAR_SIZE_MIN_ZERO_MB__MIN__VALUE = ;
+
+	/**
+	 * Validates the Min constraint of '<em>scalar Size Min Zero MB</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatescalarSizeMinZeroMB_Min(Integer scalarSizeMinZeroMB, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = scalarSizeMinZeroMB.compareTo(SCALAR_SIZE_MIN_ZERO_MB__MIN__VALUE) >= 0;
+		if (!result && diagnostics != null)
+			reportMinViolation(ToscaPackage.Literals.SCALAR_SIZE_MIN_ZERO_MB, scalarSizeMinZeroMB, SCALAR_SIZE_MIN_ZERO_MB__MIN__VALUE, true, diagnostics, context);
+		return result;
 	}
 
 	/**

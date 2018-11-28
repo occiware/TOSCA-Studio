@@ -849,7 +849,7 @@ public class Tosca_nodes_databaseImpl extends Tosca_nodes_rootImpl implements To
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (portName: ");
 		result.append(portName);
 		result.append(", protocol: ");

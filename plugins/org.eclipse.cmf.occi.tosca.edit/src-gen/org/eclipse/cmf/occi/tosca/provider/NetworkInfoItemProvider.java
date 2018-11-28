@@ -177,7 +177,7 @@ public class NetworkInfoItemProvider
 			getString("_UI_NetworkInfo_type") :
 			getString("_UI_NetworkInfo_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -79,7 +79,7 @@ public class Tosca_relationships_dependsonItemProvider extends Tosca_relationshi
 			getString("_UI_Tosca_relationships_dependson_type") :
 			getString("_UI_Tosca_relationships_dependson_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

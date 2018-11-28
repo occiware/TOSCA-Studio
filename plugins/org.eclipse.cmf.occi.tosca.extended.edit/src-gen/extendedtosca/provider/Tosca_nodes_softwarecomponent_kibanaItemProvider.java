@@ -83,7 +83,7 @@ public class Tosca_nodes_softwarecomponent_kibanaItemProvider extends Tosca_node
 			getString("_UI_Tosca_nodes_softwarecomponent_kibana_type") :
 			getString("_UI_Tosca_nodes_softwarecomponent_kibana_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

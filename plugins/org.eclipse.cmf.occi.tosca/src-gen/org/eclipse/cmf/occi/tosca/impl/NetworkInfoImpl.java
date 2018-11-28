@@ -296,7 +296,7 @@ public class NetworkInfoImpl extends EObjectImpl implements NetworkInfo {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (networkid: ");
 		result.append(networkid);
 		result.append(", networkname: ");

@@ -83,7 +83,7 @@ public class Tosca_nodes_softwarecomponent_collectdItemProvider extends Tosca_no
 			getString("_UI_Tosca_nodes_softwarecomponent_collectd_type") :
 			getString("_UI_Tosca_nodes_softwarecomponent_collectd_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

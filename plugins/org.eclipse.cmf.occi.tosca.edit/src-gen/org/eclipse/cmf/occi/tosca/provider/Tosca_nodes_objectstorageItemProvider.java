@@ -313,7 +313,7 @@ public class Tosca_nodes_objectstorageItemProvider extends Tosca_nodes_rootItemP
 			getString("_UI_Tosca_nodes_objectstorage_type") :
 			getString("_UI_Tosca_nodes_objectstorage_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

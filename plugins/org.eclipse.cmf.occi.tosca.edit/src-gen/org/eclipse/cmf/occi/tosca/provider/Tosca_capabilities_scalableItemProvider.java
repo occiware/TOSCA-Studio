@@ -153,7 +153,7 @@ public class Tosca_capabilities_scalableItemProvider extends Tosca_capabilities_
 			getString("_UI_Tosca_capabilities_scalable_type") :
 			getString("_UI_Tosca_capabilities_scalable_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

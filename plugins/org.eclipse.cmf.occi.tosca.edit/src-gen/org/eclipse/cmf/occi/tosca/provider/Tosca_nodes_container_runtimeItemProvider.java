@@ -175,7 +175,7 @@ public class Tosca_nodes_container_runtimeItemProvider extends Tosca_nodes_softw
 			getString("_UI_Tosca_nodes_container_runtime_type") :
 			getString("_UI_Tosca_nodes_container_runtime_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

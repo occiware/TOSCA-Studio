@@ -156,7 +156,7 @@ public class Tosca_nodes_webapplication_wordpressItemProvider extends Tosca_node
 			getString("_UI_Tosca_nodes_webapplication_wordpress_type") :
 			getString("_UI_Tosca_nodes_webapplication_wordpress_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -17,7 +17,7 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated extendedtosca -->
+      <!-- @generated extendedTosca -->
       <factory
             uri="http://org.occi/extendedTosca/ecore"
             class="extendedtosca.provider.ExtendedtoscaItemProviderAdapterFactory"

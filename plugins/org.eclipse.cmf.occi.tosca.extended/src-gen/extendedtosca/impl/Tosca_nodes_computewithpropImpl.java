@@ -164,7 +164,7 @@ public class Tosca_nodes_computewithpropImpl extends Tosca_nodes_computeImpl imp
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (test: ");
 		result.append(test);
 		result.append(')');

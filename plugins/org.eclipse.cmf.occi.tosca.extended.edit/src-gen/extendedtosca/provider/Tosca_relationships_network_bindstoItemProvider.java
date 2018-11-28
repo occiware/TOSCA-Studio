@@ -83,7 +83,7 @@ public class Tosca_relationships_network_bindstoItemProvider extends Tosca_relat
 			getString("_UI_Tosca_relationships_network_bindsto_type") :
 			getString("_UI_Tosca_relationships_network_bindsto_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

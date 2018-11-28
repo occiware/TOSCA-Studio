@@ -118,7 +118,7 @@ public class Tosca_nodes_databasewithlistparamItemProvider extends Tosca_nodes_d
 			getString("_UI_Tosca_nodes_databasewithlistparam_type") :
 			getString("_UI_Tosca_nodes_databasewithlistparam_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

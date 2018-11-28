@@ -336,7 +336,7 @@ public class Tosca_nodes_loadbalancerItemProvider extends Tosca_nodes_rootItemPr
 			getString("_UI_Tosca_nodes_loadbalancer_type") :
 			getString("_UI_Tosca_nodes_loadbalancer_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

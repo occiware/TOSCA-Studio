@@ -74,7 +74,7 @@ public class Tosca_interfaces_node_lifecycle_standardItemProvider extends Tosca_
 	public String getText(Object object) {
 		return getString("_UI_Tosca_interfaces_node_lifecycle_standard_type");
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

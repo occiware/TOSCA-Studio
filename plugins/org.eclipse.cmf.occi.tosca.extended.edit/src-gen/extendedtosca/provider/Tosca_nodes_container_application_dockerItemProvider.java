@@ -78,7 +78,7 @@ public class Tosca_nodes_container_application_dockerItemProvider extends Tosca_
 	public String getText(Object object) {
 		return getString("_UI_Tosca_nodes_container_application_docker_type");
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

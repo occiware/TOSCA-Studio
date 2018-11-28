@@ -336,7 +336,7 @@ public class Tosca_nodes_databaseItemProvider extends Tosca_nodes_rootItemProvid
 			getString("_UI_Tosca_nodes_database_type") :
 			getString("_UI_Tosca_nodes_database_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

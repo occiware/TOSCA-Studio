@@ -319,7 +319,7 @@ public class Example_transactionsubsystemItemProvider extends Tosca_nodes_rootIt
 			getString("_UI_Example_transactionsubsystem_type") :
 			getString("_UI_Example_transactionsubsystem_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

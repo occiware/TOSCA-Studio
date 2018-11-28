@@ -83,7 +83,7 @@ public class Tosca_nodes_hacomputeItemProvider extends Tosca_nodes_computeItemPr
 			getString("_UI_Tosca_nodes_hacompute_type") :
 			getString("_UI_Tosca_nodes_hacompute_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

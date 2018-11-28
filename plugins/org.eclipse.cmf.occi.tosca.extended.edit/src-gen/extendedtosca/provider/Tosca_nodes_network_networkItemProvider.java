@@ -317,7 +317,7 @@ public class Tosca_nodes_network_networkItemProvider extends Tosca_nodes_rootIte
 			getString("_UI_Tosca_nodes_network_network_type") :
 			getString("_UI_Tosca_nodes_network_network_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

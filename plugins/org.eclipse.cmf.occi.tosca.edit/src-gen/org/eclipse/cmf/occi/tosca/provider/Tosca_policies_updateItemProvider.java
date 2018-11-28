@@ -82,7 +82,7 @@ public class Tosca_policies_updateItemProvider extends Tosca_policies_rootItemPr
 			getString("_UI_Tosca_policies_update_type") :
 			getString("_UI_Tosca_policies_update_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

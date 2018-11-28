@@ -7,11 +7,11 @@
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
   </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
-    <details key="occi" value="http://schemas.ogf.org/occi/core/ecore"/>
-    <details key="infrastructure" value="http://schemas.ogf.org/occi/infrastructure/ecore"/>
-    <details key="platform" value="http://schemas.ogf.org/occi/platform/ecore"/>
-    <details key="sla" value="http://schemas.ogf.org/occi/sla/ecore"/>
-    <details key="tosca" value="http://org.occi/tosca/ecore"/>
+    <details key="occi" value="platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#/"/>
+    <details key="infrastructure" value="platform:/plugin/org.eclipse.cmf.occi.infrastructure/model/Infrastructure.ecore#/"/>
+    <details key="platform" value="platform:/plugin/org.eclipse.cmf.occi.platform/model/Platform.ecore#/"/>
+    <details key="sla" value="platform:/plugin/org.eclipse.cmf.occi.sla/model/sla.ecore#/"/>
+    <details key="tosca" value="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#/"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="arrayCredential">
     <eStructuralFeatures xsi:type="ecore:EReference" name="arraycredentialValues"

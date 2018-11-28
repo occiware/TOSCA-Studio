@@ -83,7 +83,7 @@ public class Tosca_nodes_softwarecomponent_rsyslogItemProvider extends Tosca_nod
 			getString("_UI_Tosca_nodes_softwarecomponent_rsyslog_type") :
 			getString("_UI_Tosca_nodes_softwarecomponent_rsyslog_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

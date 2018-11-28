@@ -82,7 +82,7 @@ public class Tosca_policies_performanceItemProvider extends Tosca_policies_rootI
 			getString("_UI_Tosca_policies_performance_type") :
 			getString("_UI_Tosca_policies_performance_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

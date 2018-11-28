@@ -202,7 +202,7 @@ public class Tosca_nodes_network_portItemProvider extends Tosca_nodes_rootItemPr
 			getString("_UI_Tosca_nodes_network_port_type") :
 			getString("_UI_Tosca_nodes_network_port_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

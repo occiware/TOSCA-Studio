@@ -74,7 +74,7 @@ public class Tosca_nodes_container_applicationItemProvider extends Tosca_nodes_r
 	public String getText(Object object) {
 		return getString("_UI_Tosca_nodes_container_application_type");
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

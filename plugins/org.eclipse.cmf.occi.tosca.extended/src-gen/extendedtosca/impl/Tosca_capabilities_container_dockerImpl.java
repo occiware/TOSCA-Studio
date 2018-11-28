@@ -446,7 +446,7 @@ public class Tosca_capabilities_container_dockerImpl extends Tosca_capabilities_
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (publishAll: ");
 		result.append(publishAll);
 		result.append(')');

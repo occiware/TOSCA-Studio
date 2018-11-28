@@ -290,7 +290,7 @@ public class Tosca_nodes_webapplicationItemProvider extends Tosca_nodes_rootItem
 			getString("_UI_Tosca_nodes_webapplication_type") :
 			getString("_UI_Tosca_nodes_webapplication_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

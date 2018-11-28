@@ -78,7 +78,7 @@ public class Tosca_capabilities_rootItemProvider extends MixinBaseItemProvider {
 	public String getText(Object object) {
 		return getString("_UI_Tosca_capabilities_root_type");
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

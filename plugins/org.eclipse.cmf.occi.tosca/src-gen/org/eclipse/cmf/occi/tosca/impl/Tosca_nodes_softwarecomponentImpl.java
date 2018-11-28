@@ -341,7 +341,7 @@ public class Tosca_nodes_softwarecomponentImpl extends Tosca_nodes_rootImpl impl
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (componentVersion: ");
 		result.append(componentVersion);
 		result.append(')');

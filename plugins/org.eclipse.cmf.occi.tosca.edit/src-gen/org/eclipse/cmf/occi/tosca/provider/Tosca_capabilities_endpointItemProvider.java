@@ -267,7 +267,7 @@ public class Tosca_capabilities_endpointItemProvider extends Tosca_capabilities_
 			getString("_UI_Tosca_capabilities_endpoint_type") :
 			getString("_UI_Tosca_capabilities_endpoint_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

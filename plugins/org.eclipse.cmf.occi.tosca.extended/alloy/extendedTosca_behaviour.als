@@ -1,15 +1,15 @@
-// Generated at Mon Jan 01 19:29:44 CET 2018 from  by org.eclipse.cmf.occi.core.gen.alloy
+// Generated at Wed Nov 28 23:01:18 CET 2018 from  by org.eclipse.cmf.occi.core.gen.alloy
 
 // ======================================================================
 //
-// Dynamic Semantics for OCCI Extensions 'extendedTosca'
+// Dynamic Semantics for fclouds 'extendedTosca'
 //
 // ======================================================================
 
 module extendedTosca_behaviour
 
 open util/boolean
-open OCCI
+open fclouds
 open extendedTosca
 
 //
@@ -19,7 +19,7 @@ open core
 open infrastructure
 open platform
 open sla
-open 
+open tosca
 
 // ======================================================================
 //

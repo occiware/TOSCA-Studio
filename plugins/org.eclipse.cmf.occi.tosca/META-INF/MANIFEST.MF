@@ -2,6 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.cmf.occi.tosca;singleton:=true
+Automatic-Module-Name: org.eclipse.cmf.occi.tosca
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -10,7 +11,6 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.cmf.occi.tosca,
  org.eclipse.cmf.occi.tosca.impl,
  org.eclipse.cmf.occi.tosca.util
-Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.ocl.pivot;visibility:=reexport,
@@ -18,6 +18,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.cmf.occi.infrastructure;visibility:=reexport,
  org.eclipse.cmf.occi.platform;visibility:=reexport,
  org.eclipse.cmf.occi.sla;visibility:=reexport,
- org.eclipse.cmf.occi.core;visibility:=reexport,
- org.eclipse.cmf.occi.core.ui,
- org.eclipse.cmf.occi.core.gen.emf.ui
+ org.eclipse.cmf.occi.core;visibility:=reexport
+Bundle-ActivationPolicy: lazy

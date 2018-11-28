@@ -110,7 +110,7 @@ public class Tosca_nodes_computewithpropItemProvider extends Tosca_nodes_compute
 			getString("_UI_Tosca_nodes_computewithprop_type") :
 			getString("_UI_Tosca_nodes_computewithprop_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

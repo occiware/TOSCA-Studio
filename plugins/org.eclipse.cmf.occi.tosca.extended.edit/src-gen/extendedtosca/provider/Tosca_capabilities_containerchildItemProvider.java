@@ -84,7 +84,7 @@ public class Tosca_capabilities_containerchildItemProvider extends Tosca_capabil
 			getString("_UI_Tosca_capabilities_containerchild_type") :
 			getString("_UI_Tosca_capabilities_containerchild_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
