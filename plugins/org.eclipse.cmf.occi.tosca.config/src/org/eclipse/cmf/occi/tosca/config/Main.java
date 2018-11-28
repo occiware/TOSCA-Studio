@@ -141,7 +141,11 @@ public class Main extends AbstractHandler {
 			if (entities.size() > 1) {
 				System.out.println("More than one resource for " + node.getMixin().getName());
 			}
-			entities.get(0).getParts().add(node);
+			if (entities.isEmpty()) {
+				System.err.println("Should not happen! No applies found for " + node.getMixin().getName());
+			} else {
+				entities.get(0).getParts().add(node);
+			}
 			for (Entity entity : entities) {
 				if (entity instanceof Resource
 						&& (((Resource) entity).getKind().getTerm().equals("resource") && !entity.getParts().isEmpty()

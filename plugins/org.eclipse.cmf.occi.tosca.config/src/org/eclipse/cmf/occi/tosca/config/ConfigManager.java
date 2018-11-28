@@ -9,6 +9,8 @@ import org.eclipse.cmf.occi.core.Configuration;
 import org.eclipse.cmf.occi.core.Kind;
 import org.eclipse.cmf.occi.core.OCCIFactory;
 import org.eclipse.cmf.occi.core.util.OcciHelper;
+import org.eclipse.cmf.occi.core.util.OcciRegistry;
+import org.eclipse.cmf.occi.tosca.ToscaPackage;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -28,13 +30,24 @@ public class ConfigManager {
 		URI modelURI = URI
 				.createURI("file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.examples/" + name + ".extendedTosca");
 		resource = resSet.createResource(modelURI);
+		
+		OcciRegistry.getInstance().registerExtension(
+				"http://org.occi/tosca#", 
+				"file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca/model/tosca.occie"
+		);
+		
+		OcciRegistry.getInstance().registerExtension(
+				"http://org.occi/extendedTosca#", 
+				"file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.extended/model/extendedTosca.occie"
+		);
+
 		Configuration configuration = OCCIFactory.eINSTANCE.createConfiguration();
 		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/core#"));
 		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/infrastructure#"));
 		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/platform#"));
 		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/sla#"));
-		configuration.getUse().add(OcciHelper.loadExtension("http://org.occi/tosca#"));
-		configuration.getUse().add(OcciHelper.loadExtension("http://org.occi/extendedTosca#"));
+		configuration.getUse().add(OcciHelper.loadExtension("file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca/model/tosca.occie"));
+		configuration.getUse().add(OcciHelper.loadExtension("file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.extended/model/extendedTosca.occie"));
 		resource.getContents().add(configuration);
 		currentConfiguration = configuration;
 	}
