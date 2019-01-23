@@ -1,6 +1,8 @@
 package org.eclipse.cmf.occi.tosca.handlers;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -19,6 +21,16 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 
 public class ExtensionsManager {
+
+	public static final String OUTPUT_PATH_TOSCA = Main.PATH_TO_ROOT_PROJECT + "org.eclipse.cmf.occi.tosca/model/" + "tosca.occie";
+	
+	public static final String OUTPUT_PATH_EXTENDED_TOSCA = Main.PATH_TO_ROOT_PROJECT + "org.eclipse.cmf.occi.tosca.extended/model/" + "extendedtosca.occie";
+	
+	public static final String PREFIX_FILE = "file:";
+	
+	public static final String SCHEME_TOSCA = PREFIX_FILE + OUTPUT_PATH_TOSCA + "#";
+	
+	public static final String SCHEME_EXTENDED_TOSCA = PREFIX_FILE + OUTPUT_PATH_EXTENDED_TOSCA + "#";
 	
 	/** 
 	 * Contains all extension indexed by their name
@@ -29,26 +41,36 @@ public class ExtensionsManager {
 	
 	public static Extension currentExtensionToBeBuild;
 	
+	private static String toCorrectURI(final String toBeFormatted) {
+		return new File(toBeFormatted).toURI().toString();
+	}
+	
 	static {
 		extensionsPerName = new HashMap<>();
 		extensionsPerName.put("core", OcciHelper.loadExtension("http://schemas.ogf.org/occi/core#"));
 		extensionsPerName.put("infrastructure", OcciHelper.loadExtension("http://schemas.ogf.org/occi/infrastructure#"));
 		extensionsPerName.put("platform", OcciHelper.loadExtension("http://schemas.ogf.org/occi/platform#"));
 		extensionsPerName.put("sla", OcciHelper.loadExtension("http://schemas.ogf.org/occi/sla#"));
+
+		extensionsPerName.put("modmacao-core", OcciHelper.loadExtension("http://schemas.modmacao.org/modmacao#"));
+		extensionsPerName.put("modmacao-platform", OcciHelper.loadExtension("http://schemas.modmacao.org/occi/platform#"));
+		extensionsPerName.put("modmacao-placement", OcciHelper.loadExtension("http://schemas.modmacao.org/placement#"));
 		
 		ResourceSet resSet = new ResourceSetImpl();
-		
-		URI modelURI = URI
-				.createURI("file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca/model/tosca.occie");
+		URI modelURI = URI.createURI(toCorrectURI(OUTPUT_PATH_TOSCA));
 		resource = resSet.createResource(modelURI);
 		Extension extension = OCCIFactory.eINSTANCE.createExtension();
 		extension.setDescription("Mon extension TOSCA");
-		extension.setScheme("http://org.occi/tosca#");
+		extension.setScheme(SCHEME_TOSCA);
 		extension.setName("tosca");
 		extension.getImport().add(extensionsPerName.get("core"));
 		extension.getImport().add(extensionsPerName.get("infrastructure"));
-		extension.getImport().add(extensionsPerName.get("platform"));
+		//extension.getImport().add(extensionsPerName.get("platform")); we will use now platform from modmacao
 		extension.getImport().add(extensionsPerName.get("sla"));
+		// MODMACAO
+		extension.getImport().add(extensionsPerName.get("modmacao-core"));
+		extension.getImport().add(extensionsPerName.get("modmacao-platform"));
+		extension.getImport().add(extensionsPerName.get("modmacao-placement"));
 		resource.getContents().add(extension);
 		
 		extensionsPerName.put("tosca", extension);
@@ -57,27 +79,33 @@ public class ExtensionsManager {
 		
 	public static void createExtendedTosca() {
 		ResourceSet resSet = new ResourceSetImpl();
-		URI modelURI = URI
-				.createURI("file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.extended/model/extendedTosca.occie");
+		URI modelURI = URI.createURI(toCorrectURI(OUTPUT_PATH_EXTENDED_TOSCA));
 		resource = resSet.createResource(modelURI);
 		Extension extension = OCCIFactory.eINSTANCE.createExtension();
 		extension.setDescription("Extended TOSCA");
-		extension.setScheme("http://org.occi/extendedTosca#");
+		extension.setScheme(SCHEME_EXTENDED_TOSCA);
 		extension.setName("extendedTosca");
-		System.out.println(OcciRegistry.getInstance().getRegisteredExtensions());
-		Extension toscaExtension = OcciHelper.loadExtension(
-				"file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca/model/tosca.occie"
-		);	
+		//Extension toscaExtension = OcciHelper.loadExtension(SCHEME_TOSCA);
 		extension.getImport().add(extensionsPerName.get("core"));
 		extension.getImport().add(extensionsPerName.get("infrastructure"));
 		extension.getImport().add(extensionsPerName.get("platform"));
 		extension.getImport().add(extensionsPerName.get("sla"));
-		extension.getImport().add(toscaExtension);
-		copy(toscaExtension);
-		extensionsPerName.replace("tosca", toscaExtension);
+		extension.getImport().add(currentExtensionToBeBuild);
+		
+		// MODMACAO
+		extension.getImport().add(extensionsPerName.get("modmacao-core"));
+		extension.getImport().add(extensionsPerName.get("modmacao-platform"));
+		extension.getImport().add(extensionsPerName.get("modmacao-placement"));
+		
+		//copy(toscaExtension);
+		//extensionsPerName.replace("tosca", toscaExtension);
 		resource.getContents().add(extension);
 		extensionsPerName.put("extendedTosca", extension);
+		System.out.println(extension.getImport());
+		System.out.println(currentExtensionToBeBuild.getImport());
 		currentExtensionToBeBuild = extension;
+		System.out.println(extension.getImport());
+		System.out.println(currentExtensionToBeBuild.getImport());
 	}
 	
 	private static void copy(Extension newTosca) {

@@ -6,9 +6,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.FilenameFilter;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 import org.eclipse.cmf.occi.core.Extension;
 import org.eclipse.cmf.occi.core.Kind;
@@ -32,12 +35,18 @@ import com.esotericsoftware.yamlbeans.YamlWriter;
 @SuppressWarnings({ "unchecked", "rawtypes" })
 public class Main extends AbstractHandler {
 
+	// TODO must be configured
+	public static final String PATH_TO_WORKSPACE = "";
+	
+	public static final String  PATH_TO_ROOT_PROJECT = PATH_TO_WORKSPACE + "TOSCA-Studio/plugins/";
+	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		// IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 		try {
 			YamlReader reader = new YamlReader(new FileReader(
-					"C:/Users/schallit/workspace-tosca/plugins/org.eclipse.cmf.occi.tosca.parser/tosca-types/normative-types.yml"));
+					PATH_TO_ROOT_PROJECT + "org.eclipse.cmf.occi.tosca.parser/tosca-types/normative-types.yml")
+			);
 			Map<String, ?> normativeTypesMap = (Map<String, ?>) reader.read();
 			readYamlFile(normativeTypesMap);
 			executeMapping();
@@ -123,9 +132,9 @@ public class Main extends AbstractHandler {
 		Map capabilities = new HashMap<>();
 		Map relationships = new HashMap<>();
 		Map policies = new HashMap<>();
-		readCustomAndAddedTypesInGivenDirectory("C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.parser/tosca-types/custom-types/", 
+		readCustomAndAddedTypesInGivenDirectory(PATH_TO_ROOT_PROJECT + "org.eclipse.cmf.occi.tosca.parser/tosca-types/custom-types/", 
 				nodes, capabilities, relationships, policies);
-		readCustomAndAddedTypesInGivenDirectory("C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.parser/tosca-types/added-types/", 
+		readCustomAndAddedTypesInGivenDirectory(PATH_TO_ROOT_PROJECT + "org.eclipse.cmf.occi.tosca.parser/tosca-types/added-types/", 
 				nodes, capabilities, relationships, policies);
 		customTypesMap.put("tosca_definitions_version", "tosca_simple_yaml_1_0");
 		customTypesMap.put("description",
@@ -134,8 +143,7 @@ public class Main extends AbstractHandler {
 		customTypesMap.put("capability_types", capabilities);
 		customTypesMap.put("relationship_types", relationships);
 		customTypesMap.put("policy_types", policies);
-		YamlWriter writerNodes = new YamlWriter(new FileWriter(
-				"C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.parser/tosca-types/custom-types.yml"));
+		YamlWriter writerNodes = new YamlWriter(new FileWriter(PATH_TO_ROOT_PROJECT + "org.eclipse.cmf.occi.tosca.parser/tosca-types/custom-types.yml"));
 		writerNodes.write(customTypesMap);
 		writerNodes.close();
 		return customTypesMap;
