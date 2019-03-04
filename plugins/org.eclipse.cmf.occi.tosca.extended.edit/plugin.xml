@@ -19,7 +19,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated extendedTosca -->
       <factory
-            uri="http://org.occi/extendedTosca/ecore"
+            uri="http://schemas.ogf.org/tosca/extended/ecore"
             class="extendedtosca.provider.ExtendedtoscaItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

@@ -12,17 +12,21 @@
  */
 package org.eclipse.cmf.occi.tosca.provider;
 
+import modmacao.provider.ModmacaoEditPlugin;
+
 import org.eclipse.cmf.occi.core.provider.OCCIEditPlugin;
 
 import org.eclipse.cmf.occi.infrastructure.provider.InfrastructureEditPlugin;
-
-import org.eclipse.cmf.occi.platform.provider.PlatformEditPlugin;
 
 import org.eclipse.cmf.occi.sla.provider.SlaEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+
+import org.modmacao.occi.platform.provider.PlatformEditPlugin;
+
+import org.modmacao.placement.provider.PlacementEditPlugin;
 
 /**
  * This is the central singleton for the Tosca edit plugin.
@@ -57,8 +61,10 @@ public final class ToscaEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     InfrastructureEditPlugin.INSTANCE,
-		     PlatformEditPlugin.INSTANCE,
 		     SlaEditPlugin.INSTANCE,
+		     ModmacaoEditPlugin.INSTANCE,
+		     PlatformEditPlugin.INSTANCE,
+		     PlacementEditPlugin.INSTANCE,
 		     OCCIEditPlugin.INSTANCE,
 		   });
 	}

@@ -23,6 +23,6 @@ public class NewConfigurationWizard extends NewDiagramWizard
 {
 	public NewConfigurationWizard()
 	{
-		super("http://org.occi/extendedTosca#", "viewpoint:/org.eclipse.cmf.occi.tosca.extended.design.extended/ExtendedToscaConfiguration", "extendedTosca", "ExtendedToscaConfiguration Diagram");
+		super("http://schemas.ogf.org/tosca/extended#", "viewpoint:/org.eclipse.cmf.occi.tosca.extended.design.extended/ExtendedToscaConfiguration", "extendedTosca", "ExtendedToscaConfiguration Diagram");
 	}
 }

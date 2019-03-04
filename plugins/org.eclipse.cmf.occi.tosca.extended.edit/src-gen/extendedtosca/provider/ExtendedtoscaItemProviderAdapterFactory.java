@@ -358,29 +358,6 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_webapplication_wordpress} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Tosca_nodes_webapplication_wordpressItemProvider tosca_nodes_webapplication_wordpressItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_webapplication_wordpress}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTosca_nodes_webapplication_wordpressAdapter() {
-		if (tosca_nodes_webapplication_wordpressItemProvider == null) {
-			tosca_nodes_webapplication_wordpressItemProvider = new Tosca_nodes_webapplication_wordpressItemProvider(this);
-		}
-
-		return tosca_nodes_webapplication_wordpressItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_network_network} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -588,6 +565,29 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_php} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_nodes_phpItemProvider tosca_nodes_phpItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_php}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_nodes_phpAdapter() {
+		if (tosca_nodes_phpItemProvider == null) {
+			tosca_nodes_phpItemProvider = new Tosca_nodes_phpItemProvider(this);
+		}
+
+		return tosca_nodes_phpItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_database_mysql} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -654,6 +654,52 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		}
 
 		return example_transactionsubsystemItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_abstractmysql} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_nodes_abstractmysqlItemProvider tosca_nodes_abstractmysqlItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_abstractmysql}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_nodes_abstractmysqlAdapter() {
+		if (tosca_nodes_abstractmysqlItemProvider == null) {
+			tosca_nodes_abstractmysqlItemProvider = new Tosca_nodes_abstractmysqlItemProvider(this);
+		}
+
+		return tosca_nodes_abstractmysqlItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_mysql} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_nodes_mysqlItemProvider tosca_nodes_mysqlItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_mysql}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_nodes_mysqlAdapter() {
+		if (tosca_nodes_mysqlItemProvider == null) {
+			tosca_nodes_mysqlItemProvider = new Tosca_nodes_mysqlItemProvider(this);
+		}
+
+		return tosca_nodes_mysqlItemProvider;
 	}
 
 	/**
@@ -726,6 +772,29 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_apache} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_nodes_apacheItemProvider tosca_nodes_apacheItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_apache}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_nodes_apacheAdapter() {
+		if (tosca_nodes_apacheItemProvider == null) {
+			tosca_nodes_apacheItemProvider = new Tosca_nodes_apacheItemProvider(this);
+		}
+
+		return tosca_nodes_apacheItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_nodewithcap} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -769,6 +838,29 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		}
 
 		return rsyslogItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_wordpress} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_nodes_wordpressItemProvider tosca_nodes_wordpressItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_wordpress}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_nodes_wordpressAdapter() {
+		if (tosca_nodes_wordpressItemProvider == null) {
+			tosca_nodes_wordpressItemProvider = new Tosca_nodes_wordpressItemProvider(this);
+		}
+
+		return tosca_nodes_wordpressItemProvider;
 	}
 
 	/**
@@ -1181,7 +1273,6 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		if (tosca_capabilities_somechildcapItemProvider != null) tosca_capabilities_somechildcapItemProvider.dispose();
 		if (tosca_nodes_computewithpropItemProvider != null) tosca_nodes_computewithpropItemProvider.dispose();
 		if (tosca_nodes_webapplication_paypalpizzastoreItemProvider != null) tosca_nodes_webapplication_paypalpizzastoreItemProvider.dispose();
-		if (tosca_nodes_webapplication_wordpressItemProvider != null) tosca_nodes_webapplication_wordpressItemProvider.dispose();
 		if (tosca_nodes_network_networkItemProvider != null) tosca_nodes_network_networkItemProvider.dispose();
 		if (tosca_nodes_container_application_dockerItemProvider != null) tosca_nodes_container_application_dockerItemProvider.dispose();
 		if (tosca_nodes_softwarecomponent_kibanaItemProvider != null) tosca_nodes_softwarecomponent_kibanaItemProvider.dispose();
@@ -1191,14 +1282,19 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		if (tosca_nodes_softwarecomponent_collectdItemProvider != null) tosca_nodes_softwarecomponent_collectdItemProvider.dispose();
 		if (tosca_nodes_nodewithreqItemProvider != null) tosca_nodes_nodewithreqItemProvider.dispose();
 		if (tosca_nodes_somenode2ItemProvider != null) tosca_nodes_somenode2ItemProvider.dispose();
+		if (tosca_nodes_phpItemProvider != null) tosca_nodes_phpItemProvider.dispose();
 		if (tosca_nodes_database_mysqlItemProvider != null) tosca_nodes_database_mysqlItemProvider.dispose();
 		if (example_queuingsubsystemItemProvider != null) example_queuingsubsystemItemProvider.dispose();
 		if (example_transactionsubsystemItemProvider != null) example_transactionsubsystemItemProvider.dispose();
+		if (tosca_nodes_abstractmysqlItemProvider != null) tosca_nodes_abstractmysqlItemProvider.dispose();
+		if (tosca_nodes_mysqlItemProvider != null) tosca_nodes_mysqlItemProvider.dispose();
 		if (tosca_nodes_softwarecomponent_elasticsearchItemProvider != null) tosca_nodes_softwarecomponent_elasticsearchItemProvider.dispose();
 		if (tosca_nodes_databasewithlistparamItemProvider != null) tosca_nodes_databasewithlistparamItemProvider.dispose();
 		if (example_someappItemProvider != null) example_someappItemProvider.dispose();
+		if (tosca_nodes_apacheItemProvider != null) tosca_nodes_apacheItemProvider.dispose();
 		if (tosca_nodes_nodewithcapItemProvider != null) tosca_nodes_nodewithcapItemProvider.dispose();
 		if (rsyslogItemProvider != null) rsyslogItemProvider.dispose();
+		if (tosca_nodes_wordpressItemProvider != null) tosca_nodes_wordpressItemProvider.dispose();
 		if (tosca_nodes_network_portItemProvider != null) tosca_nodes_network_portItemProvider.dispose();
 		if (tosca_nodes_computewithcapwithattrItemProvider != null) tosca_nodes_computewithcapwithattrItemProvider.dispose();
 		if (tosca_nodes_softwarecomponent_rsyslogItemProvider != null) tosca_nodes_softwarecomponent_rsyslogItemProvider.dispose();
