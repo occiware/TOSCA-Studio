@@ -44,7 +44,7 @@ public interface NetworkInfo extends EObject {
 	 * @see #setNetworkid(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getNetworkInfo_Networkid()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!NetworkInfo!networkid'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!NetworkInfo!networkid'"
 	 * @generated
 	 */
 	String getNetworkid();
@@ -70,7 +70,7 @@ public interface NetworkInfo extends EObject {
 	 * @see #setAddresses(arraystring)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getNetworkInfo_Addresses()
 	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!NetworkInfo!addresses'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!NetworkInfo!addresses'"
 	 * @generated
 	 */
 	arraystring getAddresses();
@@ -96,7 +96,7 @@ public interface NetworkInfo extends EObject {
 	 * @see #setNetworkname(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getNetworkInfo_Networkname()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!NetworkInfo!networkname'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!NetworkInfo!networkname'"
 	 * @generated
 	 */
 	String getNetworkname();

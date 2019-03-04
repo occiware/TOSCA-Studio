@@ -44,7 +44,7 @@ public interface Tosca_nodes_databasewithlistparam extends Tosca_nodes_database,
 	 * @see #setListProp(arrayinteger)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_databasewithlistparam_ListProp()
 	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_nodes_databasewithlistparam!listProp'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_databasewithlistparam!listProp'"
 	 * @generated
 	 */
 	arrayinteger getListProp();

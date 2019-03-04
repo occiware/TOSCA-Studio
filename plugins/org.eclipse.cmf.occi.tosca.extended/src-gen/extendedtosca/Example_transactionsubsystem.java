@@ -46,7 +46,7 @@ public interface Example_transactionsubsystem extends Tosca_nodes_root, Tosca_ca
 	 * @see #setReceiverPort(Integer)
 	 * @see extendedtosca.ExtendedtoscaPackage#getExample_transactionsubsystem_ReceiverPort()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.integer"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Example_transactionsubsystem!receiverPort'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Example_transactionsubsystem!receiverPort'"
 	 * @generated
 	 */
 	Integer getReceiverPort();
@@ -72,7 +72,7 @@ public interface Example_transactionsubsystem extends Tosca_nodes_root, Tosca_ca
 	 * @see #setMqServiceIp(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getExample_transactionsubsystem_MqServiceIp()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Example_transactionsubsystem!mqServiceIp'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Example_transactionsubsystem!mqServiceIp'"
 	 * @generated
 	 */
 	String getMqServiceIp();

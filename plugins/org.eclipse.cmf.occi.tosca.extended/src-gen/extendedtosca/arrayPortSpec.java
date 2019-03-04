@@ -47,7 +47,7 @@ public interface arrayPortSpec extends EObject {
 	 * @return the value of the '<em>Arrayportspec Values</em>' containment reference list.
 	 * @see extendedtosca.ExtendedtoscaPackage#getarrayPortSpec_ArrayportspecValues()
 	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!arrayPortSpec!arrayportspecValues'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!arrayPortSpec!arrayportspecValues'"
 	 * @generated
 	 */
 	EList<PortSpec> getArrayportspecValues();

@@ -42,7 +42,7 @@ public interface Tosca_nodes_loadbalancer extends Tosca_nodes_root, Tosca_capabi
 	 * @see #setAlgorithm(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_loadbalancer_Algorithm()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_loadbalancer!algorithm'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_nodes_loadbalancer!algorithm'"
 	 * @generated
 	 */
 	String getAlgorithm();

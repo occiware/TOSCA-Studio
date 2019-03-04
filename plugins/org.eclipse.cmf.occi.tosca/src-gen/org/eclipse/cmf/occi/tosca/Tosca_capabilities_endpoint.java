@@ -51,7 +51,7 @@ public interface Tosca_capabilities_endpoint extends Tosca_capabilities_root, Mi
 	 * @see #setPortName(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_endpoint_PortName()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_endpoint!portName'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_endpoint!portName'"
 	 * @generated
 	 */
 	String getPortName();
@@ -78,7 +78,7 @@ public interface Tosca_capabilities_endpoint extends Tosca_capabilities_root, Mi
 	 * @see #setProtocol(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_endpoint_Protocol()
 	 * @model default="tcp" dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_endpoint!protocol'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_endpoint!protocol'"
 	 * @generated
 	 */
 	String getProtocol();
@@ -104,7 +104,7 @@ public interface Tosca_capabilities_endpoint extends Tosca_capabilities_root, Mi
 	 * @see #setPort(Short)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_endpoint_Port()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortDef"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_endpoint!port'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_endpoint!port'"
 	 * @generated
 	 */
 	Short getPort();
@@ -133,7 +133,7 @@ public interface Tosca_capabilities_endpoint extends Tosca_capabilities_root, Mi
 	 * @see #setInitiator(initiatorEnum)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_endpoint_Initiator()
 	 * @model default="source"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_endpoint!initiator'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_endpoint!initiator'"
 	 * @generated
 	 */
 	initiatorEnum getInitiator();
@@ -161,7 +161,7 @@ public interface Tosca_capabilities_endpoint extends Tosca_capabilities_root, Mi
 	 * @see #setNetworkName(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_endpoint_NetworkName()
 	 * @model default="PRIVATE" dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_endpoint!networkName'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_endpoint!networkName'"
 	 * @generated
 	 */
 	String getNetworkName();
@@ -188,7 +188,7 @@ public interface Tosca_capabilities_endpoint extends Tosca_capabilities_root, Mi
 	 * @see #setSecure(Boolean)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_endpoint_Secure()
 	 * @model default="false" dataType="org.eclipse.cmf.occi.tosca.boolean"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_endpoint!secure'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_endpoint!secure'"
 	 * @generated
 	 */
 	Boolean getSecure();
@@ -214,7 +214,7 @@ public interface Tosca_capabilities_endpoint extends Tosca_capabilities_root, Mi
 	 * @see #setPorts(Map)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_endpoint_Ports()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.map"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_endpoint!ports'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_endpoint!ports'"
 	 * @generated
 	 */
 	Map getPorts();
@@ -240,7 +240,7 @@ public interface Tosca_capabilities_endpoint extends Tosca_capabilities_root, Mi
 	 * @see #setUrlPath(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_endpoint_UrlPath()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_endpoint!urlPath'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_endpoint!urlPath'"
 	 * @generated
 	 */
 	String getUrlPath();

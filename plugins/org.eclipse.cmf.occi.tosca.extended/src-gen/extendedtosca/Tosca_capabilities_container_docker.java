@@ -50,7 +50,7 @@ public interface Tosca_capabilities_container_docker extends Tosca_capabilities_
 	 * @see #setPublishAll(Boolean)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_capabilities_container_docker_PublishAll()
 	 * @model default="false" dataType="org.eclipse.cmf.occi.tosca.boolean"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_capabilities_container_docker!publishAll'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_capabilities_container_docker!publishAll'"
 	 * @generated
 	 */
 	Boolean getPublishAll();
@@ -76,7 +76,7 @@ public interface Tosca_capabilities_container_docker extends Tosca_capabilities_
 	 * @see #setPublishPorts(arrayPortSpec)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_capabilities_container_docker_PublishPorts()
 	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_capabilities_container_docker!publishPorts'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_capabilities_container_docker!publishPorts'"
 	 * @generated
 	 */
 	arrayPortSpec getPublishPorts();
@@ -102,7 +102,7 @@ public interface Tosca_capabilities_container_docker extends Tosca_capabilities_
 	 * @see #setExposePorts(arrayPortSpec)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_capabilities_container_docker_ExposePorts()
 	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_capabilities_container_docker!exposePorts'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_capabilities_container_docker!exposePorts'"
 	 * @generated
 	 */
 	arrayPortSpec getExposePorts();
@@ -128,7 +128,7 @@ public interface Tosca_capabilities_container_docker extends Tosca_capabilities_
 	 * @see #setVolumes(arraystring)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_capabilities_container_docker_Volumes()
 	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_capabilities_container_docker!volumes'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_capabilities_container_docker!volumes'"
 	 * @generated
 	 */
 	arraystring getVolumes();
@@ -154,7 +154,7 @@ public interface Tosca_capabilities_container_docker extends Tosca_capabilities_
 	 * @see #setVersion(arrayversion)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_capabilities_container_docker_Version()
 	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_capabilities_container_docker!version'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_capabilities_container_docker!version'"
 	 * @generated
 	 */
 	arrayversion getVersion();

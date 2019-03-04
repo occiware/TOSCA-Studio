@@ -45,7 +45,7 @@ public interface Tosca_capabilities_scalable extends Tosca_capabilities_root, Mi
 	 * @see #setMinInstances(Integer)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_scalable_MinInstances()
 	 * @model default="1" dataType="org.eclipse.cmf.occi.tosca.integer"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_scalable!minInstances'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_scalable!minInstances'"
 	 * @generated
 	 */
 	Integer getMinInstances();
@@ -72,7 +72,7 @@ public interface Tosca_capabilities_scalable extends Tosca_capabilities_root, Mi
 	 * @see #setMaxInstances(Integer)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_scalable_MaxInstances()
 	 * @model default="1" dataType="org.eclipse.cmf.occi.tosca.integer"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_scalable!maxInstances'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_scalable!maxInstances'"
 	 * @generated
 	 */
 	Integer getMaxInstances();
@@ -99,7 +99,7 @@ public interface Tosca_capabilities_scalable extends Tosca_capabilities_root, Mi
 	 * @see #setDefaultInstances(Integer)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_scalable_DefaultInstances()
 	 * @model default="1" dataType="org.eclipse.cmf.occi.tosca.integer"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_scalable!defaultInstances'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_scalable!defaultInstances'"
 	 * @generated
 	 */
 	Integer getDefaultInstances();

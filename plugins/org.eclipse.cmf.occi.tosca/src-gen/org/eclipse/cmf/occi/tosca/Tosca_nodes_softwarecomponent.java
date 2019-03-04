@@ -47,7 +47,7 @@ public interface Tosca_nodes_softwarecomponent extends Tosca_nodes_root, MixinBa
 	 * @see #setAdminCredential(Credential)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_softwarecomponent_AdminCredential()
 	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_softwarecomponent!adminCredential'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_nodes_softwarecomponent!adminCredential'"
 	 * @generated
 	 */
 	Credential getAdminCredential();
@@ -73,7 +73,7 @@ public interface Tosca_nodes_softwarecomponent extends Tosca_nodes_root, MixinBa
 	 * @see #setComponentVersion(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_softwarecomponent_ComponentVersion()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.version"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_softwarecomponent!componentVersion'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_nodes_softwarecomponent!componentVersion'"
 	 * @generated
 	 */
 	String getComponentVersion();

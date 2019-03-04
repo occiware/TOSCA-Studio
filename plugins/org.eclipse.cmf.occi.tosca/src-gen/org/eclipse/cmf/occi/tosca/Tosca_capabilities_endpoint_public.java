@@ -44,7 +44,7 @@ public interface Tosca_capabilities_endpoint_public extends Tosca_capabilities_e
 	 * @see #setFloating(Boolean)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_endpoint_public_Floating()
 	 * @model default="false" dataType="org.eclipse.cmf.occi.tosca.boolean"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_endpoint_public!floating'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_endpoint_public!floating'"
 	 * @generated
 	 */
 	Boolean getFloating();
@@ -70,7 +70,7 @@ public interface Tosca_capabilities_endpoint_public extends Tosca_capabilities_e
 	 * @see #setDnsName(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_endpoint_public_DnsName()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_endpoint_public!dnsName'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_endpoint_public!dnsName'"
 	 * @generated
 	 */
 	String getDnsName();

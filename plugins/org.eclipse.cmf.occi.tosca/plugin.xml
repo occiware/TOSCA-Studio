@@ -19,7 +19,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated tosca -->
       <package
-            uri="http://org.occi/tosca/ecore"
+            uri="http://schemas.ogf.org/tosca/core/ecore"
             class="org.eclipse.cmf.occi.tosca.ToscaPackage"/>
    </extension>
 

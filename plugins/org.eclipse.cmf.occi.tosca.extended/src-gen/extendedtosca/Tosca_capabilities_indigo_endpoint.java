@@ -44,7 +44,7 @@ public interface Tosca_capabilities_indigo_endpoint extends Tosca_capabilities_e
 	 * @see #setCredential(arrayCredential)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_capabilities_indigo_endpoint_Credential()
 	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_capabilities_indigo_endpoint!credential'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_capabilities_indigo_endpoint!credential'"
 	 * @generated
 	 */
 	arrayCredential getCredential();

@@ -45,7 +45,7 @@ public interface Tosca_capabilities_somecap extends Tosca_capabilities_container
 	 * @see #setType(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_capabilities_somecap_Type()
 	 * @model default="someval" dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_capabilities_somecap!type'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_capabilities_somecap!type'"
 	 * @generated
 	 */
 	String getType();

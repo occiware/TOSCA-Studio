@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="extendedtosca" nsURI="http://org.occi/extendedTosca/ecore" nsPrefix="extendedtosca">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="extendedtosca" nsURI="http://schemas.ogf.org/tosca/extended/ecore"
+    nsPrefix="extendedtosca">
   <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
     <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
     <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
@@ -9,9 +10,11 @@
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="occi" value="platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#/"/>
     <details key="infrastructure" value="platform:/plugin/org.eclipse.cmf.occi.infrastructure/model/Infrastructure.ecore#/"/>
-    <details key="platform" value="platform:/plugin/org.eclipse.cmf.occi.platform/model/Platform.ecore#/"/>
     <details key="sla" value="platform:/plugin/org.eclipse.cmf.occi.sla/model/sla.ecore#/"/>
     <details key="tosca" value="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#/"/>
+    <details key="modmacao" value="platform:/resource/org.modmacao.core/model/modmacao.ecore#/"/>
+    <details key="platform" value="platform:/resource/org.modmacao.occi.platform/model/platform.ecore#/"/>
+    <details key="placement" value="platform:/resource/org.modmacao.placement/model/placement.ecore#/"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="arrayCredential">
     <eStructuralFeatures xsi:type="ecore:EReference" name="arraycredentialValues"
@@ -30,6 +33,10 @@
   <eClassifiers xsi:type="ecore:EEnum" name="ip_versionEnum">
     <eLiterals name="IPv4" literal="IPv4"/>
     <eLiterals name="IPv6" value="1" literal="IPv6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="storage_pathEnum">
+    <eLiterals name="mountedStorage" literal="mountedStorage"/>
+    <eLiterals name="varmysql" value="1" literal="varmysql"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="arrayinteger">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
@@ -104,24 +111,6 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_webapplication_wordpress"
-      eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_webapplication platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dbHost" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//string">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value=""/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="adminPassword" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//string">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value=""/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="adminUser" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//string">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value=""/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_network_network" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_root platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="physicalNetwork" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//string">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -193,6 +182,7 @@
       eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_softwarecomponent platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_nodewithreq" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_softwarecomponent platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_somenode2" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_root #//Tosca_capabilities_containerchild platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_php" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_softwarecomponent platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_capabilities_root platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_database_mysql" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_database platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="Example_queuingsubsystem" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_root platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_capabilities_endpoint platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="Example_transactionsubsystem" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_root platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_capabilities_endpoint platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
@@ -207,6 +197,39 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_abstractmysql" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_database platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_capabilities_endpoint_database platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_mysql" eSuperTypes="#//Tosca_nodes_abstractmysql platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="portMySQL" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//integer"
+        defaultValueLiteral="3306">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The port on which the database will listen to data."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="storagePath" eType="#//storage_pathEnum"
+        defaultValueLiteral="mountedStorage">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dbUser" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//string"
+        defaultValueLiteral="pass">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The user account used for database administration."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bindAddress" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//boolean"
+        defaultValueLiteral="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="If true,the server accepts TCP/IP connections on all server host IPv4 interfaces."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dbPassword" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//string"
+        defaultValueLiteral="pass">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The password associated with the user account for database administration."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_softwarecomponent_elasticsearch"
       eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_softwarecomponent platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_capabilities_endpoint platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_databasewithlistparam" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_database platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
@@ -218,8 +241,24 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Example_someapp" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_root platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_capabilities_endpoint platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_apache" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_webserver platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_capabilities_container platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="documentRoot" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//string"
+        defaultValueLiteral="/var/www">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_nodewithcap" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_root #//Tosca_capabilities_somecap platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="Rsyslog" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_softwarecomponent platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_wordpress" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_webapplication platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zipUrl" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//string"
+        defaultValueLiteral="https://wordpress.org/latest.zip">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_network_port" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_root platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ipRangeEnd" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//string">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

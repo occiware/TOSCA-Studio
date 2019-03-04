@@ -45,7 +45,7 @@ public interface Tosca_nodes_somenode extends Tosca_nodes_root, MixinBase {
 	 * @see #setSomeProp(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_somenode_SomeProp()
 	 * @model default="some" dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_nodes_somenode!someProp'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_somenode!someProp'"
 	 * @generated
 	 */
 	String getSomeProp();

@@ -16,8 +16,10 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ocl.pivot;visibility:=reexport,
  org.eclipse.ocl.examples.codegen;visibility:=reexport,
  org.eclipse.cmf.occi.infrastructure;visibility:=reexport,
- org.eclipse.cmf.occi.platform;visibility:=reexport,
  org.eclipse.cmf.occi.sla;visibility:=reexport,
  org.eclipse.cmf.occi.tosca;visibility:=reexport,
+ org.modmacao.core;visibility:=reexport,
+ org.modmacao.occi.platform;visibility:=reexport,
+ org.modmacao.placement;visibility:=reexport,
  org.eclipse.cmf.occi.core;visibility:=reexport
 Bundle-ActivationPolicy: lazy

@@ -31,7 +31,7 @@ public interface Tosca_interfaces_relationship_configure extends Tosca_interface
 	 * <!-- begin-model-doc -->
 	 * Operation to pre-configure the source endpoint.
 	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_relationship_configure!pre_configure_source()'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_relationship_configure!pre_configure_source()'"
 	 * @generated
 	 */
 	void pre_configure_source();
@@ -42,7 +42,7 @@ public interface Tosca_interfaces_relationship_configure extends Tosca_interface
 	 * <!-- begin-model-doc -->
 	 * Operation to pre-configure the target endpoint.
 	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_relationship_configure!pre_configure_target()'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_relationship_configure!pre_configure_target()'"
 	 * @generated
 	 */
 	void pre_configure_target();
@@ -53,7 +53,7 @@ public interface Tosca_interfaces_relationship_configure extends Tosca_interface
 	 * <!-- begin-model-doc -->
 	 * Operation to post-configure the source endpoint.
 	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_relationship_configure!post_configure_source()'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_relationship_configure!post_configure_source()'"
 	 * @generated
 	 */
 	void post_configure_source();
@@ -64,7 +64,7 @@ public interface Tosca_interfaces_relationship_configure extends Tosca_interface
 	 * <!-- begin-model-doc -->
 	 * Operation to post-configure the target endpoint.
 	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_relationship_configure!post_configure_target()'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_relationship_configure!post_configure_target()'"
 	 * @generated
 	 */
 	void post_configure_target();
@@ -75,7 +75,7 @@ public interface Tosca_interfaces_relationship_configure extends Tosca_interface
 	 * <!-- begin-model-doc -->
 	 * Operation to remove a target node.
 	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_relationship_configure!remove_target()'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_relationship_configure!remove_target()'"
 	 * @generated
 	 */
 	void remove_target();
@@ -86,7 +86,7 @@ public interface Tosca_interfaces_relationship_configure extends Tosca_interface
 	 * <!-- begin-model-doc -->
 	 * Operation to notify the source node of a target node being added via a relationship.
 	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_relationship_configure!add_target()'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_relationship_configure!add_target()'"
 	 * @generated
 	 */
 	void add_target();
@@ -97,7 +97,7 @@ public interface Tosca_interfaces_relationship_configure extends Tosca_interface
 	 * <!-- begin-model-doc -->
 	 * 
 	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_relationship_configure!add_source()'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_relationship_configure!add_source()'"
 	 * @generated
 	 */
 	void add_source();
@@ -108,7 +108,7 @@ public interface Tosca_interfaces_relationship_configure extends Tosca_interface
 	 * <!-- begin-model-doc -->
 	 * Operation to notify source some property or attribute of the target changed
 	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_relationship_configure!target_changed()'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_relationship_configure!target_changed()'"
 	 * @generated
 	 */
 	void target_changed();

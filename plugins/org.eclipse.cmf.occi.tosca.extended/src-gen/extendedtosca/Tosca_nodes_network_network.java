@@ -53,7 +53,7 @@ public interface Tosca_nodes_network_network extends Tosca_nodes_root, MixinBase
 	 * @see #setPhysicalNetwork(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_network_network_PhysicalNetwork()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_nodes_network_network!physicalNetwork'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_network_network!physicalNetwork'"
 	 * @generated
 	 */
 	String getPhysicalNetwork();
@@ -79,7 +79,7 @@ public interface Tosca_nodes_network_network extends Tosca_nodes_root, MixinBase
 	 * @see #setSegmentationId(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_network_network_SegmentationId()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_nodes_network_network!segmentationId'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_network_network!segmentationId'"
 	 * @generated
 	 */
 	String getSegmentationId();
@@ -105,7 +105,7 @@ public interface Tosca_nodes_network_network extends Tosca_nodes_root, MixinBase
 	 * @see #setNetworkId(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_network_network_NetworkId()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_nodes_network_network!networkId'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_network_network!networkId'"
 	 * @generated
 	 */
 	String getNetworkId();
@@ -134,7 +134,7 @@ public interface Tosca_nodes_network_network extends Tosca_nodes_root, MixinBase
 	 * @see #setIpVersion(ip_versionEnum)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_network_network_IpVersion()
 	 * @model default="IPv4"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_nodes_network_network!ipVersion'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_network_network!ipVersion'"
 	 * @generated
 	 */
 	ip_versionEnum getIpVersion();
@@ -161,7 +161,7 @@ public interface Tosca_nodes_network_network extends Tosca_nodes_root, MixinBase
 	 * @see #setStartIp(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_network_network_StartIp()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_nodes_network_network!startIp'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_network_network!startIp'"
 	 * @generated
 	 */
 	String getStartIp();
@@ -187,7 +187,7 @@ public interface Tosca_nodes_network_network extends Tosca_nodes_root, MixinBase
 	 * @see #setNetworkName(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_network_network_NetworkName()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_nodes_network_network!networkName'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_network_network!networkName'"
 	 * @generated
 	 */
 	String getNetworkName();
@@ -213,7 +213,7 @@ public interface Tosca_nodes_network_network extends Tosca_nodes_root, MixinBase
 	 * @see #setCidr(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_network_network_Cidr()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_nodes_network_network!cidr'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_network_network!cidr'"
 	 * @generated
 	 */
 	String getCidr();
@@ -239,7 +239,7 @@ public interface Tosca_nodes_network_network extends Tosca_nodes_root, MixinBase
 	 * @see #setGatewayIp(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_network_network_GatewayIp()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_nodes_network_network!gatewayIp'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_network_network!gatewayIp'"
 	 * @generated
 	 */
 	String getGatewayIp();
@@ -265,7 +265,7 @@ public interface Tosca_nodes_network_network extends Tosca_nodes_root, MixinBase
 	 * @see #setNetworkType(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_network_network_NetworkType()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_nodes_network_network!networkType'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_network_network!networkType'"
 	 * @generated
 	 */
 	String getNetworkType();
@@ -291,7 +291,7 @@ public interface Tosca_nodes_network_network extends Tosca_nodes_root, MixinBase
 	 * @see #setEndIp(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_network_network_EndIp()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_nodes_network_network!endIp'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_network_network!endIp'"
 	 * @generated
 	 */
 	String getEndIp();

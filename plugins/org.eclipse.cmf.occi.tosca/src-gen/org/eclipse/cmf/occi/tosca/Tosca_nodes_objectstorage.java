@@ -47,7 +47,7 @@ public interface Tosca_nodes_objectstorage extends Tosca_nodes_root, Tosca_capab
 	 * @see #setSize(Integer)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_objectstorage_Size()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.scalarSizeMinZeroGB"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_objectstorage!size'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_nodes_objectstorage!size'"
 	 * @generated
 	 */
 	Integer getSize();
@@ -73,7 +73,7 @@ public interface Tosca_nodes_objectstorage extends Tosca_nodes_root, Tosca_capab
 	 * @see #setName(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_objectstorage_Name()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_objectstorage!name'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_nodes_objectstorage!name'"
 	 * @generated
 	 */
 	String getName();

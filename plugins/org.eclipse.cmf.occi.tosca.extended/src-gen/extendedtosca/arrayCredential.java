@@ -47,7 +47,7 @@ public interface arrayCredential extends EObject {
 	 * @return the value of the '<em>Arraycredential Values</em>' containment reference list.
 	 * @see extendedtosca.ExtendedtoscaPackage#getarrayCredential_ArraycredentialValues()
 	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!arrayCredential!arraycredentialValues'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!arrayCredential!arraycredentialValues'"
 	 * @generated
 	 */
 	EList<Credential> getArraycredentialValues();

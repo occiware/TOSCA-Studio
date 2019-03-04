@@ -48,7 +48,7 @@ public interface Tosca_nodes_database extends Tosca_nodes_root, Tosca_capabiliti
 	 * @see #setPassword(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_database_Password()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_database!password'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_nodes_database!password'"
 	 * @generated
 	 */
 	String getPassword();
@@ -74,7 +74,7 @@ public interface Tosca_nodes_database extends Tosca_nodes_root, Tosca_capabiliti
 	 * @see #setName(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_database_Name()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_database!name'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_nodes_database!name'"
 	 * @generated
 	 */
 	String getName();
@@ -100,7 +100,7 @@ public interface Tosca_nodes_database extends Tosca_nodes_root, Tosca_capabiliti
 	 * @see #setUser(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_database_User()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_database!user'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_nodes_database!user'"
 	 * @generated
 	 */
 	String getUser();

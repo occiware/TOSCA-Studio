@@ -1,4 +1,4 @@
-// Generated at Wed Nov 28 23:01:18 CET 2018 from  by org.eclipse.cmf.occi.core.gen.alloy
+// Generated at Mon Mar 04 14:58:11 CET 2019 from  by org.eclipse.cmf.occi.core.gen.alloy
 
 // ======================================================================
 //
@@ -19,9 +19,11 @@ open fclouds
 
 open core
 open infrastructure
-open platform
 open sla
 open tosca
+open modmacao
+open platform
+open placement
 
 // ======================================================================
 //
@@ -31,22 +33,22 @@ open tosca
 
 one sig extension extends Extension {} {
     name = "extendedTosca"
-    scheme = "http://org.occi/extendedTosca#"
-    import = core/extension + infrastructure/extension + platform/extension + sla/extension + tosca/extension
+    scheme = "http://schemas.ogf.org/tosca/extended#"
+    import = core/extension + infrastructure/extension + sla/extension + tosca/extension + modmacao/extension + platform/extension + placement/extension
     no kinds
-    mixins = tosca_capabilities_indigo_endpoint + tosca_capabilities_somecap + tosca_capabilities_ha + tosca_capabilities_container_docker + tosca_capabilities_containerchild + tosca_capabilities_somechildcap + tosca_nodes_computewithprop + tosca_nodes_webapplication_paypalpizzastore + tosca_nodes_webapplication_wordpress + tosca_nodes_network_network + tosca_nodes_container_application_docker + tosca_nodes_softwarecomponent_kibana + tosca_nodes_computewithattrlist + tosca_nodes_softwarecomponent_logstash + example_databasesubsystem + tosca_nodes_softwarecomponent_collectd + tosca_nodes_nodewithreq + tosca_nodes_somenode2 + tosca_nodes_database_mysql + example_queuingsubsystem + example_transactionsubsystem + tosca_nodes_softwarecomponent_elasticsearch + tosca_nodes_databasewithlistparam + example_someapp + tosca_nodes_nodewithcap + rsyslog + tosca_nodes_network_port + tosca_nodes_computewithcapwithattr + tosca_nodes_softwarecomponent_rsyslog + tosca_nodes_hacompute + tosca_nodes_somenode + tosca_nodes_webserver_nodejs + tosca_nodes_dbms_mysql + mycompany_mytypes_myscalingpolicy + test_relation_connects + tosca_relationships_network_bindsto + tosca_relationships_ha + myattachesto + tosca_relationships_network_linksto
-    types = arrayCredential_DataType + arrayPortSpec_DataType + arrayversion_DataType + ip_versionEnum_DataType + arrayinteger_DataType
+    mixins = tosca_capabilities_indigo_endpoint + tosca_capabilities_somecap + tosca_capabilities_ha + tosca_capabilities_container_docker + tosca_capabilities_containerchild + tosca_capabilities_somechildcap + tosca_nodes_computewithprop + tosca_nodes_webapplication_paypalpizzastore + tosca_nodes_network_network + tosca_nodes_container_application_docker + tosca_nodes_softwarecomponent_kibana + tosca_nodes_computewithattrlist + tosca_nodes_softwarecomponent_logstash + example_databasesubsystem + tosca_nodes_softwarecomponent_collectd + tosca_nodes_nodewithreq + tosca_nodes_somenode2 + tosca_nodes_php + tosca_nodes_database_mysql + example_queuingsubsystem + example_transactionsubsystem + tosca_nodes_abstractmysql + tosca_nodes_mysql + tosca_nodes_softwarecomponent_elasticsearch + tosca_nodes_databasewithlistparam + example_someapp + tosca_nodes_apache + tosca_nodes_nodewithcap + rsyslog + tosca_nodes_wordpress + tosca_nodes_network_port + tosca_nodes_computewithcapwithattr + tosca_nodes_softwarecomponent_rsyslog + tosca_nodes_hacompute + tosca_nodes_somenode + tosca_nodes_webserver_nodejs + tosca_nodes_dbms_mysql + mycompany_mytypes_myscalingpolicy + test_relation_connects + tosca_relationships_network_bindsto + tosca_relationships_ha + myattachesto + tosca_relationships_network_linksto
+    types = arrayCredential_DataType + arrayPortSpec_DataType + arrayversion_DataType + ip_versionEnum_DataType + storage_pathEnum_DataType + arrayinteger_DataType
 }
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_capabilities_indigo_endpoint'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_capabilities_indigo_endpoint'
 //
 // ======================================================================
 
 one sig tosca_capabilities_indigo_endpoint extends Mixin {} {
     term = "tosca_capabilities_indigo_endpoint"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_capabilities_endpoint
     no applies
@@ -78,13 +80,13 @@ sig Tosca_capabilities_indigo_endpoint in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_capabilities_somecap'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_capabilities_somecap'
 //
 // ======================================================================
 
 one sig tosca_capabilities_somecap extends Mixin {} {
     term = "tosca_capabilities_somecap"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_capabilities_container
     no applies
@@ -116,13 +118,13 @@ sig Tosca_capabilities_somecap in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_capabilities_ha'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_capabilities_ha'
 //
 // ======================================================================
 
 one sig tosca_capabilities_ha extends Mixin {} {
     term = "tosca_capabilities_ha"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_capabilities_root
     no applies
@@ -140,13 +142,13 @@ sig Tosca_capabilities_ha in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_capabilities_container_docker'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_capabilities_container_docker'
 //
 // ======================================================================
 
 one sig tosca_capabilities_container_docker extends Mixin {} {
     term = "tosca_capabilities_container_docker"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_capabilities_container
     no applies
@@ -234,13 +236,13 @@ sig Tosca_capabilities_container_docker in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_capabilities_containerchild'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_capabilities_containerchild'
 //
 // ======================================================================
 
 one sig tosca_capabilities_containerchild extends Mixin {} {
     term = "tosca_capabilities_containerchild"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     title = "Define a capability class that inherits from tosca.capabilities.Container"
     depends = tosca/tosca_capabilities_container
     no applies
@@ -258,13 +260,13 @@ sig Tosca_capabilities_containerchild in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_capabilities_somechildcap'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_capabilities_somechildcap'
 //
 // ======================================================================
 
 one sig tosca_capabilities_somechildcap extends Mixin {} {
     term = "tosca_capabilities_somechildcap"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca_capabilities_somecap
     no applies
@@ -282,13 +284,13 @@ sig Tosca_capabilities_somechildcap in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_computewithprop'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_computewithprop'
 //
 // ======================================================================
 
 one sig tosca_nodes_computewithprop extends Mixin {} {
     term = "tosca_nodes_computewithprop"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     title = "Compute node type with a parameter for the get property with host test"
     depends = tosca/tosca_nodes_compute
     no applies
@@ -320,13 +322,13 @@ sig Tosca_nodes_computewithprop in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_webapplication_paypalpizzastore'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_webapplication_paypalpizzastore'
 //
 // ======================================================================
 
 one sig tosca_nodes_webapplication_paypalpizzastore extends Mixin {} {
     term = "tosca_nodes_webapplication_paypalpizzastore"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     title = "Pizza store app that allows you to explore the features provided by PayPal's REST APIs. More detail can be found at https://github.com/paypal/rest-api-sample-app-nodejs/"
     depends = tosca/tosca_nodes_webapplication
     no applies
@@ -358,79 +360,13 @@ sig Tosca_nodes_webapplication_paypalpizzastore in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_webapplication_wordpress'
-//
-// ======================================================================
-
-one sig tosca_nodes_webapplication_wordpress extends Mixin {} {
-    term = "tosca_nodes_webapplication_wordpress"
-    scheme = "http://org.occi/extendedTosca#"
-    no title
-    depends = tosca/tosca_nodes_webapplication
-    no applies
-    attributes = tosca_nodes_webapplication_wordpress_db_host + tosca_nodes_webapplication_wordpress_admin_password + tosca_nodes_webapplication_wordpress_admin_user
-    no actions
-    entities.Time in this/Tosca_nodes_webapplication_wordpress
-}
-
-//
-// OCCI attribute 'db.host'
-//
-one sig tosca_nodes_webapplication_wordpress_db_host extends Attribute {} {
-    name = "db.host"
-    type = tosca/string_DataType
-    mutable = True
-    required = False
-    no default
-    no description
-    multiple_values = False
-}
-
-//
-// OCCI attribute 'admin.password'
-//
-one sig tosca_nodes_webapplication_wordpress_admin_password extends Attribute {} {
-    name = "admin.password"
-    type = tosca/string_DataType
-    mutable = True
-    required = False
-    no default
-    no description
-    multiple_values = False
-}
-
-//
-// OCCI attribute 'admin.user'
-//
-one sig tosca_nodes_webapplication_wordpress_admin_user extends Attribute {} {
-    name = "admin.user"
-    type = tosca/string_DataType
-    mutable = True
-    required = False
-    no default
-    no description
-    multiple_values = False
-}
-
-// ======================================================================
-// Signature for Tosca_nodes_webapplication_wordpress
-// ======================================================================
-
-sig Tosca_nodes_webapplication_wordpress in core/Entity {
-    db_host : lone tosca/string,
-    admin_password : lone tosca/string,
-    admin_user : lone tosca/string,
-}
-
-// ======================================================================
-//
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_network_network'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_network_network'
 //
 // ======================================================================
 
 one sig tosca_nodes_network_network extends Mixin {} {
     term = "tosca_nodes_network_network"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_nodes_root
     no applies
@@ -588,13 +524,13 @@ sig Tosca_nodes_network_network in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_container_application_docker'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_container_application_docker'
 //
 // ======================================================================
 
 one sig tosca_nodes_container_application_docker extends Mixin {} {
     term = "tosca_nodes_container_application_docker"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_nodes_container_application
     no applies
@@ -612,13 +548,13 @@ sig Tosca_nodes_container_application_docker in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_softwarecomponent_kibana'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_softwarecomponent_kibana'
 //
 // ======================================================================
 
 one sig tosca_nodes_softwarecomponent_kibana extends Mixin {} {
     term = "tosca_nodes_softwarecomponent_kibana"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     title = "Kibana is an open source analytics and visualization platform designed to work with Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch."
     depends = tosca/tosca_nodes_softwarecomponent
     no applies
@@ -636,13 +572,13 @@ sig Tosca_nodes_softwarecomponent_kibana in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_computewithattrlist'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_computewithattrlist'
 //
 // ======================================================================
 
 one sig tosca_nodes_computewithattrlist extends Mixin {} {
     term = "tosca_nodes_computewithattrlist"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     title = "Compute node type with a list attribute"
     depends = tosca/tosca_nodes_compute
     no applies
@@ -674,13 +610,13 @@ sig Tosca_nodes_computewithattrlist in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_softwarecomponent_logstash'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_softwarecomponent_logstash'
 //
 // ======================================================================
 
 one sig tosca_nodes_softwarecomponent_logstash extends Mixin {} {
     term = "tosca_nodes_softwarecomponent_logstash"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     title = "Logstash is a tool for receiving, processing and outputting logs. All kinds of logs. System logs, webserver logs, error logs, application logs, and just about anything you can throw at it."
     depends = tosca/tosca_nodes_softwarecomponent + tosca/tosca_capabilities_endpoint
     no applies
@@ -698,13 +634,13 @@ sig Tosca_nodes_softwarecomponent_logstash in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#example_databasesubsystem'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#example_databasesubsystem'
 //
 // ======================================================================
 
 one sig example_databasesubsystem extends Mixin {} {
     term = "example_databasesubsystem"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_nodes_root + tosca/tosca_capabilities_endpoint_database
     no applies
@@ -722,13 +658,13 @@ sig Example_databasesubsystem in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_softwarecomponent_collectd'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_softwarecomponent_collectd'
 //
 // ======================================================================
 
 one sig tosca_nodes_softwarecomponent_collectd extends Mixin {} {
     term = "tosca_nodes_softwarecomponent_collectd"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     title = "collectd is a daemon which gathers statistics about the system it is running on."
     depends = tosca/tosca_nodes_softwarecomponent
     no applies
@@ -746,13 +682,13 @@ sig Tosca_nodes_softwarecomponent_collectd in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_nodewithreq'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_nodewithreq'
 //
 // ======================================================================
 
 one sig tosca_nodes_nodewithreq extends Mixin {} {
     term = "tosca_nodes_nodewithreq"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_nodes_softwarecomponent
     no applies
@@ -770,13 +706,13 @@ sig Tosca_nodes_nodewithreq in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_somenode2'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_somenode2'
 //
 // ======================================================================
 
 one sig tosca_nodes_somenode2 extends Mixin {} {
     term = "tosca_nodes_somenode2"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_nodes_root + tosca_capabilities_containerchild
     no applies
@@ -794,13 +730,37 @@ sig Tosca_nodes_somenode2 in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_database_mysql'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_php'
+//
+// ======================================================================
+
+one sig tosca_nodes_php extends Mixin {} {
+    term = "tosca_nodes_php"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
+    title = "PHP install through apt-get."
+    depends = tosca/tosca_nodes_softwarecomponent + tosca/tosca_capabilities_root
+    no applies
+    no attributes
+    no actions
+    entities.Time in this/Tosca_nodes_php
+}
+
+// ======================================================================
+// Signature for Tosca_nodes_php
+// ======================================================================
+
+sig Tosca_nodes_php in core/Entity {
+}
+
+// ======================================================================
+//
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_database_mysql'
 //
 // ======================================================================
 
 one sig tosca_nodes_database_mysql extends Mixin {} {
     term = "tosca_nodes_database_mysql"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_nodes_database
     no applies
@@ -818,13 +778,13 @@ sig Tosca_nodes_database_mysql in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#example_queuingsubsystem'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#example_queuingsubsystem'
 //
 // ======================================================================
 
 one sig example_queuingsubsystem extends Mixin {} {
     term = "example_queuingsubsystem"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_nodes_root + tosca/tosca_capabilities_endpoint
     no applies
@@ -842,13 +802,13 @@ sig Example_queuingsubsystem in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#example_transactionsubsystem'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#example_transactionsubsystem'
 //
 // ======================================================================
 
 one sig example_transactionsubsystem extends Mixin {} {
     term = "example_transactionsubsystem"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_nodes_root + tosca/tosca_capabilities_endpoint
     no applies
@@ -894,13 +854,131 @@ sig Example_transactionsubsystem in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_softwarecomponent_elasticsearch'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_abstractmysql'
+//
+// ======================================================================
+
+one sig tosca_nodes_abstractmysql extends Mixin {} {
+    term = "tosca_nodes_abstractmysql"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
+    title = "A node that provides a mysql endpoint."
+    depends = tosca/tosca_nodes_database + tosca/tosca_capabilities_endpoint_database
+    no applies
+    no attributes
+    no actions
+    entities.Time in this/Tosca_nodes_abstractmysql
+}
+
+// ======================================================================
+// Signature for Tosca_nodes_abstractmysql
+// ======================================================================
+
+sig Tosca_nodes_abstractmysql in core/Entity {
+}
+
+// ======================================================================
+//
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_mysql'
+//
+// ======================================================================
+
+one sig tosca_nodes_mysql extends Mixin {} {
+    term = "tosca_nodes_mysql"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
+    title = "A node that represent MySQL database with data on a attached volume."
+    depends = tosca_nodes_abstractmysql
+    no applies
+    attributes = tosca_nodes_mysql_portMySQL + tosca_nodes_mysql_storage_path + tosca_nodes_mysql_db_user + tosca_nodes_mysql_bind_address + tosca_nodes_mysql_db_password
+    no actions
+    entities.Time in this/Tosca_nodes_mysql
+}
+
+//
+// OCCI attribute 'portMySQL'
+//
+one sig tosca_nodes_mysql_portMySQL extends Attribute {} {
+    name = "portMySQL"
+    type = tosca/integer_DataType
+    mutable = True
+    required = False
+    default = "3306"
+    description = "The port on which the database will listen to data."
+    multiple_values = False
+}
+
+//
+// OCCI attribute 'storage.path'
+//
+one sig tosca_nodes_mysql_storage_path extends Attribute {} {
+    name = "storage.path"
+    type = storage_pathEnum_DataType
+    mutable = True
+    required = False
+    default = "mountedStorage"
+    no description
+    multiple_values = False
+}
+
+//
+// OCCI attribute 'db.user'
+//
+one sig tosca_nodes_mysql_db_user extends Attribute {} {
+    name = "db.user"
+    type = tosca/string_DataType
+    mutable = True
+    required = False
+    default = "pass"
+    description = "The user account used for database administration."
+    multiple_values = False
+}
+
+//
+// OCCI attribute 'bind.address'
+//
+one sig tosca_nodes_mysql_bind_address extends Attribute {} {
+    name = "bind.address"
+    type = tosca/boolean_DataType
+    mutable = True
+    required = False
+    default = "true"
+    description = "If true,the server accepts TCP/IP connections on all server host IPv4 interfaces."
+    multiple_values = False
+}
+
+//
+// OCCI attribute 'db.password'
+//
+one sig tosca_nodes_mysql_db_password extends Attribute {} {
+    name = "db.password"
+    type = tosca/string_DataType
+    mutable = True
+    required = False
+    default = "pass"
+    description = "The password associated with the user account for database administration."
+    multiple_values = False
+}
+
+// ======================================================================
+// Signature for Tosca_nodes_mysql
+// ======================================================================
+
+sig Tosca_nodes_mysql in core/Entity {
+    portMySQL : lone tosca/integer,
+    storage_path : lone storage_pathEnum,
+    db_user : lone tosca/string,
+    bind_address : lone tosca/boolean,
+    db_password : lone tosca/string,
+}
+
+// ======================================================================
+//
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_softwarecomponent_elasticsearch'
 //
 // ======================================================================
 
 one sig tosca_nodes_softwarecomponent_elasticsearch extends Mixin {} {
     term = "tosca_nodes_softwarecomponent_elasticsearch"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     title = "Elasticsearch is an open-source search engine built on top of Apache Lucene, a full-text search-engine library."
     depends = tosca/tosca_nodes_softwarecomponent + tosca/tosca_capabilities_endpoint
     no applies
@@ -918,13 +996,13 @@ sig Tosca_nodes_softwarecomponent_elasticsearch in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_databasewithlistparam'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_databasewithlistparam'
 //
 // ======================================================================
 
 one sig tosca_nodes_databasewithlistparam extends Mixin {} {
     term = "tosca_nodes_databasewithlistparam"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_nodes_database
     no applies
@@ -956,13 +1034,13 @@ sig Tosca_nodes_databasewithlistparam in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#example_someapp'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#example_someapp'
 //
 // ======================================================================
 
 one sig example_someapp extends Mixin {} {
     term = "example_someapp"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     title = "taken from tosca-topologies/Example18-ImplementationOfATransactionSubsytemNodeTypeUsingSubstitutionMappings"
     depends = tosca/tosca_nodes_root + tosca/tosca_capabilities_endpoint
     no applies
@@ -980,13 +1058,51 @@ sig Example_someapp in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_nodewithcap'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_apache'
+//
+// ======================================================================
+
+one sig tosca_nodes_apache extends Mixin {} {
+    term = "tosca_nodes_apache"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
+    title = "The TOSCA Apache Node Type represents an apache component that can be managed and run by a TOSCA Compute Node Type."
+    depends = tosca/tosca_nodes_webserver + tosca/tosca_capabilities_container
+    no applies
+    attributes = tosca_nodes_apache_document_root
+    no actions
+    entities.Time in this/Tosca_nodes_apache
+}
+
+//
+// OCCI attribute 'document.root'
+//
+one sig tosca_nodes_apache_document_root extends Attribute {} {
+    name = "document.root"
+    type = tosca/string_DataType
+    mutable = True
+    required = False
+    default = "/var/www"
+    no description
+    multiple_values = False
+}
+
+// ======================================================================
+// Signature for Tosca_nodes_apache
+// ======================================================================
+
+sig Tosca_nodes_apache in core/Entity {
+    document_root : lone tosca/string,
+}
+
+// ======================================================================
+//
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_nodewithcap'
 //
 // ======================================================================
 
 one sig tosca_nodes_nodewithcap extends Mixin {} {
     term = "tosca_nodes_nodewithcap"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_nodes_root + tosca_capabilities_somecap
     no applies
@@ -1004,13 +1120,13 @@ sig Tosca_nodes_nodewithcap in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#rsyslog'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#rsyslog'
 //
 // ======================================================================
 
 one sig rsyslog extends Mixin {} {
     term = "rsyslog"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     title = "RSYSLOG is the Rocket-fast SYStem for LOG processing."
     depends = tosca/tosca_nodes_softwarecomponent
     no applies
@@ -1028,13 +1144,51 @@ sig Rsyslog in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_network_port'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_wordpress'
+//
+// ======================================================================
+
+one sig tosca_nodes_wordpress extends Mixin {} {
+    term = "tosca_nodes_wordpress"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
+    title = "The TOSCA Wordpress Node Type represents a Wordpress CMS."
+    depends = tosca/tosca_nodes_webapplication
+    no applies
+    attributes = tosca_nodes_wordpress_zip_url
+    no actions
+    entities.Time in this/Tosca_nodes_wordpress
+}
+
+//
+// OCCI attribute 'zip.url'
+//
+one sig tosca_nodes_wordpress_zip_url extends Attribute {} {
+    name = "zip.url"
+    type = tosca/string_DataType
+    mutable = True
+    required = False
+    default = "https://wordpress.org/latest.zip"
+    no description
+    multiple_values = False
+}
+
+// ======================================================================
+// Signature for Tosca_nodes_wordpress
+// ======================================================================
+
+sig Tosca_nodes_wordpress in core/Entity {
+    zip_url : lone tosca/string,
+}
+
+// ======================================================================
+//
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_network_port'
 //
 // ======================================================================
 
 one sig tosca_nodes_network_port extends Mixin {} {
     term = "tosca_nodes_network_port"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_nodes_root
     no applies
@@ -1122,13 +1276,13 @@ sig Tosca_nodes_network_port in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_computewithcapwithattr'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_computewithcapwithattr'
 //
 // ======================================================================
 
 one sig tosca_nodes_computewithcapwithattr extends Mixin {} {
     term = "tosca_nodes_computewithcapwithattr"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     title = "Compute node type with capability with an attribute of type list"
     depends = tosca/tosca_nodes_compute + tosca_capabilities_indigo_endpoint
     no applies
@@ -1146,13 +1300,13 @@ sig Tosca_nodes_computewithcapwithattr in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_softwarecomponent_rsyslog'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_softwarecomponent_rsyslog'
 //
 // ======================================================================
 
 one sig tosca_nodes_softwarecomponent_rsyslog extends Mixin {} {
     term = "tosca_nodes_softwarecomponent_rsyslog"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     title = "RSYSLOG is the Rocket-fast SYStem for LOG processing."
     depends = tosca/tosca_nodes_softwarecomponent
     no applies
@@ -1170,13 +1324,13 @@ sig Tosca_nodes_softwarecomponent_rsyslog in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_hacompute'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_hacompute'
 //
 // ======================================================================
 
 one sig tosca_nodes_hacompute extends Mixin {} {
     term = "tosca_nodes_hacompute"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_nodes_compute + tosca_capabilities_ha
     no applies
@@ -1194,13 +1348,13 @@ sig Tosca_nodes_hacompute in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_somenode'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_somenode'
 //
 // ======================================================================
 
 one sig tosca_nodes_somenode extends Mixin {} {
     term = "tosca_nodes_somenode"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     title = "Node type that has a requirement of a capability with a defined value"
     depends = tosca/tosca_nodes_root
     no applies
@@ -1232,13 +1386,13 @@ sig Tosca_nodes_somenode in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_webserver_nodejs'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_webserver_nodejs'
 //
 // ======================================================================
 
 one sig tosca_nodes_webserver_nodejs extends Mixin {} {
     term = "tosca_nodes_webserver_nodejs"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_nodes_webserver
     no applies
@@ -1270,13 +1424,13 @@ sig Tosca_nodes_webserver_nodejs in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_nodes_dbms_mysql'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_nodes_dbms_mysql'
 //
 // ======================================================================
 
 one sig tosca_nodes_dbms_mysql extends Mixin {} {
     term = "tosca_nodes_dbms_mysql"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_nodes_dbms
     no applies
@@ -1294,13 +1448,13 @@ sig Tosca_nodes_dbms_mysql in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#mycompany_mytypes_myscalingpolicy'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#mycompany_mytypes_myscalingpolicy'
 //
 // ======================================================================
 
 one sig mycompany_mytypes_myscalingpolicy extends Mixin {} {
     term = "mycompany_mytypes_myscalingpolicy"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     no depends
     no applies
@@ -1318,13 +1472,13 @@ sig Mycompany_mytypes_myscalingpolicy in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#test_relation_connects'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#test_relation_connects'
 //
 // ======================================================================
 
 one sig test_relation_connects extends Mixin {} {
     term = "test_relation_connects"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     no depends
     no applies
@@ -1342,13 +1496,13 @@ sig Test_relation_connects in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_relationships_network_bindsto'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_relationships_network_bindsto'
 //
 // ======================================================================
 
 one sig tosca_relationships_network_bindsto extends Mixin {} {
     term = "tosca_relationships_network_bindsto"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_relationships_dependson
     no applies
@@ -1366,13 +1520,13 @@ sig Tosca_relationships_network_bindsto in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_relationships_ha'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_relationships_ha'
 //
 // ======================================================================
 
 one sig tosca_relationships_ha extends Mixin {} {
     term = "tosca_relationships_ha"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_relationships_root
     no applies
@@ -1390,13 +1544,13 @@ sig Tosca_relationships_ha in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#myattachesto'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#myattachesto'
 //
 // ======================================================================
 
 one sig myattachesto extends Mixin {} {
     term = "myattachesto"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     title = "taken from tosca-topologies/BlockStorage4"
     depends = tosca/tosca_relationships_attachesto
     no applies
@@ -1414,13 +1568,13 @@ sig Myattachesto in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/extendedTosca#tosca_relationships_network_linksto'
+// OCCI mixin 'http://schemas.ogf.org/tosca/extended#tosca_relationships_network_linksto'
 //
 // ======================================================================
 
 one sig tosca_relationships_network_linksto extends Mixin {} {
     term = "tosca_relationships_network_linksto"
-    scheme = "http://org.occi/extendedTosca#"
+    scheme = "http://schemas.ogf.org/tosca/extended#"
     no title
     depends = tosca/tosca_relationships_dependson
     no applies
@@ -1471,6 +1625,15 @@ one sig ip_versionEnum_DataType extends DataType {} {
 }
 
 let ip_versionEnum=String
+
+//
+// OCCI data type storage_pathEnum
+//
+one sig storage_pathEnum_DataType extends DataType {} {
+    name = "storage_pathEnum"
+}
+
+let storage_pathEnum=String
 
 //
 // OCCI data type arrayinteger

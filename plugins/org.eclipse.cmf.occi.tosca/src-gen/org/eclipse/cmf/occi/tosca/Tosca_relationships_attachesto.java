@@ -46,7 +46,7 @@ public interface Tosca_relationships_attachesto extends Tosca_relationships_root
 	 * @see #setLocation(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_relationships_attachesto_Location()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.stringMinOne"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_relationships_attachesto!location'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_relationships_attachesto!location'"
 	 * @generated
 	 */
 	String getLocation();

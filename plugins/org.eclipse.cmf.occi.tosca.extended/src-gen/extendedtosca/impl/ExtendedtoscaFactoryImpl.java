@@ -79,7 +79,6 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_SOMECHILDCAP: return createTosca_capabilities_somechildcap();
 			case ExtendedtoscaPackage.TOSCA_NODES_COMPUTEWITHPROP: return createTosca_nodes_computewithprop();
 			case ExtendedtoscaPackage.TOSCA_NODES_WEBAPPLICATION_PAYPALPIZZASTORE: return createTosca_nodes_webapplication_paypalpizzastore();
-			case ExtendedtoscaPackage.TOSCA_NODES_WEBAPPLICATION_WORDPRESS: return createTosca_nodes_webapplication_wordpress();
 			case ExtendedtoscaPackage.TOSCA_NODES_NETWORK_NETWORK: return createTosca_nodes_network_network();
 			case ExtendedtoscaPackage.TOSCA_NODES_CONTAINER_APPLICATION_DOCKER: return createTosca_nodes_container_application_docker();
 			case ExtendedtoscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_KIBANA: return createTosca_nodes_softwarecomponent_kibana();
@@ -89,14 +88,19 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 			case ExtendedtoscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_COLLECTD: return createTosca_nodes_softwarecomponent_collectd();
 			case ExtendedtoscaPackage.TOSCA_NODES_NODEWITHREQ: return createTosca_nodes_nodewithreq();
 			case ExtendedtoscaPackage.TOSCA_NODES_SOMENODE2: return createTosca_nodes_somenode2();
+			case ExtendedtoscaPackage.TOSCA_NODES_PHP: return createTosca_nodes_php();
 			case ExtendedtoscaPackage.TOSCA_NODES_DATABASE_MYSQL: return createTosca_nodes_database_mysql();
 			case ExtendedtoscaPackage.EXAMPLE_QUEUINGSUBSYSTEM: return createExample_queuingsubsystem();
 			case ExtendedtoscaPackage.EXAMPLE_TRANSACTIONSUBSYSTEM: return createExample_transactionsubsystem();
+			case ExtendedtoscaPackage.TOSCA_NODES_ABSTRACTMYSQL: return createTosca_nodes_abstractmysql();
+			case ExtendedtoscaPackage.TOSCA_NODES_MYSQL: return createTosca_nodes_mysql();
 			case ExtendedtoscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH: return createTosca_nodes_softwarecomponent_elasticsearch();
 			case ExtendedtoscaPackage.TOSCA_NODES_DATABASEWITHLISTPARAM: return createTosca_nodes_databasewithlistparam();
 			case ExtendedtoscaPackage.EXAMPLE_SOMEAPP: return createExample_someapp();
+			case ExtendedtoscaPackage.TOSCA_NODES_APACHE: return createTosca_nodes_apache();
 			case ExtendedtoscaPackage.TOSCA_NODES_NODEWITHCAP: return createTosca_nodes_nodewithcap();
 			case ExtendedtoscaPackage.RSYSLOG: return createRsyslog();
+			case ExtendedtoscaPackage.TOSCA_NODES_WORDPRESS: return createTosca_nodes_wordpress();
 			case ExtendedtoscaPackage.TOSCA_NODES_NETWORK_PORT: return createTosca_nodes_network_port();
 			case ExtendedtoscaPackage.TOSCA_NODES_COMPUTEWITHCAPWITHATTR: return createTosca_nodes_computewithcapwithattr();
 			case ExtendedtoscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_RSYSLOG: return createTosca_nodes_softwarecomponent_rsyslog();
@@ -125,6 +129,8 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 		switch (eDataType.getClassifierID()) {
 			case ExtendedtoscaPackage.IP_VERSION_ENUM:
 				return createip_versionEnumFromString(eDataType, initialValue);
+			case ExtendedtoscaPackage.STORAGE_PATH_ENUM:
+				return createstorage_pathEnumFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -140,6 +146,8 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 		switch (eDataType.getClassifierID()) {
 			case ExtendedtoscaPackage.IP_VERSION_ENUM:
 				return convertip_versionEnumToString(eDataType, instanceValue);
+			case ExtendedtoscaPackage.STORAGE_PATH_ENUM:
+				return convertstorage_pathEnumToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -270,16 +278,6 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tosca_nodes_webapplication_wordpress createTosca_nodes_webapplication_wordpress() {
-		Tosca_nodes_webapplication_wordpressImpl tosca_nodes_webapplication_wordpress = new Tosca_nodes_webapplication_wordpressImpl();
-		return tosca_nodes_webapplication_wordpress;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Tosca_nodes_network_network createTosca_nodes_network_network() {
 		Tosca_nodes_network_networkImpl tosca_nodes_network_network = new Tosca_nodes_network_networkImpl();
 		return tosca_nodes_network_network;
@@ -370,6 +368,16 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Tosca_nodes_php createTosca_nodes_php() {
+		Tosca_nodes_phpImpl tosca_nodes_php = new Tosca_nodes_phpImpl();
+		return tosca_nodes_php;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Tosca_nodes_database_mysql createTosca_nodes_database_mysql() {
 		Tosca_nodes_database_mysqlImpl tosca_nodes_database_mysql = new Tosca_nodes_database_mysqlImpl();
 		return tosca_nodes_database_mysql;
@@ -393,6 +401,26 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	public Example_transactionsubsystem createExample_transactionsubsystem() {
 		Example_transactionsubsystemImpl example_transactionsubsystem = new Example_transactionsubsystemImpl();
 		return example_transactionsubsystem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Tosca_nodes_abstractmysql createTosca_nodes_abstractmysql() {
+		Tosca_nodes_abstractmysqlImpl tosca_nodes_abstractmysql = new Tosca_nodes_abstractmysqlImpl();
+		return tosca_nodes_abstractmysql;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Tosca_nodes_mysql createTosca_nodes_mysql() {
+		Tosca_nodes_mysqlImpl tosca_nodes_mysql = new Tosca_nodes_mysqlImpl();
+		return tosca_nodes_mysql;
 	}
 
 	/**
@@ -430,6 +458,16 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Tosca_nodes_apache createTosca_nodes_apache() {
+		Tosca_nodes_apacheImpl tosca_nodes_apache = new Tosca_nodes_apacheImpl();
+		return tosca_nodes_apache;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Tosca_nodes_nodewithcap createTosca_nodes_nodewithcap() {
 		Tosca_nodes_nodewithcapImpl tosca_nodes_nodewithcap = new Tosca_nodes_nodewithcapImpl();
 		return tosca_nodes_nodewithcap;
@@ -443,6 +481,16 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	public Rsyslog createRsyslog() {
 		RsyslogImpl rsyslog = new RsyslogImpl();
 		return rsyslog;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Tosca_nodes_wordpress createTosca_nodes_wordpress() {
+		Tosca_nodes_wordpressImpl tosca_nodes_wordpress = new Tosca_nodes_wordpressImpl();
+		return tosca_nodes_wordpress;
 	}
 
 	/**
@@ -592,6 +640,26 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	 * @generated
 	 */
 	public String convertip_versionEnumToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public storage_pathEnum createstorage_pathEnumFromString(EDataType eDataType, String initialValue) {
+		storage_pathEnum result = storage_pathEnum.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertstorage_pathEnumToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -48,7 +48,7 @@ public interface PortSpec extends EObject {
 	 * @see #setProtocol(protocolEnum)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortSpec_Protocol()
 	 * @model required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortSpec!protocol'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!PortSpec!protocol'"
 	 * @generated
 	 */
 	protocolEnum getProtocol();
@@ -75,7 +75,7 @@ public interface PortSpec extends EObject {
 	 * @see #setTargetrange(Short)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortSpec_Targetrange()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.range" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortSpec!targetrange'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!PortSpec!targetrange'"
 	 * @generated
 	 */
 	Short getTargetrange();
@@ -101,7 +101,7 @@ public interface PortSpec extends EObject {
 	 * @see #setSourcerange(Short)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortSpec_Sourcerange()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.range" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortSpec!sourcerange'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!PortSpec!sourcerange'"
 	 * @generated
 	 */
 	Short getSourcerange();
@@ -127,7 +127,7 @@ public interface PortSpec extends EObject {
 	 * @see #setSource(Short)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortSpec_Source()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortDef" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortSpec!source'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!PortSpec!source'"
 	 * @generated
 	 */
 	Short getSource();
@@ -153,7 +153,7 @@ public interface PortSpec extends EObject {
 	 * @see #setTarget(Short)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortSpec_Target()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.toscadatatypesnetworkPortDef" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortSpec!target'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!PortSpec!target'"
 	 * @generated
 	 */
 	Short getTarget();

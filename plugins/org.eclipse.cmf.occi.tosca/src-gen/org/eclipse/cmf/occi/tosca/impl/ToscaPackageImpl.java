@@ -14,11 +14,11 @@ package org.eclipse.cmf.occi.tosca.impl;
 
 import java.util.Map;
 
+import modmacao.ModmacaoPackage;
+
 import org.eclipse.cmf.occi.core.OCCIPackage;
 
 import org.eclipse.cmf.occi.infrastructure.InfrastructurePackage;
-
-import org.eclipse.cmf.occi.platform.PlatformPackage;
 
 import org.eclipse.cmf.occi.sla.SlaPackage;
 
@@ -83,6 +83,10 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.modmacao.occi.platform.PlatformPackage;
+
+import org.modmacao.placement.PlacementPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -588,8 +592,10 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 
 		// Initialize simple dependencies
 		InfrastructurePackage.eINSTANCE.eClass();
-		PlatformPackage.eINSTANCE.eClass();
 		SlaPackage.eINSTANCE.eClass();
+		ModmacaoPackage.eINSTANCE.eClass();
+		PlatformPackage.eINSTANCE.eClass();
+		PlacementPackage.eINSTANCE.eClass();
 		OCCIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -2850,7 +2856,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		  (integerMinZeroEDataType,
 		   source,
 		   new String[] {
-			   "minInclusive", "0"
+			   "minInclusive", "0",
+			   "minExclusive", "-1"
 		   });
 		addAnnotation
 		  (versionEDataType,
@@ -2863,38 +2870,45 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		   source,
 		   new String[] {
 			   "minInclusive", "1",
-			   "maxInclusive", "65535"
+			   "maxInclusive", "32767",
+			   "maxExclusive", "32767"
 		   });
 		addAnnotation
 		  (toscadatatypesnetworkPortDefEDataType,
 		   source,
 		   new String[] {
 			   "minInclusive", "1",
-			   "maxInclusive", "65535"
+			   "minExclusive", "0",
+			   "maxInclusive", "32767",
+			   "maxExclusive", "32767"
 		   });
 		addAnnotation
 		  (scalarFrequencyEDataType,
 		   source,
 		   new String[] {
-			   "minInclusive", "0.1 GHz"
+			   "minInclusive", "0.1",
+			   "minExclusive", "0.2"
 		   });
 		addAnnotation
 		  (scalarSizeMinOneMBEDataType,
 		   source,
 		   new String[] {
-			   "minInclusive", "1 MB"
+			   "minInclusive", "1",
+			   "minExclusive", "0"
 		   });
 		addAnnotation
 		  (scalarSizeMinZeroGBEDataType,
 		   source,
 		   new String[] {
-			   "minInclusive", "0 GB"
+			   "minInclusive", "0",
+			   "minExclusive", "1"
 		   });
 		addAnnotation
 		  (scalarSizeMinZeroMBEDataType,
 		   source,
 		   new String[] {
-			   "minInclusive", "0 MB"
+			   "minInclusive", "0",
+			   "minExclusive", "1"
 		   });
 	}
 

@@ -1,4 +1,4 @@
-// Generated at Wed Nov 28 22:59:40 CET 2018 from  by org.eclipse.cmf.occi.core.gen.alloy
+// Generated at Mon Mar 04 14:57:53 CET 2019 from  by org.eclipse.cmf.occi.core.gen.alloy
 
 // ======================================================================
 //
@@ -17,12 +17,14 @@ open tosca
 //
 open core
 open infrastructure
-open platform
 open sla
+open modmacao
+open platform
+open placement
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_root'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_root'
 //
 // ======================================================================
 
@@ -37,7 +39,7 @@ pred isoTosca_capabilities_root[t1, t2: Tosca_capabilities_root]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_node'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_node'
 //
 // ======================================================================
 
@@ -52,7 +54,7 @@ pred isoTosca_capabilities_node[t1, t2: Tosca_capabilities_node]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_endpoint'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_endpoint'
 //
 // ======================================================================
 
@@ -75,7 +77,7 @@ pred isoTosca_capabilities_endpoint[t1, t2: Tosca_capabilities_endpoint]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_scalable'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_scalable'
 //
 // ======================================================================
 
@@ -93,7 +95,7 @@ pred isoTosca_capabilities_scalable[t1, t2: Tosca_capabilities_scalable]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_network_bindable'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_network_bindable'
 //
 // ======================================================================
 
@@ -108,7 +110,7 @@ pred isoTosca_capabilities_network_bindable[t1, t2: Tosca_capabilities_network_b
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_container'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_container'
 //
 // ======================================================================
 
@@ -124,7 +126,7 @@ pred isoTosca_capabilities_container[t1, t2: Tosca_capabilities_container]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_endpoint_database'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_endpoint_database'
 //
 // ======================================================================
 
@@ -139,7 +141,7 @@ pred isoTosca_capabilities_endpoint_database[t1, t2: Tosca_capabilities_endpoint
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_endpoint_public'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_endpoint_public'
 //
 // ======================================================================
 
@@ -156,7 +158,7 @@ pred isoTosca_capabilities_endpoint_public[t1, t2: Tosca_capabilities_endpoint_p
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_endpoint_admin'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_endpoint_admin'
 //
 // ======================================================================
 
@@ -171,7 +173,7 @@ pred isoTosca_capabilities_endpoint_admin[t1, t2: Tosca_capabilities_endpoint_ad
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_operatingsystem'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_operatingsystem'
 //
 // ======================================================================
 
@@ -189,7 +191,7 @@ pred isoTosca_capabilities_operatingsystem[t1, t2: Tosca_capabilities_operatings
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_attachment'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_attachment'
 //
 // ======================================================================
 
@@ -204,7 +206,7 @@ pred isoTosca_capabilities_attachment[t1, t2: Tosca_capabilities_attachment]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_root'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_root'
 //
 // ======================================================================
 
@@ -219,7 +221,7 @@ pred isoTosca_nodes_root[t1, t2: Tosca_nodes_root]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_webapplication'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_webapplication'
 //
 // ======================================================================
 
@@ -235,7 +237,7 @@ pred isoTosca_nodes_webapplication[t1, t2: Tosca_nodes_webapplication]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_softwarecomponent'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_softwarecomponent'
 //
 // ======================================================================
 
@@ -252,7 +254,7 @@ pred isoTosca_nodes_softwarecomponent[t1, t2: Tosca_nodes_softwarecomponent]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_dbms'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_dbms'
 //
 // ======================================================================
 
@@ -269,7 +271,7 @@ pred isoTosca_nodes_dbms[t1, t2: Tosca_nodes_dbms]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_objectstorage'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_objectstorage'
 //
 // ======================================================================
 
@@ -286,7 +288,7 @@ pred isoTosca_nodes_objectstorage[t1, t2: Tosca_nodes_objectstorage]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_compute'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_compute'
 //
 // ======================================================================
 
@@ -304,7 +306,7 @@ pred isoTosca_nodes_compute[t1, t2: Tosca_nodes_compute]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_loadbalancer'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_loadbalancer'
 //
 // ======================================================================
 
@@ -320,7 +322,7 @@ pred isoTosca_nodes_loadbalancer[t1, t2: Tosca_nodes_loadbalancer]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_webserver'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_webserver'
 //
 // ======================================================================
 
@@ -335,7 +337,7 @@ pred isoTosca_nodes_webserver[t1, t2: Tosca_nodes_webserver]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_database'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_database'
 //
 // ======================================================================
 
@@ -353,7 +355,7 @@ pred isoTosca_nodes_database[t1, t2: Tosca_nodes_database]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_container_application'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_container_application'
 //
 // ======================================================================
 
@@ -368,7 +370,7 @@ pred isoTosca_nodes_container_application[t1, t2: Tosca_nodes_container_applicat
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_container_runtime'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_container_runtime'
 //
 // ======================================================================
 
@@ -383,7 +385,7 @@ pred isoTosca_nodes_container_runtime[t1, t2: Tosca_nodes_container_runtime]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_blockstorage'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_blockstorage'
 //
 // ======================================================================
 
@@ -400,7 +402,7 @@ pred isoTosca_nodes_blockstorage[t1, t2: Tosca_nodes_blockstorage]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_policies_root'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_policies_root'
 //
 // ======================================================================
 
@@ -415,7 +417,7 @@ pred isoTosca_policies_root[t1, t2: Tosca_policies_root]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_policies_update'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_policies_update'
 //
 // ======================================================================
 
@@ -430,7 +432,7 @@ pred isoTosca_policies_update[t1, t2: Tosca_policies_update]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_policies_placement'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_policies_placement'
 //
 // ======================================================================
 
@@ -445,7 +447,7 @@ pred isoTosca_policies_placement[t1, t2: Tosca_policies_placement]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_policies_scaling'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_policies_scaling'
 //
 // ======================================================================
 
@@ -460,7 +462,7 @@ pred isoTosca_policies_scaling[t1, t2: Tosca_policies_scaling]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_policies_performance'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_policies_performance'
 //
 // ======================================================================
 
@@ -475,7 +477,7 @@ pred isoTosca_policies_performance[t1, t2: Tosca_policies_performance]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_groups_root'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_groups_root'
 //
 // ======================================================================
 
@@ -490,7 +492,7 @@ pred isoTosca_groups_root[t1, t2: Tosca_groups_root]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_interfaces_root'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_interfaces_root'
 //
 // ======================================================================
 
@@ -505,7 +507,7 @@ pred isoTosca_interfaces_root[t1, t2: Tosca_interfaces_root]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_interfaces_relationship_configure'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_interfaces_relationship_configure'
 //
 // ======================================================================
 
@@ -518,49 +520,49 @@ pred isoTosca_interfaces_relationship_configure[t1, t2: Tosca_interfaces_relatio
 }
 
 //
-// OCCI Action 'http://org.occi/tosca/tosca_interfaces_relationship_configure/action#pre_configure_source'
+// OCCI Action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#pre_configure_source'
 //
 
 
 
 //
-// OCCI Action 'http://org.occi/tosca/tosca_interfaces_relationship_configure/action#pre_configure_target'
+// OCCI Action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#pre_configure_target'
 //
 
 
 
 //
-// OCCI Action 'http://org.occi/tosca/tosca_interfaces_relationship_configure/action#post_configure_source'
+// OCCI Action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#post_configure_source'
 //
 
 
 
 //
-// OCCI Action 'http://org.occi/tosca/tosca_interfaces_relationship_configure/action#post_configure_target'
+// OCCI Action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#post_configure_target'
 //
 
 
 
 //
-// OCCI Action 'http://org.occi/tosca/tosca_interfaces_relationship_configure/action#remove_target'
+// OCCI Action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#remove_target'
 //
 
 
 
 //
-// OCCI Action 'http://org.occi/tosca/tosca_interfaces_relationship_configure/action#add_target'
+// OCCI Action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#add_target'
 //
 
 
 
 //
-// OCCI Action 'http://org.occi/tosca/tosca_interfaces_relationship_configure/action#add_source'
+// OCCI Action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#add_source'
 //
 
 
 
 //
-// OCCI Action 'http://org.occi/tosca/tosca_interfaces_relationship_configure/action#target_changed'
+// OCCI Action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#target_changed'
 //
 
 
@@ -568,7 +570,7 @@ pred isoTosca_interfaces_relationship_configure[t1, t2: Tosca_interfaces_relatio
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_interfaces_node_lifecycle_standard'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_interfaces_node_lifecycle_standard'
 //
 // ======================================================================
 
@@ -581,19 +583,19 @@ pred isoTosca_interfaces_node_lifecycle_standard[t1, t2: Tosca_interfaces_node_l
 }
 
 //
-// OCCI Action 'http://org.occi/tosca/tosca_interfaces_node_lifecycle_standard/action#create'
+// OCCI Action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_node_lifecycle_standard/action#create'
 //
 
 
 
 //
-// OCCI Action 'http://org.occi/tosca/tosca_interfaces_node_lifecycle_standard/action#configure'
+// OCCI Action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_node_lifecycle_standard/action#configure'
 //
 
 
 
 //
-// OCCI Action 'http://org.occi/tosca/tosca_interfaces_node_lifecycle_standard/action#delete'
+// OCCI Action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_node_lifecycle_standard/action#delete'
 //
 
 
@@ -601,7 +603,7 @@ pred isoTosca_interfaces_node_lifecycle_standard[t1, t2: Tosca_interfaces_node_l
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_relationships_root'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_relationships_root'
 //
 // ======================================================================
 
@@ -619,7 +621,7 @@ pred isoTosca_relationships_root[t1, t2: Tosca_relationships_root]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_relationships_connectsto'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_relationships_connectsto'
 //
 // ======================================================================
 
@@ -635,7 +637,7 @@ pred isoTosca_relationships_connectsto[t1, t2: Tosca_relationships_connectsto]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_relationships_routesto'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_relationships_routesto'
 //
 // ======================================================================
 
@@ -650,7 +652,7 @@ pred isoTosca_relationships_routesto[t1, t2: Tosca_relationships_routesto]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_relationships_attachesto'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_relationships_attachesto'
 //
 // ======================================================================
 
@@ -666,7 +668,7 @@ pred isoTosca_relationships_attachesto[t1, t2: Tosca_relationships_attachesto]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_relationships_hostedon'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_relationships_hostedon'
 //
 // ======================================================================
 
@@ -681,7 +683,7 @@ pred isoTosca_relationships_hostedon[t1, t2: Tosca_relationships_hostedon]
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_relationships_dependson'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_relationships_dependson'
 //
 // ======================================================================
 

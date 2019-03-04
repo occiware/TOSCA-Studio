@@ -52,7 +52,7 @@ public interface Credential extends EObject {
 	 * @see #setProtocol(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getCredential_Protocol()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Credential!protocol'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Credential!protocol'"
 	 * @generated
 	 */
 	String getProtocol();
@@ -78,7 +78,7 @@ public interface Credential extends EObject {
 	 * @see #setKeys(Map)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getCredential_Keys()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.map" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Credential!keys'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Credential!keys'"
 	 * @generated
 	 */
 	Map getKeys();
@@ -105,7 +105,7 @@ public interface Credential extends EObject {
 	 * @see #setTokentype(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getCredential_Tokentype()
 	 * @model default="The required token type." dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Credential!tokentype'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Credential!tokentype'"
 	 * @generated
 	 */
 	String getTokentype();
@@ -131,7 +131,7 @@ public interface Credential extends EObject {
 	 * @see #setUser(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getCredential_User()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Credential!user'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Credential!user'"
 	 * @generated
 	 */
 	String getUser();
@@ -157,7 +157,7 @@ public interface Credential extends EObject {
 	 * @see #setToken(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getCredential_Token()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Credential!token'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Credential!token'"
 	 * @generated
 	 */
 	String getToken();

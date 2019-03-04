@@ -15,6 +15,15 @@
         <ecoreEnumLiteral href="extendedTosca.ecore#//ip_versionEnum/IPv6"/>
       </genEnumLiterals>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false">
+      <ecoreEnum href="extendedTosca.ecore#//storage_pathEnum"/>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="extendedTosca.ecore#//storage_pathEnum/mountedStorage"/>
+      </genEnumLiterals>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="extendedTosca.ecore#//storage_pathEnum/varmysql"/>
+      </genEnumLiterals>
+    </genEnums>
     <genClasses>
       <ecoreClass href="extendedTosca.ecore#//arrayCredential"/>
       <genFeatures property="None" children="true" createChild="true">
@@ -91,18 +100,6 @@
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_webapplication_wordpress"/>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_webapplication_wordpress/dbHost"/>
-      </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_webapplication_wordpress/adminPassword"/>
-      </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_webapplication_wordpress/adminUser"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_network_network"/>
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_network/physicalNetwork"/>
@@ -163,6 +160,9 @@
       <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_somenode2"/>
     </genClasses>
     <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_php"/>
+    </genClasses>
+    <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_database_mysql"/>
     </genClasses>
     <genClasses>
@@ -178,6 +178,27 @@
       </genFeatures>
     </genClasses>
     <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_abstractmysql"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_mysql"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_mysql/portMySQL"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_mysql/storagePath"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_mysql/dbUser"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_mysql/bindAddress"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_mysql/dbPassword"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_softwarecomponent_elasticsearch"/>
     </genClasses>
     <genClasses>
@@ -190,10 +211,22 @@
       <ecoreClass href="extendedTosca.ecore#//Example_someapp"/>
     </genClasses>
     <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_apache"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_apache/documentRoot"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_nodewithcap"/>
     </genClasses>
     <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Rsyslog"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_wordpress"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_wordpress/zipUrl"/>
+      </genFeatures>
     </genClasses>
     <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_network_port"/>
@@ -257,8 +290,10 @@
     </genClasses>
   </genPackages>
   <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.infrastructure/model/Infrastructure.genmodel#//infrastructure"/>
-  <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.platform/model/Platform.genmodel#//platform"/>
   <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.sla/model/sla.genmodel#//sla"/>
   <usedGenPackages href="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.genmodel#//tosca"/>
+  <usedGenPackages href="platform:/resource/org.modmacao.core/model/modmacao.genmodel#//modmacao"/>
+  <usedGenPackages href="platform:/resource/org.modmacao.occi.platform/model/platform.genmodel#//platform"/>
+  <usedGenPackages href="platform:/resource/org.modmacao.placement/model/placement.genmodel#//placement"/>
   <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.genmodel#//occi"/>
 </genmodel:GenModel>

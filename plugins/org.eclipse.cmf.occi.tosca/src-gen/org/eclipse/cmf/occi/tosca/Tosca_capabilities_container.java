@@ -42,7 +42,7 @@ public interface Tosca_capabilities_container extends Tosca_capabilities_root, M
 	 * @see #setDiskSize(Integer)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_container_DiskSize()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.scalarSizeMinZeroMB"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_container!diskSize'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_container!diskSize'"
 	 * @generated
 	 */
 	Integer getDiskSize();

@@ -1,4 +1,4 @@
-// Generated at Wed Nov 28 22:59:40 CET 2018 from  by org.eclipse.cmf.occi.core.gen.alloy
+// Generated at Mon Mar 04 14:57:53 CET 2019 from  by org.eclipse.cmf.occi.core.gen.alloy
 
 // ======================================================================
 //
@@ -19,8 +19,10 @@ open fclouds
 
 open core
 open infrastructure
-open platform
 open sla
+open modmacao
+open platform
+open placement
 
 // ======================================================================
 //
@@ -30,8 +32,8 @@ open sla
 
 one sig extension extends Extension {} {
     name = "tosca"
-    scheme = "http://org.occi/tosca#"
-    import = core/extension + infrastructure/extension + platform/extension + sla/extension
+    scheme = "http://schemas.ogf.org/tosca/core#"
+    import = core/extension + infrastructure/extension + sla/extension + modmacao/extension + platform/extension + placement/extension
     no kinds
     mixins = tosca_capabilities_root + tosca_capabilities_node + tosca_capabilities_endpoint + tosca_capabilities_scalable + tosca_capabilities_network_bindable + tosca_capabilities_container + tosca_capabilities_endpoint_database + tosca_capabilities_endpoint_public + tosca_capabilities_endpoint_admin + tosca_capabilities_operatingsystem + tosca_capabilities_attachment + tosca_nodes_root + tosca_nodes_webapplication + tosca_nodes_softwarecomponent + tosca_nodes_dbms + tosca_nodes_objectstorage + tosca_nodes_compute + tosca_nodes_loadbalancer + tosca_nodes_webserver + tosca_nodes_database + tosca_nodes_container_application + tosca_nodes_container_runtime + tosca_nodes_blockstorage + tosca_policies_root + tosca_policies_update + tosca_policies_placement + tosca_policies_scaling + tosca_policies_performance + tosca_groups_root + tosca_interfaces_root + tosca_interfaces_relationship_configure + tosca_interfaces_node_lifecycle_standard + tosca_relationships_root + tosca_relationships_connectsto + tosca_relationships_routesto + tosca_relationships_attachesto + tosca_relationships_hostedon + tosca_relationships_dependson
     types = string_DataType + stringMinOne_DataType + boolean_DataType + byte_DataType + double_DataType + float_DataType + integer_DataType + integerMinOne_DataType + integerMinZero_DataType + long_DataType + short_DataType + map_DataType + version_DataType + range_DataType + toscadatatypesnetworkPortDef_DataType + scalarFrequency_DataType + scalarSizeMinOneMB_DataType + scalarSizeMinZeroGB_DataType + scalarSizeMinZeroMB_DataType + arraystring_DataType + NetworkInfo_DataType + PortInfo_DataType + Credential_DataType + protocolEnum_DataType + PortSpec_DataType + initiatorEnum_DataType
@@ -39,13 +41,13 @@ one sig extension extends Extension {} {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_root'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_root'
 //
 // ======================================================================
 
 one sig tosca_capabilities_root extends Mixin {} {
     term = "tosca_capabilities_root"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "This is the default (root) TOSCA Capability Type definition that all other TOSCA Capability Types derive from."
     no depends
     no applies
@@ -63,13 +65,13 @@ sig Tosca_capabilities_root in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_node'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_node'
 //
 // ======================================================================
 
 one sig tosca_capabilities_node extends Mixin {} {
     term = "tosca_capabilities_node"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The Node capability indicates the base capabilities of a TOSCA Node Type."
     depends = tosca_capabilities_root
     no applies
@@ -87,13 +89,13 @@ sig Tosca_capabilities_node in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_endpoint'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_endpoint'
 //
 // ======================================================================
 
 one sig tosca_capabilities_endpoint extends Mixin {} {
     term = "tosca_capabilities_endpoint"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "This is the default TOSCA type that should be used or extended to define a network endpoint capability. This includes the information to express a basic endpoint with a single port or a complex endpoint with multiple ports. By default the Endpoint is assumed to represent an address on a private network unless otherwise specified."
     depends = tosca_capabilities_root
     no applies
@@ -223,13 +225,13 @@ sig Tosca_capabilities_endpoint in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_scalable'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_scalable'
 //
 // ======================================================================
 
 one sig tosca_capabilities_scalable extends Mixin {} {
     term = "tosca_capabilities_scalable"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "This is the default TOSCA type that should be used to express a scalability capability for a node."
     depends = tosca_capabilities_root
     no applies
@@ -289,13 +291,13 @@ sig Tosca_capabilities_scalable in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_network_bindable'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_network_bindable'
 //
 // ======================================================================
 
 one sig tosca_capabilities_network_bindable extends Mixin {} {
     term = "tosca_capabilities_network_bindable"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     no title
     depends = tosca_capabilities_node
     no applies
@@ -313,13 +315,13 @@ sig Tosca_capabilities_network_bindable in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_container'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_container'
 //
 // ======================================================================
 
 one sig tosca_capabilities_container extends Mixin {} {
     term = "tosca_capabilities_container"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The Container capability, when included on a Node Type or Template definition, indicates that the node can act as a container for (or a host for) one or more other declared Node Types."
     depends = tosca_capabilities_root
     no applies
@@ -351,13 +353,13 @@ sig Tosca_capabilities_container in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_endpoint_database'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_endpoint_database'
 //
 // ======================================================================
 
 one sig tosca_capabilities_endpoint_database extends Mixin {} {
     term = "tosca_capabilities_endpoint_database"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "This is the default TOSCA type that should be used or extended to define a specialized database endpoint capability."
     depends = tosca_capabilities_endpoint
     no applies
@@ -375,13 +377,13 @@ sig Tosca_capabilities_endpoint_database in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_endpoint_public'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_endpoint_public'
 //
 // ======================================================================
 
 one sig tosca_capabilities_endpoint_public extends Mixin {} {
     term = "tosca_capabilities_endpoint_public"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "This capability represents a public endpoint which is accessible to the general internet (and its public IP address ranges). This public endpoint capability also can be used to create a floating (IP) address that the underlying network assigns from a pool allocated from the applicationâ€™s underlying public network.  This floating address is managed by the underlying network such that can be routed an applicationâ€™s private address and remains reliable to internet clients."
     depends = tosca_capabilities_endpoint
     no applies
@@ -427,13 +429,13 @@ sig Tosca_capabilities_endpoint_public in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_endpoint_admin'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_endpoint_admin'
 //
 // ======================================================================
 
 one sig tosca_capabilities_endpoint_admin extends Mixin {} {
     term = "tosca_capabilities_endpoint_admin"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "This is the default TOSCA type that should be used or extended to define a specialized administrator endpoint capability."
     depends = tosca_capabilities_endpoint
     no applies
@@ -451,13 +453,13 @@ sig Tosca_capabilities_endpoint_admin in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_operatingsystem'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_operatingsystem'
 //
 // ======================================================================
 
 one sig tosca_capabilities_operatingsystem extends Mixin {} {
     term = "tosca_capabilities_operatingsystem"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "This is the default TOSCA type that should be used to express an Operating System capability for a node."
     depends = tosca_capabilities_root
     no applies
@@ -517,13 +519,13 @@ sig Tosca_capabilities_operatingsystem in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_capabilities_attachment'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_capabilities_attachment'
 //
 // ======================================================================
 
 one sig tosca_capabilities_attachment extends Mixin {} {
     term = "tosca_capabilities_attachment"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "This is the default TOSCA type that should be used or extended to define an attachment capability of a (logical) infrastructure device node (e.g., BlockStorage node)."
     depends = tosca_capabilities_root
     no applies
@@ -541,13 +543,13 @@ sig Tosca_capabilities_attachment in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_root'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_root'
 //
 // ======================================================================
 
 one sig tosca_nodes_root extends Mixin {} {
     term = "tosca_nodes_root"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "This is the default (root) TOSCA Node Type that all other TOSCA nodes should extends. This allows all TOSCA nodes to have a consistent set of features for modeling and management (e.g, consistent definitions for requirements, capabilities, and lifecycle interfaces)."
     depends = tosca_capabilities_node + tosca_interfaces_node_lifecycle_standard
     applies = core/resource
@@ -565,13 +567,13 @@ sig Tosca_nodes_root in core/Resource {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_webapplication'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_webapplication'
 //
 // ======================================================================
 
 one sig tosca_nodes_webapplication extends Mixin {} {
     term = "tosca_nodes_webapplication"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA WebApplication node represents a software application that can be managed and run by a TOSCA WebServer node. Specific types of web applications such as Java, etc. could be derived from this type."
     depends = tosca_nodes_root + tosca_capabilities_endpoint
     applies = platform/component
@@ -603,13 +605,13 @@ sig Tosca_nodes_webapplication in platform/Component {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_softwarecomponent'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_softwarecomponent'
 //
 // ======================================================================
 
 one sig tosca_nodes_softwarecomponent extends Mixin {} {
     term = "tosca_nodes_softwarecomponent"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA SoftwareComponent node represents a generic software component that can be managed and run by a TOSCA Compute Node Type."
     depends = tosca_nodes_root
     applies = platform/component
@@ -655,13 +657,13 @@ sig Tosca_nodes_softwarecomponent in platform/Component {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_dbms'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_dbms'
 //
 // ======================================================================
 
 one sig tosca_nodes_dbms extends Mixin {} {
     term = "tosca_nodes_dbms"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA DBMS node represents a typical relational, SQL Database Management System software component or service."
     depends = tosca_nodes_softwarecomponent + tosca_capabilities_container
     no applies
@@ -707,13 +709,13 @@ sig Tosca_nodes_dbms in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_objectstorage'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_objectstorage'
 //
 // ======================================================================
 
 one sig tosca_nodes_objectstorage extends Mixin {} {
     term = "tosca_nodes_objectstorage"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     no title
     depends = tosca_nodes_root + tosca_capabilities_endpoint
     applies = infrastructure/storage
@@ -759,13 +761,13 @@ sig Tosca_nodes_objectstorage in infrastructure/Storage {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_compute'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_compute'
 //
 // ======================================================================
 
 one sig tosca_nodes_compute extends Mixin {} {
     term = "tosca_nodes_compute"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA Compute node represents one or more real or virtual processors of software applications or services along with other essential local resources. Collectively, the resources the compute node represents can logically be viewed as a (real or virtual) â€œserverâ€�."
     depends = tosca_nodes_root + tosca_capabilities_scalable + tosca_capabilities_endpoint_admin + tosca_capabilities_operatingsystem + tosca_capabilities_container + tosca_capabilities_network_bindable
     applies = infrastructure/compute
@@ -825,13 +827,13 @@ sig Tosca_nodes_compute in infrastructure/Compute {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_loadbalancer'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_loadbalancer'
 //
 // ======================================================================
 
 one sig tosca_nodes_loadbalancer extends Mixin {} {
     term = "tosca_nodes_loadbalancer"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA Load Balancer node represents logical function that be used in conjunction with a Floating Address to distribute an applicationâ€™s traffic (load) across a number of instances of the application (e.g., for a clustered or scaled application)."
     depends = tosca_nodes_root + tosca_capabilities_endpoint_public
     no applies
@@ -863,13 +865,13 @@ sig Tosca_nodes_loadbalancer in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_webserver'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_webserver'
 //
 // ======================================================================
 
 one sig tosca_nodes_webserver extends Mixin {} {
     term = "tosca_nodes_webserver"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "This TOSCA WebServer Node Type represents an abstract software component or service that is capable of hosting and providing management operations for one or more WebApplication nodes."
     depends = tosca_nodes_softwarecomponent + tosca_capabilities_endpoint + tosca_capabilities_endpoint_admin + tosca_capabilities_container
     no applies
@@ -887,13 +889,13 @@ sig Tosca_nodes_webserver in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_database'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_database'
 //
 // ======================================================================
 
 one sig tosca_nodes_database extends Mixin {} {
     term = "tosca_nodes_database"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA Database node represents a logical database that can be managed and hosted by a TOSCA DBMS node."
     depends = tosca_nodes_root + tosca_capabilities_endpoint_database
     applies = platform/component
@@ -953,13 +955,13 @@ sig Tosca_nodes_database in platform/Component {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_container_application'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_container_application'
 //
 // ======================================================================
 
 one sig tosca_nodes_container_application extends Mixin {} {
     term = "tosca_nodes_container_application"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA Container Application node represents an application that requires Container-level virtualization technology."
     depends = tosca_nodes_root
     applies = platform/component
@@ -977,13 +979,13 @@ sig Tosca_nodes_container_application in platform/Component {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_container_runtime'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_container_runtime'
 //
 // ======================================================================
 
 one sig tosca_nodes_container_runtime extends Mixin {} {
     term = "tosca_nodes_container_runtime"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA Container Runtime node represents operating system-level virtualization technology used to run multiple application services on a single Compute host."
     depends = tosca_nodes_softwarecomponent + tosca_capabilities_scalable + tosca_capabilities_container
     no applies
@@ -1001,13 +1003,13 @@ sig Tosca_nodes_container_runtime in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_nodes_blockstorage'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_nodes_blockstorage'
 //
 // ======================================================================
 
 one sig tosca_nodes_blockstorage extends Mixin {} {
     term = "tosca_nodes_blockstorage"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA BlockStorage node currently represents a server-local block storage device (i.e., not shared) offering evenly sized blocks of data from which raw storage volumes can be created."
     depends = tosca_nodes_root + tosca_capabilities_attachment
     applies = infrastructure/storage
@@ -1053,13 +1055,13 @@ sig Tosca_nodes_blockstorage in infrastructure/Storage {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_policies_root'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_policies_root'
 //
 // ======================================================================
 
 one sig tosca_policies_root extends Mixin {} {
     term = "tosca_policies_root"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA Policy Type all other TOSCA Policy Types derive from"
     depends = sla/agreement_term
     no applies
@@ -1077,13 +1079,13 @@ sig Tosca_policies_root in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_policies_update'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_policies_update'
 //
 // ======================================================================
 
 one sig tosca_policies_update extends Mixin {} {
     term = "tosca_policies_update"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA Policy Type definition that is used to govern update of TOSCA nodes or groups of nodes."
     depends = tosca_policies_root
     no applies
@@ -1101,13 +1103,13 @@ sig Tosca_policies_update in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_policies_placement'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_policies_placement'
 //
 // ======================================================================
 
 one sig tosca_policies_placement extends Mixin {} {
     term = "tosca_policies_placement"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA Policy Type definition that is used to govern placement of TOSCA nodes or groups of nodes."
     depends = tosca_policies_root
     no applies
@@ -1125,13 +1127,13 @@ sig Tosca_policies_placement in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_policies_scaling'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_policies_scaling'
 //
 // ======================================================================
 
 one sig tosca_policies_scaling extends Mixin {} {
     term = "tosca_policies_scaling"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA Policy Type definition that is used to govern scaling of TOSCA nodes or groups of nodes."
     depends = tosca_policies_root
     no applies
@@ -1149,13 +1151,13 @@ sig Tosca_policies_scaling in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_policies_performance'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_policies_performance'
 //
 // ======================================================================
 
 one sig tosca_policies_performance extends Mixin {} {
     term = "tosca_policies_performance"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA Policy Type definition that is used to declare performance requirements for TOSCA nodes or groups of nodes."
     depends = tosca_policies_root
     no applies
@@ -1173,13 +1175,13 @@ sig Tosca_policies_performance in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_groups_root'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_groups_root'
 //
 // ======================================================================
 
 one sig tosca_groups_root extends Mixin {} {
     term = "tosca_groups_root"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA Group Type all other TOSCA Group Types derive from"
     no depends
     no applies
@@ -1197,13 +1199,13 @@ sig Tosca_groups_root in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_interfaces_root'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_interfaces_root'
 //
 // ======================================================================
 
 one sig tosca_interfaces_root extends Mixin {} {
     term = "tosca_interfaces_root"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA root Interface Type all other TOSCA base Interface Types derive from."
     no depends
     no applies
@@ -1221,13 +1223,13 @@ sig Tosca_interfaces_root in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_interfaces_relationship_configure'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_interfaces_relationship_configure'
 //
 // ======================================================================
 
 one sig tosca_interfaces_relationship_configure extends Mixin {} {
     term = "tosca_interfaces_relationship_configure"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     no title
     depends = tosca_interfaces_root
     no applies
@@ -1237,88 +1239,88 @@ one sig tosca_interfaces_relationship_configure extends Mixin {} {
 }
 
 //
-// OCCI action 'http://org.occi/tosca/tosca_interfaces_relationship_configure/action#pre_configure_source'
+// OCCI action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#pre_configure_source'
 //
 one sig tosca_interfaces_relationship_configure_pre_configure_source extends Action {} {
     term = "pre_configure_source"
-    scheme = "http://org.occi/tosca/tosca_interfaces_relationship_configure/action#"
+    scheme = "http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#"
     title = "Operation to pre-configure the source endpoint."
     no attributes
 }
 
 
 //
-// OCCI action 'http://org.occi/tosca/tosca_interfaces_relationship_configure/action#pre_configure_target'
+// OCCI action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#pre_configure_target'
 //
 one sig tosca_interfaces_relationship_configure_pre_configure_target extends Action {} {
     term = "pre_configure_target"
-    scheme = "http://org.occi/tosca/tosca_interfaces_relationship_configure/action#"
+    scheme = "http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#"
     title = "Operation to pre-configure the target endpoint."
     no attributes
 }
 
 
 //
-// OCCI action 'http://org.occi/tosca/tosca_interfaces_relationship_configure/action#post_configure_source'
+// OCCI action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#post_configure_source'
 //
 one sig tosca_interfaces_relationship_configure_post_configure_source extends Action {} {
     term = "post_configure_source"
-    scheme = "http://org.occi/tosca/tosca_interfaces_relationship_configure/action#"
+    scheme = "http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#"
     title = "Operation to post-configure the source endpoint."
     no attributes
 }
 
 
 //
-// OCCI action 'http://org.occi/tosca/tosca_interfaces_relationship_configure/action#post_configure_target'
+// OCCI action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#post_configure_target'
 //
 one sig tosca_interfaces_relationship_configure_post_configure_target extends Action {} {
     term = "post_configure_target"
-    scheme = "http://org.occi/tosca/tosca_interfaces_relationship_configure/action#"
+    scheme = "http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#"
     title = "Operation to post-configure the target endpoint."
     no attributes
 }
 
 
 //
-// OCCI action 'http://org.occi/tosca/tosca_interfaces_relationship_configure/action#remove_target'
+// OCCI action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#remove_target'
 //
 one sig tosca_interfaces_relationship_configure_remove_target extends Action {} {
     term = "remove_target"
-    scheme = "http://org.occi/tosca/tosca_interfaces_relationship_configure/action#"
+    scheme = "http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#"
     title = "Operation to remove a target node."
     no attributes
 }
 
 
 //
-// OCCI action 'http://org.occi/tosca/tosca_interfaces_relationship_configure/action#add_target'
+// OCCI action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#add_target'
 //
 one sig tosca_interfaces_relationship_configure_add_target extends Action {} {
     term = "add_target"
-    scheme = "http://org.occi/tosca/tosca_interfaces_relationship_configure/action#"
+    scheme = "http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#"
     title = "Operation to notify the source node of a target node being added via a relationship."
     no attributes
 }
 
 
 //
-// OCCI action 'http://org.occi/tosca/tosca_interfaces_relationship_configure/action#add_source'
+// OCCI action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#add_source'
 //
 one sig tosca_interfaces_relationship_configure_add_source extends Action {} {
     term = "add_source"
-    scheme = "http://org.occi/tosca/tosca_interfaces_relationship_configure/action#"
+    scheme = "http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#"
     no title
     no attributes
 }
 
 
 //
-// OCCI action 'http://org.occi/tosca/tosca_interfaces_relationship_configure/action#target_changed'
+// OCCI action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#target_changed'
 //
 one sig tosca_interfaces_relationship_configure_target_changed extends Action {} {
     term = "target_changed"
-    scheme = "http://org.occi/tosca/tosca_interfaces_relationship_configure/action#"
+    scheme = "http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#"
     title = "Operation to notify source some property or attribute of the target changed"
     no attributes
 }
@@ -1333,13 +1335,13 @@ sig Tosca_interfaces_relationship_configure in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_interfaces_node_lifecycle_standard'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_interfaces_node_lifecycle_standard'
 //
 // ======================================================================
 
 one sig tosca_interfaces_node_lifecycle_standard extends Mixin {} {
     term = "tosca_interfaces_node_lifecycle_standard"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     no title
     depends = tosca_interfaces_root
     no applies
@@ -1349,33 +1351,33 @@ one sig tosca_interfaces_node_lifecycle_standard extends Mixin {} {
 }
 
 //
-// OCCI action 'http://org.occi/tosca/tosca_interfaces_node_lifecycle_standard/action#create'
+// OCCI action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_node_lifecycle_standard/action#create'
 //
 one sig tosca_interfaces_node_lifecycle_standard_create extends Action {} {
     term = "create"
-    scheme = "http://org.occi/tosca/tosca_interfaces_node_lifecycle_standard/action#"
+    scheme = "http://schemas.ogf.org/tosca/core/tosca_interfaces_node_lifecycle_standard/action#"
     title = "Standard lifecycle create operation."
     no attributes
 }
 
 
 //
-// OCCI action 'http://org.occi/tosca/tosca_interfaces_node_lifecycle_standard/action#configure'
+// OCCI action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_node_lifecycle_standard/action#configure'
 //
 one sig tosca_interfaces_node_lifecycle_standard_configure extends Action {} {
     term = "configure"
-    scheme = "http://org.occi/tosca/tosca_interfaces_node_lifecycle_standard/action#"
+    scheme = "http://schemas.ogf.org/tosca/core/tosca_interfaces_node_lifecycle_standard/action#"
     title = "Standard lifecycle configure operation."
     no attributes
 }
 
 
 //
-// OCCI action 'http://org.occi/tosca/tosca_interfaces_node_lifecycle_standard/action#delete'
+// OCCI action 'http://schemas.ogf.org/tosca/core/tosca_interfaces_node_lifecycle_standard/action#delete'
 //
 one sig tosca_interfaces_node_lifecycle_standard_delete extends Action {} {
     term = "delete"
-    scheme = "http://org.occi/tosca/tosca_interfaces_node_lifecycle_standard/action#"
+    scheme = "http://schemas.ogf.org/tosca/core/tosca_interfaces_node_lifecycle_standard/action#"
     title = "Standard lifecycle delete operation."
     no attributes
 }
@@ -1390,13 +1392,13 @@ sig Tosca_interfaces_node_lifecycle_standard in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_relationships_root'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_relationships_root'
 //
 // ======================================================================
 
 one sig tosca_relationships_root extends Mixin {} {
     term = "tosca_relationships_root"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "The TOSCA root Relationship Type all other TOSCA base Relationship Types derive from"
     no depends
     applies = core/link
@@ -1456,13 +1458,13 @@ sig Tosca_relationships_root in core/Link {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_relationships_connectsto'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_relationships_connectsto'
 //
 // ======================================================================
 
 one sig tosca_relationships_connectsto extends Mixin {} {
     term = "tosca_relationships_connectsto"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "This type represents a network connection relationship between two nodes."
     depends = tosca_relationships_root
     no applies
@@ -1494,13 +1496,13 @@ sig Tosca_relationships_connectsto in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_relationships_routesto'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_relationships_routesto'
 //
 // ======================================================================
 
 one sig tosca_relationships_routesto extends Mixin {} {
     term = "tosca_relationships_routesto"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "This type represents an intentional network routing between two Endpoints in different networks."
     depends = tosca_relationships_connectsto
     no applies
@@ -1518,13 +1520,13 @@ sig Tosca_relationships_routesto in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_relationships_attachesto'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_relationships_attachesto'
 //
 // ======================================================================
 
 one sig tosca_relationships_attachesto extends Mixin {} {
     term = "tosca_relationships_attachesto"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     no title
     depends = tosca_relationships_root
     applies = infrastructure/storagelink
@@ -1556,13 +1558,13 @@ sig Tosca_relationships_attachesto in infrastructure/Storagelink {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_relationships_hostedon'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_relationships_hostedon'
 //
 // ======================================================================
 
 one sig tosca_relationships_hostedon extends Mixin {} {
     term = "tosca_relationships_hostedon"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "This type represents a hosting relationship between two nodes."
     depends = tosca_relationships_root
     no applies
@@ -1580,13 +1582,13 @@ sig Tosca_relationships_hostedon in core/Entity {
 
 // ======================================================================
 //
-// OCCI mixin 'http://org.occi/tosca#tosca_relationships_dependson'
+// OCCI mixin 'http://schemas.ogf.org/tosca/core#tosca_relationships_dependson'
 //
 // ======================================================================
 
 one sig tosca_relationships_dependson extends Mixin {} {
     term = "tosca_relationships_dependson"
-    scheme = "http://org.occi/tosca#"
+    scheme = "http://schemas.ogf.org/tosca/core#"
     title = "This type represents a general dependency relationship between two nodes."
     depends = tosca_relationships_root
     no applies

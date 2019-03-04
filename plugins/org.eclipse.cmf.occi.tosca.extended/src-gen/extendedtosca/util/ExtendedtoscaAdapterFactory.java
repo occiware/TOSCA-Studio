@@ -151,10 +151,6 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 				return createTosca_nodes_webapplication_paypalpizzastoreAdapter();
 			}
 			@Override
-			public Adapter caseTosca_nodes_webapplication_wordpress(Tosca_nodes_webapplication_wordpress object) {
-				return createTosca_nodes_webapplication_wordpressAdapter();
-			}
-			@Override
 			public Adapter caseTosca_nodes_network_network(Tosca_nodes_network_network object) {
 				return createTosca_nodes_network_networkAdapter();
 			}
@@ -191,6 +187,10 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 				return createTosca_nodes_somenode2Adapter();
 			}
 			@Override
+			public Adapter caseTosca_nodes_php(Tosca_nodes_php object) {
+				return createTosca_nodes_phpAdapter();
+			}
+			@Override
 			public Adapter caseTosca_nodes_database_mysql(Tosca_nodes_database_mysql object) {
 				return createTosca_nodes_database_mysqlAdapter();
 			}
@@ -201,6 +201,14 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseExample_transactionsubsystem(Example_transactionsubsystem object) {
 				return createExample_transactionsubsystemAdapter();
+			}
+			@Override
+			public Adapter caseTosca_nodes_abstractmysql(Tosca_nodes_abstractmysql object) {
+				return createTosca_nodes_abstractmysqlAdapter();
+			}
+			@Override
+			public Adapter caseTosca_nodes_mysql(Tosca_nodes_mysql object) {
+				return createTosca_nodes_mysqlAdapter();
 			}
 			@Override
 			public Adapter caseTosca_nodes_softwarecomponent_elasticsearch(Tosca_nodes_softwarecomponent_elasticsearch object) {
@@ -215,12 +223,20 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 				return createExample_someappAdapter();
 			}
 			@Override
+			public Adapter caseTosca_nodes_apache(Tosca_nodes_apache object) {
+				return createTosca_nodes_apacheAdapter();
+			}
+			@Override
 			public Adapter caseTosca_nodes_nodewithcap(Tosca_nodes_nodewithcap object) {
 				return createTosca_nodes_nodewithcapAdapter();
 			}
 			@Override
 			public Adapter caseRsyslog(Rsyslog object) {
 				return createRsyslogAdapter();
+			}
+			@Override
+			public Adapter caseTosca_nodes_wordpress(Tosca_nodes_wordpress object) {
+				return createTosca_nodes_wordpressAdapter();
 			}
 			@Override
 			public Adapter caseTosca_nodes_network_port(Tosca_nodes_network_port object) {
@@ -555,20 +571,6 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_webapplication_wordpress <em>Tosca nodes webapplication wordpress</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see extendedtosca.Tosca_nodes_webapplication_wordpress
-	 * @generated
-	 */
-	public Adapter createTosca_nodes_webapplication_wordpressAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_network_network <em>Tosca nodes network network</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -695,6 +697,20 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_php <em>Tosca nodes php</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see extendedtosca.Tosca_nodes_php
+	 * @generated
+	 */
+	public Adapter createTosca_nodes_phpAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_database_mysql <em>Tosca nodes database mysql</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -733,6 +749,34 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createExample_transactionsubsystemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_abstractmysql <em>Tosca nodes abstractmysql</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see extendedtosca.Tosca_nodes_abstractmysql
+	 * @generated
+	 */
+	public Adapter createTosca_nodes_abstractmysqlAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_mysql <em>Tosca nodes mysql</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see extendedtosca.Tosca_nodes_mysql
+	 * @generated
+	 */
+	public Adapter createTosca_nodes_mysqlAdapter() {
 		return null;
 	}
 
@@ -779,6 +823,20 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_apache <em>Tosca nodes apache</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see extendedtosca.Tosca_nodes_apache
+	 * @generated
+	 */
+	public Adapter createTosca_nodes_apacheAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_nodewithcap <em>Tosca nodes nodewithcap</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -803,6 +861,20 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRsyslogAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_wordpress <em>Tosca nodes wordpress</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see extendedtosca.Tosca_nodes_wordpress
+	 * @generated
+	 */
+	public Adapter createTosca_nodes_wordpressAdapter() {
 		return null;
 	}
 

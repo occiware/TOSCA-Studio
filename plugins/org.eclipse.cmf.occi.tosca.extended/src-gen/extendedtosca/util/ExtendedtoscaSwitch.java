@@ -212,20 +212,6 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ExtendedtoscaPackage.TOSCA_NODES_WEBAPPLICATION_WORDPRESS: {
-				Tosca_nodes_webapplication_wordpress tosca_nodes_webapplication_wordpress = (Tosca_nodes_webapplication_wordpress)theEObject;
-				T result = caseTosca_nodes_webapplication_wordpress(tosca_nodes_webapplication_wordpress);
-				if (result == null) result = caseTosca_nodes_webapplication(tosca_nodes_webapplication_wordpress);
-				if (result == null) result = caseTosca_nodes_root(tosca_nodes_webapplication_wordpress);
-				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_webapplication_wordpress);
-				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_webapplication_wordpress);
-				if (result == null) result = caseTosca_interfaces_node_lifecycle_standard(tosca_nodes_webapplication_wordpress);
-				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_webapplication_wordpress);
-				if (result == null) result = caseTosca_interfaces_root(tosca_nodes_webapplication_wordpress);
-				if (result == null) result = caseMixinBase(tosca_nodes_webapplication_wordpress);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ExtendedtoscaPackage.TOSCA_NODES_NETWORK_NETWORK: {
 				Tosca_nodes_network_network tosca_nodes_network_network = (Tosca_nodes_network_network)theEObject;
 				T result = caseTosca_nodes_network_network(tosca_nodes_network_network);
@@ -351,6 +337,19 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ExtendedtoscaPackage.TOSCA_NODES_PHP: {
+				Tosca_nodes_php tosca_nodes_php = (Tosca_nodes_php)theEObject;
+				T result = caseTosca_nodes_php(tosca_nodes_php);
+				if (result == null) result = caseTosca_nodes_softwarecomponent(tosca_nodes_php);
+				if (result == null) result = caseTosca_nodes_root(tosca_nodes_php);
+				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_php);
+				if (result == null) result = caseTosca_interfaces_node_lifecycle_standard(tosca_nodes_php);
+				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_php);
+				if (result == null) result = caseTosca_interfaces_root(tosca_nodes_php);
+				if (result == null) result = caseMixinBase(tosca_nodes_php);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ExtendedtoscaPackage.TOSCA_NODES_DATABASE_MYSQL: {
 				Tosca_nodes_database_mysql tosca_nodes_database_mysql = (Tosca_nodes_database_mysql)theEObject;
 				T result = caseTosca_nodes_database_mysql(tosca_nodes_database_mysql);
@@ -389,6 +388,37 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_root(example_transactionsubsystem);
 				if (result == null) result = caseTosca_interfaces_root(example_transactionsubsystem);
 				if (result == null) result = caseMixinBase(example_transactionsubsystem);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ExtendedtoscaPackage.TOSCA_NODES_ABSTRACTMYSQL: {
+				Tosca_nodes_abstractmysql tosca_nodes_abstractmysql = (Tosca_nodes_abstractmysql)theEObject;
+				T result = caseTosca_nodes_abstractmysql(tosca_nodes_abstractmysql);
+				if (result == null) result = caseTosca_nodes_database(tosca_nodes_abstractmysql);
+				if (result == null) result = caseTosca_nodes_root(tosca_nodes_abstractmysql);
+				if (result == null) result = caseTosca_capabilities_endpoint_database(tosca_nodes_abstractmysql);
+				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_abstractmysql);
+				if (result == null) result = caseTosca_interfaces_node_lifecycle_standard(tosca_nodes_abstractmysql);
+				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_abstractmysql);
+				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_abstractmysql);
+				if (result == null) result = caseTosca_interfaces_root(tosca_nodes_abstractmysql);
+				if (result == null) result = caseMixinBase(tosca_nodes_abstractmysql);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ExtendedtoscaPackage.TOSCA_NODES_MYSQL: {
+				Tosca_nodes_mysql tosca_nodes_mysql = (Tosca_nodes_mysql)theEObject;
+				T result = caseTosca_nodes_mysql(tosca_nodes_mysql);
+				if (result == null) result = caseTosca_nodes_abstractmysql(tosca_nodes_mysql);
+				if (result == null) result = caseTosca_nodes_database(tosca_nodes_mysql);
+				if (result == null) result = caseTosca_nodes_root(tosca_nodes_mysql);
+				if (result == null) result = caseTosca_capabilities_endpoint_database(tosca_nodes_mysql);
+				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_mysql);
+				if (result == null) result = caseTosca_interfaces_node_lifecycle_standard(tosca_nodes_mysql);
+				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_mysql);
+				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_mysql);
+				if (result == null) result = caseTosca_interfaces_root(tosca_nodes_mysql);
+				if (result == null) result = caseMixinBase(tosca_nodes_mysql);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -434,6 +464,23 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ExtendedtoscaPackage.TOSCA_NODES_APACHE: {
+				Tosca_nodes_apache tosca_nodes_apache = (Tosca_nodes_apache)theEObject;
+				T result = caseTosca_nodes_apache(tosca_nodes_apache);
+				if (result == null) result = caseTosca_nodes_webserver(tosca_nodes_apache);
+				if (result == null) result = caseTosca_nodes_softwarecomponent(tosca_nodes_apache);
+				if (result == null) result = caseTosca_capabilities_endpoint_admin(tosca_nodes_apache);
+				if (result == null) result = caseTosca_capabilities_container(tosca_nodes_apache);
+				if (result == null) result = caseTosca_nodes_root(tosca_nodes_apache);
+				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_apache);
+				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_apache);
+				if (result == null) result = caseTosca_interfaces_node_lifecycle_standard(tosca_nodes_apache);
+				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_apache);
+				if (result == null) result = caseTosca_interfaces_root(tosca_nodes_apache);
+				if (result == null) result = caseMixinBase(tosca_nodes_apache);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ExtendedtoscaPackage.TOSCA_NODES_NODEWITHCAP: {
 				Tosca_nodes_nodewithcap tosca_nodes_nodewithcap = (Tosca_nodes_nodewithcap)theEObject;
 				T result = caseTosca_nodes_nodewithcap(tosca_nodes_nodewithcap);
@@ -458,6 +505,20 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_root(rsyslog);
 				if (result == null) result = caseTosca_interfaces_root(rsyslog);
 				if (result == null) result = caseMixinBase(rsyslog);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ExtendedtoscaPackage.TOSCA_NODES_WORDPRESS: {
+				Tosca_nodes_wordpress tosca_nodes_wordpress = (Tosca_nodes_wordpress)theEObject;
+				T result = caseTosca_nodes_wordpress(tosca_nodes_wordpress);
+				if (result == null) result = caseTosca_nodes_webapplication(tosca_nodes_wordpress);
+				if (result == null) result = caseTosca_nodes_root(tosca_nodes_wordpress);
+				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_wordpress);
+				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_wordpress);
+				if (result == null) result = caseTosca_interfaces_node_lifecycle_standard(tosca_nodes_wordpress);
+				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_wordpress);
+				if (result == null) result = caseTosca_interfaces_root(tosca_nodes_wordpress);
+				if (result == null) result = caseMixinBase(tosca_nodes_wordpress);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -804,21 +865,6 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tosca nodes webapplication wordpress</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tosca nodes webapplication wordpress</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTosca_nodes_webapplication_wordpress(Tosca_nodes_webapplication_wordpress object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Tosca nodes network network</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -954,6 +1000,21 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tosca nodes php</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tosca nodes php</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTosca_nodes_php(Tosca_nodes_php object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Tosca nodes database mysql</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -995,6 +1056,36 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseExample_transactionsubsystem(Example_transactionsubsystem object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tosca nodes abstractmysql</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tosca nodes abstractmysql</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTosca_nodes_abstractmysql(Tosca_nodes_abstractmysql object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tosca nodes mysql</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tosca nodes mysql</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTosca_nodes_mysql(Tosca_nodes_mysql object) {
 		return null;
 	}
 
@@ -1044,6 +1135,21 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tosca nodes apache</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tosca nodes apache</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTosca_nodes_apache(Tosca_nodes_apache object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Tosca nodes nodewithcap</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1070,6 +1176,21 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRsyslog(Rsyslog object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tosca nodes wordpress</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tosca nodes wordpress</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTosca_nodes_wordpress(Tosca_nodes_wordpress object) {
 		return null;
 	}
 

@@ -54,7 +54,7 @@ public class Tosca_interfaces_relationship_configureImpl extends Tosca_interface
 	 * @generated
 	 */
 	public void pre_configure_source() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_relationship_configure!pre_configure_source()
+		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_relationship_configure!pre_configure_source()
 	}
 
 	/**
@@ -63,7 +63,7 @@ public class Tosca_interfaces_relationship_configureImpl extends Tosca_interface
 	 * @generated
 	 */
 	public void pre_configure_target() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_relationship_configure!pre_configure_target()
+		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_relationship_configure!pre_configure_target()
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class Tosca_interfaces_relationship_configureImpl extends Tosca_interface
 	 * @generated
 	 */
 	public void post_configure_source() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_relationship_configure!post_configure_source()
+		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_relationship_configure!post_configure_source()
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class Tosca_interfaces_relationship_configureImpl extends Tosca_interface
 	 * @generated
 	 */
 	public void post_configure_target() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_relationship_configure!post_configure_target()
+		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_relationship_configure!post_configure_target()
 	}
 
 	/**
@@ -90,7 +90,7 @@ public class Tosca_interfaces_relationship_configureImpl extends Tosca_interface
 	 * @generated
 	 */
 	public void remove_target() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_relationship_configure!remove_target()
+		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_relationship_configure!remove_target()
 	}
 
 	/**
@@ -99,7 +99,7 @@ public class Tosca_interfaces_relationship_configureImpl extends Tosca_interface
 	 * @generated
 	 */
 	public void add_target() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_relationship_configure!add_target()
+		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_relationship_configure!add_target()
 	}
 
 	/**
@@ -108,7 +108,7 @@ public class Tosca_interfaces_relationship_configureImpl extends Tosca_interface
 	 * @generated
 	 */
 	public void add_source() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_relationship_configure!add_source()
+		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_relationship_configure!add_source()
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class Tosca_interfaces_relationship_configureImpl extends Tosca_interface
 	 * @generated
 	 */
 	public void target_changed() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_relationship_configure!target_changed()
+		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_relationship_configure!target_changed()
 	}
 
 	/**

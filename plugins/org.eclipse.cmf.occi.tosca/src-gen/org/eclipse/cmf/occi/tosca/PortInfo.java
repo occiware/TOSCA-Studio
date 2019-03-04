@@ -46,7 +46,7 @@ public interface PortInfo extends EObject {
 	 * @see #setPortname(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortInfo_Portname()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortInfo!portname'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!PortInfo!portname'"
 	 * @generated
 	 */
 	String getPortname();
@@ -72,7 +72,7 @@ public interface PortInfo extends EObject {
 	 * @see #setNetworkid(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortInfo_Networkid()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortInfo!networkid'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!PortInfo!networkid'"
 	 * @generated
 	 */
 	String getNetworkid();
@@ -98,7 +98,7 @@ public interface PortInfo extends EObject {
 	 * @see #setAddresses(arraystring)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortInfo_Addresses()
 	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortInfo!addresses'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!PortInfo!addresses'"
 	 * @generated
 	 */
 	arraystring getAddresses();
@@ -124,7 +124,7 @@ public interface PortInfo extends EObject {
 	 * @see #setMacaddress(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortInfo_Macaddress()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortInfo!macaddress'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!PortInfo!macaddress'"
 	 * @generated
 	 */
 	String getMacaddress();
@@ -150,7 +150,7 @@ public interface PortInfo extends EObject {
 	 * @see #setPortid(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getPortInfo_Portid()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!PortInfo!portid'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!PortInfo!portid'"
 	 * @generated
 	 */
 	String getPortid();

@@ -45,7 +45,7 @@ public interface arraystring extends EObject {
 	 * @return the value of the '<em>Values</em>' attribute list.
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getarraystring_Values()
 	 * @model unique="false" dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!arraystring!values'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!arraystring!values'"
 	 * @generated
 	 */
 	EList<String> getValues();

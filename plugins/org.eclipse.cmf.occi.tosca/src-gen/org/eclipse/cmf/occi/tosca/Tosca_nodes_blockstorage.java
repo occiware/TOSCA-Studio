@@ -47,7 +47,7 @@ public interface Tosca_nodes_blockstorage extends Tosca_nodes_root, Tosca_capabi
 	 * @see #setVolumeId(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_blockstorage_VolumeId()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_blockstorage!volumeId'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_nodes_blockstorage!volumeId'"
 	 * @generated
 	 */
 	String getVolumeId();
@@ -73,7 +73,7 @@ public interface Tosca_nodes_blockstorage extends Tosca_nodes_root, Tosca_capabi
 	 * @see #setSnapshotId(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_blockstorage_SnapshotId()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_blockstorage!snapshotId'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_nodes_blockstorage!snapshotId'"
 	 * @generated
 	 */
 	String getSnapshotId();

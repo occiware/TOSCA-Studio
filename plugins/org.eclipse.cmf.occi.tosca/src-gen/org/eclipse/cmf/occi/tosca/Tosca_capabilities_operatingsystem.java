@@ -44,7 +44,7 @@ public interface Tosca_capabilities_operatingsystem extends Tosca_capabilities_r
 	 * @see #setType(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_operatingsystem_Type()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_operatingsystem!type'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_operatingsystem!type'"
 	 * @generated
 	 */
 	String getType();
@@ -70,7 +70,7 @@ public interface Tosca_capabilities_operatingsystem extends Tosca_capabilities_r
 	 * @see #setDistribution(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_operatingsystem_Distribution()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_operatingsystem!distribution'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_operatingsystem!distribution'"
 	 * @generated
 	 */
 	String getDistribution();
@@ -96,7 +96,7 @@ public interface Tosca_capabilities_operatingsystem extends Tosca_capabilities_r
 	 * @see #setVersion(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_capabilities_operatingsystem_Version()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.version"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_capabilities_operatingsystem!version'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_capabilities_operatingsystem!version'"
 	 * @generated
 	 */
 	String getVersion();

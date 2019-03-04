@@ -55,7 +55,7 @@ public interface ToscaPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://org.occi/tosca/ecore";
+	String eNS_URI = "http://schemas.ogf.org/tosca/core/ecore";
 
 	/**
 	 * The package namespace name.
@@ -6347,7 +6347,7 @@ public interface ToscaPackage extends EPackage {
 	 * @return the meta object for data type '<em>integer Min Zero</em>'.
 	 * @see java.lang.Integer
 	 * @model instanceClass="java.lang.Integer"
-	 *        extendedMetaData="minInclusive='0'"
+	 *        extendedMetaData="minInclusive='0' minExclusive='-1'"
 	 * @generated
 	 */
 	EDataType getintegerMinZero();
@@ -6404,7 +6404,7 @@ public interface ToscaPackage extends EPackage {
 	 * @return the meta object for data type '<em>range</em>'.
 	 * @see java.lang.Short
 	 * @model instanceClass="java.lang.Short"
-	 *        extendedMetaData="minInclusive='1' maxInclusive='65535'"
+	 *        extendedMetaData="minInclusive='1' maxInclusive='32767' maxExclusive='32767'"
 	 * @generated
 	 */
 	EDataType getrange();
@@ -6416,7 +6416,7 @@ public interface ToscaPackage extends EPackage {
 	 * @return the meta object for data type '<em>toscadatatypesnetwork Port Def</em>'.
 	 * @see java.lang.Short
 	 * @model instanceClass="java.lang.Short"
-	 *        extendedMetaData="minInclusive='1' maxInclusive='65535'"
+	 *        extendedMetaData="minInclusive='1' minExclusive='0' maxInclusive='32767' maxExclusive='32767'"
 	 * @generated
 	 */
 	EDataType gettoscadatatypesnetworkPortDef();
@@ -6428,7 +6428,7 @@ public interface ToscaPackage extends EPackage {
 	 * @return the meta object for data type '<em>scalar Frequency</em>'.
 	 * @see java.lang.Double
 	 * @model instanceClass="java.lang.Double"
-	 *        extendedMetaData="minInclusive='0.1 GHz'"
+	 *        extendedMetaData="minInclusive='0.1' minExclusive='0.2'"
 	 * @generated
 	 */
 	EDataType getscalarFrequency();
@@ -6440,7 +6440,7 @@ public interface ToscaPackage extends EPackage {
 	 * @return the meta object for data type '<em>scalar Size Min One MB</em>'.
 	 * @see java.lang.Integer
 	 * @model instanceClass="java.lang.Integer"
-	 *        extendedMetaData="minInclusive='1 MB'"
+	 *        extendedMetaData="minInclusive='1' minExclusive='0'"
 	 * @generated
 	 */
 	EDataType getscalarSizeMinOneMB();
@@ -6452,7 +6452,7 @@ public interface ToscaPackage extends EPackage {
 	 * @return the meta object for data type '<em>scalar Size Min Zero GB</em>'.
 	 * @see java.lang.Integer
 	 * @model instanceClass="java.lang.Integer"
-	 *        extendedMetaData="minInclusive='0 GB'"
+	 *        extendedMetaData="minInclusive='0' minExclusive='1'"
 	 * @generated
 	 */
 	EDataType getscalarSizeMinZeroGB();
@@ -6464,7 +6464,7 @@ public interface ToscaPackage extends EPackage {
 	 * @return the meta object for data type '<em>scalar Size Min Zero MB</em>'.
 	 * @see java.lang.Integer
 	 * @model instanceClass="java.lang.Integer"
-	 *        extendedMetaData="minInclusive='0 MB'"
+	 *        extendedMetaData="minInclusive='0' minExclusive='1'"
 	 * @generated
 	 */
 	EDataType getscalarSizeMinZeroMB();

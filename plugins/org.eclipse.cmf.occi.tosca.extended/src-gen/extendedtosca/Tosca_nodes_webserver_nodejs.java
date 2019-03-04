@@ -45,7 +45,7 @@ public interface Tosca_nodes_webserver_nodejs extends Tosca_nodes_webserver, Mix
 	 * @see #setGithubUrl(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_webserver_nodejs_GithubUrl()
 	 * @model default="https://github.com/mmm/testnode.git" dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_nodes_webserver_nodejs!githubUrl'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_webserver_nodejs!githubUrl'"
 	 * @generated
 	 */
 	String getGithubUrl();

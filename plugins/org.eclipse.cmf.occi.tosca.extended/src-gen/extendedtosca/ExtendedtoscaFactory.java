@@ -140,15 +140,6 @@ public interface ExtendedtoscaFactory extends EFactory {
 	Tosca_nodes_webapplication_paypalpizzastore createTosca_nodes_webapplication_paypalpizzastore();
 
 	/**
-	 * Returns a new object of class '<em>Tosca nodes webapplication wordpress</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tosca nodes webapplication wordpress</em>'.
-	 * @generated
-	 */
-	Tosca_nodes_webapplication_wordpress createTosca_nodes_webapplication_wordpress();
-
-	/**
 	 * Returns a new object of class '<em>Tosca nodes network network</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -230,6 +221,15 @@ public interface ExtendedtoscaFactory extends EFactory {
 	Tosca_nodes_somenode2 createTosca_nodes_somenode2();
 
 	/**
+	 * Returns a new object of class '<em>Tosca nodes php</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes php</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_php createTosca_nodes_php();
+
+	/**
 	 * Returns a new object of class '<em>Tosca nodes database mysql</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -255,6 +255,24 @@ public interface ExtendedtoscaFactory extends EFactory {
 	 * @generated
 	 */
 	Example_transactionsubsystem createExample_transactionsubsystem();
+
+	/**
+	 * Returns a new object of class '<em>Tosca nodes abstractmysql</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes abstractmysql</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_abstractmysql createTosca_nodes_abstractmysql();
+
+	/**
+	 * Returns a new object of class '<em>Tosca nodes mysql</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes mysql</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_mysql createTosca_nodes_mysql();
 
 	/**
 	 * Returns a new object of class '<em>Tosca nodes softwarecomponent elasticsearch</em>'.
@@ -284,6 +302,15 @@ public interface ExtendedtoscaFactory extends EFactory {
 	Example_someapp createExample_someapp();
 
 	/**
+	 * Returns a new object of class '<em>Tosca nodes apache</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes apache</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_apache createTosca_nodes_apache();
+
+	/**
 	 * Returns a new object of class '<em>Tosca nodes nodewithcap</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -300,6 +327,15 @@ public interface ExtendedtoscaFactory extends EFactory {
 	 * @generated
 	 */
 	Rsyslog createRsyslog();
+
+	/**
+	 * Returns a new object of class '<em>Tosca nodes wordpress</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes wordpress</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_wordpress createTosca_nodes_wordpress();
 
 	/**
 	 * Returns a new object of class '<em>Tosca nodes network port</em>'.

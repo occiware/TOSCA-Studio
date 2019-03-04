@@ -42,7 +42,7 @@ public interface Tosca_relationships_connectsto extends Tosca_relationships_root
 	 * @see #setCredential(Credential)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_relationships_connectsto_Credential()
 	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_relationships_connectsto!credential'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_relationships_connectsto!credential'"
 	 * @generated
 	 */
 	Credential getCredential();

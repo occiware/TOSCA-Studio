@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tosca" nsURI="http://org.occi/tosca/ecore" nsPrefix="tosca">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tosca" nsURI="http://schemas.ogf.org/tosca/core/ecore" nsPrefix="tosca">
   <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
     <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
     <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
@@ -9,8 +9,10 @@
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="occi" value="platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#/"/>
     <details key="infrastructure" value="platform:/plugin/org.eclipse.cmf.occi.infrastructure/model/Infrastructure.ecore#/"/>
-    <details key="platform" value="platform:/plugin/org.eclipse.cmf.occi.platform/model/Platform.ecore#/"/>
     <details key="sla" value="platform:/plugin/org.eclipse.cmf.occi.sla/model/sla.ecore#/"/>
+    <details key="modmacao" value="platform:/resource/org.modmacao.core/model/modmacao.ecore#/"/>
+    <details key="platform" value="platform:/resource/org.modmacao.occi.platform/model/platform.ecore#/"/>
+    <details key="placement" value="platform:/resource/org.modmacao.placement/model/placement.ecore#/"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EDataType" name="string" instanceClassName="java.lang.String"/>
   <eClassifiers xsi:type="ecore:EDataType" name="stringMinOne" instanceClassName="java.lang.String">
@@ -31,6 +33,7 @@
   <eClassifiers xsi:type="ecore:EDataType" name="integerMinZero" instanceClassName="java.lang.Integer">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="minInclusive" value="0"/>
+      <details key="minExclusive" value="-1"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="long" instanceClassName="java.lang.Long"/>
@@ -44,33 +47,40 @@
   <eClassifiers xsi:type="ecore:EDataType" name="range" instanceClassName="java.lang.Short">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="minInclusive" value="1"/>
-      <details key="maxInclusive" value="65535"/>
+      <details key="maxInclusive" value="32767"/>
+      <details key="maxExclusive" value="32767"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="toscadatatypesnetworkPortDef" instanceClassName="java.lang.Short">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="minInclusive" value="1"/>
-      <details key="maxInclusive" value="65535"/>
+      <details key="minExclusive" value="0"/>
+      <details key="maxInclusive" value="32767"/>
+      <details key="maxExclusive" value="32767"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="scalarFrequency" instanceClassName="java.lang.Double">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-      <details key="minInclusive" value="0.1 GHz"/>
+      <details key="minInclusive" value="0.1"/>
+      <details key="minExclusive" value="0.2"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="scalarSizeMinOneMB" instanceClassName="java.lang.Integer">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-      <details key="minInclusive" value="1 MB"/>
+      <details key="minInclusive" value="1"/>
+      <details key="minExclusive" value="0"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="scalarSizeMinZeroGB" instanceClassName="java.lang.Integer">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-      <details key="minInclusive" value="0 GB"/>
+      <details key="minInclusive" value="0"/>
+      <details key="minExclusive" value="1"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="scalarSizeMinZeroMB" instanceClassName="java.lang.Integer">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-      <details key="minInclusive" value="0 MB"/>
+      <details key="minInclusive" value="0"/>
+      <details key="minExclusive" value="1"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="arraystring">

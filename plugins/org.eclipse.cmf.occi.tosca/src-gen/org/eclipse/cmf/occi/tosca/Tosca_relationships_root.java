@@ -48,7 +48,7 @@ public interface Tosca_relationships_root extends MixinBase {
 	 * @see #setToscaName(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_relationships_root_ToscaName()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_relationships_root!toscaName'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_relationships_root!toscaName'"
 	 * @generated
 	 */
 	String getToscaName();
@@ -75,7 +75,7 @@ public interface Tosca_relationships_root extends MixinBase {
 	 * @see #setState(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_relationships_root_State()
 	 * @model default="initial" dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_relationships_root!state'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_relationships_root!state'"
 	 * @generated
 	 */
 	String getState();
@@ -101,7 +101,7 @@ public interface Tosca_relationships_root extends MixinBase {
 	 * @see #setToscaId(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_relationships_root_ToscaId()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_relationships_root!toscaId'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_relationships_root!toscaId'"
 	 * @generated
 	 */
 	String getToscaId();

@@ -44,7 +44,7 @@ public interface Tosca_nodes_computewithprop extends Tosca_nodes_compute, MixinB
 	 * @see #setTest(Integer)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_computewithprop_Test()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.integer"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/extendedTosca/ecore!Tosca_nodes_computewithprop!test'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_computewithprop!test'"
 	 * @generated
 	 */
 	Integer getTest();

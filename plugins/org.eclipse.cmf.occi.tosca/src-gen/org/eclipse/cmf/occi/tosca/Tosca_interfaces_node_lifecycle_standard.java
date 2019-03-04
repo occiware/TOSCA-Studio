@@ -31,7 +31,7 @@ public interface Tosca_interfaces_node_lifecycle_standard extends Tosca_interfac
 	 * <!-- begin-model-doc -->
 	 * Standard lifecycle create operation.
 	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_node_lifecycle_standard!create()'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_node_lifecycle_standard!create()'"
 	 * @generated
 	 */
 	void create();
@@ -42,7 +42,7 @@ public interface Tosca_interfaces_node_lifecycle_standard extends Tosca_interfac
 	 * <!-- begin-model-doc -->
 	 * Standard lifecycle configure operation.
 	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_node_lifecycle_standard!configure()'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_node_lifecycle_standard!configure()'"
 	 * @generated
 	 */
 	void configure();
@@ -53,7 +53,7 @@ public interface Tosca_interfaces_node_lifecycle_standard extends Tosca_interfac
 	 * <!-- begin-model-doc -->
 	 * Standard lifecycle delete operation.
 	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_node_lifecycle_standard!delete()'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_node_lifecycle_standard!delete()'"
 	 * @generated
 	 */
 	void delete();

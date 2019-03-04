@@ -54,7 +54,7 @@ public class Tosca_interfaces_node_lifecycle_standardImpl extends Tosca_interfac
 	 * @generated
 	 */
 	public void create() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_node_lifecycle_standard!create()
+		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_node_lifecycle_standard!create()
 	}
 
 	/**
@@ -63,7 +63,7 @@ public class Tosca_interfaces_node_lifecycle_standardImpl extends Tosca_interfac
 	 * @generated
 	 */
 	public void configure() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_node_lifecycle_standard!configure()
+		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_node_lifecycle_standard!configure()
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class Tosca_interfaces_node_lifecycle_standardImpl extends Tosca_interfac
 	 * @generated
 	 */
 	public void delete() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_interfaces_node_lifecycle_standard!delete()
+		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_node_lifecycle_standard!delete()
 	}
 
 	/**

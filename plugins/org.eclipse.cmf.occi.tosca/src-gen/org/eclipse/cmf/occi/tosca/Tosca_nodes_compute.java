@@ -48,7 +48,7 @@ public interface Tosca_nodes_compute extends Tosca_nodes_root, Tosca_capabilitie
 	 * @see #setPrivateAddress(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_compute_PrivateAddress()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_compute!privateAddress'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_nodes_compute!privateAddress'"
 	 * @generated
 	 */
 	String getPrivateAddress();
@@ -74,7 +74,7 @@ public interface Tosca_nodes_compute extends Tosca_nodes_root, Tosca_capabilitie
 	 * @see #setPublicAddress(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_compute_PublicAddress()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_compute!publicAddress'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_nodes_compute!publicAddress'"
 	 * @generated
 	 */
 	String getPublicAddress();
@@ -100,7 +100,7 @@ public interface Tosca_nodes_compute extends Tosca_nodes_root, Tosca_capabilitie
 	 * @see #setNetworks(Map)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_compute_Networks()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.map"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_compute!networks'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_nodes_compute!networks'"
 	 * @generated
 	 */
 	Map getNetworks();

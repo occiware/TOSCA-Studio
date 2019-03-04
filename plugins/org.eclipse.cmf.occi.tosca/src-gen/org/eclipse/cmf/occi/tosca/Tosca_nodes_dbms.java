@@ -47,7 +47,7 @@ public interface Tosca_nodes_dbms extends Tosca_nodes_softwarecomponent, Tosca_c
 	 * @see #setPort(Integer)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_dbms_Port()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.integer"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_dbms!port'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_nodes_dbms!port'"
 	 * @generated
 	 */
 	Integer getPort();
@@ -73,7 +73,7 @@ public interface Tosca_nodes_dbms extends Tosca_nodes_softwarecomponent, Tosca_c
 	 * @see #setRootPassword(String)
 	 * @see org.eclipse.cmf.occi.tosca.ToscaPackage#getTosca_nodes_dbms_RootPassword()
 	 * @model dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://org.occi/tosca/ecore!Tosca_nodes_dbms!rootPassword'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_nodes_dbms!rootPassword'"
 	 * @generated
 	 */
 	String getRootPassword();

@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="ASCII"?>
-<occi:Extension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" name="extendedTosca" scheme="http://org.occi/extendedTosca#" description="Extended TOSCA">
+<occi:Extension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" name="extendedTosca" scheme="http://schemas.ogf.org/tosca/extended#" description="Extended TOSCA">
   <import href="http://schemas.ogf.org/occi/core#/"/>
   <import href="http://schemas.ogf.org/occi/infrastructure#/"/>
-  <import href="http://schemas.ogf.org/occi/platform#/"/>
   <import href="http://schemas.ogf.org/occi/sla#/"/>
   <import href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#/"/>
-  <mixins name="tosca_capabilities_indigo_Endpoint" scheme="http://org.occi/extendedTosca#">
+  <import href="http://schemas.modmacao.org/modmacao#/"/>
+  <import href="http://schemas.modmacao.org/occi/platform#/"/>
+  <import href="http://schemas.modmacao.org/placement#/"/>
+  <mixins name="tosca_capabilities_indigo_Endpoint" scheme="http://schemas.ogf.org/tosca/extended#">
     <attributes name="credential" type="//@types.0"/>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_endpoint']"/>
   </mixins>
-  <mixins name="tosca_capabilities_SomeCap" scheme="http://org.occi/extendedTosca#">
+  <mixins name="tosca_capabilities_SomeCap" scheme="http://schemas.ogf.org/tosca/extended#">
     <attributes name="type" required="true" default="someval">
       <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
     </attributes>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_container']"/>
   </mixins>
-  <mixins name="tosca_capabilities_HA" scheme="http://org.occi/extendedTosca#">
+  <mixins name="tosca_capabilities_HA" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_root']"/>
   </mixins>
-  <mixins name="tosca_capabilities_Container_Docker" scheme="http://org.occi/extendedTosca#">
+  <mixins name="tosca_capabilities_Container_Docker" scheme="http://schemas.ogf.org/tosca/extended#">
     <attributes name="publish.all" default="false">
       <type xsi:type="occi:BooleanType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.2"/>
     </attributes>
@@ -30,35 +32,23 @@
     <attributes name="version" type="//@types.2"/>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_container']"/>
   </mixins>
-  <mixins name="tosca_capabilities_ContainerChild" scheme="http://org.occi/extendedTosca#" title="Define a capability class that inherits from tosca.capabilities.Container">
+  <mixins name="tosca_capabilities_ContainerChild" scheme="http://schemas.ogf.org/tosca/extended#" title="Define a capability class that inherits from tosca.capabilities.Container">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_container']"/>
   </mixins>
-  <mixins name="tosca_capabilities_SomeChildCap" scheme="http://org.occi/extendedTosca#" depends="//@mixins[term='tosca_capabilities_somecap']"/>
-  <mixins name="tosca_nodes_ComputeWithProp" scheme="http://org.occi/extendedTosca#" title="Compute node type with a parameter for the get property with host test">
+  <mixins name="tosca_capabilities_SomeChildCap" scheme="http://schemas.ogf.org/tosca/extended#" depends="//@mixins[term='tosca_capabilities_somecap']"/>
+  <mixins name="tosca_nodes_ComputeWithProp" scheme="http://schemas.ogf.org/tosca/extended#" title="Compute node type with a parameter for the get property with host test">
     <attributes name="test">
       <type xsi:type="occi:NumericType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.6"/>
     </attributes>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_compute']"/>
   </mixins>
-  <mixins name="tosca_nodes_WebApplication_PayPalPizzaStore" scheme="http://org.occi/extendedTosca#" title="Pizza store app that allows you to explore the features provided by PayPal's REST APIs. More detail can be found at https://github.com/paypal/rest-api-sample-app-nodejs/">
+  <mixins name="tosca_nodes_WebApplication_PayPalPizzaStore" scheme="http://schemas.ogf.org/tosca/extended#" title="Pizza store app that allows you to explore the features provided by PayPal's REST APIs. More detail can be found at https://github.com/paypal/rest-api-sample-app-nodejs/">
     <attributes name="github.url" default="https://github.com/sample.git" description="location of the application on the github.">
       <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
     </attributes>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_webapplication']"/>
   </mixins>
-  <mixins name="tosca_nodes_WebApplication_WordPress" scheme="http://org.occi/extendedTosca#">
-    <attributes name="db.host">
-      <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
-    </attributes>
-    <attributes name="admin.password">
-      <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
-    </attributes>
-    <attributes name="admin.user">
-      <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
-    </attributes>
-    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_webapplication']"/>
-  </mixins>
-  <mixins name="tosca_nodes_network_Network" scheme="http://org.occi/extendedTosca#">
+  <mixins name="tosca_nodes_network_Network" scheme="http://schemas.ogf.org/tosca/extended#">
     <attributes name="physical.network">
       <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
     </attributes>
@@ -89,44 +79,48 @@
     </attributes>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
   </mixins>
-  <mixins name="tosca_nodes_Container_Application_Docker" scheme="http://org.occi/extendedTosca#">
+  <mixins name="tosca_nodes_Container_Application_Docker" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_container_application']"/>
   </mixins>
-  <mixins name="tosca_nodes_SoftwareComponent_Kibana" scheme="http://org.occi/extendedTosca#" title="Kibana is an open source analytics and visualization platform designed to work with Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch.">
+  <mixins name="tosca_nodes_SoftwareComponent_Kibana" scheme="http://schemas.ogf.org/tosca/extended#" title="Kibana is an open source analytics and visualization platform designed to work with Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch.">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_softwarecomponent']"/>
   </mixins>
-  <mixins name="tosca_nodes_ComputeWithAttrList" scheme="http://org.occi/extendedTosca#" title="Compute node type with a list attribute">
+  <mixins name="tosca_nodes_ComputeWithAttrList" scheme="http://schemas.ogf.org/tosca/extended#" title="Compute node type with a list attribute">
     <attributes name="attr.list">
       <type xsi:type="occi:EObjectType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.11"/>
     </attributes>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_compute']"/>
   </mixins>
-  <mixins name="tosca_nodes_SoftwareComponent_Logstash" scheme="http://org.occi/extendedTosca#" title="Logstash is a tool for receiving, processing and outputting logs. All kinds of logs. System logs, webserver logs, error logs, application logs, and just about anything you can throw at it.">
+  <mixins name="tosca_nodes_SoftwareComponent_Logstash" scheme="http://schemas.ogf.org/tosca/extended#" title="Logstash is a tool for receiving, processing and outputting logs. All kinds of logs. System logs, webserver logs, error logs, application logs, and just about anything you can throw at it.">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_softwarecomponent']"/>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_endpoint']"/>
   </mixins>
-  <mixins name="example_DatabaseSubsystem" scheme="http://org.occi/extendedTosca#">
+  <mixins name="example_DatabaseSubsystem" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_endpoint_database']"/>
   </mixins>
-  <mixins name="tosca_nodes_SoftwareComponent_Collectd" scheme="http://org.occi/extendedTosca#" title="collectd is a daemon which gathers statistics about the system it is running on.">
+  <mixins name="tosca_nodes_SoftwareComponent_Collectd" scheme="http://schemas.ogf.org/tosca/extended#" title="collectd is a daemon which gathers statistics about the system it is running on.">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_softwarecomponent']"/>
   </mixins>
-  <mixins name="tosca_nodes_NodeWithReq" scheme="http://org.occi/extendedTosca#">
+  <mixins name="tosca_nodes_NodeWithReq" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_softwarecomponent']"/>
   </mixins>
-  <mixins name="tosca_nodes_SomeNode2" scheme="http://org.occi/extendedTosca#">
+  <mixins name="tosca_nodes_SomeNode2" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
     <depends href="#//@mixins[term='tosca_capabilities_containerchild']"/>
   </mixins>
-  <mixins name="tosca_nodes_Database_MySQL" scheme="http://org.occi/extendedTosca#">
+  <mixins name="tosca_nodes_PHP" scheme="http://schemas.ogf.org/tosca/extended#" title="PHP install through apt-get.">
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_softwarecomponent']"/>
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_root']"/>
+  </mixins>
+  <mixins name="tosca_nodes_Database_MySQL" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_database']"/>
   </mixins>
-  <mixins name="example_QueuingSubsystem" scheme="http://org.occi/extendedTosca#">
+  <mixins name="example_QueuingSubsystem" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_endpoint']"/>
   </mixins>
-  <mixins name="example_TransactionSubsystem" scheme="http://org.occi/extendedTosca#">
+  <mixins name="example_TransactionSubsystem" scheme="http://schemas.ogf.org/tosca/extended#">
     <attributes name="receiver.port">
       <type xsi:type="occi:NumericType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.6"/>
     </attributes>
@@ -136,26 +130,58 @@
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_endpoint']"/>
   </mixins>
-  <mixins name="tosca_nodes_SoftwareComponent_Elasticsearch" scheme="http://org.occi/extendedTosca#" title="Elasticsearch is an open-source search engine built on top of Apache Lucene, a full-text search-engine library.">
+  <mixins name="tosca_nodes_AbstractMysql" scheme="http://schemas.ogf.org/tosca/extended#" title="A node that provides a mysql endpoint.">
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_database']"/>
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_endpoint_database']"/>
+  </mixins>
+  <mixins name="tosca_nodes_Mysql" scheme="http://schemas.ogf.org/tosca/extended#" title="A node that represent MySQL database with data on a attached volume." depends="//@mixins[term='tosca_nodes_abstractmysql']">
+    <attributes name="portMySQL" default="3306" description="The port on which the database will listen to data.">
+      <type xsi:type="occi:NumericType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.6"/>
+    </attributes>
+    <attributes name="storage.path" default="mountedStorage" type="//@types.4"/>
+    <attributes name="db.user" default="pass" description="The user account used for database administration.">
+      <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
+    </attributes>
+    <attributes name="bind.address" default="true" description="If true,the server accepts TCP/IP connections on all server host IPv4 interfaces.">
+      <type xsi:type="occi:BooleanType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.2"/>
+    </attributes>
+    <attributes name="db.password" default="pass" description="The password associated with the user account for database administration.">
+      <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
+    </attributes>
+  </mixins>
+  <mixins name="tosca_nodes_SoftwareComponent_Elasticsearch" scheme="http://schemas.ogf.org/tosca/extended#" title="Elasticsearch is an open-source search engine built on top of Apache Lucene, a full-text search-engine library.">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_softwarecomponent']"/>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_endpoint']"/>
   </mixins>
-  <mixins name="tosca_nodes_DatabaseWithListParam" scheme="http://org.occi/extendedTosca#">
-    <attributes name="list.prop" type="//@types.4"/>
+  <mixins name="tosca_nodes_DatabaseWithListParam" scheme="http://schemas.ogf.org/tosca/extended#">
+    <attributes name="list.prop" type="//@types.5"/>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_database']"/>
   </mixins>
-  <mixins name="example_SomeApp" scheme="http://org.occi/extendedTosca#" title="taken from tosca-topologies/Example18-ImplementationOfATransactionSubsytemNodeTypeUsingSubstitutionMappings">
+  <mixins name="example_SomeApp" scheme="http://schemas.ogf.org/tosca/extended#" title="taken from tosca-topologies/Example18-ImplementationOfATransactionSubsytemNodeTypeUsingSubstitutionMappings">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_endpoint']"/>
   </mixins>
-  <mixins name="tosca_nodes_NodeWithCap" scheme="http://org.occi/extendedTosca#">
+  <mixins name="tosca_nodes_Apache" scheme="http://schemas.ogf.org/tosca/extended#" title="The TOSCA Apache Node Type represents an apache component that can be managed and run by a TOSCA Compute Node Type.">
+    <attributes name="document.root" default="/var/www">
+      <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
+    </attributes>
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_webserver']"/>
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_container']"/>
+  </mixins>
+  <mixins name="tosca_nodes_NodeWithCap" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
     <depends href="#//@mixins[term='tosca_capabilities_somecap']"/>
   </mixins>
-  <mixins name="Rsyslog" scheme="http://org.occi/extendedTosca#" title="RSYSLOG is the Rocket-fast SYStem for LOG processing.">
+  <mixins name="Rsyslog" scheme="http://schemas.ogf.org/tosca/extended#" title="RSYSLOG is the Rocket-fast SYStem for LOG processing.">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_softwarecomponent']"/>
   </mixins>
-  <mixins name="tosca_nodes_network_Port" scheme="http://org.occi/extendedTosca#">
+  <mixins name="tosca_nodes_Wordpress" scheme="http://schemas.ogf.org/tosca/extended#" title="The TOSCA Wordpress Node Type represents a Wordpress CMS.">
+    <attributes name="zip.url" default="https://wordpress.org/latest.zip">
+      <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
+    </attributes>
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_webapplication']"/>
+  </mixins>
+  <mixins name="tosca_nodes_network_Port" scheme="http://schemas.ogf.org/tosca/extended#">
     <attributes name="ip.range.end">
       <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
     </attributes>
@@ -173,44 +199,44 @@
     </attributes>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
   </mixins>
-  <mixins name="tosca_nodes_ComputeWithCapWithAttr" scheme="http://org.occi/extendedTosca#" title="Compute node type with capability with an attribute of type list">
+  <mixins name="tosca_nodes_ComputeWithCapWithAttr" scheme="http://schemas.ogf.org/tosca/extended#" title="Compute node type with capability with an attribute of type list">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_compute']"/>
     <depends href="#//@mixins[term='tosca_capabilities_indigo_endpoint']"/>
   </mixins>
-  <mixins name="tosca_nodes_SoftwareComponent_Rsyslog" scheme="http://org.occi/extendedTosca#" title="RSYSLOG is the Rocket-fast SYStem for LOG processing.">
+  <mixins name="tosca_nodes_SoftwareComponent_Rsyslog" scheme="http://schemas.ogf.org/tosca/extended#" title="RSYSLOG is the Rocket-fast SYStem for LOG processing.">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_softwarecomponent']"/>
   </mixins>
-  <mixins name="tosca_nodes_HACompute" scheme="http://org.occi/extendedTosca#">
+  <mixins name="tosca_nodes_HACompute" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_compute']"/>
     <depends href="#//@mixins[term='tosca_capabilities_ha']"/>
   </mixins>
-  <mixins name="tosca_nodes_SomeNode" scheme="http://org.occi/extendedTosca#" title="Node type that has a requirement of a capability with a defined value">
+  <mixins name="tosca_nodes_SomeNode" scheme="http://schemas.ogf.org/tosca/extended#" title="Node type that has a requirement of a capability with a defined value">
     <attributes name="some.prop" default="some">
       <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
     </attributes>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
   </mixins>
-  <mixins name="tosca_nodes_WebServer_Nodejs" scheme="http://org.occi/extendedTosca#">
+  <mixins name="tosca_nodes_WebServer_Nodejs" scheme="http://schemas.ogf.org/tosca/extended#">
     <attributes name="github.url" default="https://github.com/mmm/testnode.git" description="location of the application on the github.">
       <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
     </attributes>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_webserver']"/>
   </mixins>
-  <mixins name="tosca_nodes_DBMS_MySQL" scheme="http://org.occi/extendedTosca#">
+  <mixins name="tosca_nodes_DBMS_MySQL" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_dbms']"/>
   </mixins>
-  <mixins name="mycompany_mytypes_myScalingPolicy" scheme="http://org.occi/extendedTosca#"/>
-  <mixins name="test_relation_connects" scheme="http://org.occi/extendedTosca#"/>
-  <mixins name="tosca_relationships_network_BindsTo" scheme="http://org.occi/extendedTosca#">
+  <mixins name="mycompany_mytypes_myScalingPolicy" scheme="http://schemas.ogf.org/tosca/extended#"/>
+  <mixins name="test_relation_connects" scheme="http://schemas.ogf.org/tosca/extended#"/>
+  <mixins name="tosca_relationships_network_BindsTo" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_relationships_dependson']"/>
   </mixins>
-  <mixins name="tosca_relationships_HA" scheme="http://org.occi/extendedTosca#">
+  <mixins name="tosca_relationships_HA" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_relationships_root']"/>
   </mixins>
-  <mixins name="MyAttachesTo" scheme="http://org.occi/extendedTosca#" title="taken from tosca-topologies/BlockStorage4">
+  <mixins name="MyAttachesTo" scheme="http://schemas.ogf.org/tosca/extended#" title="taken from tosca-topologies/BlockStorage4">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_relationships_attachesto']"/>
   </mixins>
-  <mixins name="tosca_relationships_network_LinksTo" scheme="http://org.occi/extendedTosca#">
+  <mixins name="tosca_relationships_network_LinksTo" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_relationships_dependson']"/>
   </mixins>
   <types xsi:type="occi:ArrayType" name="arrayCredential">
@@ -225,6 +251,10 @@
   <types xsi:type="occi:EnumerationType" name="ip_versionEnum">
     <literals name="IPv4"/>
     <literals name="IPv6"/>
+  </types>
+  <types xsi:type="occi:EnumerationType" name="storage_pathEnum">
+    <literals name="mountedStorage"/>
+    <literals name="varmysql"/>
   </types>
   <types xsi:type="occi:ArrayType" name="arrayinteger">
     <type xsi:type="occi:NumericType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.6"/>
