@@ -18,7 +18,7 @@ public class PropertyReader {
 				} else {
 					System.err.println(property + " skipped (" + properties.get(property).getClass() + ")");
 					continue;
-				}
+				} 	
 				if (propertyValue == null) {
 					continue;
 				}

@@ -24,30 +24,40 @@ public class ConfigManager {
 	
 	private static Resource resource;
 	
+	private static final String PREFIX_FILE = "file:";
+	
 	public static void createConfiguration(String path) {
 		String name = convertPathToConfigName(path);
 		ResourceSet resSet = new ResourceSetImpl();
 		URI modelURI = URI
-				.createURI("file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.examples/" + name + ".extendedTosca");
+				.createURI(PREFIX_FILE + Main.ROOT_WORKSPACE + "org.eclipse.cmf.occi.tosca.examples/" + name + ".extendedTosca");
 		resource = resSet.createResource(modelURI);
 		
 		OcciRegistry.getInstance().registerExtension(
-				"http://org.occi/tosca#", 
-				"file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca/model/tosca.occie"
+				"http://schemas.ogf.org/tosca/core#", 
+				PREFIX_FILE + Main.ROOT_WORKSPACE + "org.eclipse.cmf.occi.tosca/model/tosca.occie"
 		);
 		
 		OcciRegistry.getInstance().registerExtension(
-				"http://org.occi/extendedTosca#", 
-				"file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.extended/model/extendedTosca.occie"
+				"http://schemas.ogf.org/tosca/extended#", 
+				PREFIX_FILE + Main.ROOT_WORKSPACE + "org.eclipse.cmf.occi.tosca.extended/model/extendedTosca.occie"
 		);
 
 		Configuration configuration = OCCIFactory.eINSTANCE.createConfiguration();
 		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/core#"));
 		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/infrastructure#"));
-		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/platform#"));
+		//configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/platform#"));
+		
+		// MODMACAO
+		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.modmacao.org/modmacao#"));
+		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.modmacao.org/occi/platform#"));
+		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.modmacao.org/placement#"));
+		
 		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/sla#"));
-		configuration.getUse().add(OcciHelper.loadExtension("file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca/model/tosca.occie"));
-		configuration.getUse().add(OcciHelper.loadExtension("file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.extended/model/extendedTosca.occie"));
+		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/tosca/core#"));
+		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/tosca/extended#"));
+		//configuration.getUse().add(OcciHelper.loadExtension("file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca/model/tosca.occie"));
+		//configuration.getUse().add(OcciHelper.loadExtension("file:/C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.extended/model/extendedTosca.occie"));
 		resource.getContents().add(configuration);
 		currentConfiguration = configuration;
 	}

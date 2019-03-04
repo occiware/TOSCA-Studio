@@ -14,7 +14,7 @@ public class InputsReader {
 	public static void read(String nameOfConfig, Map<String, ?> inputsMap) {
 		List<String> lines = null;
 		try {
-			lines = Files.readAllLines(Paths.get("C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.examples/inputs/" + nameOfConfig + "-inputs.csv"));
+			lines = Files.readAllLines(Paths.get(Main.ROOT_WORKSPACE + "org.eclipse.cmf.occi.tosca.examples/inputs/" + nameOfConfig + "-inputs.csv"));
 		} catch (IOException e) {
 			System.err.println("WARNING missing input file for " + nameOfConfig);
 			return;

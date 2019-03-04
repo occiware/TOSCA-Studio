@@ -2,11 +2,16 @@ package org.eclipse.cmf.occi.tosca.config;
 
 import java.io.File;
 import java.io.FileReader;
+import java.lang.reflect.Array;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
+import javax.management.MXBean;
 import javax.sound.midi.Soundbank;
 
 import org.eclipse.cmf.occi.core.Configuration;
@@ -17,8 +22,8 @@ import org.eclipse.cmf.occi.core.Mixin;
 import org.eclipse.cmf.occi.core.MixinBase;
 import org.eclipse.cmf.occi.core.Resource;
 import org.eclipse.cmf.occi.core.util.OcciHelper;
-import org.eclipse.cmf.occi.platform.Component;
 import org.eclipse.cmf.occi.tosca.ToscaFactory;
+import org.eclipse.cmf.occi.tosca.Tosca_nodes_compute;
 import org.eclipse.cmf.occi.tosca.config.Mapper.Mapping;
 import org.eclipse.cmf.occi.tosca.config.Mapper.MappingToCreateType;
 import org.eclipse.core.commands.AbstractHandler;
@@ -34,29 +39,43 @@ import extendedtosca.ExtendedtoscaFactory;
  * @see org.eclipse.core.commands.IHandler
  * @see org.eclipse.core.commands.AbstractHandler
  */
+@SuppressWarnings("unchecked")
 public class Main extends AbstractHandler {
+
+	// TODO To be configured MUST END WITH a /
+	public static final String ROOT_WORKSPACE = "C:/Users/schallit/workspace-tosca2/plugins/";
+
+	public static ApplicationAndComponentManager applicationAndComponentManger;
+
+	public static LinkManager linkManager = new LinkManager();
+	
+	public static Map<String, Exception> errors = new HashMap<>();
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-		String pathOfDirectory = "C:/Users/schallit/workspace-tosca2/plugins/org.eclipse.cmf.occi.tosca.examples/tosca-topologies/";
+		String pathOfDirectory = ROOT_WORKSPACE + "org.eclipse.cmf.occi.tosca.examples/tosca-topologies/";
 		String[] yamlFilesPath = new File(pathOfDirectory).list();
 		for (String yamlFilePath : yamlFilesPath) {
-			if (!yamlFilePath.equals("Example9-DefiningACustomRelationshipType.yml")) {
-				/*
-				 * if (!yamlFilePath.equals(
-				 * "Example16-UsingSubstitutionMappingsToExportADatabaseImplementation.yml") &&
-				 * !yamlFilePath.equals(
-				 * "Example3-SimpleMySQLInstallationOnATOSCAComputeNode.yml") &&
-				 * !yamlFilePath.equals(
-				 * "Example4-NodeTemplateOverridingItsNodeTypeConfigureInterface.yml") &&
-				 * !yamlFilePath .equals(
-				 * "Example5-TemplateForDeployingDatabaseContentOnTopOfMySQLDBMSMiddleware.yml")
-				 * && !yamlFilePath.equals("Example9-DefiningACustomRelationshipType.yml") &&
-				 * !yamlFilePath.equals("Multi-Tier1-ElasticsearchLogstashKibana.yml") &&
-				 * !yamlFilePath.equals("BlockStorage2.yml")) {
-				 */
-				readYamlFile(pathOfDirectory + "/" + yamlFilePath);
+			if (!yamlFilePath.equals("Example16-UsingSubstitutionMappingsToExportADatabaseImplementation.yml")
+					&& !yamlFilePath.equals("Example3-SimpleMySQLInstallationOnATOSCAComputeNode.yml")
+					&& !yamlFilePath.equals("Example4-NodeTemplateOverridingItsNodeTypeConfigureInterface.yml")
+					&& !yamlFilePath.equals("Example5-TemplateForDeployingDatabaseContentOnTopOfMySQLDBMSMiddleware.yml")
+					&& !yamlFilePath.equals("Example9-DefiningACustomRelationshipType.yml")
+					&& !yamlFilePath.equals("Multi-Tier1-ElasticsearchLogstashKibana.yml")
+					&& !yamlFilePath.equals("BlockStorage2.yml")) {
+				System.out.println("Reading " + yamlFilePath + " ....");
+				try {
+					readYamlFile(pathOfDirectory + "/" + yamlFilePath);
+				} catch (Exception e) {
+					errors.put(yamlFilePath, e);
+				}
 			}
+		}
+		
+		System.out.println("Printout the rrors...");
+		for (String yamlFile : errors.keySet()) {
+			System.out.println(yamlFile + ":");
+			errors.get(yamlFile).printStackTrace();
 		}
 		return null;
 	}
@@ -66,8 +85,12 @@ public class Main extends AbstractHandler {
 			YamlReader reader = new YamlReader(new FileReader(path));
 			System.out.println(path);
 			Map<String, ?> yamlFileAsMap = (Map<String, ?>) reader.read();
+
 			ConfigManager.createConfiguration(path);
 			Configuration configuration = ConfigManager.currentConfiguration;
+
+			Main.applicationAndComponentManger = new ApplicationAndComponentManager(configuration);
+
 			Map<String, ?> topology_template = (Map<String, ?>) yamlFileAsMap.get("topology_template");
 			if (topology_template.get("inputs") != null && topology_template.get("inputs") instanceof Map) {
 				InputsReader.read(ConfigManager.convertPathToConfigName(path),
@@ -76,121 +99,53 @@ public class Main extends AbstractHandler {
 			if (topology_template.get("description") != null) {
 				configuration.setDescription((String) topology_template.get("description"));
 			}
-			readNodeTemplate(configuration, (Map<String, ?>) topology_template.get("node_templates"));
-			createApplication(configuration);
+			Main.applicationAndComponentManger.createNewApplication();
+			readNodeTemplates(configuration, (Map<String, ?>) topology_template.get("node_templates"));
+			Main.linkManager.linksToDo.forEach(LinkManager.LinkToDo::apply);
 			ConfigManager.save();
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
 	}
 
-	private static void createApplication(Configuration configuration) {
-		Resource applicationEntity = (Resource) OcciHelper.createEntity(OcciHelper
-				.getKindByTerm(OcciHelper.loadExtension("http://schemas.ogf.org/occi/platform#"), "application"));
-		for (Resource resource : configuration.getResources()) {
-			try {
-				Link link = (Link) OcciHelper
-						.createEntity(OcciHelper.getKindByTerm(OcciHelper.loadExtension(resource.getKind().getScheme()),
-								resource.getKind().getTerm() + "link"));
-				if (link != null) {
-					link.setSource(applicationEntity);
-					link.setTarget(resource);
-				} else {
-					System.err.println("Could not find " + resource.getKind().getTerm() + "link in "
-							+ resource.getKind().getScheme() + "extension");
-				}
-			} catch (Exception e) {
-				continue;
-			}
-		}
-		configuration.getResources().add((Resource) applicationEntity);
-	}
-
-	private static void readNodeTemplate(Configuration configuration, Map<String, ?> node_templates) throws Exception {
+	/**
+	 * @param configuration
+	 * @param node_templates
+	 * @throws Exception
+	 */
+	private static void readNodeTemplates(Configuration configuration, Map<String, ?> node_templates) throws Exception {
+		NodeTemplateReader nodeTemplateReader = new NodeTemplateReader(configuration);
 		for (String key : node_templates.keySet()) {
-			Map<String, ?> node_map = (Map<String, ?>) node_templates.get(key);
+			System.out.println(key);
+			System.out.println(node_templates);
+			nodeTemplateReader.read(key, (Map<String, ?>) node_templates);
+		}
+	}
 
-			// setting type, using Mapper.mappingOfType
-			String typeName = (String) node_map.get("type");
-
-			if (typeName == null) {
-				continue;
-			}
-
-			String methodNameToCreate = "create" + Character.toUpperCase(typeName.charAt(0))
-					+ typeName.substring(1).replaceAll("\\.", "_").toLowerCase();
-			MixinBase node = null;
+	public static MixinBase instanciateCorrectMixinBaseFromTypeName(String typeName) throws Exception {
+		System.out.print("Trying to instanciate " + typeName);
+		String methodNameToCreate = "create" + Character.toUpperCase(typeName.charAt(0))
+				+ typeName.substring(1).replaceAll("\\.", "_").toLowerCase();
+		System.out.println(" using " + methodNameToCreate);
+		MixinBase node = null;
+		try {
+			node = (MixinBase) ExtendedtoscaFactory.class.getMethod(methodNameToCreate)
+					.invoke(ExtendedtoscaFactory.eINSTANCE);
+		} catch (NoSuchMethodException e1) {
 			try {
-				node = (MixinBase) ExtendedtoscaFactory.class.getMethod(methodNameToCreate)
-						.invoke(ExtendedtoscaFactory.eINSTANCE);
-			} catch (NoSuchMethodException e1) {
-				try {
-					node = (MixinBase) ToscaFactory.class.getMethod(methodNameToCreate).invoke(ToscaFactory.eINSTANCE);
-				} catch (NoSuchMethodException e2) {
-					System.err.println("Could not find the method " + methodNameToCreate + " in the TOSCA Factory");
-					MappingToCreateType mapping = Mapper.mappingOfType.get(typeName);
-					if (mapping == null) {
-						System.err.println("Must add a mapping for " + typeName);
-						return;
-					}
-					node = (MixinBase) mapping.invoke();
+				return (MixinBase) ToscaFactory.class.getMethod(methodNameToCreate).invoke(ToscaFactory.eINSTANCE);
+			} catch (NoSuchMethodException e2) {
+				System.err.println("Could not find the method " + methodNameToCreate + " in the TOSCA Factory");
+				MappingToCreateType mapping = Mapper.mappingOfType.get(typeName);
+				if (mapping == null) {
+					System.err.println("Must add a mapping for " + typeName);
+					return null;
 				}
-			}
-
-			List<Entity> entities = readApplies(configuration, node.getMixin());
-			if (entities.size() > 1) {
-				System.out.println("More than one resource for " + node.getMixin().getName());
-			}
-			if (entities.isEmpty()) {
-				System.err.println("Should not happen! No applies found for " + node.getMixin().getName());
-			} else {
-				entities.get(0).getParts().add(node);
-			}
-			for (Entity entity : entities) {
-				if (entity instanceof Resource
-						&& (((Resource) entity).getKind().getTerm().equals("resource") && !entity.getParts().isEmpty()
-								|| !((Resource) entity).getKind().getTerm().equals("resource"))) {
-					configuration.getResources().add((Resource) entity);
-				}
-			}
-
-			if (node_map.get("properties") != null && node_map.get("properties") instanceof Map) {
-				PropertyReader.readProperties(node, (Map<String, ?>) node_map.get("properties"));
-			}
-
-			if (node_map.get("capabilities") != null && node_map.get("capabilities") instanceof Map) {
-				readCapabilities(node, (Map<String, ?>) node_map.get("capabilities"));
+				node = (MixinBase) mapping.invoke();
 			}
 		}
-	}
-
-	private static void readCapabilities(MixinBase node, Map<String, ?> capabilities) throws Exception {
-		for (String capability : capabilities.keySet()) {
-			if (!(capabilities.get(capability) instanceof Map)) {
-				continue;// it is equals to null
-			}
-			Map<String, ?> capabilityMap = (Map<String, ?>) capabilities.get(capability);
-			if (!(capabilityMap.get("properties") instanceof Map)) {
-				continue;// it is equals to null
-			}
-			Map<String, ?> properties = (Map<String, ?>) capabilityMap.get("properties");
-			if (properties != null) {
-				PropertyReader.readProperties(node, properties);
-			}
-		}
-	}
-
-	private static List<Entity> readApplies(Configuration configuration, Mixin mixin) {
-		List<Entity> entities = new ArrayList<>();
-		for (Kind kind : mixin.getApplies()) {
-			Entity entity = OcciHelper.createEntity(kind);
-			entity.setKind(kind);
-			entities.add(entity);
-		}
-		for (Mixin depend : mixin.getDepends()) {
-			entities.addAll(readApplies(configuration, depend));
-		}
-		return entities;
+		System.out.println("Successfully instanciate " + typeName + " using " + methodNameToCreate);
+		return node;
 	}
 
 }
