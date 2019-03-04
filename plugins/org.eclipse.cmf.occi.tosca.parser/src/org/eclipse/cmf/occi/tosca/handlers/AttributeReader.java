@@ -80,7 +80,7 @@ public class AttributeReader {
 							type.setName(attributeName.replaceAll("\\.", "_") + "Enum");
 							for (String literal : literals) {
 								EnumerationLiteral enumLit = OCCIFactory.eINSTANCE.createEnumerationLiteral();
-								enumLit.setName(literal);
+								enumLit.setName(literal.replaceAll("/", ""));
 								enumLit.setEnumerationType((EnumerationType) type);
 								((EnumerationType) type).getLiterals().add(enumLit);
 							}

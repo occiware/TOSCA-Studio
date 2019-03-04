@@ -36,9 +36,11 @@ import com.esotericsoftware.yamlbeans.YamlWriter;
 public class Main extends AbstractHandler {
 
 	// TODO must be configured
-	public static final String PATH_TO_WORKSPACE = "";
+	public static final String PATH_TO_WORKSPACE = "C:/Users/schallit/workspace-tosca2/";
 	
-	public static final String  PATH_TO_ROOT_PROJECT = PATH_TO_WORKSPACE + "TOSCA-Studio/plugins/";
+	public static final String  PATH_TO_ROOT_PROJECT = PATH_TO_WORKSPACE + "plugins/";
+	
+	public static final String PATH_TO_TYPES_FILE = "org.eclipse.cmf.occi.tosca.parser/tosca-types/";
 	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
@@ -132,9 +134,9 @@ public class Main extends AbstractHandler {
 		Map capabilities = new HashMap<>();
 		Map relationships = new HashMap<>();
 		Map policies = new HashMap<>();
-		readCustomAndAddedTypesInGivenDirectory(PATH_TO_ROOT_PROJECT + "org.eclipse.cmf.occi.tosca.parser/tosca-types/custom-types/", 
+		readCustomAndAddedTypesInGivenDirectory(PATH_TO_ROOT_PROJECT + PATH_TO_TYPES_FILE + "custom-types/", 
 				nodes, capabilities, relationships, policies);
-		readCustomAndAddedTypesInGivenDirectory(PATH_TO_ROOT_PROJECT + "org.eclipse.cmf.occi.tosca.parser/tosca-types/added-types/", 
+		readCustomAndAddedTypesInGivenDirectory(PATH_TO_ROOT_PROJECT + PATH_TO_TYPES_FILE + "added-types/", 
 				nodes, capabilities, relationships, policies);
 		customTypesMap.put("tosca_definitions_version", "tosca_simple_yaml_1_0");
 		customTypesMap.put("description",
@@ -143,7 +145,7 @@ public class Main extends AbstractHandler {
 		customTypesMap.put("capability_types", capabilities);
 		customTypesMap.put("relationship_types", relationships);
 		customTypesMap.put("policy_types", policies);
-		YamlWriter writerNodes = new YamlWriter(new FileWriter(PATH_TO_ROOT_PROJECT + "org.eclipse.cmf.occi.tosca.parser/tosca-types/custom-types.yml"));
+		YamlWriter writerNodes = new YamlWriter(new FileWriter(PATH_TO_ROOT_PROJECT + PATH_TO_TYPES_FILE + "custom-types.yml"));
 		writerNodes.write(customTypesMap);
 		writerNodes.close();
 		return customTypesMap;
@@ -152,8 +154,12 @@ public class Main extends AbstractHandler {
 	private static void readCustomAndAddedTypesInGivenDirectory(String directoryPath, 
 			Map nodes, Map capabilities, Map relationships, Map policies) throws Exception {
 		File[] yamlFiles = new File(directoryPath).listFiles();
+		if (yamlFiles == null) {
+			return;
+		}
 		for (File path : yamlFiles) {
 			YamlReader reader = new YamlReader(new FileReader(path));
+			System.out.println("Reading " + path + " ...."); 
 			Map<String, ?> map = (Map<String, ?>) reader.read();
 			if (map.containsKey("node_types")) {
 				nodes.putAll((Map) map.get("node_types"));

@@ -43,19 +43,23 @@ public class StringToDataType {
 	static {
 		scalarFrequency.setType(NumericTypeEnum.DOUBLE);
 		scalarFrequency.setName("scalarFrequency");
-		scalarFrequency.setMinInclusive("0.1 GHz");
+		scalarFrequency.setMinInclusive("0.1");// GHz");//
+		scalarFrequency.setMinExclusive("0.2");// GHz");
 		
 		scalarSizeZeroMB.setType(NumericTypeEnum.INTEGER);
 		scalarSizeZeroMB.setName("scalarSizeMinZeroMB");
-		scalarSizeZeroMB.setMinInclusive("0 MB");
+		scalarSizeZeroMB.setMinInclusive("0");// MB");
+		scalarSizeZeroMB.setMinExclusive("1");// MB");
 		
 		scalarSizeZeroGB.setType(NumericTypeEnum.INTEGER);
 		scalarSizeZeroGB.setName("scalarSizeMinZeroGB");
-		scalarSizeZeroGB.setMinInclusive("0 GB");
+		scalarSizeZeroGB.setMinInclusive("0");// GB");
+		scalarSizeZeroGB.setMinExclusive("1");// GB");
 		
 		scalarSizeOneMB.setType(NumericTypeEnum.INTEGER);
 		scalarSizeOneMB.setName("scalarSizeMinOneMB");
-		scalarSizeOneMB.setMinInclusive("1 MB");
+		scalarSizeOneMB.setMinInclusive("1");// MB");
+		scalarSizeOneMB.setMinExclusive("0");// MB");
 		
 		typeModelByte.setType(NumericTypeEnum.BYTE);
 		typeModelByte.setName("byte");
@@ -71,6 +75,7 @@ public class StringToDataType {
 		typeModelIntegerMinZero.setType(NumericTypeEnum.INTEGER);
 		typeModelIntegerMinZero.setName("integerMinZero");
 		typeModelIntegerMinZero.setMinInclusive("0");
+		typeModelIntegerMinZero.setMinExclusive("-1");
 		typeModelLong.setType(NumericTypeEnum.LONG);
 		typeModelLong.setName("long");
 		typeModelShort.setType(NumericTypeEnum.SHORT);
@@ -78,14 +83,17 @@ public class StringToDataType {
 		
 		typeModelRange.setType(NumericTypeEnum.SHORT);
 		typeModelRange.setName("range");
-		typeModelRange.setMaxInclusive("65535");
+		typeModelRange.setMaxInclusive("32767");
+		typeModelRange.setMaxExclusive("32767");
 		typeModelRange.setMinInclusive("1");
 		
 		// semantically same as "range" type, but used explicitly in TOSCA. We create a specific type to remain consistent between both models: TOSCA and OCCI.
 		toscaDatatypesNetworkPortDef.setType(NumericTypeEnum.SHORT);
 		toscaDatatypesNetworkPortDef.setName("toscadatatypesnetworkPortDef");
-		toscaDatatypesNetworkPortDef.setMaxInclusive("65535");
+		toscaDatatypesNetworkPortDef.setMaxInclusive("32767");
+		toscaDatatypesNetworkPortDef.setMaxExclusive("32767");
 		toscaDatatypesNetworkPortDef.setMinInclusive("1");
+		toscaDatatypesNetworkPortDef.setMinExclusive("0");
 		
 		typeModelBoolean.setName("boolean");
 		typeModelString.setName("string");
