@@ -1,0 +1,42 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+
+metadata:
+  template_name: php
+  template_version: 1.0.0
+
+description: PHP installation.
+
+imports:
+- tosca-normative-types:1.0.0
+
+node_types:
+  tosca.nodes.PHP:
+    derived_from: tosca.nodes.SoftwareComponent
+    description: PHP install through apt-get.
+    metadata:
+      icon: /images/php.png
+    properties:
+      component_version:
+        type: version
+        default: 5
+        constraints:
+          - equal: 5
+    capabilities:
+      attachWebsite:
+        type: tosca.capabilities.Root
+    requirements:
+      - host:
+          capability: tosca.capabilities.Container
+          node: tosca.nodes.Compute
+          relationship: tosca.relationships.HostedOn
+          occurrences: [1, 1]
+          node_filter:
+            capabilities:
+              - tosca.capabilities.OperatingSystem:
+                  properties:
+                    - type: { equal: linux }
+                    - architecture: { equal: x86_64 }
+                    - distribution: { valid_values: [ debian, ubuntu, knoppix ] }
+    interfaces:
+      Standard:
+        create: scripts/install_php.sh

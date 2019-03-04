@@ -33,20 +33,6 @@ node_types:
             description: location of the application on the github.
             type: string
             required: false
-   tosca.nodes.WebApplication.WordPress: 
-      requirements: 
-      -  database_endpoint: 
-            node: tosca.nodes.Database
-            capability: tosca.capabilities.Endpoint.Database
-            relationship: tosca.relationships.ConnectsTo
-      derived_from: tosca.nodes.WebApplication
-      properties: 
-         db_host: 
-            type: string
-         admin_password: 
-            type: string
-         admin_user: 
-            type: string
    tosca.nodes.network.Network: 
       derived_from: tosca.nodes.Root
       properties: 
@@ -159,6 +145,44 @@ node_types:
          host_child: 
             type: tosca.capabilities.ContainerChild
       derived_from: tosca.nodes.Root
+   tosca.nodes.PHP: 
+      metadata: 
+         icon: /images/php.png
+      requirements: 
+      -  host: 
+            occurrences: 
+            - '1'
+            - '1'
+            node: tosca.nodes.Compute
+            capability: tosca.capabilities.Container
+            node_filter: 
+               capabilities: 
+               -  tosca.capabilities.OperatingSystem: 
+                     properties: 
+                     -  type: 
+                           equal: linux
+                     -  architecture: 
+                           equal: x86_64
+                     -  distribution: 
+                           valid_values: 
+                           - debian
+                           - ubuntu
+                           - knoppix
+            relationship: tosca.relationships.HostedOn
+      interfaces: 
+         Standard: 
+            create: scripts/install_php.sh
+      capabilities: 
+         attachWebsite: 
+            type: tosca.capabilities.Root
+      derived_from: tosca.nodes.SoftwareComponent
+      description: PHP install through apt-get.
+      properties: 
+         component_version: 
+            default: '5'
+            type: version
+            constraints: 
+            -  equal: '5'
    tosca.nodes.Database.MySQL: 
       requirements: 
       -  host: 
@@ -189,6 +213,94 @@ node_types:
             type: integer
          mq_service_ip: 
             type: string
+   tosca.nodes.Mysql: 
+      requirements: 
+      -  host: 
+            occurrences: 
+            - '1'
+            - '1'
+            node: tosca.nodes.Compute
+            capability: tosca.capabilities.Container
+            node_filter: 
+               capabilities: 
+               -  tosca.capabilities.OperatingSystem: 
+                     properties: 
+                     -  type: 
+                           equal: linux
+                     -  architecture: 
+                           equal: x86_64
+                     -  distribution: 
+                           valid_values: 
+                           - debian
+                           - ubuntu
+                           - knoppix
+            relationship: tosca.relationships.HostedOn
+      interfaces: 
+         Standard: 
+            start: 
+               inputs: 
+                  PORT: 
+                     get_property: 
+                     - SELF
+                     - port
+                  DB_USER: 
+                     get_property: 
+                     - SELF
+                     - db_user
+                  BIND_ADDRESS: 
+                     get_property: 
+                     - SELF
+                     - bind_address
+                  VOLUME_HOME: 
+                     get_property: 
+                     - SELF
+                     - storage_path
+                  DB_NAME: 
+                     get_property: 
+                     - SELF
+                     - name
+                  DB_PASSWORD: 
+                     get_property: 
+                     - SELF
+                     - db_password
+               implementation: scripts/start_mysql.sh
+            create: scripts/install_mysql.sh
+      derived_from: tosca.nodes.AbstractMysql
+      description: A node that represent MySQL database with data on a attached volume.
+      properties: 
+         port: 
+            default: '3306'
+            description: The port on which the database will listen to data.
+            type: integer
+         storage_path: 
+            default: /mountedStorage
+            type: string
+            constraints: 
+            -  valid_values: 
+               - /mountedStorage
+               - /var/mysql
+         db_user: 
+            default: pass
+            description: The user account used for database administration.
+            type: string
+         name: 
+            default: wordpress
+            description: The logical name of the database.
+            type: string
+            required: true
+         bind_address: 
+            default: true
+            description: If true,the server accepts TCP/IP connections on all server host IPv4 interfaces.
+            type: boolean
+            required: false
+         db_password: 
+            default: pass
+            description: The password associated with the user account for database administration.
+            type: string
+      artifacts: 
+      -  configs: 
+            file: configs
+            type: tosca.artifacts.File
    tosca.nodes.SoftwareComponent.Elasticsearch: 
       capabilities: 
          search_endpoint: 
@@ -212,6 +324,47 @@ node_types:
          message_receiver: tosca.capabilities.Endpoint
       derived_from: tosca.nodes.Root
       description: taken from tosca-topologies/Example18-ImplementationOfATransactionSubsytemNodeTypeUsingSubstitutionMappings
+   tosca.nodes.AbstractMysql: 
+      capabilities: 
+         database_endpoint: tosca.capabilities.Endpoint.Database
+      derived_from: tosca.nodes.Database
+      description: A node that provides a mysql endpoint.
+      abstract: true
+   tosca.nodes.Apache: 
+      interfaces: 
+         Standard: 
+            start: scripts/start_apache.sh
+            create: 
+               inputs: 
+                  PORT: 
+                     get_property: 
+                     - SELF
+                     - port
+                  DOC_ROOT: 
+                     get_property: 
+                     - SELF
+                     - document_root
+               implementation: scripts/install_apache.sh
+      capabilities: 
+         host: tosca.capabilities.Container
+      derived_from: tosca.nodes.WebServer
+      description: The TOSCA Apache Node Type represents an apache component that can be managed and run
+         by a TOSCA Compute Node Type.
+      properties: 
+         port: 
+            default: '80'
+            description: Port for the Apache server
+            type: integer
+            constraints: 
+            -  greater_or_equal: '1'
+         document_root: 
+            default: /var/www
+            type: string
+         component_version: 
+            default: '2.4'
+            type: version
+            constraints: 
+            -  equal: '2.4'
    tosca.nodes.NodeWithCap: 
       capabilities: 
          some_req: 
@@ -225,6 +378,46 @@ node_types:
             relationship: tosca.relationships.ConnectsTo
       derived_from: tosca.nodes.SoftwareComponent
       description: RSYSLOG is the Rocket-fast SYStem for LOG processing.
+   tosca.nodes.Wordpress: 
+      requirements: 
+      -  host: 
+            capability: tosca.capabilities.Container
+            relationship: tosca.relationships.HostedOn
+      -  database: 
+            occurrences: 
+            - '1'
+            - '1'
+            capability: tosca.capabilities.MysqlDatabaseEndpoint
+            relationship: tosca.capabilities.Endpoint.Database
+      -  php: 
+            occurrences: 
+            - '1'
+            - '1'
+            capability: tosca.capabilities.Root
+            relationship: tosca.relationships.ConnectsTo
+      interfaces: 
+         Standard: 
+            create: 
+               inputs: 
+                  WEBFILE_URL: 
+                     get_property: 
+                     - SELF
+                     - zip_url
+               implementation: scripts/install_wordpress.sh
+      derived_from: tosca.nodes.WebApplication
+      description: The TOSCA Wordpress Node Type represents a Wordpress CMS.
+      attributes: 
+         max_user_number: 
+            default: '10'
+            description: Max user number
+            type: integer
+      properties: 
+         context_root: 
+            default: /
+            type: string
+         zip_url: 
+            default: https://wordpress.org/latest.zip
+            type: string
    tosca.nodes.network.Port: 
       requirements: 
       -  link: 

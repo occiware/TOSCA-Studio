@@ -1,0 +1,80 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+
+metadata:
+  template_name: mysql-type
+  template_version: 1.0.0
+
+description: MySQL database
+
+imports:
+  - tosca-normative-types:1.0.0
+
+node_types:
+  tosca.nodes.AbstractMysql:
+    abstract: true
+    derived_from: tosca.nodes.Database
+    description: A node that provides a mysql endpoint.
+    capabilities:
+      database_endpoint: tosca.capabilities.Endpoint.Database
+
+  tosca.nodes.Mysql:
+    derived_from: tosca.nodes.AbstractMysql
+    description: >
+      A node that represent MySQL database with data on a attached volume.
+    requirements:
+      - host:
+          capability: tosca.capabilities.Container
+          node: tosca.nodes.Compute
+          relationship: tosca.relationships.HostedOn
+          occurrences: [1, 1]
+          node_filter:
+            capabilities:
+              - tosca.capabilities.OperatingSystem:
+                  properties:
+                    - type: { equal: linux }
+                    - architecture: { equal: x86_64 }
+                    - distribution: { valid_values: [ debian, ubuntu, knoppix ] }
+    properties:
+      port:
+        type: integer
+        default: 3306
+        description: The port on which the database will listen to data.
+      name:
+        type: string
+        required: true
+        default: wordpress
+        description: The logical name of the database.
+      db_user:
+        type: string
+        default: pass
+        description: The user account used for database administration.
+      db_password:
+        type: string
+        default: pass
+        description: The password associated with the user account for database administration.
+      bind_address:
+        type: boolean
+        default: true
+        required: false
+        description: If true,the server accepts TCP/IP connections on all server host IPv4 interfaces.
+      storage_path:
+        type: string
+        default: /mountedStorage
+        constraints:
+          - valid_values: [ "/mountedStorage", "/var/mysql" ]
+    interfaces:
+      Standard:
+        create: scripts/install_mysql.sh
+        start:
+          inputs:
+            VOLUME_HOME: { get_property: [SELF, storage_path] }
+            PORT: { get_property: [SELF, port] }
+            DB_NAME: { get_property: [SELF, name] }
+            DB_USER: { get_property: [SELF, db_user] }
+            DB_PASSWORD: { get_property: [SELF, db_password] }
+            BIND_ADDRESS: { get_property: [SELF, bind_address] }
+          implementation: scripts/start_mysql.sh
+    artifacts:
+      - configs:
+          file: configs
+          type: tosca.artifacts.File
