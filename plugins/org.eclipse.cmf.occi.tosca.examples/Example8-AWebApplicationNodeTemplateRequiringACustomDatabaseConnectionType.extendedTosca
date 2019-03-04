@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="ASCII"?>
-<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:extendedtosca="http://org.occi/extendedTosca/ecore" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:platform="http://schemas.ogf.org/occi/platform/ecore">
+<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:platform="http://schemas.modmacao.org/occi/platform/ecore">
   <use href="http://schemas.ogf.org/occi/core#/"/>
   <use href="http://schemas.ogf.org/occi/infrastructure#/"/>
-  <use href="http://schemas.ogf.org/occi/platform#/"/>
+  <use href="http://schemas.modmacao.org/modmacao#/"/>
+  <use href="http://schemas.modmacao.org/occi/platform#/"/>
+  <use href="http://schemas.modmacao.org/placement#/"/>
   <use href="http://schemas.ogf.org/occi/sla#/"/>
-  <use href="http://org.occi/tosca#/"/>
-  <use href="http://org.occi/extendedTosca#/"/>
-  <resources xsi:type="platform:Component" id="urn:uuid:1d2bf33b-6bb5-46c9-b34c-0efc3a2511c3" rlinks="//@resources.1/@links.0">
-    <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='component']"/>
-    <parts xsi:type="extendedtosca:Tosca_nodes_webapplication_wordpress">
-      <mixin href="http://org.occi/extendedTosca#//@mixins[term='tosca_nodes_webapplication_wordpress']"/>
-    </parts>
-  </resources>
-  <resources xsi:type="platform:Application" id="urn:uuid:23a891aa-056a-4ef8-a092-0f37fe9d6df2">
-    <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='application']"/>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:cb7633b1-5b95-4612-b8e5-ca3cdc7f2aba" target="//@resources.0">
-      <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='componentlink']"/>
-    </links>
+  <use href="http://schemas.ogf.org/tosca/core#/"/>
+  <use href="http://schemas.ogf.org/tosca/extended#/"/>
+  <resources xsi:type="platform:Application" id="urn:uuid:151de0e7-bfdb-46f0-a4c5-026fbca90347">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
   </resources>
 </occi:Configuration>

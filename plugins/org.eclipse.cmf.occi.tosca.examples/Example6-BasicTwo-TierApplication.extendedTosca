@@ -1,12 +1,53 @@
 <?xml version="1.0" encoding="ASCII"?>
-<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:platform="http://schemas.ogf.org/occi/platform/ecore">
+<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:extendedtosca="http://schemas.ogf.org/tosca/extended/ecore" xmlns:infrastructure="http://schemas.ogf.org/occi/infrastructure/ecore" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:placement="http://schemas.modmacao.org/placement/ecore" xmlns:platform="http://schemas.modmacao.org/occi/platform/ecore" xmlns:tosca="http://schemas.ogf.org/tosca/core/ecore">
   <use href="http://schemas.ogf.org/occi/core#/"/>
   <use href="http://schemas.ogf.org/occi/infrastructure#/"/>
-  <use href="http://schemas.ogf.org/occi/platform#/"/>
+  <use href="http://schemas.modmacao.org/modmacao#/"/>
+  <use href="http://schemas.modmacao.org/occi/platform#/"/>
+  <use href="http://schemas.modmacao.org/placement#/"/>
   <use href="http://schemas.ogf.org/occi/sla#/"/>
-  <use href="http://org.occi/tosca#/"/>
-  <use href="http://org.occi/extendedTosca#/"/>
-  <resources xsi:type="platform:Application" id="urn:uuid:b44db554-4ff8-4558-8ad7-12399e8c0313">
-    <kind href="http://schemas.ogf.org/occi/platform#//@kinds[term='application']"/>
+  <use href="http://schemas.ogf.org/tosca/core#/"/>
+  <use href="http://schemas.ogf.org/tosca/extended#/"/>
+  <resources xsi:type="platform:Application" id="urn:uuid:5fed1915-ad33-4c21-8ace-8a7469684d9b">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
+    <links xsi:type="platform:Componentlink" id="urn:uuid:7e2e7c84-4dfb-4dc5-b5e9-111cfb36c4b7" target="//@resources.3">
+      <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
+    </links>
+    <links xsi:type="platform:Componentlink" id="urn:uuid:5145e5ae-ecbf-4692-baa9-b10b7aacf890" target="//@resources.4">
+      <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
+    </links>
+  </resources>
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:7ecd1274-1049-40c7-8510-60db66ea9def" title="db_server" rlinks="//@resources.3/@links.0">
+    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
+    <parts xsi:type="tosca:Tosca_nodes_compute">
+      <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
+    </parts>
+  </resources>
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:0a6f2e80-0ece-4840-bd9c-07a2e1b24c1e" title="web_server">
+    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
+    <parts xsi:type="tosca:Tosca_nodes_compute">
+      <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
+    </parts>
+  </resources>
+  <resources xsi:type="platform:Component" id="urn:uuid:991c26b1-634f-4351-872c-f5ed57591e82" title="mysql" rlinks="//@resources.0/@links.0 //@resources.4/@links.0">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="extendedtosca:Tosca_nodes_dbms_mysql">
+      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_dbms_mysql']"/>
+    </parts>
+    <links xsi:type="placement:Placementlink" id="urn:uuid:3518aefc-8708-4fc0-9827-ce0d6277b07f" target="//@resources.1">
+      <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
+    </links>
+  </resources>
+  <resources xsi:type="platform:Component" id="urn:uuid:336e76eb-75a1-4b9a-93a5-901bbaf3169d" title="wordpress_db" rlinks="//@resources.0/@links.1">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="extendedtosca:Tosca_nodes_database_mysql">
+      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_database_mysql']"/>
+    </parts>
+    <links xsi:type="platform:Componentlink" id="urn:uuid:749999db-2e01-47a2-a185-bf928079f98e" target="//@resources.3">
+      <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
+      <parts xsi:type="tosca:Tosca_relationships_hostedon">
+        <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_relationships_hostedon']"/>
+      </parts>
+    </links>
   </resources>
 </occi:Configuration>

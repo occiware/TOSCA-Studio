@@ -1,0 +1,82 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+
+metadata:
+  template_name: wordpress-topology
+  template_version: 1.0.0
+
+description: Topology to deploy a Wordpress CMS on an apache webserver and a MySQL database.
+
+imports:
+  - tosca-normative-types:1.0.0
+  - apache:1.0.0
+  - mysql:1.0.0
+  - php:1.0.0
+  - wordpress:1.0.0
+
+topology_template:
+  description: Wordpress deployment template
+  inputs:
+    os_distribution:
+      type: string
+      constraints:
+        - valid_values: [ debian, ubuntu, knoppix ]
+      description: The host Operating System (OS) architecture.
+      default: ubuntu
+  node_templates:
+    wordpress:
+      type: tosca.nodes.Wordpress
+      requirements:
+        - host: apache
+        - database:
+            node: mysql
+            capability: tosca.capabilities.Endpoint.Database
+        - php:
+            node: php
+            capability: tosca.capabilities.Root
+    php:
+      type: tosca.nodes.PHP
+      requirements:
+        - host: computeWww
+    computeDb:
+      type: tosca.nodes.Compute
+      capabilities:
+        os:
+          properties:
+            type: linux
+            architecture: x86_64
+            distribution: { get_input: os_distribution }
+        host:
+          properties:
+            num_cpus: 1
+            disk_size: 1 GB
+            mem_size: 1024 MB
+            cpu_frequency: 1 GHz
+    computeWww:
+      type: tosca.nodes.Compute
+      capabilities:
+        os:
+          properties:
+            type: linux
+            architecture: x86_64
+            distribution: { get_input: os_distribution }
+        host:
+          properties:
+            num_cpus: 1
+            disk_size: 1 GB
+            mem_size: 1024 MB
+            cpu_frequency: 1 GHz
+    apache:
+      type: tosca.nodes.Apache
+      properties:
+        port: 80
+        document_root: "/var/www"
+      requirements:
+        - host: computeWww
+    mysql:
+      type: tosca.nodes.Mysql
+      requirements:
+        - host: computeDb
+  outputs:
+    wordpress_url:
+      description: The URL to access the wordpress
+      value: { get_attribute: [ wordpress, wordpress_url ] }
