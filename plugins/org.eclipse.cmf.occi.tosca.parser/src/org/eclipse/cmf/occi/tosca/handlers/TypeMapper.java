@@ -1,6 +1,8 @@
 package org.eclipse.cmf.occi.tosca.handlers;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -77,7 +79,13 @@ public class TypeMapper extends Mapper {
 		);	
 		
 		this.mappings.put("tosca_relationships_Root",
-				new MixinMapping(ExtensionsManager.getKindFromItsTerm("core", "link"))
+				new MixinMapping(
+						ExtensionsManager.getKindFromItsTerm("core", "link"),
+						Arrays.asList(
+								ExtensionsManager.getMixinFromItsTerm("modmacao-core", "installationdependency"),
+								ExtensionsManager.getMixinFromItsTerm("modmacao-core", "executiondependency")
+						)
+				)
 		);
 		
 		Constraint dependsOnConstraint = OCCIFactory.eINSTANCE.createConstraint();
@@ -142,7 +150,7 @@ public class TypeMapper extends Mapper {
 	
 	private class MixinMapping implements Mapping<Mixin> {
 		public final Kind apply;
-		public final Mixin dependsOn;
+		public final List<Mixin> dependsOn;
 		public final List<Constraint> constraints;
 		public MixinMapping(Kind apply) {
 			this.apply = apply;
@@ -151,7 +159,7 @@ public class TypeMapper extends Mapper {
 		}
 		public MixinMapping(Mixin depend) {
 			this.apply = null;
-			this.dependsOn = depend;
+			this.dependsOn = Collections.singletonList(depend);
 			this.constraints = new ArrayList<Constraint>();
 		}
 		public MixinMapping(Constraint constraint) {
@@ -162,12 +170,17 @@ public class TypeMapper extends Mapper {
 		}
 		public MixinMapping(Kind apply, Mixin depend) {
 			this.apply = apply;
-			this.dependsOn = depend;
+			this.dependsOn = Collections.singletonList(depend);
+			this.constraints = new ArrayList<Constraint>();
+		}
+		public MixinMapping(Kind apply, List<Mixin> depends) {
+			this.apply = apply;
+			this.dependsOn = depends;
 			this.constraints = new ArrayList<Constraint>();
 		}
 		public MixinMapping(Mixin depend, Constraint constraint) {
 			this.apply = null;
-			this.dependsOn = depend;
+			this.dependsOn = Collections.singletonList(depend);
 			this.constraints = new ArrayList<Constraint>();
 			this.constraints.add(constraint);
 		}
@@ -182,7 +195,9 @@ public class TypeMapper extends Mapper {
 				mixin.getApplies().add(apply);
 			} 
 			if (dependsOn != null) {
-				mixin.getDepends().add(dependsOn);
+				for (Mixin depend : this.dependsOn) {
+					mixin.getDepends().add(depend);
+				}
 			}
 			if (!constraints.isEmpty()) {
 				mixin.getConstraints().addAll(constraints);
