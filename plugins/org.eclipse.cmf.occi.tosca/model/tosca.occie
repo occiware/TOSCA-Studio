@@ -16,26 +16,29 @@
     <attributes name="network.name" default="PRIVATE" description="The optional name (or ID) of the network this endpoint should be bound to. network_name: PRIVATE | PUBLIC |&lt;network_name> | &lt;network_id>" type="//@types.0"/>
     <attributes name="secure" default="false" description="Requests for the endpoint to be secure and use credentials supplied on the ConnectsTo relationship." type="//@types.2"/>
     <attributes name="ports" description="The optional map of ports the Endpoint supports (if more than one)." type="//@types.11"/>
-    <attributes name="url.path" description="The optional URL path of the endpoint&#xe2;&#x20ac;&#x2122;s address if applicable for the protocol." type="//@types.0"/>
+    <attributes name="url.path" description="The optional URL path of the endpoint&#x2019;s address if applicable for the protocol." type="//@types.0"/>
   </mixins>
   <mixins name="tosca_capabilities_Scalable" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default TOSCA type that should be used to express a scalability capability for a node." depends="//@mixins[term='tosca_capabilities_root']">
     <attributes name="min.instances" default="1" description="This property is used to indicate the minimum number of instances that should be created for the associated TOSCA Node Template by a TOSCA orchestrator." type="//@types.6"/>
     <attributes name="max.instances" default="1" description="This property is used to indicate the maximum number of instances that should be created for the associated TOSCA Node Template by a TOSCA orchestrator." type="//@types.6"/>
-    <attributes name="default.instances" default="1" description="An optional property that indicates the requested default number of instances that should be the starting number of instances a TOSCA orchestrator should attempt to allocate. Note: The value for this property MUST be in the range between the values set for &#xe2;&#x20ac;&#x2dc;min_instances&#xe2;&#x20ac;&#x2122; and &#xe2;&#x20ac;&#x2dc;max_instances&#xe2;&#x20ac;&#x2122; properties." type="//@types.6"/>
+    <attributes name="default.instances" default="1" description="An optional property that indicates the requested default number of instances that should be the starting number of instances a TOSCA orchestrator should attempt to allocate. Note: The value for this property MUST be in the range between the values set for &#x2018;min_instances&#x2019; and &#x2018;max_instances&#x2019; properties." type="//@types.6"/>
   </mixins>
   <mixins name="tosca_capabilities_network_Bindable" scheme="http://schemas.ogf.org/tosca/core#" depends="//@mixins[term='tosca_capabilities_node']"/>
   <mixins name="tosca_capabilities_Container" scheme="http://schemas.ogf.org/tosca/core#" title="The Container capability, when included on a Node Type or Template definition, indicates that the node can act as a container for (or a host for) one or more other declared Node Types." depends="//@mixins[term='tosca_capabilities_root']">
     <attributes name="disk.size" description="Size of the local disk available to applications running on the Compute node (default unit is MB)." type="//@types.18"/>
   </mixins>
   <mixins name="tosca_capabilities_Endpoint_Database" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default TOSCA type that should be used or extended to define a specialized database endpoint capability." depends="//@mixins[term='tosca_capabilities_endpoint']"/>
-  <mixins name="tosca_capabilities_Endpoint_Public" scheme="http://schemas.ogf.org/tosca/core#" title="This capability represents a public endpoint which is accessible to the general internet (and its public IP address ranges). This public endpoint capability also can be used to create a floating (IP) address that the underlying network assigns from a pool allocated from the application&#xe2;&#x20ac;&#x2122;s underlying public network.  This floating address is managed by the underlying network such that can be routed an application&#xe2;&#x20ac;&#x2122;s private address and remains reliable to internet clients." depends="//@mixins[term='tosca_capabilities_endpoint']">
+  <mixins name="tosca_capabilities_Endpoint_Public" scheme="http://schemas.ogf.org/tosca/core#" title="This capability represents a public endpoint which is accessible to the general internet (and its public IP address ranges). This public endpoint capability also can be used to create a floating (IP) address that the underlying network assigns from a pool allocated from the application&#x2019;s underlying public network.  This floating address is managed by the underlying network such that can be routed an application&#x2019;s private address and remains reliable to internet clients." depends="//@mixins[term='tosca_capabilities_endpoint']">
+    <annotations key="default-value_network.name" value="PUBLIC"/>
     <attributes name="floating" default="false" description="Indicates that the public address should be allocated from a pool of floating IPs that are associated with the network." type="//@types.2"/>
     <attributes name="dns.name" description="The optional name to register with DNS" type="//@types.0"/>
   </mixins>
-  <mixins name="tosca_capabilities_Endpoint_Admin" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default TOSCA type that should be used or extended to define a specialized administrator endpoint capability." depends="//@mixins[term='tosca_capabilities_endpoint']"/>
+  <mixins name="tosca_capabilities_Endpoint_Admin" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default TOSCA type that should be used or extended to define a specialized administrator endpoint capability." depends="//@mixins[term='tosca_capabilities_endpoint']">
+    <annotations key="default-value_secure" value="true"/>
+  </mixins>
   <mixins name="tosca_capabilities_OperatingSystem" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default TOSCA type that should be used to express an Operating System capability for a node." depends="//@mixins[term='tosca_capabilities_root']">
     <attributes name="type" description="The Operating System (OS) type. Examples of valid values include: linux, aix, mac, windows, etc." type="//@types.0"/>
-    <attributes name="distribution" description="The Operating System (OS) distribution. Examples of valid values for an &#xe2;&#x20ac;&#x153;type&#xe2;&#x20ac;&#xfffd; of &#xe2;&#x20ac;&#x153;Linux&#xe2;&#x20ac;&#xfffd; would include:  debian, fedora, rhel and ubuntu." type="//@types.0"/>
+    <attributes name="distribution" description="The Operating System (OS) distribution. Examples of valid values for an &#x201c;type&#x201d; of &#x201c;Linux&#x201d; would include:  debian, fedora, rhel and ubuntu." type="//@types.0"/>
     <attributes name="version" description="The Operating System version." type="//@types.12"/>
   </mixins>
   <mixins name="tosca_capabilities_Attachment" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default TOSCA type that should be used or extended to define an attachment capability of a (logical) infrastructure device node (e.g., BlockStorage node)." depends="//@mixins[term='tosca_capabilities_root']"/>
@@ -43,12 +46,12 @@
     <applies href="http://schemas.ogf.org/occi/core#//@kinds[term='resource']"/>
   </mixins>
   <mixins name="tosca_nodes_WebApplication" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA WebApplication node represents a software application that can be managed and run by a TOSCA WebServer node. Specific types of web applications such as Java, etc. could be derived from this type." depends="//@mixins[term='tosca_nodes_root'] //@mixins[term='tosca_capabilities_endpoint']">
-    <attributes name="context.root" description="The web application&#xe2;&#x20ac;&#x2122;s context root which designates the application&#xe2;&#x20ac;&#x2122;s URL path within the web server it is hosted on." type="//@types.0"/>
+    <attributes name="context.root" description="The web application&#x2019;s context root which designates the application&#x2019;s URL path within the web server it is hosted on." type="//@types.0"/>
     <applies href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
   </mixins>
   <mixins name="tosca_nodes_SoftwareComponent" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA SoftwareComponent node represents a generic software component that can be managed and run by a TOSCA Compute Node Type." depends="//@mixins[term='tosca_nodes_root']">
     <attributes name="admin.credential" description="The optional credential that can be used to authenticate to the software component." type="//@types.22"/>
-    <attributes name="component.version" description="The optional software component&#xe2;&#x20ac;&#x2122;s version." type="//@types.12"/>
+    <attributes name="component.version" description="The optional software component&#x2019;s version." type="//@types.12"/>
     <applies href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
   </mixins>
   <mixins name="tosca_nodes_DBMS" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA DBMS node represents a typical relational, SQL Database Management System software component or service." depends="//@mixins[term='tosca_nodes_softwarecomponent'] //@mixins[term='tosca_capabilities_container']">
@@ -61,14 +64,14 @@
     <attributes name="name" required="true" type="//@types.0"/>
     <applies href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='storage']"/>
   </mixins>
-  <mixins name="tosca_nodes_Compute" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA Compute node represents one or more real or virtual processors of software applications or services along with other essential local resources. Collectively, the resources the compute node represents can logically be viewed as a (real or virtual) &#xe2;&#x20ac;&#x153;server&#xe2;&#x20ac;&#xfffd;." depends="//@mixins[term='tosca_nodes_root'] //@mixins[term='tosca_capabilities_scalable'] //@mixins[term='tosca_capabilities_endpoint_admin'] //@mixins[term='tosca_capabilities_operatingsystem'] //@mixins[term='tosca_capabilities_container'] //@mixins[term='tosca_capabilities_network_bindable']">
+  <mixins name="tosca_nodes_Compute" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA Compute node represents one or more real or virtual processors of software applications or services along with other essential local resources. Collectively, the resources the compute node represents can logically be viewed as a (real or virtual) &#x201c;server&#x201d;." depends="//@mixins[term='tosca_nodes_root'] //@mixins[term='tosca_capabilities_scalable'] //@mixins[term='tosca_capabilities_endpoint_admin'] //@mixins[term='tosca_capabilities_operatingsystem'] //@mixins[term='tosca_capabilities_container'] //@mixins[term='tosca_capabilities_network_bindable']">
     <attributes name="private.address" description="The primary private IP address assigned by the cloud provider that applications may use to access the Compute node." type="//@types.0"/>
     <attributes name="public.address" description="The primary public IP address assigned by the cloud provider that applications may use to access the Compute node." type="//@types.0"/>
     <attributes name="networks" type="//@types.11"/>
     <constraints name="SourceMustBeSoftwareComponent" body="true"/>
     <applies href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
   </mixins>
-  <mixins name="tosca_nodes_LoadBalancer" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA Load Balancer node represents logical function that be used in conjunction with a Floating Address to distribute an application&#xe2;&#x20ac;&#x2122;s traffic (load) across a number of instances of the application (e.g., for a clustered or scaled application)." depends="//@mixins[term='tosca_nodes_root'] //@mixins[term='tosca_capabilities_endpoint_public']">
+  <mixins name="tosca_nodes_LoadBalancer" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA Load Balancer node represents logical function that be used in conjunction with a Floating Address to distribute an application&#x2019;s traffic (load) across a number of instances of the application (e.g., for a clustered or scaled application)." depends="//@mixins[term='tosca_nodes_root'] //@mixins[term='tosca_capabilities_endpoint_public']">
     <attributes name="algorithm" type="//@types.0"/>
   </mixins>
   <mixins name="tosca_nodes_WebServer" scheme="http://schemas.ogf.org/tosca/core#" title="This TOSCA WebServer Node Type represents an abstract software component or service that is capable of hosting and providing management operations for one or more WebApplication nodes." depends="//@mixins[term='tosca_nodes_softwarecomponent'] //@mixins[term='tosca_capabilities_endpoint'] //@mixins[term='tosca_capabilities_endpoint_admin'] //@mixins[term='tosca_capabilities_container']">
@@ -117,6 +120,8 @@
     <attributes name="tosca.name" description="This attribute reflects the name of the Relationship Template as defined in the TOSCA service template. This name is not unique to the realized instance model of corresponding deployed application as each template in the model can result in one or more instances (e.g., scaled) when orchestrated to a provider environment." type="//@types.0"/>
     <attributes name="state" default="initial" description="The state of the relationship instance." type="//@types.0"/>
     <attributes name="tosca.id" description="A unique identifier of the realized instance of a Relationship Template that derives from any TOSCA normative type." type="//@types.0"/>
+    <depends href="http://schemas.modmacao.org/modmacao#//@mixins[term='installationdependency']"/>
+    <depends href="http://schemas.modmacao.org/modmacao#//@mixins[term='executiondependency']"/>
     <applies href="http://schemas.ogf.org/occi/core#//@kinds[term='link']"/>
   </mixins>
   <mixins name="tosca_relationships_ConnectsTo" scheme="http://schemas.ogf.org/tosca/core#" title="This type represents a network connection relationship between two nodes." depends="//@mixins[term='tosca_relationships_root']">

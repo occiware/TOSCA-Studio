@@ -2243,6 +2243,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		// Obtain other dependent packages
 		OCCIPackage theOCCIPackage = (OCCIPackage)EPackage.Registry.INSTANCE.getEPackage(OCCIPackage.eNS_URI);
 		SlaPackage theSlaPackage = (SlaPackage)EPackage.Registry.INSTANCE.getEPackage(SlaPackage.eNS_URI);
+		ModmacaoPackage theModmacaoPackage = (ModmacaoPackage)EPackage.Registry.INSTANCE.getEPackage(ModmacaoPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -2327,6 +2328,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		tosca_interfaces_relationship_configureEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_interfaces_node_lifecycle_standardEClass.getESuperTypes().add(this.getTosca_interfaces_root());
 		tosca_interfaces_node_lifecycle_standardEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
+		tosca_relationships_rootEClass.getESuperTypes().add(theModmacaoPackage.getInstallationdependency());
+		tosca_relationships_rootEClass.getESuperTypes().add(theModmacaoPackage.getExecutiondependency());
 		tosca_relationships_rootEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_relationships_connectstoEClass.getESuperTypes().add(this.getTosca_relationships_root());
 		tosca_relationships_connectstoEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());

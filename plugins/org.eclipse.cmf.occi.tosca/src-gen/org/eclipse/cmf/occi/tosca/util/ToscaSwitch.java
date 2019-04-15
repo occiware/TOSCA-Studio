@@ -12,6 +12,10 @@
  */
 package org.eclipse.cmf.occi.tosca.util;
 
+import modmacao.Dependency;
+import modmacao.Executiondependency;
+import modmacao.Installationdependency;
+
 import org.eclipse.cmf.occi.core.MixinBase;
 
 import org.eclipse.cmf.occi.sla.Agreement_term;
@@ -443,6 +447,9 @@ public class ToscaSwitch<T> extends Switch<T> {
 			case ToscaPackage.TOSCA_RELATIONSHIPS_ROOT: {
 				Tosca_relationships_root tosca_relationships_root = (Tosca_relationships_root)theEObject;
 				T result = caseTosca_relationships_root(tosca_relationships_root);
+				if (result == null) result = caseInstallationdependency(tosca_relationships_root);
+				if (result == null) result = caseExecutiondependency(tosca_relationships_root);
+				if (result == null) result = caseDependency(tosca_relationships_root);
 				if (result == null) result = caseMixinBase(tosca_relationships_root);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -451,6 +458,9 @@ public class ToscaSwitch<T> extends Switch<T> {
 				Tosca_relationships_connectsto tosca_relationships_connectsto = (Tosca_relationships_connectsto)theEObject;
 				T result = caseTosca_relationships_connectsto(tosca_relationships_connectsto);
 				if (result == null) result = caseTosca_relationships_root(tosca_relationships_connectsto);
+				if (result == null) result = caseInstallationdependency(tosca_relationships_connectsto);
+				if (result == null) result = caseExecutiondependency(tosca_relationships_connectsto);
+				if (result == null) result = caseDependency(tosca_relationships_connectsto);
 				if (result == null) result = caseMixinBase(tosca_relationships_connectsto);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -460,6 +470,9 @@ public class ToscaSwitch<T> extends Switch<T> {
 				T result = caseTosca_relationships_routesto(tosca_relationships_routesto);
 				if (result == null) result = caseTosca_relationships_connectsto(tosca_relationships_routesto);
 				if (result == null) result = caseTosca_relationships_root(tosca_relationships_routesto);
+				if (result == null) result = caseInstallationdependency(tosca_relationships_routesto);
+				if (result == null) result = caseExecutiondependency(tosca_relationships_routesto);
+				if (result == null) result = caseDependency(tosca_relationships_routesto);
 				if (result == null) result = caseMixinBase(tosca_relationships_routesto);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -468,6 +481,9 @@ public class ToscaSwitch<T> extends Switch<T> {
 				Tosca_relationships_attachesto tosca_relationships_attachesto = (Tosca_relationships_attachesto)theEObject;
 				T result = caseTosca_relationships_attachesto(tosca_relationships_attachesto);
 				if (result == null) result = caseTosca_relationships_root(tosca_relationships_attachesto);
+				if (result == null) result = caseInstallationdependency(tosca_relationships_attachesto);
+				if (result == null) result = caseExecutiondependency(tosca_relationships_attachesto);
+				if (result == null) result = caseDependency(tosca_relationships_attachesto);
 				if (result == null) result = caseMixinBase(tosca_relationships_attachesto);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -476,6 +492,9 @@ public class ToscaSwitch<T> extends Switch<T> {
 				Tosca_relationships_hostedon tosca_relationships_hostedon = (Tosca_relationships_hostedon)theEObject;
 				T result = caseTosca_relationships_hostedon(tosca_relationships_hostedon);
 				if (result == null) result = caseTosca_relationships_root(tosca_relationships_hostedon);
+				if (result == null) result = caseInstallationdependency(tosca_relationships_hostedon);
+				if (result == null) result = caseExecutiondependency(tosca_relationships_hostedon);
+				if (result == null) result = caseDependency(tosca_relationships_hostedon);
 				if (result == null) result = caseMixinBase(tosca_relationships_hostedon);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -484,6 +503,9 @@ public class ToscaSwitch<T> extends Switch<T> {
 				Tosca_relationships_dependson tosca_relationships_dependson = (Tosca_relationships_dependson)theEObject;
 				T result = caseTosca_relationships_dependson(tosca_relationships_dependson);
 				if (result == null) result = caseTosca_relationships_root(tosca_relationships_dependson);
+				if (result == null) result = caseInstallationdependency(tosca_relationships_dependson);
+				if (result == null) result = caseExecutiondependency(tosca_relationships_dependson);
+				if (result == null) result = caseDependency(tosca_relationships_dependson);
 				if (result == null) result = caseMixinBase(tosca_relationships_dependson);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -1164,6 +1186,51 @@ public class ToscaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAgreement_term(Agreement_term object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Dependency</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Dependency</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDependency(Dependency object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Installationdependency</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Installationdependency</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInstallationdependency(Installationdependency object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Executiondependency</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Executiondependency</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExecutiondependency(Executiondependency object) {
 		return null;
 	}
 

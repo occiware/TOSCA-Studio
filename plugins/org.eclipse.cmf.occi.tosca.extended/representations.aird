@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xmi:id="_ZzeqUD6DEemj8fHWO8TDww" version="13.0.0.201804031646">
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xmi:id="_qnDrMF-_Eem_yrI1HeJ8ZA" version="13.0.0.201804031646">
   <semanticResources>model/extendedTosca.occie</semanticResources>
   <semanticResources>http://schemas.ogf.org/occi/core</semanticResources>
   <semanticResources>http://schemas.ogf.org/occi/infrastructure</semanticResources>
@@ -12,6 +12,7 @@
   <semanticResources>platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore</semanticResources>
   <semanticResources>platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore</semanticResources>
   <semanticResources>platform:/plugin/org.eclipse.cmf.occi.sla/model/sla.ecore</semanticResources>
+  <semanticResources>platform:/resource/org.modmacao.core/model/modmacao.ecore</semanticResources>
   <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
   <semanticResources>model/extendedTosca.genmodel</semanticResources>
   <semanticResources>platform:/plugin/org.eclipse.cmf.occi.infrastructure/model/Infrastructure.genmodel</semanticResources>
@@ -22,7 +23,6 @@
   <semanticResources>platform:/resource/org.modmacao.placement/model/placement.genmodel</semanticResources>
   <semanticResources>platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.genmodel</semanticResources>
   <semanticResources>platform:/plugin/org.eclipse.cmf.occi.infrastructure/model/Infrastructure.ecore</semanticResources>
-  <semanticResources>platform:/resource/org.modmacao.core/model/modmacao.ecore</semanticResources>
   <semanticResources>platform:/resource/org.modmacao.occi.platform/model/platform.ecore</semanticResources>
   <semanticResources>platform:/resource/org.modmacao.placement/model/placement.ecore</semanticResources>
 </viewpoint:DAnalysis>

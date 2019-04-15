@@ -35,7 +35,7 @@ import org.eclipse.cmf.occi.tosca.Tosca_nodes_webapplication;
 public interface Tosca_nodes_wordpress extends Tosca_nodes_webapplication, MixinBase {
 	/**
 	 * Returns the value of the '<em><b>Zip Url</b></em>' attribute.
-	 * The default value is <code>"https://wordpress.org/latest.zip"</code>.
+	 * The default value is <code>"https:wordpress.orglatest.zip"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -44,7 +44,7 @@ public interface Tosca_nodes_wordpress extends Tosca_nodes_webapplication, Mixin
 	 * @return the value of the '<em>Zip Url</em>' attribute.
 	 * @see #setZipUrl(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_wordpress_ZipUrl()
-	 * @model default="https://wordpress.org/latest.zip" dataType="org.eclipse.cmf.occi.tosca.string"
+	 * @model default="https:wordpress.orglatest.zip" dataType="org.eclipse.cmf.occi.tosca.string"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_wordpress!zipUrl'"
 	 * @generated
 	 */

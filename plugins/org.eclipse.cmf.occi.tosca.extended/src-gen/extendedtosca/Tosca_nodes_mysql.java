@@ -23,7 +23,6 @@ import org.eclipse.cmf.occi.core.MixinBase;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link extendedtosca.Tosca_nodes_mysql#getPortMySQL <em>Port My SQL</em>}</li>
  *   <li>{@link extendedtosca.Tosca_nodes_mysql#getStoragePath <em>Storage Path</em>}</li>
  *   <li>{@link extendedtosca.Tosca_nodes_mysql#getDbUser <em>Db User</em>}</li>
  *   <li>{@link extendedtosca.Tosca_nodes_mysql#getBindAddress <em>Bind Address</em>}</li>
@@ -35,33 +34,6 @@ import org.eclipse.cmf.occi.core.MixinBase;
  * @generated
  */
 public interface Tosca_nodes_mysql extends Tosca_nodes_abstractmysql, MixinBase {
-	/**
-	 * Returns the value of the '<em><b>Port My SQL</b></em>' attribute.
-	 * The default value is <code>"3306"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * The port on which the database will listen to data.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Port My SQL</em>' attribute.
-	 * @see #setPortMySQL(Integer)
-	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_mysql_PortMySQL()
-	 * @model default="3306" dataType="org.eclipse.cmf.occi.tosca.integer"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_mysql!portMySQL'"
-	 * @generated
-	 */
-	Integer getPortMySQL();
-
-	/**
-	 * Sets the value of the '{@link extendedtosca.Tosca_nodes_mysql#getPortMySQL <em>Port My SQL</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Port My SQL</em>' attribute.
-	 * @see #getPortMySQL()
-	 * @generated
-	 */
-	void setPortMySQL(Integer value);
-
 	/**
 	 * Returns the value of the '<em><b>Storage Path</b></em>' attribute.
 	 * The default value is <code>"mountedStorage"</code>.

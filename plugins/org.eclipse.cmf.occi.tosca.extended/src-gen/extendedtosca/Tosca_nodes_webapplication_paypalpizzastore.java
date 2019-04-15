@@ -35,7 +35,7 @@ import org.eclipse.cmf.occi.tosca.Tosca_nodes_webapplication;
 public interface Tosca_nodes_webapplication_paypalpizzastore extends Tosca_nodes_webapplication, MixinBase {
 	/**
 	 * Returns the value of the '<em><b>Github Url</b></em>' attribute.
-	 * The default value is <code>"https://github.com/sample.git"</code>.
+	 * The default value is <code>"https:github.comsample.git"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -44,7 +44,7 @@ public interface Tosca_nodes_webapplication_paypalpizzastore extends Tosca_nodes
 	 * @return the value of the '<em>Github Url</em>' attribute.
 	 * @see #setGithubUrl(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_webapplication_paypalpizzastore_GithubUrl()
-	 * @model default="https://github.com/sample.git" dataType="org.eclipse.cmf.occi.tosca.string"
+	 * @model default="https:github.comsample.git" dataType="org.eclipse.cmf.occi.tosca.string"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_webapplication_paypalpizzastore!githubUrl'"
 	 * @generated
 	 */

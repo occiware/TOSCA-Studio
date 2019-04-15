@@ -35,7 +35,7 @@ import org.eclipse.cmf.occi.tosca.Tosca_nodes_webserver;
 public interface Tosca_nodes_webserver_nodejs extends Tosca_nodes_webserver, MixinBase {
 	/**
 	 * Returns the value of the '<em><b>Github Url</b></em>' attribute.
-	 * The default value is <code>"https://github.com/mmm/testnode.git"</code>.
+	 * The default value is <code>"https:github.commmmtestnode.git"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -44,7 +44,7 @@ public interface Tosca_nodes_webserver_nodejs extends Tosca_nodes_webserver, Mix
 	 * @return the value of the '<em>Github Url</em>' attribute.
 	 * @see #setGithubUrl(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_webserver_nodejs_GithubUrl()
-	 * @model default="https://github.com/mmm/testnode.git" dataType="org.eclipse.cmf.occi.tosca.string"
+	 * @model default="https:github.commmmtestnode.git" dataType="org.eclipse.cmf.occi.tosca.string"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_webserver_nodejs!githubUrl'"
 	 * @generated
 	 */

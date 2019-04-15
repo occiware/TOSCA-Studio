@@ -12,6 +12,10 @@
  */
 package org.eclipse.cmf.occi.tosca.util;
 
+import modmacao.Dependency;
+import modmacao.Executiondependency;
+import modmacao.Installationdependency;
+
 import org.eclipse.cmf.occi.core.MixinBase;
 
 import org.eclipse.cmf.occi.sla.Agreement_term;
@@ -260,6 +264,18 @@ public class ToscaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseAgreement_term(Agreement_term object) {
 				return createAgreement_termAdapter();
+			}
+			@Override
+			public Adapter caseDependency(Dependency object) {
+				return createDependencyAdapter();
+			}
+			@Override
+			public Adapter caseInstallationdependency(Installationdependency object) {
+				return createInstallationdependencyAdapter();
+			}
+			@Override
+			public Adapter caseExecutiondependency(Executiondependency object) {
+				return createExecutiondependencyAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -908,6 +924,48 @@ public class ToscaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAgreement_termAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modmacao.Dependency <em>Dependency</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modmacao.Dependency
+	 * @generated
+	 */
+	public Adapter createDependencyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modmacao.Installationdependency <em>Installationdependency</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modmacao.Installationdependency
+	 * @generated
+	 */
+	public Adapter createInstallationdependencyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modmacao.Executiondependency <em>Executiondependency</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modmacao.Executiondependency
+	 * @generated
+	 */
+	public Adapter createExecutiondependencyAdapter() {
 		return null;
 	}
 

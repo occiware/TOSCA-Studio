@@ -14,6 +14,9 @@ package org.eclipse.cmf.occi.tosca;
 
 import java.util.Map;
 
+import modmacao.Executiondependency;
+import modmacao.Installationdependency;
+
 import org.eclipse.cmf.occi.core.MixinBase;
 
 import org.eclipse.emf.common.util.DiagnosticChain;
@@ -36,7 +39,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='appliesConstraint'"
  * @generated
  */
-public interface Tosca_relationships_root extends MixinBase {
+public interface Tosca_relationships_root extends Installationdependency, Executiondependency, MixinBase {
 	/**
 	 * Returns the value of the '<em><b>Tosca Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

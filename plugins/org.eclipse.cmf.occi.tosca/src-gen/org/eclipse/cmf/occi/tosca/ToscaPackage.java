@@ -12,6 +12,8 @@
  */
 package org.eclipse.cmf.occi.tosca;
 
+import modmacao.ModmacaoPackage;
+
 import org.eclipse.cmf.occi.core.OCCIPackage;
 
 import org.eclipse.cmf.occi.sla.SlaPackage;
@@ -4033,7 +4035,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_RELATIONSHIPS_ROOT__MIXIN = OCCIPackage.MIXIN_BASE__MIXIN;
+	int TOSCA_RELATIONSHIPS_ROOT__MIXIN = ModmacaoPackage.INSTALLATIONDEPENDENCY__MIXIN;
 
 	/**
 	 * The feature id for the '<em><b>Entity</b></em>' container reference.
@@ -4042,7 +4044,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_RELATIONSHIPS_ROOT__ENTITY = OCCIPackage.MIXIN_BASE__ENTITY;
+	int TOSCA_RELATIONSHIPS_ROOT__ENTITY = ModmacaoPackage.INSTALLATIONDEPENDENCY__ENTITY;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -4051,7 +4053,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_RELATIONSHIPS_ROOT__ATTRIBUTES = OCCIPackage.MIXIN_BASE__ATTRIBUTES;
+	int TOSCA_RELATIONSHIPS_ROOT__ATTRIBUTES = ModmacaoPackage.INSTALLATIONDEPENDENCY__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Tosca Name</b></em>' attribute.
@@ -4060,7 +4062,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_RELATIONSHIPS_ROOT__TOSCA_NAME = OCCIPackage.MIXIN_BASE_FEATURE_COUNT + 0;
+	int TOSCA_RELATIONSHIPS_ROOT__TOSCA_NAME = ModmacaoPackage.INSTALLATIONDEPENDENCY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>State</b></em>' attribute.
@@ -4069,7 +4071,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_RELATIONSHIPS_ROOT__STATE = OCCIPackage.MIXIN_BASE_FEATURE_COUNT + 1;
+	int TOSCA_RELATIONSHIPS_ROOT__STATE = ModmacaoPackage.INSTALLATIONDEPENDENCY_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Tosca Id</b></em>' attribute.
@@ -4078,7 +4080,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_RELATIONSHIPS_ROOT__TOSCA_ID = OCCIPackage.MIXIN_BASE_FEATURE_COUNT + 2;
+	int TOSCA_RELATIONSHIPS_ROOT__TOSCA_ID = ModmacaoPackage.INSTALLATIONDEPENDENCY_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Tosca relationships root</em>' class.
@@ -4087,7 +4089,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_RELATIONSHIPS_ROOT_FEATURE_COUNT = OCCIPackage.MIXIN_BASE_FEATURE_COUNT + 3;
+	int TOSCA_RELATIONSHIPS_ROOT_FEATURE_COUNT = ModmacaoPackage.INSTALLATIONDEPENDENCY_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Applies Constraint</em>' operation.
@@ -4096,7 +4098,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_RELATIONSHIPS_ROOT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 0;
+	int TOSCA_RELATIONSHIPS_ROOT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = ModmacaoPackage.INSTALLATIONDEPENDENCY_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Tosca relationships root</em>' class.
@@ -4105,7 +4107,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_RELATIONSHIPS_ROOT_OPERATION_COUNT = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 1;
+	int TOSCA_RELATIONSHIPS_ROOT_OPERATION_COUNT = ModmacaoPackage.INSTALLATIONDEPENDENCY_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_relationships_connectstoImpl <em>Tosca relationships connectsto</em>}' class.

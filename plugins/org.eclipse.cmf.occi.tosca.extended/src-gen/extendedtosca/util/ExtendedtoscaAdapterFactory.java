@@ -14,6 +14,10 @@ package extendedtosca.util;
 
 import extendedtosca.*;
 
+import modmacao.Dependency;
+import modmacao.Executiondependency;
+import modmacao.Installationdependency;
+
 import org.eclipse.cmf.occi.core.MixinBase;
 
 import org.eclipse.cmf.occi.tosca.Tosca_capabilities_container;
@@ -119,12 +123,12 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 				return createarrayintegerAdapter();
 			}
 			@Override
-			public Adapter caseTosca_capabilities_indigo_endpoint(Tosca_capabilities_indigo_endpoint object) {
-				return createTosca_capabilities_indigo_endpointAdapter();
-			}
-			@Override
 			public Adapter caseTosca_capabilities_somecap(Tosca_capabilities_somecap object) {
 				return createTosca_capabilities_somecapAdapter();
+			}
+			@Override
+			public Adapter caseTosca_capabilities_indigo_endpoint(Tosca_capabilities_indigo_endpoint object) {
+				return createTosca_capabilities_indigo_endpointAdapter();
 			}
 			@Override
 			public Adapter caseTosca_capabilities_ha(Tosca_capabilities_ha object) {
@@ -223,12 +227,12 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 				return createExample_someappAdapter();
 			}
 			@Override
-			public Adapter caseTosca_nodes_apache(Tosca_nodes_apache object) {
-				return createTosca_nodes_apacheAdapter();
-			}
-			@Override
 			public Adapter caseTosca_nodes_nodewithcap(Tosca_nodes_nodewithcap object) {
 				return createTosca_nodes_nodewithcapAdapter();
+			}
+			@Override
+			public Adapter caseTosca_nodes_apache(Tosca_nodes_apache object) {
+				return createTosca_nodes_apacheAdapter();
 			}
 			@Override
 			public Adapter caseRsyslog(Rsyslog object) {
@@ -371,6 +375,18 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 				return createTosca_nodes_dbmsAdapter();
 			}
 			@Override
+			public Adapter caseDependency(Dependency object) {
+				return createDependencyAdapter();
+			}
+			@Override
+			public Adapter caseInstallationdependency(Installationdependency object) {
+				return createInstallationdependencyAdapter();
+			}
+			@Override
+			public Adapter caseExecutiondependency(Executiondependency object) {
+				return createExecutiondependencyAdapter();
+			}
+			@Override
 			public Adapter caseTosca_relationships_root(Tosca_relationships_root object) {
 				return createTosca_relationships_rootAdapter();
 			}
@@ -459,20 +475,6 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_capabilities_indigo_endpoint <em>Tosca capabilities indigo endpoint</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see extendedtosca.Tosca_capabilities_indigo_endpoint
-	 * @generated
-	 */
-	public Adapter createTosca_capabilities_indigo_endpointAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_capabilities_somecap <em>Tosca capabilities somecap</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -483,6 +485,20 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTosca_capabilities_somecapAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_capabilities_indigo_endpoint <em>Tosca capabilities indigo endpoint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see extendedtosca.Tosca_capabilities_indigo_endpoint
+	 * @generated
+	 */
+	public Adapter createTosca_capabilities_indigo_endpointAdapter() {
 		return null;
 	}
 
@@ -823,20 +839,6 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_apache <em>Tosca nodes apache</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see extendedtosca.Tosca_nodes_apache
-	 * @generated
-	 */
-	public Adapter createTosca_nodes_apacheAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_nodewithcap <em>Tosca nodes nodewithcap</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -847,6 +849,20 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTosca_nodes_nodewithcapAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_apache <em>Tosca nodes apache</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see extendedtosca.Tosca_nodes_apache
+	 * @generated
+	 */
+	public Adapter createTosca_nodes_apacheAdapter() {
 		return null;
 	}
 
@@ -1337,6 +1353,48 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTosca_nodes_dbmsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modmacao.Dependency <em>Dependency</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modmacao.Dependency
+	 * @generated
+	 */
+	public Adapter createDependencyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modmacao.Installationdependency <em>Installationdependency</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modmacao.Installationdependency
+	 * @generated
+	 */
+	public Adapter createInstallationdependencyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modmacao.Executiondependency <em>Executiondependency</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modmacao.Executiondependency
+	 * @generated
+	 */
+	public Adapter createExecutiondependencyAdapter() {
 		return null;
 	}
 

@@ -16,9 +16,9 @@ import java.lang.reflect.InvocationTargetException;
 
 import java.util.Map;
 
-import org.eclipse.cmf.occi.core.Entity;
+import modmacao.impl.InstallationdependencyImpl;
 
-import org.eclipse.cmf.occi.core.impl.MixinBaseImpl;
+import org.eclipse.cmf.occi.core.Entity;
 
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
 import org.eclipse.cmf.occi.tosca.ToscaTables;
@@ -65,7 +65,7 @@ import org.eclipse.ocl.pivot.values.IntegerValue;
  *
  * @generated
  */
-public class Tosca_relationships_rootImpl extends MixinBaseImpl implements Tosca_relationships_root {
+public class Tosca_relationships_rootImpl extends InstallationdependencyImpl implements Tosca_relationships_root {
 	/**
 	 * The default value of the '{@link #getToscaName() <em>Tosca Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

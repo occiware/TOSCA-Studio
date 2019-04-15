@@ -330,6 +330,11 @@ node_types:
       derived_from: tosca.nodes.Database
       description: A node that provides a mysql endpoint.
       abstract: true
+   tosca.nodes.NodeWithCap: 
+      capabilities: 
+         some_req: 
+            type: tosca.capabilities.SomeCap
+      derived_from: tosca.nodes.Root
    tosca.nodes.Apache: 
       interfaces: 
          Standard: 
@@ -365,11 +370,6 @@ node_types:
             type: version
             constraints: 
             -  equal: '2.4'
-   tosca.nodes.NodeWithCap: 
-      capabilities: 
-         some_req: 
-            type: tosca.capabilities.SomeCap
-      derived_from: tosca.nodes.Root
    Rsyslog: 
       requirements: 
       -  log_endpoint: 
@@ -475,18 +475,11 @@ node_types:
             type: tosca.capabilities.HA
       derived_from: tosca.nodes.Compute
    tosca.nodes.SomeNode: 
-      requirements: 
-      -  some_req: 
-            node: tosca.nodes.NodeWithCap
-            capability: tosca.capabilities.SomeCap
-            relationship: tosca.relationships.HostedOn
+      capabilities: 
+         lrms: 
+            type: tosca.capabilities.SomeChildCap
       derived_from: tosca.nodes.Root
-      description: Node type that has a requirement of a capability with a defined value
-      properties: 
-         some_prop: 
-            default: some
-            type: string
-            required: false
+      description: A node with a capiblity and a parent capability defined in an imported file
    tosca.nodes.WebServer.Nodejs: 
       interfaces: 
          Standard: 
@@ -513,21 +506,14 @@ node_types:
          root_password: 
             required: true
 capability_types: 
+   tosca.capabilities.SomeCap: 
+      derived_from: tosca.capabilities.Root
    tosca.capabilities.indigo.Endpoint: 
       derived_from: tosca.capabilities.Endpoint
       attributes: 
          credential: 
             entry_schema: tosca.datatypes.Credential
             type: list
-   tosca.capabilities.SomeCap: 
-      derived_from: tosca.capabilities.Container
-      properties: 
-         type: 
-            default: someval
-            type: string
-            constraints: 
-            -  equal: someval
-            required: true
    tosca.capabilities.HA: 
       valid_source_types: 
       - tosca.nodes.HACompute

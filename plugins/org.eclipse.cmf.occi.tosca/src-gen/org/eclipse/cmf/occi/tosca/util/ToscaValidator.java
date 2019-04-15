@@ -14,6 +14,8 @@ package org.eclipse.cmf.occi.tosca.util;
 
 import java.util.Map;
 
+import modmacao.util.ModmacaoValidator;
+
 import org.eclipse.cmf.occi.sla.util.SlaValidator;
 
 import org.eclipse.cmf.occi.tosca.*;
@@ -238,6 +240,14 @@ public class ToscaValidator extends EObjectValidator {
 	protected SlaValidator slaValidator;
 
 	/**
+	 * The cached base package validator.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ModmacaoValidator modmacaoValidator;
+
+	/**
 	 * Creates an instance of the switch.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -246,6 +256,7 @@ public class ToscaValidator extends EObjectValidator {
 	public ToscaValidator() {
 		super();
 		slaValidator = SlaValidator.INSTANCE;
+		modmacaoValidator = ModmacaoValidator.INSTANCE;
 	}
 
 	/**
@@ -1032,6 +1043,8 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_relationships_root, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_relationships_root, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_relationships_root, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_SourceMustBeComponent(tosca_relationships_root, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_TargetMustBeComponent(tosca_relationships_root, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_relationships_root_appliesConstraint(tosca_relationships_root, diagnostics, context);
 		return result;
 	}
@@ -1061,6 +1074,8 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_relationships_connectsto, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_relationships_connectsto, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_relationships_connectsto, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_SourceMustBeComponent(tosca_relationships_connectsto, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_TargetMustBeComponent(tosca_relationships_connectsto, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_relationships_root_appliesConstraint(tosca_relationships_connectsto, diagnostics, context);
 		return result;
 	}
@@ -1080,6 +1095,8 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_relationships_routesto, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_relationships_routesto, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_relationships_routesto, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_SourceMustBeComponent(tosca_relationships_routesto, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_TargetMustBeComponent(tosca_relationships_routesto, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_relationships_root_appliesConstraint(tosca_relationships_routesto, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_relationships_routesto_SourceMustBeLoadBalancer(tosca_relationships_routesto, diagnostics, context);
 		return result;
@@ -1110,6 +1127,8 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_relationships_attachesto, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_relationships_attachesto, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_relationships_attachesto, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_SourceMustBeComponent(tosca_relationships_attachesto, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_TargetMustBeComponent(tosca_relationships_attachesto, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_relationships_attachesto_appliesConstraint(tosca_relationships_attachesto, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_relationships_attachesto_SourceMustBeComputeAndTargetMustBeBlockStorage(tosca_relationships_attachesto, diagnostics, context);
 		return result;
@@ -1150,6 +1169,8 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_relationships_hostedon, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_relationships_hostedon, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_relationships_hostedon, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_SourceMustBeComponent(tosca_relationships_hostedon, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_TargetMustBeComponent(tosca_relationships_hostedon, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_relationships_root_appliesConstraint(tosca_relationships_hostedon, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_relationships_hostedon_SourceMustBeDatabaseAndTargetMustBeDBMS(tosca_relationships_hostedon, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_relationships_hostedon_SourceMustBeWebServerAndTargetMustBeWebApplication(tosca_relationships_hostedon, diagnostics, context);
@@ -1213,6 +1234,8 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_relationships_dependson, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_relationships_dependson, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_relationships_dependson, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_SourceMustBeComponent(tosca_relationships_dependson, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_TargetMustBeComponent(tosca_relationships_dependson, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_relationships_root_appliesConstraint(tosca_relationships_dependson, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_relationships_dependson_SourceMustBeNodeAndTargetMustBeNode(tosca_relationships_dependson, diagnostics, context);
 		return result;

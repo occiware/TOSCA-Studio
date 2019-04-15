@@ -21,6 +21,7 @@
  *******************************************************************************/
 package org.eclipse.cmf.occi.tosca;
 
+import modmacao.ModmacaoTables;
 import org.eclipse.cmf.occi.core.OCCITables;
 import org.eclipse.cmf.occi.sla.SlaTables;
 import org.eclipse.cmf.occi.tosca.ToscaTables;
@@ -587,35 +588,53 @@ public class ToscaTables
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_policies_update__Tosca_policies_root = new ExecutorFragment(Types._Tosca_policies_update, ToscaTables.Types._Tosca_policies_root);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_policies_update__Tosca_policies_update = new ExecutorFragment(Types._Tosca_policies_update, ToscaTables.Types._Tosca_policies_update);
 
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_attachesto__Dependency = new ExecutorFragment(Types._Tosca_relationships_attachesto, ModmacaoTables.Types._Dependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_attachesto__Executiondependency = new ExecutorFragment(Types._Tosca_relationships_attachesto, ModmacaoTables.Types._Executiondependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_attachesto__Installationdependency = new ExecutorFragment(Types._Tosca_relationships_attachesto, ModmacaoTables.Types._Installationdependency);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_attachesto__MixinBase = new ExecutorFragment(Types._Tosca_relationships_attachesto, OCCITables.Types._MixinBase);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_attachesto__OclAny = new ExecutorFragment(Types._Tosca_relationships_attachesto, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_attachesto__OclElement = new ExecutorFragment(Types._Tosca_relationships_attachesto, OCLstdlibTables.Types._OclElement);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_attachesto__Tosca_relationships_attachesto = new ExecutorFragment(Types._Tosca_relationships_attachesto, ToscaTables.Types._Tosca_relationships_attachesto);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_attachesto__Tosca_relationships_root = new ExecutorFragment(Types._Tosca_relationships_attachesto, ToscaTables.Types._Tosca_relationships_root);
 
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_connectsto__Dependency = new ExecutorFragment(Types._Tosca_relationships_connectsto, ModmacaoTables.Types._Dependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_connectsto__Executiondependency = new ExecutorFragment(Types._Tosca_relationships_connectsto, ModmacaoTables.Types._Executiondependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_connectsto__Installationdependency = new ExecutorFragment(Types._Tosca_relationships_connectsto, ModmacaoTables.Types._Installationdependency);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_connectsto__MixinBase = new ExecutorFragment(Types._Tosca_relationships_connectsto, OCCITables.Types._MixinBase);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_connectsto__OclAny = new ExecutorFragment(Types._Tosca_relationships_connectsto, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_connectsto__OclElement = new ExecutorFragment(Types._Tosca_relationships_connectsto, OCLstdlibTables.Types._OclElement);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_connectsto__Tosca_relationships_connectsto = new ExecutorFragment(Types._Tosca_relationships_connectsto, ToscaTables.Types._Tosca_relationships_connectsto);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_connectsto__Tosca_relationships_root = new ExecutorFragment(Types._Tosca_relationships_connectsto, ToscaTables.Types._Tosca_relationships_root);
 
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_dependson__Dependency = new ExecutorFragment(Types._Tosca_relationships_dependson, ModmacaoTables.Types._Dependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_dependson__Executiondependency = new ExecutorFragment(Types._Tosca_relationships_dependson, ModmacaoTables.Types._Executiondependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_dependson__Installationdependency = new ExecutorFragment(Types._Tosca_relationships_dependson, ModmacaoTables.Types._Installationdependency);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_dependson__MixinBase = new ExecutorFragment(Types._Tosca_relationships_dependson, OCCITables.Types._MixinBase);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_dependson__OclAny = new ExecutorFragment(Types._Tosca_relationships_dependson, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_dependson__OclElement = new ExecutorFragment(Types._Tosca_relationships_dependson, OCLstdlibTables.Types._OclElement);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_dependson__Tosca_relationships_dependson = new ExecutorFragment(Types._Tosca_relationships_dependson, ToscaTables.Types._Tosca_relationships_dependson);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_dependson__Tosca_relationships_root = new ExecutorFragment(Types._Tosca_relationships_dependson, ToscaTables.Types._Tosca_relationships_root);
 
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_hostedon__Dependency = new ExecutorFragment(Types._Tosca_relationships_hostedon, ModmacaoTables.Types._Dependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_hostedon__Executiondependency = new ExecutorFragment(Types._Tosca_relationships_hostedon, ModmacaoTables.Types._Executiondependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_hostedon__Installationdependency = new ExecutorFragment(Types._Tosca_relationships_hostedon, ModmacaoTables.Types._Installationdependency);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_hostedon__MixinBase = new ExecutorFragment(Types._Tosca_relationships_hostedon, OCCITables.Types._MixinBase);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_hostedon__OclAny = new ExecutorFragment(Types._Tosca_relationships_hostedon, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_hostedon__OclElement = new ExecutorFragment(Types._Tosca_relationships_hostedon, OCLstdlibTables.Types._OclElement);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_hostedon__Tosca_relationships_hostedon = new ExecutorFragment(Types._Tosca_relationships_hostedon, ToscaTables.Types._Tosca_relationships_hostedon);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_hostedon__Tosca_relationships_root = new ExecutorFragment(Types._Tosca_relationships_hostedon, ToscaTables.Types._Tosca_relationships_root);
 
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_root__Dependency = new ExecutorFragment(Types._Tosca_relationships_root, ModmacaoTables.Types._Dependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_root__Executiondependency = new ExecutorFragment(Types._Tosca_relationships_root, ModmacaoTables.Types._Executiondependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_root__Installationdependency = new ExecutorFragment(Types._Tosca_relationships_root, ModmacaoTables.Types._Installationdependency);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_root__MixinBase = new ExecutorFragment(Types._Tosca_relationships_root, OCCITables.Types._MixinBase);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_root__OclAny = new ExecutorFragment(Types._Tosca_relationships_root, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_root__OclElement = new ExecutorFragment(Types._Tosca_relationships_root, OCLstdlibTables.Types._OclElement);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_root__Tosca_relationships_root = new ExecutorFragment(Types._Tosca_relationships_root, ToscaTables.Types._Tosca_relationships_root);
 
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_routesto__Dependency = new ExecutorFragment(Types._Tosca_relationships_routesto, ModmacaoTables.Types._Dependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_routesto__Executiondependency = new ExecutorFragment(Types._Tosca_relationships_routesto, ModmacaoTables.Types._Executiondependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_routesto__Installationdependency = new ExecutorFragment(Types._Tosca_relationships_routesto, ModmacaoTables.Types._Installationdependency);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_routesto__MixinBase = new ExecutorFragment(Types._Tosca_relationships_routesto, OCCITables.Types._MixinBase);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_routesto__OclAny = new ExecutorFragment(Types._Tosca_relationships_routesto, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_routesto__OclElement = new ExecutorFragment(Types._Tosca_relationships_routesto, OCLstdlibTables.Types._OclElement);
@@ -1321,60 +1340,78 @@ public class ToscaTables
 				Fragments._Tosca_relationships_attachesto__OclAny /* 0 */,
 				Fragments._Tosca_relationships_attachesto__OclElement /* 1 */,
 				Fragments._Tosca_relationships_attachesto__MixinBase /* 2 */,
-				Fragments._Tosca_relationships_attachesto__Tosca_relationships_root /* 3 */,
-				Fragments._Tosca_relationships_attachesto__Tosca_relationships_attachesto /* 4 */
+				Fragments._Tosca_relationships_attachesto__Dependency /* 3 */,
+				Fragments._Tosca_relationships_attachesto__Executiondependency /* 4 */,
+				Fragments._Tosca_relationships_attachesto__Installationdependency /* 4 */,
+				Fragments._Tosca_relationships_attachesto__Tosca_relationships_root /* 5 */,
+				Fragments._Tosca_relationships_attachesto__Tosca_relationships_attachesto /* 6 */
 			};
-		private static final int /*@NonNull*/ [] __Tosca_relationships_attachesto = { 1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Tosca_relationships_attachesto = { 1,1,1,1,2,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_relationships_connectsto =
 			{
 				Fragments._Tosca_relationships_connectsto__OclAny /* 0 */,
 				Fragments._Tosca_relationships_connectsto__OclElement /* 1 */,
 				Fragments._Tosca_relationships_connectsto__MixinBase /* 2 */,
-				Fragments._Tosca_relationships_connectsto__Tosca_relationships_root /* 3 */,
-				Fragments._Tosca_relationships_connectsto__Tosca_relationships_connectsto /* 4 */
+				Fragments._Tosca_relationships_connectsto__Dependency /* 3 */,
+				Fragments._Tosca_relationships_connectsto__Executiondependency /* 4 */,
+				Fragments._Tosca_relationships_connectsto__Installationdependency /* 4 */,
+				Fragments._Tosca_relationships_connectsto__Tosca_relationships_root /* 5 */,
+				Fragments._Tosca_relationships_connectsto__Tosca_relationships_connectsto /* 6 */
 			};
-		private static final int /*@NonNull*/ [] __Tosca_relationships_connectsto = { 1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Tosca_relationships_connectsto = { 1,1,1,1,2,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_relationships_dependson =
 			{
 				Fragments._Tosca_relationships_dependson__OclAny /* 0 */,
 				Fragments._Tosca_relationships_dependson__OclElement /* 1 */,
 				Fragments._Tosca_relationships_dependson__MixinBase /* 2 */,
-				Fragments._Tosca_relationships_dependson__Tosca_relationships_root /* 3 */,
-				Fragments._Tosca_relationships_dependson__Tosca_relationships_dependson /* 4 */
+				Fragments._Tosca_relationships_dependson__Dependency /* 3 */,
+				Fragments._Tosca_relationships_dependson__Executiondependency /* 4 */,
+				Fragments._Tosca_relationships_dependson__Installationdependency /* 4 */,
+				Fragments._Tosca_relationships_dependson__Tosca_relationships_root /* 5 */,
+				Fragments._Tosca_relationships_dependson__Tosca_relationships_dependson /* 6 */
 			};
-		private static final int /*@NonNull*/ [] __Tosca_relationships_dependson = { 1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Tosca_relationships_dependson = { 1,1,1,1,2,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_relationships_hostedon =
 			{
 				Fragments._Tosca_relationships_hostedon__OclAny /* 0 */,
 				Fragments._Tosca_relationships_hostedon__OclElement /* 1 */,
 				Fragments._Tosca_relationships_hostedon__MixinBase /* 2 */,
-				Fragments._Tosca_relationships_hostedon__Tosca_relationships_root /* 3 */,
-				Fragments._Tosca_relationships_hostedon__Tosca_relationships_hostedon /* 4 */
+				Fragments._Tosca_relationships_hostedon__Dependency /* 3 */,
+				Fragments._Tosca_relationships_hostedon__Executiondependency /* 4 */,
+				Fragments._Tosca_relationships_hostedon__Installationdependency /* 4 */,
+				Fragments._Tosca_relationships_hostedon__Tosca_relationships_root /* 5 */,
+				Fragments._Tosca_relationships_hostedon__Tosca_relationships_hostedon /* 6 */
 			};
-		private static final int /*@NonNull*/ [] __Tosca_relationships_hostedon = { 1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Tosca_relationships_hostedon = { 1,1,1,1,2,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_relationships_root =
 			{
 				Fragments._Tosca_relationships_root__OclAny /* 0 */,
 				Fragments._Tosca_relationships_root__OclElement /* 1 */,
 				Fragments._Tosca_relationships_root__MixinBase /* 2 */,
-				Fragments._Tosca_relationships_root__Tosca_relationships_root /* 3 */
+				Fragments._Tosca_relationships_root__Dependency /* 3 */,
+				Fragments._Tosca_relationships_root__Executiondependency /* 4 */,
+				Fragments._Tosca_relationships_root__Installationdependency /* 4 */,
+				Fragments._Tosca_relationships_root__Tosca_relationships_root /* 5 */
 			};
-		private static final int /*@NonNull*/ [] __Tosca_relationships_root = { 1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Tosca_relationships_root = { 1,1,1,1,2,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_relationships_routesto =
 			{
 				Fragments._Tosca_relationships_routesto__OclAny /* 0 */,
 				Fragments._Tosca_relationships_routesto__OclElement /* 1 */,
 				Fragments._Tosca_relationships_routesto__MixinBase /* 2 */,
-				Fragments._Tosca_relationships_routesto__Tosca_relationships_root /* 3 */,
-				Fragments._Tosca_relationships_routesto__Tosca_relationships_connectsto /* 4 */,
-				Fragments._Tosca_relationships_routesto__Tosca_relationships_routesto /* 5 */
+				Fragments._Tosca_relationships_routesto__Dependency /* 3 */,
+				Fragments._Tosca_relationships_routesto__Executiondependency /* 4 */,
+				Fragments._Tosca_relationships_routesto__Installationdependency /* 4 */,
+				Fragments._Tosca_relationships_routesto__Tosca_relationships_root /* 5 */,
+				Fragments._Tosca_relationships_routesto__Tosca_relationships_connectsto /* 6 */,
+				Fragments._Tosca_relationships_routesto__Tosca_relationships_routesto /* 7 */
 			};
-		private static final int /*@NonNull*/ [] __Tosca_relationships_routesto = { 1,1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Tosca_relationships_routesto = { 1,1,1,1,2,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _arraystring =
 			{
@@ -2832,6 +2869,9 @@ public class ToscaTables
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_policies_update__Tosca_policies_root = {};
 
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_attachesto__Tosca_relationships_attachesto = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_attachesto__Dependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_attachesto__Executiondependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_attachesto__Installationdependency = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_attachesto__MixinBase = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_attachesto__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
@@ -2862,6 +2902,9 @@ public class ToscaTables
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_attachesto__Tosca_relationships_root = {};
 
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_connectsto__Tosca_relationships_connectsto = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_connectsto__Dependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_connectsto__Executiondependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_connectsto__Installationdependency = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_connectsto__MixinBase = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_connectsto__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
@@ -2892,6 +2935,9 @@ public class ToscaTables
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_connectsto__Tosca_relationships_root = {};
 
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_dependson__Tosca_relationships_dependson = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_dependson__Dependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_dependson__Executiondependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_dependson__Installationdependency = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_dependson__MixinBase = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_dependson__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
@@ -2922,6 +2968,9 @@ public class ToscaTables
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_dependson__Tosca_relationships_root = {};
 
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_hostedon__Tosca_relationships_hostedon = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_hostedon__Dependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_hostedon__Executiondependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_hostedon__Installationdependency = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_hostedon__MixinBase = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_hostedon__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
@@ -2952,6 +3001,9 @@ public class ToscaTables
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_hostedon__Tosca_relationships_root = {};
 
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_root__Tosca_relationships_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_root__Dependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_root__Executiondependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_root__Installationdependency = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_root__MixinBase = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_root__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
@@ -2981,6 +3033,9 @@ public class ToscaTables
 		};
 
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_routesto__Tosca_relationships_routesto = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_routesto__Dependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_routesto__Executiondependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_routesto__Installationdependency = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_routesto__MixinBase = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_routesto__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
@@ -3754,35 +3809,53 @@ public class ToscaTables
 			Fragments._Tosca_policies_update__Tosca_policies_root.initOperations(_Tosca_policies_update__Tosca_policies_root);
 			Fragments._Tosca_policies_update__Tosca_policies_update.initOperations(_Tosca_policies_update__Tosca_policies_update);
 
+			Fragments._Tosca_relationships_attachesto__Dependency.initOperations(_Tosca_relationships_attachesto__Dependency);
+			Fragments._Tosca_relationships_attachesto__Executiondependency.initOperations(_Tosca_relationships_attachesto__Executiondependency);
+			Fragments._Tosca_relationships_attachesto__Installationdependency.initOperations(_Tosca_relationships_attachesto__Installationdependency);
 			Fragments._Tosca_relationships_attachesto__MixinBase.initOperations(_Tosca_relationships_attachesto__MixinBase);
 			Fragments._Tosca_relationships_attachesto__OclAny.initOperations(_Tosca_relationships_attachesto__OclAny);
 			Fragments._Tosca_relationships_attachesto__OclElement.initOperations(_Tosca_relationships_attachesto__OclElement);
 			Fragments._Tosca_relationships_attachesto__Tosca_relationships_attachesto.initOperations(_Tosca_relationships_attachesto__Tosca_relationships_attachesto);
 			Fragments._Tosca_relationships_attachesto__Tosca_relationships_root.initOperations(_Tosca_relationships_attachesto__Tosca_relationships_root);
 
+			Fragments._Tosca_relationships_connectsto__Dependency.initOperations(_Tosca_relationships_connectsto__Dependency);
+			Fragments._Tosca_relationships_connectsto__Executiondependency.initOperations(_Tosca_relationships_connectsto__Executiondependency);
+			Fragments._Tosca_relationships_connectsto__Installationdependency.initOperations(_Tosca_relationships_connectsto__Installationdependency);
 			Fragments._Tosca_relationships_connectsto__MixinBase.initOperations(_Tosca_relationships_connectsto__MixinBase);
 			Fragments._Tosca_relationships_connectsto__OclAny.initOperations(_Tosca_relationships_connectsto__OclAny);
 			Fragments._Tosca_relationships_connectsto__OclElement.initOperations(_Tosca_relationships_connectsto__OclElement);
 			Fragments._Tosca_relationships_connectsto__Tosca_relationships_connectsto.initOperations(_Tosca_relationships_connectsto__Tosca_relationships_connectsto);
 			Fragments._Tosca_relationships_connectsto__Tosca_relationships_root.initOperations(_Tosca_relationships_connectsto__Tosca_relationships_root);
 
+			Fragments._Tosca_relationships_dependson__Dependency.initOperations(_Tosca_relationships_dependson__Dependency);
+			Fragments._Tosca_relationships_dependson__Executiondependency.initOperations(_Tosca_relationships_dependson__Executiondependency);
+			Fragments._Tosca_relationships_dependson__Installationdependency.initOperations(_Tosca_relationships_dependson__Installationdependency);
 			Fragments._Tosca_relationships_dependson__MixinBase.initOperations(_Tosca_relationships_dependson__MixinBase);
 			Fragments._Tosca_relationships_dependson__OclAny.initOperations(_Tosca_relationships_dependson__OclAny);
 			Fragments._Tosca_relationships_dependson__OclElement.initOperations(_Tosca_relationships_dependson__OclElement);
 			Fragments._Tosca_relationships_dependson__Tosca_relationships_dependson.initOperations(_Tosca_relationships_dependson__Tosca_relationships_dependson);
 			Fragments._Tosca_relationships_dependson__Tosca_relationships_root.initOperations(_Tosca_relationships_dependson__Tosca_relationships_root);
 
+			Fragments._Tosca_relationships_hostedon__Dependency.initOperations(_Tosca_relationships_hostedon__Dependency);
+			Fragments._Tosca_relationships_hostedon__Executiondependency.initOperations(_Tosca_relationships_hostedon__Executiondependency);
+			Fragments._Tosca_relationships_hostedon__Installationdependency.initOperations(_Tosca_relationships_hostedon__Installationdependency);
 			Fragments._Tosca_relationships_hostedon__MixinBase.initOperations(_Tosca_relationships_hostedon__MixinBase);
 			Fragments._Tosca_relationships_hostedon__OclAny.initOperations(_Tosca_relationships_hostedon__OclAny);
 			Fragments._Tosca_relationships_hostedon__OclElement.initOperations(_Tosca_relationships_hostedon__OclElement);
 			Fragments._Tosca_relationships_hostedon__Tosca_relationships_hostedon.initOperations(_Tosca_relationships_hostedon__Tosca_relationships_hostedon);
 			Fragments._Tosca_relationships_hostedon__Tosca_relationships_root.initOperations(_Tosca_relationships_hostedon__Tosca_relationships_root);
 
+			Fragments._Tosca_relationships_root__Dependency.initOperations(_Tosca_relationships_root__Dependency);
+			Fragments._Tosca_relationships_root__Executiondependency.initOperations(_Tosca_relationships_root__Executiondependency);
+			Fragments._Tosca_relationships_root__Installationdependency.initOperations(_Tosca_relationships_root__Installationdependency);
 			Fragments._Tosca_relationships_root__MixinBase.initOperations(_Tosca_relationships_root__MixinBase);
 			Fragments._Tosca_relationships_root__OclAny.initOperations(_Tosca_relationships_root__OclAny);
 			Fragments._Tosca_relationships_root__OclElement.initOperations(_Tosca_relationships_root__OclElement);
 			Fragments._Tosca_relationships_root__Tosca_relationships_root.initOperations(_Tosca_relationships_root__Tosca_relationships_root);
 
+			Fragments._Tosca_relationships_routesto__Dependency.initOperations(_Tosca_relationships_routesto__Dependency);
+			Fragments._Tosca_relationships_routesto__Executiondependency.initOperations(_Tosca_relationships_routesto__Executiondependency);
+			Fragments._Tosca_relationships_routesto__Installationdependency.initOperations(_Tosca_relationships_routesto__Installationdependency);
 			Fragments._Tosca_relationships_routesto__MixinBase.initOperations(_Tosca_relationships_routesto__MixinBase);
 			Fragments._Tosca_relationships_routesto__OclAny.initOperations(_Tosca_relationships_routesto__OclAny);
 			Fragments._Tosca_relationships_routesto__OclElement.initOperations(_Tosca_relationships_routesto__OclElement);

@@ -36,7 +36,7 @@ import org.eclipse.cmf.occi.tosca.Tosca_nodes_webserver;
 public interface Tosca_nodes_apache extends Tosca_nodes_webserver, Tosca_capabilities_container, MixinBase {
 	/**
 	 * Returns the value of the '<em><b>Document Root</b></em>' attribute.
-	 * The default value is <code>"/var/www"</code>.
+	 * The default value is <code>"varwww"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -45,7 +45,7 @@ public interface Tosca_nodes_apache extends Tosca_nodes_webserver, Tosca_capabil
 	 * @return the value of the '<em>Document Root</em>' attribute.
 	 * @see #setDocumentRoot(String)
 	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_apache_DocumentRoot()
-	 * @model default="/var/www" dataType="org.eclipse.cmf.occi.tosca.string"
+	 * @model default="varwww" dataType="org.eclipse.cmf.occi.tosca.string"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_apache!documentRoot'"
 	 * @generated
 	 */

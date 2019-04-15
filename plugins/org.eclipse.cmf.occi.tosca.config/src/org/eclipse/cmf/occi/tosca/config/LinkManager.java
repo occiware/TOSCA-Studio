@@ -1,10 +1,7 @@
 package org.eclipse.cmf.occi.tosca.config;
 
 import java.util.ArrayList;
-<<<<<<< HEAD
-=======
 import java.util.HashMap;
->>>>>>> d269d8b... Add placement links between unplaced components and computes
 import java.util.List;
 import java.util.Map;
 

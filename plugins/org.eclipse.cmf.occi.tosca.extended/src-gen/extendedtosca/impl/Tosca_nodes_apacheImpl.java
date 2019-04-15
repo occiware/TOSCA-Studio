@@ -45,7 +45,7 @@ public class Tosca_nodes_apacheImpl extends Tosca_nodes_webserverImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DOCUMENT_ROOT_EDEFAULT = "/var/www";
+	protected static final String DOCUMENT_ROOT_EDEFAULT = "varwww";
 
 	/**
 	 * The cached value of the '{@link #getDocumentRoot() <em>Document Root</em>}' attribute.

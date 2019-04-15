@@ -30,7 +30,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link extendedtosca.impl.Tosca_nodes_mysqlImpl#getPortMySQL <em>Port My SQL</em>}</li>
  *   <li>{@link extendedtosca.impl.Tosca_nodes_mysqlImpl#getStoragePath <em>Storage Path</em>}</li>
  *   <li>{@link extendedtosca.impl.Tosca_nodes_mysqlImpl#getDbUser <em>Db User</em>}</li>
  *   <li>{@link extendedtosca.impl.Tosca_nodes_mysqlImpl#getBindAddress <em>Bind Address</em>}</li>
@@ -40,26 +39,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class Tosca_nodes_mysqlImpl extends Tosca_nodes_abstractmysqlImpl implements Tosca_nodes_mysql {
-	/**
-	 * The default value of the '{@link #getPortMySQL() <em>Port My SQL</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPortMySQL()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Integer PORT_MY_SQL_EDEFAULT = new Integer(3306);
-
-	/**
-	 * The cached value of the '{@link #getPortMySQL() <em>Port My SQL</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPortMySQL()
-	 * @generated
-	 * @ordered
-	 */
-	protected Integer portMySQL = PORT_MY_SQL_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getStoragePath() <em>Storage Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -164,27 +143,6 @@ public class Tosca_nodes_mysqlImpl extends Tosca_nodes_abstractmysqlImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Integer getPortMySQL() {
-		return portMySQL;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPortMySQL(Integer newPortMySQL) {
-		Integer oldPortMySQL = portMySQL;
-		portMySQL = newPortMySQL;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExtendedtoscaPackage.TOSCA_NODES_MYSQL__PORT_MY_SQL, oldPortMySQL, portMySQL));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public storage_pathEnum getStoragePath() {
 		return storagePath;
 	}
@@ -272,8 +230,6 @@ public class Tosca_nodes_mysqlImpl extends Tosca_nodes_abstractmysqlImpl impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ExtendedtoscaPackage.TOSCA_NODES_MYSQL__PORT_MY_SQL:
-				return getPortMySQL();
 			case ExtendedtoscaPackage.TOSCA_NODES_MYSQL__STORAGE_PATH:
 				return getStoragePath();
 			case ExtendedtoscaPackage.TOSCA_NODES_MYSQL__DB_USER:
@@ -294,9 +250,6 @@ public class Tosca_nodes_mysqlImpl extends Tosca_nodes_abstractmysqlImpl impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ExtendedtoscaPackage.TOSCA_NODES_MYSQL__PORT_MY_SQL:
-				setPortMySQL((Integer)newValue);
-				return;
 			case ExtendedtoscaPackage.TOSCA_NODES_MYSQL__STORAGE_PATH:
 				setStoragePath((storage_pathEnum)newValue);
 				return;
@@ -321,9 +274,6 @@ public class Tosca_nodes_mysqlImpl extends Tosca_nodes_abstractmysqlImpl impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ExtendedtoscaPackage.TOSCA_NODES_MYSQL__PORT_MY_SQL:
-				setPortMySQL(PORT_MY_SQL_EDEFAULT);
-				return;
 			case ExtendedtoscaPackage.TOSCA_NODES_MYSQL__STORAGE_PATH:
 				setStoragePath(STORAGE_PATH_EDEFAULT);
 				return;
@@ -348,8 +298,6 @@ public class Tosca_nodes_mysqlImpl extends Tosca_nodes_abstractmysqlImpl impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ExtendedtoscaPackage.TOSCA_NODES_MYSQL__PORT_MY_SQL:
-				return PORT_MY_SQL_EDEFAULT == null ? portMySQL != null : !PORT_MY_SQL_EDEFAULT.equals(portMySQL);
 			case ExtendedtoscaPackage.TOSCA_NODES_MYSQL__STORAGE_PATH:
 				return storagePath != STORAGE_PATH_EDEFAULT;
 			case ExtendedtoscaPackage.TOSCA_NODES_MYSQL__DB_USER:
@@ -372,9 +320,7 @@ public class Tosca_nodes_mysqlImpl extends Tosca_nodes_abstractmysqlImpl impleme
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (portMySQL: ");
-		result.append(portMySQL);
-		result.append(", storagePath: ");
+		result.append(" (storagePath: ");
 		result.append(storagePath);
 		result.append(", dbUser: ");
 		result.append(dbUser);

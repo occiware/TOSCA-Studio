@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2015-2017 Obeo, Inria&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#x9;&#xA;Contributors:&#xA;- William Piers &lt;william.piers@obeo.fr>&#xA;- Philippe Merle &lt;philippe.merle@inria.fr>&#xA;- Faiez Zalila &lt;faiez.zalila@inria.fr>" modelDirectory="/org.eclipse.cmf.occi.tosca.extended/src-gen" editDirectory="/org.eclipse.cmf.occi.tosca.extended.edit/src-gen" editorDirectory="/org.eclipse.cmf.occi.tosca.extended.editor/src-gen" modelPluginID="org.eclipse.cmf.occi.tosca.extended" modelName="Extendedtosca" testsDirectory="/org.eclipse.cmf.occi.tosca.extended.tests/src" complianceLevel="8.0" copyrightFields="false" editPluginID="org.eclipse.cmf.occi.tosca.extended.edit" editorPluginID="org.eclipse.cmf.occi.tosca.extended.editor" testsPluginID="org.eclipse.cmf.occi.tosca.extended.tests" operationReflection="true">
+  <genAnnotations source="http://www.eclipse.org/OCL/GenModel">
+    <details key="Use Delegates" value="false"/>
+  </genAnnotations>
+  <foreignModel>extendedTosca.ecore</foreignModel>
+  <genPackages prefix="Extendedtosca" disposableProviderFactory="true">
+    <ecorePackage href="extendedTosca.ecore#/"/>
+    <genEnums typeSafeEnumCompatible="false">
+      <ecoreEnum href="extendedTosca.ecore#//ip_versionEnum"/>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="extendedTosca.ecore#//ip_versionEnum/IPv4"/>
+      </genEnumLiterals>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="extendedTosca.ecore#//ip_versionEnum/IPv6"/>
+      </genEnumLiterals>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false">
+      <ecoreEnum href="extendedTosca.ecore#//storage_pathEnum"/>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="extendedTosca.ecore#//storage_pathEnum/mountedStorage"/>
+      </genEnumLiterals>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="extendedTosca.ecore#//storage_pathEnum/varmysql"/>
+      </genEnumLiterals>
+    </genEnums>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//arrayCredential"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="extendedTosca.ecore#//arrayCredential/arraycredentialValues"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//arrayPortSpec"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="extendedTosca.ecore#//arrayPortSpec/arrayportspecValues"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//arrayversion"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//arrayversion/values"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//arrayinteger"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//arrayinteger/values"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_capabilities_somecap"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_capabilities_indigo_endpoint"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="extendedTosca.ecore#//Tosca_capabilities_indigo_endpoint/credential"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_capabilities_ha"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_capabilities_container_docker"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_capabilities_container_docker/publishAll"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="extendedTosca.ecore#//Tosca_capabilities_container_docker/publishPorts"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="extendedTosca.ecore#//Tosca_capabilities_container_docker/exposePorts"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="extendedTosca.ecore#//Tosca_capabilities_container_docker/volumes"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="extendedTosca.ecore#//Tosca_capabilities_container_docker/version"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_capabilities_containerchild"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_capabilities_somechildcap"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_computewithprop"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_computewithprop/test"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_webapplication_paypalpizzastore"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_webapplication_paypalpizzastore/githubUrl"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_network_network"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_network/physicalNetwork"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_network/segmentationId"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_network/networkId"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_network/ipVersion"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_network/startIp"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_network/networkName"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_network/cidr"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_network/gatewayIp"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_network/networkType"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_network/endIp"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_container_application_docker"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_softwarecomponent_kibana"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_computewithattrlist"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_computewithattrlist/attrList"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_softwarecomponent_logstash"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Example_databasesubsystem"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_softwarecomponent_collectd"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_nodewithreq"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_somenode2"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_php"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_database_mysql"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Example_queuingsubsystem"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Example_transactionsubsystem"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Example_transactionsubsystem/receiverPort"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Example_transactionsubsystem/mqServiceIp"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_abstractmysql"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_mysql"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_mysql/storagePath"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_mysql/dbUser"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_mysql/bindAddress"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_mysql/dbPassword"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_softwarecomponent_elasticsearch"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_databasewithlistparam"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="extendedTosca.ecore#//Tosca_nodes_databasewithlistparam/listProp"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Example_someapp"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_nodewithcap"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_apache"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_apache/documentRoot"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Rsyslog"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_wordpress"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_wordpress/zipUrl"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_network_port"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_port/ipRangeEnd"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_port/ipRangeStart"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_port/ipAddress"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_port/isDefault"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_port/order"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_computewithcapwithattr"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_softwarecomponent_rsyslog"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_hacompute"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_somenode"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_webserver_nodejs"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_webserver_nodejs/githubUrl"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_dbms_mysql"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Mycompany_mytypes_myscalingpolicy"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Test_relation_connects"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_relationships_network_bindsto"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_relationships_ha"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Myattachesto"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_relationships_network_linksto"/>
+    </genClasses>
+  </genPackages>
+  <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.infrastructure/model/Infrastructure.genmodel#//infrastructure"/>
+  <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.sla/model/sla.genmodel#//sla"/>
+  <usedGenPackages href="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.genmodel#//tosca"/>
+  <usedGenPackages href="platform:/resource/org.modmacao.core/model/modmacao.genmodel#//modmacao"/>
+  <usedGenPackages href="platform:/resource/org.modmacao.occi.platform/model/platform.genmodel#//platform"/>
+  <usedGenPackages href="platform:/resource/org.modmacao.placement/model/placement.genmodel#//placement"/>
+  <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.genmodel#//occi"/>
+</genmodel:GenModel>
