@@ -2,10 +2,8 @@ package org.eclipse.cmf.occi.tosca.handlers;
 
 import java.util.Map;
 
-import org.eclipse.cmf.occi.core.Extension;
 import org.eclipse.cmf.occi.core.Mixin;
 import org.eclipse.cmf.occi.core.OCCIFactory;
-import org.eclipse.cmf.occi.core.util.OcciHelper;
 
 public class MixinReader {
 
@@ -41,6 +39,7 @@ public class MixinReader {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	public void readMixin(String mixinData, Map<String, ?> map) {
 		String mixinStr = mixinData.replaceAll("\\.", "_");
 		for (Mixin registeredMixin : ExtensionsManager.currentExtensionToBeBuild.getMixins()) {

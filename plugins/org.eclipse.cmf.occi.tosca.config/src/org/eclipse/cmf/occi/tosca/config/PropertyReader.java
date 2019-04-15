@@ -18,48 +18,65 @@ public class PropertyReader {
 				} else {
 					System.err.println(property + " skipped (" + properties.get(property).getClass() + ")");
 					continue;
-				} 	
+				}
 				if (propertyValue == null) {
 					continue;
 				}
 			} else {
 				propertyValue = (String) properties.get(property);
 			}
-			String[] splittedProperty = property.split("_");
-			String setterNameMethod = "set";
-			for (String partProperty : splittedProperty) {
-				setterNameMethod += Character.toUpperCase(partProperty.charAt(0)) + partProperty.substring(1);
-			}
+			String setterNameMethod = buildCorrectSetterName(property);
 			invokeRightMethod(node.getClass(), setterNameMethod, propertyValue, node);
 		}
 	}
+	
+	public static String buildCorrectSetterName(String base) {
+		String splitted = splitConcatAndUppercaseFirs(base, "_");
+		if (splitted.contains(".")) {
+			splitted = splitConcatAndUppercaseFirs(splitted, "\\.");
+		}
+		return "set" + splitted;
+	}
+	
+	private static String splitConcatAndUppercaseFirs(String base, String separator) {
+		String[] splittedProperty = base.split(separator);
+		String acc = "";
+		for (String partProperty : splittedProperty) {
+			acc += Character.toUpperCase(partProperty.charAt(0)) + partProperty.substring(1);
+		}
+		return acc;
+	}
 
-	private static void invokeRightMethod(Class<?> classOfNode, String methodName, String propertyValue,
+	public static void invokeRightMethod(Class<?> classOfNode, String methodName, String propertyValue,
 			MixinBase node) {
 		propertyValue = convertPropertyValue(propertyValue);
 		try {
-			classOfNode.getMethod(methodName, Integer.class).invoke(node, Integer.parseInt(propertyValue));
+			classOfNode.getMethod(methodName, Short.class).invoke(node, Short.parseShort(propertyValue));
 		} catch (Exception e) {
 			try {
-				classOfNode.getMethod(methodName, Double.class).invoke(node, Double.parseDouble(propertyValue));
-			} catch (Exception e1) {
+				classOfNode.getMethod(methodName, Integer.class).invoke(node, Integer.parseInt(propertyValue));
+			} catch (Exception e0) {
 				try {
-					classOfNode.getMethod(methodName, String.class).invoke(node, propertyValue);
-				} catch (Exception e2) {
-					Mapping mapping = Mapper.mappingOfCapabilities.get(methodName);
-					if (mapping != null) {
-						boolean invokedCorrectly = invokeUsingMappingOn(mapping, propertyValue, node);
-						if (!invokedCorrectly) {
-							for (Kind kind : node.getMixin().getApplies()) {
-								if (invokeUsingMappingOn(mapping, propertyValue,
-										ConfigManager.getResourceOfGivenKind(kind))) {
-									break;
+					classOfNode.getMethod(methodName, Double.class).invoke(node, Double.parseDouble(propertyValue));
+				} catch (Exception e1) {
+					try {
+						classOfNode.getMethod(methodName, String.class).invoke(node, propertyValue);
+					} catch (Exception e2) {
+						Mapping mapping = Mapper.mappingOfCapabilities.get(methodName);
+						if (mapping != null) {
+							boolean invokedCorrectly = invokeUsingMappingOn(mapping, propertyValue, node);
+							if (!invokedCorrectly) {
+								for (Kind kind : node.getMixin().getApplies()) {
+									if (invokeUsingMappingOn(mapping, propertyValue,
+											ConfigManager.getResourceOfGivenKind(kind))) {
+										break;
+									}
 								}
 							}
+						} else {
+							System.err.println("Error could not find mapping for " + methodName + " in "
+									+ classOfNode.getSimpleName() + " for property value " + propertyValue);
 						}
-					} else {
-						System.err.println("Error could not find mapping for " + methodName + " in "
-								+ classOfNode.getSimpleName() + " for property value " + propertyValue);
 					}
 				}
 			}

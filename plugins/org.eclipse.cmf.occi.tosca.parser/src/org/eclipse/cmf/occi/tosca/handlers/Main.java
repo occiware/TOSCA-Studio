@@ -1,17 +1,11 @@
-
 package org.eclipse.cmf.occi.tosca.handlers;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.FilenameFilter;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 import org.eclipse.cmf.occi.core.Extension;
 import org.eclipse.cmf.occi.core.Kind;
@@ -19,10 +13,7 @@ import org.eclipse.cmf.occi.core.Mixin;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.ui.IWorkbenchWindow;
-import org.eclipse.ui.handlers.HandlerUtil;
 
-import com.esotericsoftware.yamlbeans.YamlConfig;
 import com.esotericsoftware.yamlbeans.YamlReader;
 import com.esotericsoftware.yamlbeans.YamlWriter;
 
@@ -36,7 +27,7 @@ import com.esotericsoftware.yamlbeans.YamlWriter;
 public class Main extends AbstractHandler {
 
 	// TODO must be configured
-	public static final String PATH_TO_WORKSPACE = "C:/Users/schallit/workspace-tosca2/";
+	public static final String PATH_TO_WORKSPACE = "";
 	
 	public static final String  PATH_TO_ROOT_PROJECT = PATH_TO_WORKSPACE + "plugins/";
 	
@@ -176,5 +167,4 @@ public class Main extends AbstractHandler {
 			reader.close();
 		}
 	}
-
 }

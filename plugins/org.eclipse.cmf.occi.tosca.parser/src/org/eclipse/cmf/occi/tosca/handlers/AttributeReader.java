@@ -1,52 +1,69 @@
 package org.eclipse.cmf.occi.tosca.handlers;
 
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.cmf.occi.core.Annotation;
 import org.eclipse.cmf.occi.core.Attribute;
 import org.eclipse.cmf.occi.core.Category;
 import org.eclipse.cmf.occi.core.DataType;
 import org.eclipse.cmf.occi.core.EnumerationLiteral;
 import org.eclipse.cmf.occi.core.EnumerationType;
-import org.eclipse.cmf.occi.core.Extension;
 import org.eclipse.cmf.occi.core.Mixin;
 import org.eclipse.cmf.occi.core.OCCIFactory;
 import org.eclipse.cmf.occi.core.StringType;
 
 public class AttributeReader {
+	
+	private static boolean mustBeSkipped(Mixin currentParent, String mixinName, String currentAttributeName) {
+		for (Attribute attribute : currentParent.getAttributes()) {
+			if (attribute.getName().equals(currentAttributeName)) {
+				System.err.println("WARNING " + currentAttributeName + " is defined in both " 
+						+ currentParent.getName() + " and " + mixinName);
+				return true;
+			}
+		}
+		for (Mixin parent : currentParent.getDepends()) {
+			if (mustBeSkipped(parent, mixinName, currentAttributeName)) {
+				return true;
+			}
+		}
+		return false;
+	}
 
+	@SuppressWarnings("unchecked")
 	public static void readAttributes(Category category, Map<String, ?> attributes) {
 		for (String attributeName : attributes.keySet()) {
+			Map<String, ?> attributesValues = (Map<String, ?>) attributes.get(attributeName);
+			attributeName = attributeName.replaceAll("_",".");
 			boolean skip = false;
 			if (category instanceof Mixin) {
 				Mixin mixin = (Mixin) category;
 				for (Mixin parent : mixin.getDepends()) {
-					for (Attribute attribute : parent.getAttributes()) {
-						if (attribute.getName().equals(attributeName.replaceAll("_","."))) {
-							System.err.println("WARNING " + attributeName + " is defined in both " + parent.getName() + " and " + mixin.getName());
-							skip = true; // TODO add as OCL constraint
-						}
-					}
-					if (!skip && parent.getDepends() != null) {
-						for (Mixin grandParent : parent.getDepends()) {
-							for (Attribute attribute : grandParent.getAttributes()) {
-								if (attribute.getName().equals(attributeName.replaceAll("_","."))) {
-									System.err.println("WARNING " + attributeName + " is defined in both " + parent.getName() + " and " + mixin.getName());
-									skip = true; // TODO add as OCL constraint
-								}
-							}	
-						}
+					if (mustBeSkipped(parent, category.getName(), attributeName.replaceAll("_","."))) {
+						skip = true;
+						break;
 					}
 				}
 			}
 			if (skip) {
+				// here, the attribute is inherited from depends mixins
+				// we check if the current mixin is re-defining a default value or not
+				// if so, we use an annotation to keep the value without erasing default value of the inherited attribute.
+				if (attributesValues.containsKey("default")) {
+					Annotation defaultAnnotationForInherited = OCCIFactory.eINSTANCE.createAnnotation();
+					defaultAnnotationForInherited.setKey("default-value_" + attributeName);
+					String defaultValue = (String) attributesValues.get("default");
+					defaultValue = defaultValue.replaceAll("/", "");
+					defaultAnnotationForInherited.setValue(defaultValue);
+					category.getAnnotations().add(defaultAnnotationForInherited);
+					System.out.println("Set up a default value for an inherited attribute: " + attributeName+"("+ defaultValue + ")");
+				}
 				continue;
 			}
+			System.out.println("Defining " + attributeName + " for " + category.getName());
 			Attribute attribute = OCCIFactory.eINSTANCE.createAttribute();
-			Map<String, ?> attributesValues = (Map<String, ?>) attributes.get(attributeName);
-			attributeName = attributeName.replaceAll("_",".");
 			attribute.setName(attributeName);
 			Object description = attributesValues.get("description");
 			if (description != null) {
@@ -56,7 +73,9 @@ public class AttributeReader {
 				attribute.setRequired(attributesValues.get("required").equals("true"));
 			}
 			if (attributesValues.containsKey("default")) {
-				attribute.setDefault((String) attributesValues.get("default"));
+				String defaultValue = (String) attributesValues.get("default");
+				defaultValue = defaultValue.replaceAll("/", "");
+				attribute.setDefault(defaultValue);
 			}
 			
 			DataType type;

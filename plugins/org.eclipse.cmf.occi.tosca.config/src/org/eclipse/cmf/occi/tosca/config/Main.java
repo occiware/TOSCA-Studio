@@ -43,7 +43,7 @@ import extendedtosca.ExtendedtoscaFactory;
 public class Main extends AbstractHandler {
 
 	// TODO To be configured MUST END WITH a /
-	public static final String ROOT_WORKSPACE = "C:/Users/schallit/workspace-tosca2/plugins/";
+	public static final String ROOT_WORKSPACE = "";
 
 	public static ApplicationAndComponentManager applicationAndComponentManger;
 
@@ -72,11 +72,13 @@ public class Main extends AbstractHandler {
 			}
 		}
 		
-		System.out.println("Printout the rrors...");
+		/*
+		System.out.println("Printout the Errors...");
 		for (String yamlFile : errors.keySet()) {
 			System.out.println(yamlFile + ":");
 			errors.get(yamlFile).printStackTrace();
 		}
+		*/
 		return null;
 	}
 
@@ -116,8 +118,6 @@ public class Main extends AbstractHandler {
 	private static void readNodeTemplates(Configuration configuration, Map<String, ?> node_templates) throws Exception {
 		NodeTemplateReader nodeTemplateReader = new NodeTemplateReader(configuration);
 		for (String key : node_templates.keySet()) {
-			System.out.println(key);
-			System.out.println(node_templates);
 			nodeTemplateReader.read(key, (Map<String, ?>) node_templates);
 		}
 	}

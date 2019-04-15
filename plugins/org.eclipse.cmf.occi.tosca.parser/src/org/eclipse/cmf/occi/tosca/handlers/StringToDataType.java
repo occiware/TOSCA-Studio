@@ -1,6 +1,5 @@
 package org.eclipse.cmf.occi.tosca.handlers;
 
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,12 +7,9 @@ import org.eclipse.cmf.occi.core.ArrayType;
 import org.eclipse.cmf.occi.core.BooleanType;
 import org.eclipse.cmf.occi.core.DataType;
 import org.eclipse.cmf.occi.core.EObjectType;
-import org.eclipse.cmf.occi.core.EnumerationLiteral;
-import org.eclipse.cmf.occi.core.EnumerationType;
 import org.eclipse.cmf.occi.core.NumericType;
 import org.eclipse.cmf.occi.core.NumericTypeEnum;
 import org.eclipse.cmf.occi.core.OCCIFactory;
-import org.eclipse.cmf.occi.core.RecordType;
 import org.eclipse.cmf.occi.core.StringType;
 
 public class StringToDataType {
@@ -160,6 +156,3 @@ public class StringToDataType {
 		return newArrayType;
 	}
 }
-
-
-
