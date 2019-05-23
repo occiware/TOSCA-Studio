@@ -41,14 +41,11 @@ public class TypeMapper extends Mapper {
 		this.mappings.put("tosca_nodes_Compute", 
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("infrastructure", "compute"), computeConstraint)
 			);
-
-		this.mappings.put("tosca_nodes_SoftwareComponent", 
+		
+		this.mappings.put("tosca_nodes_Root",
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("modmacao-platform", "component")
-			));
-
-		this.mappings.put("tosca_nodes_WebApplication", 
-				new MixinMapping(ExtensionsManager.getKindFromItsTerm("modmacao-platform", "component")
-			));
+			)
+		);
 		
 		Constraint webServerConstraint = OCCIFactory.eINSTANCE.createConstraint();
 		webServerConstraint.setName("SourceMustBeWebApplication");
