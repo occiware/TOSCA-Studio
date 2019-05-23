@@ -42,9 +42,6 @@ public class ApplicationAndComponentManager {
 	public Resource createComponentAndLinks(String key) {
 		Resource component = (Resource) OcciHelper.createEntity(OcciHelper
 				.getKindByTerm(OcciHelper.loadExtension("http://schemas.modmacao.org/occi/platform#"), "component"));
-		// add the mixin component from modmacao
-		MixinBase mixinComponent = ModmacaoFactory.eINSTANCE.createComponent();
-		component.getParts().add(mixinComponent);
 		// link the new component and the application with a component link
 		Link componentLink = (Link) OcciHelper.createEntity(OcciHelper.getKindByTerm(
 				OcciHelper.loadExtension("http://schemas.modmacao.org/occi/platform#"), "componentlink"));
