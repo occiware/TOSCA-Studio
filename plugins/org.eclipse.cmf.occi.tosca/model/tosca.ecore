@@ -257,7 +257,7 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="urlPath" eType="#//string">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The optional URL path of the endpoint’s address if applicable for the protocol."/>
+        <details key="documentation" value="The optional URL path of the endpointâ€™s address if applicable for the protocol."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -277,7 +277,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultInstances" eType="#//integer"
         defaultValueLiteral="1">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="An optional property that indicates the requested default number of instances that should be the starting number of instances a TOSCA orchestrator should attempt to allocate. Note: The value for this property MUST be in the range between the values set for ‘min_instances’ and ‘max_instances’ properties."/>
+        <details key="documentation" value="An optional property that indicates the requested default number of instances that should be the starting number of instances a TOSCA orchestrator should attempt to allocate. Note: The value for this property MUST be in the range between the values set for â€˜min_instancesâ€™ and â€˜max_instancesâ€™ properties."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -316,7 +316,7 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="distribution" eType="#//string">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The Operating System (OS) distribution. Examples of valid values for an “type” of “Linux” would include:  debian, fedora, rhel and ubuntu."/>
+        <details key="documentation" value="The Operating System (OS) distribution. Examples of valid values for an â€œtypeâ€� of â€œLinuxâ€� would include:  debian, fedora, rhel and ubuntu."/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//version">
@@ -326,34 +326,22 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_capabilities_attachment" eSuperTypes="#//Tosca_capabilities_root platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_root" eSuperTypes="#//Tosca_capabilities_node #//Tosca_interfaces_node_lifecycle_standard platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="appliesConstraint"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="appliesConstraint" value="self.entity.oclIsKindOf(occi::Resource)"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_webapplication" eSuperTypes="#//Tosca_nodes_root #//Tosca_capabilities_endpoint platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
+  <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_root" eSuperTypes="#//Tosca_capabilities_node platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="appliesConstraint"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="appliesConstraint" value="self.entity.oclIsKindOf(platform::Component)"/>
     </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_webapplication" eSuperTypes="#//Tosca_nodes_root #//Tosca_capabilities_endpoint platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="contextRoot" eType="#//string">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The web application’s context root which designates the application’s URL path within the web server it is hosted on."/>
+        <details key="documentation" value="The web applicationâ€™s context root which designates the applicationâ€™s URL path within the web server it is hosted on."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_softwarecomponent" eSuperTypes="#//Tosca_nodes_root platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="appliesConstraint"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="appliesConstraint" value="self.entity.oclIsKindOf(platform::Component)"/>
-    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="adminCredential" eType="#//Credential"
         containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -362,7 +350,7 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="componentVersion" eType="#//version">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The optional software component’s version."/>
+        <details key="documentation" value="The optional software componentâ€™s version."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>

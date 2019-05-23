@@ -7,12 +7,15 @@
   <import href="http://schemas.modmacao.org/modmacao#/"/>
   <import href="http://schemas.modmacao.org/occi/platform#/"/>
   <import href="http://schemas.modmacao.org/placement#/"/>
-  <mixins name="tosca_capabilities_SomeCap" scheme="http://schemas.ogf.org/tosca/extended#">
-    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_root']"/>
-  </mixins>
   <mixins name="tosca_capabilities_indigo_Endpoint" scheme="http://schemas.ogf.org/tosca/extended#">
     <attributes name="credential" type="//@types.0"/>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_endpoint']"/>
+  </mixins>
+  <mixins name="tosca_capabilities_SomeCap" scheme="http://schemas.ogf.org/tosca/extended#">
+    <attributes name="type" required="true" default="someval">
+      <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
+    </attributes>
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_container']"/>
   </mixins>
   <mixins name="tosca_capabilities_HA" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_root']"/>
@@ -158,10 +161,6 @@
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_endpoint']"/>
   </mixins>
-  <mixins name="tosca_nodes_NodeWithCap" scheme="http://schemas.ogf.org/tosca/extended#">
-    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
-    <depends href="#//@mixins[term='tosca_capabilities_somecap']"/>
-  </mixins>
   <mixins name="tosca_nodes_Apache" scheme="http://schemas.ogf.org/tosca/extended#" title="The TOSCA Apache Node Type represents an apache component that can be managed and run by a TOSCA Compute Node Type.">
     <annotations key="default-value_port" value="80"/>
     <annotations key="default-value_component.version" value="2.4"/>
@@ -170,6 +169,10 @@
     </attributes>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_webserver']"/>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_container']"/>
+  </mixins>
+  <mixins name="tosca_nodes_NodeWithCap" scheme="http://schemas.ogf.org/tosca/extended#">
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
+    <depends href="#//@mixins[term='tosca_capabilities_somecap']"/>
   </mixins>
   <mixins name="Rsyslog" scheme="http://schemas.ogf.org/tosca/extended#" title="RSYSLOG is the Rocket-fast SYStem for LOG processing.">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_softwarecomponent']"/>
@@ -210,9 +213,11 @@
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_compute']"/>
     <depends href="#//@mixins[term='tosca_capabilities_ha']"/>
   </mixins>
-  <mixins name="tosca_nodes_SomeNode" scheme="http://schemas.ogf.org/tosca/extended#" title="A node with a capiblity and a parent capability defined in an imported file">
+  <mixins name="tosca_nodes_SomeNode" scheme="http://schemas.ogf.org/tosca/extended#" title="Node type that has a requirement of a capability with a defined value">
+    <attributes name="some.prop" default="some">
+      <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
+    </attributes>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
-    <depends href="#//@mixins[term='tosca_capabilities_somechildcap']"/>
   </mixins>
   <mixins name="tosca_nodes_WebServer_Nodejs" scheme="http://schemas.ogf.org/tosca/extended#">
     <attributes name="github.url" default="https:github.commmmtestnode.git" description="location of the application on the github.">

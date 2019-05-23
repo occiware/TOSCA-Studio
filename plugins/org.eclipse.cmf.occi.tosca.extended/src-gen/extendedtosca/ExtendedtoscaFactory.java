@@ -68,15 +68,6 @@ public interface ExtendedtoscaFactory extends EFactory {
 	arrayinteger createarrayinteger();
 
 	/**
-	 * Returns a new object of class '<em>Tosca capabilities somecap</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tosca capabilities somecap</em>'.
-	 * @generated
-	 */
-	Tosca_capabilities_somecap createTosca_capabilities_somecap();
-
-	/**
 	 * Returns a new object of class '<em>Tosca capabilities indigo endpoint</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -84,6 +75,15 @@ public interface ExtendedtoscaFactory extends EFactory {
 	 * @generated
 	 */
 	Tosca_capabilities_indigo_endpoint createTosca_capabilities_indigo_endpoint();
+
+	/**
+	 * Returns a new object of class '<em>Tosca capabilities somecap</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca capabilities somecap</em>'.
+	 * @generated
+	 */
+	Tosca_capabilities_somecap createTosca_capabilities_somecap();
 
 	/**
 	 * Returns a new object of class '<em>Tosca capabilities ha</em>'.
@@ -302,15 +302,6 @@ public interface ExtendedtoscaFactory extends EFactory {
 	Example_someapp createExample_someapp();
 
 	/**
-	 * Returns a new object of class '<em>Tosca nodes nodewithcap</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tosca nodes nodewithcap</em>'.
-	 * @generated
-	 */
-	Tosca_nodes_nodewithcap createTosca_nodes_nodewithcap();
-
-	/**
 	 * Returns a new object of class '<em>Tosca nodes apache</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -318,6 +309,15 @@ public interface ExtendedtoscaFactory extends EFactory {
 	 * @generated
 	 */
 	Tosca_nodes_apache createTosca_nodes_apache();
+
+	/**
+	 * Returns a new object of class '<em>Tosca nodes nodewithcap</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes nodewithcap</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_nodewithcap createTosca_nodes_nodewithcap();
 
 	/**
 	 * Returns a new object of class '<em>Rsyslog</em>'.

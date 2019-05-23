@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xmi:id="_edvI8F-_Eem_yrI1HeJ8ZA" version="13.0.0.201804031646">
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xmi:id="_qoLyYHykEemwm8a8paYUWQ" version="13.0.0.201804031646">
   <semanticResources>model/tosca.occie</semanticResources>
   <semanticResources>http://schemas.ogf.org/occi/core</semanticResources>
   <semanticResources>http://schemas.ogf.org/occi/infrastructure</semanticResources>

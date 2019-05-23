@@ -20,8 +20,6 @@ import org.eclipse.cmf.occi.core.Entity;
 
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
 import org.eclipse.cmf.occi.tosca.ToscaTables;
-import org.eclipse.cmf.occi.tosca.Tosca_interfaces_node_lifecycle_standard;
-import org.eclipse.cmf.occi.tosca.Tosca_interfaces_root;
 import org.eclipse.cmf.occi.tosca.Tosca_nodes_root;
 
 import org.eclipse.emf.common.util.DiagnosticChain;
@@ -89,7 +87,7 @@ public class Tosca_nodes_rootImpl extends Tosca_capabilities_nodeImpl implements
 		 *     then true
 		 *     else
 		 *       let
-		 *         result : occi::Boolean[1] = self.entity.oclIsKindOf(occi::Resource)
+		 *         result : occi::Boolean[1] = self.entity.oclIsKindOf(platform::Component)
 		 *       in
 		 *         'Tosca_nodes_root::appliesConstraint'.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
 		 *     endif
@@ -103,63 +101,13 @@ public class Tosca_nodes_rootImpl extends Tosca_capabilities_nodeImpl implements
 			symbol_0 = ValueUtil.TRUE_VALUE;
 		}
 		else {
-			final /*@NonInvalid*/ org.eclipse.ocl.pivot.Class TYP_occi_c_c_Resource = idResolver.getClass(ToscaTables.CLSSid_Resource, null);
+			final /*@NonInvalid*/ org.eclipse.ocl.pivot.Class TYP_platform_c_c_Component = idResolver.getClass(ToscaTables.CLSSid_Component, null);
 			final /*@NonInvalid*/ Entity entity = this.getEntity();
-			final /*@NonInvalid*/ boolean result = OclAnyOclIsKindOfOperation.INSTANCE.evaluate(executor, entity, TYP_occi_c_c_Resource).booleanValue();
+			final /*@NonInvalid*/ boolean result = OclAnyOclIsKindOfOperation.INSTANCE.evaluate(executor, entity, TYP_platform_c_c_Component).booleanValue();
 			final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, ToscaTables.STR_Tosca_nodes_root_c_c_appliesConstraint, this, (Object)null, diagnostics, context, (Object)null, severity_0, result, ToscaTables.INT_0).booleanValue();
 			symbol_0 = logDiagnostic;
 		}
 		return Boolean.TRUE == symbol_0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void create() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_node_lifecycle_standard!create()
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void configure() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_node_lifecycle_standard!configure()
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void delete() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/core/ecore!Tosca_interfaces_node_lifecycle_standard!delete()
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
-		if (baseClass == Tosca_interfaces_root.class) {
-			switch (baseOperationID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Tosca_interfaces_node_lifecycle_standard.class) {
-			switch (baseOperationID) {
-				case ToscaPackage.TOSCA_INTERFACES_NODE_LIFECYCLE_STANDARD___CREATE: return ToscaPackage.TOSCA_NODES_ROOT___CREATE;
-				case ToscaPackage.TOSCA_INTERFACES_NODE_LIFECYCLE_STANDARD___CONFIGURE: return ToscaPackage.TOSCA_NODES_ROOT___CONFIGURE;
-				case ToscaPackage.TOSCA_INTERFACES_NODE_LIFECYCLE_STANDARD___DELETE: return ToscaPackage.TOSCA_NODES_ROOT___DELETE;
-				default: return -1;
-			}
-		}
-		return super.eDerivedOperationID(baseOperationID, baseClass);
 	}
 
 	/**
@@ -173,15 +121,6 @@ public class Tosca_nodes_rootImpl extends Tosca_capabilities_nodeImpl implements
 		switch (operationID) {
 			case ToscaPackage.TOSCA_NODES_ROOT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP:
 				return appliesConstraint((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case ToscaPackage.TOSCA_NODES_ROOT___CREATE:
-				create();
-				return null;
-			case ToscaPackage.TOSCA_NODES_ROOT___CONFIGURE:
-				configure();
-				return null;
-			case ToscaPackage.TOSCA_NODES_ROOT___DELETE:
-				delete();
-				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

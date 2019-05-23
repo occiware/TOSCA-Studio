@@ -8,10 +8,10 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://schemas.ogf.org/tosca/core#/"/>
   <use href="http://schemas.ogf.org/tosca/extended#/"/>
-  <resources xsi:type="platform:Application" id="urn:uuid:eb6c5750-9e00-4978-b4fb-5fe647336fae">
+  <resources xsi:type="platform:Application" id="urn:uuid:69f1bf70-1139-4d9e-8b49-f75d7061c344">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
   </resources>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:5852696d-f236-41c4-b3f9-c7a7c347992e" title="my_server" occiComputeCores="8" occiComputeMemory="2.0">
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:b5e05b2e-2cfa-41f7-b72b-8fd7c73f3e75" title="my_server" occiComputeCores="8" occiComputeMemory="2.0">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
     <parts xsi:type="tosca:Tosca_nodes_compute" diskSize="10">
       <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>

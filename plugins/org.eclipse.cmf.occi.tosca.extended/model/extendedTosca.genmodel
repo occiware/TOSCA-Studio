@@ -49,12 +49,15 @@
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="extendedTosca.ecore#//Tosca_capabilities_somecap"/>
-    </genClasses>
-    <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_capabilities_indigo_endpoint"/>
       <genFeatures property="None" children="true" createChild="true">
         <ecoreFeature xsi:type="ecore:EReference" href="extendedTosca.ecore#//Tosca_capabilities_indigo_endpoint/credential"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_capabilities_somecap"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_capabilities_somecap/type"/>
       </genFeatures>
     </genClasses>
     <genClasses>
@@ -205,13 +208,13 @@
       <ecoreClass href="extendedTosca.ecore#//Example_someapp"/>
     </genClasses>
     <genClasses>
-      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_nodewithcap"/>
-    </genClasses>
-    <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_apache"/>
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_apache/documentRoot"/>
       </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_nodewithcap"/>
     </genClasses>
     <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Rsyslog"/>
@@ -251,6 +254,9 @@
     </genClasses>
     <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_somenode"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_somenode/someProp"/>
+      </genFeatures>
     </genClasses>
     <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_webserver_nodejs"/>

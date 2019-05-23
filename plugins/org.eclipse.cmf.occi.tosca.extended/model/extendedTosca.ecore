@@ -42,11 +42,18 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
         upperBound="-1" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//integer"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tosca_capabilities_somecap" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_capabilities_root platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_capabilities_indigo_endpoint"
       eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_capabilities_endpoint platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
     <eStructuralFeatures xsi:type="ecore:EReference" name="credential" eType="#//arrayCredential"
         containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tosca_capabilities_somecap" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_capabilities_container platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//string"
+        defaultValueLiteral="someval">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=""/>
       </eAnnotations>
@@ -228,7 +235,6 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Example_someapp" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_root platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_capabilities_endpoint platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_nodewithcap" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_root #//Tosca_capabilities_somecap platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_apache" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_webserver platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_capabilities_container platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="documentRoot" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//string"
         defaultValueLiteral="varwww">
@@ -237,6 +243,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_nodewithcap" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_root #//Tosca_capabilities_somecap platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="Rsyslog" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_softwarecomponent platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_wordpress" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_webapplication platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="zipUrl" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//string"
@@ -280,7 +287,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_softwarecomponent_rsyslog"
       eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_softwarecomponent platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_hacompute" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_compute #//Tosca_capabilities_ha platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_somenode" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_root #//Tosca_capabilities_somechildcap platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_somenode" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_root platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="someProp" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//string"
+        defaultValueLiteral="some">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_webserver_nodejs" eSuperTypes="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//Tosca_nodes_webserver platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="githubUrl" eType="ecore:EDataType platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore#//string"
         defaultValueLiteral="https:github.commmmtestnode.git">

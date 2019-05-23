@@ -71,8 +71,8 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 			case ExtendedtoscaPackage.ARRAY_PORT_SPEC: return createarrayPortSpec();
 			case ExtendedtoscaPackage.ARRAYVERSION: return createarrayversion();
 			case ExtendedtoscaPackage.ARRAYINTEGER: return createarrayinteger();
-			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_SOMECAP: return createTosca_capabilities_somecap();
 			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_INDIGO_ENDPOINT: return createTosca_capabilities_indigo_endpoint();
+			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_SOMECAP: return createTosca_capabilities_somecap();
 			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_HA: return createTosca_capabilities_ha();
 			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_CONTAINER_DOCKER: return createTosca_capabilities_container_docker();
 			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_CONTAINERCHILD: return createTosca_capabilities_containerchild();
@@ -97,8 +97,8 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 			case ExtendedtoscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH: return createTosca_nodes_softwarecomponent_elasticsearch();
 			case ExtendedtoscaPackage.TOSCA_NODES_DATABASEWITHLISTPARAM: return createTosca_nodes_databasewithlistparam();
 			case ExtendedtoscaPackage.EXAMPLE_SOMEAPP: return createExample_someapp();
-			case ExtendedtoscaPackage.TOSCA_NODES_NODEWITHCAP: return createTosca_nodes_nodewithcap();
 			case ExtendedtoscaPackage.TOSCA_NODES_APACHE: return createTosca_nodes_apache();
+			case ExtendedtoscaPackage.TOSCA_NODES_NODEWITHCAP: return createTosca_nodes_nodewithcap();
 			case ExtendedtoscaPackage.RSYSLOG: return createRsyslog();
 			case ExtendedtoscaPackage.TOSCA_NODES_WORDPRESS: return createTosca_nodes_wordpress();
 			case ExtendedtoscaPackage.TOSCA_NODES_NETWORK_PORT: return createTosca_nodes_network_port();
@@ -198,9 +198,9 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tosca_capabilities_somecap createTosca_capabilities_somecap() {
-		Tosca_capabilities_somecapImpl tosca_capabilities_somecap = new Tosca_capabilities_somecapImpl();
-		return tosca_capabilities_somecap;
+	public Tosca_capabilities_indigo_endpoint createTosca_capabilities_indigo_endpoint() {
+		Tosca_capabilities_indigo_endpointImpl tosca_capabilities_indigo_endpoint = new Tosca_capabilities_indigo_endpointImpl();
+		return tosca_capabilities_indigo_endpoint;
 	}
 
 	/**
@@ -208,9 +208,9 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tosca_capabilities_indigo_endpoint createTosca_capabilities_indigo_endpoint() {
-		Tosca_capabilities_indigo_endpointImpl tosca_capabilities_indigo_endpoint = new Tosca_capabilities_indigo_endpointImpl();
-		return tosca_capabilities_indigo_endpoint;
+	public Tosca_capabilities_somecap createTosca_capabilities_somecap() {
+		Tosca_capabilities_somecapImpl tosca_capabilities_somecap = new Tosca_capabilities_somecapImpl();
+		return tosca_capabilities_somecap;
 	}
 
 	/**
@@ -458,9 +458,9 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tosca_nodes_nodewithcap createTosca_nodes_nodewithcap() {
-		Tosca_nodes_nodewithcapImpl tosca_nodes_nodewithcap = new Tosca_nodes_nodewithcapImpl();
-		return tosca_nodes_nodewithcap;
+	public Tosca_nodes_apache createTosca_nodes_apache() {
+		Tosca_nodes_apacheImpl tosca_nodes_apache = new Tosca_nodes_apacheImpl();
+		return tosca_nodes_apache;
 	}
 
 	/**
@@ -468,9 +468,9 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tosca_nodes_apache createTosca_nodes_apache() {
-		Tosca_nodes_apacheImpl tosca_nodes_apache = new Tosca_nodes_apacheImpl();
-		return tosca_nodes_apache;
+	public Tosca_nodes_nodewithcap createTosca_nodes_nodewithcap() {
+		Tosca_nodes_nodewithcapImpl tosca_nodes_nodewithcap = new Tosca_nodes_nodewithcapImpl();
+		return tosca_nodes_nodewithcap;
 	}
 
 	/**

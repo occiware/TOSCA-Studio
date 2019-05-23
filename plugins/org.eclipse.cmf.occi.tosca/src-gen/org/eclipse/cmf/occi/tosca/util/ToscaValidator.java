@@ -64,28 +64,12 @@ public class ToscaValidator extends EObjectValidator {
 	public static final int TOSCA_NODES_ROOT__APPLIES_CONSTRAINT = 1;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Applies Constraint' of 'Tosca nodes webapplication'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int TOSCA_NODES_WEBAPPLICATION__APPLIES_CONSTRAINT = 2;
-
-	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Applies Constraint' of 'Tosca nodes softwarecomponent'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int TOSCA_NODES_SOFTWARECOMPONENT__APPLIES_CONSTRAINT = 3;
-
-	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Source Must Be Database' of 'Tosca nodes dbms'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_NODES_DBMS__SOURCE_MUST_BE_DATABASE = 4;
+	public static final int TOSCA_NODES_DBMS__SOURCE_MUST_BE_DATABASE = 2;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Applies Constraint' of 'Tosca nodes objectstorage'.
@@ -93,7 +77,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_NODES_OBJECTSTORAGE__APPLIES_CONSTRAINT = 5;
+	public static final int TOSCA_NODES_OBJECTSTORAGE__APPLIES_CONSTRAINT = 3;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Source Must Be Software Component' of 'Tosca nodes compute'.
@@ -101,7 +85,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_NODES_COMPUTE__SOURCE_MUST_BE_SOFTWARE_COMPONENT = 6;
+	public static final int TOSCA_NODES_COMPUTE__SOURCE_MUST_BE_SOFTWARE_COMPONENT = 4;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Applies Constraint' of 'Tosca nodes compute'.
@@ -109,7 +93,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_NODES_COMPUTE__APPLIES_CONSTRAINT = 7;
+	public static final int TOSCA_NODES_COMPUTE__APPLIES_CONSTRAINT = 5;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Source Must Be Web Application' of 'Tosca nodes webserver'.
@@ -117,7 +101,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_NODES_WEBSERVER__SOURCE_MUST_BE_WEB_APPLICATION = 8;
+	public static final int TOSCA_NODES_WEBSERVER__SOURCE_MUST_BE_WEB_APPLICATION = 6;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Applies Constraint' of 'Tosca nodes database'.
@@ -125,7 +109,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_NODES_DATABASE__APPLIES_CONSTRAINT = 9;
+	public static final int TOSCA_NODES_DATABASE__APPLIES_CONSTRAINT = 7;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Applies Constraint' of 'Tosca nodes container application'.
@@ -133,7 +117,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_NODES_CONTAINER_APPLICATION__APPLIES_CONSTRAINT = 10;
+	public static final int TOSCA_NODES_CONTAINER_APPLICATION__APPLIES_CONSTRAINT = 8;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Applies Constraint' of 'Tosca nodes blockstorage'.
@@ -141,7 +125,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_NODES_BLOCKSTORAGE__APPLIES_CONSTRAINT = 11;
+	public static final int TOSCA_NODES_BLOCKSTORAGE__APPLIES_CONSTRAINT = 9;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Applies Constraint' of 'Tosca relationships root'.
@@ -149,7 +133,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_RELATIONSHIPS_ROOT__APPLIES_CONSTRAINT = 12;
+	public static final int TOSCA_RELATIONSHIPS_ROOT__APPLIES_CONSTRAINT = 10;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Source Must Be Load Balancer' of 'Tosca relationships routesto'.
@@ -157,7 +141,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_RELATIONSHIPS_ROUTESTO__SOURCE_MUST_BE_LOAD_BALANCER = 13;
+	public static final int TOSCA_RELATIONSHIPS_ROUTESTO__SOURCE_MUST_BE_LOAD_BALANCER = 11;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Applies Constraint' of 'Tosca relationships attachesto'.
@@ -165,7 +149,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_RELATIONSHIPS_ATTACHESTO__APPLIES_CONSTRAINT = 14;
+	public static final int TOSCA_RELATIONSHIPS_ATTACHESTO__APPLIES_CONSTRAINT = 12;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Source Must Be Compute And Target Must Be Block Storage' of 'Tosca relationships attachesto'.
@@ -173,7 +157,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_RELATIONSHIPS_ATTACHESTO__SOURCE_MUST_BE_COMPUTE_AND_TARGET_MUST_BE_BLOCK_STORAGE = 15;
+	public static final int TOSCA_RELATIONSHIPS_ATTACHESTO__SOURCE_MUST_BE_COMPUTE_AND_TARGET_MUST_BE_BLOCK_STORAGE = 13;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Source Must Be Web Server And Target Must Be Web Application' of 'Tosca relationships hostedon'.
@@ -181,7 +165,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_RELATIONSHIPS_HOSTEDON__SOURCE_MUST_BE_WEB_SERVER_AND_TARGET_MUST_BE_WEB_APPLICATION = 16;
+	public static final int TOSCA_RELATIONSHIPS_HOSTEDON__SOURCE_MUST_BE_WEB_SERVER_AND_TARGET_MUST_BE_WEB_APPLICATION = 14;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Source Must Be Container Application And Target Must Be Container Runtime' of 'Tosca relationships hostedon'.
@@ -189,7 +173,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_RELATIONSHIPS_HOSTEDON__SOURCE_MUST_BE_CONTAINER_APPLICATION_AND_TARGET_MUST_BE_CONTAINER_RUNTIME = 17;
+	public static final int TOSCA_RELATIONSHIPS_HOSTEDON__SOURCE_MUST_BE_CONTAINER_APPLICATION_AND_TARGET_MUST_BE_CONTAINER_RUNTIME = 15;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Source Must Be Software Component And Target Must Be Compute' of 'Tosca relationships hostedon'.
@@ -197,7 +181,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_RELATIONSHIPS_HOSTEDON__SOURCE_MUST_BE_SOFTWARE_COMPONENT_AND_TARGET_MUST_BE_COMPUTE = 18;
+	public static final int TOSCA_RELATIONSHIPS_HOSTEDON__SOURCE_MUST_BE_SOFTWARE_COMPONENT_AND_TARGET_MUST_BE_COMPUTE = 16;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Source Must Be Database And Target Must Be DBMS' of 'Tosca relationships hostedon'.
@@ -205,7 +189,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_RELATIONSHIPS_HOSTEDON__SOURCE_MUST_BE_DATABASE_AND_TARGET_MUST_BE_DBMS = 19;
+	public static final int TOSCA_RELATIONSHIPS_HOSTEDON__SOURCE_MUST_BE_DATABASE_AND_TARGET_MUST_BE_DBMS = 17;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Source Must Be Node And Target Must Be Node' of 'Tosca relationships dependson'.
@@ -213,7 +197,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int TOSCA_RELATIONSHIPS_DEPENDSON__SOURCE_MUST_BE_NODE_AND_TARGET_MUST_BE_NODE = 20;
+	public static final int TOSCA_RELATIONSHIPS_DEPENDSON__SOURCE_MUST_BE_NODE_AND_TARGET_MUST_BE_NODE = 18;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants.
@@ -221,7 +205,7 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 20;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 18;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -600,18 +584,8 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_webapplication, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_webapplication, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_webapplication, diagnostics, context);
-		if (result || diagnostics != null) result &= validateTosca_nodes_webapplication_appliesConstraint(tosca_nodes_webapplication, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTosca_nodes_root_appliesConstraint(tosca_nodes_webapplication, diagnostics, context);
 		return result;
-	}
-
-	/**
-	 * Validates the appliesConstraint constraint of '<em>Tosca nodes webapplication</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateTosca_nodes_webapplication_appliesConstraint(Tosca_nodes_webapplication tosca_nodes_webapplication, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return tosca_nodes_webapplication.appliesConstraint(diagnostics, context);
 	}
 
 	/**
@@ -629,18 +603,8 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_softwarecomponent, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_softwarecomponent, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_softwarecomponent, diagnostics, context);
-		if (result || diagnostics != null) result &= validateTosca_nodes_softwarecomponent_appliesConstraint(tosca_nodes_softwarecomponent, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTosca_nodes_root_appliesConstraint(tosca_nodes_softwarecomponent, diagnostics, context);
 		return result;
-	}
-
-	/**
-	 * Validates the appliesConstraint constraint of '<em>Tosca nodes softwarecomponent</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateTosca_nodes_softwarecomponent_appliesConstraint(Tosca_nodes_softwarecomponent tosca_nodes_softwarecomponent, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return tosca_nodes_softwarecomponent.appliesConstraint(diagnostics, context);
 	}
 
 	/**
@@ -658,7 +622,7 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_dbms, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_dbms, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_dbms, diagnostics, context);
-		if (result || diagnostics != null) result &= validateTosca_nodes_softwarecomponent_appliesConstraint(tosca_nodes_dbms, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTosca_nodes_root_appliesConstraint(tosca_nodes_dbms, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_nodes_dbms_SourceMustBeDatabase(tosca_nodes_dbms, diagnostics, context);
 		return result;
 	}
@@ -776,7 +740,7 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_webserver, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_webserver, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_webserver, diagnostics, context);
-		if (result || diagnostics != null) result &= validateTosca_nodes_softwarecomponent_appliesConstraint(tosca_nodes_webserver, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTosca_nodes_root_appliesConstraint(tosca_nodes_webserver, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_nodes_webserver_SourceMustBeWebApplication(tosca_nodes_webserver, diagnostics, context);
 		return result;
 	}
@@ -864,7 +828,7 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_container_runtime, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_container_runtime, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_container_runtime, diagnostics, context);
-		if (result || diagnostics != null) result &= validateTosca_nodes_softwarecomponent_appliesConstraint(tosca_nodes_container_runtime, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTosca_nodes_root_appliesConstraint(tosca_nodes_container_runtime, diagnostics, context);
 		return result;
 	}
 

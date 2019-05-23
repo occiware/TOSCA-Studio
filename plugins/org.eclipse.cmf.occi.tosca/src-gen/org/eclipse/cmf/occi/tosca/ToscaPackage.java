@@ -1407,40 +1407,13 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_ROOT_FEATURE_COUNT = TOSCA_CAPABILITIES_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_ROOT___CREATE = TOSCA_CAPABILITIES_NODE_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_ROOT___CONFIGURE = TOSCA_CAPABILITIES_NODE_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_ROOT___DELETE = TOSCA_CAPABILITIES_NODE_OPERATION_COUNT + 2;
-
-	/**
 	 * The operation id for the '<em>Applies Constraint</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_ROOT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = TOSCA_CAPABILITIES_NODE_OPERATION_COUNT + 3;
+	int TOSCA_NODES_ROOT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = TOSCA_CAPABILITIES_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Tosca nodes root</em>' class.
@@ -1449,7 +1422,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_ROOT_OPERATION_COUNT = TOSCA_CAPABILITIES_NODE_OPERATION_COUNT + 4;
+	int TOSCA_NODES_ROOT_OPERATION_COUNT = TOSCA_CAPABILITIES_NODE_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_webapplicationImpl <em>Tosca nodes webapplication</em>}' class.
@@ -1579,40 +1552,13 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_WEBAPPLICATION_FEATURE_COUNT = TOSCA_NODES_ROOT_FEATURE_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_WEBAPPLICATION___CREATE = TOSCA_NODES_ROOT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_WEBAPPLICATION___CONFIGURE = TOSCA_NODES_ROOT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_WEBAPPLICATION___DELETE = TOSCA_NODES_ROOT___DELETE;
-
-	/**
 	 * The operation id for the '<em>Applies Constraint</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_WEBAPPLICATION___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+	int TOSCA_NODES_WEBAPPLICATION___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = TOSCA_NODES_ROOT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP;
 
 	/**
 	 * The number of operations of the '<em>Tosca nodes webapplication</em>' class.
@@ -1621,7 +1567,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_WEBAPPLICATION_OPERATION_COUNT = TOSCA_NODES_ROOT_OPERATION_COUNT + 1;
+	int TOSCA_NODES_WEBAPPLICATION_OPERATION_COUNT = TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_softwarecomponentImpl <em>Tosca nodes softwarecomponent</em>}' class.
@@ -1688,40 +1634,13 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT = TOSCA_NODES_ROOT_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT___CREATE = TOSCA_NODES_ROOT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT___CONFIGURE = TOSCA_NODES_ROOT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT___DELETE = TOSCA_NODES_ROOT___DELETE;
-
-	/**
 	 * The operation id for the '<em>Applies Constraint</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+	int TOSCA_NODES_SOFTWARECOMPONENT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = TOSCA_NODES_ROOT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP;
 
 	/**
 	 * The number of operations of the '<em>Tosca nodes softwarecomponent</em>' class.
@@ -1730,7 +1649,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_OPERATION_COUNT = TOSCA_NODES_ROOT_OPERATION_COUNT + 1;
+	int TOSCA_NODES_SOFTWARECOMPONENT_OPERATION_COUNT = TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_dbmsImpl <em>Tosca nodes dbms</em>}' class.
@@ -1822,33 +1741,6 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_NODES_DBMS_FEATURE_COUNT = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DBMS___CREATE = TOSCA_NODES_SOFTWARECOMPONENT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DBMS___CONFIGURE = TOSCA_NODES_SOFTWARECOMPONENT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DBMS___DELETE = TOSCA_NODES_SOFTWARECOMPONENT___DELETE;
 
 	/**
 	 * The operation id for the '<em>Applies Constraint</em>' operation.
@@ -2012,33 +1904,6 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_NODES_OBJECTSTORAGE_FEATURE_COUNT = TOSCA_NODES_ROOT_FEATURE_COUNT + 10;
-
-	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_OBJECTSTORAGE___CREATE = TOSCA_NODES_ROOT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_OBJECTSTORAGE___CONFIGURE = TOSCA_NODES_ROOT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_OBJECTSTORAGE___DELETE = TOSCA_NODES_ROOT___DELETE;
 
 	/**
 	 * The operation id for the '<em>Applies Constraint</em>' operation.
@@ -2267,33 +2132,6 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_COMPUTE_FEATURE_COUNT = TOSCA_NODES_ROOT_FEATURE_COUNT + 18;
 
 	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_COMPUTE___CREATE = TOSCA_NODES_ROOT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_COMPUTE___CONFIGURE = TOSCA_NODES_ROOT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_COMPUTE___DELETE = TOSCA_NODES_ROOT___DELETE;
-
-	/**
 	 * The operation id for the '<em>Source Must Be Software Component</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2466,33 +2304,6 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_LOADBALANCER_FEATURE_COUNT = TOSCA_NODES_ROOT_FEATURE_COUNT + 11;
 
 	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_LOADBALANCER___CREATE = TOSCA_NODES_ROOT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_LOADBALANCER___CONFIGURE = TOSCA_NODES_ROOT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_LOADBALANCER___DELETE = TOSCA_NODES_ROOT___DELETE;
-
-	/**
 	 * The operation id for the '<em>Applies Constraint</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2654,33 +2465,6 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_NODES_WEBSERVER_FEATURE_COUNT = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 9;
-
-	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_WEBSERVER___CREATE = TOSCA_NODES_SOFTWARECOMPONENT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_WEBSERVER___CONFIGURE = TOSCA_NODES_SOFTWARECOMPONENT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_WEBSERVER___DELETE = TOSCA_NODES_SOFTWARECOMPONENT___DELETE;
 
 	/**
 	 * The operation id for the '<em>Applies Constraint</em>' operation.
@@ -2855,33 +2639,6 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_DATABASE_FEATURE_COUNT = TOSCA_NODES_ROOT_FEATURE_COUNT + 11;
 
 	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE___CREATE = TOSCA_NODES_ROOT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE___CONFIGURE = TOSCA_NODES_ROOT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_DATABASE___DELETE = TOSCA_NODES_ROOT___DELETE;
-
-	/**
 	 * The operation id for the '<em>Applies Constraint</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2944,33 +2701,6 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_NODES_CONTAINER_APPLICATION_FEATURE_COUNT = TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_CONTAINER_APPLICATION___CREATE = TOSCA_NODES_ROOT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_CONTAINER_APPLICATION___CONFIGURE = TOSCA_NODES_ROOT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_CONTAINER_APPLICATION___DELETE = TOSCA_NODES_ROOT___DELETE;
 
 	/**
 	 * The operation id for the '<em>Applies Constraint</em>' operation.
@@ -3091,33 +2821,6 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_CONTAINER_RUNTIME_FEATURE_COUNT = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 4;
 
 	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_CONTAINER_RUNTIME___CREATE = TOSCA_NODES_SOFTWARECOMPONENT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_CONTAINER_RUNTIME___CONFIGURE = TOSCA_NODES_SOFTWARECOMPONENT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_CONTAINER_RUNTIME___DELETE = TOSCA_NODES_SOFTWARECOMPONENT___DELETE;
-
-	/**
 	 * The operation id for the '<em>Applies Constraint</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3198,33 +2901,6 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_NODES_BLOCKSTORAGE_FEATURE_COUNT = TOSCA_NODES_ROOT_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Create</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_BLOCKSTORAGE___CREATE = TOSCA_NODES_ROOT___CREATE;
-
-	/**
-	 * The operation id for the '<em>Configure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_BLOCKSTORAGE___CONFIGURE = TOSCA_NODES_ROOT___CONFIGURE;
-
-	/**
-	 * The operation id for the '<em>Delete</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_BLOCKSTORAGE___DELETE = TOSCA_NODES_ROOT___DELETE;
 
 	/**
 	 * The operation id for the '<em>Applies Constraint</em>' operation.
@@ -5463,16 +5139,6 @@ public interface ToscaPackage extends EPackage {
 	EAttribute getTosca_nodes_webapplication_ContextRoot();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_webapplication#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Applies Constraint</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Applies Constraint</em>' operation.
-	 * @see org.eclipse.cmf.occi.tosca.Tosca_nodes_webapplication#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getTosca_nodes_webapplication__AppliesConstraint__DiagnosticChain_Map();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_softwarecomponent <em>Tosca nodes softwarecomponent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5503,16 +5169,6 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTosca_nodes_softwarecomponent_ComponentVersion();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_softwarecomponent#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Applies Constraint</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Applies Constraint</em>' operation.
-	 * @see org.eclipse.cmf.occi.tosca.Tosca_nodes_softwarecomponent#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getTosca_nodes_softwarecomponent__AppliesConstraint__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_dbms <em>Tosca nodes dbms</em>}'.
@@ -6979,14 +6635,6 @@ public interface ToscaPackage extends EPackage {
 		EAttribute TOSCA_NODES_WEBAPPLICATION__CONTEXT_ROOT = eINSTANCE.getTosca_nodes_webapplication_ContextRoot();
 
 		/**
-		 * The meta object literal for the '<em><b>Applies Constraint</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TOSCA_NODES_WEBAPPLICATION___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTosca_nodes_webapplication__AppliesConstraint__DiagnosticChain_Map();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_softwarecomponentImpl <em>Tosca nodes softwarecomponent</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7011,14 +6659,6 @@ public interface ToscaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TOSCA_NODES_SOFTWARECOMPONENT__COMPONENT_VERSION = eINSTANCE.getTosca_nodes_softwarecomponent_ComponentVersion();
-
-		/**
-		 * The meta object literal for the '<em><b>Applies Constraint</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TOSCA_NODES_SOFTWARECOMPONENT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTosca_nodes_softwarecomponent__AppliesConstraint__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_dbmsImpl <em>Tosca nodes dbms</em>}' class.

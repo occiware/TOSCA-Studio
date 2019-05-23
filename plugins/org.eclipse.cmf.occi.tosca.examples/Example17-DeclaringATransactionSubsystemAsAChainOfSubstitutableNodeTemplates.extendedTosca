@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:platform="http://schemas.modmacao.org/occi/platform/ecore" description="Template of online transaction processing service.">
+<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:extendedtosca="http://schemas.ogf.org/tosca/extended/ecore" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:platform="http://schemas.modmacao.org/occi/platform/ecore" description="Template of online transaction processing service.">
   <use href="http://schemas.ogf.org/occi/core#/"/>
   <use href="http://schemas.ogf.org/occi/infrastructure#/"/>
   <use href="http://schemas.modmacao.org/modmacao#/"/>
@@ -8,7 +8,43 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://schemas.ogf.org/tosca/core#/"/>
   <use href="http://schemas.ogf.org/tosca/extended#/"/>
-  <resources xsi:type="platform:Application" id="urn:uuid:96e2e2a4-8deb-44c5-9388-b568b9cea485">
+  <resources xsi:type="platform:Application" id="urn:uuid:122c8a08-2bf0-4cb0-8b93-9268d8a817a2">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
+    <links xsi:type="platform:Componentlink" id="urn:uuid:f1f9873c-e7df-4a64-87fd-586f476fcfdd" target="//@resources.1">
+      <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
+    </links>
+    <links xsi:type="platform:Componentlink" id="urn:uuid:b8c8c13e-026c-4fa0-b4a0-99e01b7fb974" target="//@resources.2">
+      <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
+    </links>
+    <links xsi:type="platform:Componentlink" id="urn:uuid:90ddf087-a11f-4a0f-9c62-c4de6768addb" target="//@resources.3">
+      <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
+    </links>
+    <links xsi:type="platform:Componentlink" id="urn:uuid:4816428e-3aa7-4d5f-abcf-9d00b2a143bf" target="//@resources.4">
+      <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
+    </links>
+  </resources>
+  <resources xsi:type="platform:Component" id="urn:uuid:1063368f-dab7-46fa-8e0c-971507c0b494" title="dbsys" rlinks="//@resources.0/@links.0">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="extendedtosca:Example_databasesubsystem">
+      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='example_databasesubsystem']"/>
+    </parts>
+  </resources>
+  <resources xsi:type="platform:Component" id="urn:uuid:38a37ebe-3c34-4149-b9b3-df1dd27d995b" title="mq" rlinks="//@resources.0/@links.1">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="extendedtosca:Example_queuingsubsystem">
+      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='example_queuingsubsystem']"/>
+    </parts>
+  </resources>
+  <resources xsi:type="platform:Component" id="urn:uuid:d485beb7-f333-4ebf-a3b6-13bf2a9281c6" title="trans2" rlinks="//@resources.0/@links.2">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="extendedtosca:Example_transactionsubsystem" receiverPort="8080">
+      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='example_transactionsubsystem']"/>
+    </parts>
+  </resources>
+  <resources xsi:type="platform:Component" id="urn:uuid:c26be64c-174a-4ae3-b819-009e9c1a5c63" title="trans1" rlinks="//@resources.0/@links.3">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="extendedtosca:Example_transactionsubsystem" receiverPort="8080">
+      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='example_transactionsubsystem']"/>
+    </parts>
   </resources>
 </occi:Configuration>
