@@ -8,64 +8,64 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://schemas.ogf.org/tosca/core#/"/>
   <use href="http://schemas.ogf.org/tosca/extended#/"/>
-  <resources xsi:type="platform:Application" id="urn:uuid:e32ae4e8-bad6-4af3-b02b-782fe5a96af5">
+  <resources xsi:type="platform:Application" id="urn:uuid:87cc3dc2-cd4e-42d4-8573-f1874bd4c2d8">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:e3cb2ad0-e3b8-4512-a788-0b2c2f8b8cfb" target="//@resources.1">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:4bcc273f-876c-4c05-8568-cdb290e413c0" target="//@resources.1">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:a7dbb77d-c338-4d40-9e63-8e8a7132ad20" target="//@resources.2">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:67f06fe2-b431-46fe-adb9-5d1e0d0b8e41" target="//@resources.2">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:8eac3d24-a02e-4008-ad25-b47dcfafbc79" target="//@resources.3">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:da4311b4-faf3-4c01-a160-28b62fb92131" target="//@resources.3">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:6bfc55af-e95a-404c-9272-665443f5aa27" target="//@resources.4">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:9da922af-0e2a-4d04-9964-415f35ed6894" target="//@resources.4">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:b48cc86b-89f4-47dc-ad31-94ed146037ef" target="//@resources.5">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:b2c729ca-6ce0-41da-b623-d59231edb79b" target="//@resources.5">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:28d54150-313c-4ac3-b1e3-40fffe75f168" target="//@resources.7">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:3c1c532a-ae4d-4806-a636-0a55deaeff6a" target="//@resources.7">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:5f7b8db1-2001-43dc-9009-c5a87d3eff07" title="my_port1" rlinks="//@resources.0/@links.0">
+  <resources xsi:type="platform:Component" id="urn:uuid:f6f3449e-1bb2-4dbe-89b1-87034672be71" title="my_port1" rlinks="//@resources.0/@links.0">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_network_port">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_network_port']"/>
     </parts>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:5e40e5ab-32ad-4db1-957d-1d7fe1265ab8" title="my_network2" rlinks="//@resources.0/@links.1">
+  <resources xsi:type="platform:Component" id="urn:uuid:b002bcb0-e307-4ac5-822e-8774acbf8b10" title="my_network2" rlinks="//@resources.0/@links.1">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_network_network" networkName="net2" cidr="192.168.2.0/24">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_network_network']"/>
     </parts>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:9faaae29-5a8e-411b-ae3d-232d7df5d8a8" title="my_port2" rlinks="//@resources.0/@links.2">
+  <resources xsi:type="platform:Component" id="urn:uuid:8b86fd66-6fe2-4e97-98c2-512f263b961b" title="my_port2" rlinks="//@resources.0/@links.2">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_network_port" order="1">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_network_port']"/>
     </parts>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:4d28f04f-4bef-4149-8828-07bfc5f5379a" title="my_network1" rlinks="//@resources.0/@links.3">
+  <resources xsi:type="platform:Component" id="urn:uuid:f6450ce0-df43-4815-a7d4-3740b711ae17" title="my_network1" rlinks="//@resources.0/@links.3">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_network_network" networkName="net1" cidr="192.168.1.0/24">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_network_network']"/>
     </parts>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:d9d00667-85b1-4cfc-b909-60433e2dda8b" title="my_port3" rlinks="//@resources.0/@links.4">
+  <resources xsi:type="platform:Component" id="urn:uuid:d2f091c6-2621-4f25-88d4-0a86f66130f2" title="my_port3" rlinks="//@resources.0/@links.4">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_network_port" order="2">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_network_port']"/>
     </parts>
   </resources>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:335b168c-0c59-467a-933c-258226191bea" title="my_server" occiComputeArchitecture="x64" occiComputeCores="1" occiComputeMemory="4.0">
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:d10fc4b5-6ab6-49a9-a381-5caec6b6b74d" title="my_server" occiComputeArchitecture="x64" occiComputeCores="1" occiComputeMemory="4.0">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
     <parts xsi:type="tosca:Tosca_nodes_compute" type="Linux" distribution="CirrOS" version="0.3.2" diskSize="10">
       <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
     </parts>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:4a2a757c-0b50-4f35-ad99-7d6e7f9dea40" title="my_network3" rlinks="//@resources.0/@links.5">
+  <resources xsi:type="platform:Component" id="urn:uuid:5f834463-c0f8-4623-b905-13b61f533fef" title="my_network3" rlinks="//@resources.0/@links.5">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_network_network" networkName="net3" cidr="192.168.3.0/24">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_network_network']"/>

@@ -45,7 +45,7 @@ public class Tosca_nodes_webapplication_paypalpizzastoreImpl extends Tosca_nodes
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String GITHUB_URL_EDEFAULT = "https:github.comsample.git";
+	protected static final String GITHUB_URL_EDEFAULT = "https://github.com/sample.git";
 
 	/**
 	 * The cached value of the '{@link #getGithubUrl() <em>Github Url</em>}' attribute.

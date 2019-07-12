@@ -220,6 +220,61 @@ public interface ExtendedtoscaPackage extends EPackage {
 	int ARRAYINTEGER_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link extendedtosca.impl.Tosca_capabilities_somecapImpl <em>Tosca capabilities somecap</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see extendedtosca.impl.Tosca_capabilities_somecapImpl
+	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_capabilities_somecap()
+	 * @generated
+	 */
+	int TOSCA_CAPABILITIES_SOMECAP = 4;
+
+	/**
+	 * The feature id for the '<em><b>Mixin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_CAPABILITIES_SOMECAP__MIXIN = ToscaPackage.TOSCA_CAPABILITIES_ROOT__MIXIN;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_CAPABILITIES_SOMECAP__ENTITY = ToscaPackage.TOSCA_CAPABILITIES_ROOT__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_CAPABILITIES_SOMECAP__ATTRIBUTES = ToscaPackage.TOSCA_CAPABILITIES_ROOT__ATTRIBUTES;
+
+	/**
+	 * The number of structural features of the '<em>Tosca capabilities somecap</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_CAPABILITIES_SOMECAP_FEATURE_COUNT = ToscaPackage.TOSCA_CAPABILITIES_ROOT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Tosca capabilities somecap</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_CAPABILITIES_SOMECAP_OPERATION_COUNT = ToscaPackage.TOSCA_CAPABILITIES_ROOT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link extendedtosca.impl.Tosca_capabilities_indigo_endpointImpl <em>Tosca capabilities indigo endpoint</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -227,7 +282,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_capabilities_indigo_endpoint()
 	 * @generated
 	 */
-	int TOSCA_CAPABILITIES_INDIGO_ENDPOINT = 4;
+	int TOSCA_CAPABILITIES_INDIGO_ENDPOINT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -354,79 +409,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_CAPABILITIES_INDIGO_ENDPOINT_OPERATION_COUNT = ToscaPackage.TOSCA_CAPABILITIES_ENDPOINT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link extendedtosca.impl.Tosca_capabilities_somecapImpl <em>Tosca capabilities somecap</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see extendedtosca.impl.Tosca_capabilities_somecapImpl
-	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_capabilities_somecap()
-	 * @generated
-	 */
-	int TOSCA_CAPABILITIES_SOMECAP = 5;
-
-	/**
-	 * The feature id for the '<em><b>Mixin</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_CAPABILITIES_SOMECAP__MIXIN = ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__MIXIN;
-
-	/**
-	 * The feature id for the '<em><b>Entity</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_CAPABILITIES_SOMECAP__ENTITY = ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__ENTITY;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_CAPABILITIES_SOMECAP__ATTRIBUTES = ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Disk Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_CAPABILITIES_SOMECAP__DISK_SIZE = ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_CAPABILITIES_SOMECAP__TYPE = ToscaPackage.TOSCA_CAPABILITIES_CONTAINER_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Tosca capabilities somecap</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_CAPABILITIES_SOMECAP_FEATURE_COUNT = ToscaPackage.TOSCA_CAPABILITIES_CONTAINER_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Tosca capabilities somecap</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_CAPABILITIES_SOMECAP_OPERATION_COUNT = ToscaPackage.TOSCA_CAPABILITIES_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link extendedtosca.impl.Tosca_capabilities_haImpl <em>Tosca capabilities ha</em>}' class.
@@ -692,24 +674,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_CAPABILITIES_SOMECHILDCAP__ATTRIBUTES = TOSCA_CAPABILITIES_SOMECAP__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Disk Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_CAPABILITIES_SOMECHILDCAP__DISK_SIZE = TOSCA_CAPABILITIES_SOMECAP__DISK_SIZE;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_CAPABILITIES_SOMECHILDCAP__TYPE = TOSCA_CAPABILITIES_SOMECAP__TYPE;
 
 	/**
 	 * The number of structural features of the '<em>Tosca capabilities somechildcap</em>' class.
@@ -3360,6 +3324,61 @@ public interface ExtendedtoscaPackage extends EPackage {
 	int EXAMPLE_SOMEAPP_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_nodewithcapImpl <em>Tosca nodes nodewithcap</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see extendedtosca.impl.Tosca_nodes_nodewithcapImpl
+	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_nodewithcap()
+	 * @generated
+	 */
+	int TOSCA_NODES_NODEWITHCAP = 30;
+
+	/**
+	 * The feature id for the '<em><b>Mixin</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHCAP__MIXIN = ToscaPackage.TOSCA_NODES_ROOT__MIXIN;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHCAP__ENTITY = ToscaPackage.TOSCA_NODES_ROOT__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHCAP__ATTRIBUTES = ToscaPackage.TOSCA_NODES_ROOT__ATTRIBUTES;
+
+	/**
+	 * The number of structural features of the '<em>Tosca nodes nodewithcap</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHCAP_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Tosca nodes nodewithcap</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NODEWITHCAP_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_apacheImpl <em>Tosca nodes apache</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3367,7 +3386,7 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_apache()
 	 * @generated
 	 */
-	int TOSCA_NODES_APACHE = 30;
+	int TOSCA_NODES_APACHE = 31;
 
 	/**
 	 * The feature id for the '<em><b>Mixin</b></em>' reference.
@@ -3521,79 +3540,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_NODES_APACHE_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_WEBSERVER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_nodewithcapImpl <em>Tosca nodes nodewithcap</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see extendedtosca.impl.Tosca_nodes_nodewithcapImpl
-	 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_nodewithcap()
-	 * @generated
-	 */
-	int TOSCA_NODES_NODEWITHCAP = 31;
-
-	/**
-	 * The feature id for the '<em><b>Mixin</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP__MIXIN = ToscaPackage.TOSCA_NODES_ROOT__MIXIN;
-
-	/**
-	 * The feature id for the '<em><b>Entity</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP__ENTITY = ToscaPackage.TOSCA_NODES_ROOT__ENTITY;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP__ATTRIBUTES = ToscaPackage.TOSCA_NODES_ROOT__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Disk Size</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP__DISK_SIZE = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP__TYPE = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Tosca nodes nodewithcap</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Tosca nodes nodewithcap</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_NODEWITHCAP_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link extendedtosca.impl.RsyslogImpl <em>Rsyslog</em>}' class.
@@ -4467,22 +4413,13 @@ public interface ExtendedtoscaPackage extends EPackage {
 	int TOSCA_NODES_SOMENODE__ATTRIBUTES = ToscaPackage.TOSCA_NODES_ROOT__ATTRIBUTES;
 
 	/**
-	 * The feature id for the '<em><b>Some Prop</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_SOMENODE__SOME_PROP = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Tosca nodes somenode</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_SOMENODE_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 1;
+	int TOSCA_NODES_SOMENODE_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Tosca nodes somenode</em>' class.
@@ -5309,6 +5246,16 @@ public interface ExtendedtoscaPackage extends EPackage {
 	EAttribute getarrayinteger_Values();
 
 	/**
+	 * Returns the meta object for class '{@link extendedtosca.Tosca_capabilities_somecap <em>Tosca capabilities somecap</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tosca capabilities somecap</em>'.
+	 * @see extendedtosca.Tosca_capabilities_somecap
+	 * @generated
+	 */
+	EClass getTosca_capabilities_somecap();
+
+	/**
 	 * Returns the meta object for class '{@link extendedtosca.Tosca_capabilities_indigo_endpoint <em>Tosca capabilities indigo endpoint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5328,27 +5275,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTosca_capabilities_indigo_endpoint_Credential();
-
-	/**
-	 * Returns the meta object for class '{@link extendedtosca.Tosca_capabilities_somecap <em>Tosca capabilities somecap</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tosca capabilities somecap</em>'.
-	 * @see extendedtosca.Tosca_capabilities_somecap
-	 * @generated
-	 */
-	EClass getTosca_capabilities_somecap();
-
-	/**
-	 * Returns the meta object for the attribute '{@link extendedtosca.Tosca_capabilities_somecap#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see extendedtosca.Tosca_capabilities_somecap#getType()
-	 * @see #getTosca_capabilities_somecap()
-	 * @generated
-	 */
-	EAttribute getTosca_capabilities_somecap_Type();
 
 	/**
 	 * Returns the meta object for class '{@link extendedtosca.Tosca_capabilities_ha <em>Tosca capabilities ha</em>}'.
@@ -5866,6 +5792,16 @@ public interface ExtendedtoscaPackage extends EPackage {
 	EClass getExample_someapp();
 
 	/**
+	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_nodewithcap <em>Tosca nodes nodewithcap</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tosca nodes nodewithcap</em>'.
+	 * @see extendedtosca.Tosca_nodes_nodewithcap
+	 * @generated
+	 */
+	EClass getTosca_nodes_nodewithcap();
+
+	/**
 	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_apache <em>Tosca nodes apache</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5885,16 +5821,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTosca_nodes_apache_DocumentRoot();
-
-	/**
-	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_nodewithcap <em>Tosca nodes nodewithcap</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tosca nodes nodewithcap</em>'.
-	 * @see extendedtosca.Tosca_nodes_nodewithcap
-	 * @generated
-	 */
-	EClass getTosca_nodes_nodewithcap();
 
 	/**
 	 * Returns the meta object for class '{@link extendedtosca.Rsyslog <em>Rsyslog</em>}'.
@@ -6031,17 +5957,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTosca_nodes_somenode();
-
-	/**
-	 * Returns the meta object for the attribute '{@link extendedtosca.Tosca_nodes_somenode#getSomeProp <em>Some Prop</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Some Prop</em>'.
-	 * @see extendedtosca.Tosca_nodes_somenode#getSomeProp()
-	 * @see #getTosca_nodes_somenode()
-	 * @generated
-	 */
-	EAttribute getTosca_nodes_somenode_SomeProp();
 
 	/**
 	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_webserver_nodejs <em>Tosca nodes webserver nodejs</em>}'.
@@ -6250,6 +6165,16 @@ public interface ExtendedtoscaPackage extends EPackage {
 		EAttribute ARRAYINTEGER__VALUES = eINSTANCE.getarrayinteger_Values();
 
 		/**
+		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_capabilities_somecapImpl <em>Tosca capabilities somecap</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.impl.Tosca_capabilities_somecapImpl
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_capabilities_somecap()
+		 * @generated
+		 */
+		EClass TOSCA_CAPABILITIES_SOMECAP = eINSTANCE.getTosca_capabilities_somecap();
+
+		/**
 		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_capabilities_indigo_endpointImpl <em>Tosca capabilities indigo endpoint</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6266,24 +6191,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TOSCA_CAPABILITIES_INDIGO_ENDPOINT__CREDENTIAL = eINSTANCE.getTosca_capabilities_indigo_endpoint_Credential();
-
-		/**
-		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_capabilities_somecapImpl <em>Tosca capabilities somecap</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see extendedtosca.impl.Tosca_capabilities_somecapImpl
-		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_capabilities_somecap()
-		 * @generated
-		 */
-		EClass TOSCA_CAPABILITIES_SOMECAP = eINSTANCE.getTosca_capabilities_somecap();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TOSCA_CAPABILITIES_SOMECAP__TYPE = eINSTANCE.getTosca_capabilities_somecap_Type();
 
 		/**
 		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_capabilities_haImpl <em>Tosca capabilities ha</em>}' class.
@@ -6726,6 +6633,16 @@ public interface ExtendedtoscaPackage extends EPackage {
 		EClass EXAMPLE_SOMEAPP = eINSTANCE.getExample_someapp();
 
 		/**
+		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_nodewithcapImpl <em>Tosca nodes nodewithcap</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see extendedtosca.impl.Tosca_nodes_nodewithcapImpl
+		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_nodewithcap()
+		 * @generated
+		 */
+		EClass TOSCA_NODES_NODEWITHCAP = eINSTANCE.getTosca_nodes_nodewithcap();
+
+		/**
 		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_apacheImpl <em>Tosca nodes apache</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6742,16 +6659,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TOSCA_NODES_APACHE__DOCUMENT_ROOT = eINSTANCE.getTosca_nodes_apache_DocumentRoot();
-
-		/**
-		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_nodewithcapImpl <em>Tosca nodes nodewithcap</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see extendedtosca.impl.Tosca_nodes_nodewithcapImpl
-		 * @see extendedtosca.impl.ExtendedtoscaPackageImpl#getTosca_nodes_nodewithcap()
-		 * @generated
-		 */
-		EClass TOSCA_NODES_NODEWITHCAP = eINSTANCE.getTosca_nodes_nodewithcap();
 
 		/**
 		 * The meta object literal for the '{@link extendedtosca.impl.RsyslogImpl <em>Rsyslog</em>}' class.
@@ -6870,14 +6777,6 @@ public interface ExtendedtoscaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TOSCA_NODES_SOMENODE = eINSTANCE.getTosca_nodes_somenode();
-
-		/**
-		 * The meta object literal for the '<em><b>Some Prop</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TOSCA_NODES_SOMENODE__SOME_PROP = eINSTANCE.getTosca_nodes_somenode_SomeProp();
 
 		/**
 		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_webserver_nodejsImpl <em>Tosca nodes webserver nodejs</em>}' class.

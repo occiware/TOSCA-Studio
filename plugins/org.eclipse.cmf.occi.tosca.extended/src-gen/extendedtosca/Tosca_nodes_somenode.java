@@ -21,43 +21,10 @@ import org.eclipse.cmf.occi.tosca.Tosca_nodes_root;
  * A representation of the model object '<em><b>Tosca nodes somenode</b></em>'.
  * <!-- end-user-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link extendedtosca.Tosca_nodes_somenode#getSomeProp <em>Some Prop</em>}</li>
- * </ul>
  *
  * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_somenode()
  * @model
  * @generated
  */
-public interface Tosca_nodes_somenode extends Tosca_nodes_root, MixinBase {
-	/**
-	 * Returns the value of the '<em><b>Some Prop</b></em>' attribute.
-	 * The default value is <code>"some"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Some Prop</em>' attribute.
-	 * @see #setSomeProp(String)
-	 * @see extendedtosca.ExtendedtoscaPackage#getTosca_nodes_somenode_SomeProp()
-	 * @model default="some" dataType="org.eclipse.cmf.occi.tosca.string"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/tosca/extended/ecore!Tosca_nodes_somenode!someProp'"
-	 * @generated
-	 */
-	String getSomeProp();
-
-	/**
-	 * Sets the value of the '{@link extendedtosca.Tosca_nodes_somenode#getSomeProp <em>Some Prop</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Some Prop</em>' attribute.
-	 * @see #getSomeProp()
-	 * @generated
-	 */
-	void setSomeProp(String value);
-
+public interface Tosca_nodes_somenode extends Tosca_nodes_root, Tosca_capabilities_somechildcap, MixinBase {
 } // Tosca_nodes_somenode

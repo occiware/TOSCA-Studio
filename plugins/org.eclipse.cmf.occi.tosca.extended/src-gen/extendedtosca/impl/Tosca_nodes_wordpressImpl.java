@@ -45,7 +45,7 @@ public class Tosca_nodes_wordpressImpl extends Tosca_nodes_webapplicationImpl im
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ZIP_URL_EDEFAULT = "https:wordpress.orglatest.zip";
+	protected static final String ZIP_URL_EDEFAULT = "https://wordpress.org/latest.zip";
 
 	/**
 	 * The cached value of the '{@link #getZipUrl() <em>Zip Url</em>}' attribute.

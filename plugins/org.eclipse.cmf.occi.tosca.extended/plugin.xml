@@ -22,19 +22,5 @@
             uri="http://schemas.ogf.org/tosca/extended/ecore"
             class="extendedtosca.ExtendedtoscaPackage"/>
    </extension>
-   
-   <extension point="org.eclipse.cmf.occi.core.occie">
-	<occie scheme="http://schemas.ogf.org/tosca/extended#" file="model/extendedTosca.occie"/>
-</extension>
-
-<!-- Define URI mapping. -->
-<extension point="org.eclipse.emf.ecore.uri_mapping">
-	<mapping source="http://schemas.ogf.org/tosca/extended" target="platform:/plugin/org.eclipse.cmf.occi.tosca.extended/model/extendedTosca.occie"/>
-</extension>
-
-<!-- Register the parser for .modmacao files. -->
-<extension point="org.eclipse.emf.ecore.extension_parser">
-	<parser type="extendedTosca" class="org.eclipse.cmf.occi.core.util.OCCIResourceFactoryImpl"/>
-</extension>
 
 </plugin>

@@ -8,40 +8,40 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://schemas.ogf.org/tosca/core#/"/>
   <use href="http://schemas.ogf.org/tosca/extended#/"/>
-  <resources xsi:type="platform:Application" id="urn:uuid:122c8a08-2bf0-4cb0-8b93-9268d8a817a2">
+  <resources xsi:type="platform:Application" id="urn:uuid:eff4d89b-ac7f-464c-95ef-10ac5bb77ae4">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:f1f9873c-e7df-4a64-87fd-586f476fcfdd" target="//@resources.1">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:78a7905b-21b4-4e84-91e6-67f31eded166" target="//@resources.1">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:b8c8c13e-026c-4fa0-b4a0-99e01b7fb974" target="//@resources.2">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:4cd01e48-1742-4893-b579-5690f6879d32" target="//@resources.2">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:90ddf087-a11f-4a0f-9c62-c4de6768addb" target="//@resources.3">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:f2ed8b10-2522-4b2e-b0a8-359e468885d9" target="//@resources.3">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:4816428e-3aa7-4d5f-abcf-9d00b2a143bf" target="//@resources.4">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:f2651ef6-13f3-4a7a-8497-eca950a7e47b" target="//@resources.4">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:1063368f-dab7-46fa-8e0c-971507c0b494" title="dbsys" rlinks="//@resources.0/@links.0">
+  <resources xsi:type="platform:Component" id="urn:uuid:bf08f5dc-86e0-43b2-a75e-311e9ded7388" title="dbsys" rlinks="//@resources.0/@links.0">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Example_databasesubsystem">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='example_databasesubsystem']"/>
     </parts>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:38a37ebe-3c34-4149-b9b3-df1dd27d995b" title="mq" rlinks="//@resources.0/@links.1">
+  <resources xsi:type="platform:Component" id="urn:uuid:ec2713ee-5d83-45ba-8f1e-d73c77beb155" title="mq" rlinks="//@resources.0/@links.1">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Example_queuingsubsystem">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='example_queuingsubsystem']"/>
     </parts>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:d485beb7-f333-4ebf-a3b6-13bf2a9281c6" title="trans2" rlinks="//@resources.0/@links.2">
+  <resources xsi:type="platform:Component" id="urn:uuid:bce93e7e-99f2-4e7a-9276-ebd614f25427" title="trans2" rlinks="//@resources.0/@links.2">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Example_transactionsubsystem" receiverPort="8080">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='example_transactionsubsystem']"/>
     </parts>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:c26be64c-174a-4ae3-b819-009e9c1a5c63" title="trans1" rlinks="//@resources.0/@links.3">
+  <resources xsi:type="platform:Component" id="urn:uuid:ee50de72-44e1-44e3-8c4e-8fd32688c66b" title="trans1" rlinks="//@resources.0/@links.3">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Example_transactionsubsystem" receiverPort="8080">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='example_transactionsubsystem']"/>

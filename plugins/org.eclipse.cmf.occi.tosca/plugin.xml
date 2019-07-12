@@ -22,18 +22,5 @@
             uri="http://schemas.ogf.org/tosca/core/ecore"
             class="org.eclipse.cmf.occi.tosca.ToscaPackage"/>
    </extension>
-   
-   <extension point="org.eclipse.cmf.occi.core.occie">
-	<occie scheme="http://schemas.ogf.org/tosca/core#" file="model/tosca.occie"/>
-</extension>
-
-<extension point="org.eclipse.emf.ecore.uri_mapping">
-<mapping source="http://schemas.ogf.org/tosca/core" target="platform:/plugin/org.eclipse.cmf.occi.tosca/model/tosca.occie"/>
-</extension>
-
-
-<extension point="org.eclipse.emf.ecore.extension_parser">
-<parser type="tosca" class="org.eclipse.cmf.occi.core.util.OCCIResourceFactoryImpl"/>
-</extension>
 
 </plugin>

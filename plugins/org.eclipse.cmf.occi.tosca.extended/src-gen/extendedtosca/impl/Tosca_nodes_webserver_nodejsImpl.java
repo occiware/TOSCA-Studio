@@ -45,7 +45,7 @@ public class Tosca_nodes_webserver_nodejsImpl extends Tosca_nodes_webserverImpl 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String GITHUB_URL_EDEFAULT = "https:github.commmmtestnode.git";
+	protected static final String GITHUB_URL_EDEFAULT = "https://github.com/mmm/testnode.git";
 
 	/**
 	 * The cached value of the '{@link #getGithubUrl() <em>Github Url</em>}' attribute.

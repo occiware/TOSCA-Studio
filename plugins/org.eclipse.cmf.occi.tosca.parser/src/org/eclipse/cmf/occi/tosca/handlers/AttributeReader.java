@@ -55,7 +55,9 @@ public class AttributeReader {
 					Annotation defaultAnnotationForInherited = OCCIFactory.eINSTANCE.createAnnotation();
 					defaultAnnotationForInherited.setKey("default-value_" + attributeName);
 					String defaultValue = (String) attributesValues.get("default");
-					defaultValue = defaultValue.replaceAll("/", "");
+					defaultValue = defaultValue.startsWith("/") ?
+							defaultValue.substring(1) : defaultValue;
+					//defaultValue = defaultValue.replaceAll("/", "");
 					defaultAnnotationForInherited.setValue(defaultValue);
 					category.getAnnotations().add(defaultAnnotationForInherited);
 					System.out.println("Set up a default value for an inherited attribute: " + attributeName+"("+ defaultValue + ")");
@@ -74,7 +76,9 @@ public class AttributeReader {
 			}
 			if (attributesValues.containsKey("default")) {
 				String defaultValue = (String) attributesValues.get("default");
-				defaultValue = defaultValue.replaceAll("/", "");
+				defaultValue = defaultValue.startsWith("/") ?
+						defaultValue.substring(1) : defaultValue; 
+				//defaultValue = defaultValue.replaceAll("/", "");
 				attribute.setDefault(defaultValue);
 			}
 			

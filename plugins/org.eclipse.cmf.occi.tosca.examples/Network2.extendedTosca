@@ -8,28 +8,28 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://schemas.ogf.org/tosca/core#/"/>
   <use href="http://schemas.ogf.org/tosca/extended#/"/>
-  <resources xsi:type="platform:Application" id="urn:uuid:cd923c65-3a0a-4cb1-90cd-879332683e50">
+  <resources xsi:type="platform:Application" id="urn:uuid:77dd3263-ee9c-4199-a1b3-f00dee814ad1">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:a5e6f5fa-1ab0-419d-a894-3ce9fe58dd3b" target="//@resources.1">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:c1061fdc-165e-4f38-8411-db18fac40ac0" target="//@resources.1">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:4058b6e4-e70c-40a2-9a22-6ee837854def" target="//@resources.3">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:92e5c41a-410b-491f-8ec4-70fdb9c4df71" target="//@resources.3">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:58955dd6-4f47-45c2-90b4-6bd9bf4a2f7f" title="my_port" rlinks="//@resources.0/@links.0">
+  <resources xsi:type="platform:Component" id="urn:uuid:f73a66ad-36d2-4077-88aa-cb76bedcc240" title="my_port" rlinks="//@resources.0/@links.0">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_network_port">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_network_port']"/>
     </parts>
   </resources>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:c1105cd9-48ef-4922-9490-d334542af445" title="my_server" occiComputeArchitecture="x64" occiComputeCores="1" occiComputeMemory="4.0">
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:1dd5620f-943d-4150-ac1a-6a43c8a0dc31" title="my_server" occiComputeArchitecture="x64" occiComputeCores="1" occiComputeMemory="4.0">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
     <parts xsi:type="tosca:Tosca_nodes_compute" type="Linux" distribution="CirrOS" version="0.3.2" diskSize="10">
       <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
     </parts>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:9e9bdc9b-bc26-4179-9e8c-d9c9df691c90" title="my_network" rlinks="//@resources.0/@links.1">
+  <resources xsi:type="platform:Component" id="urn:uuid:d8fe7db8-8859-43a5-acf9-f4cb4a370686" title="my_network" rlinks="//@resources.0/@links.1">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_network_network">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_network_network']"/>
