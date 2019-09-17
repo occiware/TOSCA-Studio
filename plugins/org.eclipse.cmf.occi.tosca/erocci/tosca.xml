@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated at Thu Sep 12 15:43:38 CEST 2019 from platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.occie by org.eclipse.cmf.occi.core.gen.xml -->
+<occi:extension xmlns:occi="http://schemas.ogf.org/occi"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schemas.ogf.org/occi occi.xsd"
+    name="tosca"
+    scheme="http://schemas.ogf.org/tosca/core#"
+    version="1"
+    status="stable">
+
+  <!-- Mixin: This is the default (root) TOSCA Capability Type definition that all other TOSCA Capability Types derive from. -->
+  <occi:mixin term="tosca_capabilities_root" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default (root) TOSCA Capability Type definition that all other TOSCA Capability Types derive from.">
+  </occi:mixin>
+
+  <!-- Mixin: The Node capability indicates the base capabilities of a TOSCA Node Type. -->
+  <occi:mixin term="tosca_capabilities_node" scheme="http://schemas.ogf.org/tosca/core#" title="The Node capability indicates the base capabilities of a TOSCA Node Type.">
+    <occi:depends term="tosca_capabilities_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+  </occi:mixin>
+
+  <!-- Mixin: This is the default TOSCA type that should be used or extended to define a network endpoint capability. This includes the information to express a basic endpoint with a single port or a complex endpoint with multiple ports. By default the Endpoint is assumed to represent an address on a private network unless otherwise specified. -->
+  <occi:mixin term="tosca_capabilities_endpoint" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default TOSCA type that should be used or extended to define a network endpoint capability. This includes the information to express a basic endpoint with a single port or a complex endpoint with multiple ports. By default the Endpoint is assumed to represent an address on a private network unless otherwise specified.">
+    <occi:depends term="tosca_capabilities_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:attribute name="port.name" use="optional" type="xs:string" title="The optional name (or ID) of the network port this endpoint should be bound to."/>
+    <occi:attribute name="protocol" use="optional" default="tcp" type="xs:string" title="The name of the protocol (i.e., the protocol prefix) that the endpoint accepts (any OSI Layer 4-7 protocols) Examples: http, https, ftp, tcp, udp, etc."/>
+    <occi:attribute name="port" use="optional" type="xs:short" title="The optional port of the endpoint."/>
+    <occi:attribute name="initiator" use="optional" default="source" type="xs:string" title="The optional indicator of the direction of the connection."/>
+    <occi:attribute name="network.name" use="optional" default="PRIVATE" type="xs:string" title="The optional name (or ID) of the network this endpoint should be bound to. network_name: PRIVATE | PUBLIC |&lt;network_name&gt; | &lt;network_id&gt;"/>
+    <occi:attribute name="secure" use="optional" default="false" type="xs:boolean" title="Requests for the endpoint to be secure and use credentials supplied on the ConnectsTo relationship."/>
+    <occi:attribute name="ports" use="optional" type="xs:string" title="The optional map of ports the Endpoint supports (if more than one)."/>
+    <occi:attribute name="url.path" use="optional" type="xs:string" title="The optional URL path of the endpoint&#8217;s address if applicable for the protocol."/>
+  </occi:mixin>
+
+  <!-- Mixin: This is the default TOSCA type that should be used to express a scalability capability for a node. -->
+  <occi:mixin term="tosca_capabilities_scalable" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default TOSCA type that should be used to express a scalability capability for a node.">
+    <occi:depends term="tosca_capabilities_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:attribute name="min.instances" use="optional" default="1" type="xs:integer" title="This property is used to indicate the minimum number of instances that should be created for the associated TOSCA Node Template by a TOSCA orchestrator."/>
+    <occi:attribute name="max.instances" use="optional" default="1" type="xs:integer" title="This property is used to indicate the maximum number of instances that should be created for the associated TOSCA Node Template by a TOSCA orchestrator."/>
+    <occi:attribute name="default.instances" use="optional" default="1" type="xs:integer" title="An optional property that indicates the requested default number of instances that should be the starting number of instances a TOSCA orchestrator should attempt to allocate. Note: The value for this property MUST be in the range between the values set for &#8216;min_instances&#8217; and &#8216;max_instances&#8217; properties."/>
+  </occi:mixin>
+
+  <!-- Mixin:  -->
+  <occi:mixin term="tosca_capabilities_network_bindable" scheme="http://schemas.ogf.org/tosca/core#" title="">
+    <occi:depends term="tosca_capabilities_node" scheme="http://schemas.ogf.org/tosca/core#"/>
+  </occi:mixin>
+
+  <!-- Mixin: The Container capability, when included on a Node Type or Template definition, indicates that the node can act as a container for (or a host for) one or more other declared Node Types. -->
+  <occi:mixin term="tosca_capabilities_container" scheme="http://schemas.ogf.org/tosca/core#" title="The Container capability, when included on a Node Type or Template definition, indicates that the node can act as a container for (or a host for) one or more other declared Node Types.">
+    <occi:depends term="tosca_capabilities_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:attribute name="disk.size" use="optional" type="xs:integer" title="Size of the local disk available to applications running on the Compute node (default unit is MB)."/>
+  </occi:mixin>
+
+  <!-- Mixin: This is the default TOSCA type that should be used or extended to define a specialized database endpoint capability. -->
+  <occi:mixin term="tosca_capabilities_endpoint_database" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default TOSCA type that should be used or extended to define a specialized database endpoint capability.">
+    <occi:depends term="tosca_capabilities_endpoint" scheme="http://schemas.ogf.org/tosca/core#"/>
+  </occi:mixin>
+
+  <!-- Mixin: This capability represents a public endpoint which is accessible to the general internet (and its public IP address ranges). This public endpoint capability also can be used to create a floating (IP) address that the underlying network assigns from a pool allocated from the application’s underlying public network.  This floating address is managed by the underlying network such that can be routed an application’s private address and remains reliable to internet clients. -->
+  <occi:mixin term="tosca_capabilities_endpoint_public" scheme="http://schemas.ogf.org/tosca/core#" title="This capability represents a public endpoint which is accessible to the general internet (and its public IP address ranges). This public endpoint capability also can be used to create a floating (IP) address that the underlying network assigns from a pool allocated from the application&#8217;s underlying public network.  This floating address is managed by the underlying network such that can be routed an application&#8217;s private address and remains reliable to internet clients.">
+    <occi:depends term="tosca_capabilities_endpoint" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:attribute name="floating" use="optional" default="false" type="xs:boolean" title="Indicates that the public address should be allocated from a pool of floating IPs that are associated with the network."/>
+    <occi:attribute name="dns.name" use="optional" type="xs:string" title="The optional name to register with DNS"/>
+  </occi:mixin>
+
+  <!-- Mixin: This is the default TOSCA type that should be used or extended to define a specialized administrator endpoint capability. -->
+  <occi:mixin term="tosca_capabilities_endpoint_admin" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default TOSCA type that should be used or extended to define a specialized administrator endpoint capability.">
+    <occi:depends term="tosca_capabilities_endpoint" scheme="http://schemas.ogf.org/tosca/core#"/>
+  </occi:mixin>
+
+  <!-- Mixin: This is the default TOSCA type that should be used to express an Operating System capability for a node. -->
+  <occi:mixin term="tosca_capabilities_operatingsystem" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default TOSCA type that should be used to express an Operating System capability for a node.">
+    <occi:depends term="tosca_capabilities_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:attribute name="type" use="optional" type="xs:string" title="The Operating System (OS) type. Examples of valid values include: linux, aix, mac, windows, etc."/>
+    <occi:attribute name="distribution" use="optional" type="xs:string" title="The Operating System (OS) distribution. Examples of valid values for an &#8220;type&#8221; of &#8220;Linux&#8221; would include:  debian, fedora, rhel and ubuntu."/>
+    <occi:attribute name="version" use="optional" type="xs:string" title="The Operating System version."/>
+  </occi:mixin>
+
+  <!-- Mixin: This is the default TOSCA type that should be used or extended to define an attachment capability of a (logical) infrastructure device node (e.g., BlockStorage node). -->
+  <occi:mixin term="tosca_capabilities_attachment" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default TOSCA type that should be used or extended to define an attachment capability of a (logical) infrastructure device node (e.g., BlockStorage node).">
+    <occi:depends term="tosca_capabilities_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+  </occi:mixin>
+
+  <!-- Mixin: This is the default (root) TOSCA Node Type that all other TOSCA nodes should extends. This allows all TOSCA nodes to have a consistent set of features for modeling and management (e.g, consistent definitions for requirements, capabilities, and lifecycle interfaces). -->
+  <occi:mixin term="tosca_nodes_root" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default (root) TOSCA Node Type that all other TOSCA nodes should extends. This allows all TOSCA nodes to have a consistent set of features for modeling and management (e.g, consistent definitions for requirements, capabilities, and lifecycle interfaces).">
+    <occi:depends term="tosca_capabilities_node" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:applies term="component" scheme="http://schemas.modmacao.org/occi/platform#"/>
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA WebApplication node represents a software application that can be managed and run by a TOSCA WebServer node. Specific types of web applications such as Java, etc. could be derived from this type. -->
+  <occi:mixin term="tosca_nodes_webapplication" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA WebApplication node represents a software application that can be managed and run by a TOSCA WebServer node. Specific types of web applications such as Java, etc. could be derived from this type.">
+    <occi:depends term="tosca_nodes_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:depends term="tosca_capabilities_endpoint" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:attribute name="context.root" use="optional" type="xs:string" title="The web application&#8217;s context root which designates the application&#8217;s URL path within the web server it is hosted on."/>
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA SoftwareComponent node represents a generic software component that can be managed and run by a TOSCA Compute Node Type. -->
+  <occi:mixin term="tosca_nodes_softwarecomponent" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA SoftwareComponent node represents a generic software component that can be managed and run by a TOSCA Compute Node Type.">
+    <occi:depends term="tosca_nodes_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:attribute name="admin.credential" use="optional" type="xs:string" title="The optional credential that can be used to authenticate to the software component."/>
+    <occi:attribute name="component.version" use="optional" type="xs:string" title="The optional software component&#8217;s version."/>
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA DBMS node represents a typical relational, SQL Database Management System software component or service. -->
+  <occi:mixin term="tosca_nodes_dbms" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA DBMS node represents a typical relational, SQL Database Management System software component or service.">
+    <occi:depends term="tosca_nodes_softwarecomponent" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:depends term="tosca_capabilities_container" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:attribute name="port" use="optional" type="xs:integer" title="the port the DBMS service will listen to for data and requests"/>
+    <occi:attribute name="root.password" use="optional" type="xs:string" title="the optional root password for the DBMS service"/>
+  </occi:mixin>
+
+  <!-- Mixin:  -->
+  <occi:mixin term="tosca_nodes_objectstorage" scheme="http://schemas.ogf.org/tosca/core#" title="">
+    <occi:depends term="tosca_nodes_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:depends term="tosca_capabilities_endpoint" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:applies term="storage" scheme="http://schemas.ogf.org/occi/infrastructure#"/>
+    <occi:attribute name="size" use="optional" type="xs:integer" title=""/>
+    <occi:attribute name="name" use="required" type="xs:string" title=""/>
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA Compute node represents one or more real or virtual processors of software applications or services along with other essential local resources. Collectively, the resources the compute node represents can logically be viewed as a (real or virtual) “server”. -->
+  <occi:mixin term="tosca_nodes_compute" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA Compute node represents one or more real or virtual processors of software applications or services along with other essential local resources. Collectively, the resources the compute node represents can logically be viewed as a (real or virtual) &#8220;server&#8221;.">
+    <occi:depends term="tosca_nodes_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:depends term="tosca_capabilities_scalable" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:depends term="tosca_capabilities_endpoint_admin" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:depends term="tosca_capabilities_operatingsystem" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:depends term="tosca_capabilities_container" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:depends term="tosca_capabilities_network_bindable" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:applies term="compute" scheme="http://schemas.ogf.org/occi/infrastructure#"/>
+    <occi:attribute name="private.address" use="optional" type="xs:string" title="The primary private IP address assigned by the cloud provider that applications may use to access the Compute node."/>
+    <occi:attribute name="public.address" use="optional" type="xs:string" title="The primary public IP address assigned by the cloud provider that applications may use to access the Compute node."/>
+    <occi:attribute name="networks" use="optional" type="xs:string" title=""/>
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA Load Balancer node represents logical function that be used in conjunction with a Floating Address to distribute an application’s traffic (load) across a number of instances of the application (e.g., for a clustered or scaled application). -->
+  <occi:mixin term="tosca_nodes_loadbalancer" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA Load Balancer node represents logical function that be used in conjunction with a Floating Address to distribute an application&#8217;s traffic (load) across a number of instances of the application (e.g., for a clustered or scaled application).">
+    <occi:depends term="tosca_nodes_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:depends term="tosca_capabilities_endpoint_public" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:attribute name="algorithm" use="optional" type="xs:string" title=""/>
+  </occi:mixin>
+
+  <!-- Mixin: This TOSCA WebServer Node Type represents an abstract software component or service that is capable of hosting and providing management operations for one or more WebApplication nodes. -->
+  <occi:mixin term="tosca_nodes_webserver" scheme="http://schemas.ogf.org/tosca/core#" title="This TOSCA WebServer Node Type represents an abstract software component or service that is capable of hosting and providing management operations for one or more WebApplication nodes.">
+    <occi:depends term="tosca_nodes_softwarecomponent" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:depends term="tosca_capabilities_endpoint" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:depends term="tosca_capabilities_endpoint_admin" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:depends term="tosca_capabilities_container" scheme="http://schemas.ogf.org/tosca/core#"/>
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA Database node represents a logical database that can be managed and hosted by a TOSCA DBMS node. -->
+  <occi:mixin term="tosca_nodes_database" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA Database node represents a logical database that can be managed and hosted by a TOSCA DBMS node.">
+    <occi:depends term="tosca_nodes_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:depends term="tosca_capabilities_endpoint_database" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:applies term="component" scheme="http://schemas.modmacao.org/occi/platform#"/>
+    <occi:attribute name="password" use="optional" type="xs:string" title="the optional password for the DB user account"/>
+    <occi:attribute name="name" use="required" type="xs:string" title="the logical name of the database"/>
+    <occi:attribute name="user" use="optional" type="xs:string" title="the optional user account name for DB administration"/>
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA Container Application node represents an application that requires Container-level virtualization technology. -->
+  <occi:mixin term="tosca_nodes_container_application" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA Container Application node represents an application that requires Container-level virtualization technology.">
+    <occi:depends term="tosca_nodes_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:applies term="component" scheme="http://schemas.modmacao.org/occi/platform#"/>
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA Container Runtime node represents operating system-level virtualization technology used to run multiple application services on a single Compute host. -->
+  <occi:mixin term="tosca_nodes_container_runtime" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA Container Runtime node represents operating system-level virtualization technology used to run multiple application services on a single Compute host.">
+    <occi:depends term="tosca_nodes_softwarecomponent" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:depends term="tosca_capabilities_scalable" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:depends term="tosca_capabilities_container" scheme="http://schemas.ogf.org/tosca/core#"/>
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA BlockStorage node currently represents a server-local block storage device (i.e., not shared) offering evenly sized blocks of data from which raw storage volumes can be created. -->
+  <occi:mixin term="tosca_nodes_blockstorage" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA BlockStorage node currently represents a server-local block storage device (i.e., not shared) offering evenly sized blocks of data from which raw storage volumes can be created.">
+    <occi:depends term="tosca_nodes_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:depends term="tosca_capabilities_attachment" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:applies term="storage" scheme="http://schemas.ogf.org/occi/infrastructure#"/>
+    <occi:attribute name="volume.id" use="optional" type="xs:string" title="ID of an existing volume (that is in the accessible scope of the requesting application)."/>
+    <occi:attribute name="snapshot.id" use="optional" type="xs:string" title="Some identifier that represents an existing snapshot that should be used when creating the block storage (volume)."/>
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA Policy Type all other TOSCA Policy Types derive from -->
+  <occi:mixin term="tosca_policies_root" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA Policy Type all other TOSCA Policy Types derive from">
+    <occi:depends term="agreement_term" scheme="http://schemas.ogf.org/occi/sla#"/>
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA Policy Type definition that is used to govern update of TOSCA nodes or groups of nodes. -->
+  <occi:mixin term="tosca_policies_update" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA Policy Type definition that is used to govern update of TOSCA nodes or groups of nodes.">
+    <occi:depends term="tosca_policies_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA Policy Type definition that is used to govern placement of TOSCA nodes or groups of nodes. -->
+  <occi:mixin term="tosca_policies_placement" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA Policy Type definition that is used to govern placement of TOSCA nodes or groups of nodes.">
+    <occi:depends term="tosca_policies_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA Policy Type definition that is used to govern scaling of TOSCA nodes or groups of nodes. -->
+  <occi:mixin term="tosca_policies_scaling" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA Policy Type definition that is used to govern scaling of TOSCA nodes or groups of nodes.">
+    <occi:depends term="tosca_policies_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA Policy Type definition that is used to declare performance requirements for TOSCA nodes or groups of nodes. -->
+  <occi:mixin term="tosca_policies_performance" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA Policy Type definition that is used to declare performance requirements for TOSCA nodes or groups of nodes.">
+    <occi:depends term="tosca_policies_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA Group Type all other TOSCA Group Types derive from -->
+  <occi:mixin term="tosca_groups_root" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA Group Type all other TOSCA Group Types derive from">
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA root Interface Type all other TOSCA base Interface Types derive from. -->
+  <occi:mixin term="tosca_interfaces_root" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA root Interface Type all other TOSCA base Interface Types derive from.">
+  </occi:mixin>
+
+  <!-- Mixin:  -->
+  <occi:mixin term="tosca_interfaces_relationship_configure" scheme="http://schemas.ogf.org/tosca/core#" title="">
+    <occi:depends term="tosca_interfaces_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:action term="pre_configure_source" scheme="http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#" title="Operation to pre-configure the source endpoint.">
+    </occi:action>
+    <occi:action term="pre_configure_target" scheme="http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#" title="Operation to pre-configure the target endpoint.">
+    </occi:action>
+    <occi:action term="post_configure_source" scheme="http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#" title="Operation to post-configure the source endpoint.">
+    </occi:action>
+    <occi:action term="post_configure_target" scheme="http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#" title="Operation to post-configure the target endpoint.">
+    </occi:action>
+    <occi:action term="remove_target" scheme="http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#" title="Operation to remove a target node.">
+    </occi:action>
+    <occi:action term="add_target" scheme="http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#" title="Operation to notify the source node of a target node being added via a relationship.">
+    </occi:action>
+    <occi:action term="add_source" scheme="http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#" title="">
+    </occi:action>
+    <occi:action term="target_changed" scheme="http://schemas.ogf.org/tosca/core/tosca_interfaces_relationship_configure/action#" title="Operation to notify source some property or attribute of the target changed">
+    </occi:action>
+  </occi:mixin>
+
+  <!-- Mixin:  -->
+  <occi:mixin term="tosca_interfaces_node_lifecycle_standard" scheme="http://schemas.ogf.org/tosca/core#" title="">
+    <occi:depends term="tosca_interfaces_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:action term="create" scheme="http://schemas.ogf.org/tosca/core/tosca_interfaces_node_lifecycle_standard/action#" title="Standard lifecycle create operation.">
+    </occi:action>
+    <occi:action term="configure" scheme="http://schemas.ogf.org/tosca/core/tosca_interfaces_node_lifecycle_standard/action#" title="Standard lifecycle configure operation.">
+    </occi:action>
+    <occi:action term="delete" scheme="http://schemas.ogf.org/tosca/core/tosca_interfaces_node_lifecycle_standard/action#" title="Standard lifecycle delete operation.">
+    </occi:action>
+  </occi:mixin>
+
+  <!-- Mixin: The TOSCA root Relationship Type all other TOSCA base Relationship Types derive from -->
+  <occi:mixin term="tosca_relationships_root" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA root Relationship Type all other TOSCA base Relationship Types derive from">
+    <occi:depends term="installationdependency" scheme="http://schemas.modmacao.org/modmacao#"/>
+    <occi:depends term="executiondependency" scheme="http://schemas.modmacao.org/modmacao#"/>
+    <occi:applies term="link" scheme="http://schemas.ogf.org/occi/core#"/>
+    <occi:attribute name="tosca.name" use="optional" type="xs:string" title="This attribute reflects the name of the Relationship Template as defined in the TOSCA service template. This name is not unique to the realized instance model of corresponding deployed application as each template in the model can result in one or more instances (e.g., scaled) when orchestrated to a provider environment."/>
+    <occi:attribute name="state" use="optional" default="initial" type="xs:string" title="The state of the relationship instance."/>
+    <occi:attribute name="tosca.id" use="optional" type="xs:string" title="A unique identifier of the realized instance of a Relationship Template that derives from any TOSCA normative type."/>
+  </occi:mixin>
+
+  <!-- Mixin: This type represents a network connection relationship between two nodes. -->
+  <occi:mixin term="tosca_relationships_connectsto" scheme="http://schemas.ogf.org/tosca/core#" title="This type represents a network connection relationship between two nodes.">
+    <occi:depends term="tosca_relationships_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:attribute name="credential" use="optional" type="xs:string" title="The security credential to use to present to the target endpoint to for either authentication or authorization purposes."/>
+  </occi:mixin>
+
+  <!-- Mixin: This type represents an intentional network routing between two Endpoints in different networks. -->
+  <occi:mixin term="tosca_relationships_routesto" scheme="http://schemas.ogf.org/tosca/core#" title="This type represents an intentional network routing between two Endpoints in different networks.">
+    <occi:depends term="tosca_relationships_connectsto" scheme="http://schemas.ogf.org/tosca/core#"/>
+  </occi:mixin>
+
+  <!-- Mixin:  -->
+  <occi:mixin term="tosca_relationships_attachesto" scheme="http://schemas.ogf.org/tosca/core#" title="">
+    <occi:depends term="tosca_relationships_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+    <occi:applies term="storagelink" scheme="http://schemas.ogf.org/occi/infrastructure#"/>
+    <occi:attribute name="location" use="optional" type="xs:string" title=""/>
+  </occi:mixin>
+
+  <!-- Mixin: This type represents a hosting relationship between two nodes. -->
+  <occi:mixin term="tosca_relationships_hostedon" scheme="http://schemas.ogf.org/tosca/core#" title="This type represents a hosting relationship between two nodes.">
+    <occi:depends term="tosca_relationships_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+  </occi:mixin>
+
+  <!-- Mixin: This type represents a general dependency relationship between two nodes. -->
+  <occi:mixin term="tosca_relationships_dependson" scheme="http://schemas.ogf.org/tosca/core#" title="This type represents a general dependency relationship between two nodes.">
+    <occi:depends term="tosca_relationships_root" scheme="http://schemas.ogf.org/tosca/core#"/>
+  </occi:mixin>
+
+</occi:extension>

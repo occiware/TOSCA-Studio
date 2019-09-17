@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ASCII"?>
+<occi:Extension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" name="modmacao" scheme="http://schemas.modmacao.org/modmacao#">
+  <import href="http://schemas.ogf.org/occi/core#/"/>
+  <import href="http://schemas.modmacao.org/occi/platform#/"/>
+  <import href="http://schemas.modmacao.org/placement#/"/>
+  <mixins name="Application" scheme="http://schemas.modmacao.org/modmacao#">
+    <constraints name="OneOrMoreComponents" body="self.entity.oclAsType(occi::Resource).links->collect(l:occi::Link|l.target)->select(rs:occi::Resource|rs.oclIsTypeOf(platform::Component))->size()>=1"/>
+    <applies href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
+  </mixins>
+  <mixins name="Dependency" scheme="http://schemas.modmacao.org/modmacao#">
+    <constraints name="SourceMustBeComponent" body="self.entity.oclAsType(occi::Link).source.oclIsTypeOf(platform::Component)"/>
+    <constraints name="TargetMustBeComponent" body="self.entity.oclAsType(occi::Link).target.oclIsTypeOf(platform::Component)"/>
+    <applies href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
+  </mixins>
+  <mixins name="Component" scheme="http://schemas.modmacao.org/modmacao#">
+    <attributes name="modmacao.component.version" mutable="false" type="//@types.0"/>
+    <constraints name="OnlyOnePlacementLink" body="self.entity.oclAsType(occi::Resource).links->select(l:occi::Link|l.oclIsTypeOf(placement::Placementlink))->size()=1&#xA;"/>
+    <applies href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
+  </mixins>
+  <mixins name="Cluster" scheme="http://schemas.modmacao.org/modmacao#" depends="//@mixins[term='application']"/>
+  <mixins name="InstallationDependency" scheme="http://schemas.modmacao.org/modmacao#" depends="//@mixins[term='dependency']"/>
+  <mixins name="ExecutionDependency" scheme="http://schemas.modmacao.org/modmacao#" depends="//@mixins[term='dependency']"/>
+  <types xsi:type="occi:StringType" name="Version"/>
+  <types xsi:type="occi:NumericType" name="Port" type="Integer" minInclusive="0" maxInclusive="65535"/>
+</occi:Extension>

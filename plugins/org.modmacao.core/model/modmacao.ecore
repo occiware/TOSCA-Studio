@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modmacao" nsURI="http://schemas.modmacao.org/modmacao/ecore"
+    nsPrefix="modmacao">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="occi" value="platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#/"/>
+    <details key="platform" value="platform:/resource/org.modmacao.occi.platform/model/platform.ecore#/"/>
+    <details key="placement" value="platform:/resource/org.modmacao.placement/model/placement.ecore#/"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EDataType" name="Version" instanceClassName="java.lang.String"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Port" instanceClassName="java.lang.Integer">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minInclusive" value="0"/>
+      <details key="maxInclusive" value="65535"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Application" eSuperTypes="platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="OneOrMoreComponents appliesConstraint"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="OneOrMoreComponents" value="self.entity.oclAsType(occi::Resource).links->collect(l:occi::Link|l.target)->select(rs:occi::Resource|rs.oclIsTypeOf(platform::Component))->size()>=1"/>
+      <details key="appliesConstraint" value="self.entity.oclIsKindOf(platform::Application)"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dependency" eSuperTypes="platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="SourceMustBeComponent TargetMustBeComponent appliesConstraint"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="SourceMustBeComponent" value="self.entity.oclAsType(occi::Link).source.oclIsTypeOf(platform::Component)"/>
+      <details key="TargetMustBeComponent" value="self.entity.oclAsType(occi::Link).target.oclIsTypeOf(platform::Component)"/>
+      <details key="appliesConstraint" value="self.entity.oclIsKindOf(platform::Componentlink)"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="OnlyOnePlacementLink appliesConstraint"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="OnlyOnePlacementLink" value="self.entity.oclAsType(occi::Resource).links->select(l:occi::Link|l.oclIsTypeOf(placement::Placementlink))->size()=1&#xA;"/>
+      <details key="appliesConstraint" value="self.entity.oclIsKindOf(platform::Component)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modmacaoComponentVersion"
+        eType="#//Version">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cluster" eSuperTypes="#//Application platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Installationdependency" eSuperTypes="#//Dependency platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Executiondependency" eSuperTypes="#//Dependency platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
+</ecore:EPackage>

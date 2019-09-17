@@ -1,0 +1,328 @@
+/*******************************************************************************
+ * Copyright (c) 2015-2017 Obeo, Inria
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ * 	   William Piers <william.piers@obeo.fr>
+ *     Philippe Merle <philippe.merle@inria.fr>
+ *     Faiez Zalila <faiez.zalila@inria.fr>
+ *******************************************************************************/
+ grammar org.eclipse.cmf.occi.core.xtext.OCCI with org.eclipse.xtext.common.Terminals
+
+import "http://schemas.ogf.org/occi/core/ecore"
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+Grammar returns ecore::EObject:
+	Extension | Configuration;
+
+Configuration returns Configuration:
+	{Configuration}
+	'configuration'
+	('description' description=STRING)?
+	('location' location=STRING)?
+	('use' use+=[Extension|STRING])*
+	resources+=Resource*
+	mixins+=Mixin*;
+
+Resource returns Resource:
+	'resource'
+	id=STRING
+	':'
+	kind=[Kind|QualifiedID]
+	( 'title' title=STRING )?
+	('location' location=STRING)?
+	('summary' summary=STRING)?
+	('{' 
+		parts+=MixinBase* 
+		attributes+=AttributeState*
+		links+=Link*
+	'}');
+
+Link returns Link:
+	'link'
+	id=STRING
+	':'
+	kind=[Kind|QualifiedID]
+	( 'title' title=STRING )?
+	('location' location=STRING)?
+	'target' target=[Resource|STRING]
+	('{' 
+	attributes+=AttributeState*
+	parts+=MixinBase*
+	'}'
+	);
+
+MixinBase returns MixinBase:
+	'mixin'
+	mixin=[Mixin|QualifiedID]
+	'{'
+	attributes+=AttributeState*
+	'}';
+
+AttributeState returns AttributeState:
+	'attribute'
+	name=QualifiedID
+	'=' value=STRING;
+
+Extension returns Extension:
+	'extension'
+	name=NameID ':' scheme=STRING /* URI */
+	('description' description=STRING)?
+	('specification' specification=STRING)?
+	('import' ^import+=[Extension|STRING /* URI */] ('as' ID)?)*
+	(kinds+=Kind
+	| mixins+=Mixin
+	| types+=DataType)*;
+
+Kind returns Kind:
+	'kind'
+	name=NameID
+	('extends' parent=[Kind|QualifiedID])?
+	('source' source+=[Kind|QualifiedID] ("," source+=[Kind|QualifiedID])* )?
+	('target' target+=[Kind|QualifiedID] ("," target+=[Kind|QualifiedID])* )?
+	( 'title' title=STRING )?
+//	'scheme' scheme=STRING
+	('{'
+	(attributes+=Attribute
+	| actions+=Action
+	| constraints+=Constraint)+
+	'}')?
+	(fsm=FSM)?
+	('annotations' '{' annotations+=Annotation ("," annotations+=Annotation)* '}')?;
+
+Mixin returns Mixin:
+	'mixin'
+	name=NameID
+	('depends' '(' depends+=[Mixin|QualifiedID] ("," depends+=[Mixin|QualifiedID])* ')')?
+	('applies' '(' applies+=[Kind|QualifiedID] ("," applies+=[Kind|QualifiedID])* ')')?
+	( 'title' title=STRING )?
+	'scheme' scheme=STRING
+	('{'
+	(attributes+=Attribute
+	| actions+=Action
+	| constraints+=Constraint)+
+	'}')?
+	(fsm=FSM)?
+	('annotations' '{' annotations+=Annotation ("," annotations+=Annotation)* '}')?;
+
+Annotation returns Annotation:
+	'('
+	'key' key=STRING
+	'value' value=STRING
+	')';
+
+Attribute returns Attribute:
+	'attribute'
+	(mutable?='mutable')?
+	(required?='required')?
+	name=QualifiedID
+	(':' type=[DataType|QualifiedID])?
+	('=' default=STRING)?
+	('description' description=STRING)?
+	('annotations' '{' annotations+=Annotation ("," annotations+=Annotation)* '}')?;
+
+Action returns Action:
+	'action'
+	name=NameID
+	('(' attributes+=ParameterDecl ("," attributes+=ParameterDecl)* ')')?
+//	'scheme' scheme=STRING
+	( 'title' title=STRING )?
+	('annotations' '{' annotations+=Annotation ("," annotations+=Annotation)* '}')?;
+
+ParameterDecl returns Attribute:
+	name=QualifiedID
+	':'
+	type=[DataType|QualifiedID]
+	('=' default=STRING)?;
+
+Constraint returns Constraint:
+	'constraint' name=NameID
+	('description' description=STRING)?
+	'body' body=STRING;
+
+FSM returns FSM:
+	'FSM'
+	'attribute' attribute=[Attribute|QualifiedID]
+	('{' ownedState+=State ("," ownedState+=State)* '}')?;
+
+State returns State:
+	'state'
+	(initial?='initial')?
+	(final?='final')?
+	(literal=[EnumerationLiteral|QualifiedID])
+	//		('incomingTransition' '(' incomingTransition+=[Transition|EString] ( "," incomingTransition+=[Transition|EString])* ')' )?
+	('transitions' '(' (outgoingTransition+=Transition) ("," outgoingTransition+=Transition)* ')')?;
+
+Transition returns Transition:
+	('action' action=[Action|QualifiedID])?
+	'to' target=[State|QualifiedID];
+
+DataType returns DataType:
+	StringType | EObjectType | BooleanType | NumericType | EnumerationType | RecordType | ArrayType;
+
+StringType returns StringType:
+	'StringType'
+	name=TypeID (':' documentation=STRING)?
+	('pattern' pattern=STRING)?
+	('length' length=EIntegerObject)?
+	('minLength' minLength=EIntegerObject)?
+	('maxLength' maxLength=EIntegerObject)?
+	;
+
+EObjectType returns EObjectType:
+	'EObjectType'
+	name=TypeID (':' documentation=STRING)?
+	('type' instanceClassName=STRING)?
+	;
+
+BooleanType returns BooleanType:
+	'BooleanType'
+	name=TypeID (':' documentation=STRING)?
+	;
+
+NumericType returns NumericType:
+	'NumericType'
+	name=TypeID 'type' type=NumericTypeEnum (':' documentation=STRING)?
+	('totalDigits' totalDigits=EIntegerObject)?
+	('minExclusive' minExclusive=STRING)?
+	('maxExclusive' maxExclusive=STRING)?
+	('minInclusive' minInclusive=STRING)?
+	('maxInclusive' maxInclusive=STRING)?
+	
+	;
+
+enum NumericTypeEnum returns NumericTypeEnum:
+	Byte='Byte' | Double='Double' | Float='Float' | Integer='Integer' | Long='Long' | Short='Short' |
+	BigDecimal='BigDecimal';
+
+EnumerationType returns EnumerationType:
+	'EnumerationType'
+	name=TypeID (':' documentation=STRING)?
+	'literals' '(' literals+=EnumerationLiteral ("," literals+=EnumerationLiteral)* ')'
+	;
+
+EnumerationLiteral returns EnumerationLiteral:
+	name=TypeID
+	(':' documentation=STRING)?;
+
+RecordType returns RecordType:
+	'record'
+	name=TypeID (':' documentation=STRING)?
+	'{' recordFields+=RecordField ("," recordFields+=RecordField)* '}'
+	;
+
+RecordField returns RecordField:
+	(mutable?='mutable')?
+	(required?='required')?
+	name=QualifiedID
+	(':' type=[DataType|QualifiedID])
+	('=' default=STRING)?
+	('description' description=STRING)?
+	('annotations' '{' annotations+=Annotation ("," annotations+=Annotation)* '}')?;
+
+ArrayType returns ArrayType:
+	'array'
+	name=TypeID ':' type=[DataType|QualifiedID]
+	(':' documentation=STRING)?;
+
+EIntegerObject returns ecore::EIntegerObject:
+	'-'? INT;
+
+TypeID:
+	(ID | KEYWORD);
+	
+QualifiedID:
+	(ID | QUALIFIED_ID | KEYWORD);
+
+NameID:
+	(ID (ID | ('-'))*) | KEYWORD;
+	
+terminal QUALIFIED_ID:
+	ID ('.' ID_WITHOUT_CARET)+;
+
+terminal ID_WITHOUT_CARET:
+	('a'..'z' | 'A'..'Z' | '_') ('a'..'z' |'A'..'Z' | '_' | '0'..'9')*;
+
+KEYWORD:
+	// Configuration
+	'configuration' | 'description' | 'location' | 'use' | 
+	
+	// Resource
+	'resource' | 'title' | 'summary' | 'parts' | //‘location’|
+	
+	// Link
+	'link' | 'kind' | 'target' | // 'title'| 'location'|
+	
+	// MixinBase
+	'mixin' | 
+	
+	// AttributeState
+	'attribute' | 
+	
+	// Extension
+	'extension' | 'specification' | 'import' | 'as' | //'description'|
+	
+	// Kind
+	'extends' | 'source' | 'scheme' | 'annotations' | // 'kind' |'target' | 'title'|
+	
+	// Mixin
+	'depends' | 'applies' | // 'mixin' | 'scheme' | 'title'| 'annotations' |
+	
+	// Annotation
+	'key' | 'value' | 
+	
+	// Attribute
+	'mutable' | 'required' | // 'attribute' |'description'| 'annotations' |
+	
+	// Action
+	'action' | // 'scheme' | 'title'| 'annotations' |
+	
+	// ParameterDecl
+	
+	// Constraint
+	'constraint' | 'body' | // 'description'| 
+	
+	// FSM
+	'FSM' | // 'attribute'|
+	
+	// State
+	'state' | 'initial' | 'final' | 'transitions' | 
+	
+	// Transition
+	'to' | // 'action'|
+	
+	// DataType
+	
+	// StringType
+	'StringType' | 'pattern' | 'length' | 'minLength' | 'maxLength' |  
+	
+	// EObjectType
+	'EObjectType' | 'type' | 
+	
+	// BooleanType
+	'BooleanType' | 
+	
+	// NumericType
+	'NumericType' | 'totalDigits' | 'minExclusive' | 'maxExclusive' | 'minInclusive' | 'maxInclusive' |  // 'type' | 
+	
+	// NumericTypeEnum
+	'Byte' | 'Double' | 'Float' | 'Integer' | 'Long' | 'Short' | 'BigDecimal' | 
+	
+	// EnumerationType
+	'EnumerationType' | 'literals' |  
+	
+	//EnumerationLiteral
+	//  
+
+	// RecordType
+	'record' |  
+	
+	// RecordField
+	// 'mutable'| 'required' | 'description'| 'annotations'
+	
+	// ArrayType
+	'array'  
+	;

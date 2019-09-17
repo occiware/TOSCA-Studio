@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright (c) 2015-17 Obeo, Inria
+  
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+ - William Piers <william.piers@obeo.fr>
+ - Philippe Merle <philippe.merle@inria.fr>
+ - Faiez Zalila <faiez.zalila@inria.fr>
+-->
+<?eclipse version="3.0"?>
+<plugin>
+   <!-- Extension point to register OCCI extensions. -->
+   <extension-point id="occie" name="org.eclipse.cmf.occi.occie" schema="schema/occie.exsd"/>
+
+   <!-- Register OCCI Ecore metamodel. -->
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated OCCI -->
+      <package
+            uri="http://schemas.ogf.org/occi/core/ecore"
+            class="org.eclipse.cmf.occi.core.OCCIPackage"
+            genModel="model/OCCI.genmodel"/>
+   </extension>
+
+   <!-- Register the parser for .occie and .occic files. -->
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated OCCI -->
+      <parser
+            type="occie"
+            class="org.eclipse.cmf.occi.core.util.OCCIResourceFactoryImpl"/>
+      <parser
+            type="occic"
+            class="org.eclipse.cmf.occi.core.util.OCCIResourceFactoryImpl"/>
+   </extension>
+
+   <!-- Define URI mapping. -->
+   <extension
+         point="org.eclipse.emf.ecore.uri_mapping">
+      <mapping
+            source="http://schemas.ogf.org/occi/core"
+            target="platform:/plugin/org.eclipse.cmf.occi.core/model/Core.occie">
+      </mapping>
+   </extension>
+
+   <!-- Register the OCCI Core extension. -->
+   <extension
+         point="org.eclipse.cmf.occi.core.occie">
+      <occie
+            file="model/Core.occie"
+            scheme="http://schemas.ogf.org/occi/core#">
+      </occie>
+   </extension>
+
+</plugin>

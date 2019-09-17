@@ -1,0 +1,371 @@
+[comment encoding = UTF-8 /] 
+[module main('http://schemas.ogf.org/occi/core/ecore')] 
+
+[template public main(extension : Extension, targetPackageName : String, extendedPackageName : String)]
+[comment @main /]
+[generateConnectorFactory(extension, targetPackageName, extendedPackageName)/]
+[for (kind : Kind | extension.kinds)]
+[generateConnectorClass(kind, extension, targetPackageName, extendedPackageName)/]
+[/for]
+[for (mixin : Mixin | extension.mixins)]
+[generateConnectorClass(mixin, extension, targetPackageName, extendedPackageName)/]
+[/for]
+[generateLoggerProperties(targetPackageName)/]
+[/template]
+
+[template public generateLoggerProperties(targetPackageName : String)]
+[file (getPackagePath(targetPackageName).concat('Activator.java'), false, 'UTF-8')]
+package [targetPackageName/];
+
+import java.net.URL;
+import java.util.Properties;
+import org.apache.log4j.PropertyConfigurator;
+import org.eclipse.core.runtime.Plugin;
+import org.osgi.framework.BundleContext;
+
+public class Activator extends Plugin {
+
+    /**
+     * The plug-in ID.
+     */
+    public static final String PLUGIN_ID = "[targetPackageName/]";
+
+    /**
+     * The shared instance.
+     */
+    private static Activator plugin;
+    
+    /**
+     * The constructor.
+     */
+    public Activator() {
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @see org.eclipse.core.runtime.Plugin#start(org.osgi.framework.BundleContext)
+     */
+    public void start(BundleContext context) throws Exception {
+        super.start(context);
+        plugin = this;
+        Properties log4jProperties = new Properties();
+        URL url = this.getBundle().getResource("log4j.properties");
+        log4jProperties.load(url.openStream());
+        PropertyConfigurator.configure(log4jProperties);
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @see org.eclipse.core.runtime.Plugin#stop(org.osgi.framework.BundleContext)
+     */
+    public void stop(BundleContext context) throws Exception {
+        plugin = null;
+        super.stop(context);
+    }
+
+    /**
+     * Returns the shared instance.
+     *
+     * @return the shared instance
+     */
+    public static Activator getDefault() {
+        return plugin;
+    }
+
+}
+[/file]
+[/template]
+
+[template public generateConnectorFactory(extension : Extension, targetPackageName : String, extendedPackageName : String)]
+[file (getPackagePath(targetPackageName).concat('ConnectorFactory.java'), false, 'UTF-8')]
+/**
+ * Copyright (c) 2016-2017 Inria
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ * - Philippe Merle <philippe.merle@inria.fr>
+ * - Faiez Zalila <faiez.zalila@inria.fr>
+ *
+ * Generated at [getNow()/] from [getFilePath(extension)/] by org.eclipse.cmf.occi.core.gen.connector
+ */
+package [targetPackageName/];
+
+/**
+ * Connector EFactory for the OCCI extension:
+ * - name: [extension.name/]
+ * - scheme: [extension.scheme/]
+ */
+public class ConnectorFactory extends [extendedPackageName/].impl.[toU1Case(extension.name.toLowerCase())/]FactoryImpl
+{
+[for (kind : Kind | extension.kinds)]
+[generateCreateKindMethod(kind, extension, extendedPackageName)/]
+[/for]
+[for (mixin : Mixin | extension.mixins)]
+[generateCreateKindMethod(mixin, extension, extendedPackageName)/]
+[/for]
+}
+[/file]
+[/template]
+
+[template public generateCreateKindMethod(kind : Type, extension : Extension, extendedPackageName : String)]
+	/**
+	 * EFactory method for OCCI kind:
+	 * - scheme: [kind.scheme/]
+	 * - term: [kind.term/]
+	 * - title: [kind.title/]
+	 */
+	@Override
+[let kindClassName : String = toU1Case(kind.term)]
+	public [extendedPackageName/].[kindClassName/] create[kindClassName/]() {
+		return new [kindClassName/]Connector();
+	}
+[/let]
+[/template]
+
+[template public generateConnectorClass(type : Type, extension : Extension, targetPackageName : String, extendedPackageName : String)]
+[file (getPackagePath(targetPackageName).concat(toU1Case(type.term)).concat('Connector.java'), false, 'UTF-8')]
+/**
+ * Copyright (c) 2016-2017 Inria
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ * - Philippe Merle <philippe.merle@inria.fr>
+ * - Faiez Zalila <faiez.zalila@inria.fr>
+ *
+ * Generated at [getNow()/] from [getFilePath(extension)/] by org.eclipse.cmf.occi.core.gen.connector
+ */
+package [targetPackageName/];
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+[let stateAttribute : Attribute = getStateAttribute(type)]
+import [extendedPackageName/].[stateAttribute.type.name/];
+[/let]
+
+[if (type.oclIsTypeOf(Kind))]
+[for (action : Action | type.oclAsType(Kind).actions->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.actions)))]
+[for (attribute: Attribute| action.attributes)]
+[if not (attribute.type.eContainer().oclAsType(Extension).scheme.equalsIgnoreCase('http://schemas.ogf.org/occi/core#'))]
+import [action.eContainer().oclAsType(Type).getExtendedPackage()/].[getJavaTypeName(attribute)/]; 
+[/if]
+[/for]
+[/for]
+[else]
+[comment if it is a Mixin /]
+[for (action : Action | type.oclAsType(Mixin).getAllDependsOnMixins()->collect(m|m.oclAsType(Mixin).actions))]
+[for (attribute: Attribute| action.attributes)]
+[if not (attribute.type.eContainer().oclAsType(Extension).scheme.equalsIgnoreCase('http://schemas.ogf.org/occi/core#'))]
+import [action.eContainer().oclAsType(Type).getExtendedPackage()/].[getJavaTypeName(attribute)/]; 
+[/if]
+[/for]
+[/for]
+[/if]
+
+/**
+ * Connector implementation for the OCCI kind:
+ * - scheme: [type.scheme/]
+ * - term: [type.term/]
+ * - title: [type.title/]
+ */
+[let kindClassName : String = toU1Case(type.term)]
+public class [kindClassName/]Connector extends [extendedPackageName/].impl.[kindClassName/]Impl
+{
+	/**
+	 * Initialize the logger.
+	 */
+	private static Logger LOGGER = LoggerFactory.getLogger([kindClassName/]Connector.class);
+
+	// [protected (kindClassName.concat('connector_constructor'))]
+	/**
+	 * Constructs a [type.term/] connector.
+	 */
+	[kindClassName/]Connector()
+	{
+		LOGGER.debug("Constructor called on " + this);
+		// TODO: Implement this constructor.
+	}
+	// [/protected]
+	[if(type.oclIsTypeOf(Kind))]
+	//
+	// OCCI CRUD callback operations.
+	//
+	
+	// [protected (kindClassName.concat('occiCreate'))]
+	/**
+	 * Called when this [kindClassName/] instance is completely created.
+	 */
+	@Override
+	public void occiCreate()
+	{
+		LOGGER.debug("occiCreate() called on " + this);
+		// TODO: Implement this callback or remove this method.
+	}
+	// [/protected]
+
+	// [protected (kindClassName.concat('_occiRetrieve_method'))]
+	/**
+	 * Called when this [kindClassName/] instance must be retrieved.
+	 */
+	@Override
+	public void occiRetrieve()
+	{
+		LOGGER.debug("occiRetrieve() called on " + this);
+		// TODO: Implement this callback or remove this method.
+	}
+	// [/protected]
+
+	// [protected (kindClassName.concat('_occiUpdate_method'))]
+	/**
+	 * Called when this [kindClassName/] instance is completely updated.
+	 */
+	@Override
+	public void occiUpdate()
+	{
+		LOGGER.debug("occiUpdate() called on " + this);
+		// TODO: Implement this callback or remove this method.
+	}
+	// [/protected]
+
+	// [protected (kindClassName.concat('occiDelete_method'))]
+	/**
+	 * Called when this [kindClassName/] instance will be deleted.
+	 */
+	@Override
+	public void occiDelete()
+	{
+		LOGGER.debug("occiDelete() called on " + this);
+		// TODO: Implement this callback or remove this method.
+	}
+	// [/protected]
+
+	//
+	// [kindClassName/] actions.
+	//
+[/if]
+
+[if (type.oclIsTypeOf(Kind))]
+[for (action : Action | type.oclAsType(Kind).actions->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.actions)))]
+	// [protected (kindClassName.concat('_Kind_').concat(action.name).concat('_action'))]
+[generateActionMethod(action, type, extendedPackageName)/]
+	// [/protected]
+[/for]
+[else]
+
+[for (action : Action | type.oclAsType(Mixin).getAllDependsOnMixins()->collect(m|m.oclAsType(Mixin).actions))]
+	// [protected (kindClassName.concat('_Mixin_').concat(action.name).concat('_action'))]
+[generateActionMethod(action, type, extendedPackageName)/]
+	// [/protected]
+[/for][/if]
+}	
+[/let]
+[/file]
+[/template]
+
+
+[template public generateActionMethod(action : Action, type : Type, extendedPackageName : String)]
+	/**
+	 * Implement OCCI action:
+     * - scheme: [action.scheme/]
+     * - term: [action.term/]
+     * - title: [action.title/]
+	 */
+	@Override
+	public void [action.term/]([for (parameter : Attribute | action.attributes) separator(', ')]final [getJavaTypeName(parameter)/] [parameter.name/][/for])
+	{
+		LOGGER.debug("Action [action.term/]([if (action.attributes->size() > 0)]"[for (parameter : Attribute | action.attributes)] + "[parameter.name/]=" + [parameter.name/][/for] + "[/if]) called on " + this);
+
+[if (getStateAttribute(type).oclIsUndefined())]
+		// TODO: Implement how to [action.term/] this [type.term/].
+[else]
+[let stateAttribute : Attribute = getStateAttribute(type)]
+		// [type.term.toUpperFirst()/] State Machine.
+		switch(get[getJavaAttributeName(stateAttribute).toString().toU1Case()/]().getValue()) {
+[for (eEnumLiteral : EnumerationLiteral | getSourceStatesFromAnAction(action)->collect(state|state.oclAsType(State).literal))]
+
+		case [stateAttribute.type.name/].[eEnumLiteral.name.toUpperCase()/]_VALUE:
+			LOGGER.debug("Fire transition(state=[eEnumLiteral.name/], action=\"[action.term/]\")...");
+			// TODO Implement transition(state=[eEnumLiteral.name/], action="[action.term/]")
+[let targetLiterals : OrderedSet(EnumerationLiteral) = getTargetStatesFromAnAction(action)->collect(state|state.oclAsType(State).literal)->asOrderedSet()]
+[if targetLiterals->size()=1]
+			set[getJavaAttributeName(stateAttribute).toString().toU1Case()/]([stateAttribute.type.name/].[targetLiterals->first().oclAsType(EnumerationLiteral).name.toUpperCase()/]);
+[else]
+[for (eEnumLiteral2 : EnumerationLiteral | targetLiterals)]
+		[if targetLiterals->indexOf(eEnumLiteral2)=1]
+			if(true){
+				set[getJavaAttributeName(stateAttribute).toString().toU1Case()/]([stateAttribute.type.name/].[eEnumLiteral2.name.toUpperCase()/]);
+			}
+		[else]
+			else	
+				if(true){
+					set[getJavaAttributeName(stateAttribute).toString().toU1Case()/]([stateAttribute.type.name/].[eEnumLiteral2.name.toUpperCase()/]);
+				}
+		[/if]
+[/for]		
+[/if]
+[/let]
+			break;
+
+[/for]
+		default:
+			break;
+		}
+[/let]
+[/if]
+	}
+[/template]
+
+[comment the following query returns a set of states which are target of transitions containing the action "action"/]
+[query public getTargetStatesFromAnAction(action : Action) : Set(State) = getSourceStatesFromAnAction(action)->collect(sourceState|sourceState.oclAsType(State).outgoingTransition)->flatten()->select(tr|tr.oclAsType(Transition).action=action)->flatten()->collect(tr|tr.oclAsType(Transition).target)->asSet() /]
+[comment the following query returns a set of states which are source of transitions containing the action "action"/]
+[query public getSourceStatesFromAnAction(action : Action) : Set(State) = if (not action.eContainer().oclAsType(Type).fsm.oclIsUndefined()) then 
+																				action.eContainer().oclAsType(Type).fsm.ownedState->collect(ow|ow.oclAsType(State).outgoingTransition)->flatten()
+																				->select(tr| tr.action=action)->collect(tr|tr.oclAsType(Transition).source)->flatten()->asSet() else Set{} endif /]
+
+[query public getStateAttribute(kind : Type) : Attribute = kind.attributes->any(attribute : Attribute | attribute.name.endsWith('state') and attribute.type.oclIsTypeOf(EnumerationType)) /]
+
+[query public toU1Case(string : String) : String = string.substring(1,1).toUpperCase() + string.substring(2) /]
+
+[query public getAllDependsOnMixins (m: Mixin) : Sequence(Mixin) = if(m.depends->size() > 0 ) then Sequence{m}->union(depends->collect(m2|m2.oclAsType(Mixin).getAllDependsOnMixins())) else Sequence{m} endif/]
+
+[query public getNow() : String
+	= invoke(
+	'org.eclipse.cmf.occi.core.gen.connector.services.GenUtils', 
+	'getNow()', 
+	Sequence{})/]
+
+[query public getExtendedPackage(type : Type) : String
+	= invoke(
+	'org.eclipse.cmf.occi.core.gen.connector.services.GenUtils', 
+	'getExtendedPackage(org.eclipse.cmf.occi.core.Type)', 
+	Sequence{type})/] 
+
+[query public getFilePath(extension : Extension) : String
+	= invoke(
+	'org.eclipse.cmf.occi.core.gen.connector.services.GenUtils', 
+	'getFilePath(org.eclipse.cmf.occi.core.Extension)', 
+	Sequence{extension})/] 
+
+[query public getPackagePath(packageName : String) : String = packageName.replaceAll('\\.', '/') + '/' /]
+
+[query public getJavaTypeName(attribute : Attribute) : String
+	= invoke(
+	'org.eclipse.cmf.occi.core.gen.connector.services.GenUtils', 
+	'getJavaTypeName(org.eclipse.cmf.occi.core.Attribute)', 
+	Sequence{attribute})/]
+
+[query public getJavaAttributeName(attribute : Attribute) : String 
+	= invoke(
+	'org.eclipse.cmf.occi.core.gen.connector.services.GenUtils', 
+	'getJavaAttributeName(org.eclipse.cmf.occi.core.Attribute)', 
+	Sequence{attribute})/]

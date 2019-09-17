@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated at Thu Sep 12 15:43:38 CEST 2019 from http://schemas.modmacao.org/modmacao by org.eclipse.cmf.occi.core.gen.xml -->
+<occi:extension xmlns:occi="http://schemas.ogf.org/occi"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schemas.ogf.org/occi occi.xsd"
+    name="modmacao"
+    scheme="http://schemas.modmacao.org/modmacao#"
+    version="1"
+    status="stable">
+
+  <!-- Mixin:  -->
+  <occi:mixin term="application" scheme="http://schemas.modmacao.org/modmacao#" title="">
+    <occi:applies term="application" scheme="http://schemas.modmacao.org/occi/platform#"/>
+  </occi:mixin>
+
+  <!-- Mixin:  -->
+  <occi:mixin term="dependency" scheme="http://schemas.modmacao.org/modmacao#" title="">
+    <occi:applies term="componentlink" scheme="http://schemas.modmacao.org/occi/platform#"/>
+  </occi:mixin>
+
+  <!-- Mixin:  -->
+  <occi:mixin term="component" scheme="http://schemas.modmacao.org/modmacao#" title="">
+    <occi:applies term="component" scheme="http://schemas.modmacao.org/occi/platform#"/>
+    <occi:attribute name="modmacao.component.version" immutable="true" use="optional" type="xs:string" title=""/>
+  </occi:mixin>
+
+  <!-- Mixin:  -->
+  <occi:mixin term="cluster" scheme="http://schemas.modmacao.org/modmacao#" title="">
+    <occi:depends term="application" scheme="http://schemas.modmacao.org/modmacao#"/>
+  </occi:mixin>
+
+  <!-- Mixin:  -->
+  <occi:mixin term="installationdependency" scheme="http://schemas.modmacao.org/modmacao#" title="">
+    <occi:depends term="dependency" scheme="http://schemas.modmacao.org/modmacao#"/>
+  </occi:mixin>
+
+  <!-- Mixin:  -->
+  <occi:mixin term="executiondependency" scheme="http://schemas.modmacao.org/modmacao#" title="">
+    <occi:depends term="dependency" scheme="http://schemas.modmacao.org/modmacao#"/>
+  </occi:mixin>
+
+</occi:extension>

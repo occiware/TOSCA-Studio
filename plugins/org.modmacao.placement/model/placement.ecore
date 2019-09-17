@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    name="placement" nsURI="http://schemas.modmacao.org/placement/ecore" nsPrefix="placement">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="infrastructure" value="../../../plugin/org.eclipse.cmf.occi.infrastructure/model/Infrastructure.ecore#/"/>
+    <details key="occi" value="../../../plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#/"/>
+    <details key="platform" value="../../org.modmacao.occi.platform/model/platform.ecore#/"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Placementlink" eSuperTypes="platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//Link">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value=""/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="sourceConstraint targetConstraint"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="sourceConstraint" value="self.source.oclIsKindOf(platform::Component)"/>
+      <details key="targetConstraint" value="self.target.oclIsKindOf(infrastructure::Compute)"/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>

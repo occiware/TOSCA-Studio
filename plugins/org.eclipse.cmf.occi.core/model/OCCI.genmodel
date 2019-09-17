@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2015-17 Obeo, Inria&#xA; &#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#xA;Contributors:&#xA;- William Piers &lt;william.piers@obeo.fr>&#xA;- Philippe Merle &lt;philippe.merle@inria.fr>&#xA;- Faiez Zalila &lt;faiez.zalila@inria.fr>&#xA;"
+    modelDirectory="/org.eclipse.cmf.occi.core/src-gen" editDirectory="/org.eclipse.cmf.occi.core.edit/src-gen"
+    editorDirectory="/org.eclipse.cmf.occi.core.editor/src-gen" modelPluginID="org.eclipse.cmf.occi.core"
+    modelName="OCCI" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/OCL/GenModel">
+    <details key="Use Delegates" value="false"/>
+  </genAnnotations>
+  <foreignModel>OCCI.ecore</foreignModel>
+  <genPackages prefix="OCCI" basePackage="org.eclipse.cmf" resource="XMI" disposableProviderFactory="true"
+      interfacePackageSuffix="core" metaDataPackageSuffix="core" classPackageSuffix="core.impl"
+      utilityPackageSuffix="core.util" providerPackageSuffix="core.provider" presentationPackageSuffix="core.presentation"
+      testsPackageSuffix="core.tests" fileExtensions="occie,occic" ecorePackage="OCCI.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="OCCI.ecore#//NumericTypeEnum">
+      <genEnumLiterals ecoreEnumLiteral="OCCI.ecore#//NumericTypeEnum/Byte"/>
+      <genEnumLiterals ecoreEnumLiteral="OCCI.ecore#//NumericTypeEnum/Double"/>
+      <genEnumLiterals ecoreEnumLiteral="OCCI.ecore#//NumericTypeEnum/Float"/>
+      <genEnumLiterals ecoreEnumLiteral="OCCI.ecore#//NumericTypeEnum/Integer"/>
+      <genEnumLiterals ecoreEnumLiteral="OCCI.ecore#//NumericTypeEnum/Long"/>
+      <genEnumLiterals ecoreEnumLiteral="OCCI.ecore#//NumericTypeEnum/Short"/>
+      <genEnumLiterals ecoreEnumLiteral="OCCI.ecore#//NumericTypeEnum/BigDecimal"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="OCCI.ecore#//URI"/>
+    <genDataTypes ecoreDataType="OCCI.ecore#//OCL"/>
+    <genDataTypes ecoreDataType="OCCI.ecore#//String"/>
+    <genDataTypes ecoreDataType="OCCI.ecore#//Integer"/>
+    <genDataTypes ecoreDataType="OCCI.ecore#//Boolean"/>
+    <genDataTypes ecoreDataType="OCCI.ecore#//AttributeName"/>
+    <genDataTypes ecoreDataType="OCCI.ecore#//Name"/>
+    <genDataTypes ecoreDataType="OCCI.ecore#//Scheme"/>
+    <genClasses image="false" ecoreClass="OCCI.ecore#//AnnotatedElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//AnnotatedElement/annotations"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//Annotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Annotation/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Annotation/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="OCCI.ecore#//Category">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Category/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Category/term"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Category/scheme"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Category/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//Category/attributes"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute OCCI.ecore#//Category/description"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//Constraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Constraint/name"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute OCCI.ecore#//Constraint/description"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute OCCI.ecore#//Constraint/body"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="OCCI.ecore#//Type">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//Type/actions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//Type/constraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//Type/fsm"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//FSM">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//FSM/ownedState"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//FSM/attribute"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//State">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//State/literal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//State/initial"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//State/final"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference OCCI.ecore#//State/owningFSM"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//State/outgoingTransition"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//Transition">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference OCCI.ecore#//Transition/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//Transition/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//Transition/action"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Attribute/mutable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Attribute/required"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Attribute/default"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute OCCI.ecore#//Attribute/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//Attribute/type"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//Kind">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//Kind/parent"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference OCCI.ecore#//Kind/entities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//Kind/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//Kind/target"/>
+      <genOperations ecoreOperation="OCCI.ecore#//Kind/occiIsKindOf">
+        <genParameters ecoreParameter="OCCI.ecore#//Kind/occiIsKindOf/kind"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//Action"/>
+    <genClasses ecoreClass="OCCI.ecore#//Mixin">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//Mixin/depends"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//Mixin/applies"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference OCCI.ecore#//Mixin/entities"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="OCCI.ecore#//Entity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Entity/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Entity/title"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//Entity/kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Entity/location"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//Entity/attributes"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference OCCI.ecore#//Entity/mixins"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//Entity/parts"/>
+      <genOperations ecoreOperation="OCCI.ecore#//Entity/occiCreate"/>
+      <genOperations ecoreOperation="OCCI.ecore#//Entity/occiRetrieve"/>
+      <genOperations ecoreOperation="OCCI.ecore#//Entity/occiUpdate"/>
+      <genOperations ecoreOperation="OCCI.ecore#//Entity/occiDelete"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//MixinBase">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//MixinBase/mixin"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference OCCI.ecore#//MixinBase/entity"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//MixinBase/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//AttributeState">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//AttributeState/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//AttributeState/value"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//Resource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Resource/summary"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//Resource/links"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//Resource/rlinks"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//Link">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference OCCI.ecore#//Link/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//Link/target"/>
+      <genOperations ecoreOperation="OCCI.ecore#//Link/LinkTargetInvariant">
+        <genParameters ecoreParameter="OCCI.ecore#//Link/LinkTargetInvariant/resourcekind"/>
+        <genParameters ecoreParameter="OCCI.ecore#//Link/LinkTargetInvariant/linkInstanceKind"/>
+      </genOperations>
+      <genOperations ecoreOperation="OCCI.ecore#//Link/LinkSourceInvariant">
+        <genParameters ecoreParameter="OCCI.ecore#//Link/LinkSourceInvariant/resourcekind"/>
+        <genParameters ecoreParameter="OCCI.ecore#//Link/LinkSourceInvariant/linkInstanceKind"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//Extension">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Extension/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Extension/scheme"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute OCCI.ecore#//Extension/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//Extension/import"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//Extension/kinds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//Extension/mixins"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//Extension/types"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute OCCI.ecore#//Extension/specification"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//Configuration">
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute OCCI.ecore#//Configuration/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Configuration/location"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//Configuration/use"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//Configuration/resources"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//Configuration/mixins"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="OCCI.ecore#//DataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//DataType/name"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute OCCI.ecore#//DataType/documentation"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="OCCI.ecore#//BasicType"/>
+    <genClasses ecoreClass="OCCI.ecore#//StringType">
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute OCCI.ecore#//StringType/pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//StringType/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//StringType/minLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//StringType/maxLength"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//EObjectType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//EObjectType/instanceClassName"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//BooleanType"/>
+    <genClasses ecoreClass="OCCI.ecore#//NumericType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//NumericType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//NumericType/totalDigits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//NumericType/minExclusive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//NumericType/maxExclusive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//NumericType/minInclusive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//NumericType/maxInclusive"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//EnumerationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//EnumerationType/literals"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//EnumerationLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//EnumerationLiteral/name"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute OCCI.ecore#//EnumerationLiteral/documentation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference OCCI.ecore#//EnumerationLiteral/enumerationType"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//RecordType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCCI.ecore#//RecordType/recordFields"/>
+    </genClasses>
+    <genClasses ecoreClass="OCCI.ecore#//RecordField"/>
+    <genClasses ecoreClass="OCCI.ecore#//ArrayType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//ArrayType/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
