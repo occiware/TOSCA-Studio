@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright (c) 2015-2017 Obeo, Inria
+  
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+ - William Piers <william.piers@obeo.fr>
+ - Philippe Merle <philippe.merle@inria.fr>
+ - Faiez Zalila <faiez.zalila@inria.fr>
+ - Stéphanie Challita <stephanie.challita@inria.fr>
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.occiware</groupId>
+  <artifactId>org.eclipse.cmf.occi.parent</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <!-- OCCI Core -->
+    <module>plugins/org.eclipse.cmf.occi.core</module>
+    <module>plugins/org.eclipse.cmf.occi.core.edit</module>
+    <module>plugins/org.eclipse.cmf.occi.core.editor</module>
+    <module>plugins/org.eclipse.cmf.occi.core.tests</module>
+    <module>plugins/org.eclipse.cmf.occi.core.design</module>
+    
+    <!-- OCCI Utilities -->
+    <module>plugins/org.eclipse.cmf.occi.core.ui</module>
+    
+    <!-- OCCI Xtext -->
+    <module>plugins/org.eclipse.cmf.occi.core.xtext</module>
+    <module>plugins/org.eclipse.cmf.occi.core.xtext.ide</module>
+    <module>plugins/org.eclipse.cmf.occi.core.xtext.tests</module>
+    <module>plugins/org.eclipse.cmf.occi.core.xtext.ui</module>
+    <module>plugins/org.eclipse.cmf.occi.core.xtext.ui.tests</module>
+
+    <!-- OCCI EMF Generator -->
+    <module>plugins/org.eclipse.cmf.occi.core.gen.emf</module>
+    <module>plugins/org.eclipse.cmf.occi.core.gen.emf.ui</module>
+
+    <!-- OCCI Designer Generator -->
+    <module>plugins/org.eclipse.cmf.occi.core.gen.design</module>
+    <module>plugins/org.eclipse.cmf.occi.core.gen.design.ui</module>
+    
+    <!-- OCCI Extended Designer Generator -->
+    <module>plugins/org.eclipse.cmf.occi.core.gen.design.extended</module>
+    <module>plugins/org.eclipse.cmf.occi.core.gen.design.extended.ui</module>    
+    
+    <!-- Connector Generator -->
+    <module>plugins/org.eclipse.cmf.occi.core.gen.connector</module>
+    <module>plugins/org.eclipse.cmf.occi.core.gen.connector.ui</module>
+    
+    <!-- Textile documentation Generator -->
+    <module>plugins/org.eclipse.cmf.occi.core.gen.textile</module>
+    <module>plugins/org.eclipse.cmf.occi.core.gen.textile.ui</module>
+
+    <!-- Latex documentation Generator -->
+    <module>plugins/org.eclipse.cmf.occi.core.gen.latex</module>
+    <module>plugins/org.eclipse.cmf.occi.core.gen.latex.ui</module>
+    
+    <!-- URIs Generator -->
+    <module>plugins/org.eclipse.cmf.occi.core.gen.uris</module>
+    <module>plugins/org.eclipse.cmf.occi.core.gen.uris.ui</module>
+
+    <!-- cURL Generator -->
+    <module>plugins/org.eclipse.cmf.occi.core.gen.curl</module>
+    <module>plugins/org.eclipse.cmf.occi.core.gen.curl.ui</module>
+
+    <!-- XML Generator -->
+    <module>plugins/org.eclipse.cmf.occi.core.gen.xml</module>
+    <module>plugins/org.eclipse.cmf.occi.core.gen.xml.ui</module>
+
+    <!-- Alloy Generator -->
+    <module>plugins/org.eclipse.cmf.occi.core.gen.alloy</module>
+    <module>plugins/org.eclipse.cmf.occi.core.gen.alloy.ui</module>
+
+    <!-- jOCCI Connector -->
+    <module>plugins/org.eclipse.cmf.occi.core.connector.jocci</module>
+    
+    <!-- OCCI Examples -->
+    <module>plugins/org.eclipse.cmf.examples</module>
+    
+    <!-- OCCI Infrastructure extension -->
+    <module>plugins/org.eclipse.cmf.occi.infrastructure</module>
+    <module>plugins/org.eclipse.cmf.occi.infrastructure.edit</module>
+    <module>plugins/org.eclipse.cmf.occi.infrastructure.editor</module>
+    <module>plugins/org.eclipse.cmf.occi.infrastructure.tests</module>
+    <module>plugins/org.eclipse.cmf.occi.infrastructure.design</module>
+    <module>plugins/org.eclipse.cmf.occi.infrastructure.connector.dummy</module>
+    <module>plugins/org.eclipse.cmf.occi.infrastructure.example</module>
+	
+    <!-- OCCI crtp extension -->
+    <module>plugins/org.eclipse.cmf.occi.crtp</module>
+    <module>plugins/org.eclipse.cmf.occi.crtp.edit</module>
+    <module>plugins/org.eclipse.cmf.occi.crtp.editor</module>
+    <module>plugins/org.eclipse.cmf.occi.crtp.tests</module>
+    <module>plugins/org.eclipse.cmf.occi.crtp.design</module>
+    <module>plugins/org.eclipse.cmf.occi.crtp.design.extended</module>
+    <module>plugins/org.eclipse.cmf.occi.crtp.connector.dummy</module>   
+    <module>plugins/org.eclipse.cmf.occi.crtp.example</module>     
+    
+    <!-- OCCI platform extension -->
+    <module>plugins/org.eclipse.cmf.occi.platform</module>
+    <module>plugins/org.eclipse.cmf.occi.platform.edit</module>
+    <module>plugins/org.eclipse.cmf.occi.platform.editor</module>
+    <module>plugins/org.eclipse.cmf.occi.platform.tests</module>
+    <module>plugins/org.eclipse.cmf.occi.platform.design</module>
+    <module>plugins/org.eclipse.cmf.occi.platform.connector.dummy</module>        
+    <module>plugins/org.eclipse.cmf.occi.platform.example</module>  
+
+    <!-- OCCI sla extension -->
+    <module>plugins/org.eclipse.cmf.occi.sla</module>
+    <module>plugins/org.eclipse.cmf.occi.sla.edit</module>
+    <module>plugins/org.eclipse.cmf.occi.sla.editor</module>
+    <module>plugins/org.eclipse.cmf.occi.sla.tests</module>
+    <module>plugins/org.eclipse.cmf.occi.sla.design</module>
+    <module>plugins/org.eclipse.cmf.occi.sla.connector.dummy</module>     
+    <module>plugins/org.eclipse.cmf.occi.sla.example</module>  
+    
+    <!-- OCCI monitoring extension -->
+    <module>plugins/org.eclipse.cmf.occi.monitoring</module>
+    <module>plugins/org.eclipse.cmf.occi.monitoring.edit</module>
+    <module>plugins/org.eclipse.cmf.occi.monitoring.editor</module>
+    <module>plugins/org.eclipse.cmf.occi.monitoring.tests</module>
+    <module>plugins/org.eclipse.cmf.occi.monitoring.design</module>
+    <module>plugins/org.eclipse.cmf.occi.monitoring.connector.dummy</module> 
+    <module>plugins/org.eclipse.cmf.occi.monitoring.example</module>    
+
+    <!-- Releng -->
+    <module>features/org.eclipse.cmf.occi</module>
+
+    <!-- MODMACAO -->
+    <module>plugins/org.modmacao.core</module>
+    <module>plugins/org.modmacao.core.edit</module>
+    <module>plugins/org.modmacao.occi.platform</module>
+    <module>plugins/org.modmacao.occi.platform.edit</module>
+    <module>plugins/org.modmacao.placement</module> 
+    <module>plugins/org.modmacao.placement.edit</module>    
+
+    <!-- TOSCA Parsers -->
+    <module>plugins/org.eclipse.cmf.occi.tosca.parser</module>
+    <module>plugins/org.eclipse.cmf.occi.tosca.config</module>
+    
+    <!-- TOSCA Extensions -->
+    <module>plugins/org.eclipse.cmf.occi.tosca</module>
+    <module>plugins/org.eclipse.cmf.occi.tosca.extended</module>
+    
+    <!-- TOSCA Studio -->
+    <module>plugins/org.eclipse.cmf.occi.tosca.edit</module>
+    <module>plugins/org.eclipse.cmf.occi.tosca.design.extended</module>
+    <module>plugins/org.eclipse.cmf.occi.tosca.extended.edit</module>
+    <module>plugins/org.eclipse.cmf.occi.tosca.extended.design.extended</module>
+
+    <!-- TOSCA Examples -->
+    <!--<module>plugins/org.eclipse.cmf.occi.tosca.examples</module>-->
+    
+  </modules>
+
+  <profiles>
+    <profile>
+      <!-- Type mvn -Pbuild.products to activate this profile. -->
+      <id>build.products</id>
+      <modules>
+        <module>repositories/org.eclipse.cmf.occi.tosca.repository</module>
+        <module>repositories/org.eclipse.cmf.occi.tosca.product</module>
+      </modules>
+    </profile>
+  </profiles>
+
+  <properties>
+    <tycho-version>1.0.0</tycho-version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <repositories>
+    <!-- configure p2 repository to resolve against -->
+	<repository>
+      <id>photon</id>
+      <layout>p2</layout>
+      <url>http://download.eclipse.org/releases/photon</url>
+    </repository>
+ 
+    <repository>
+      <id>mvnrepository</id>
+      <url>http://repo1.maven.org/maven2</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
+    
+    <repository>
+    <id>epsilonrepository</id>  
+     <url>http://download.eclipse.org/epsilon/updates/</url> 
+     <layout>p2</layout>
+    </repository>
+  </repositories>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>oss.sonatype.org-snapshots</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <!-- enable tycho build extension -->
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>target-platform-configuration</artifactId>
+        <version>${tycho-version}</version>
+        <configuration>
+          <environments>
+            <environment>
+              <os>win32</os>
+              <ws>win32</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>linux</os>
+              <ws>gtk</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>macosx</os>
+              <ws>cocoa</ws>
+              <arch>x86_64</arch>
+            </environment>
+          </environments>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

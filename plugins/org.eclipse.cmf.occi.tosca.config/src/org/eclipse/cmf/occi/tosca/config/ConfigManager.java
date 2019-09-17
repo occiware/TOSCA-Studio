@@ -32,18 +32,23 @@ public class ConfigManager {
 		URI modelURI = URI
 				.createURI(PREFIX_FILE + Main.ROOT_WORKSPACE + "org.eclipse.cmf.occi.tosca.examples/" + name + ".extendedTosca");
 		resource = resSet.createResource(modelURI);
-		
-		OcciRegistry.getInstance().registerExtension(
-				"http://schemas.ogf.org/tosca/core#", 
-				PREFIX_FILE + Main.ROOT_WORKSPACE + "org.eclipse.cmf.occi.tosca/model/tosca.occie"
-		);
-		
-		OcciRegistry.getInstance().registerExtension(
-				"http://schemas.ogf.org/tosca/extended#", 
-				PREFIX_FILE + Main.ROOT_WORKSPACE + "org.eclipse.cmf.occi.tosca.extended/model/extendedTosca.occie"
-		);
+//		
+//		OcciRegistry.getInstance().registerExtension(
+//				"http://schemas.ogf.org/tosca/core#", 
+//				PREFIX_FILE + Main.ROOT_WORKSPACE + "org.eclipse.cmf.occi.tosca/model/tosca.occie"
+//		);
+//		
+//		OcciRegistry.getInstance().registerExtension(
+//				"http://schemas.ogf.org/tosca/extended#", 
+//				PREFIX_FILE + Main.ROOT_WORKSPACE + "org.eclipse.cmf.occi.tosca.extended/model/extendedTosca.occie"
+//		);
 
 		Configuration configuration = OCCIFactory.eINSTANCE.createConfiguration();
+		
+		// loading TOSCA extensions
+		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/tosca/core#"));
+		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/tosca/extended#"));
+		
 		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/core#"));
 		configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/infrastructure#"));
 		//configuration.getUse().add(OcciHelper.loadExtension("http://schemas.ogf.org/occi/platform#"));

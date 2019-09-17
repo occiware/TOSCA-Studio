@@ -53,7 +53,8 @@ public class Main extends AbstractHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-		String pathOfDirectory = ROOT_WORKSPACE + "org.eclipse.cmf.occi.tosca.examples/tosca-topologies/";
+		String pathOfDirectory = "org.eclipse.cmf.occi.tosca.examples/tosca-topologies/";
+		System.out.println(new File(pathOfDirectory).getAbsolutePath());
 		String[] yamlFilesPath = new File(pathOfDirectory).list();
 		for (String yamlFilePath : yamlFilesPath) {
 			if (!yamlFilePath.equals("Example16-UsingSubstitutionMappingsToExportADatabaseImplementation.yml")
@@ -72,13 +73,11 @@ public class Main extends AbstractHandler {
 			}
 		}
 		
-		/*
 		System.out.println("Printout the Errors...");
 		for (String yamlFile : errors.keySet()) {
 			System.out.println(yamlFile + ":");
 			errors.get(yamlFile).printStackTrace();
 		}
-		*/
 		return null;
 	}
 
