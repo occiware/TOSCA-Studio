@@ -19,6 +19,7 @@ import org.eclipse.cmf.occi.tosca.ToscaPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -1201,13 +1202,22 @@ public interface ExtendedtoscaPackage extends EPackage {
 	int TOSCA_NODES_NETWORK_NETWORK_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 10;
 
 	/**
+	 * The operation id for the '<em>Applies Constraint</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_NETWORK___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Tosca nodes network network</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_NETWORK_NETWORK_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+	int TOSCA_NODES_NETWORK_NETWORK_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_container_application_dockerImpl <em>Tosca nodes container application docker</em>}' class.
@@ -3851,13 +3861,22 @@ public interface ExtendedtoscaPackage extends EPackage {
 	int TOSCA_NODES_NETWORK_PORT_FEATURE_COUNT = ToscaPackage.TOSCA_NODES_ROOT_FEATURE_COUNT + 5;
 
 	/**
+	 * The operation id for the '<em>Applies Constraint</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_NETWORK_PORT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Tosca nodes network port</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_NETWORK_PORT_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+	int TOSCA_NODES_NETWORK_PORT_OPERATION_COUNT = ToscaPackage.TOSCA_NODES_ROOT_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link extendedtosca.impl.Tosca_nodes_computewithcapwithattrImpl <em>Tosca nodes computewithcapwithattr</em>}' class.
@@ -4656,6 +4675,15 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_NODES_DBMS_MYSQL__DISK_SIZE = ToscaPackage.TOSCA_NODES_DBMS__DISK_SIZE;
+
+	/**
+	 * The feature id for the '<em><b>Occi Database Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DBMS_MYSQL__OCCI_DATABASE_VERSION = ToscaPackage.TOSCA_NODES_DBMS__OCCI_DATABASE_VERSION;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' attribute.
@@ -5534,6 +5562,16 @@ public interface ExtendedtoscaPackage extends EPackage {
 	EAttribute getTosca_nodes_network_network_EndIp();
 
 	/**
+	 * Returns the meta object for the '{@link extendedtosca.Tosca_nodes_network_network#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Applies Constraint</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Applies Constraint</em>' operation.
+	 * @see extendedtosca.Tosca_nodes_network_network#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getTosca_nodes_network_network__AppliesConstraint__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_container_application_docker <em>Tosca nodes container application docker</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5917,6 +5955,16 @@ public interface ExtendedtoscaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTosca_nodes_network_port_Order();
+
+	/**
+	 * Returns the meta object for the '{@link extendedtosca.Tosca_nodes_network_port#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Applies Constraint</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Applies Constraint</em>' operation.
+	 * @see extendedtosca.Tosca_nodes_network_port#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getTosca_nodes_network_port__AppliesConstraint__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link extendedtosca.Tosca_nodes_computewithcapwithattr <em>Tosca nodes computewithcapwithattr</em>}'.
@@ -6399,6 +6447,14 @@ public interface ExtendedtoscaPackage extends EPackage {
 		EAttribute TOSCA_NODES_NETWORK_NETWORK__END_IP = eINSTANCE.getTosca_nodes_network_network_EndIp();
 
 		/**
+		 * The meta object literal for the '<em><b>Applies Constraint</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TOSCA_NODES_NETWORK_NETWORK___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTosca_nodes_network_network__AppliesConstraint__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_container_application_dockerImpl <em>Tosca nodes container application docker</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6737,6 +6793,14 @@ public interface ExtendedtoscaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TOSCA_NODES_NETWORK_PORT__ORDER = eINSTANCE.getTosca_nodes_network_port_Order();
+
+		/**
+		 * The meta object literal for the '<em><b>Applies Constraint</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TOSCA_NODES_NETWORK_PORT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTosca_nodes_network_port__AppliesConstraint__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link extendedtosca.impl.Tosca_nodes_computewithcapwithattrImpl <em>Tosca nodes computewithcapwithattr</em>}' class.

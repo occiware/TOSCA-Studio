@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:infrastructure="http://schemas.ogf.org/occi/infrastructure/ecore" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:platform="http://schemas.modmacao.org/occi/platform/ecore" xmlns:tosca="http://schemas.ogf.org/tosca/core/ecore">
+  <use href="http://schemas.ogf.org/tosca/core#/"/>
+  <use href="http://schemas.ogf.org/tosca/extended#/"/>
   <use href="http://schemas.ogf.org/occi/core#/"/>
   <use href="http://schemas.ogf.org/occi/infrastructure#/"/>
   <use href="http://schemas.modmacao.org/modmacao#/"/>
@@ -8,40 +10,40 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://schemas.ogf.org/tosca/core#/"/>
   <use href="http://schemas.ogf.org/tosca/extended#/"/>
-  <resources xsi:type="platform:Application" id="urn:uuid:4451688a-a7bc-49d3-a7ef-33b9981af32e">
+  <resources xsi:type="platform:Application" id="urn:uuid:7ae738f4-135a-42bc-893b-50eaee451b8e">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:7222eeb5-4c2c-4045-abb4-50cfa368c64a" target="//@resources.2">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:a0843c11-9394-49c8-9383-9fef47263d18" target="//@resources.2">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:12a5e7c5-d105-4cd2-a703-b5aa403d15fb" target="//@resources.4">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:424a46db-dfbe-4d48-ad26-4ef58234ebea" target="//@resources.4">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
   </resources>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:99818957-ab7c-4e18-ab20-83c87235042c" title="my_server" occiComputeArchitecture="x64" occiComputeMemory="4.0">
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:074a3430-5714-4533-b822-bf0aa6921490" title="my_server" occiComputeArchitecture="x64" occiComputeMemory="4.0">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
     <parts xsi:type="tosca:Tosca_nodes_compute" type="Linux" distribution="Fedora" version="18.0" diskSize="10">
       <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
     </parts>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:1e25621f-1c5f-49d9-a544-81b1b295661e" title="my_storage" rlinks="//@resources.0/@links.0">
+  <resources xsi:type="platform:Component" id="urn:uuid:791bdf3f-5b79-4d18-86de-25b563a1e0b7" title="my_storage" rlinks="//@resources.0/@links.0">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
   </resources>
-  <resources xsi:type="infrastructure:Storage" id="urn:uuid:9bd013aa-ba7a-41c9-a20e-a546d2a08e46" title="my_storage">
+  <resources xsi:type="infrastructure:Storage" id="urn:uuid:4bc4b5c3-d572-4767-9c6e-d5e540a1781b" title="my_storage">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='storage']"/>
     <parts xsi:type="tosca:Tosca_nodes_blockstorage">
       <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_blockstorage']"/>
     </parts>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:d39cc7cf-d758-492e-a453-869a55445e2f" title="my_storage2" rlinks="//@resources.0/@links.1">
+  <resources xsi:type="platform:Component" id="urn:uuid:e379af89-9b91-44ba-a884-522a885d63ab" title="my_storage2" rlinks="//@resources.0/@links.1">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
   </resources>
-  <resources xsi:type="infrastructure:Storage" id="urn:uuid:1892e90a-4c05-4654-93cd-db2522dcee76" title="my_storage2">
+  <resources xsi:type="infrastructure:Storage" id="urn:uuid:b9a23a73-3178-49eb-bb1b-e7ac5aa83b74" title="my_storage2">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='storage']"/>
     <parts xsi:type="tosca:Tosca_nodes_blockstorage">
       <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_blockstorage']"/>
     </parts>
   </resources>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:838f3c93-c1a6-4980-b20f-c712c411709c" title="my_server2">
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:dca15e69-4ae0-4252-8336-d2ded4085624" title="my_server2">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
     <parts xsi:type="tosca:Tosca_nodes_compute" type="Linux" distribution="Fedora" version="18.0" diskSize="10">
       <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>

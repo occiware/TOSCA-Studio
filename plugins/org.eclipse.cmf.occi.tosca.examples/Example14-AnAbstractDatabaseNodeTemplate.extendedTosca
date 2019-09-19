@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:platform="http://schemas.modmacao.org/occi/platform/ecore">
+  <use href="http://schemas.ogf.org/tosca/core#/"/>
+  <use href="http://schemas.ogf.org/tosca/extended#/"/>
   <use href="http://schemas.ogf.org/occi/core#/"/>
   <use href="http://schemas.ogf.org/occi/infrastructure#/"/>
   <use href="http://schemas.modmacao.org/modmacao#/"/>
@@ -8,7 +10,7 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://schemas.ogf.org/tosca/core#/"/>
   <use href="http://schemas.ogf.org/tosca/extended#/"/>
-  <resources xsi:type="platform:Application" id="urn:uuid:db3c85fa-fe17-4b52-ab63-8c5fe6b23f16">
+  <resources xsi:type="platform:Application" id="urn:uuid:0747dee2-89d6-4268-8cc2-4b09a7df6296">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
   </resources>
 </occi:Configuration>

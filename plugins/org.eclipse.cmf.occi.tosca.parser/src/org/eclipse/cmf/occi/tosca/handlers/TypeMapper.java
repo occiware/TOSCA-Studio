@@ -21,11 +21,11 @@ public class TypeMapper extends Mapper {
 	public TypeMapper() {
 		super();
 		
-		this.mappings.put("tosca_nodes_Root", 
-				new MixinMapping(
-						ExtensionsManager.getKindFromItsTerm("core", "resource"),
-						ExtensionsManager.getMixinFromItsTerm("tosca", "tosca_interfaces_node_lifecycle_standard")
-		));
+//		this.mappings.put("tosca_nodes_Root", 
+//				new MixinMapping(
+//						ExtensionsManager.getKindFromItsTerm("core", "resource")
+//						//ExtensionsManager.getMixinFromItsTerm("tosca", "tosca_interfaces_node_lifecycle_standard")
+//		));
 		
 		this.mappings.put("tosca_nodes_BlockStorage",
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("infrastructure", "storage"))
@@ -42,7 +42,14 @@ public class TypeMapper extends Mapper {
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("infrastructure", "compute"), computeConstraint)
 			);
 		
+		/*
 		this.mappings.put("tosca_nodes_Root",
+				new MixinMapping(ExtensionsManager.getKindFromItsTerm("modmacao-platform", "component")
+			)
+		);
+		*/
+		
+		this.mappings.put("tosca_nodes_SoftwareComponent",
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("modmacao-platform", "component")
 			)
 		);
@@ -55,21 +62,33 @@ public class TypeMapper extends Mapper {
 				new MixinMapping(webServerConstraint)
 		);
 		
+		this.mappings.put("tosca_nodes_WebApplication",
+				new MixinMapping(ExtensionsManager.getKindFromItsTerm("modmacao-platform", "component")
+			)
+		);
+		
 		Constraint dbmsConstraint = OCCIFactory.eINSTANCE.createConstraint();
 		dbmsConstraint.setName("SourceMustBeDatabase");
 		//dbmsConstraint.setBody("self.depends.applies.source= tosca_nodes_Database");
 		dbmsConstraint.setBody("true");
 		this.mappings.put("tosca_nodes_DBMS", 
-				new MixinMapping(/*ExtensionsManager.getMixinFromItsTerm("platform", "database"),*/ dbmsConstraint)
+				new MixinMapping(ExtensionsManager.getMixinFromItsTerm("modmacao-platform", "database"), dbmsConstraint)
 			);
 		
 		this.mappings.put("tosca_nodes_Database", 
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("modmacao-platform", "component")
-			));
-
+			)
+		);
+		
+		this.mappings.put("tosca_nodes_LoadBalancer", 
+				new MixinMapping(ExtensionsManager.getKindFromItsTerm("modmacao-platform", "component")
+			)
+		);
+		
 		this.mappings.put("tosca_nodes_Container_Application", 
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("modmacao-platform", "component")
-			));
+			)
+		);
 		
 		this.mappings.put("tosca_policies_Root", 
 				new MixinMapping(ExtensionsManager.getMixinFromItsTerm("sla", "agreement_term"))
@@ -83,6 +102,16 @@ public class TypeMapper extends Mapper {
 								ExtensionsManager.getMixinFromItsTerm("modmacao-core", "executiondependency")
 						)
 				)
+		);
+		
+		this.mappings.put("tosca_nodes_network_Network", 
+				new MixinMapping(ExtensionsManager.getKindFromItsTerm("infrastructure", "network")
+			)
+		);
+		
+		this.mappings.put("tosca_nodes_network_Port", 
+				new MixinMapping(ExtensionsManager.getKindFromItsTerm("infrastructure", "network")
+			)
 		);
 		
 		Constraint dependsOnConstraint = OCCIFactory.eINSTANCE.createConstraint();

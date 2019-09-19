@@ -39,6 +39,7 @@ import org.eclipse.ocl.pivot.internal.library.executor.ExecutorPropertyWithImple
 import org.eclipse.ocl.pivot.internal.library.executor.ExecutorStandardLibrary;
 import org.eclipse.ocl.pivot.oclstdlib.OCLstdlibTables;
 import org.eclipse.ocl.pivot.utilities.TypeUtil;
+import org.modmacao.occi.platform.PlatformTables;
 
 /**
  * ToscaTables provides the dispatch tables for the tosca for use by the OCL dispatcher.
@@ -85,9 +86,10 @@ public class ToscaTables
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Tosca_nodes_container_application = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_schemas_ogf_org_s_tosca_s_core_s_ecore.getClassId("Tosca_nodes_container_application", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Tosca_nodes_database = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_schemas_ogf_org_s_tosca_s_core_s_ecore.getClassId("Tosca_nodes_database", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Tosca_nodes_dbms = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_schemas_ogf_org_s_tosca_s_core_s_ecore.getClassId("Tosca_nodes_dbms", 0);
+	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Tosca_nodes_loadbalancer = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_schemas_ogf_org_s_tosca_s_core_s_ecore.getClassId("Tosca_nodes_loadbalancer", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Tosca_nodes_objectstorage = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_schemas_ogf_org_s_tosca_s_core_s_ecore.getClassId("Tosca_nodes_objectstorage", 0);
-	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Tosca_nodes_root = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_schemas_ogf_org_s_tosca_s_core_s_ecore.getClassId("Tosca_nodes_root", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Tosca_nodes_softwarecomponent = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_schemas_ogf_org_s_tosca_s_core_s_ecore.getClassId("Tosca_nodes_softwarecomponent", 0);
+	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Tosca_nodes_webapplication = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_schemas_ogf_org_s_tosca_s_core_s_ecore.getClassId("Tosca_nodes_webapplication", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Tosca_nodes_webserver = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_schemas_ogf_org_s_tosca_s_core_s_ecore.getClassId("Tosca_nodes_webserver", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Tosca_relationships_attachesto = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_schemas_ogf_org_s_tosca_s_core_s_ecore.getClassId("Tosca_relationships_attachesto", 0);
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Tosca_relationships_connectsto = org.eclipse.cmf.occi.tosca.ToscaTables.PACKid_http_c_s_s_schemas_ogf_org_s_tosca_s_core_s_ecore.getClassId("Tosca_relationships_connectsto", 0);
@@ -113,8 +115,10 @@ public class ToscaTables
 	public static final /*@NonInvalid*/ java.lang.String STR_Tosca_nodes_compute_c_c_appliesConstraint = "Tosca_nodes_compute::appliesConstraint";
 	public static final /*@NonInvalid*/ java.lang.String STR_Tosca_nodes_container_application_c_c_appliesConstraint = "Tosca_nodes_container_application::appliesConstraint";
 	public static final /*@NonInvalid*/ java.lang.String STR_Tosca_nodes_database_c_c_appliesConstraint = "Tosca_nodes_database::appliesConstraint";
+	public static final /*@NonInvalid*/ java.lang.String STR_Tosca_nodes_loadbalancer_c_c_appliesConstraint = "Tosca_nodes_loadbalancer::appliesConstraint";
 	public static final /*@NonInvalid*/ java.lang.String STR_Tosca_nodes_objectstorage_c_c_appliesConstraint = "Tosca_nodes_objectstorage::appliesConstraint";
-	public static final /*@NonInvalid*/ java.lang.String STR_Tosca_nodes_root_c_c_appliesConstraint = "Tosca_nodes_root::appliesConstraint";
+	public static final /*@NonInvalid*/ java.lang.String STR_Tosca_nodes_softwarecomponent_c_c_appliesConstraint = "Tosca_nodes_softwarecomponent::appliesConstraint";
+	public static final /*@NonInvalid*/ java.lang.String STR_Tosca_nodes_webapplication_c_c_appliesConstraint = "Tosca_nodes_webapplication::appliesConstraint";
 	public static final /*@NonInvalid*/ java.lang.String STR_Tosca_relationships_attachesto_c_c_appliesConstraint = "Tosca_relationships_attachesto::appliesConstraint";
 	public static final /*@NonInvalid*/ java.lang.String STR_Tosca_relationships_root_c_c_appliesConstraint = "Tosca_relationships_root::appliesConstraint";
 	public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId SEQ_DATAid_string = org.eclipse.ocl.pivot.ids.TypeId.SEQUENCE.getSpecializedId(org.eclipse.cmf.occi.tosca.ToscaTables.DATAid_string);
@@ -461,6 +465,7 @@ public class ToscaTables
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_database__Tosca_nodes_database = new ExecutorFragment(Types._Tosca_nodes_database, ToscaTables.Types._Tosca_nodes_database);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_database__Tosca_nodes_root = new ExecutorFragment(Types._Tosca_nodes_database, ToscaTables.Types._Tosca_nodes_root);
 
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_dbms__Database = new ExecutorFragment(Types._Tosca_nodes_dbms, PlatformTables.Types._Database);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_dbms__MixinBase = new ExecutorFragment(Types._Tosca_nodes_dbms, OCCITables.Types._MixinBase);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_dbms__OclAny = new ExecutorFragment(Types._Tosca_nodes_dbms, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_dbms__OclElement = new ExecutorFragment(Types._Tosca_nodes_dbms, OCLstdlibTables.Types._OclElement);
@@ -1141,6 +1146,7 @@ public class ToscaTables
 				Fragments._Tosca_nodes_dbms__OclAny /* 0 */,
 				Fragments._Tosca_nodes_dbms__OclElement /* 1 */,
 				Fragments._Tosca_nodes_dbms__MixinBase /* 2 */,
+				Fragments._Tosca_nodes_dbms__Database /* 3 */,
 				Fragments._Tosca_nodes_dbms__Tosca_capabilities_root /* 3 */,
 				Fragments._Tosca_nodes_dbms__Tosca_capabilities_container /* 4 */,
 				Fragments._Tosca_nodes_dbms__Tosca_capabilities_node /* 4 */,
@@ -1148,7 +1154,7 @@ public class ToscaTables
 				Fragments._Tosca_nodes_dbms__Tosca_nodes_softwarecomponent /* 6 */,
 				Fragments._Tosca_nodes_dbms__Tosca_nodes_dbms /* 7 */
 			};
-		private static final int /*@NonNull*/ [] __Tosca_nodes_dbms = { 1,1,1,1,2,1,1,1 };
+		private static final int /*@NonNull*/ [] __Tosca_nodes_dbms = { 1,1,1,2,2,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_nodes_loadbalancer =
 			{
@@ -2358,6 +2364,7 @@ public class ToscaTables
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_database__Tosca_nodes_root = {};
 
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_dbms__Tosca_nodes_dbms = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_dbms__Database = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_dbms__MixinBase = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_dbms__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
@@ -3562,6 +3569,7 @@ public class ToscaTables
 			Fragments._Tosca_nodes_database__Tosca_nodes_database.initOperations(_Tosca_nodes_database__Tosca_nodes_database);
 			Fragments._Tosca_nodes_database__Tosca_nodes_root.initOperations(_Tosca_nodes_database__Tosca_nodes_root);
 
+			Fragments._Tosca_nodes_dbms__Database.initOperations(_Tosca_nodes_dbms__Database);
 			Fragments._Tosca_nodes_dbms__MixinBase.initOperations(_Tosca_nodes_dbms__MixinBase);
 			Fragments._Tosca_nodes_dbms__OclAny.initOperations(_Tosca_nodes_dbms__OclAny);
 			Fragments._Tosca_nodes_dbms__OclElement.initOperations(_Tosca_nodes_dbms__OclElement);

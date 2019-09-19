@@ -20,9 +20,7 @@ import org.eclipse.cmf.occi.core.Entity;
 
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
 import org.eclipse.cmf.occi.tosca.ToscaTables;
-import org.eclipse.cmf.occi.tosca.Tosca_capabilities_attachment;
 import org.eclipse.cmf.occi.tosca.Tosca_nodes_blockstorage;
-import org.eclipse.cmf.occi.tosca.Tosca_nodes_root;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -271,27 +269,6 @@ public class Tosca_nodes_blockstorageImpl extends Tosca_nodes_rootImpl implement
 				return SNAPSHOT_ID_EDEFAULT == null ? snapshotId != null : !SNAPSHOT_ID_EDEFAULT.equals(snapshotId);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
-		if (baseClass == Tosca_nodes_root.class) {
-			switch (baseOperationID) {
-				case ToscaPackage.TOSCA_NODES_ROOT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP: return ToscaPackage.TOSCA_NODES_BLOCKSTORAGE___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP;
-				default: return super.eDerivedOperationID(baseOperationID, baseClass);
-			}
-		}
-		if (baseClass == Tosca_capabilities_attachment.class) {
-			switch (baseOperationID) {
-				default: return -1;
-			}
-		}
-		return super.eDerivedOperationID(baseOperationID, baseClass);
 	}
 
 	/**

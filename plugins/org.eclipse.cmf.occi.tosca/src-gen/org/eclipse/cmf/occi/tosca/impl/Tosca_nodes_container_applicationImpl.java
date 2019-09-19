@@ -21,7 +21,6 @@ import org.eclipse.cmf.occi.core.Entity;
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
 import org.eclipse.cmf.occi.tosca.ToscaTables;
 import org.eclipse.cmf.occi.tosca.Tosca_nodes_container_application;
-import org.eclipse.cmf.occi.tosca.Tosca_nodes_root;
 
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
@@ -109,22 +108,6 @@ public class Tosca_nodes_container_applicationImpl extends Tosca_nodes_rootImpl 
 			symbol_0 = logDiagnostic;
 		}
 		return Boolean.TRUE == symbol_0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
-		if (baseClass == Tosca_nodes_root.class) {
-			switch (baseOperationID) {
-				case ToscaPackage.TOSCA_NODES_ROOT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP: return ToscaPackage.TOSCA_NODES_CONTAINER_APPLICATION___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP;
-				default: return super.eDerivedOperationID(baseOperationID, baseClass);
-			}
-		}
-		return super.eDerivedOperationID(baseOperationID, baseClass);
 	}
 
 	/**

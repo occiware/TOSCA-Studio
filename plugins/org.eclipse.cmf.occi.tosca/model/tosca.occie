@@ -42,20 +42,23 @@
     <attributes name="version" description="The Operating System version." type="//@types.12"/>
   </mixins>
   <mixins name="tosca_capabilities_Attachment" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default TOSCA type that should be used or extended to define an attachment capability of a (logical) infrastructure device node (e.g., BlockStorage node)." depends="//@mixins[term='tosca_capabilities_root']"/>
-  <mixins name="tosca_nodes_Root" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default (root) TOSCA Node Type that all other TOSCA nodes should extends. This allows all TOSCA nodes to have a consistent set of features for modeling and management (e.g, consistent definitions for requirements, capabilities, and lifecycle interfaces)." depends="//@mixins[term='tosca_capabilities_node']">
-    <applies href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
-  </mixins>
+  <mixins name="tosca_nodes_Root" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default (root) TOSCA Node Type that all other TOSCA nodes should extends. This allows all TOSCA nodes to have a consistent set of features for modeling and management (e.g, consistent definitions for requirements, capabilities, and lifecycle interfaces)." depends="//@mixins[term='tosca_capabilities_node']"/>
   <mixins name="tosca_nodes_WebApplication" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA WebApplication node represents a software application that can be managed and run by a TOSCA WebServer node. Specific types of web applications such as Java, etc. could be derived from this type." depends="//@mixins[term='tosca_nodes_root'] //@mixins[term='tosca_capabilities_endpoint']">
     <attributes name="context.root" description="The web application&#x2019;s context root which designates the application&#x2019;s URL path within the web server it is hosted on." type="//@types.0"/>
+    <applies href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
   </mixins>
   <mixins name="tosca_nodes_SoftwareComponent" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA SoftwareComponent node represents a generic software component that can be managed and run by a TOSCA Compute Node Type." depends="//@mixins[term='tosca_nodes_root']">
     <attributes name="admin.credential" description="The optional credential that can be used to authenticate to the software component." type="//@types.22"/>
     <attributes name="component.version" description="The optional software component&#x2019;s version." type="//@types.12"/>
+    <applies href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
   </mixins>
-  <mixins name="tosca_nodes_DBMS" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA DBMS node represents a typical relational, SQL Database Management System software component or service." depends="//@mixins[term='tosca_nodes_softwarecomponent'] //@mixins[term='tosca_capabilities_container']">
+  <mixins name="tosca_nodes_DBMS" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA DBMS node represents a typical relational, SQL Database Management System software component or service.">
     <attributes name="port" description="the port the DBMS service will listen to for data and requests" type="//@types.6"/>
     <attributes name="root.password" description="the optional root password for the DBMS service" type="//@types.0"/>
     <constraints name="SourceMustBeDatabase" body="true"/>
+    <depends href="#//@mixins[term='tosca_nodes_softwarecomponent']"/>
+    <depends href="#//@mixins[term='tosca_capabilities_container']"/>
+    <depends href="http://schemas.modmacao.org/occi/platform#//@mixins[term='database']"/>
   </mixins>
   <mixins name="tosca_nodes_ObjectStorage" scheme="http://schemas.ogf.org/tosca/core#" depends="//@mixins[term='tosca_nodes_root'] //@mixins[term='tosca_capabilities_endpoint']">
     <attributes name="size" type="//@types.17"/>
@@ -71,6 +74,7 @@
   </mixins>
   <mixins name="tosca_nodes_LoadBalancer" scheme="http://schemas.ogf.org/tosca/core#" title="The TOSCA Load Balancer node represents logical function that be used in conjunction with a Floating Address to distribute an application&#x2019;s traffic (load) across a number of instances of the application (e.g., for a clustered or scaled application)." depends="//@mixins[term='tosca_nodes_root'] //@mixins[term='tosca_capabilities_endpoint_public']">
     <attributes name="algorithm" type="//@types.0"/>
+    <applies href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
   </mixins>
   <mixins name="tosca_nodes_WebServer" scheme="http://schemas.ogf.org/tosca/core#" title="This TOSCA WebServer Node Type represents an abstract software component or service that is capable of hosting and providing management operations for one or more WebApplication nodes." depends="//@mixins[term='tosca_nodes_softwarecomponent'] //@mixins[term='tosca_capabilities_endpoint'] //@mixins[term='tosca_capabilities_endpoint_admin'] //@mixins[term='tosca_capabilities_container']">
     <constraints name="SourceMustBeWebApplication" body="true"/>

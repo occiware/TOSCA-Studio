@@ -48,6 +48,8 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
+import org.modmacao.occi.platform.Database;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
@@ -359,6 +361,10 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseTosca_nodes_webserver(Tosca_nodes_webserver object) {
 				return createTosca_nodes_webserverAdapter();
+			}
+			@Override
+			public Adapter caseDatabase(Database object) {
+				return createDatabaseAdapter();
 			}
 			@Override
 			public Adapter caseTosca_nodes_dbms(Tosca_nodes_dbms object) {
@@ -1301,6 +1307,20 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTosca_nodes_webserverAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.modmacao.occi.platform.Database <em>Database</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.modmacao.occi.platform.Database
+	 * @generated
+	 */
+	public Adapter createDatabaseAdapter() {
 		return null;
 	}
 

@@ -48,6 +48,7 @@ public class Main extends AbstractHandler {
 			ExtensionsManager.createExtendedTosca();
 			Map<String, ?> customTypesMap = concatCustomAndAddedTypes();
 			readYamlFile(customTypesMap);
+			executeMapping();
 			ExtensionsManager.save();
 
 		} catch (Exception e) {

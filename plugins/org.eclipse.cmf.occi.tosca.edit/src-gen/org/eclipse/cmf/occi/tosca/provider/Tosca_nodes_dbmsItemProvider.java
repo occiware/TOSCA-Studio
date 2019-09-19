@@ -27,6 +27,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.modmacao.occi.platform.PlatformPackage;
+
 /**
  * This is the item provider adapter for a {@link org.eclipse.cmf.occi.tosca.Tosca_nodes_dbms} object.
  * <!-- begin-user-doc -->
@@ -56,6 +58,7 @@ public class Tosca_nodes_dbmsItemProvider extends Tosca_nodes_softwarecomponentI
 			super.getPropertyDescriptors(object);
 
 			addDiskSizePropertyDescriptor(object);
+			addOcciDatabaseVersionPropertyDescriptor(object);
 			addPortPropertyDescriptor(object);
 			addRootPasswordPropertyDescriptor(object);
 		}
@@ -76,6 +79,28 @@ public class Tosca_nodes_dbmsItemProvider extends Tosca_nodes_softwarecomponentI
 				 getString("_UI_Tosca_capabilities_container_diskSize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_capabilities_container_diskSize_feature", "_UI_Tosca_capabilities_container_type"),
 				 ToscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Occi Database Version feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOcciDatabaseVersionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Database_occiDatabaseVersion_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Database_occiDatabaseVersion_feature", "_UI_Database_type"),
+				 PlatformPackage.Literals.DATABASE__OCCI_DATABASE_VERSION,
 				 true,
 				 false,
 				 false,
@@ -167,6 +192,7 @@ public class Tosca_nodes_dbmsItemProvider extends Tosca_nodes_softwarecomponentI
 
 		switch (notification.getFeatureID(Tosca_nodes_dbms.class)) {
 			case ToscaPackage.TOSCA_NODES_DBMS__DISK_SIZE:
+			case ToscaPackage.TOSCA_NODES_DBMS__OCCI_DATABASE_VERSION:
 			case ToscaPackage.TOSCA_NODES_DBMS__PORT:
 			case ToscaPackage.TOSCA_NODES_DBMS__ROOT_PASSWORD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
