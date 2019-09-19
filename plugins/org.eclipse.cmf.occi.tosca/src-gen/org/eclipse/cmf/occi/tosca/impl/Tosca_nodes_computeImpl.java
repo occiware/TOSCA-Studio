@@ -27,7 +27,6 @@ import org.eclipse.cmf.occi.tosca.Tosca_capabilities_network_bindable;
 import org.eclipse.cmf.occi.tosca.Tosca_capabilities_operatingsystem;
 import org.eclipse.cmf.occi.tosca.Tosca_capabilities_scalable;
 import org.eclipse.cmf.occi.tosca.Tosca_nodes_compute;
-import org.eclipse.cmf.occi.tosca.Tosca_nodes_root;
 import org.eclipse.cmf.occi.tosca.initiatorEnum;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -1231,52 +1230,6 @@ public class Tosca_nodes_computeImpl extends Tosca_nodes_rootImpl implements Tos
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
-		if (baseClass == Tosca_nodes_root.class) {
-			switch (baseOperationID) {
-				case ToscaPackage.TOSCA_NODES_ROOT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP: return ToscaPackage.TOSCA_NODES_COMPUTE___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP;
-				default: return super.eDerivedOperationID(baseOperationID, baseClass);
-			}
-		}
-		if (baseClass == Tosca_capabilities_scalable.class) {
-			switch (baseOperationID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Tosca_capabilities_endpoint.class) {
-			switch (baseOperationID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Tosca_capabilities_endpoint_admin.class) {
-			switch (baseOperationID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Tosca_capabilities_operatingsystem.class) {
-			switch (baseOperationID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Tosca_capabilities_container.class) {
-			switch (baseOperationID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Tosca_capabilities_network_bindable.class) {
-			switch (baseOperationID) {
-				default: return -1;
-			}
-		}
-		return super.eDerivedOperationID(baseOperationID, baseClass);
 	}
 
 	/**

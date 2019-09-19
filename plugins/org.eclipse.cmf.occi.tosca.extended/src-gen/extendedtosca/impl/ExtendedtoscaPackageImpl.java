@@ -64,6 +64,8 @@ import extendedtosca.arrayversion;
 import extendedtosca.ip_versionEnum;
 import extendedtosca.storage_pathEnum;
 
+import extendedtosca.util.ExtendedtoscaValidator;
+
 import modmacao.ModmacaoPackage;
 
 import org.eclipse.cmf.occi.core.OCCIPackage;
@@ -77,8 +79,11 @@ import org.eclipse.cmf.occi.tosca.ToscaPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EGenericType;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EValidator;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
@@ -498,6 +503,15 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		// Initialize created meta-data
 		theExtendedtoscaPackage.initializePackageContents();
 
+		// Register package validator
+		EValidator.Registry.INSTANCE.put
+			(theExtendedtoscaPackage,
+			 new EValidator.Descriptor() {
+				 public EValidator getEValidator() {
+					 return ExtendedtoscaValidator.INSTANCE;
+				 }
+			 });
+
 		// Mark meta-data to indicate it can't be changed
 		theExtendedtoscaPackage.freeze();
 
@@ -819,6 +833,15 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 */
 	public EAttribute getTosca_nodes_network_network_EndIp() {
 		return (EAttribute)tosca_nodes_network_networkEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getTosca_nodes_network_network__AppliesConstraint__DiagnosticChain_Map() {
+		return tosca_nodes_network_networkEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1159,6 +1182,15 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getTosca_nodes_network_port__AppliesConstraint__DiagnosticChain_Map() {
+		return tosca_nodes_network_portEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTosca_nodes_computewithcapwithattr() {
 		return tosca_nodes_computewithcapwithattrEClass;
 	}
@@ -1364,6 +1396,7 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		createEAttribute(tosca_nodes_network_networkEClass, TOSCA_NODES_NETWORK_NETWORK__GATEWAY_IP);
 		createEAttribute(tosca_nodes_network_networkEClass, TOSCA_NODES_NETWORK_NETWORK__NETWORK_TYPE);
 		createEAttribute(tosca_nodes_network_networkEClass, TOSCA_NODES_NETWORK_NETWORK__END_IP);
+		createEOperation(tosca_nodes_network_networkEClass, TOSCA_NODES_NETWORK_NETWORK___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP);
 
 		tosca_nodes_container_application_dockerEClass = createEClass(TOSCA_NODES_CONTAINER_APPLICATION_DOCKER);
 
@@ -1423,6 +1456,7 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		createEAttribute(tosca_nodes_network_portEClass, TOSCA_NODES_NETWORK_PORT__IP_ADDRESS);
 		createEAttribute(tosca_nodes_network_portEClass, TOSCA_NODES_NETWORK_PORT__IS_DEFAULT);
 		createEAttribute(tosca_nodes_network_portEClass, TOSCA_NODES_NETWORK_PORT__ORDER);
+		createEOperation(tosca_nodes_network_portEClass, TOSCA_NODES_NETWORK_PORT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP);
 
 		tosca_nodes_computewithcapwithattrEClass = createEClass(TOSCA_NODES_COMPUTEWITHCAPWITHATTR);
 
@@ -1634,6 +1668,15 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		initEAttribute(getTosca_nodes_network_network_NetworkType(), theToscaPackage.getstring(), "networkType", null, 0, 1, Tosca_nodes_network_network.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTosca_nodes_network_network_EndIp(), theToscaPackage.getstring(), "endIp", null, 0, 1, Tosca_nodes_network_network.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		EOperation op = initEOperation(getTosca_nodes_network_network__AppliesConstraint__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "appliesConstraint", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EGenericType g1 = createEGenericType(ecorePackage.getEMap());
+		EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(tosca_nodes_container_application_dockerEClass, Tosca_nodes_container_application_docker.class, "Tosca_nodes_container_application_docker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(tosca_nodes_softwarecomponent_kibanaEClass, Tosca_nodes_softwarecomponent_kibana.class, "Tosca_nodes_softwarecomponent_kibana", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1693,6 +1736,15 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		initEAttribute(getTosca_nodes_network_port_IsDefault(), theToscaPackage.getboolean(), "isDefault", "false", 0, 1, Tosca_nodes_network_port.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTosca_nodes_network_port_Order(), theToscaPackage.getintegerMinZero(), "order", "0", 1, 1, Tosca_nodes_network_port.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		op = initEOperation(getTosca_nodes_network_port__AppliesConstraint__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "appliesConstraint", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(tosca_nodes_computewithcapwithattrEClass, Tosca_nodes_computewithcapwithattr.class, "Tosca_nodes_computewithcapwithattr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(tosca_nodes_softwarecomponent_rsyslogEClass, Tosca_nodes_softwarecomponent_rsyslog.class, "Tosca_nodes_softwarecomponent_rsyslog", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1747,6 +1799,18 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		  (this,
 		   source,
 		   new String[] {
+		   });
+		addAnnotation
+		  (tosca_nodes_network_networkEClass,
+		   source,
+		   new String[] {
+			   "constraints", "appliesConstraint"
+		   });
+		addAnnotation
+		  (tosca_nodes_network_portEClass,
+		   source,
+		   new String[] {
+			   "constraints", "appliesConstraint"
 		   });
 	}
 

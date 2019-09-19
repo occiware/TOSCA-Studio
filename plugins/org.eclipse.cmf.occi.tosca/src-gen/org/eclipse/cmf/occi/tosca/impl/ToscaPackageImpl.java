@@ -1103,15 +1103,6 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTosca_nodes_root__AppliesConstraint__DiagnosticChain_Map() {
-		return tosca_nodes_rootEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTosca_nodes_webapplication() {
 		return tosca_nodes_webapplicationEClass;
 	}
@@ -1123,6 +1114,15 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 */
 	public EAttribute getTosca_nodes_webapplication_ContextRoot() {
 		return (EAttribute)tosca_nodes_webapplicationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getTosca_nodes_webapplication__AppliesConstraint__DiagnosticChain_Map() {
+		return tosca_nodes_webapplicationEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1150,6 +1150,15 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 */
 	public EAttribute getTosca_nodes_softwarecomponent_ComponentVersion() {
 		return (EAttribute)tosca_nodes_softwarecomponentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getTosca_nodes_softwarecomponent__AppliesConstraint__DiagnosticChain_Map() {
+		return tosca_nodes_softwarecomponentEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1294,6 +1303,15 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 */
 	public EAttribute getTosca_nodes_loadbalancer_Algorithm() {
 		return (EAttribute)tosca_nodes_loadbalancerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getTosca_nodes_loadbalancer__AppliesConstraint__DiagnosticChain_Map() {
+		return tosca_nodes_loadbalancerEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -2068,14 +2086,15 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		tosca_capabilities_attachmentEClass = createEClass(TOSCA_CAPABILITIES_ATTACHMENT);
 
 		tosca_nodes_rootEClass = createEClass(TOSCA_NODES_ROOT);
-		createEOperation(tosca_nodes_rootEClass, TOSCA_NODES_ROOT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP);
 
 		tosca_nodes_webapplicationEClass = createEClass(TOSCA_NODES_WEBAPPLICATION);
 		createEAttribute(tosca_nodes_webapplicationEClass, TOSCA_NODES_WEBAPPLICATION__CONTEXT_ROOT);
+		createEOperation(tosca_nodes_webapplicationEClass, TOSCA_NODES_WEBAPPLICATION___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP);
 
 		tosca_nodes_softwarecomponentEClass = createEClass(TOSCA_NODES_SOFTWARECOMPONENT);
 		createEReference(tosca_nodes_softwarecomponentEClass, TOSCA_NODES_SOFTWARECOMPONENT__ADMIN_CREDENTIAL);
 		createEAttribute(tosca_nodes_softwarecomponentEClass, TOSCA_NODES_SOFTWARECOMPONENT__COMPONENT_VERSION);
+		createEOperation(tosca_nodes_softwarecomponentEClass, TOSCA_NODES_SOFTWARECOMPONENT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP);
 
 		tosca_nodes_dbmsEClass = createEClass(TOSCA_NODES_DBMS);
 		createEAttribute(tosca_nodes_dbmsEClass, TOSCA_NODES_DBMS__PORT);
@@ -2096,6 +2115,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 
 		tosca_nodes_loadbalancerEClass = createEClass(TOSCA_NODES_LOADBALANCER);
 		createEAttribute(tosca_nodes_loadbalancerEClass, TOSCA_NODES_LOADBALANCER__ALGORITHM);
+		createEOperation(tosca_nodes_loadbalancerEClass, TOSCA_NODES_LOADBALANCER___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP);
 
 		tosca_nodes_webserverEClass = createEClass(TOSCA_NODES_WEBSERVER);
 		createEOperation(tosca_nodes_webserverEClass, TOSCA_NODES_WEBSERVER___SOURCE_MUST_BE_WEB_APPLICATION__DIAGNOSTICCHAIN_MAP);
@@ -2222,6 +2242,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 
 		// Obtain other dependent packages
 		OCCIPackage theOCCIPackage = (OCCIPackage)EPackage.Registry.INSTANCE.getEPackage(OCCIPackage.eNS_URI);
+		PlatformPackage thePlatformPackage = (PlatformPackage)EPackage.Registry.INSTANCE.getEPackage(PlatformPackage.eNS_URI);
 		SlaPackage theSlaPackage = (SlaPackage)EPackage.Registry.INSTANCE.getEPackage(SlaPackage.eNS_URI);
 		ModmacaoPackage theModmacaoPackage = (ModmacaoPackage)EPackage.Registry.INSTANCE.getEPackage(ModmacaoPackage.eNS_URI);
 
@@ -2260,6 +2281,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		tosca_nodes_softwarecomponentEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_nodes_dbmsEClass.getESuperTypes().add(this.getTosca_nodes_softwarecomponent());
 		tosca_nodes_dbmsEClass.getESuperTypes().add(this.getTosca_capabilities_container());
+		tosca_nodes_dbmsEClass.getESuperTypes().add(thePlatformPackage.getDatabase());
 		tosca_nodes_dbmsEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_nodes_objectstorageEClass.getESuperTypes().add(this.getTosca_nodes_root());
 		tosca_nodes_objectstorageEClass.getESuperTypes().add(this.getTosca_capabilities_endpoint());
@@ -2392,7 +2414,10 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 
 		initEClass(tosca_nodes_rootEClass, Tosca_nodes_root.class, "Tosca_nodes_root", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getTosca_nodes_root__AppliesConstraint__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "appliesConstraint", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEClass(tosca_nodes_webapplicationEClass, Tosca_nodes_webapplication.class, "Tosca_nodes_webapplication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTosca_nodes_webapplication_ContextRoot(), this.getstring(), "contextRoot", null, 0, 1, Tosca_nodes_webapplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		EOperation op = initEOperation(getTosca_nodes_webapplication__AppliesConstraint__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "appliesConstraint", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(ecorePackage.getEMap());
 		EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -2401,12 +2426,18 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(tosca_nodes_webapplicationEClass, Tosca_nodes_webapplication.class, "Tosca_nodes_webapplication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTosca_nodes_webapplication_ContextRoot(), this.getstring(), "contextRoot", null, 0, 1, Tosca_nodes_webapplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(tosca_nodes_softwarecomponentEClass, Tosca_nodes_softwarecomponent.class, "Tosca_nodes_softwarecomponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTosca_nodes_softwarecomponent_AdminCredential(), this.getCredential(), null, "adminCredential", null, 0, 1, Tosca_nodes_softwarecomponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTosca_nodes_softwarecomponent_ComponentVersion(), this.getversion(), "componentVersion", null, 0, 1, Tosca_nodes_softwarecomponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getTosca_nodes_softwarecomponent__AppliesConstraint__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "appliesConstraint", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(tosca_nodes_dbmsEClass, Tosca_nodes_dbms.class, "Tosca_nodes_dbms", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTosca_nodes_dbms_Port(), this.getinteger(), "port", null, 0, 1, Tosca_nodes_dbms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2459,6 +2490,15 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 
 		initEClass(tosca_nodes_loadbalancerEClass, Tosca_nodes_loadbalancer.class, "Tosca_nodes_loadbalancer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTosca_nodes_loadbalancer_Algorithm(), this.getstring(), "algorithm", null, 0, 1, Tosca_nodes_loadbalancer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getTosca_nodes_loadbalancer__AppliesConstraint__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "appliesConstraint", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(tosca_nodes_webserverEClass, Tosca_nodes_webserver.class, "Tosca_nodes_webserver", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2705,7 +2745,13 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		   new String[] {
 		   });
 		addAnnotation
-		  (tosca_nodes_rootEClass,
+		  (tosca_nodes_webapplicationEClass,
+		   source,
+		   new String[] {
+			   "constraints", "appliesConstraint"
+		   });
+		addAnnotation
+		  (tosca_nodes_softwarecomponentEClass,
 		   source,
 		   new String[] {
 			   "constraints", "appliesConstraint"
@@ -2724,6 +2770,12 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		   });
 		addAnnotation
 		  (tosca_nodes_computeEClass,
+		   source,
+		   new String[] {
+			   "constraints", "appliesConstraint"
+		   });
+		addAnnotation
+		  (tosca_nodes_loadbalancerEClass,
 		   source,
 		   new String[] {
 			   "constraints", "appliesConstraint"

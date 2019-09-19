@@ -75,6 +75,7 @@
       <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
     </attributes>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
+    <applies href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='network']"/>
   </mixins>
   <mixins name="tosca_nodes_Container_Application_Docker" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_container_application']"/>
@@ -198,6 +199,7 @@
       <type xsi:type="occi:NumericType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.8"/>
     </attributes>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
+    <applies href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='network']"/>
   </mixins>
   <mixins name="tosca_nodes_ComputeWithCapWithAttr" scheme="http://schemas.ogf.org/tosca/extended#" title="Compute node type with capability with an attribute of type list">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_compute']"/>

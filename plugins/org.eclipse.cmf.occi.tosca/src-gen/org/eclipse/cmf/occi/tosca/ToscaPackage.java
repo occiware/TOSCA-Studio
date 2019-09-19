@@ -1407,22 +1407,13 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_ROOT_FEATURE_COUNT = TOSCA_CAPABILITIES_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Applies Constraint</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOSCA_NODES_ROOT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = TOSCA_CAPABILITIES_NODE_OPERATION_COUNT + 0;
-
-	/**
 	 * The number of operations of the '<em>Tosca nodes root</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_ROOT_OPERATION_COUNT = TOSCA_CAPABILITIES_NODE_OPERATION_COUNT + 1;
+	int TOSCA_NODES_ROOT_OPERATION_COUNT = TOSCA_CAPABILITIES_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_webapplicationImpl <em>Tosca nodes webapplication</em>}' class.
@@ -1558,7 +1549,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_WEBAPPLICATION___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = TOSCA_NODES_ROOT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP;
+	int TOSCA_NODES_WEBAPPLICATION___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Tosca nodes webapplication</em>' class.
@@ -1567,7 +1558,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_WEBAPPLICATION_OPERATION_COUNT = TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+	int TOSCA_NODES_WEBAPPLICATION_OPERATION_COUNT = TOSCA_NODES_ROOT_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_softwarecomponentImpl <em>Tosca nodes softwarecomponent</em>}' class.
@@ -1640,7 +1631,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = TOSCA_NODES_ROOT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP;
+	int TOSCA_NODES_SOFTWARECOMPONENT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Tosca nodes softwarecomponent</em>' class.
@@ -1649,7 +1640,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_SOFTWARECOMPONENT_OPERATION_COUNT = TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+	int TOSCA_NODES_SOFTWARECOMPONENT_OPERATION_COUNT = TOSCA_NODES_ROOT_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_dbmsImpl <em>Tosca nodes dbms</em>}' class.
@@ -1716,13 +1707,22 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_DBMS__DISK_SIZE = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Occi Database Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DBMS__OCCI_DATABASE_VERSION = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Port</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_DBMS__PORT = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 1;
+	int TOSCA_NODES_DBMS__PORT = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Root Password</b></em>' attribute.
@@ -1731,7 +1731,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_DBMS__ROOT_PASSWORD = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 2;
+	int TOSCA_NODES_DBMS__ROOT_PASSWORD = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Tosca nodes dbms</em>' class.
@@ -1740,7 +1740,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_DBMS_FEATURE_COUNT = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 3;
+	int TOSCA_NODES_DBMS_FEATURE_COUNT = TOSCA_NODES_SOFTWARECOMPONENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Applies Constraint</em>' operation.
@@ -2310,7 +2310,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_LOADBALANCER___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = TOSCA_NODES_ROOT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP;
+	int TOSCA_NODES_LOADBALANCER___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Tosca nodes loadbalancer</em>' class.
@@ -2319,7 +2319,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_NODES_LOADBALANCER_OPERATION_COUNT = TOSCA_NODES_ROOT_OPERATION_COUNT + 0;
+	int TOSCA_NODES_LOADBALANCER_OPERATION_COUNT = TOSCA_NODES_ROOT_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_webserverImpl <em>Tosca nodes webserver</em>}' class.
@@ -5108,16 +5108,6 @@ public interface ToscaPackage extends EPackage {
 	EClass getTosca_nodes_root();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_root#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Applies Constraint</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Applies Constraint</em>' operation.
-	 * @see org.eclipse.cmf.occi.tosca.Tosca_nodes_root#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getTosca_nodes_root__AppliesConstraint__DiagnosticChain_Map();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_webapplication <em>Tosca nodes webapplication</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5137,6 +5127,16 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTosca_nodes_webapplication_ContextRoot();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_webapplication#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Applies Constraint</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Applies Constraint</em>' operation.
+	 * @see org.eclipse.cmf.occi.tosca.Tosca_nodes_webapplication#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getTosca_nodes_webapplication__AppliesConstraint__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_softwarecomponent <em>Tosca nodes softwarecomponent</em>}'.
@@ -5169,6 +5169,16 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTosca_nodes_softwarecomponent_ComponentVersion();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_softwarecomponent#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Applies Constraint</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Applies Constraint</em>' operation.
+	 * @see org.eclipse.cmf.occi.tosca.Tosca_nodes_softwarecomponent#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getTosca_nodes_softwarecomponent__AppliesConstraint__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_dbms <em>Tosca nodes dbms</em>}'.
@@ -5337,6 +5347,16 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTosca_nodes_loadbalancer_Algorithm();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_loadbalancer#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Applies Constraint</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Applies Constraint</em>' operation.
+	 * @see org.eclipse.cmf.occi.tosca.Tosca_nodes_loadbalancer#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getTosca_nodes_loadbalancer__AppliesConstraint__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_webserver <em>Tosca nodes webserver</em>}'.
@@ -6609,14 +6629,6 @@ public interface ToscaPackage extends EPackage {
 		EClass TOSCA_NODES_ROOT = eINSTANCE.getTosca_nodes_root();
 
 		/**
-		 * The meta object literal for the '<em><b>Applies Constraint</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TOSCA_NODES_ROOT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTosca_nodes_root__AppliesConstraint__DiagnosticChain_Map();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_webapplicationImpl <em>Tosca nodes webapplication</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6633,6 +6645,14 @@ public interface ToscaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TOSCA_NODES_WEBAPPLICATION__CONTEXT_ROOT = eINSTANCE.getTosca_nodes_webapplication_ContextRoot();
+
+		/**
+		 * The meta object literal for the '<em><b>Applies Constraint</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TOSCA_NODES_WEBAPPLICATION___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTosca_nodes_webapplication__AppliesConstraint__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_softwarecomponentImpl <em>Tosca nodes softwarecomponent</em>}' class.
@@ -6659,6 +6679,14 @@ public interface ToscaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TOSCA_NODES_SOFTWARECOMPONENT__COMPONENT_VERSION = eINSTANCE.getTosca_nodes_softwarecomponent_ComponentVersion();
+
+		/**
+		 * The meta object literal for the '<em><b>Applies Constraint</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TOSCA_NODES_SOFTWARECOMPONENT___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTosca_nodes_softwarecomponent__AppliesConstraint__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_dbmsImpl <em>Tosca nodes dbms</em>}' class.
@@ -6795,6 +6823,14 @@ public interface ToscaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TOSCA_NODES_LOADBALANCER__ALGORITHM = eINSTANCE.getTosca_nodes_loadbalancer_Algorithm();
+
+		/**
+		 * The meta object literal for the '<em><b>Applies Constraint</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TOSCA_NODES_LOADBALANCER___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = eINSTANCE.getTosca_nodes_loadbalancer__AppliesConstraint__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_webserverImpl <em>Tosca nodes webserver</em>}' class.

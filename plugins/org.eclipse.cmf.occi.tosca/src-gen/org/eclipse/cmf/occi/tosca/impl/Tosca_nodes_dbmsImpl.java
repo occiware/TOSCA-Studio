@@ -31,6 +31,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.ocl.pivot.utilities.ValueUtil;
 
+import org.modmacao.occi.platform.Database;
+import org.modmacao.occi.platform.PlatformPackage;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Tosca nodes dbms</b></em>'.
@@ -40,6 +43,7 @@ import org.eclipse.ocl.pivot.utilities.ValueUtil;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_dbmsImpl#getDiskSize <em>Disk Size</em>}</li>
+ *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_dbmsImpl#getOcciDatabaseVersion <em>Occi Database Version</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_dbmsImpl#getPort <em>Port</em>}</li>
  *   <li>{@link org.eclipse.cmf.occi.tosca.impl.Tosca_nodes_dbmsImpl#getRootPassword <em>Root Password</em>}</li>
  * </ul>
@@ -66,6 +70,26 @@ public class Tosca_nodes_dbmsImpl extends Tosca_nodes_softwarecomponentImpl impl
 	 * @ordered
 	 */
 	protected Integer diskSize = DISK_SIZE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getOcciDatabaseVersion() <em>Occi Database Version</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOcciDatabaseVersion()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String OCCI_DATABASE_VERSION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getOcciDatabaseVersion() <em>Occi Database Version</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOcciDatabaseVersion()
+	 * @generated
+	 * @ordered
+	 */
+	protected String occiDatabaseVersion = OCCI_DATABASE_VERSION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPort() <em>Port</em>}' attribute.
@@ -152,6 +176,27 @@ public class Tosca_nodes_dbmsImpl extends Tosca_nodes_softwarecomponentImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getOcciDatabaseVersion() {
+		return occiDatabaseVersion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOcciDatabaseVersion(String newOcciDatabaseVersion) {
+		String oldOcciDatabaseVersion = occiDatabaseVersion;
+		occiDatabaseVersion = newOcciDatabaseVersion;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TOSCA_NODES_DBMS__OCCI_DATABASE_VERSION, oldOcciDatabaseVersion, occiDatabaseVersion));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Integer getPort() {
 		return port;
 	}
@@ -211,6 +256,8 @@ public class Tosca_nodes_dbmsImpl extends Tosca_nodes_softwarecomponentImpl impl
 		switch (featureID) {
 			case ToscaPackage.TOSCA_NODES_DBMS__DISK_SIZE:
 				return getDiskSize();
+			case ToscaPackage.TOSCA_NODES_DBMS__OCCI_DATABASE_VERSION:
+				return getOcciDatabaseVersion();
 			case ToscaPackage.TOSCA_NODES_DBMS__PORT:
 				return getPort();
 			case ToscaPackage.TOSCA_NODES_DBMS__ROOT_PASSWORD:
@@ -229,6 +276,9 @@ public class Tosca_nodes_dbmsImpl extends Tosca_nodes_softwarecomponentImpl impl
 		switch (featureID) {
 			case ToscaPackage.TOSCA_NODES_DBMS__DISK_SIZE:
 				setDiskSize((Integer)newValue);
+				return;
+			case ToscaPackage.TOSCA_NODES_DBMS__OCCI_DATABASE_VERSION:
+				setOcciDatabaseVersion((String)newValue);
 				return;
 			case ToscaPackage.TOSCA_NODES_DBMS__PORT:
 				setPort((Integer)newValue);
@@ -251,6 +301,9 @@ public class Tosca_nodes_dbmsImpl extends Tosca_nodes_softwarecomponentImpl impl
 			case ToscaPackage.TOSCA_NODES_DBMS__DISK_SIZE:
 				setDiskSize(DISK_SIZE_EDEFAULT);
 				return;
+			case ToscaPackage.TOSCA_NODES_DBMS__OCCI_DATABASE_VERSION:
+				setOcciDatabaseVersion(OCCI_DATABASE_VERSION_EDEFAULT);
+				return;
 			case ToscaPackage.TOSCA_NODES_DBMS__PORT:
 				setPort(PORT_EDEFAULT);
 				return;
@@ -271,6 +324,8 @@ public class Tosca_nodes_dbmsImpl extends Tosca_nodes_softwarecomponentImpl impl
 		switch (featureID) {
 			case ToscaPackage.TOSCA_NODES_DBMS__DISK_SIZE:
 				return DISK_SIZE_EDEFAULT == null ? diskSize != null : !DISK_SIZE_EDEFAULT.equals(diskSize);
+			case ToscaPackage.TOSCA_NODES_DBMS__OCCI_DATABASE_VERSION:
+				return OCCI_DATABASE_VERSION_EDEFAULT == null ? occiDatabaseVersion != null : !OCCI_DATABASE_VERSION_EDEFAULT.equals(occiDatabaseVersion);
 			case ToscaPackage.TOSCA_NODES_DBMS__PORT:
 				return PORT_EDEFAULT == null ? port != null : !PORT_EDEFAULT.equals(port);
 			case ToscaPackage.TOSCA_NODES_DBMS__ROOT_PASSWORD:
@@ -292,6 +347,12 @@ public class Tosca_nodes_dbmsImpl extends Tosca_nodes_softwarecomponentImpl impl
 				default: return -1;
 			}
 		}
+		if (baseClass == Database.class) {
+			switch (derivedFeatureID) {
+				case ToscaPackage.TOSCA_NODES_DBMS__OCCI_DATABASE_VERSION: return PlatformPackage.DATABASE__OCCI_DATABASE_VERSION;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -305,6 +366,12 @@ public class Tosca_nodes_dbmsImpl extends Tosca_nodes_softwarecomponentImpl impl
 		if (baseClass == Tosca_capabilities_container.class) {
 			switch (baseFeatureID) {
 				case ToscaPackage.TOSCA_CAPABILITIES_CONTAINER__DISK_SIZE: return ToscaPackage.TOSCA_NODES_DBMS__DISK_SIZE;
+				default: return -1;
+			}
+		}
+		if (baseClass == Database.class) {
+			switch (baseFeatureID) {
+				case PlatformPackage.DATABASE__OCCI_DATABASE_VERSION: return ToscaPackage.TOSCA_NODES_DBMS__OCCI_DATABASE_VERSION;
 				default: return -1;
 			}
 		}
@@ -338,6 +405,8 @@ public class Tosca_nodes_dbmsImpl extends Tosca_nodes_softwarecomponentImpl impl
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (diskSize: ");
 		result.append(diskSize);
+		result.append(", occiDatabaseVersion: ");
+		result.append(occiDatabaseVersion);
 		result.append(", port: ");
 		result.append(port);
 		result.append(", rootPassword: ");

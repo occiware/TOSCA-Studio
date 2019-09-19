@@ -46,6 +46,8 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
+import org.modmacao.occi.platform.Database;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Switch</b> for the model's inheritance hierarchy.
@@ -563,6 +565,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_nodes_dbms(tosca_nodes_dbms_mysql);
 				if (result == null) result = caseTosca_nodes_softwarecomponent(tosca_nodes_dbms_mysql);
 				if (result == null) result = caseTosca_capabilities_container(tosca_nodes_dbms_mysql);
+				if (result == null) result = caseDatabase(tosca_nodes_dbms_mysql);
 				if (result == null) result = caseTosca_nodes_root(tosca_nodes_dbms_mysql);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_dbms_mysql);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_dbms_mysql);
@@ -1592,6 +1595,21 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTosca_nodes_webserver(Tosca_nodes_webserver object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Database</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Database</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDatabase(Database object) {
 		return null;
 	}
 

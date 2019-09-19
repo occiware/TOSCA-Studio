@@ -22,10 +22,10 @@
     <semanticResources>platform:/plugin/org.eclipse.cmf.occi.infrastructure/model/Infrastructure.ecore</semanticResources>
     <semanticResources>platform:/resource/org.modmacao.occi.platform/model/platform.ecore</semanticResources>
     <semanticResources>platform:/resource/org.modmacao.placement/model/placement.ecore</semanticResources>
-    <semanticResources>model/extendedTosca.ecore</semanticResources>
     <semanticResources>platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.ecore</semanticResources>
-    <semanticResources>model/extendedTosca.genmodel</semanticResources>
     <semanticResources>platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.genmodel</semanticResources>
+    <semanticResources>model/extendedTosca.ecore</semanticResources>
+    <semanticResources>model/extendedTosca.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_zlFlwM8TEemXkqxrrayCBw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.cmf.occi.core.design/description/OCCIware.odesign#//@ownedViewpoints[name='OCCI%20Extension']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_1SbRUM8TEemXkqxrrayCBw" name="DiagramPaper" repPath="#_03rPAM8TEemXkqxrrayCBw">

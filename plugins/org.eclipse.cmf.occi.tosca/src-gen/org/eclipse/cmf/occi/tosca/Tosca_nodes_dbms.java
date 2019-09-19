@@ -18,6 +18,8 @@ import org.eclipse.cmf.occi.core.MixinBase;
 
 import org.eclipse.emf.common.util.DiagnosticChain;
 
+import org.modmacao.occi.platform.Database;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Tosca nodes dbms</b></em>'.
@@ -35,7 +37,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='SourceMustBeDatabase'"
  * @generated
  */
-public interface Tosca_nodes_dbms extends Tosca_nodes_softwarecomponent, Tosca_capabilities_container, MixinBase {
+public interface Tosca_nodes_dbms extends Tosca_nodes_softwarecomponent, Tosca_capabilities_container, Database, MixinBase {
 	/**
 	 * Returns the value of the '<em><b>Port</b></em>' attribute.
 	 * <!-- begin-user-doc -->
