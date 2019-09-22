@@ -9,7 +9,7 @@ import org.eclipse.cmf.occi.tosca.config.Mapper.Mapping;
 
 public class PropertyReader {
 
-	public static void readProperties(MixinBase node, Map<String, ?> properties) throws Exception {
+	public static void readProperties(String key, MixinBase node, Map<String, ?> properties) throws Exception {
 		for (String property : properties.keySet()) {
 			String propertyValue;
 			if (!(properties.get(property) instanceof String)) {
@@ -26,7 +26,7 @@ public class PropertyReader {
 				propertyValue = (String) properties.get(property);
 			}
 			String setterNameMethod = buildCorrectSetterName(property);
-			invokeRightMethod(node.getClass(), setterNameMethod, propertyValue, node);
+			invokeRightMethod(key, node.getClass(), setterNameMethod, propertyValue, node);
 		}
 	}
 	
@@ -47,7 +47,7 @@ public class PropertyReader {
 		return acc;
 	}
 
-	public static void invokeRightMethod(Class<?> classOfNode, String methodName, String propertyValue,
+	public static void invokeRightMethod(String key, Class<?> classOfNode, String methodName, String propertyValue,
 			MixinBase node) {
 		propertyValue = convertPropertyValue(propertyValue);
 		try {
@@ -68,7 +68,7 @@ public class PropertyReader {
 							if (!invokedCorrectly) {
 								for (Kind kind : node.getMixin().getApplies()) {
 									if (invokeUsingMappingOn(mapping, propertyValue,
-											ConfigManager.getResourceOfGivenKind(kind))) {
+											ConfigManager.getResourceOfGivenKind(key, kind))) {
 										break;
 									}
 								}

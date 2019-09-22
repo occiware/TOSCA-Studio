@@ -76,13 +76,22 @@ public class ConfigManager {
 		}
 	}
 	
-	public static org.eclipse.cmf.occi.core.Resource getResourceOfGivenKind(Kind kind) {
+	public static org.eclipse.cmf.occi.core.Resource getResourceOfGivenKind(String key, Kind kind) {
 		for (org.eclipse.cmf.occi.core.Resource resource : currentConfiguration.getResources()) {
-			if (resource.getKind().getTerm().endsWith(kind.getTerm())) {
+			if (resource.getKind().getTerm().endsWith(kind.getTerm()) &&
+					resource.getTitle().equals(key) ) {
 				return resource;
 			}
 		}
 		throw new RuntimeException("Could not find any resources corresponding to the Kind: " + kind.getName());
+	}
+	
+	public static org.eclipse.cmf.occi.core.Resource wrappedGetResourceOfGivenKind(String key, Kind kind) {
+		try {
+			return getResourceOfGivenKind(key, kind);
+		} catch (Exception e) {
+			return null;
+		}
 	}
 	
 	public static String convertPathToConfigName(String path) {

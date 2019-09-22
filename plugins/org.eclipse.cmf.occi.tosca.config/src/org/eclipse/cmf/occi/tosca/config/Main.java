@@ -48,34 +48,27 @@ public class Main extends AbstractHandler {
 	public static ApplicationAndComponentManager applicationAndComponentManger;
 
 	public static LinkManager linkManager = new LinkManager();
-	
+
 	public static Map<String, Exception> errors = new HashMap<>();
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-		String pathOfDirectory = "org.eclipse.cmf.occi.tosca.examples/tosca-topologies/";
+		String pathOfDirectory = ROOT_WORKSPACE + "org.eclipse.cmf.occi.tosca.examples/tosca-topologies/";
 		System.out.println(new File(pathOfDirectory).getAbsolutePath());
 		String[] yamlFilesPath = new File(pathOfDirectory).list();
+		System.out.println(yamlFilesPath);
 		for (String yamlFilePath : yamlFilesPath) {
-			if (!yamlFilePath.equals("Example16-UsingSubstitutionMappingsToExportADatabaseImplementation.yml")
-					&& !yamlFilePath.equals("Example3-SimpleMySQLInstallationOnATOSCAComputeNode.yml")
-					&& !yamlFilePath.equals("Example4-NodeTemplateOverridingItsNodeTypeConfigureInterface.yml")
-					&& !yamlFilePath.equals("Example5-TemplateForDeployingDatabaseContentOnTopOfMySQLDBMSMiddleware.yml")
-					&& !yamlFilePath.equals("Example9-DefiningACustomRelationshipType.yml")
-					&& !yamlFilePath.equals("Multi-Tier1-ElasticsearchLogstashKibana.yml")
-					&& !yamlFilePath.equals("BlockStorage2.yml")) {
-				System.out.println("Reading " + yamlFilePath + " ....");
-				try {
-					readYamlFile(pathOfDirectory + "/" + yamlFilePath);
-				} catch (Exception e) {
-					errors.put(yamlFilePath, e);
-				}
+			System.out.println("Reading " + pathOfDirectory + "/" + yamlFilePath + " ....");
+			try {
+				readYamlFile(pathOfDirectory + "/" + yamlFilePath);
+			} catch (Exception e) {
+				errors.put(yamlFilePath, e);
 			}
 		}
-		
+
 		System.out.println("Printout the Errors...");
 		for (String yamlFile : errors.keySet()) {
-			System.out.println(yamlFile + ":");
+			System.err.println(yamlFile + ":");
 			errors.get(yamlFile).printStackTrace();
 		}
 		return null;
@@ -132,7 +125,7 @@ public class Main extends AbstractHandler {
 					.invoke(ExtendedtoscaFactory.eINSTANCE);
 		} catch (NoSuchMethodException e1) {
 			try {
-				return (MixinBase) ToscaFactory.class.getMethod(methodNameToCreate).invoke(ToscaFactory.eINSTANCE);
+				node = (MixinBase) ToscaFactory.class.getMethod(methodNameToCreate).invoke(ToscaFactory.eINSTANCE);
 			} catch (NoSuchMethodException e2) {
 				System.err.println("Could not find the method " + methodNameToCreate + " in the TOSCA Factory");
 				MappingToCreateType mapping = Mapper.mappingOfType.get(typeName);
