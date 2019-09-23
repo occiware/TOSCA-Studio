@@ -3,9 +3,11 @@ package org.eclipse.cmf.occi.tosca.config;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class InputsReader {
 	
@@ -21,8 +23,29 @@ public class InputsReader {
 		}
 		InputsReader.inputs = new HashMap<>();
 		for (String line : lines) {
-			inputs.put(line.split(":")[0], line.split(":")[1]);
+			final String key = line.split(":")[0];
+			if (inputsMap.containsKey(key)) {
+				Map<String, ?> mapOfCurrentInput = (Map)inputsMap.get(key);
+				if (mapOfCurrentInput.containsKey("constraints")) {
+					// gather the constraints of the current input
+					List<Map<String, ?>> constraints = (List) mapOfCurrentInput.get("constraints");
+					for (Map<String, ?> constraint : constraints) {
+						for (String keyConstraint: constraint.keySet()) {
+							if ("valid_values".equals(keyConstraint)) {
+								List<String> validValues = (List<String>)constraint.get(keyConstraint);
+								if (!validValues.contains(line.split(":")[1])) {
+									throw new RuntimeException("Invalid value for " + key + 
+											". You gave: " +  line.split(":")[1] + 
+											" while valid values are: " +
+											validValues.stream().collect(Collectors.joining(","))
+									);
+								}
+							}
+						}
+					}
+				}
+			}
+			inputs.put(key, line.split(":")[1]);
 		}
 	}
-
 }
