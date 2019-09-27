@@ -54,11 +54,16 @@ public class NodeTemplateReader {
 		}
 		IsAppliedToComponentChecker manager = new IsAppliedToComponentChecker(node);
 		if (manager.check() && !(node instanceof Tosca_nodes_compute)) {
+			System.out.println(node.getMixin().getName() + " is linked to component");
 			Resource component = Main.applicationAndComponentManger.createComponentAndLinks(key);
 			component.getParts().add(node);
 			component.setTitle(key);
 			if (node_map.get("requirements") != null && node_map.get("requirements") instanceof List) {
+				System.out.println("REQUIRE !!!" + node_map.get("requirements"));
 				for (Map<String, ?> requirement : (List<Map>) node_map.get("requirements")) {
+					if (requirement.containsKey("database_connection")) {
+						Main.linkManager.addLinkToDo(key, (String)requirement.get("database_connection"));
+					}
 					if (requirement.containsKey("host")) {
 						String nameOfTheHost = (String) requirement.get("host");
 						if (!node_templates.containsKey(nameOfTheHost)) {
@@ -104,7 +109,7 @@ public class NodeTemplateReader {
 			System.err.println("Something bad happenned when we tried to instanciate " + typeName);
 			return;
 		}
-		List<Entity> entities = readApplies(node.getMixin());
+		List<Entity> entities = readApplies(key, node.getMixin());
 		if (entities.size() > 1) {
 			System.out.println("More than one resource for " + node.getMixin().getName());
 		}
@@ -131,7 +136,7 @@ public class NodeTemplateReader {
 		for (Annotation annotation : node.getMixin().getAnnotations()) {
 			if (annotation.getKey().startsWith("default-value")) {
 				try {
-					PropertyReader.invokeRightMethod(node.getClass(), 
+					PropertyReader.invokeRightMethod(key, node.getClass(), 
 							PropertyReader.buildCorrectSetterName(
 									annotation.getKey().substring("default-value".length() + 1)
 							),
@@ -145,10 +150,10 @@ public class NodeTemplateReader {
 		}
 
 		if (node_map.get("properties") != null && node_map.get("properties") instanceof Map) {
-			PropertyReader.readProperties(node, (Map<String, ?>) node_map.get("properties"));
+			PropertyReader.readProperties(key, node, (Map<String, ?>) node_map.get("properties"));
 		}
 		if (node_map.get("capabilities") != null && node_map.get("capabilities") instanceof Map) {
-			readCapabilities(node, (Map<String, ?>) node_map.get("capabilities"));
+			readCapabilities(key, node, (Map<String, ?>) node_map.get("capabilities"));
 		}
 	}
 
@@ -168,7 +173,7 @@ public class NodeTemplateReader {
 	private Map<String, Resource> resourcesByKey = new HashMap<String, Resource>();
 
 	@SuppressWarnings("unchecked")
-	private void readCapabilities(MixinBase node, Map<String, ?> capabilities) throws Exception {
+	private void readCapabilities(String key, MixinBase node, Map<String, ?> capabilities) throws Exception {
 		for (String capability : capabilities.keySet()) {
 			if (!(capabilities.get(capability) instanceof Map)) {
 				continue;// it is equals to null
@@ -179,16 +184,19 @@ public class NodeTemplateReader {
 			}
 			Map<String, ?> properties = (Map<String, ?>) capabilityMap.get("properties");
 			if (properties != null) {
-				PropertyReader.readProperties(node, properties);
+				PropertyReader.readProperties(key, node, properties);
 			}
 		}
 	}
 
-	private List<Entity> readApplies(Mixin mixin) throws Exception {
+	private List<Entity> readApplies(String key, Mixin mixin) throws Exception {
 		List<Entity> entities = new ArrayList<>();
 		for (Kind kind : mixin.getApplies()) {
-			Entity entity = OcciHelper.createEntity(kind);
-			entity.setKind(kind);
+			Entity entity = ConfigManager.wrappedGetResourceOfGivenKind(key, kind);
+			if (entity == null) {
+				entity = OcciHelper.createEntity(kind);
+				entity.setKind(kind);
+			}
 			entities.add(entity);
 		}
 		return entities;

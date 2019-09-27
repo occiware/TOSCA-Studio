@@ -68,6 +68,15 @@ public interface ExtendedtoscaFactory extends EFactory {
 	arrayinteger createarrayinteger();
 
 	/**
+	 * Returns a new object of class '<em>Tosca capabilities containerchild</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca capabilities containerchild</em>'.
+	 * @generated
+	 */
+	Tosca_capabilities_containerchild createTosca_capabilities_containerchild();
+
+	/**
 	 * Returns a new object of class '<em>Tosca capabilities somecap</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -95,6 +104,15 @@ public interface ExtendedtoscaFactory extends EFactory {
 	Tosca_capabilities_ha createTosca_capabilities_ha();
 
 	/**
+	 * Returns a new object of class '<em>Tosca capabilities nodejsappcontainer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca capabilities nodejsappcontainer</em>'.
+	 * @generated
+	 */
+	Tosca_capabilities_nodejsappcontainer createTosca_capabilities_nodejsappcontainer();
+
+	/**
 	 * Returns a new object of class '<em>Tosca capabilities container docker</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -102,15 +120,6 @@ public interface ExtendedtoscaFactory extends EFactory {
 	 * @generated
 	 */
 	Tosca_capabilities_container_docker createTosca_capabilities_container_docker();
-
-	/**
-	 * Returns a new object of class '<em>Tosca capabilities containerchild</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tosca capabilities containerchild</em>'.
-	 * @generated
-	 */
-	Tosca_capabilities_containerchild createTosca_capabilities_containerchild();
 
 	/**
 	 * Returns a new object of class '<em>Tosca capabilities somechildcap</em>'.
@@ -140,6 +149,24 @@ public interface ExtendedtoscaFactory extends EFactory {
 	Tosca_nodes_webapplication_paypalpizzastore createTosca_nodes_webapplication_paypalpizzastore();
 
 	/**
+	 * Returns a new object of class '<em>Tosca nodes abstractmongod</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes abstractmongod</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_abstractmongod createTosca_nodes_abstractmongod();
+
+	/**
+	 * Returns a new object of class '<em>Tosca nodes mongod</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes mongod</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_mongod createTosca_nodes_mongod();
+
+	/**
 	 * Returns a new object of class '<em>Tosca nodes network network</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -147,6 +174,15 @@ public interface ExtendedtoscaFactory extends EFactory {
 	 * @generated
 	 */
 	Tosca_nodes_network_network createTosca_nodes_network_network();
+
+	/**
+	 * Returns a new object of class '<em>Tosca nodes nodejs</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes nodejs</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_nodejs createTosca_nodes_nodejs();
 
 	/**
 	 * Returns a new object of class '<em>Tosca nodes container application docker</em>'.
@@ -302,6 +338,15 @@ public interface ExtendedtoscaFactory extends EFactory {
 	Example_someapp createExample_someapp();
 
 	/**
+	 * Returns a new object of class '<em>Tosca nodes nodecellar</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca nodes nodecellar</em>'.
+	 * @generated
+	 */
+	Tosca_nodes_nodecellar createTosca_nodes_nodecellar();
+
+	/**
 	 * Returns a new object of class '<em>Tosca nodes nodewithcap</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -383,15 +428,6 @@ public interface ExtendedtoscaFactory extends EFactory {
 	Tosca_nodes_somenode createTosca_nodes_somenode();
 
 	/**
-	 * Returns a new object of class '<em>Tosca nodes webserver nodejs</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tosca nodes webserver nodejs</em>'.
-	 * @generated
-	 */
-	Tosca_nodes_webserver_nodejs createTosca_nodes_webserver_nodejs();
-
-	/**
 	 * Returns a new object of class '<em>Tosca nodes dbms mysql</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -410,22 +446,13 @@ public interface ExtendedtoscaFactory extends EFactory {
 	Mycompany_mytypes_myscalingpolicy createMycompany_mytypes_myscalingpolicy();
 
 	/**
-	 * Returns a new object of class '<em>Test relation connects</em>'.
+	 * Returns a new object of class '<em>Tosca relationships nodecellarhostedonnodejs</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Test relation connects</em>'.
+	 * @return a new object of class '<em>Tosca relationships nodecellarhostedonnodejs</em>'.
 	 * @generated
 	 */
-	Test_relation_connects createTest_relation_connects();
-
-	/**
-	 * Returns a new object of class '<em>Tosca relationships network bindsto</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tosca relationships network bindsto</em>'.
-	 * @generated
-	 */
-	Tosca_relationships_network_bindsto createTosca_relationships_network_bindsto();
+	Tosca_relationships_nodecellarhostedonnodejs createTosca_relationships_nodecellarhostedonnodejs();
 
 	/**
 	 * Returns a new object of class '<em>Tosca relationships ha</em>'.
@@ -446,6 +473,15 @@ public interface ExtendedtoscaFactory extends EFactory {
 	Myattachesto createMyattachesto();
 
 	/**
+	 * Returns a new object of class '<em>Tosca relationships nodejsconnecttomongo</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca relationships nodejsconnecttomongo</em>'.
+	 * @generated
+	 */
+	Tosca_relationships_nodejsconnecttomongo createTosca_relationships_nodejsconnecttomongo();
+
+	/**
 	 * Returns a new object of class '<em>Tosca relationships network linksto</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -453,6 +489,24 @@ public interface ExtendedtoscaFactory extends EFactory {
 	 * @generated
 	 */
 	Tosca_relationships_network_linksto createTosca_relationships_network_linksto();
+
+	/**
+	 * Returns a new object of class '<em>Test relation connects</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Test relation connects</em>'.
+	 * @generated
+	 */
+	Test_relation_connects createTest_relation_connects();
+
+	/**
+	 * Returns a new object of class '<em>Tosca relationships network bindsto</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tosca relationships network bindsto</em>'.
+	 * @generated
+	 */
+	Tosca_relationships_network_bindsto createTosca_relationships_network_bindsto();
 
 	/**
 	 * Returns the package supported by this factory.

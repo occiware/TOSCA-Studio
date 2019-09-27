@@ -13,38 +13,34 @@
 package extendedtosca.provider;
 
 
-import extendedtosca.ExtendedtoscaPackage;
-import extendedtosca.Tosca_nodes_webserver_nodejs;
+import extendedtosca.Tosca_relationships_nodecellarhostedonnodejs;
 
 import java.util.Collection;
 import java.util.List;
 
-import org.eclipse.cmf.occi.tosca.provider.Tosca_nodes_webserverItemProvider;
+import org.eclipse.cmf.occi.tosca.provider.Tosca_relationships_hostedonItemProvider;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link extendedtosca.Tosca_nodes_webserver_nodejs} object.
+ * This is the item provider adapter for a {@link extendedtosca.Tosca_relationships_nodecellarhostedonnodejs} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class Tosca_nodes_webserver_nodejsItemProvider extends Tosca_nodes_webserverItemProvider {
+public class Tosca_relationships_nodecellarhostedonnodejsItemProvider extends Tosca_relationships_hostedonItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tosca_nodes_webserver_nodejsItemProvider(AdapterFactory adapterFactory) {
+	public Tosca_relationships_nodecellarhostedonnodejsItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -59,42 +55,19 @@ public class Tosca_nodes_webserver_nodejsItemProvider extends Tosca_nodes_webser
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addGithubUrlPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Github Url feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addGithubUrlPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Tosca_nodes_webserver_nodejs_githubUrl_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Tosca_nodes_webserver_nodejs_githubUrl_feature", "_UI_Tosca_nodes_webserver_nodejs_type"),
-				 ExtendedtoscaPackage.Literals.TOSCA_NODES_WEBSERVER_NODEJS__GITHUB_URL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This returns Tosca_nodes_webserver_nodejs.gif.
+	 * This returns Tosca_relationships_nodecellarhostedonnodejs.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Tosca_nodes_webserver_nodejs"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Tosca_relationships_nodecellarhostedonnodejs"));
 	}
 
 	/**
@@ -105,10 +78,10 @@ public class Tosca_nodes_webserver_nodejsItemProvider extends Tosca_nodes_webser
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Tosca_nodes_webserver_nodejs)object).getPortName();
+		String label = ((Tosca_relationships_nodecellarhostedonnodejs)object).getToscaName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Tosca_nodes_webserver_nodejs_type") :
-			getString("_UI_Tosca_nodes_webserver_nodejs_type") + " " + label;
+			getString("_UI_Tosca_relationships_nodecellarhostedonnodejs_type") :
+			getString("_UI_Tosca_relationships_nodecellarhostedonnodejs_type") + " " + label;
 	}
 
 
@@ -122,12 +95,6 @@ public class Tosca_nodes_webserver_nodejsItemProvider extends Tosca_nodes_webser
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Tosca_nodes_webserver_nodejs.class)) {
-			case ExtendedtoscaPackage.TOSCA_NODES_WEBSERVER_NODEJS__GITHUB_URL:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

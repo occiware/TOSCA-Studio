@@ -38,7 +38,9 @@ import org.eclipse.cmf.occi.tosca.Tosca_nodes_softwarecomponent;
 import org.eclipse.cmf.occi.tosca.Tosca_nodes_webapplication;
 import org.eclipse.cmf.occi.tosca.Tosca_nodes_webserver;
 import org.eclipse.cmf.occi.tosca.Tosca_relationships_attachesto;
+import org.eclipse.cmf.occi.tosca.Tosca_relationships_connectsto;
 import org.eclipse.cmf.occi.tosca.Tosca_relationships_dependson;
+import org.eclipse.cmf.occi.tosca.Tosca_relationships_hostedon;
 import org.eclipse.cmf.occi.tosca.Tosca_relationships_root;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -123,6 +125,10 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 				return createarrayintegerAdapter();
 			}
 			@Override
+			public Adapter caseTosca_capabilities_containerchild(Tosca_capabilities_containerchild object) {
+				return createTosca_capabilities_containerchildAdapter();
+			}
+			@Override
 			public Adapter caseTosca_capabilities_somecap(Tosca_capabilities_somecap object) {
 				return createTosca_capabilities_somecapAdapter();
 			}
@@ -135,12 +141,12 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 				return createTosca_capabilities_haAdapter();
 			}
 			@Override
-			public Adapter caseTosca_capabilities_container_docker(Tosca_capabilities_container_docker object) {
-				return createTosca_capabilities_container_dockerAdapter();
+			public Adapter caseTosca_capabilities_nodejsappcontainer(Tosca_capabilities_nodejsappcontainer object) {
+				return createTosca_capabilities_nodejsappcontainerAdapter();
 			}
 			@Override
-			public Adapter caseTosca_capabilities_containerchild(Tosca_capabilities_containerchild object) {
-				return createTosca_capabilities_containerchildAdapter();
+			public Adapter caseTosca_capabilities_container_docker(Tosca_capabilities_container_docker object) {
+				return createTosca_capabilities_container_dockerAdapter();
 			}
 			@Override
 			public Adapter caseTosca_capabilities_somechildcap(Tosca_capabilities_somechildcap object) {
@@ -155,8 +161,20 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 				return createTosca_nodes_webapplication_paypalpizzastoreAdapter();
 			}
 			@Override
+			public Adapter caseTosca_nodes_abstractmongod(Tosca_nodes_abstractmongod object) {
+				return createTosca_nodes_abstractmongodAdapter();
+			}
+			@Override
+			public Adapter caseTosca_nodes_mongod(Tosca_nodes_mongod object) {
+				return createTosca_nodes_mongodAdapter();
+			}
+			@Override
 			public Adapter caseTosca_nodes_network_network(Tosca_nodes_network_network object) {
 				return createTosca_nodes_network_networkAdapter();
+			}
+			@Override
+			public Adapter caseTosca_nodes_nodejs(Tosca_nodes_nodejs object) {
+				return createTosca_nodes_nodejsAdapter();
 			}
 			@Override
 			public Adapter caseTosca_nodes_container_application_docker(Tosca_nodes_container_application_docker object) {
@@ -227,6 +245,10 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 				return createExample_someappAdapter();
 			}
 			@Override
+			public Adapter caseTosca_nodes_nodecellar(Tosca_nodes_nodecellar object) {
+				return createTosca_nodes_nodecellarAdapter();
+			}
+			@Override
 			public Adapter caseTosca_nodes_nodewithcap(Tosca_nodes_nodewithcap object) {
 				return createTosca_nodes_nodewithcapAdapter();
 			}
@@ -263,10 +285,6 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 				return createTosca_nodes_somenodeAdapter();
 			}
 			@Override
-			public Adapter caseTosca_nodes_webserver_nodejs(Tosca_nodes_webserver_nodejs object) {
-				return createTosca_nodes_webserver_nodejsAdapter();
-			}
-			@Override
 			public Adapter caseTosca_nodes_dbms_mysql(Tosca_nodes_dbms_mysql object) {
 				return createTosca_nodes_dbms_mysqlAdapter();
 			}
@@ -275,12 +293,8 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 				return createMycompany_mytypes_myscalingpolicyAdapter();
 			}
 			@Override
-			public Adapter caseTest_relation_connects(Test_relation_connects object) {
-				return createTest_relation_connectsAdapter();
-			}
-			@Override
-			public Adapter caseTosca_relationships_network_bindsto(Tosca_relationships_network_bindsto object) {
-				return createTosca_relationships_network_bindstoAdapter();
+			public Adapter caseTosca_relationships_nodecellarhostedonnodejs(Tosca_relationships_nodecellarhostedonnodejs object) {
+				return createTosca_relationships_nodecellarhostedonnodejsAdapter();
 			}
 			@Override
 			public Adapter caseTosca_relationships_ha(Tosca_relationships_ha object) {
@@ -291,8 +305,20 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 				return createMyattachestoAdapter();
 			}
 			@Override
+			public Adapter caseTosca_relationships_nodejsconnecttomongo(Tosca_relationships_nodejsconnecttomongo object) {
+				return createTosca_relationships_nodejsconnecttomongoAdapter();
+			}
+			@Override
 			public Adapter caseTosca_relationships_network_linksto(Tosca_relationships_network_linksto object) {
 				return createTosca_relationships_network_linkstoAdapter();
+			}
+			@Override
+			public Adapter caseTest_relation_connects(Test_relation_connects object) {
+				return createTest_relation_connectsAdapter();
+			}
+			@Override
+			public Adapter caseTosca_relationships_network_bindsto(Tosca_relationships_network_bindsto object) {
+				return createTosca_relationships_network_bindstoAdapter();
 			}
 			@Override
 			public Adapter caseMixinBase(MixinBase object) {
@@ -303,12 +329,12 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 				return createTosca_capabilities_rootAdapter();
 			}
 			@Override
-			public Adapter caseTosca_capabilities_endpoint(Tosca_capabilities_endpoint object) {
-				return createTosca_capabilities_endpointAdapter();
-			}
-			@Override
 			public Adapter caseTosca_capabilities_container(Tosca_capabilities_container object) {
 				return createTosca_capabilities_containerAdapter();
+			}
+			@Override
+			public Adapter caseTosca_capabilities_endpoint(Tosca_capabilities_endpoint object) {
+				return createTosca_capabilities_endpointAdapter();
 			}
 			@Override
 			public Adapter caseTosca_capabilities_node(Tosca_capabilities_node object) {
@@ -343,24 +369,8 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 				return createTosca_nodes_webapplicationAdapter();
 			}
 			@Override
-			public Adapter caseTosca_nodes_container_application(Tosca_nodes_container_application object) {
-				return createTosca_nodes_container_applicationAdapter();
-			}
-			@Override
 			public Adapter caseTosca_nodes_softwarecomponent(Tosca_nodes_softwarecomponent object) {
 				return createTosca_nodes_softwarecomponentAdapter();
-			}
-			@Override
-			public Adapter caseTosca_capabilities_endpoint_database(Tosca_capabilities_endpoint_database object) {
-				return createTosca_capabilities_endpoint_databaseAdapter();
-			}
-			@Override
-			public Adapter caseTosca_nodes_database(Tosca_nodes_database object) {
-				return createTosca_nodes_databaseAdapter();
-			}
-			@Override
-			public Adapter caseTosca_nodes_webserver(Tosca_nodes_webserver object) {
-				return createTosca_nodes_webserverAdapter();
 			}
 			@Override
 			public Adapter caseDatabase(Database object) {
@@ -369,6 +379,22 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseTosca_nodes_dbms(Tosca_nodes_dbms object) {
 				return createTosca_nodes_dbmsAdapter();
+			}
+			@Override
+			public Adapter caseTosca_nodes_webserver(Tosca_nodes_webserver object) {
+				return createTosca_nodes_webserverAdapter();
+			}
+			@Override
+			public Adapter caseTosca_nodes_container_application(Tosca_nodes_container_application object) {
+				return createTosca_nodes_container_applicationAdapter();
+			}
+			@Override
+			public Adapter caseTosca_capabilities_endpoint_database(Tosca_capabilities_endpoint_database object) {
+				return createTosca_capabilities_endpoint_databaseAdapter();
+			}
+			@Override
+			public Adapter caseTosca_nodes_database(Tosca_nodes_database object) {
+				return createTosca_nodes_databaseAdapter();
 			}
 			@Override
 			public Adapter caseDependency(Dependency object) {
@@ -387,12 +413,20 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 				return createTosca_relationships_rootAdapter();
 			}
 			@Override
-			public Adapter caseTosca_relationships_dependson(Tosca_relationships_dependson object) {
-				return createTosca_relationships_dependsonAdapter();
+			public Adapter caseTosca_relationships_hostedon(Tosca_relationships_hostedon object) {
+				return createTosca_relationships_hostedonAdapter();
 			}
 			@Override
 			public Adapter caseTosca_relationships_attachesto(Tosca_relationships_attachesto object) {
 				return createTosca_relationships_attachestoAdapter();
+			}
+			@Override
+			public Adapter caseTosca_relationships_connectsto(Tosca_relationships_connectsto object) {
+				return createTosca_relationships_connectstoAdapter();
+			}
+			@Override
+			public Adapter caseTosca_relationships_dependson(Tosca_relationships_dependson object) {
+				return createTosca_relationships_dependsonAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -471,6 +505,20 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_capabilities_containerchild <em>Tosca capabilities containerchild</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see extendedtosca.Tosca_capabilities_containerchild
+	 * @generated
+	 */
+	public Adapter createTosca_capabilities_containerchildAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_capabilities_somecap <em>Tosca capabilities somecap</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -513,6 +561,20 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_capabilities_nodejsappcontainer <em>Tosca capabilities nodejsappcontainer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see extendedtosca.Tosca_capabilities_nodejsappcontainer
+	 * @generated
+	 */
+	public Adapter createTosca_capabilities_nodejsappcontainerAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_capabilities_container_docker <em>Tosca capabilities container docker</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -523,20 +585,6 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTosca_capabilities_container_dockerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_capabilities_containerchild <em>Tosca capabilities containerchild</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see extendedtosca.Tosca_capabilities_containerchild
-	 * @generated
-	 */
-	public Adapter createTosca_capabilities_containerchildAdapter() {
 		return null;
 	}
 
@@ -583,6 +631,34 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_abstractmongod <em>Tosca nodes abstractmongod</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see extendedtosca.Tosca_nodes_abstractmongod
+	 * @generated
+	 */
+	public Adapter createTosca_nodes_abstractmongodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_mongod <em>Tosca nodes mongod</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see extendedtosca.Tosca_nodes_mongod
+	 * @generated
+	 */
+	public Adapter createTosca_nodes_mongodAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_network_network <em>Tosca nodes network network</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -593,6 +669,20 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTosca_nodes_network_networkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_nodejs <em>Tosca nodes nodejs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see extendedtosca.Tosca_nodes_nodejs
+	 * @generated
+	 */
+	public Adapter createTosca_nodes_nodejsAdapter() {
 		return null;
 	}
 
@@ -835,6 +925,20 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_nodecellar <em>Tosca nodes nodecellar</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see extendedtosca.Tosca_nodes_nodecellar
+	 * @generated
+	 */
+	public Adapter createTosca_nodes_nodecellarAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_nodewithcap <em>Tosca nodes nodewithcap</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -961,20 +1065,6 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_webserver_nodejs <em>Tosca nodes webserver nodejs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see extendedtosca.Tosca_nodes_webserver_nodejs
-	 * @generated
-	 */
-	public Adapter createTosca_nodes_webserver_nodejsAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_nodes_dbms_mysql <em>Tosca nodes dbms mysql</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1003,30 +1093,16 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link extendedtosca.Test_relation_connects <em>Test relation connects</em>}'.
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_relationships_nodecellarhostedonnodejs <em>Tosca relationships nodecellarhostedonnodejs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see extendedtosca.Test_relation_connects
+	 * @see extendedtosca.Tosca_relationships_nodecellarhostedonnodejs
 	 * @generated
 	 */
-	public Adapter createTest_relation_connectsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_relationships_network_bindsto <em>Tosca relationships network bindsto</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see extendedtosca.Tosca_relationships_network_bindsto
-	 * @generated
-	 */
-	public Adapter createTosca_relationships_network_bindstoAdapter() {
+	public Adapter createTosca_relationships_nodecellarhostedonnodejsAdapter() {
 		return null;
 	}
 
@@ -1059,6 +1135,20 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_relationships_nodejsconnecttomongo <em>Tosca relationships nodejsconnecttomongo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see extendedtosca.Tosca_relationships_nodejsconnecttomongo
+	 * @generated
+	 */
+	public Adapter createTosca_relationships_nodejsconnecttomongoAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_relationships_network_linksto <em>Tosca relationships network linksto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1069,6 +1159,34 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTosca_relationships_network_linkstoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Test_relation_connects <em>Test relation connects</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see extendedtosca.Test_relation_connects
+	 * @generated
+	 */
+	public Adapter createTest_relation_connectsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link extendedtosca.Tosca_relationships_network_bindsto <em>Tosca relationships network bindsto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see extendedtosca.Tosca_relationships_network_bindsto
+	 * @generated
+	 */
+	public Adapter createTosca_relationships_network_bindstoAdapter() {
 		return null;
 	}
 
@@ -1101,20 +1219,6 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.Tosca_capabilities_endpoint <em>Tosca capabilities endpoint</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.cmf.occi.tosca.Tosca_capabilities_endpoint
-	 * @generated
-	 */
-	public Adapter createTosca_capabilities_endpointAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.Tosca_capabilities_container <em>Tosca capabilities container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1125,6 +1229,20 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTosca_capabilities_containerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.Tosca_capabilities_endpoint <em>Tosca capabilities endpoint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.cmf.occi.tosca.Tosca_capabilities_endpoint
+	 * @generated
+	 */
+	public Adapter createTosca_capabilities_endpointAdapter() {
 		return null;
 	}
 
@@ -1241,20 +1359,6 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_container_application <em>Tosca nodes container application</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.cmf.occi.tosca.Tosca_nodes_container_application
-	 * @generated
-	 */
-	public Adapter createTosca_nodes_container_applicationAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_softwarecomponent <em>Tosca nodes softwarecomponent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1265,6 +1369,34 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTosca_nodes_softwarecomponentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_webserver <em>Tosca nodes webserver</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.cmf.occi.tosca.Tosca_nodes_webserver
+	 * @generated
+	 */
+	public Adapter createTosca_nodes_webserverAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_container_application <em>Tosca nodes container application</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.cmf.occi.tosca.Tosca_nodes_container_application
+	 * @generated
+	 */
+	public Adapter createTosca_nodes_container_applicationAdapter() {
 		return null;
 	}
 
@@ -1293,20 +1425,6 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTosca_nodes_databaseAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.Tosca_nodes_webserver <em>Tosca nodes webserver</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.cmf.occi.tosca.Tosca_nodes_webserver
-	 * @generated
-	 */
-	public Adapter createTosca_nodes_webserverAdapter() {
 		return null;
 	}
 
@@ -1395,16 +1513,16 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.Tosca_relationships_dependson <em>Tosca relationships dependson</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.Tosca_relationships_hostedon <em>Tosca relationships hostedon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.cmf.occi.tosca.Tosca_relationships_dependson
+	 * @see org.eclipse.cmf.occi.tosca.Tosca_relationships_hostedon
 	 * @generated
 	 */
-	public Adapter createTosca_relationships_dependsonAdapter() {
+	public Adapter createTosca_relationships_hostedonAdapter() {
 		return null;
 	}
 
@@ -1419,6 +1537,34 @@ public class ExtendedtoscaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTosca_relationships_attachestoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.Tosca_relationships_connectsto <em>Tosca relationships connectsto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.cmf.occi.tosca.Tosca_relationships_connectsto
+	 * @generated
+	 */
+	public Adapter createTosca_relationships_connectstoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.cmf.occi.tosca.Tosca_relationships_dependson <em>Tosca relationships dependson</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.cmf.occi.tosca.Tosca_relationships_dependson
+	 * @generated
+	 */
+	public Adapter createTosca_relationships_dependsonAdapter() {
 		return null;
 	}
 

@@ -1,15 +1,37 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+
+metadata:
+  template_name: nodejs-type
+  template_version: 1.0.0
+
+description: TOSCA simple profile with Nodejs.
+
+imports:
+  - tosca-normative-types:1.0.0
+
 node_types:
-    tosca.nodes.WebServer.Nodejs:
-        derived_from: tosca.nodes.WebServer
-        properties:
-            # Property to supply the desired implementation in the Github repository
-            github_url:
-                required: no
-                type: string
-                description: location of the application on the github.
-                default: https://github.com/mmm/testnode.git
-        interfaces:
-            Standard:
-                inputs:
-                    github_url:
-                        type: string
+  tosca.nodes.Nodejs:
+    derived_from: tosca.nodes.WebServer
+    description: >
+      The TOSCA Nodejs Node Type represents an Nodejs component
+      that can be managed and run by a TOSCA Compute Node Type.
+    properties:
+      component_version:
+        type: version
+        description: The optional software component’s version.
+        required: false
+        default: "0.12"
+    capabilities:
+      host: tosca.capabilities.NodeJSAppContainer
+    metadata:
+      icon: /images/nodejs.jpg
+    interfaces:
+      Standard:
+        create:
+          inputs:
+            COMPONENT_VERSION: { get_property: [SELF, component_version] }
+          implementation: scripts/install-nodejs.sh
+
+capability_types:
+  tosca.capabilities.NodeJSAppContainer:
+    derived_from: tosca.capabilities.Container

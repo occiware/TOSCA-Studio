@@ -26,8 +26,10 @@ import extendedtosca.Tosca_capabilities_container_docker;
 import extendedtosca.Tosca_capabilities_containerchild;
 import extendedtosca.Tosca_capabilities_ha;
 import extendedtosca.Tosca_capabilities_indigo_endpoint;
+import extendedtosca.Tosca_capabilities_nodejsappcontainer;
 import extendedtosca.Tosca_capabilities_somecap;
 import extendedtosca.Tosca_capabilities_somechildcap;
+import extendedtosca.Tosca_nodes_abstractmongod;
 import extendedtosca.Tosca_nodes_abstractmysql;
 import extendedtosca.Tosca_nodes_apache;
 import extendedtosca.Tosca_nodes_computewithattrlist;
@@ -38,9 +40,12 @@ import extendedtosca.Tosca_nodes_database_mysql;
 import extendedtosca.Tosca_nodes_databasewithlistparam;
 import extendedtosca.Tosca_nodes_dbms_mysql;
 import extendedtosca.Tosca_nodes_hacompute;
+import extendedtosca.Tosca_nodes_mongod;
 import extendedtosca.Tosca_nodes_mysql;
 import extendedtosca.Tosca_nodes_network_network;
 import extendedtosca.Tosca_nodes_network_port;
+import extendedtosca.Tosca_nodes_nodecellar;
+import extendedtosca.Tosca_nodes_nodejs;
 import extendedtosca.Tosca_nodes_nodewithcap;
 import extendedtosca.Tosca_nodes_nodewithreq;
 import extendedtosca.Tosca_nodes_php;
@@ -52,11 +57,12 @@ import extendedtosca.Tosca_nodes_softwarecomponent_rsyslog;
 import extendedtosca.Tosca_nodes_somenode;
 import extendedtosca.Tosca_nodes_somenode2;
 import extendedtosca.Tosca_nodes_webapplication_paypalpizzastore;
-import extendedtosca.Tosca_nodes_webserver_nodejs;
 import extendedtosca.Tosca_nodes_wordpress;
 import extendedtosca.Tosca_relationships_ha;
 import extendedtosca.Tosca_relationships_network_bindsto;
 import extendedtosca.Tosca_relationships_network_linksto;
+import extendedtosca.Tosca_relationships_nodecellarhostedonnodejs;
+import extendedtosca.Tosca_relationships_nodejsconnecttomongo;
 import extendedtosca.arrayCredential;
 import extendedtosca.arrayPortSpec;
 import extendedtosca.arrayinteger;
@@ -131,6 +137,13 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass tosca_capabilities_containerchildEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass tosca_capabilities_somecapEClass = null;
 
 	/**
@@ -152,14 +165,14 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tosca_capabilities_container_dockerEClass = null;
+	private EClass tosca_capabilities_nodejsappcontainerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tosca_capabilities_containerchildEClass = null;
+	private EClass tosca_capabilities_container_dockerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -187,7 +200,28 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass tosca_nodes_abstractmongodEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tosca_nodes_mongodEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass tosca_nodes_network_networkEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tosca_nodes_nodejsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -313,6 +347,13 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass tosca_nodes_nodecellarEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass tosca_nodes_nodewithcapEClass = null;
 
 	/**
@@ -376,13 +417,6 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tosca_nodes_webserver_nodejsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass tosca_nodes_dbms_mysqlEClass = null;
 
 	/**
@@ -397,14 +431,7 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass test_relation_connectsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tosca_relationships_network_bindstoEClass = null;
+	private EClass tosca_relationships_nodecellarhostedonnodejsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -425,7 +452,28 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass tosca_relationships_nodejsconnecttomongoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass tosca_relationships_network_linkstoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass test_relation_connectsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tosca_relationships_network_bindstoEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -597,6 +645,15 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTosca_capabilities_containerchild() {
+		return tosca_capabilities_containerchildEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTosca_capabilities_somecap() {
 		return tosca_capabilities_somecapEClass;
 	}
@@ -626,6 +683,15 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 */
 	public EClass getTosca_capabilities_ha() {
 		return tosca_capabilities_haEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTosca_capabilities_nodejsappcontainer() {
+		return tosca_capabilities_nodejsappcontainerEClass;
 	}
 
 	/**
@@ -687,15 +753,6 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTosca_capabilities_containerchild() {
-		return tosca_capabilities_containerchildEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTosca_capabilities_somechildcap() {
 		return tosca_capabilities_somechildcapEClass;
 	}
@@ -734,6 +791,24 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 */
 	public EAttribute getTosca_nodes_webapplication_paypalpizzastore_GithubUrl() {
 		return (EAttribute)tosca_nodes_webapplication_paypalpizzastoreEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTosca_nodes_abstractmongod() {
+		return tosca_nodes_abstractmongodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTosca_nodes_mongod() {
+		return tosca_nodes_mongodEClass;
 	}
 
 	/**
@@ -842,6 +917,15 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 */
 	public EOperation getTosca_nodes_network_network__AppliesConstraint__DiagnosticChain_Map() {
 		return tosca_nodes_network_networkEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTosca_nodes_nodejs() {
+		return tosca_nodes_nodejsEClass;
 	}
 
 	/**
@@ -1074,6 +1158,15 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTosca_nodes_nodecellar() {
+		return tosca_nodes_nodecellarEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTosca_nodes_nodewithcap() {
 		return tosca_nodes_nodewithcapEClass;
 	}
@@ -1227,24 +1320,6 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTosca_nodes_webserver_nodejs() {
-		return tosca_nodes_webserver_nodejsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTosca_nodes_webserver_nodejs_GithubUrl() {
-		return (EAttribute)tosca_nodes_webserver_nodejsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTosca_nodes_dbms_mysql() {
 		return tosca_nodes_dbms_mysqlEClass;
 	}
@@ -1263,17 +1338,8 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTest_relation_connects() {
-		return test_relation_connectsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTosca_relationships_network_bindsto() {
-		return tosca_relationships_network_bindstoEClass;
+	public EClass getTosca_relationships_nodecellarhostedonnodejs() {
+		return tosca_relationships_nodecellarhostedonnodejsEClass;
 	}
 
 	/**
@@ -1299,8 +1365,35 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTosca_relationships_nodejsconnecttomongo() {
+		return tosca_relationships_nodejsconnecttomongoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTosca_relationships_network_linksto() {
 		return tosca_relationships_network_linkstoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTest_relation_connects() {
+		return test_relation_connectsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTosca_relationships_network_bindsto() {
+		return tosca_relationships_network_bindstoEClass;
 	}
 
 	/**
@@ -1361,12 +1454,16 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		arrayintegerEClass = createEClass(ARRAYINTEGER);
 		createEAttribute(arrayintegerEClass, ARRAYINTEGER__VALUES);
 
+		tosca_capabilities_containerchildEClass = createEClass(TOSCA_CAPABILITIES_CONTAINERCHILD);
+
 		tosca_capabilities_somecapEClass = createEClass(TOSCA_CAPABILITIES_SOMECAP);
 
 		tosca_capabilities_indigo_endpointEClass = createEClass(TOSCA_CAPABILITIES_INDIGO_ENDPOINT);
 		createEReference(tosca_capabilities_indigo_endpointEClass, TOSCA_CAPABILITIES_INDIGO_ENDPOINT__CREDENTIAL);
 
 		tosca_capabilities_haEClass = createEClass(TOSCA_CAPABILITIES_HA);
+
+		tosca_capabilities_nodejsappcontainerEClass = createEClass(TOSCA_CAPABILITIES_NODEJSAPPCONTAINER);
 
 		tosca_capabilities_container_dockerEClass = createEClass(TOSCA_CAPABILITIES_CONTAINER_DOCKER);
 		createEAttribute(tosca_capabilities_container_dockerEClass, TOSCA_CAPABILITIES_CONTAINER_DOCKER__PUBLISH_ALL);
@@ -1375,8 +1472,6 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		createEReference(tosca_capabilities_container_dockerEClass, TOSCA_CAPABILITIES_CONTAINER_DOCKER__VOLUMES);
 		createEReference(tosca_capabilities_container_dockerEClass, TOSCA_CAPABILITIES_CONTAINER_DOCKER__VERSION);
 
-		tosca_capabilities_containerchildEClass = createEClass(TOSCA_CAPABILITIES_CONTAINERCHILD);
-
 		tosca_capabilities_somechildcapEClass = createEClass(TOSCA_CAPABILITIES_SOMECHILDCAP);
 
 		tosca_nodes_computewithpropEClass = createEClass(TOSCA_NODES_COMPUTEWITHPROP);
@@ -1384,6 +1479,10 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 
 		tosca_nodes_webapplication_paypalpizzastoreEClass = createEClass(TOSCA_NODES_WEBAPPLICATION_PAYPALPIZZASTORE);
 		createEAttribute(tosca_nodes_webapplication_paypalpizzastoreEClass, TOSCA_NODES_WEBAPPLICATION_PAYPALPIZZASTORE__GITHUB_URL);
+
+		tosca_nodes_abstractmongodEClass = createEClass(TOSCA_NODES_ABSTRACTMONGOD);
+
+		tosca_nodes_mongodEClass = createEClass(TOSCA_NODES_MONGOD);
 
 		tosca_nodes_network_networkEClass = createEClass(TOSCA_NODES_NETWORK_NETWORK);
 		createEAttribute(tosca_nodes_network_networkEClass, TOSCA_NODES_NETWORK_NETWORK__PHYSICAL_NETWORK);
@@ -1397,6 +1496,8 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		createEAttribute(tosca_nodes_network_networkEClass, TOSCA_NODES_NETWORK_NETWORK__NETWORK_TYPE);
 		createEAttribute(tosca_nodes_network_networkEClass, TOSCA_NODES_NETWORK_NETWORK__END_IP);
 		createEOperation(tosca_nodes_network_networkEClass, TOSCA_NODES_NETWORK_NETWORK___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP);
+
+		tosca_nodes_nodejsEClass = createEClass(TOSCA_NODES_NODEJS);
 
 		tosca_nodes_container_application_dockerEClass = createEClass(TOSCA_NODES_CONTAINER_APPLICATION_DOCKER);
 
@@ -1440,6 +1541,8 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 
 		example_someappEClass = createEClass(EXAMPLE_SOMEAPP);
 
+		tosca_nodes_nodecellarEClass = createEClass(TOSCA_NODES_NODECELLAR);
+
 		tosca_nodes_nodewithcapEClass = createEClass(TOSCA_NODES_NODEWITHCAP);
 
 		tosca_nodes_apacheEClass = createEClass(TOSCA_NODES_APACHE);
@@ -1466,22 +1569,23 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 
 		tosca_nodes_somenodeEClass = createEClass(TOSCA_NODES_SOMENODE);
 
-		tosca_nodes_webserver_nodejsEClass = createEClass(TOSCA_NODES_WEBSERVER_NODEJS);
-		createEAttribute(tosca_nodes_webserver_nodejsEClass, TOSCA_NODES_WEBSERVER_NODEJS__GITHUB_URL);
-
 		tosca_nodes_dbms_mysqlEClass = createEClass(TOSCA_NODES_DBMS_MYSQL);
 
 		mycompany_mytypes_myscalingpolicyEClass = createEClass(MYCOMPANY_MYTYPES_MYSCALINGPOLICY);
 
-		test_relation_connectsEClass = createEClass(TEST_RELATION_CONNECTS);
-
-		tosca_relationships_network_bindstoEClass = createEClass(TOSCA_RELATIONSHIPS_NETWORK_BINDSTO);
+		tosca_relationships_nodecellarhostedonnodejsEClass = createEClass(TOSCA_RELATIONSHIPS_NODECELLARHOSTEDONNODEJS);
 
 		tosca_relationships_haEClass = createEClass(TOSCA_RELATIONSHIPS_HA);
 
 		myattachestoEClass = createEClass(MYATTACHESTO);
 
+		tosca_relationships_nodejsconnecttomongoEClass = createEClass(TOSCA_RELATIONSHIPS_NODEJSCONNECTTOMONGO);
+
 		tosca_relationships_network_linkstoEClass = createEClass(TOSCA_RELATIONSHIPS_NETWORK_LINKSTO);
+
+		test_relation_connectsEClass = createEClass(TEST_RELATION_CONNECTS);
+
+		tosca_relationships_network_bindstoEClass = createEClass(TOSCA_RELATIONSHIPS_NETWORK_BINDSTO);
 
 		// Create enums
 		ip_versionEnumEEnum = createEEnum(IP_VERSION_ENUM);
@@ -1520,24 +1624,33 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		tosca_capabilities_containerchildEClass.getESuperTypes().add(theToscaPackage.getTosca_capabilities_container());
+		tosca_capabilities_containerchildEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_capabilities_somecapEClass.getESuperTypes().add(theToscaPackage.getTosca_capabilities_root());
 		tosca_capabilities_somecapEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_capabilities_indigo_endpointEClass.getESuperTypes().add(theToscaPackage.getTosca_capabilities_endpoint());
 		tosca_capabilities_indigo_endpointEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_capabilities_haEClass.getESuperTypes().add(theToscaPackage.getTosca_capabilities_root());
 		tosca_capabilities_haEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
+		tosca_capabilities_nodejsappcontainerEClass.getESuperTypes().add(theToscaPackage.getTosca_capabilities_container());
+		tosca_capabilities_nodejsappcontainerEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_capabilities_container_dockerEClass.getESuperTypes().add(theToscaPackage.getTosca_capabilities_container());
 		tosca_capabilities_container_dockerEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
-		tosca_capabilities_containerchildEClass.getESuperTypes().add(theToscaPackage.getTosca_capabilities_container());
-		tosca_capabilities_containerchildEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_capabilities_somechildcapEClass.getESuperTypes().add(this.getTosca_capabilities_somecap());
 		tosca_capabilities_somechildcapEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_nodes_computewithpropEClass.getESuperTypes().add(theToscaPackage.getTosca_nodes_compute());
 		tosca_nodes_computewithpropEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_nodes_webapplication_paypalpizzastoreEClass.getESuperTypes().add(theToscaPackage.getTosca_nodes_webapplication());
 		tosca_nodes_webapplication_paypalpizzastoreEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
+		tosca_nodes_abstractmongodEClass.getESuperTypes().add(theToscaPackage.getTosca_nodes_dbms());
+		tosca_nodes_abstractmongodEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
+		tosca_nodes_mongodEClass.getESuperTypes().add(this.getTosca_nodes_abstractmongod());
+		tosca_nodes_mongodEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_nodes_network_networkEClass.getESuperTypes().add(theToscaPackage.getTosca_nodes_root());
 		tosca_nodes_network_networkEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
+		tosca_nodes_nodejsEClass.getESuperTypes().add(theToscaPackage.getTosca_nodes_webserver());
+		tosca_nodes_nodejsEClass.getESuperTypes().add(this.getTosca_capabilities_nodejsappcontainer());
+		tosca_nodes_nodejsEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_nodes_container_application_dockerEClass.getESuperTypes().add(theToscaPackage.getTosca_nodes_container_application());
 		tosca_nodes_container_application_dockerEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_nodes_softwarecomponent_kibanaEClass.getESuperTypes().add(theToscaPackage.getTosca_nodes_softwarecomponent());
@@ -1581,6 +1694,8 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		example_someappEClass.getESuperTypes().add(theToscaPackage.getTosca_nodes_root());
 		example_someappEClass.getESuperTypes().add(theToscaPackage.getTosca_capabilities_endpoint());
 		example_someappEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
+		tosca_nodes_nodecellarEClass.getESuperTypes().add(theToscaPackage.getTosca_nodes_webapplication());
+		tosca_nodes_nodecellarEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_nodes_nodewithcapEClass.getESuperTypes().add(theToscaPackage.getTosca_nodes_root());
 		tosca_nodes_nodewithcapEClass.getESuperTypes().add(this.getTosca_capabilities_somecap());
 		tosca_nodes_nodewithcapEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
@@ -1604,20 +1719,22 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		tosca_nodes_somenodeEClass.getESuperTypes().add(theToscaPackage.getTosca_nodes_root());
 		tosca_nodes_somenodeEClass.getESuperTypes().add(this.getTosca_capabilities_somechildcap());
 		tosca_nodes_somenodeEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
-		tosca_nodes_webserver_nodejsEClass.getESuperTypes().add(theToscaPackage.getTosca_nodes_webserver());
-		tosca_nodes_webserver_nodejsEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_nodes_dbms_mysqlEClass.getESuperTypes().add(theToscaPackage.getTosca_nodes_dbms());
 		tosca_nodes_dbms_mysqlEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		mycompany_mytypes_myscalingpolicyEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
-		test_relation_connectsEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
-		tosca_relationships_network_bindstoEClass.getESuperTypes().add(theToscaPackage.getTosca_relationships_dependson());
-		tosca_relationships_network_bindstoEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
+		tosca_relationships_nodecellarhostedonnodejsEClass.getESuperTypes().add(theToscaPackage.getTosca_relationships_hostedon());
+		tosca_relationships_nodecellarhostedonnodejsEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_relationships_haEClass.getESuperTypes().add(theToscaPackage.getTosca_relationships_root());
 		tosca_relationships_haEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		myattachestoEClass.getESuperTypes().add(theToscaPackage.getTosca_relationships_attachesto());
 		myattachestoEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
+		tosca_relationships_nodejsconnecttomongoEClass.getESuperTypes().add(theToscaPackage.getTosca_relationships_connectsto());
+		tosca_relationships_nodejsconnecttomongoEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_relationships_network_linkstoEClass.getESuperTypes().add(theToscaPackage.getTosca_relationships_dependson());
 		tosca_relationships_network_linkstoEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
+		test_relation_connectsEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
+		tosca_relationships_network_bindstoEClass.getESuperTypes().add(theToscaPackage.getTosca_relationships_dependson());
+		tosca_relationships_network_bindstoEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(arrayCredentialEClass, arrayCredential.class, "arrayCredential", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1632,12 +1749,16 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		initEClass(arrayintegerEClass, arrayinteger.class, "arrayinteger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getarrayinteger_Values(), theToscaPackage.getinteger(), "values", null, 0, -1, arrayinteger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(tosca_capabilities_containerchildEClass, Tosca_capabilities_containerchild.class, "Tosca_capabilities_containerchild", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(tosca_capabilities_somecapEClass, Tosca_capabilities_somecap.class, "Tosca_capabilities_somecap", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(tosca_capabilities_indigo_endpointEClass, Tosca_capabilities_indigo_endpoint.class, "Tosca_capabilities_indigo_endpoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTosca_capabilities_indigo_endpoint_Credential(), this.getarrayCredential(), null, "credential", null, 0, 1, Tosca_capabilities_indigo_endpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tosca_capabilities_haEClass, Tosca_capabilities_ha.class, "Tosca_capabilities_ha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tosca_capabilities_nodejsappcontainerEClass, Tosca_capabilities_nodejsappcontainer.class, "Tosca_capabilities_nodejsappcontainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(tosca_capabilities_container_dockerEClass, Tosca_capabilities_container_docker.class, "Tosca_capabilities_container_docker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTosca_capabilities_container_docker_PublishAll(), theToscaPackage.getboolean(), "publishAll", "false", 0, 1, Tosca_capabilities_container_docker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1646,8 +1767,6 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		initEReference(getTosca_capabilities_container_docker_Volumes(), theToscaPackage.getarraystring(), null, "volumes", null, 0, 1, Tosca_capabilities_container_docker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTosca_capabilities_container_docker_Version(), this.getarrayversion(), null, "version", null, 0, 1, Tosca_capabilities_container_docker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(tosca_capabilities_containerchildEClass, Tosca_capabilities_containerchild.class, "Tosca_capabilities_containerchild", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(tosca_capabilities_somechildcapEClass, Tosca_capabilities_somechildcap.class, "Tosca_capabilities_somechildcap", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(tosca_nodes_computewithpropEClass, Tosca_nodes_computewithprop.class, "Tosca_nodes_computewithprop", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1655,6 +1774,10 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 
 		initEClass(tosca_nodes_webapplication_paypalpizzastoreEClass, Tosca_nodes_webapplication_paypalpizzastore.class, "Tosca_nodes_webapplication_paypalpizzastore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTosca_nodes_webapplication_paypalpizzastore_GithubUrl(), theToscaPackage.getstring(), "githubUrl", "https://github.com/sample.git", 0, 1, Tosca_nodes_webapplication_paypalpizzastore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tosca_nodes_abstractmongodEClass, Tosca_nodes_abstractmongod.class, "Tosca_nodes_abstractmongod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tosca_nodes_mongodEClass, Tosca_nodes_mongod.class, "Tosca_nodes_mongod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(tosca_nodes_network_networkEClass, Tosca_nodes_network_network.class, "Tosca_nodes_network_network", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTosca_nodes_network_network_PhysicalNetwork(), theToscaPackage.getstring(), "physicalNetwork", null, 0, 1, Tosca_nodes_network_network.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1676,6 +1799,8 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(tosca_nodes_nodejsEClass, Tosca_nodes_nodejs.class, "Tosca_nodes_nodejs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(tosca_nodes_container_application_dockerEClass, Tosca_nodes_container_application_docker.class, "Tosca_nodes_container_application_docker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1719,6 +1844,8 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 
 		initEClass(example_someappEClass, Example_someapp.class, "Example_someapp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(tosca_nodes_nodecellarEClass, Tosca_nodes_nodecellar.class, "Tosca_nodes_nodecellar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(tosca_nodes_nodewithcapEClass, Tosca_nodes_nodewithcap.class, "Tosca_nodes_nodewithcap", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(tosca_nodes_apacheEClass, Tosca_nodes_apache.class, "Tosca_nodes_apache", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1753,22 +1880,23 @@ public class ExtendedtoscaPackageImpl extends EPackageImpl implements Extendedto
 
 		initEClass(tosca_nodes_somenodeEClass, Tosca_nodes_somenode.class, "Tosca_nodes_somenode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(tosca_nodes_webserver_nodejsEClass, Tosca_nodes_webserver_nodejs.class, "Tosca_nodes_webserver_nodejs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTosca_nodes_webserver_nodejs_GithubUrl(), theToscaPackage.getstring(), "githubUrl", "https://github.com/mmm/testnode.git", 0, 1, Tosca_nodes_webserver_nodejs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(tosca_nodes_dbms_mysqlEClass, Tosca_nodes_dbms_mysql.class, "Tosca_nodes_dbms_mysql", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(mycompany_mytypes_myscalingpolicyEClass, Mycompany_mytypes_myscalingpolicy.class, "Mycompany_mytypes_myscalingpolicy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(test_relation_connectsEClass, Test_relation_connects.class, "Test_relation_connects", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(tosca_relationships_network_bindstoEClass, Tosca_relationships_network_bindsto.class, "Tosca_relationships_network_bindsto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tosca_relationships_nodecellarhostedonnodejsEClass, Tosca_relationships_nodecellarhostedonnodejs.class, "Tosca_relationships_nodecellarhostedonnodejs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(tosca_relationships_haEClass, Tosca_relationships_ha.class, "Tosca_relationships_ha", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(myattachestoEClass, Myattachesto.class, "Myattachesto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(tosca_relationships_nodejsconnecttomongoEClass, Tosca_relationships_nodejsconnecttomongo.class, "Tosca_relationships_nodejsconnecttomongo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(tosca_relationships_network_linkstoEClass, Tosca_relationships_network_linksto.class, "Tosca_relationships_network_linksto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(test_relation_connectsEClass, Test_relation_connects.class, "Test_relation_connects", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tosca_relationships_network_bindstoEClass, Tosca_relationships_network_bindsto.class, "Tosca_relationships_network_bindsto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(ip_versionEnumEEnum, ip_versionEnum.class, "ip_versionEnum");

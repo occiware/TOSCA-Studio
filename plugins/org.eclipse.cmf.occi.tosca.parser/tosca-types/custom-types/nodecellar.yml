@@ -1,0 +1,57 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+
+metadata:
+  template_name: nodecellar-type
+  template_version: 1.4.0-SNAPSHOT
+  template_author: alien4cloud
+
+description: Nodecellar application
+
+imports:
+  - tosca-normative-types:1.0.0
+  - nodejs-type:1.0.0
+
+node_types:
+  tosca.nodes.Nodecellar:
+    derived_from: tosca.nodes.WebApplication
+    description: The TOSCA Nodecellar Node Type represents a Nodecellar Application.
+    metadata:
+      icon: /images/nodecellar.jpg
+    properties:
+      port:
+        type: integer
+        default: 8088
+    attributes:
+      nodecellar_url: "http://nodecellar.example:8088"
+    requirements:
+      - host:
+          capability: tosca.capabilities.NodeJSAppContainer
+          relationship: tosca.relationships.NodecellarHostedOnNodejs
+      - database:
+          capability: tosca.capabilities.Endpoint.Database
+          relationship: tosca.relationships.NodejsConnectToMongo
+          occurrences: [1, 1]
+    interfaces:
+      Standard:
+        create: scripts/install-nodecellar-app.sh
+        start: scripts/start-nodecellar-app.sh
+        stop: scripts/stop-nodecellar-app.sh
+
+relationship_types:
+  tosca.relationships.NodecellarHostedOnNodejs:
+    derived_from: tosca.relationships.HostedOn
+    description: Relationship use to describe that the website is deployed on the target nodejs server.
+    valid_target_types: [ tosca.capabilities.Container ]
+
+  tosca.relationships.NodejsConnectToMongo:
+    derived_from: tosca.relationships.ConnectsTo
+    description: Relationship use to connect nodejs with a mongodb databse
+    valid_target_types: [ tosca.capabilities.Endpoint.Database ]
+    interfaces:
+      Configure:
+          pre_configure_source:
+            inputs:
+              DB_IP: { get_attribute: [TARGET, ip_address] }
+              DB_PORT: { get_property: [TARGET, port] }
+              NODECELLAR_PORT: {get_property: [SOURCE, port]}
+            implementation: scripts/set-mongo-url.sh

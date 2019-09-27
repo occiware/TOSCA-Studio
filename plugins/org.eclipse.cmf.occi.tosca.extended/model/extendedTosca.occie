@@ -7,6 +7,9 @@
   <import href="http://schemas.modmacao.org/modmacao#/"/>
   <import href="http://schemas.modmacao.org/occi/platform#/"/>
   <import href="http://schemas.modmacao.org/placement#/"/>
+  <mixins name="tosca_capabilities_ContainerChild" scheme="http://schemas.ogf.org/tosca/extended#" title="Define a capability class that inherits from tosca.capabilities.Container">
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_container']"/>
+  </mixins>
   <mixins name="tosca_capabilities_SomeCap" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_root']"/>
   </mixins>
@@ -16,6 +19,9 @@
   </mixins>
   <mixins name="tosca_capabilities_HA" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_root']"/>
+  </mixins>
+  <mixins name="tosca_capabilities_NodeJSAppContainer" scheme="http://schemas.ogf.org/tosca/extended#">
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_container']"/>
   </mixins>
   <mixins name="tosca_capabilities_Container_Docker" scheme="http://schemas.ogf.org/tosca/extended#">
     <attributes name="publish.all" default="false">
@@ -27,9 +33,6 @@
       <type xsi:type="occi:ArrayType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.19"/>
     </attributes>
     <attributes name="version" type="//@types.2"/>
-    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_container']"/>
-  </mixins>
-  <mixins name="tosca_capabilities_ContainerChild" scheme="http://schemas.ogf.org/tosca/extended#" title="Define a capability class that inherits from tosca.capabilities.Container">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_container']"/>
   </mixins>
   <mixins name="tosca_capabilities_SomeChildCap" scheme="http://schemas.ogf.org/tosca/extended#" depends="//@mixins[term='tosca_capabilities_somecap']"/>
@@ -45,6 +48,11 @@
     </attributes>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_webapplication']"/>
   </mixins>
+  <mixins name="tosca_nodes_AbstractMongod" scheme="http://schemas.ogf.org/tosca/extended#">
+    <annotations key="default-value_port" value="27017"/>
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_dbms']"/>
+  </mixins>
+  <mixins name="tosca_nodes_Mongod" scheme="http://schemas.ogf.org/tosca/extended#" title="A node to install Mongodb nosql database." depends="//@mixins[term='tosca_nodes_abstractmongod']"/>
   <mixins name="tosca_nodes_network_Network" scheme="http://schemas.ogf.org/tosca/extended#">
     <attributes name="physical.network">
       <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
@@ -76,6 +84,11 @@
     </attributes>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
     <applies href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='network']"/>
+  </mixins>
+  <mixins name="tosca_nodes_Nodejs" scheme="http://schemas.ogf.org/tosca/extended#" title="The TOSCA Nodejs Node Type represents an Nodejs component that can be managed and run by a TOSCA Compute Node Type.">
+    <annotations key="default-value_component.version" value="0.12"/>
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_webserver']"/>
+    <depends href="#//@mixins[term='tosca_capabilities_nodejsappcontainer']"/>
   </mixins>
   <mixins name="tosca_nodes_Container_Application_Docker" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_container_application']"/>
@@ -159,6 +172,10 @@
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_capabilities_endpoint']"/>
   </mixins>
+  <mixins name="tosca_nodes_Nodecellar" scheme="http://schemas.ogf.org/tosca/extended#" title="The TOSCA Nodecellar Node Type represents a Nodecellar Application.">
+    <annotations key="default-value_port" value="8088"/>
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_webapplication']"/>
+  </mixins>
   <mixins name="tosca_nodes_NodeWithCap" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
     <depends href="#//@mixins[term='tosca_capabilities_somecap']"/>
@@ -216,20 +233,13 @@
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_root']"/>
     <depends href="#//@mixins[term='tosca_capabilities_somechildcap']"/>
   </mixins>
-  <mixins name="tosca_nodes_WebServer_Nodejs" scheme="http://schemas.ogf.org/tosca/extended#">
-    <attributes name="github.url" default="https://github.com/mmm/testnode.git" description="location of the application on the github.">
-      <type xsi:type="occi:StringType" href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@types.0"/>
-    </attributes>
-    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_webserver']"/>
-  </mixins>
   <mixins name="tosca_nodes_DBMS_MySQL" scheme="http://schemas.ogf.org/tosca/extended#">
     <annotations key="default-value_port" value="3306"/>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_nodes_dbms']"/>
   </mixins>
   <mixins name="mycompany_mytypes_myScalingPolicy" scheme="http://schemas.ogf.org/tosca/extended#"/>
-  <mixins name="test_relation_connects" scheme="http://schemas.ogf.org/tosca/extended#"/>
-  <mixins name="tosca_relationships_network_BindsTo" scheme="http://schemas.ogf.org/tosca/extended#">
-    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_relationships_dependson']"/>
+  <mixins name="tosca_relationships_NodecellarHostedOnNodejs" scheme="http://schemas.ogf.org/tosca/extended#" title="Relationship use to describe that the website is deployed on the target nodejs server.">
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_relationships_hostedon']"/>
   </mixins>
   <mixins name="tosca_relationships_HA" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_relationships_root']"/>
@@ -238,7 +248,14 @@
     <annotations key="default-value_location" value="default_location"/>
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_relationships_attachesto']"/>
   </mixins>
+  <mixins name="tosca_relationships_NodejsConnectToMongo" scheme="http://schemas.ogf.org/tosca/extended#" title="Relationship use to connect nodejs with a mongodb databse">
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_relationships_connectsto']"/>
+  </mixins>
   <mixins name="tosca_relationships_network_LinksTo" scheme="http://schemas.ogf.org/tosca/extended#">
+    <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_relationships_dependson']"/>
+  </mixins>
+  <mixins name="test_relation_connects" scheme="http://schemas.ogf.org/tosca/extended#"/>
+  <mixins name="tosca_relationships_network_BindsTo" scheme="http://schemas.ogf.org/tosca/extended#">
     <depends href="../../org.eclipse.cmf.occi.tosca/model/tosca.occie#//@mixins[term='tosca_relationships_dependson']"/>
   </mixins>
   <types xsi:type="occi:ArrayType" name="arrayCredential">

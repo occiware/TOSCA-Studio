@@ -140,8 +140,10 @@ public class ExtendedtoscaTables
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_capabilities_containerchild = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_CAPABILITIES_CONTAINERCHILD, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_capabilities_ha = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_CAPABILITIES_HA, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_capabilities_indigo_endpoint = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_CAPABILITIES_INDIGO_ENDPOINT, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _Tosca_capabilities_nodejsappcontainer = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_CAPABILITIES_NODEJSAPPCONTAINER, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_capabilities_somecap = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_CAPABILITIES_SOMECAP, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_capabilities_somechildcap = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_CAPABILITIES_SOMECHILDCAP, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_abstractmongod = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_ABSTRACTMONGOD, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_abstractmysql = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_ABSTRACTMYSQL, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_apache = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_APACHE, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_computewithattrlist = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_COMPUTEWITHATTRLIST, PACKAGE, 0);
@@ -152,9 +154,12 @@ public class ExtendedtoscaTables
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_databasewithlistparam = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_DATABASEWITHLISTPARAM, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_dbms_mysql = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_DBMS_MYSQL, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_hacompute = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_HACOMPUTE, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_mongod = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_MONGOD, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_mysql = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_MYSQL, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_network_network = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_NETWORK, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_network_port = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_PORT, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_nodecellar = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_NODECELLAR, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_nodejs = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_NODEJS, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_nodewithcap = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_NODEWITHCAP, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_nodewithreq = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_NODEWITHREQ, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_php = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_PHP, PACKAGE, 0);
@@ -166,11 +171,12 @@ public class ExtendedtoscaTables
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_somenode = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_SOMENODE, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_somenode2 = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_SOMENODE2, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_webapplication_paypalpizzastore = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_WEBAPPLICATION_PAYPALPIZZASTORE, PACKAGE, 0);
-		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_webserver_nodejs = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_WEBSERVER_NODEJS, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_nodes_wordpress = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_NODES_WORDPRESS, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_relationships_ha = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_RELATIONSHIPS_HA, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_relationships_network_bindsto = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_RELATIONSHIPS_NETWORK_BINDSTO, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Tosca_relationships_network_linksto = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_RELATIONSHIPS_NETWORK_LINKSTO, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _Tosca_relationships_nodecellarhostedonnodejs = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_RELATIONSHIPS_NODECELLARHOSTEDONNODEJS, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _Tosca_relationships_nodejsconnecttomongo = new EcoreExecutorType(ExtendedtoscaPackage.Literals.TOSCA_RELATIONSHIPS_NODEJSCONNECTTOMONGO, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _arrayCredential = new EcoreExecutorType(ExtendedtoscaPackage.Literals.ARRAY_CREDENTIAL, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _arrayPortSpec = new EcoreExecutorType(ExtendedtoscaPackage.Literals.ARRAY_PORT_SPEC, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _arrayinteger = new EcoreExecutorType(ExtendedtoscaPackage.Literals.ARRAYINTEGER, PACKAGE, 0);
@@ -191,8 +197,10 @@ public class ExtendedtoscaTables
 			_Tosca_capabilities_containerchild,
 			_Tosca_capabilities_ha,
 			_Tosca_capabilities_indigo_endpoint,
+			_Tosca_capabilities_nodejsappcontainer,
 			_Tosca_capabilities_somecap,
 			_Tosca_capabilities_somechildcap,
+			_Tosca_nodes_abstractmongod,
 			_Tosca_nodes_abstractmysql,
 			_Tosca_nodes_apache,
 			_Tosca_nodes_computewithattrlist,
@@ -203,9 +211,12 @@ public class ExtendedtoscaTables
 			_Tosca_nodes_databasewithlistparam,
 			_Tosca_nodes_dbms_mysql,
 			_Tosca_nodes_hacompute,
+			_Tosca_nodes_mongod,
 			_Tosca_nodes_mysql,
 			_Tosca_nodes_network_network,
 			_Tosca_nodes_network_port,
+			_Tosca_nodes_nodecellar,
+			_Tosca_nodes_nodejs,
 			_Tosca_nodes_nodewithcap,
 			_Tosca_nodes_nodewithreq,
 			_Tosca_nodes_php,
@@ -217,11 +228,12 @@ public class ExtendedtoscaTables
 			_Tosca_nodes_somenode,
 			_Tosca_nodes_somenode2,
 			_Tosca_nodes_webapplication_paypalpizzastore,
-			_Tosca_nodes_webserver_nodejs,
 			_Tosca_nodes_wordpress,
 			_Tosca_relationships_ha,
 			_Tosca_relationships_network_bindsto,
 			_Tosca_relationships_network_linksto,
+			_Tosca_relationships_nodecellarhostedonnodejs,
+			_Tosca_relationships_nodejsconnecttomongo,
 			_arrayCredential,
 			_arrayPortSpec,
 			_arrayinteger,
@@ -346,6 +358,13 @@ public class ExtendedtoscaTables
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_capabilities_indigo_endpoint__Tosca_capabilities_indigo_endpoint = new ExecutorFragment(Types._Tosca_capabilities_indigo_endpoint, ExtendedtoscaTables.Types._Tosca_capabilities_indigo_endpoint);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_capabilities_indigo_endpoint__Tosca_capabilities_root = new ExecutorFragment(Types._Tosca_capabilities_indigo_endpoint, ToscaTables.Types._Tosca_capabilities_root);
 
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_capabilities_nodejsappcontainer__MixinBase = new ExecutorFragment(Types._Tosca_capabilities_nodejsappcontainer, OCCITables.Types._MixinBase);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_capabilities_nodejsappcontainer__OclAny = new ExecutorFragment(Types._Tosca_capabilities_nodejsappcontainer, OCLstdlibTables.Types._OclAny);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_capabilities_nodejsappcontainer__OclElement = new ExecutorFragment(Types._Tosca_capabilities_nodejsappcontainer, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_capabilities_nodejsappcontainer__Tosca_capabilities_container = new ExecutorFragment(Types._Tosca_capabilities_nodejsappcontainer, ToscaTables.Types._Tosca_capabilities_container);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_capabilities_nodejsappcontainer__Tosca_capabilities_nodejsappcontainer = new ExecutorFragment(Types._Tosca_capabilities_nodejsappcontainer, ExtendedtoscaTables.Types._Tosca_capabilities_nodejsappcontainer);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_capabilities_nodejsappcontainer__Tosca_capabilities_root = new ExecutorFragment(Types._Tosca_capabilities_nodejsappcontainer, ToscaTables.Types._Tosca_capabilities_root);
+
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_capabilities_somecap__MixinBase = new ExecutorFragment(Types._Tosca_capabilities_somecap, OCCITables.Types._MixinBase);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_capabilities_somecap__OclAny = new ExecutorFragment(Types._Tosca_capabilities_somecap, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_capabilities_somecap__OclElement = new ExecutorFragment(Types._Tosca_capabilities_somecap, OCLstdlibTables.Types._OclElement);
@@ -358,6 +377,18 @@ public class ExtendedtoscaTables
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_capabilities_somechildcap__Tosca_capabilities_root = new ExecutorFragment(Types._Tosca_capabilities_somechildcap, ToscaTables.Types._Tosca_capabilities_root);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_capabilities_somechildcap__Tosca_capabilities_somecap = new ExecutorFragment(Types._Tosca_capabilities_somechildcap, ExtendedtoscaTables.Types._Tosca_capabilities_somecap);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_capabilities_somechildcap__Tosca_capabilities_somechildcap = new ExecutorFragment(Types._Tosca_capabilities_somechildcap, ExtendedtoscaTables.Types._Tosca_capabilities_somechildcap);
+
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_abstractmongod__Database = new ExecutorFragment(Types._Tosca_nodes_abstractmongod, PlatformTables.Types._Database);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_abstractmongod__MixinBase = new ExecutorFragment(Types._Tosca_nodes_abstractmongod, OCCITables.Types._MixinBase);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_abstractmongod__OclAny = new ExecutorFragment(Types._Tosca_nodes_abstractmongod, OCLstdlibTables.Types._OclAny);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_abstractmongod__OclElement = new ExecutorFragment(Types._Tosca_nodes_abstractmongod, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_abstractmongod__Tosca_capabilities_container = new ExecutorFragment(Types._Tosca_nodes_abstractmongod, ToscaTables.Types._Tosca_capabilities_container);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_abstractmongod__Tosca_capabilities_node = new ExecutorFragment(Types._Tosca_nodes_abstractmongod, ToscaTables.Types._Tosca_capabilities_node);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_abstractmongod__Tosca_capabilities_root = new ExecutorFragment(Types._Tosca_nodes_abstractmongod, ToscaTables.Types._Tosca_capabilities_root);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_abstractmongod__Tosca_nodes_abstractmongod = new ExecutorFragment(Types._Tosca_nodes_abstractmongod, ExtendedtoscaTables.Types._Tosca_nodes_abstractmongod);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_abstractmongod__Tosca_nodes_dbms = new ExecutorFragment(Types._Tosca_nodes_abstractmongod, ToscaTables.Types._Tosca_nodes_dbms);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_abstractmongod__Tosca_nodes_root = new ExecutorFragment(Types._Tosca_nodes_abstractmongod, ToscaTables.Types._Tosca_nodes_root);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_abstractmongod__Tosca_nodes_softwarecomponent = new ExecutorFragment(Types._Tosca_nodes_abstractmongod, ToscaTables.Types._Tosca_nodes_softwarecomponent);
 
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_abstractmysql__MixinBase = new ExecutorFragment(Types._Tosca_nodes_abstractmysql, OCCITables.Types._MixinBase);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_abstractmysql__OclAny = new ExecutorFragment(Types._Tosca_nodes_abstractmysql, OCLstdlibTables.Types._OclAny);
@@ -488,6 +519,19 @@ public class ExtendedtoscaTables
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_hacompute__Tosca_nodes_hacompute = new ExecutorFragment(Types._Tosca_nodes_hacompute, ExtendedtoscaTables.Types._Tosca_nodes_hacompute);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_hacompute__Tosca_nodes_root = new ExecutorFragment(Types._Tosca_nodes_hacompute, ToscaTables.Types._Tosca_nodes_root);
 
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_mongod__Database = new ExecutorFragment(Types._Tosca_nodes_mongod, PlatformTables.Types._Database);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_mongod__MixinBase = new ExecutorFragment(Types._Tosca_nodes_mongod, OCCITables.Types._MixinBase);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_mongod__OclAny = new ExecutorFragment(Types._Tosca_nodes_mongod, OCLstdlibTables.Types._OclAny);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_mongod__OclElement = new ExecutorFragment(Types._Tosca_nodes_mongod, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_mongod__Tosca_capabilities_container = new ExecutorFragment(Types._Tosca_nodes_mongod, ToscaTables.Types._Tosca_capabilities_container);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_mongod__Tosca_capabilities_node = new ExecutorFragment(Types._Tosca_nodes_mongod, ToscaTables.Types._Tosca_capabilities_node);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_mongod__Tosca_capabilities_root = new ExecutorFragment(Types._Tosca_nodes_mongod, ToscaTables.Types._Tosca_capabilities_root);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_mongod__Tosca_nodes_abstractmongod = new ExecutorFragment(Types._Tosca_nodes_mongod, ExtendedtoscaTables.Types._Tosca_nodes_abstractmongod);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_mongod__Tosca_nodes_dbms = new ExecutorFragment(Types._Tosca_nodes_mongod, ToscaTables.Types._Tosca_nodes_dbms);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_mongod__Tosca_nodes_mongod = new ExecutorFragment(Types._Tosca_nodes_mongod, ExtendedtoscaTables.Types._Tosca_nodes_mongod);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_mongod__Tosca_nodes_root = new ExecutorFragment(Types._Tosca_nodes_mongod, ToscaTables.Types._Tosca_nodes_root);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_mongod__Tosca_nodes_softwarecomponent = new ExecutorFragment(Types._Tosca_nodes_mongod, ToscaTables.Types._Tosca_nodes_softwarecomponent);
+
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_mysql__MixinBase = new ExecutorFragment(Types._Tosca_nodes_mysql, OCCITables.Types._MixinBase);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_mysql__OclAny = new ExecutorFragment(Types._Tosca_nodes_mysql, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_mysql__OclElement = new ExecutorFragment(Types._Tosca_nodes_mysql, OCLstdlibTables.Types._OclElement);
@@ -515,6 +559,30 @@ public class ExtendedtoscaTables
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_network_port__Tosca_capabilities_root = new ExecutorFragment(Types._Tosca_nodes_network_port, ToscaTables.Types._Tosca_capabilities_root);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_network_port__Tosca_nodes_network_port = new ExecutorFragment(Types._Tosca_nodes_network_port, ExtendedtoscaTables.Types._Tosca_nodes_network_port);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_network_port__Tosca_nodes_root = new ExecutorFragment(Types._Tosca_nodes_network_port, ToscaTables.Types._Tosca_nodes_root);
+
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodecellar__MixinBase = new ExecutorFragment(Types._Tosca_nodes_nodecellar, OCCITables.Types._MixinBase);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodecellar__OclAny = new ExecutorFragment(Types._Tosca_nodes_nodecellar, OCLstdlibTables.Types._OclAny);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodecellar__OclElement = new ExecutorFragment(Types._Tosca_nodes_nodecellar, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodecellar__Tosca_capabilities_endpoint = new ExecutorFragment(Types._Tosca_nodes_nodecellar, ToscaTables.Types._Tosca_capabilities_endpoint);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodecellar__Tosca_capabilities_node = new ExecutorFragment(Types._Tosca_nodes_nodecellar, ToscaTables.Types._Tosca_capabilities_node);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodecellar__Tosca_capabilities_root = new ExecutorFragment(Types._Tosca_nodes_nodecellar, ToscaTables.Types._Tosca_capabilities_root);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodecellar__Tosca_nodes_nodecellar = new ExecutorFragment(Types._Tosca_nodes_nodecellar, ExtendedtoscaTables.Types._Tosca_nodes_nodecellar);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodecellar__Tosca_nodes_root = new ExecutorFragment(Types._Tosca_nodes_nodecellar, ToscaTables.Types._Tosca_nodes_root);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodecellar__Tosca_nodes_webapplication = new ExecutorFragment(Types._Tosca_nodes_nodecellar, ToscaTables.Types._Tosca_nodes_webapplication);
+
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodejs__MixinBase = new ExecutorFragment(Types._Tosca_nodes_nodejs, OCCITables.Types._MixinBase);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodejs__OclAny = new ExecutorFragment(Types._Tosca_nodes_nodejs, OCLstdlibTables.Types._OclAny);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodejs__OclElement = new ExecutorFragment(Types._Tosca_nodes_nodejs, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodejs__Tosca_capabilities_container = new ExecutorFragment(Types._Tosca_nodes_nodejs, ToscaTables.Types._Tosca_capabilities_container);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodejs__Tosca_capabilities_endpoint = new ExecutorFragment(Types._Tosca_nodes_nodejs, ToscaTables.Types._Tosca_capabilities_endpoint);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodejs__Tosca_capabilities_endpoint_admin = new ExecutorFragment(Types._Tosca_nodes_nodejs, ToscaTables.Types._Tosca_capabilities_endpoint_admin);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodejs__Tosca_capabilities_node = new ExecutorFragment(Types._Tosca_nodes_nodejs, ToscaTables.Types._Tosca_capabilities_node);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodejs__Tosca_capabilities_nodejsappcontainer = new ExecutorFragment(Types._Tosca_nodes_nodejs, ExtendedtoscaTables.Types._Tosca_capabilities_nodejsappcontainer);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodejs__Tosca_capabilities_root = new ExecutorFragment(Types._Tosca_nodes_nodejs, ToscaTables.Types._Tosca_capabilities_root);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodejs__Tosca_nodes_nodejs = new ExecutorFragment(Types._Tosca_nodes_nodejs, ExtendedtoscaTables.Types._Tosca_nodes_nodejs);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodejs__Tosca_nodes_root = new ExecutorFragment(Types._Tosca_nodes_nodejs, ToscaTables.Types._Tosca_nodes_root);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodejs__Tosca_nodes_softwarecomponent = new ExecutorFragment(Types._Tosca_nodes_nodejs, ToscaTables.Types._Tosca_nodes_softwarecomponent);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodejs__Tosca_nodes_webserver = new ExecutorFragment(Types._Tosca_nodes_nodejs, ToscaTables.Types._Tosca_nodes_webserver);
 
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodewithcap__MixinBase = new ExecutorFragment(Types._Tosca_nodes_nodewithcap, OCCITables.Types._MixinBase);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_nodewithcap__OclAny = new ExecutorFragment(Types._Tosca_nodes_nodewithcap, OCLstdlibTables.Types._OclAny);
@@ -620,19 +688,6 @@ public class ExtendedtoscaTables
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_webapplication_paypalpizzastore__Tosca_nodes_webapplication = new ExecutorFragment(Types._Tosca_nodes_webapplication_paypalpizzastore, ToscaTables.Types._Tosca_nodes_webapplication);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_webapplication_paypalpizzastore__Tosca_nodes_webapplication_paypalpizzastore = new ExecutorFragment(Types._Tosca_nodes_webapplication_paypalpizzastore, ExtendedtoscaTables.Types._Tosca_nodes_webapplication_paypalpizzastore);
 
-		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_webserver_nodejs__MixinBase = new ExecutorFragment(Types._Tosca_nodes_webserver_nodejs, OCCITables.Types._MixinBase);
-		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_webserver_nodejs__OclAny = new ExecutorFragment(Types._Tosca_nodes_webserver_nodejs, OCLstdlibTables.Types._OclAny);
-		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_webserver_nodejs__OclElement = new ExecutorFragment(Types._Tosca_nodes_webserver_nodejs, OCLstdlibTables.Types._OclElement);
-		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_webserver_nodejs__Tosca_capabilities_container = new ExecutorFragment(Types._Tosca_nodes_webserver_nodejs, ToscaTables.Types._Tosca_capabilities_container);
-		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_webserver_nodejs__Tosca_capabilities_endpoint = new ExecutorFragment(Types._Tosca_nodes_webserver_nodejs, ToscaTables.Types._Tosca_capabilities_endpoint);
-		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_webserver_nodejs__Tosca_capabilities_endpoint_admin = new ExecutorFragment(Types._Tosca_nodes_webserver_nodejs, ToscaTables.Types._Tosca_capabilities_endpoint_admin);
-		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_webserver_nodejs__Tosca_capabilities_node = new ExecutorFragment(Types._Tosca_nodes_webserver_nodejs, ToscaTables.Types._Tosca_capabilities_node);
-		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_webserver_nodejs__Tosca_capabilities_root = new ExecutorFragment(Types._Tosca_nodes_webserver_nodejs, ToscaTables.Types._Tosca_capabilities_root);
-		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_webserver_nodejs__Tosca_nodes_root = new ExecutorFragment(Types._Tosca_nodes_webserver_nodejs, ToscaTables.Types._Tosca_nodes_root);
-		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_webserver_nodejs__Tosca_nodes_softwarecomponent = new ExecutorFragment(Types._Tosca_nodes_webserver_nodejs, ToscaTables.Types._Tosca_nodes_softwarecomponent);
-		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_webserver_nodejs__Tosca_nodes_webserver = new ExecutorFragment(Types._Tosca_nodes_webserver_nodejs, ToscaTables.Types._Tosca_nodes_webserver);
-		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_webserver_nodejs__Tosca_nodes_webserver_nodejs = new ExecutorFragment(Types._Tosca_nodes_webserver_nodejs, ExtendedtoscaTables.Types._Tosca_nodes_webserver_nodejs);
-
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_wordpress__MixinBase = new ExecutorFragment(Types._Tosca_nodes_wordpress, OCCITables.Types._MixinBase);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_wordpress__OclAny = new ExecutorFragment(Types._Tosca_nodes_wordpress, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_nodes_wordpress__OclElement = new ExecutorFragment(Types._Tosca_nodes_wordpress, OCLstdlibTables.Types._OclElement);
@@ -671,6 +726,26 @@ public class ExtendedtoscaTables
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_network_linksto__Tosca_relationships_dependson = new ExecutorFragment(Types._Tosca_relationships_network_linksto, ToscaTables.Types._Tosca_relationships_dependson);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_network_linksto__Tosca_relationships_network_linksto = new ExecutorFragment(Types._Tosca_relationships_network_linksto, ExtendedtoscaTables.Types._Tosca_relationships_network_linksto);
 		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_network_linksto__Tosca_relationships_root = new ExecutorFragment(Types._Tosca_relationships_network_linksto, ToscaTables.Types._Tosca_relationships_root);
+
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodecellarhostedonnodejs__Dependency = new ExecutorFragment(Types._Tosca_relationships_nodecellarhostedonnodejs, ModmacaoTables.Types._Dependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodecellarhostedonnodejs__Executiondependency = new ExecutorFragment(Types._Tosca_relationships_nodecellarhostedonnodejs, ModmacaoTables.Types._Executiondependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodecellarhostedonnodejs__Installationdependency = new ExecutorFragment(Types._Tosca_relationships_nodecellarhostedonnodejs, ModmacaoTables.Types._Installationdependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodecellarhostedonnodejs__MixinBase = new ExecutorFragment(Types._Tosca_relationships_nodecellarhostedonnodejs, OCCITables.Types._MixinBase);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodecellarhostedonnodejs__OclAny = new ExecutorFragment(Types._Tosca_relationships_nodecellarhostedonnodejs, OCLstdlibTables.Types._OclAny);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodecellarhostedonnodejs__OclElement = new ExecutorFragment(Types._Tosca_relationships_nodecellarhostedonnodejs, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodecellarhostedonnodejs__Tosca_relationships_hostedon = new ExecutorFragment(Types._Tosca_relationships_nodecellarhostedonnodejs, ToscaTables.Types._Tosca_relationships_hostedon);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodecellarhostedonnodejs__Tosca_relationships_nodecellarhostedonnodejs = new ExecutorFragment(Types._Tosca_relationships_nodecellarhostedonnodejs, ExtendedtoscaTables.Types._Tosca_relationships_nodecellarhostedonnodejs);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodecellarhostedonnodejs__Tosca_relationships_root = new ExecutorFragment(Types._Tosca_relationships_nodecellarhostedonnodejs, ToscaTables.Types._Tosca_relationships_root);
+
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodejsconnecttomongo__Dependency = new ExecutorFragment(Types._Tosca_relationships_nodejsconnecttomongo, ModmacaoTables.Types._Dependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodejsconnecttomongo__Executiondependency = new ExecutorFragment(Types._Tosca_relationships_nodejsconnecttomongo, ModmacaoTables.Types._Executiondependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodejsconnecttomongo__Installationdependency = new ExecutorFragment(Types._Tosca_relationships_nodejsconnecttomongo, ModmacaoTables.Types._Installationdependency);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodejsconnecttomongo__MixinBase = new ExecutorFragment(Types._Tosca_relationships_nodejsconnecttomongo, OCCITables.Types._MixinBase);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodejsconnecttomongo__OclAny = new ExecutorFragment(Types._Tosca_relationships_nodejsconnecttomongo, OCLstdlibTables.Types._OclAny);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodejsconnecttomongo__OclElement = new ExecutorFragment(Types._Tosca_relationships_nodejsconnecttomongo, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodejsconnecttomongo__Tosca_relationships_connectsto = new ExecutorFragment(Types._Tosca_relationships_nodejsconnecttomongo, ToscaTables.Types._Tosca_relationships_connectsto);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodejsconnecttomongo__Tosca_relationships_nodejsconnecttomongo = new ExecutorFragment(Types._Tosca_relationships_nodejsconnecttomongo, ExtendedtoscaTables.Types._Tosca_relationships_nodejsconnecttomongo);
+		private static final /*@NonNull*/ ExecutorFragment _Tosca_relationships_nodejsconnecttomongo__Tosca_relationships_root = new ExecutorFragment(Types._Tosca_relationships_nodejsconnecttomongo, ToscaTables.Types._Tosca_relationships_root);
 
 		private static final /*@NonNull*/ ExecutorFragment _arrayCredential__OclAny = new ExecutorFragment(Types._arrayCredential, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _arrayCredential__OclElement = new ExecutorFragment(Types._arrayCredential, OCLstdlibTables.Types._OclElement);
@@ -813,8 +888,6 @@ public class ExtendedtoscaTables
 		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_network_port__order = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_NETWORK_PORT__ORDER, Types._Tosca_nodes_network_port, 4);
 
 		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_webapplication_paypalpizzastore__githubUrl = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_WEBAPPLICATION_PAYPALPIZZASTORE__GITHUB_URL, Types._Tosca_nodes_webapplication_paypalpizzastore, 0);
-
-		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_webserver_nodejs__githubUrl = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_WEBSERVER_NODEJS__GITHUB_URL, Types._Tosca_nodes_webserver_nodejs, 0);
 
 		public static final /*@NonNull*/ ExecutorProperty _Tosca_nodes_wordpress__zipUrl = new EcoreExecutorProperty(ExtendedtoscaPackage.Literals.TOSCA_NODES_WORDPRESS__ZIP_URL, Types._Tosca_nodes_wordpress, 0);
 
@@ -990,6 +1063,17 @@ public class ExtendedtoscaTables
 			};
 		private static final int /*@NonNull*/ [] __Tosca_capabilities_indigo_endpoint = { 1,1,1,1,1,1 };
 
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_capabilities_nodejsappcontainer =
+			{
+				Fragments._Tosca_capabilities_nodejsappcontainer__OclAny /* 0 */,
+				Fragments._Tosca_capabilities_nodejsappcontainer__OclElement /* 1 */,
+				Fragments._Tosca_capabilities_nodejsappcontainer__MixinBase /* 2 */,
+				Fragments._Tosca_capabilities_nodejsappcontainer__Tosca_capabilities_root /* 3 */,
+				Fragments._Tosca_capabilities_nodejsappcontainer__Tosca_capabilities_container /* 4 */,
+				Fragments._Tosca_capabilities_nodejsappcontainer__Tosca_capabilities_nodejsappcontainer /* 5 */
+			};
+		private static final int /*@NonNull*/ [] __Tosca_capabilities_nodejsappcontainer = { 1,1,1,1,1,1 };
+
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_capabilities_somecap =
 			{
 				Fragments._Tosca_capabilities_somecap__OclAny /* 0 */,
@@ -1010,6 +1094,22 @@ public class ExtendedtoscaTables
 				Fragments._Tosca_capabilities_somechildcap__Tosca_capabilities_somechildcap /* 5 */
 			};
 		private static final int /*@NonNull*/ [] __Tosca_capabilities_somechildcap = { 1,1,1,1,1,1 };
+
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_nodes_abstractmongod =
+			{
+				Fragments._Tosca_nodes_abstractmongod__OclAny /* 0 */,
+				Fragments._Tosca_nodes_abstractmongod__OclElement /* 1 */,
+				Fragments._Tosca_nodes_abstractmongod__MixinBase /* 2 */,
+				Fragments._Tosca_nodes_abstractmongod__Database /* 3 */,
+				Fragments._Tosca_nodes_abstractmongod__Tosca_capabilities_root /* 3 */,
+				Fragments._Tosca_nodes_abstractmongod__Tosca_capabilities_container /* 4 */,
+				Fragments._Tosca_nodes_abstractmongod__Tosca_capabilities_node /* 4 */,
+				Fragments._Tosca_nodes_abstractmongod__Tosca_nodes_root /* 5 */,
+				Fragments._Tosca_nodes_abstractmongod__Tosca_nodes_softwarecomponent /* 6 */,
+				Fragments._Tosca_nodes_abstractmongod__Tosca_nodes_dbms /* 7 */,
+				Fragments._Tosca_nodes_abstractmongod__Tosca_nodes_abstractmongod /* 8 */
+			};
+		private static final int /*@NonNull*/ [] __Tosca_nodes_abstractmongod = { 1,1,1,2,2,1,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_nodes_abstractmysql =
 			{
@@ -1180,6 +1280,23 @@ public class ExtendedtoscaTables
 			};
 		private static final int /*@NonNull*/ [] __Tosca_nodes_hacompute = { 1,1,1,1,6,3,1,1 };
 
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_nodes_mongod =
+			{
+				Fragments._Tosca_nodes_mongod__OclAny /* 0 */,
+				Fragments._Tosca_nodes_mongod__OclElement /* 1 */,
+				Fragments._Tosca_nodes_mongod__MixinBase /* 2 */,
+				Fragments._Tosca_nodes_mongod__Database /* 3 */,
+				Fragments._Tosca_nodes_mongod__Tosca_capabilities_root /* 3 */,
+				Fragments._Tosca_nodes_mongod__Tosca_capabilities_container /* 4 */,
+				Fragments._Tosca_nodes_mongod__Tosca_capabilities_node /* 4 */,
+				Fragments._Tosca_nodes_mongod__Tosca_nodes_root /* 5 */,
+				Fragments._Tosca_nodes_mongod__Tosca_nodes_softwarecomponent /* 6 */,
+				Fragments._Tosca_nodes_mongod__Tosca_nodes_dbms /* 7 */,
+				Fragments._Tosca_nodes_mongod__Tosca_nodes_abstractmongod /* 8 */,
+				Fragments._Tosca_nodes_mongod__Tosca_nodes_mongod /* 9 */
+			};
+		private static final int /*@NonNull*/ [] __Tosca_nodes_mongod = { 1,1,1,2,2,1,1,1,1,1 };
+
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_nodes_mysql =
 			{
 				Fragments._Tosca_nodes_mysql__OclAny /* 0 */,
@@ -1219,6 +1336,38 @@ public class ExtendedtoscaTables
 				Fragments._Tosca_nodes_network_port__Tosca_nodes_network_port /* 6 */
 			};
 		private static final int /*@NonNull*/ [] __Tosca_nodes_network_port = { 1,1,1,1,1,1,1 };
+
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_nodes_nodecellar =
+			{
+				Fragments._Tosca_nodes_nodecellar__OclAny /* 0 */,
+				Fragments._Tosca_nodes_nodecellar__OclElement /* 1 */,
+				Fragments._Tosca_nodes_nodecellar__MixinBase /* 2 */,
+				Fragments._Tosca_nodes_nodecellar__Tosca_capabilities_root /* 3 */,
+				Fragments._Tosca_nodes_nodecellar__Tosca_capabilities_endpoint /* 4 */,
+				Fragments._Tosca_nodes_nodecellar__Tosca_capabilities_node /* 4 */,
+				Fragments._Tosca_nodes_nodecellar__Tosca_nodes_root /* 5 */,
+				Fragments._Tosca_nodes_nodecellar__Tosca_nodes_webapplication /* 6 */,
+				Fragments._Tosca_nodes_nodecellar__Tosca_nodes_nodecellar /* 7 */
+			};
+		private static final int /*@NonNull*/ [] __Tosca_nodes_nodecellar = { 1,1,1,1,2,1,1,1 };
+
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_nodes_nodejs =
+			{
+				Fragments._Tosca_nodes_nodejs__OclAny /* 0 */,
+				Fragments._Tosca_nodes_nodejs__OclElement /* 1 */,
+				Fragments._Tosca_nodes_nodejs__MixinBase /* 2 */,
+				Fragments._Tosca_nodes_nodejs__Tosca_capabilities_root /* 3 */,
+				Fragments._Tosca_nodes_nodejs__Tosca_capabilities_container /* 4 */,
+				Fragments._Tosca_nodes_nodejs__Tosca_capabilities_endpoint /* 4 */,
+				Fragments._Tosca_nodes_nodejs__Tosca_capabilities_node /* 4 */,
+				Fragments._Tosca_nodes_nodejs__Tosca_capabilities_endpoint_admin /* 5 */,
+				Fragments._Tosca_nodes_nodejs__Tosca_capabilities_nodejsappcontainer /* 5 */,
+				Fragments._Tosca_nodes_nodejs__Tosca_nodes_root /* 5 */,
+				Fragments._Tosca_nodes_nodejs__Tosca_nodes_softwarecomponent /* 6 */,
+				Fragments._Tosca_nodes_nodejs__Tosca_nodes_webserver /* 7 */,
+				Fragments._Tosca_nodes_nodejs__Tosca_nodes_nodejs /* 8 */
+			};
+		private static final int /*@NonNull*/ [] __Tosca_nodes_nodejs = { 1,1,1,1,3,3,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_nodes_nodewithcap =
 			{
@@ -1368,23 +1517,6 @@ public class ExtendedtoscaTables
 			};
 		private static final int /*@NonNull*/ [] __Tosca_nodes_webapplication_paypalpizzastore = { 1,1,1,1,2,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_nodes_webserver_nodejs =
-			{
-				Fragments._Tosca_nodes_webserver_nodejs__OclAny /* 0 */,
-				Fragments._Tosca_nodes_webserver_nodejs__OclElement /* 1 */,
-				Fragments._Tosca_nodes_webserver_nodejs__MixinBase /* 2 */,
-				Fragments._Tosca_nodes_webserver_nodejs__Tosca_capabilities_root /* 3 */,
-				Fragments._Tosca_nodes_webserver_nodejs__Tosca_capabilities_container /* 4 */,
-				Fragments._Tosca_nodes_webserver_nodejs__Tosca_capabilities_endpoint /* 4 */,
-				Fragments._Tosca_nodes_webserver_nodejs__Tosca_capabilities_node /* 4 */,
-				Fragments._Tosca_nodes_webserver_nodejs__Tosca_capabilities_endpoint_admin /* 5 */,
-				Fragments._Tosca_nodes_webserver_nodejs__Tosca_nodes_root /* 5 */,
-				Fragments._Tosca_nodes_webserver_nodejs__Tosca_nodes_softwarecomponent /* 6 */,
-				Fragments._Tosca_nodes_webserver_nodejs__Tosca_nodes_webserver /* 7 */,
-				Fragments._Tosca_nodes_webserver_nodejs__Tosca_nodes_webserver_nodejs /* 8 */
-			};
-		private static final int /*@NonNull*/ [] __Tosca_nodes_webserver_nodejs = { 1,1,1,1,3,2,1,1,1 };
-
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_nodes_wordpress =
 			{
 				Fragments._Tosca_nodes_wordpress__OclAny /* 0 */,
@@ -1439,6 +1571,34 @@ public class ExtendedtoscaTables
 				Fragments._Tosca_relationships_network_linksto__Tosca_relationships_network_linksto /* 7 */
 			};
 		private static final int /*@NonNull*/ [] __Tosca_relationships_network_linksto = { 1,1,1,1,2,1,1,1 };
+
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_relationships_nodecellarhostedonnodejs =
+			{
+				Fragments._Tosca_relationships_nodecellarhostedonnodejs__OclAny /* 0 */,
+				Fragments._Tosca_relationships_nodecellarhostedonnodejs__OclElement /* 1 */,
+				Fragments._Tosca_relationships_nodecellarhostedonnodejs__MixinBase /* 2 */,
+				Fragments._Tosca_relationships_nodecellarhostedonnodejs__Dependency /* 3 */,
+				Fragments._Tosca_relationships_nodecellarhostedonnodejs__Executiondependency /* 4 */,
+				Fragments._Tosca_relationships_nodecellarhostedonnodejs__Installationdependency /* 4 */,
+				Fragments._Tosca_relationships_nodecellarhostedonnodejs__Tosca_relationships_root /* 5 */,
+				Fragments._Tosca_relationships_nodecellarhostedonnodejs__Tosca_relationships_hostedon /* 6 */,
+				Fragments._Tosca_relationships_nodecellarhostedonnodejs__Tosca_relationships_nodecellarhostedonnodejs /* 7 */
+			};
+		private static final int /*@NonNull*/ [] __Tosca_relationships_nodecellarhostedonnodejs = { 1,1,1,1,2,1,1,1 };
+
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Tosca_relationships_nodejsconnecttomongo =
+			{
+				Fragments._Tosca_relationships_nodejsconnecttomongo__OclAny /* 0 */,
+				Fragments._Tosca_relationships_nodejsconnecttomongo__OclElement /* 1 */,
+				Fragments._Tosca_relationships_nodejsconnecttomongo__MixinBase /* 2 */,
+				Fragments._Tosca_relationships_nodejsconnecttomongo__Dependency /* 3 */,
+				Fragments._Tosca_relationships_nodejsconnecttomongo__Executiondependency /* 4 */,
+				Fragments._Tosca_relationships_nodejsconnecttomongo__Installationdependency /* 4 */,
+				Fragments._Tosca_relationships_nodejsconnecttomongo__Tosca_relationships_root /* 5 */,
+				Fragments._Tosca_relationships_nodejsconnecttomongo__Tosca_relationships_connectsto /* 6 */,
+				Fragments._Tosca_relationships_nodejsconnecttomongo__Tosca_relationships_nodejsconnecttomongo /* 7 */
+			};
+		private static final int /*@NonNull*/ [] __Tosca_relationships_nodejsconnecttomongo = { 1,1,1,1,2,1,1,1 };
 
 		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _arrayCredential =
 			{
@@ -1508,8 +1668,10 @@ public class ExtendedtoscaTables
 			Types._Tosca_capabilities_containerchild.initFragments(_Tosca_capabilities_containerchild, __Tosca_capabilities_containerchild);
 			Types._Tosca_capabilities_ha.initFragments(_Tosca_capabilities_ha, __Tosca_capabilities_ha);
 			Types._Tosca_capabilities_indigo_endpoint.initFragments(_Tosca_capabilities_indigo_endpoint, __Tosca_capabilities_indigo_endpoint);
+			Types._Tosca_capabilities_nodejsappcontainer.initFragments(_Tosca_capabilities_nodejsappcontainer, __Tosca_capabilities_nodejsappcontainer);
 			Types._Tosca_capabilities_somecap.initFragments(_Tosca_capabilities_somecap, __Tosca_capabilities_somecap);
 			Types._Tosca_capabilities_somechildcap.initFragments(_Tosca_capabilities_somechildcap, __Tosca_capabilities_somechildcap);
+			Types._Tosca_nodes_abstractmongod.initFragments(_Tosca_nodes_abstractmongod, __Tosca_nodes_abstractmongod);
 			Types._Tosca_nodes_abstractmysql.initFragments(_Tosca_nodes_abstractmysql, __Tosca_nodes_abstractmysql);
 			Types._Tosca_nodes_apache.initFragments(_Tosca_nodes_apache, __Tosca_nodes_apache);
 			Types._Tosca_nodes_computewithattrlist.initFragments(_Tosca_nodes_computewithattrlist, __Tosca_nodes_computewithattrlist);
@@ -1520,9 +1682,12 @@ public class ExtendedtoscaTables
 			Types._Tosca_nodes_databasewithlistparam.initFragments(_Tosca_nodes_databasewithlistparam, __Tosca_nodes_databasewithlistparam);
 			Types._Tosca_nodes_dbms_mysql.initFragments(_Tosca_nodes_dbms_mysql, __Tosca_nodes_dbms_mysql);
 			Types._Tosca_nodes_hacompute.initFragments(_Tosca_nodes_hacompute, __Tosca_nodes_hacompute);
+			Types._Tosca_nodes_mongod.initFragments(_Tosca_nodes_mongod, __Tosca_nodes_mongod);
 			Types._Tosca_nodes_mysql.initFragments(_Tosca_nodes_mysql, __Tosca_nodes_mysql);
 			Types._Tosca_nodes_network_network.initFragments(_Tosca_nodes_network_network, __Tosca_nodes_network_network);
 			Types._Tosca_nodes_network_port.initFragments(_Tosca_nodes_network_port, __Tosca_nodes_network_port);
+			Types._Tosca_nodes_nodecellar.initFragments(_Tosca_nodes_nodecellar, __Tosca_nodes_nodecellar);
+			Types._Tosca_nodes_nodejs.initFragments(_Tosca_nodes_nodejs, __Tosca_nodes_nodejs);
 			Types._Tosca_nodes_nodewithcap.initFragments(_Tosca_nodes_nodewithcap, __Tosca_nodes_nodewithcap);
 			Types._Tosca_nodes_nodewithreq.initFragments(_Tosca_nodes_nodewithreq, __Tosca_nodes_nodewithreq);
 			Types._Tosca_nodes_php.initFragments(_Tosca_nodes_php, __Tosca_nodes_php);
@@ -1534,11 +1699,12 @@ public class ExtendedtoscaTables
 			Types._Tosca_nodes_somenode.initFragments(_Tosca_nodes_somenode, __Tosca_nodes_somenode);
 			Types._Tosca_nodes_somenode2.initFragments(_Tosca_nodes_somenode2, __Tosca_nodes_somenode2);
 			Types._Tosca_nodes_webapplication_paypalpizzastore.initFragments(_Tosca_nodes_webapplication_paypalpizzastore, __Tosca_nodes_webapplication_paypalpizzastore);
-			Types._Tosca_nodes_webserver_nodejs.initFragments(_Tosca_nodes_webserver_nodejs, __Tosca_nodes_webserver_nodejs);
 			Types._Tosca_nodes_wordpress.initFragments(_Tosca_nodes_wordpress, __Tosca_nodes_wordpress);
 			Types._Tosca_relationships_ha.initFragments(_Tosca_relationships_ha, __Tosca_relationships_ha);
 			Types._Tosca_relationships_network_bindsto.initFragments(_Tosca_relationships_network_bindsto, __Tosca_relationships_network_bindsto);
 			Types._Tosca_relationships_network_linksto.initFragments(_Tosca_relationships_network_linksto, __Tosca_relationships_network_linksto);
+			Types._Tosca_relationships_nodecellarhostedonnodejs.initFragments(_Tosca_relationships_nodecellarhostedonnodejs, __Tosca_relationships_nodecellarhostedonnodejs);
+			Types._Tosca_relationships_nodejsconnecttomongo.initFragments(_Tosca_relationships_nodejsconnecttomongo, __Tosca_relationships_nodejsconnecttomongo);
 			Types._arrayCredential.initFragments(_arrayCredential, __arrayCredential);
 			Types._arrayPortSpec.initFragments(_arrayPortSpec, __arrayPortSpec);
 			Types._arrayinteger.initFragments(_arrayinteger, __arrayinteger);
@@ -1945,6 +2111,37 @@ public class ExtendedtoscaTables
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_capabilities_indigo_endpoint__Tosca_capabilities_endpoint = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_capabilities_indigo_endpoint__Tosca_capabilities_root = {};
 
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_capabilities_nodejsappcontainer__Tosca_capabilities_nodejsappcontainer = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_capabilities_nodejsappcontainer__MixinBase = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_capabilities_nodejsappcontainer__OclAny = {
+			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
+			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
+			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
+			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
+			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
+			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
+			OCLstdlibTables.Operations._OclAny__toString /* toString() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_capabilities_nodejsappcontainer__OclElement = {
+			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_capabilities_nodejsappcontainer__Tosca_capabilities_container = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_capabilities_nodejsappcontainer__Tosca_capabilities_root = {};
+
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_capabilities_somecap__Tosca_capabilities_somecap = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_capabilities_somecap__MixinBase = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_capabilities_somecap__OclAny = {
@@ -2005,6 +2202,42 @@ public class ExtendedtoscaTables
 		};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_capabilities_somechildcap__Tosca_capabilities_root = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_capabilities_somechildcap__Tosca_capabilities_somecap = {};
+
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_abstractmongod__Tosca_nodes_abstractmongod = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_abstractmongod__Database = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_abstractmongod__MixinBase = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_abstractmongod__OclAny = {
+			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
+			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
+			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
+			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
+			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
+			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
+			OCLstdlibTables.Operations._OclAny__toString /* toString() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_abstractmongod__OclElement = {
+			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_abstractmongod__Tosca_capabilities_container = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_abstractmongod__Tosca_capabilities_node = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_abstractmongod__Tosca_capabilities_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_abstractmongod__Tosca_nodes_dbms = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_abstractmongod__Tosca_nodes_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_abstractmongod__Tosca_nodes_softwarecomponent = {};
 
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_abstractmysql__Tosca_nodes_abstractmysql = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_abstractmysql__MixinBase = {};
@@ -2375,6 +2608,43 @@ public class ExtendedtoscaTables
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_hacompute__Tosca_nodes_compute = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_hacompute__Tosca_nodes_root = {};
 
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_mongod__Tosca_nodes_mongod = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_mongod__Database = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_mongod__MixinBase = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_mongod__OclAny = {
+			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
+			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
+			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
+			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
+			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
+			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
+			OCLstdlibTables.Operations._OclAny__toString /* toString() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_mongod__OclElement = {
+			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_mongod__Tosca_capabilities_container = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_mongod__Tosca_capabilities_node = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_mongod__Tosca_capabilities_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_mongod__Tosca_nodes_abstractmongod = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_mongod__Tosca_nodes_dbms = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_mongod__Tosca_nodes_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_mongod__Tosca_nodes_softwarecomponent = {};
+
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_mysql__Tosca_nodes_mysql = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_mysql__MixinBase = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_mysql__OclAny = {
@@ -2474,6 +2744,78 @@ public class ExtendedtoscaTables
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_network_port__Tosca_capabilities_node = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_network_port__Tosca_capabilities_root = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_network_port__Tosca_nodes_root = {};
+
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodecellar__Tosca_nodes_nodecellar = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodecellar__MixinBase = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodecellar__OclAny = {
+			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
+			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
+			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
+			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
+			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
+			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
+			OCLstdlibTables.Operations._OclAny__toString /* toString() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodecellar__OclElement = {
+			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodecellar__Tosca_capabilities_endpoint = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodecellar__Tosca_capabilities_node = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodecellar__Tosca_capabilities_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodecellar__Tosca_nodes_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodecellar__Tosca_nodes_webapplication = {};
+
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodejs__Tosca_nodes_nodejs = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodejs__MixinBase = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodejs__OclAny = {
+			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
+			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
+			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
+			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
+			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
+			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
+			OCLstdlibTables.Operations._OclAny__toString /* toString() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodejs__OclElement = {
+			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodejs__Tosca_capabilities_container = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodejs__Tosca_capabilities_endpoint = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodejs__Tosca_capabilities_endpoint_admin = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodejs__Tosca_capabilities_node = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodejs__Tosca_capabilities_nodejsappcontainer = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodejs__Tosca_capabilities_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodejs__Tosca_nodes_root = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodejs__Tosca_nodes_softwarecomponent = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodejs__Tosca_nodes_webserver = {};
 
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodewithcap__Tosca_nodes_nodewithcap = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_nodewithcap__MixinBase = {};
@@ -2843,43 +3185,6 @@ public class ExtendedtoscaTables
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_webapplication_paypalpizzastore__Tosca_nodes_root = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_webapplication_paypalpizzastore__Tosca_nodes_webapplication = {};
 
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_webserver_nodejs__Tosca_nodes_webserver_nodejs = {};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_webserver_nodejs__MixinBase = {};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_webserver_nodejs__OclAny = {
-			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
-			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
-			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
-			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[?]) */,
-			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
-			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
-			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[?]) */,
-			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
-			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[?]) */,
-			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
-			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
-			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
-			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
-			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
-			OCLstdlibTables.Operations._OclAny__toString /* toString() */
-		};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_webserver_nodejs__OclElement = {
-			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
-			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
-			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
-			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
-			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
-			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
-		};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_webserver_nodejs__Tosca_capabilities_container = {};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_webserver_nodejs__Tosca_capabilities_endpoint = {};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_webserver_nodejs__Tosca_capabilities_endpoint_admin = {};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_webserver_nodejs__Tosca_capabilities_node = {};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_webserver_nodejs__Tosca_capabilities_root = {};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_webserver_nodejs__Tosca_nodes_root = {};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_webserver_nodejs__Tosca_nodes_softwarecomponent = {};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_webserver_nodejs__Tosca_nodes_webserver = {};
-
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_wordpress__Tosca_nodes_wordpress = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_wordpress__MixinBase = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_nodes_wordpress__OclAny = {
@@ -3014,6 +3319,74 @@ public class ExtendedtoscaTables
 		};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_network_linksto__Tosca_relationships_dependson = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_network_linksto__Tosca_relationships_root = {};
+
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodecellarhostedonnodejs__Tosca_relationships_nodecellarhostedonnodejs = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodecellarhostedonnodejs__Dependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodecellarhostedonnodejs__Executiondependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodecellarhostedonnodejs__Installationdependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodecellarhostedonnodejs__MixinBase = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodecellarhostedonnodejs__OclAny = {
+			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
+			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
+			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
+			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
+			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
+			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
+			OCLstdlibTables.Operations._OclAny__toString /* toString() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodecellarhostedonnodejs__OclElement = {
+			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodecellarhostedonnodejs__Tosca_relationships_hostedon = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodecellarhostedonnodejs__Tosca_relationships_root = {};
+
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodejsconnecttomongo__Tosca_relationships_nodejsconnecttomongo = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodejsconnecttomongo__Dependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodejsconnecttomongo__Executiondependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodejsconnecttomongo__Installationdependency = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodejsconnecttomongo__MixinBase = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodejsconnecttomongo__OclAny = {
+			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
+			OCLstdlibTables.Operations._OclAny__oclAsType /* oclAsType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInState /* oclIsInState(OclState[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsInvalid /* oclIsInvalid() */,
+			OCLstdlibTables.Operations._OclAny__oclIsKindOf /* oclIsKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsNew /* oclIsNew() */,
+			OCLstdlibTables.Operations._OclAny__oclIsTypeOf /* oclIsTypeOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclIsUndefined /* oclIsUndefined() */,
+			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
+			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
+			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
+			OCLstdlibTables.Operations._OclAny__toString /* toString() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodejsconnecttomongo__OclElement = {
+			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodejsconnecttomongo__Tosca_relationships_connectsto = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Tosca_relationships_nodejsconnecttomongo__Tosca_relationships_root = {};
 
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _arrayCredential__arrayCredential = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _arrayCredential__OclAny = {
@@ -3292,6 +3665,13 @@ public class ExtendedtoscaTables
 			Fragments._Tosca_capabilities_indigo_endpoint__Tosca_capabilities_indigo_endpoint.initOperations(_Tosca_capabilities_indigo_endpoint__Tosca_capabilities_indigo_endpoint);
 			Fragments._Tosca_capabilities_indigo_endpoint__Tosca_capabilities_root.initOperations(_Tosca_capabilities_indigo_endpoint__Tosca_capabilities_root);
 
+			Fragments._Tosca_capabilities_nodejsappcontainer__MixinBase.initOperations(_Tosca_capabilities_nodejsappcontainer__MixinBase);
+			Fragments._Tosca_capabilities_nodejsappcontainer__OclAny.initOperations(_Tosca_capabilities_nodejsappcontainer__OclAny);
+			Fragments._Tosca_capabilities_nodejsappcontainer__OclElement.initOperations(_Tosca_capabilities_nodejsappcontainer__OclElement);
+			Fragments._Tosca_capabilities_nodejsappcontainer__Tosca_capabilities_container.initOperations(_Tosca_capabilities_nodejsappcontainer__Tosca_capabilities_container);
+			Fragments._Tosca_capabilities_nodejsappcontainer__Tosca_capabilities_nodejsappcontainer.initOperations(_Tosca_capabilities_nodejsappcontainer__Tosca_capabilities_nodejsappcontainer);
+			Fragments._Tosca_capabilities_nodejsappcontainer__Tosca_capabilities_root.initOperations(_Tosca_capabilities_nodejsappcontainer__Tosca_capabilities_root);
+
 			Fragments._Tosca_capabilities_somecap__MixinBase.initOperations(_Tosca_capabilities_somecap__MixinBase);
 			Fragments._Tosca_capabilities_somecap__OclAny.initOperations(_Tosca_capabilities_somecap__OclAny);
 			Fragments._Tosca_capabilities_somecap__OclElement.initOperations(_Tosca_capabilities_somecap__OclElement);
@@ -3304,6 +3684,18 @@ public class ExtendedtoscaTables
 			Fragments._Tosca_capabilities_somechildcap__Tosca_capabilities_root.initOperations(_Tosca_capabilities_somechildcap__Tosca_capabilities_root);
 			Fragments._Tosca_capabilities_somechildcap__Tosca_capabilities_somecap.initOperations(_Tosca_capabilities_somechildcap__Tosca_capabilities_somecap);
 			Fragments._Tosca_capabilities_somechildcap__Tosca_capabilities_somechildcap.initOperations(_Tosca_capabilities_somechildcap__Tosca_capabilities_somechildcap);
+
+			Fragments._Tosca_nodes_abstractmongod__Database.initOperations(_Tosca_nodes_abstractmongod__Database);
+			Fragments._Tosca_nodes_abstractmongod__MixinBase.initOperations(_Tosca_nodes_abstractmongod__MixinBase);
+			Fragments._Tosca_nodes_abstractmongod__OclAny.initOperations(_Tosca_nodes_abstractmongod__OclAny);
+			Fragments._Tosca_nodes_abstractmongod__OclElement.initOperations(_Tosca_nodes_abstractmongod__OclElement);
+			Fragments._Tosca_nodes_abstractmongod__Tosca_capabilities_container.initOperations(_Tosca_nodes_abstractmongod__Tosca_capabilities_container);
+			Fragments._Tosca_nodes_abstractmongod__Tosca_capabilities_node.initOperations(_Tosca_nodes_abstractmongod__Tosca_capabilities_node);
+			Fragments._Tosca_nodes_abstractmongod__Tosca_capabilities_root.initOperations(_Tosca_nodes_abstractmongod__Tosca_capabilities_root);
+			Fragments._Tosca_nodes_abstractmongod__Tosca_nodes_abstractmongod.initOperations(_Tosca_nodes_abstractmongod__Tosca_nodes_abstractmongod);
+			Fragments._Tosca_nodes_abstractmongod__Tosca_nodes_dbms.initOperations(_Tosca_nodes_abstractmongod__Tosca_nodes_dbms);
+			Fragments._Tosca_nodes_abstractmongod__Tosca_nodes_root.initOperations(_Tosca_nodes_abstractmongod__Tosca_nodes_root);
+			Fragments._Tosca_nodes_abstractmongod__Tosca_nodes_softwarecomponent.initOperations(_Tosca_nodes_abstractmongod__Tosca_nodes_softwarecomponent);
 
 			Fragments._Tosca_nodes_abstractmysql__MixinBase.initOperations(_Tosca_nodes_abstractmysql__MixinBase);
 			Fragments._Tosca_nodes_abstractmysql__OclAny.initOperations(_Tosca_nodes_abstractmysql__OclAny);
@@ -3434,6 +3826,19 @@ public class ExtendedtoscaTables
 			Fragments._Tosca_nodes_hacompute__Tosca_nodes_hacompute.initOperations(_Tosca_nodes_hacompute__Tosca_nodes_hacompute);
 			Fragments._Tosca_nodes_hacompute__Tosca_nodes_root.initOperations(_Tosca_nodes_hacompute__Tosca_nodes_root);
 
+			Fragments._Tosca_nodes_mongod__Database.initOperations(_Tosca_nodes_mongod__Database);
+			Fragments._Tosca_nodes_mongod__MixinBase.initOperations(_Tosca_nodes_mongod__MixinBase);
+			Fragments._Tosca_nodes_mongod__OclAny.initOperations(_Tosca_nodes_mongod__OclAny);
+			Fragments._Tosca_nodes_mongod__OclElement.initOperations(_Tosca_nodes_mongod__OclElement);
+			Fragments._Tosca_nodes_mongod__Tosca_capabilities_container.initOperations(_Tosca_nodes_mongod__Tosca_capabilities_container);
+			Fragments._Tosca_nodes_mongod__Tosca_capabilities_node.initOperations(_Tosca_nodes_mongod__Tosca_capabilities_node);
+			Fragments._Tosca_nodes_mongod__Tosca_capabilities_root.initOperations(_Tosca_nodes_mongod__Tosca_capabilities_root);
+			Fragments._Tosca_nodes_mongod__Tosca_nodes_abstractmongod.initOperations(_Tosca_nodes_mongod__Tosca_nodes_abstractmongod);
+			Fragments._Tosca_nodes_mongod__Tosca_nodes_dbms.initOperations(_Tosca_nodes_mongod__Tosca_nodes_dbms);
+			Fragments._Tosca_nodes_mongod__Tosca_nodes_mongod.initOperations(_Tosca_nodes_mongod__Tosca_nodes_mongod);
+			Fragments._Tosca_nodes_mongod__Tosca_nodes_root.initOperations(_Tosca_nodes_mongod__Tosca_nodes_root);
+			Fragments._Tosca_nodes_mongod__Tosca_nodes_softwarecomponent.initOperations(_Tosca_nodes_mongod__Tosca_nodes_softwarecomponent);
+
 			Fragments._Tosca_nodes_mysql__MixinBase.initOperations(_Tosca_nodes_mysql__MixinBase);
 			Fragments._Tosca_nodes_mysql__OclAny.initOperations(_Tosca_nodes_mysql__OclAny);
 			Fragments._Tosca_nodes_mysql__OclElement.initOperations(_Tosca_nodes_mysql__OclElement);
@@ -3461,6 +3866,30 @@ public class ExtendedtoscaTables
 			Fragments._Tosca_nodes_network_port__Tosca_capabilities_root.initOperations(_Tosca_nodes_network_port__Tosca_capabilities_root);
 			Fragments._Tosca_nodes_network_port__Tosca_nodes_network_port.initOperations(_Tosca_nodes_network_port__Tosca_nodes_network_port);
 			Fragments._Tosca_nodes_network_port__Tosca_nodes_root.initOperations(_Tosca_nodes_network_port__Tosca_nodes_root);
+
+			Fragments._Tosca_nodes_nodecellar__MixinBase.initOperations(_Tosca_nodes_nodecellar__MixinBase);
+			Fragments._Tosca_nodes_nodecellar__OclAny.initOperations(_Tosca_nodes_nodecellar__OclAny);
+			Fragments._Tosca_nodes_nodecellar__OclElement.initOperations(_Tosca_nodes_nodecellar__OclElement);
+			Fragments._Tosca_nodes_nodecellar__Tosca_capabilities_endpoint.initOperations(_Tosca_nodes_nodecellar__Tosca_capabilities_endpoint);
+			Fragments._Tosca_nodes_nodecellar__Tosca_capabilities_node.initOperations(_Tosca_nodes_nodecellar__Tosca_capabilities_node);
+			Fragments._Tosca_nodes_nodecellar__Tosca_capabilities_root.initOperations(_Tosca_nodes_nodecellar__Tosca_capabilities_root);
+			Fragments._Tosca_nodes_nodecellar__Tosca_nodes_nodecellar.initOperations(_Tosca_nodes_nodecellar__Tosca_nodes_nodecellar);
+			Fragments._Tosca_nodes_nodecellar__Tosca_nodes_root.initOperations(_Tosca_nodes_nodecellar__Tosca_nodes_root);
+			Fragments._Tosca_nodes_nodecellar__Tosca_nodes_webapplication.initOperations(_Tosca_nodes_nodecellar__Tosca_nodes_webapplication);
+
+			Fragments._Tosca_nodes_nodejs__MixinBase.initOperations(_Tosca_nodes_nodejs__MixinBase);
+			Fragments._Tosca_nodes_nodejs__OclAny.initOperations(_Tosca_nodes_nodejs__OclAny);
+			Fragments._Tosca_nodes_nodejs__OclElement.initOperations(_Tosca_nodes_nodejs__OclElement);
+			Fragments._Tosca_nodes_nodejs__Tosca_capabilities_container.initOperations(_Tosca_nodes_nodejs__Tosca_capabilities_container);
+			Fragments._Tosca_nodes_nodejs__Tosca_capabilities_endpoint.initOperations(_Tosca_nodes_nodejs__Tosca_capabilities_endpoint);
+			Fragments._Tosca_nodes_nodejs__Tosca_capabilities_endpoint_admin.initOperations(_Tosca_nodes_nodejs__Tosca_capabilities_endpoint_admin);
+			Fragments._Tosca_nodes_nodejs__Tosca_capabilities_node.initOperations(_Tosca_nodes_nodejs__Tosca_capabilities_node);
+			Fragments._Tosca_nodes_nodejs__Tosca_capabilities_nodejsappcontainer.initOperations(_Tosca_nodes_nodejs__Tosca_capabilities_nodejsappcontainer);
+			Fragments._Tosca_nodes_nodejs__Tosca_capabilities_root.initOperations(_Tosca_nodes_nodejs__Tosca_capabilities_root);
+			Fragments._Tosca_nodes_nodejs__Tosca_nodes_nodejs.initOperations(_Tosca_nodes_nodejs__Tosca_nodes_nodejs);
+			Fragments._Tosca_nodes_nodejs__Tosca_nodes_root.initOperations(_Tosca_nodes_nodejs__Tosca_nodes_root);
+			Fragments._Tosca_nodes_nodejs__Tosca_nodes_softwarecomponent.initOperations(_Tosca_nodes_nodejs__Tosca_nodes_softwarecomponent);
+			Fragments._Tosca_nodes_nodejs__Tosca_nodes_webserver.initOperations(_Tosca_nodes_nodejs__Tosca_nodes_webserver);
 
 			Fragments._Tosca_nodes_nodewithcap__MixinBase.initOperations(_Tosca_nodes_nodewithcap__MixinBase);
 			Fragments._Tosca_nodes_nodewithcap__OclAny.initOperations(_Tosca_nodes_nodewithcap__OclAny);
@@ -3566,19 +3995,6 @@ public class ExtendedtoscaTables
 			Fragments._Tosca_nodes_webapplication_paypalpizzastore__Tosca_nodes_webapplication.initOperations(_Tosca_nodes_webapplication_paypalpizzastore__Tosca_nodes_webapplication);
 			Fragments._Tosca_nodes_webapplication_paypalpizzastore__Tosca_nodes_webapplication_paypalpizzastore.initOperations(_Tosca_nodes_webapplication_paypalpizzastore__Tosca_nodes_webapplication_paypalpizzastore);
 
-			Fragments._Tosca_nodes_webserver_nodejs__MixinBase.initOperations(_Tosca_nodes_webserver_nodejs__MixinBase);
-			Fragments._Tosca_nodes_webserver_nodejs__OclAny.initOperations(_Tosca_nodes_webserver_nodejs__OclAny);
-			Fragments._Tosca_nodes_webserver_nodejs__OclElement.initOperations(_Tosca_nodes_webserver_nodejs__OclElement);
-			Fragments._Tosca_nodes_webserver_nodejs__Tosca_capabilities_container.initOperations(_Tosca_nodes_webserver_nodejs__Tosca_capabilities_container);
-			Fragments._Tosca_nodes_webserver_nodejs__Tosca_capabilities_endpoint.initOperations(_Tosca_nodes_webserver_nodejs__Tosca_capabilities_endpoint);
-			Fragments._Tosca_nodes_webserver_nodejs__Tosca_capabilities_endpoint_admin.initOperations(_Tosca_nodes_webserver_nodejs__Tosca_capabilities_endpoint_admin);
-			Fragments._Tosca_nodes_webserver_nodejs__Tosca_capabilities_node.initOperations(_Tosca_nodes_webserver_nodejs__Tosca_capabilities_node);
-			Fragments._Tosca_nodes_webserver_nodejs__Tosca_capabilities_root.initOperations(_Tosca_nodes_webserver_nodejs__Tosca_capabilities_root);
-			Fragments._Tosca_nodes_webserver_nodejs__Tosca_nodes_root.initOperations(_Tosca_nodes_webserver_nodejs__Tosca_nodes_root);
-			Fragments._Tosca_nodes_webserver_nodejs__Tosca_nodes_softwarecomponent.initOperations(_Tosca_nodes_webserver_nodejs__Tosca_nodes_softwarecomponent);
-			Fragments._Tosca_nodes_webserver_nodejs__Tosca_nodes_webserver.initOperations(_Tosca_nodes_webserver_nodejs__Tosca_nodes_webserver);
-			Fragments._Tosca_nodes_webserver_nodejs__Tosca_nodes_webserver_nodejs.initOperations(_Tosca_nodes_webserver_nodejs__Tosca_nodes_webserver_nodejs);
-
 			Fragments._Tosca_nodes_wordpress__MixinBase.initOperations(_Tosca_nodes_wordpress__MixinBase);
 			Fragments._Tosca_nodes_wordpress__OclAny.initOperations(_Tosca_nodes_wordpress__OclAny);
 			Fragments._Tosca_nodes_wordpress__OclElement.initOperations(_Tosca_nodes_wordpress__OclElement);
@@ -3617,6 +4033,26 @@ public class ExtendedtoscaTables
 			Fragments._Tosca_relationships_network_linksto__Tosca_relationships_dependson.initOperations(_Tosca_relationships_network_linksto__Tosca_relationships_dependson);
 			Fragments._Tosca_relationships_network_linksto__Tosca_relationships_network_linksto.initOperations(_Tosca_relationships_network_linksto__Tosca_relationships_network_linksto);
 			Fragments._Tosca_relationships_network_linksto__Tosca_relationships_root.initOperations(_Tosca_relationships_network_linksto__Tosca_relationships_root);
+
+			Fragments._Tosca_relationships_nodecellarhostedonnodejs__Dependency.initOperations(_Tosca_relationships_nodecellarhostedonnodejs__Dependency);
+			Fragments._Tosca_relationships_nodecellarhostedonnodejs__Executiondependency.initOperations(_Tosca_relationships_nodecellarhostedonnodejs__Executiondependency);
+			Fragments._Tosca_relationships_nodecellarhostedonnodejs__Installationdependency.initOperations(_Tosca_relationships_nodecellarhostedonnodejs__Installationdependency);
+			Fragments._Tosca_relationships_nodecellarhostedonnodejs__MixinBase.initOperations(_Tosca_relationships_nodecellarhostedonnodejs__MixinBase);
+			Fragments._Tosca_relationships_nodecellarhostedonnodejs__OclAny.initOperations(_Tosca_relationships_nodecellarhostedonnodejs__OclAny);
+			Fragments._Tosca_relationships_nodecellarhostedonnodejs__OclElement.initOperations(_Tosca_relationships_nodecellarhostedonnodejs__OclElement);
+			Fragments._Tosca_relationships_nodecellarhostedonnodejs__Tosca_relationships_hostedon.initOperations(_Tosca_relationships_nodecellarhostedonnodejs__Tosca_relationships_hostedon);
+			Fragments._Tosca_relationships_nodecellarhostedonnodejs__Tosca_relationships_nodecellarhostedonnodejs.initOperations(_Tosca_relationships_nodecellarhostedonnodejs__Tosca_relationships_nodecellarhostedonnodejs);
+			Fragments._Tosca_relationships_nodecellarhostedonnodejs__Tosca_relationships_root.initOperations(_Tosca_relationships_nodecellarhostedonnodejs__Tosca_relationships_root);
+
+			Fragments._Tosca_relationships_nodejsconnecttomongo__Dependency.initOperations(_Tosca_relationships_nodejsconnecttomongo__Dependency);
+			Fragments._Tosca_relationships_nodejsconnecttomongo__Executiondependency.initOperations(_Tosca_relationships_nodejsconnecttomongo__Executiondependency);
+			Fragments._Tosca_relationships_nodejsconnecttomongo__Installationdependency.initOperations(_Tosca_relationships_nodejsconnecttomongo__Installationdependency);
+			Fragments._Tosca_relationships_nodejsconnecttomongo__MixinBase.initOperations(_Tosca_relationships_nodejsconnecttomongo__MixinBase);
+			Fragments._Tosca_relationships_nodejsconnecttomongo__OclAny.initOperations(_Tosca_relationships_nodejsconnecttomongo__OclAny);
+			Fragments._Tosca_relationships_nodejsconnecttomongo__OclElement.initOperations(_Tosca_relationships_nodejsconnecttomongo__OclElement);
+			Fragments._Tosca_relationships_nodejsconnecttomongo__Tosca_relationships_connectsto.initOperations(_Tosca_relationships_nodejsconnecttomongo__Tosca_relationships_connectsto);
+			Fragments._Tosca_relationships_nodejsconnecttomongo__Tosca_relationships_nodejsconnecttomongo.initOperations(_Tosca_relationships_nodejsconnecttomongo__Tosca_relationships_nodejsconnecttomongo);
+			Fragments._Tosca_relationships_nodejsconnecttomongo__Tosca_relationships_root.initOperations(_Tosca_relationships_nodejsconnecttomongo__Tosca_relationships_root);
 
 			Fragments._arrayCredential__OclAny.initOperations(_arrayCredential__OclAny);
 			Fragments._arrayCredential__OclElement.initOperations(_arrayCredential__OclElement);
@@ -3699,9 +4135,13 @@ public class ExtendedtoscaTables
 			ExtendedtoscaTables.Properties._Tosca_capabilities_indigo_endpoint__credential
 		};
 
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_capabilities_nodejsappcontainer = {};
+
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_capabilities_somecap = {};
 
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_capabilities_somechildcap = {};
+
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_abstractmongod = {};
 
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_abstractmysql = {};
 
@@ -3733,6 +4173,8 @@ public class ExtendedtoscaTables
 
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_hacompute = {};
 
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_mongod = {};
+
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_mysql = {
 			ExtendedtoscaTables.Properties._Tosca_nodes_mysql__bindAddress,
 			ExtendedtoscaTables.Properties._Tosca_nodes_mysql__dbPassword,
@@ -3761,6 +4203,10 @@ public class ExtendedtoscaTables
 			ExtendedtoscaTables.Properties._Tosca_nodes_network_port__order
 		};
 
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_nodecellar = {};
+
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_nodejs = {};
+
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_nodewithcap = {};
 
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_nodewithreq = {};
@@ -3785,10 +4231,6 @@ public class ExtendedtoscaTables
 			ExtendedtoscaTables.Properties._Tosca_nodes_webapplication_paypalpizzastore__githubUrl
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_webserver_nodejs = {
-			ExtendedtoscaTables.Properties._Tosca_nodes_webserver_nodejs__githubUrl
-		};
-
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_nodes_wordpress = {
 			ExtendedtoscaTables.Properties._Tosca_nodes_wordpress__zipUrl
 		};
@@ -3798,6 +4240,10 @@ public class ExtendedtoscaTables
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_relationships_network_bindsto = {};
 
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_relationships_network_linksto = {};
+
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_relationships_nodecellarhostedonnodejs = {};
+
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Tosca_relationships_nodejsconnecttomongo = {};
 
 		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _arrayCredential = {
 			ExtendedtoscaTables.Properties._arrayCredential__arraycredentialValues
@@ -3835,8 +4281,10 @@ public class ExtendedtoscaTables
 			Fragments._Tosca_capabilities_containerchild__Tosca_capabilities_containerchild.initProperties(_Tosca_capabilities_containerchild);
 			Fragments._Tosca_capabilities_ha__Tosca_capabilities_ha.initProperties(_Tosca_capabilities_ha);
 			Fragments._Tosca_capabilities_indigo_endpoint__Tosca_capabilities_indigo_endpoint.initProperties(_Tosca_capabilities_indigo_endpoint);
+			Fragments._Tosca_capabilities_nodejsappcontainer__Tosca_capabilities_nodejsappcontainer.initProperties(_Tosca_capabilities_nodejsappcontainer);
 			Fragments._Tosca_capabilities_somecap__Tosca_capabilities_somecap.initProperties(_Tosca_capabilities_somecap);
 			Fragments._Tosca_capabilities_somechildcap__Tosca_capabilities_somechildcap.initProperties(_Tosca_capabilities_somechildcap);
+			Fragments._Tosca_nodes_abstractmongod__Tosca_nodes_abstractmongod.initProperties(_Tosca_nodes_abstractmongod);
 			Fragments._Tosca_nodes_abstractmysql__Tosca_nodes_abstractmysql.initProperties(_Tosca_nodes_abstractmysql);
 			Fragments._Tosca_nodes_apache__Tosca_nodes_apache.initProperties(_Tosca_nodes_apache);
 			Fragments._Tosca_nodes_computewithattrlist__Tosca_nodes_computewithattrlist.initProperties(_Tosca_nodes_computewithattrlist);
@@ -3847,9 +4295,12 @@ public class ExtendedtoscaTables
 			Fragments._Tosca_nodes_databasewithlistparam__Tosca_nodes_databasewithlistparam.initProperties(_Tosca_nodes_databasewithlistparam);
 			Fragments._Tosca_nodes_dbms_mysql__Tosca_nodes_dbms_mysql.initProperties(_Tosca_nodes_dbms_mysql);
 			Fragments._Tosca_nodes_hacompute__Tosca_nodes_hacompute.initProperties(_Tosca_nodes_hacompute);
+			Fragments._Tosca_nodes_mongod__Tosca_nodes_mongod.initProperties(_Tosca_nodes_mongod);
 			Fragments._Tosca_nodes_mysql__Tosca_nodes_mysql.initProperties(_Tosca_nodes_mysql);
 			Fragments._Tosca_nodes_network_network__Tosca_nodes_network_network.initProperties(_Tosca_nodes_network_network);
 			Fragments._Tosca_nodes_network_port__Tosca_nodes_network_port.initProperties(_Tosca_nodes_network_port);
+			Fragments._Tosca_nodes_nodecellar__Tosca_nodes_nodecellar.initProperties(_Tosca_nodes_nodecellar);
+			Fragments._Tosca_nodes_nodejs__Tosca_nodes_nodejs.initProperties(_Tosca_nodes_nodejs);
 			Fragments._Tosca_nodes_nodewithcap__Tosca_nodes_nodewithcap.initProperties(_Tosca_nodes_nodewithcap);
 			Fragments._Tosca_nodes_nodewithreq__Tosca_nodes_nodewithreq.initProperties(_Tosca_nodes_nodewithreq);
 			Fragments._Tosca_nodes_php__Tosca_nodes_php.initProperties(_Tosca_nodes_php);
@@ -3861,11 +4312,12 @@ public class ExtendedtoscaTables
 			Fragments._Tosca_nodes_somenode__Tosca_nodes_somenode.initProperties(_Tosca_nodes_somenode);
 			Fragments._Tosca_nodes_somenode2__Tosca_nodes_somenode2.initProperties(_Tosca_nodes_somenode2);
 			Fragments._Tosca_nodes_webapplication_paypalpizzastore__Tosca_nodes_webapplication_paypalpizzastore.initProperties(_Tosca_nodes_webapplication_paypalpizzastore);
-			Fragments._Tosca_nodes_webserver_nodejs__Tosca_nodes_webserver_nodejs.initProperties(_Tosca_nodes_webserver_nodejs);
 			Fragments._Tosca_nodes_wordpress__Tosca_nodes_wordpress.initProperties(_Tosca_nodes_wordpress);
 			Fragments._Tosca_relationships_ha__Tosca_relationships_ha.initProperties(_Tosca_relationships_ha);
 			Fragments._Tosca_relationships_network_bindsto__Tosca_relationships_network_bindsto.initProperties(_Tosca_relationships_network_bindsto);
 			Fragments._Tosca_relationships_network_linksto__Tosca_relationships_network_linksto.initProperties(_Tosca_relationships_network_linksto);
+			Fragments._Tosca_relationships_nodecellarhostedonnodejs__Tosca_relationships_nodecellarhostedonnodejs.initProperties(_Tosca_relationships_nodecellarhostedonnodejs);
+			Fragments._Tosca_relationships_nodejsconnecttomongo__Tosca_relationships_nodejsconnecttomongo.initProperties(_Tosca_relationships_nodejsconnecttomongo);
 			Fragments._arrayCredential__arrayCredential.initProperties(_arrayCredential);
 			Fragments._arrayPortSpec__arrayPortSpec.initProperties(_arrayPortSpec);
 			Fragments._arrayinteger__arrayinteger.initProperties(_arrayinteger);

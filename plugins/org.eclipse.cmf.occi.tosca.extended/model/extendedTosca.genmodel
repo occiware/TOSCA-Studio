@@ -49,6 +49,9 @@
       </genFeatures>
     </genClasses>
     <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_capabilities_containerchild"/>
+    </genClasses>
+    <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_capabilities_somecap"/>
     </genClasses>
     <genClasses>
@@ -59,6 +62,9 @@
     </genClasses>
     <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_capabilities_ha"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_capabilities_nodejsappcontainer"/>
     </genClasses>
     <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_capabilities_container_docker"/>
@@ -79,9 +85,6 @@
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="extendedTosca.ecore#//Tosca_capabilities_containerchild"/>
-    </genClasses>
-    <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_capabilities_somechildcap"/>
     </genClasses>
     <genClasses>
@@ -95,6 +98,12 @@
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_webapplication_paypalpizzastore/githubUrl"/>
       </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_abstractmongod"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_mongod"/>
     </genClasses>
     <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_network_network"/>
@@ -128,6 +137,9 @@
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_network_network/endIp"/>
       </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_nodejs"/>
     </genClasses>
     <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_container_application_docker"/>
@@ -205,6 +217,9 @@
       <ecoreClass href="extendedTosca.ecore#//Example_someapp"/>
     </genClasses>
     <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_nodecellar"/>
+    </genClasses>
+    <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_nodewithcap"/>
     </genClasses>
     <genClasses>
@@ -253,22 +268,13 @@
       <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_somenode"/>
     </genClasses>
     <genClasses>
-      <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_webserver_nodejs"/>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="extendedTosca.ecore#//Tosca_nodes_webserver_nodejs/githubUrl"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_nodes_dbms_mysql"/>
     </genClasses>
     <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Mycompany_mytypes_myscalingpolicy"/>
     </genClasses>
     <genClasses>
-      <ecoreClass href="extendedTosca.ecore#//Test_relation_connects"/>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="extendedTosca.ecore#//Tosca_relationships_network_bindsto"/>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_relationships_nodecellarhostedonnodejs"/>
     </genClasses>
     <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_relationships_ha"/>
@@ -277,7 +283,16 @@
       <ecoreClass href="extendedTosca.ecore#//Myattachesto"/>
     </genClasses>
     <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_relationships_nodejsconnecttomongo"/>
+    </genClasses>
+    <genClasses>
       <ecoreClass href="extendedTosca.ecore#//Tosca_relationships_network_linksto"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Test_relation_connects"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="extendedTosca.ecore#//Tosca_relationships_network_bindsto"/>
     </genClasses>
   </genPackages>
   <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.infrastructure/model/Infrastructure.genmodel#//infrastructure"/>
