@@ -10,24 +10,24 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://schemas.ogf.org/tosca/core#/"/>
   <use href="http://schemas.ogf.org/tosca/extended#/"/>
-  <resources xsi:type="platform:Application" id="urn:uuid:2ef0c630-c14e-45f5-b8da-97faafa7273b">
+  <resources xsi:type="platform:Application" id="urn:uuid:bc79b214-43dd-492c-adf7-fe29ea99f8f2">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:69be1567-c514-4fb6-8875-a82d2b1b60d3" target="//@resources.2">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:b2944e98-e21a-4fbb-806a-3bf872e8b58b" target="//@resources.2">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
   </resources>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:e8a84667-b891-40b1-9522-d2dc29930f8a" title="mysql_compute" rlinks="//@resources.2/@links.0">
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:60a92689-7429-407a-be10-82d1c9fe406a" title="mysql_compute" rlinks="//@resources.2/@links.0">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
     <parts xsi:type="tosca:Tosca_nodes_compute">
       <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
     </parts>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:c2317bed-d5a2-4ad0-a357-fccf8d49d428" title="mysql" rlinks="//@resources.0/@links.0">
+  <resources xsi:type="platform:Component" id="urn:uuid:6d9664d9-cac0-43ef-b527-924ab024d04d" title="mysql" rlinks="//@resources.0/@links.0">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_dbms_mysql" port="3306">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_dbms_mysql']"/>
     </parts>
-    <links xsi:type="placement:Placementlink" id="urn:uuid:e4335596-67ba-4699-82e5-031f479e2f47" target="//@resources.1">
+    <links xsi:type="placement:Placementlink" id="urn:uuid:02a49887-9e26-4bd2-b951-835b634e26ae" target="//@resources.1">
       <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
     </links>
   </resources>

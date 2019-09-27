@@ -1,0 +1,83 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+
+metadata:
+  template_name: nodecellar-topology
+  template_version: 1.0.0
+
+description: A nodecellar application topology template with nodecellar and mongodb.
+
+imports:
+  - mongo-types:1.0.0
+  - nodecellar-type:1.0.0
+  - nodejs-type:1.0.0
+  - tosca-normative-types:1.0.0
+
+topology_template:
+  description: A Javascript Sample Application with Node.js and MongoDB
+  inputs:
+    mongo_port:
+      type: integer
+      required: true
+      default: 27017
+      constraints:
+        - in_range: [8000, 65535]
+    nocecellar_port:
+      type: integer
+      required: true
+      default: 8088
+  node_templates:
+    MongoHost:
+      type: tosca.nodes.Compute
+      capabilities:
+        os:
+          properties:
+            architecture: x86_64
+            type: linux
+            distribution: ubuntu
+    Network:
+      type: tosca.nodes.Network
+      properties:
+        ip_version: 4
+    NodejsHost:
+      type: tosca.nodes.Compute
+      requirements:
+        - network:
+            node: Network
+            capability: tosca.capabilities.Connectivity
+            relationship: tosca.relationships.Network
+      capabilities:
+        os:
+          properties:
+            architecture: x86_64
+            type: linux
+    Nodejs:
+      type: tosca.nodes.Nodejs
+      requirements:
+        - host: NodejsHost
+    Nodecellar:
+      type: tosca.nodes.Nodecellar
+      properties:
+        port: { get_input: nocecellar_port }
+      requirements:
+        - host: Nodejs
+        - database:
+            node: Mongod
+            capability: tosca.capabilities.endpoint.Mongo
+            relationship: tosca.relationships.NodejsConnectToMongo
+    Mongod:
+      type: tosca.nodes.Mongod
+      properties:
+        port: { get_input: mongo_port }
+      requirements:
+        - host: MongoHost
+      capabilities:
+        endpoint:
+          properties:
+            port: { get_input: mongo_port }
+            protocol: tcp
+            secure: false
+            network_name: PRIVATE
+            initiator: source
+  outputs:
+    Nodecellar_nodecellar_url:
+      value: { get_attribute: [ Nodecellar, nodecellar_url ] }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ASCII"?>
+<occi:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" xmlns:platform="http://schemas.modmacao.org/occi/platform/ecore" xmlns:tosca="http://schemas.ogf.org/tosca/core/ecore">
+  <use href="http://schemas.ogf.org/tosca/core#/"/>
+  <use href="http://schemas.ogf.org/tosca/extended#/"/>
+  <use href="http://schemas.ogf.org/occi/core#/"/>
+  <use href="http://schemas.ogf.org/occi/infrastructure#/"/>
+  <use href="http://schemas.modmacao.org/modmacao#/"/>
+  <use href="http://schemas.modmacao.org/occi/platform#/"/>
+  <use href="http://schemas.modmacao.org/placement#/"/>
+  <use href="http://schemas.ogf.org/occi/sla#/"/>
+  <use href="http://schemas.ogf.org/tosca/core#/"/>
+  <use href="http://schemas.ogf.org/tosca/extended#/"/>
+  <resources xsi:type="platform:Application" id="urn:uuid:2c1e2ead-25e4-469e-b860-0dcd1391f949">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
+    <links xsi:type="platform:Componentlink" id="urn:uuid:0ee73762-54da-4b07-b5e5-ec9a46944b07" target="//@resources.1">
+      <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
+    </links>
+  </resources>
+  <resources xsi:type="platform:Component" id="urn:uuid:7ffa4c3a-d49e-4322-93ae-4c01cc31abc6" title="database" rlinks="//@resources.0/@links.0">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="tosca:Tosca_nodes_database">
+      <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_database']"/>
+    </parts>
+  </resources>
+</occi:Configuration>

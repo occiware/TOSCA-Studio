@@ -10,7 +10,7 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://schemas.ogf.org/tosca/core#/"/>
   <use href="http://schemas.ogf.org/tosca/extended#/"/>
-  <resources xsi:type="platform:Application" id="urn:uuid:f541536f-7ef7-4822-84bc-9f06cea9f4e7">
+  <resources xsi:type="platform:Application" id="urn:uuid:a6955d9c-2933-4c11-8752-ddec4476569b">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
   </resources>
 </occi:Configuration>

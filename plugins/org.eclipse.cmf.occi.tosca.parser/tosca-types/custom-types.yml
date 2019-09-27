@@ -33,6 +33,48 @@ node_types:
             description: location of the application on the github.
             type: string
             required: false
+   tosca.nodes.Mongod: 
+      requirements: 
+      -  host: 
+            occurrences: 
+            - '1'
+            - '1'
+            node: tosca.nodes.Compute
+            capability: tosca.capabilities.Container
+            node_filter: 
+               capabilities: 
+               -  tosca.capabilities.OperatingSystem: 
+                     properties: 
+                     -  type: 
+                           equal: linux
+                     -  architecture: 
+                           equal: x86_64
+                     -  distribution: 
+                           valid_values: 
+                           - debian
+                           - ubuntu
+                           - knoppix
+            relationship: tosca.relationships.HostedOn
+      metadata: 
+         icon: /images/mongodb.jpg
+      interfaces: 
+         Standard: 
+            stop: scripts/stop-mongo.sh
+            start: scripts/start-mongo.sh
+            create: scripts/install-mongo.sh
+            configure: 
+               inputs: 
+                  DB_IP: 
+                     get_attribute: 
+                     - HOST
+                     - ip_address
+                  DB_PORT: 
+                     get_property: 
+                     - SELF
+                     - port
+               implementation: scripts/configure-mongo.sh
+      derived_from: tosca.nodes.AbstractMongod
+      description: A node to install Mongodb nosql database.
    tosca.nodes.network.Network: 
       derived_from: tosca.nodes.Root
       properties: 
@@ -70,6 +112,29 @@ node_types:
             required: false
          end_ip: 
             type: string
+            required: false
+   tosca.nodes.Nodejs: 
+      metadata: 
+         icon: /images/nodejs.jpg
+      interfaces: 
+         Standard: 
+            create: 
+               inputs: 
+                  COMPONENT_VERSION: 
+                     get_property: 
+                     - SELF
+                     - component_version
+               implementation: scripts/install-nodejs.sh
+      capabilities: 
+         host: tosca.capabilities.NodeJSAppContainer
+      derived_from: tosca.nodes.WebServer
+      description: The TOSCA Nodejs Node Type represents an Nodejs component that can be managed and run
+         by a TOSCA Compute Node Type.
+      properties: 
+         component_version: 
+            default: '0.12'
+            description: "The optional software component\u2019s version."
+            type: version
             required: false
    tosca.nodes.Container.Application.Docker: 
       requirements: 
@@ -145,6 +210,19 @@ node_types:
          host_child: 
             type: tosca.capabilities.ContainerChild
       derived_from: tosca.nodes.Root
+   tosca.nodes.AbstractMongod: 
+      metadata: 
+         icon: /images/mongodb.jpg
+      derived_from: tosca.nodes.DBMS
+      abstract: true
+      properties: 
+         port: 
+            default: '27017'
+            type: integer
+            constraints: 
+            -  in_range: 
+               - '8000'
+               - '65535'
    tosca.nodes.PHP: 
       metadata: 
          icon: /images/php.png
@@ -324,6 +402,32 @@ node_types:
          message_receiver: tosca.capabilities.Endpoint
       derived_from: tosca.nodes.Root
       description: taken from tosca-topologies/Example18-ImplementationOfATransactionSubsytemNodeTypeUsingSubstitutionMappings
+   tosca.nodes.Nodecellar: 
+      metadata: 
+         icon: /images/nodecellar.jpg
+      requirements: 
+      -  host: 
+            capability: tosca.capabilities.NodeJSAppContainer
+            relationship: tosca.relationships.NodecellarHostedOnNodejs
+      -  database: 
+            occurrences: 
+            - '1'
+            - '1'
+            capability: tosca.capabilities.Endpoint.Database
+            relationship: tosca.relationships.NodejsConnectToMongo
+      interfaces: 
+         Standard: 
+            stop: scripts/stop-nodecellar-app.sh
+            start: scripts/start-nodecellar-app.sh
+            create: scripts/install-nodecellar-app.sh
+      derived_from: tosca.nodes.WebApplication
+      description: The TOSCA Nodecellar Node Type represents a Nodecellar Application.
+      attributes: 
+         nodecellar_url: http://nodecellar.example:8088
+      properties: 
+         port: 
+            default: '8088'
+            type: integer
    tosca.nodes.AbstractMysql: 
       capabilities: 
          database_endpoint: tosca.capabilities.Endpoint.Database
@@ -480,19 +584,6 @@ node_types:
             type: tosca.capabilities.SomeChildCap
       derived_from: tosca.nodes.Root
       description: A node with a capiblity and a parent capability defined in an imported file
-   tosca.nodes.WebServer.Nodejs: 
-      interfaces: 
-         Standard: 
-            inputs: 
-               github_url: 
-                  type: string
-      derived_from: tosca.nodes.WebServer
-      properties: 
-         github_url: 
-            default: https://github.com/mmm/testnode.git
-            description: location of the application on the github.
-            type: string
-            required: no
    tosca.nodes.DBMS.MySQL: 
       capabilities: 
          host: 
@@ -506,6 +597,9 @@ node_types:
          root_password: 
             required: true
 capability_types: 
+   tosca.capabilities.ContainerChild: 
+      derived_from: tosca.capabilities.Container
+      description: Define a capability class that inherits from tosca.capabilities.Container
    tosca.capabilities.SomeCap: 
       derived_from: tosca.capabilities.Root
    tosca.capabilities.indigo.Endpoint: 
@@ -518,6 +612,8 @@ capability_types:
       valid_source_types: 
       - tosca.nodes.HACompute
       derived_from: tosca.capabilities.Root
+   tosca.capabilities.NodeJSAppContainer: 
+      derived_from: tosca.capabilities.Container
    tosca.capabilities.Container.Docker: 
       derived_from: tosca.capabilities.Container
       properties: 
@@ -540,18 +636,14 @@ capability_types:
             entry_schema: version
             type: list
             required: false
-   tosca.capabilities.ContainerChild: 
-      derived_from: tosca.capabilities.Container
-      description: Define a capability class that inherits from tosca.capabilities.Container
    tosca.capabilities.SomeChildCap: 
       derived_from: tosca.capabilities.SomeCap
 relationship_types: 
-   test.relation.connects: 
-      derived_from4: tosca.relationships.ConnectsTo
-   tosca.relationships.network.BindsTo: 
+   tosca.relationships.NodecellarHostedOnNodejs: 
       valid_target_types: 
-      - tosca.capabilities.network.Bindable
-      derived_from: tosca.relationships.DependsOn
+      - tosca.capabilities.Container
+      derived_from: tosca.relationships.HostedOn
+      description: Relationship use to describe that the website is deployed on the target nodejs server.
    tosca.relationships.HA: 
       valid_target_types: 
       - tosca.capabilities.HA
@@ -563,9 +655,37 @@ relationship_types:
          location: 
             default: /default_location
             type: string
+   tosca.relationships.NodejsConnectToMongo: 
+      interfaces: 
+         Configure: 
+            pre_configure_source: 
+               inputs: 
+                  DB_IP: 
+                     get_attribute: 
+                     - TARGET
+                     - ip_address
+                  DB_PORT: 
+                     get_property: 
+                     - TARGET
+                     - port
+                  NODECELLAR_PORT: 
+                     get_property: 
+                     - SOURCE
+                     - port
+               implementation: scripts/set-mongo-url.sh
+      valid_target_types: 
+      - tosca.capabilities.Endpoint.Database
+      derived_from: tosca.relationships.ConnectsTo
+      description: Relationship use to connect nodejs with a mongodb databse
    tosca.relationships.network.LinksTo: 
       valid_target_types: 
       - tosca.capabilities.network.Linkable
+      derived_from: tosca.relationships.DependsOn
+   test.relation.connects: 
+      derived_from4: tosca.relationships.ConnectsTo
+   tosca.relationships.network.BindsTo: 
+      valid_target_types: 
+      - tosca.capabilities.network.Bindable
       derived_from: tosca.relationships.DependsOn
 policy_types: 
    mycompany.mytypes.myScalingPolicy: 
