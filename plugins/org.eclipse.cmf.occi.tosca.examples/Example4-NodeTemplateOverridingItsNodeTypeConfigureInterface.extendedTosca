@@ -10,27 +10,24 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://schemas.ogf.org/tosca/core#/"/>
   <use href="http://schemas.ogf.org/tosca/extended#/"/>
-  <resources xsi:type="platform:Application" id="urn:uuid:4e1be612-73f1-4b2c-86dc-e8c0b23c147d">
+  <resources xsi:type="platform:Application" id="urn:uuid:bad7f6ae-0036-4247-967f-82307e2d8ac9">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:866773a9-0e69-4629-80bc-c999b0da5134" target="//@resources.2">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:353a6ec4-bce2-46bf-86c7-52ffa44c6f10" target="//@resources.2">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
   </resources>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:e60c623f-50d0-4068-a35c-7f2aa61e38ab" title="db_server">
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:b53c4bce-9b55-40d0-9db8-080535a794da" title="db_server" rlinks="//@resources.2/@links.0">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
     <parts xsi:type="tosca:Tosca_nodes_compute">
       <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
     </parts>
-    <rlinks href="#//@resources.2/@links.0"/>
-    <rlinks href="Example5-TemplateForDeployingDatabaseContentOnTopOfMySQLDBMSMiddleware.extendedTosca#//@resources.2/@links.1"/>
-    <rlinks href="Example6-BasicTwo-TierApplication.extendedTosca#//@resources.4/@links.1"/>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:3fd65deb-a0ee-4364-9206-f557d25aa1ae" title="mysql" rlinks="//@resources.0/@links.0">
+  <resources xsi:type="platform:Component" id="urn:uuid:e86d3615-b05e-40db-aff0-92fe95c43811" title="mysql" rlinks="//@resources.0/@links.0">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_dbms_mysql" port="3306">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_dbms_mysql']"/>
     </parts>
-    <links xsi:type="placement:Placementlink" id="urn:uuid:45e6dff9-666e-4d56-9974-45615cb35b14" target="//@resources.1">
+    <links xsi:type="placement:Placementlink" id="urn:uuid:2da77741-c9eb-4f97-978f-f7d56729228b" target="//@resources.1">
       <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
     </links>
   </resources>

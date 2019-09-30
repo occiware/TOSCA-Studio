@@ -10,22 +10,22 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://schemas.ogf.org/tosca/core#/"/>
   <use href="http://schemas.ogf.org/tosca/extended#/"/>
-  <resources xsi:type="platform:Application" id="urn:uuid:1b06acf9-7336-4b06-9846-a9813f8f73bd">
+  <resources xsi:type="platform:Application" id="urn:uuid:7afed6b7-86eb-4b98-a2aa-92cb4d577bc9">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
   </resources>
-  <resources xsi:type="infrastructure:Network" id="urn:uuid:cfabab85-f11f-4f15-b678-9e837e0a54e1" title="my_port">
+  <resources xsi:type="infrastructure:Network" id="urn:uuid:af8ce341-b598-4847-8572-c2568df287b4" title="my_port">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='network']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_network_port">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_network_port']"/>
     </parts>
   </resources>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:6cfb9c49-6d7b-4f72-afd1-0460c9b6a444" title="my_server" occiComputeArchitecture="x64" occiComputeCores="1" occiComputeMemory="4.0">
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:6822dc65-3150-4b2a-984b-91c6804e3989" title="my_server" occiComputeArchitecture="x64" occiComputeCores="1" occiComputeMemory="4.0">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
     <parts xsi:type="tosca:Tosca_nodes_compute" type="Linux" distribution="CirrOS" version="0.3.2" diskSize="10">
       <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
     </parts>
   </resources>
-  <resources xsi:type="infrastructure:Network" id="urn:uuid:401d2d0d-7114-478b-b8e4-a5578d7d8893" title="my_network">
+  <resources xsi:type="infrastructure:Network" id="urn:uuid:9c464cb5-d41b-4092-b9fe-37b2191628fd" title="my_network">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='network']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_network_network" startIp="192.168.0.50" cidr="192.168.0.0/24" gatewayIp="192.168.0.1" endIp="192.168.0.200">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_network_network']"/>

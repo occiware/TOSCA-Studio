@@ -10,10 +10,10 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://schemas.ogf.org/tosca/core#/"/>
   <use href="http://schemas.ogf.org/tosca/extended#/"/>
-  <resources xsi:type="platform:Application" id="urn:uuid:0d5f4403-12f7-41d1-b33d-ce128a849d2b">
+  <resources xsi:type="platform:Application" id="urn:uuid:c6edebc7-9cab-466f-8428-71aa559e2a08">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
   </resources>
-  <resources xsi:type="infrastructure:Storage" id="urn:uuid:76195216-255f-4aa5-ac60-8a41f264b7e3" title="obj_store_server" occiStorageSize="4.0">
+  <resources xsi:type="infrastructure:Storage" id="urn:uuid:414b7466-0964-4a50-a552-e036a5df4c2f" title="obj_store_server" occiStorageSize="4.0">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='storage']"/>
     <parts xsi:type="tosca:Tosca_nodes_objectstorage">
       <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_objectstorage']"/>

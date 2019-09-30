@@ -93,7 +93,7 @@ public interface Tosca_capabilities_scalable extends Tosca_capabilities_root, Mi
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * An optional property that indicates the requested default number of instances that should be the starting number of instances a TOSCA orchestrator should attempt to allocate. Note: The value for this property MUST be in the range between the values set for â€˜min_instancesâ€™ and â€˜max_instancesâ€™ properties.
+	 * An optional property that indicates the requested default number of instances that should be the starting number of instances a TOSCA orchestrator should attempt to allocate. Note: The value for this property MUST be in the range between the values set for ‘min_instances’ and ‘max_instances’ properties.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Default Instances</em>' attribute.
 	 * @see #setDefaultInstances(Integer)

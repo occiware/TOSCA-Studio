@@ -64,7 +64,7 @@ public interface Tosca_capabilities_operatingsystem extends Tosca_capabilities_r
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The Operating System (OS) distribution. Examples of valid values for an â€œtypeâ€ of â€œLinuxâ€ would include:  debian, fedora, rhel and ubuntu.
+	 * The Operating System (OS) distribution. Examples of valid values for an “type” of “Linux” would include:  debian, fedora, rhel and ubuntu.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Distribution</em>' attribute.
 	 * @see #setDistribution(String)
