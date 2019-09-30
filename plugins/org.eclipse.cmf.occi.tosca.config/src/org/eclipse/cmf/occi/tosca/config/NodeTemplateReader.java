@@ -59,6 +59,7 @@ public class NodeTemplateReader {
 			component.getParts().add(node);
 			component.setTitle(key);
 			if (node_map.get("requirements") != null && node_map.get("requirements") instanceof List) {
+				System.out.println("REQUIRE !!!" + node_map.get("requirements"));
 				for (Map<String, ?> requirement : (List<Map>) node_map.get("requirements")) {
 					if (requirement.containsKey("database_connection")) {
 						Main.linkManager.addLinkToDo(key, (String)requirement.get("database_connection"));

@@ -174,6 +174,29 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_capabilities_containerchild} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_capabilities_containerchildItemProvider tosca_capabilities_containerchildItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_capabilities_containerchild}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_capabilities_containerchildAdapter() {
+		if (tosca_capabilities_containerchildItemProvider == null) {
+			tosca_capabilities_containerchildItemProvider = new Tosca_capabilities_containerchildItemProvider(this);
+		}
+
+		return tosca_capabilities_containerchildItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_capabilities_somecap} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -243,6 +266,29 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_capabilities_nodejsappcontainer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_capabilities_nodejsappcontainerItemProvider tosca_capabilities_nodejsappcontainerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_capabilities_nodejsappcontainer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_capabilities_nodejsappcontainerAdapter() {
+		if (tosca_capabilities_nodejsappcontainerItemProvider == null) {
+			tosca_capabilities_nodejsappcontainerItemProvider = new Tosca_capabilities_nodejsappcontainerItemProvider(this);
+		}
+
+		return tosca_capabilities_nodejsappcontainerItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_capabilities_container_docker} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -263,29 +309,6 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		}
 
 		return tosca_capabilities_container_dockerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_capabilities_containerchild} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Tosca_capabilities_containerchildItemProvider tosca_capabilities_containerchildItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link extendedtosca.Tosca_capabilities_containerchild}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTosca_capabilities_containerchildAdapter() {
-		if (tosca_capabilities_containerchildItemProvider == null) {
-			tosca_capabilities_containerchildItemProvider = new Tosca_capabilities_containerchildItemProvider(this);
-		}
-
-		return tosca_capabilities_containerchildItemProvider;
 	}
 
 	/**
@@ -358,6 +381,52 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_abstractmongod} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_nodes_abstractmongodItemProvider tosca_nodes_abstractmongodItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_abstractmongod}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_nodes_abstractmongodAdapter() {
+		if (tosca_nodes_abstractmongodItemProvider == null) {
+			tosca_nodes_abstractmongodItemProvider = new Tosca_nodes_abstractmongodItemProvider(this);
+		}
+
+		return tosca_nodes_abstractmongodItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_mongod} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_nodes_mongodItemProvider tosca_nodes_mongodItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_mongod}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_nodes_mongodAdapter() {
+		if (tosca_nodes_mongodItemProvider == null) {
+			tosca_nodes_mongodItemProvider = new Tosca_nodes_mongodItemProvider(this);
+		}
+
+		return tosca_nodes_mongodItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_network_network} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -378,6 +447,29 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		}
 
 		return tosca_nodes_network_networkItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_nodejs} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_nodes_nodejsItemProvider tosca_nodes_nodejsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_nodejs}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_nodes_nodejsAdapter() {
+		if (tosca_nodes_nodejsItemProvider == null) {
+			tosca_nodes_nodejsItemProvider = new Tosca_nodes_nodejsItemProvider(this);
+		}
+
+		return tosca_nodes_nodejsItemProvider;
 	}
 
 	/**
@@ -772,6 +864,29 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_nodecellar} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_nodes_nodecellarItemProvider tosca_nodes_nodecellarItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_nodecellar}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_nodes_nodecellarAdapter() {
+		if (tosca_nodes_nodecellarItemProvider == null) {
+			tosca_nodes_nodecellarItemProvider = new Tosca_nodes_nodecellarItemProvider(this);
+		}
+
+		return tosca_nodes_nodecellarItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_nodewithcap} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -979,29 +1094,6 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_webserver_nodejs} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Tosca_nodes_webserver_nodejsItemProvider tosca_nodes_webserver_nodejsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link extendedtosca.Tosca_nodes_webserver_nodejs}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTosca_nodes_webserver_nodejsAdapter() {
-		if (tosca_nodes_webserver_nodejsItemProvider == null) {
-			tosca_nodes_webserver_nodejsItemProvider = new Tosca_nodes_webserver_nodejsItemProvider(this);
-		}
-
-		return tosca_nodes_webserver_nodejsItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_nodes_dbms_mysql} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1048,49 +1140,26 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Test_relation_connects} instances.
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_relationships_nodecellarhostedonnodejs} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Test_relation_connectsItemProvider test_relation_connectsItemProvider;
+	protected Tosca_relationships_nodecellarhostedonnodejsItemProvider tosca_relationships_nodecellarhostedonnodejsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link extendedtosca.Test_relation_connects}.
+	 * This creates an adapter for a {@link extendedtosca.Tosca_relationships_nodecellarhostedonnodejs}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createTest_relation_connectsAdapter() {
-		if (test_relation_connectsItemProvider == null) {
-			test_relation_connectsItemProvider = new Test_relation_connectsItemProvider(this);
+	public Adapter createTosca_relationships_nodecellarhostedonnodejsAdapter() {
+		if (tosca_relationships_nodecellarhostedonnodejsItemProvider == null) {
+			tosca_relationships_nodecellarhostedonnodejsItemProvider = new Tosca_relationships_nodecellarhostedonnodejsItemProvider(this);
 		}
 
-		return test_relation_connectsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_relationships_network_bindsto} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Tosca_relationships_network_bindstoItemProvider tosca_relationships_network_bindstoItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link extendedtosca.Tosca_relationships_network_bindsto}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTosca_relationships_network_bindstoAdapter() {
-		if (tosca_relationships_network_bindstoItemProvider == null) {
-			tosca_relationships_network_bindstoItemProvider = new Tosca_relationships_network_bindstoItemProvider(this);
-		}
-
-		return tosca_relationships_network_bindstoItemProvider;
+		return tosca_relationships_nodecellarhostedonnodejsItemProvider;
 	}
 
 	/**
@@ -1140,6 +1209,29 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_relationships_nodejsconnecttomongo} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_relationships_nodejsconnecttomongoItemProvider tosca_relationships_nodejsconnecttomongoItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_relationships_nodejsconnecttomongo}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_relationships_nodejsconnecttomongoAdapter() {
+		if (tosca_relationships_nodejsconnecttomongoItemProvider == null) {
+			tosca_relationships_nodejsconnecttomongoItemProvider = new Tosca_relationships_nodejsconnecttomongoItemProvider(this);
+		}
+
+		return tosca_relationships_nodejsconnecttomongoItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_relationships_network_linksto} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1160,6 +1252,52 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		}
 
 		return tosca_relationships_network_linkstoItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Test_relation_connects} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Test_relation_connectsItemProvider test_relation_connectsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Test_relation_connects}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTest_relation_connectsAdapter() {
+		if (test_relation_connectsItemProvider == null) {
+			test_relation_connectsItemProvider = new Test_relation_connectsItemProvider(this);
+		}
+
+		return test_relation_connectsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link extendedtosca.Tosca_relationships_network_bindsto} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Tosca_relationships_network_bindstoItemProvider tosca_relationships_network_bindstoItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link extendedtosca.Tosca_relationships_network_bindsto}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTosca_relationships_network_bindstoAdapter() {
+		if (tosca_relationships_network_bindstoItemProvider == null) {
+			tosca_relationships_network_bindstoItemProvider = new Tosca_relationships_network_bindstoItemProvider(this);
+		}
+
+		return tosca_relationships_network_bindstoItemProvider;
 	}
 
 	/**
@@ -1265,15 +1403,19 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		if (arrayPortSpecItemProvider != null) arrayPortSpecItemProvider.dispose();
 		if (arrayversionItemProvider != null) arrayversionItemProvider.dispose();
 		if (arrayintegerItemProvider != null) arrayintegerItemProvider.dispose();
+		if (tosca_capabilities_containerchildItemProvider != null) tosca_capabilities_containerchildItemProvider.dispose();
 		if (tosca_capabilities_somecapItemProvider != null) tosca_capabilities_somecapItemProvider.dispose();
 		if (tosca_capabilities_indigo_endpointItemProvider != null) tosca_capabilities_indigo_endpointItemProvider.dispose();
 		if (tosca_capabilities_haItemProvider != null) tosca_capabilities_haItemProvider.dispose();
+		if (tosca_capabilities_nodejsappcontainerItemProvider != null) tosca_capabilities_nodejsappcontainerItemProvider.dispose();
 		if (tosca_capabilities_container_dockerItemProvider != null) tosca_capabilities_container_dockerItemProvider.dispose();
-		if (tosca_capabilities_containerchildItemProvider != null) tosca_capabilities_containerchildItemProvider.dispose();
 		if (tosca_capabilities_somechildcapItemProvider != null) tosca_capabilities_somechildcapItemProvider.dispose();
 		if (tosca_nodes_computewithpropItemProvider != null) tosca_nodes_computewithpropItemProvider.dispose();
 		if (tosca_nodes_webapplication_paypalpizzastoreItemProvider != null) tosca_nodes_webapplication_paypalpizzastoreItemProvider.dispose();
+		if (tosca_nodes_abstractmongodItemProvider != null) tosca_nodes_abstractmongodItemProvider.dispose();
+		if (tosca_nodes_mongodItemProvider != null) tosca_nodes_mongodItemProvider.dispose();
 		if (tosca_nodes_network_networkItemProvider != null) tosca_nodes_network_networkItemProvider.dispose();
+		if (tosca_nodes_nodejsItemProvider != null) tosca_nodes_nodejsItemProvider.dispose();
 		if (tosca_nodes_container_application_dockerItemProvider != null) tosca_nodes_container_application_dockerItemProvider.dispose();
 		if (tosca_nodes_softwarecomponent_kibanaItemProvider != null) tosca_nodes_softwarecomponent_kibanaItemProvider.dispose();
 		if (tosca_nodes_computewithattrlistItemProvider != null) tosca_nodes_computewithattrlistItemProvider.dispose();
@@ -1291,6 +1433,7 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		if (tosca_nodes_softwarecomponent_elasticsearchItemProvider != null) tosca_nodes_softwarecomponent_elasticsearchItemProvider.dispose();
 		if (tosca_nodes_databasewithlistparamItemProvider != null) tosca_nodes_databasewithlistparamItemProvider.dispose();
 		if (example_someappItemProvider != null) example_someappItemProvider.dispose();
+		if (tosca_nodes_nodecellarItemProvider != null) tosca_nodes_nodecellarItemProvider.dispose();
 		if (tosca_nodes_nodewithcapItemProvider != null) tosca_nodes_nodewithcapItemProvider.dispose();
 		if (tosca_nodes_apacheItemProvider != null) tosca_nodes_apacheItemProvider.dispose();
 		if (rsyslogItemProvider != null) rsyslogItemProvider.dispose();
@@ -1300,14 +1443,15 @@ public class ExtendedtoscaItemProviderAdapterFactory extends ExtendedtoscaAdapte
 		if (tosca_nodes_softwarecomponent_rsyslogItemProvider != null) tosca_nodes_softwarecomponent_rsyslogItemProvider.dispose();
 		if (tosca_nodes_hacomputeItemProvider != null) tosca_nodes_hacomputeItemProvider.dispose();
 		if (tosca_nodes_somenodeItemProvider != null) tosca_nodes_somenodeItemProvider.dispose();
-		if (tosca_nodes_webserver_nodejsItemProvider != null) tosca_nodes_webserver_nodejsItemProvider.dispose();
 		if (tosca_nodes_dbms_mysqlItemProvider != null) tosca_nodes_dbms_mysqlItemProvider.dispose();
 		if (mycompany_mytypes_myscalingpolicyItemProvider != null) mycompany_mytypes_myscalingpolicyItemProvider.dispose();
-		if (test_relation_connectsItemProvider != null) test_relation_connectsItemProvider.dispose();
-		if (tosca_relationships_network_bindstoItemProvider != null) tosca_relationships_network_bindstoItemProvider.dispose();
+		if (tosca_relationships_nodecellarhostedonnodejsItemProvider != null) tosca_relationships_nodecellarhostedonnodejsItemProvider.dispose();
 		if (tosca_relationships_haItemProvider != null) tosca_relationships_haItemProvider.dispose();
 		if (myattachestoItemProvider != null) myattachestoItemProvider.dispose();
+		if (tosca_relationships_nodejsconnecttomongoItemProvider != null) tosca_relationships_nodejsconnecttomongoItemProvider.dispose();
 		if (tosca_relationships_network_linkstoItemProvider != null) tosca_relationships_network_linkstoItemProvider.dispose();
+		if (test_relation_connectsItemProvider != null) test_relation_connectsItemProvider.dispose();
+		if (tosca_relationships_network_bindstoItemProvider != null) tosca_relationships_network_bindstoItemProvider.dispose();
 	}
 
 }

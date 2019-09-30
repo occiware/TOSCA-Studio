@@ -152,24 +152,32 @@ public class ExtendedtoscaValidator extends EObjectValidator {
 				return validatearrayversion((arrayversion)value, diagnostics, context);
 			case ExtendedtoscaPackage.ARRAYINTEGER:
 				return validatearrayinteger((arrayinteger)value, diagnostics, context);
+			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_CONTAINERCHILD:
+				return validateTosca_capabilities_containerchild((Tosca_capabilities_containerchild)value, diagnostics, context);
 			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_SOMECAP:
 				return validateTosca_capabilities_somecap((Tosca_capabilities_somecap)value, diagnostics, context);
 			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_INDIGO_ENDPOINT:
 				return validateTosca_capabilities_indigo_endpoint((Tosca_capabilities_indigo_endpoint)value, diagnostics, context);
 			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_HA:
 				return validateTosca_capabilities_ha((Tosca_capabilities_ha)value, diagnostics, context);
+			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_NODEJSAPPCONTAINER:
+				return validateTosca_capabilities_nodejsappcontainer((Tosca_capabilities_nodejsappcontainer)value, diagnostics, context);
 			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_CONTAINER_DOCKER:
 				return validateTosca_capabilities_container_docker((Tosca_capabilities_container_docker)value, diagnostics, context);
-			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_CONTAINERCHILD:
-				return validateTosca_capabilities_containerchild((Tosca_capabilities_containerchild)value, diagnostics, context);
 			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_SOMECHILDCAP:
 				return validateTosca_capabilities_somechildcap((Tosca_capabilities_somechildcap)value, diagnostics, context);
 			case ExtendedtoscaPackage.TOSCA_NODES_COMPUTEWITHPROP:
 				return validateTosca_nodes_computewithprop((Tosca_nodes_computewithprop)value, diagnostics, context);
 			case ExtendedtoscaPackage.TOSCA_NODES_WEBAPPLICATION_PAYPALPIZZASTORE:
 				return validateTosca_nodes_webapplication_paypalpizzastore((Tosca_nodes_webapplication_paypalpizzastore)value, diagnostics, context);
+			case ExtendedtoscaPackage.TOSCA_NODES_ABSTRACTMONGOD:
+				return validateTosca_nodes_abstractmongod((Tosca_nodes_abstractmongod)value, diagnostics, context);
+			case ExtendedtoscaPackage.TOSCA_NODES_MONGOD:
+				return validateTosca_nodes_mongod((Tosca_nodes_mongod)value, diagnostics, context);
 			case ExtendedtoscaPackage.TOSCA_NODES_NETWORK_NETWORK:
 				return validateTosca_nodes_network_network((Tosca_nodes_network_network)value, diagnostics, context);
+			case ExtendedtoscaPackage.TOSCA_NODES_NODEJS:
+				return validateTosca_nodes_nodejs((Tosca_nodes_nodejs)value, diagnostics, context);
 			case ExtendedtoscaPackage.TOSCA_NODES_CONTAINER_APPLICATION_DOCKER:
 				return validateTosca_nodes_container_application_docker((Tosca_nodes_container_application_docker)value, diagnostics, context);
 			case ExtendedtoscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_KIBANA:
@@ -204,6 +212,8 @@ public class ExtendedtoscaValidator extends EObjectValidator {
 				return validateTosca_nodes_databasewithlistparam((Tosca_nodes_databasewithlistparam)value, diagnostics, context);
 			case ExtendedtoscaPackage.EXAMPLE_SOMEAPP:
 				return validateExample_someapp((Example_someapp)value, diagnostics, context);
+			case ExtendedtoscaPackage.TOSCA_NODES_NODECELLAR:
+				return validateTosca_nodes_nodecellar((Tosca_nodes_nodecellar)value, diagnostics, context);
 			case ExtendedtoscaPackage.TOSCA_NODES_NODEWITHCAP:
 				return validateTosca_nodes_nodewithcap((Tosca_nodes_nodewithcap)value, diagnostics, context);
 			case ExtendedtoscaPackage.TOSCA_NODES_APACHE:
@@ -222,22 +232,24 @@ public class ExtendedtoscaValidator extends EObjectValidator {
 				return validateTosca_nodes_hacompute((Tosca_nodes_hacompute)value, diagnostics, context);
 			case ExtendedtoscaPackage.TOSCA_NODES_SOMENODE:
 				return validateTosca_nodes_somenode((Tosca_nodes_somenode)value, diagnostics, context);
-			case ExtendedtoscaPackage.TOSCA_NODES_WEBSERVER_NODEJS:
-				return validateTosca_nodes_webserver_nodejs((Tosca_nodes_webserver_nodejs)value, diagnostics, context);
 			case ExtendedtoscaPackage.TOSCA_NODES_DBMS_MYSQL:
 				return validateTosca_nodes_dbms_mysql((Tosca_nodes_dbms_mysql)value, diagnostics, context);
 			case ExtendedtoscaPackage.MYCOMPANY_MYTYPES_MYSCALINGPOLICY:
 				return validateMycompany_mytypes_myscalingpolicy((Mycompany_mytypes_myscalingpolicy)value, diagnostics, context);
-			case ExtendedtoscaPackage.TEST_RELATION_CONNECTS:
-				return validateTest_relation_connects((Test_relation_connects)value, diagnostics, context);
-			case ExtendedtoscaPackage.TOSCA_RELATIONSHIPS_NETWORK_BINDSTO:
-				return validateTosca_relationships_network_bindsto((Tosca_relationships_network_bindsto)value, diagnostics, context);
+			case ExtendedtoscaPackage.TOSCA_RELATIONSHIPS_NODECELLARHOSTEDONNODEJS:
+				return validateTosca_relationships_nodecellarhostedonnodejs((Tosca_relationships_nodecellarhostedonnodejs)value, diagnostics, context);
 			case ExtendedtoscaPackage.TOSCA_RELATIONSHIPS_HA:
 				return validateTosca_relationships_ha((Tosca_relationships_ha)value, diagnostics, context);
 			case ExtendedtoscaPackage.MYATTACHESTO:
 				return validateMyattachesto((Myattachesto)value, diagnostics, context);
+			case ExtendedtoscaPackage.TOSCA_RELATIONSHIPS_NODEJSCONNECTTOMONGO:
+				return validateTosca_relationships_nodejsconnecttomongo((Tosca_relationships_nodejsconnecttomongo)value, diagnostics, context);
 			case ExtendedtoscaPackage.TOSCA_RELATIONSHIPS_NETWORK_LINKSTO:
 				return validateTosca_relationships_network_linksto((Tosca_relationships_network_linksto)value, diagnostics, context);
+			case ExtendedtoscaPackage.TEST_RELATION_CONNECTS:
+				return validateTest_relation_connects((Test_relation_connects)value, diagnostics, context);
+			case ExtendedtoscaPackage.TOSCA_RELATIONSHIPS_NETWORK_BINDSTO:
+				return validateTosca_relationships_network_bindsto((Tosca_relationships_network_bindsto)value, diagnostics, context);
 			case ExtendedtoscaPackage.IP_VERSION_ENUM:
 				return validateip_versionEnum((ip_versionEnum)value, diagnostics, context);
 			case ExtendedtoscaPackage.STORAGE_PATH_ENUM:
@@ -288,6 +300,15 @@ public class ExtendedtoscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateTosca_capabilities_containerchild(Tosca_capabilities_containerchild tosca_capabilities_containerchild, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(tosca_capabilities_containerchild, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateTosca_capabilities_somecap(Tosca_capabilities_somecap tosca_capabilities_somecap, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(tosca_capabilities_somecap, diagnostics, context);
 	}
@@ -315,8 +336,8 @@ public class ExtendedtoscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateTosca_capabilities_container_docker(Tosca_capabilities_container_docker tosca_capabilities_container_docker, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tosca_capabilities_container_docker, diagnostics, context);
+	public boolean validateTosca_capabilities_nodejsappcontainer(Tosca_capabilities_nodejsappcontainer tosca_capabilities_nodejsappcontainer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(tosca_capabilities_nodejsappcontainer, diagnostics, context);
 	}
 
 	/**
@@ -324,8 +345,8 @@ public class ExtendedtoscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateTosca_capabilities_containerchild(Tosca_capabilities_containerchild tosca_capabilities_containerchild, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tosca_capabilities_containerchild, diagnostics, context);
+	public boolean validateTosca_capabilities_container_docker(Tosca_capabilities_container_docker tosca_capabilities_container_docker, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(tosca_capabilities_container_docker, diagnostics, context);
 	}
 
 	/**
@@ -381,6 +402,46 @@ public class ExtendedtoscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateTosca_nodes_abstractmongod(Tosca_nodes_abstractmongod tosca_nodes_abstractmongod, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(tosca_nodes_abstractmongod, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_nodes_abstractmongod, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_nodes_abstractmongod, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_nodes_abstractmongod, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_nodes_abstractmongod, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_nodes_abstractmongod, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_abstractmongod, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_abstractmongod, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_abstractmongod, diagnostics, context);
+		if (result || diagnostics != null) result &= toscaValidator.validateTosca_nodes_softwarecomponent_appliesConstraint(tosca_nodes_abstractmongod, diagnostics, context);
+		if (result || diagnostics != null) result &= toscaValidator.validateTosca_nodes_dbms_SourceMustBeDatabase(tosca_nodes_abstractmongod, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTosca_nodes_mongod(Tosca_nodes_mongod tosca_nodes_mongod, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(tosca_nodes_mongod, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_nodes_mongod, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_nodes_mongod, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_nodes_mongod, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_nodes_mongod, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_nodes_mongod, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_mongod, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_mongod, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_mongod, diagnostics, context);
+		if (result || diagnostics != null) result &= toscaValidator.validateTosca_nodes_softwarecomponent_appliesConstraint(tosca_nodes_mongod, diagnostics, context);
+		if (result || diagnostics != null) result &= toscaValidator.validateTosca_nodes_dbms_SourceMustBeDatabase(tosca_nodes_mongod, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateTosca_nodes_network_network(Tosca_nodes_network_network tosca_nodes_network_network, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		if (!validate_NoCircularContainment(tosca_nodes_network_network, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms(tosca_nodes_network_network, diagnostics, context);
@@ -403,6 +464,26 @@ public class ExtendedtoscaValidator extends EObjectValidator {
 	 */
 	public boolean validateTosca_nodes_network_network_appliesConstraint(Tosca_nodes_network_network tosca_nodes_network_network, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return tosca_nodes_network_network.appliesConstraint(diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTosca_nodes_nodejs(Tosca_nodes_nodejs tosca_nodes_nodejs, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(tosca_nodes_nodejs, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_nodes_nodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_nodes_nodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_nodes_nodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_nodes_nodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_nodes_nodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_nodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_nodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_nodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= toscaValidator.validateTosca_nodes_softwarecomponent_appliesConstraint(tosca_nodes_nodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= toscaValidator.validateTosca_nodes_webserver_SourceMustBeWebApplication(tosca_nodes_nodejs, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -684,6 +765,25 @@ public class ExtendedtoscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateTosca_nodes_nodecellar(Tosca_nodes_nodecellar tosca_nodes_nodecellar, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(tosca_nodes_nodecellar, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_nodes_nodecellar, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_nodes_nodecellar, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_nodes_nodecellar, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_nodes_nodecellar, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_nodes_nodecellar, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_nodecellar, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_nodecellar, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_nodecellar, diagnostics, context);
+		if (result || diagnostics != null) result &= toscaValidator.validateTosca_nodes_webapplication_appliesConstraint(tosca_nodes_nodecellar, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateTosca_nodes_nodewithcap(Tosca_nodes_nodewithcap tosca_nodes_nodewithcap, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(tosca_nodes_nodewithcap, diagnostics, context);
 	}
@@ -848,26 +948,6 @@ public class ExtendedtoscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateTosca_nodes_webserver_nodejs(Tosca_nodes_webserver_nodejs tosca_nodes_webserver_nodejs, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(tosca_nodes_webserver_nodejs, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(tosca_nodes_webserver_nodejs, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_nodes_webserver_nodejs, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_nodes_webserver_nodejs, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_nodes_webserver_nodejs, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_nodes_webserver_nodejs, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_webserver_nodejs, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_webserver_nodejs, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_webserver_nodejs, diagnostics, context);
-		if (result || diagnostics != null) result &= toscaValidator.validateTosca_nodes_softwarecomponent_appliesConstraint(tosca_nodes_webserver_nodejs, diagnostics, context);
-		if (result || diagnostics != null) result &= toscaValidator.validateTosca_nodes_webserver_SourceMustBeWebApplication(tosca_nodes_webserver_nodejs, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateTosca_nodes_dbms_mysql(Tosca_nodes_dbms_mysql tosca_nodes_dbms_mysql, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		if (!validate_NoCircularContainment(tosca_nodes_dbms_mysql, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms(tosca_nodes_dbms_mysql, diagnostics, context);
@@ -897,29 +977,23 @@ public class ExtendedtoscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateTest_relation_connects(Test_relation_connects test_relation_connects, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(test_relation_connects, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateTosca_relationships_network_bindsto(Tosca_relationships_network_bindsto tosca_relationships_network_bindsto, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(tosca_relationships_network_bindsto, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(tosca_relationships_network_bindsto, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_relationships_network_bindsto, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_relationships_network_bindsto, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_relationships_network_bindsto, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_relationships_network_bindsto, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(tosca_relationships_network_bindsto, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_relationships_network_bindsto, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_relationships_network_bindsto, diagnostics, context);
-		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_SourceMustBeComponent(tosca_relationships_network_bindsto, diagnostics, context);
-		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_TargetMustBeComponent(tosca_relationships_network_bindsto, diagnostics, context);
-		if (result || diagnostics != null) result &= toscaValidator.validateTosca_relationships_root_appliesConstraint(tosca_relationships_network_bindsto, diagnostics, context);
-		if (result || diagnostics != null) result &= toscaValidator.validateTosca_relationships_dependson_SourceMustBeNodeAndTargetMustBeNode(tosca_relationships_network_bindsto, diagnostics, context);
+	public boolean validateTosca_relationships_nodecellarhostedonnodejs(Tosca_relationships_nodecellarhostedonnodejs tosca_relationships_nodecellarhostedonnodejs, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(tosca_relationships_nodecellarhostedonnodejs, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_relationships_nodecellarhostedonnodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_relationships_nodecellarhostedonnodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_relationships_nodecellarhostedonnodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_relationships_nodecellarhostedonnodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_relationships_nodecellarhostedonnodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_relationships_nodecellarhostedonnodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_relationships_nodecellarhostedonnodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_relationships_nodecellarhostedonnodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_SourceMustBeComponent(tosca_relationships_nodecellarhostedonnodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_TargetMustBeComponent(tosca_relationships_nodecellarhostedonnodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= toscaValidator.validateTosca_relationships_root_appliesConstraint(tosca_relationships_nodecellarhostedonnodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= toscaValidator.validateTosca_relationships_hostedon_SourceMustBeSoftwareComponentAndTargetMustBeCompute(tosca_relationships_nodecellarhostedonnodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= toscaValidator.validateTosca_relationships_hostedon_SourceMustBeWebServerAndTargetMustBeWebApplication(tosca_relationships_nodecellarhostedonnodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= toscaValidator.validateTosca_relationships_hostedon_SourceMustBeDatabaseAndTargetMustBeDBMS(tosca_relationships_nodecellarhostedonnodejs, diagnostics, context);
+		if (result || diagnostics != null) result &= toscaValidator.validateTosca_relationships_hostedon_SourceMustBeContainerApplicationAndTargetMustBeContainerRuntime(tosca_relationships_nodecellarhostedonnodejs, diagnostics, context);
 		return result;
 	}
 
@@ -971,6 +1045,27 @@ public class ExtendedtoscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateTosca_relationships_nodejsconnecttomongo(Tosca_relationships_nodejsconnecttomongo tosca_relationships_nodejsconnecttomongo, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(tosca_relationships_nodejsconnecttomongo, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_relationships_nodejsconnecttomongo, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_relationships_nodejsconnecttomongo, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_relationships_nodejsconnecttomongo, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_relationships_nodejsconnecttomongo, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_relationships_nodejsconnecttomongo, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_relationships_nodejsconnecttomongo, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_relationships_nodejsconnecttomongo, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_relationships_nodejsconnecttomongo, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_SourceMustBeComponent(tosca_relationships_nodejsconnecttomongo, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_TargetMustBeComponent(tosca_relationships_nodejsconnecttomongo, diagnostics, context);
+		if (result || diagnostics != null) result &= toscaValidator.validateTosca_relationships_root_appliesConstraint(tosca_relationships_nodejsconnecttomongo, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateTosca_relationships_network_linksto(Tosca_relationships_network_linksto tosca_relationships_network_linksto, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		if (!validate_NoCircularContainment(tosca_relationships_network_linksto, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms(tosca_relationships_network_linksto, diagnostics, context);
@@ -985,6 +1080,37 @@ public class ExtendedtoscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_TargetMustBeComponent(tosca_relationships_network_linksto, diagnostics, context);
 		if (result || diagnostics != null) result &= toscaValidator.validateTosca_relationships_root_appliesConstraint(tosca_relationships_network_linksto, diagnostics, context);
 		if (result || diagnostics != null) result &= toscaValidator.validateTosca_relationships_dependson_SourceMustBeNodeAndTargetMustBeNode(tosca_relationships_network_linksto, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTest_relation_connects(Test_relation_connects test_relation_connects, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(test_relation_connects, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTosca_relationships_network_bindsto(Tosca_relationships_network_bindsto tosca_relationships_network_bindsto, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(tosca_relationships_network_bindsto, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_relationships_network_bindsto, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_relationships_network_bindsto, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_relationships_network_bindsto, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_relationships_network_bindsto, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_relationships_network_bindsto, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_relationships_network_bindsto, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_relationships_network_bindsto, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_relationships_network_bindsto, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_SourceMustBeComponent(tosca_relationships_network_bindsto, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateDependency_TargetMustBeComponent(tosca_relationships_network_bindsto, diagnostics, context);
+		if (result || diagnostics != null) result &= toscaValidator.validateTosca_relationships_root_appliesConstraint(tosca_relationships_network_bindsto, diagnostics, context);
+		if (result || diagnostics != null) result &= toscaValidator.validateTosca_relationships_dependson_SourceMustBeNodeAndTargetMustBeNode(tosca_relationships_network_bindsto, diagnostics, context);
 		return result;
 	}
 

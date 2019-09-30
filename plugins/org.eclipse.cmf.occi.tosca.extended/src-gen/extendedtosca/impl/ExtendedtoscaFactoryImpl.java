@@ -71,15 +71,19 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 			case ExtendedtoscaPackage.ARRAY_PORT_SPEC: return createarrayPortSpec();
 			case ExtendedtoscaPackage.ARRAYVERSION: return createarrayversion();
 			case ExtendedtoscaPackage.ARRAYINTEGER: return createarrayinteger();
+			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_CONTAINERCHILD: return createTosca_capabilities_containerchild();
 			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_SOMECAP: return createTosca_capabilities_somecap();
 			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_INDIGO_ENDPOINT: return createTosca_capabilities_indigo_endpoint();
 			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_HA: return createTosca_capabilities_ha();
+			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_NODEJSAPPCONTAINER: return createTosca_capabilities_nodejsappcontainer();
 			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_CONTAINER_DOCKER: return createTosca_capabilities_container_docker();
-			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_CONTAINERCHILD: return createTosca_capabilities_containerchild();
 			case ExtendedtoscaPackage.TOSCA_CAPABILITIES_SOMECHILDCAP: return createTosca_capabilities_somechildcap();
 			case ExtendedtoscaPackage.TOSCA_NODES_COMPUTEWITHPROP: return createTosca_nodes_computewithprop();
 			case ExtendedtoscaPackage.TOSCA_NODES_WEBAPPLICATION_PAYPALPIZZASTORE: return createTosca_nodes_webapplication_paypalpizzastore();
+			case ExtendedtoscaPackage.TOSCA_NODES_ABSTRACTMONGOD: return createTosca_nodes_abstractmongod();
+			case ExtendedtoscaPackage.TOSCA_NODES_MONGOD: return createTosca_nodes_mongod();
 			case ExtendedtoscaPackage.TOSCA_NODES_NETWORK_NETWORK: return createTosca_nodes_network_network();
+			case ExtendedtoscaPackage.TOSCA_NODES_NODEJS: return createTosca_nodes_nodejs();
 			case ExtendedtoscaPackage.TOSCA_NODES_CONTAINER_APPLICATION_DOCKER: return createTosca_nodes_container_application_docker();
 			case ExtendedtoscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_KIBANA: return createTosca_nodes_softwarecomponent_kibana();
 			case ExtendedtoscaPackage.TOSCA_NODES_COMPUTEWITHATTRLIST: return createTosca_nodes_computewithattrlist();
@@ -97,6 +101,7 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 			case ExtendedtoscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_ELASTICSEARCH: return createTosca_nodes_softwarecomponent_elasticsearch();
 			case ExtendedtoscaPackage.TOSCA_NODES_DATABASEWITHLISTPARAM: return createTosca_nodes_databasewithlistparam();
 			case ExtendedtoscaPackage.EXAMPLE_SOMEAPP: return createExample_someapp();
+			case ExtendedtoscaPackage.TOSCA_NODES_NODECELLAR: return createTosca_nodes_nodecellar();
 			case ExtendedtoscaPackage.TOSCA_NODES_NODEWITHCAP: return createTosca_nodes_nodewithcap();
 			case ExtendedtoscaPackage.TOSCA_NODES_APACHE: return createTosca_nodes_apache();
 			case ExtendedtoscaPackage.RSYSLOG: return createRsyslog();
@@ -106,14 +111,15 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 			case ExtendedtoscaPackage.TOSCA_NODES_SOFTWARECOMPONENT_RSYSLOG: return createTosca_nodes_softwarecomponent_rsyslog();
 			case ExtendedtoscaPackage.TOSCA_NODES_HACOMPUTE: return createTosca_nodes_hacompute();
 			case ExtendedtoscaPackage.TOSCA_NODES_SOMENODE: return createTosca_nodes_somenode();
-			case ExtendedtoscaPackage.TOSCA_NODES_WEBSERVER_NODEJS: return createTosca_nodes_webserver_nodejs();
 			case ExtendedtoscaPackage.TOSCA_NODES_DBMS_MYSQL: return createTosca_nodes_dbms_mysql();
 			case ExtendedtoscaPackage.MYCOMPANY_MYTYPES_MYSCALINGPOLICY: return createMycompany_mytypes_myscalingpolicy();
-			case ExtendedtoscaPackage.TEST_RELATION_CONNECTS: return createTest_relation_connects();
-			case ExtendedtoscaPackage.TOSCA_RELATIONSHIPS_NETWORK_BINDSTO: return createTosca_relationships_network_bindsto();
+			case ExtendedtoscaPackage.TOSCA_RELATIONSHIPS_NODECELLARHOSTEDONNODEJS: return createTosca_relationships_nodecellarhostedonnodejs();
 			case ExtendedtoscaPackage.TOSCA_RELATIONSHIPS_HA: return createTosca_relationships_ha();
 			case ExtendedtoscaPackage.MYATTACHESTO: return createMyattachesto();
+			case ExtendedtoscaPackage.TOSCA_RELATIONSHIPS_NODEJSCONNECTTOMONGO: return createTosca_relationships_nodejsconnecttomongo();
 			case ExtendedtoscaPackage.TOSCA_RELATIONSHIPS_NETWORK_LINKSTO: return createTosca_relationships_network_linksto();
+			case ExtendedtoscaPackage.TEST_RELATION_CONNECTS: return createTest_relation_connects();
+			case ExtendedtoscaPackage.TOSCA_RELATIONSHIPS_NETWORK_BINDSTO: return createTosca_relationships_network_bindsto();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -198,6 +204,16 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Tosca_capabilities_containerchild createTosca_capabilities_containerchild() {
+		Tosca_capabilities_containerchildImpl tosca_capabilities_containerchild = new Tosca_capabilities_containerchildImpl();
+		return tosca_capabilities_containerchild;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Tosca_capabilities_somecap createTosca_capabilities_somecap() {
 		Tosca_capabilities_somecapImpl tosca_capabilities_somecap = new Tosca_capabilities_somecapImpl();
 		return tosca_capabilities_somecap;
@@ -228,9 +244,9 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tosca_capabilities_container_docker createTosca_capabilities_container_docker() {
-		Tosca_capabilities_container_dockerImpl tosca_capabilities_container_docker = new Tosca_capabilities_container_dockerImpl();
-		return tosca_capabilities_container_docker;
+	public Tosca_capabilities_nodejsappcontainer createTosca_capabilities_nodejsappcontainer() {
+		Tosca_capabilities_nodejsappcontainerImpl tosca_capabilities_nodejsappcontainer = new Tosca_capabilities_nodejsappcontainerImpl();
+		return tosca_capabilities_nodejsappcontainer;
 	}
 
 	/**
@@ -238,9 +254,9 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tosca_capabilities_containerchild createTosca_capabilities_containerchild() {
-		Tosca_capabilities_containerchildImpl tosca_capabilities_containerchild = new Tosca_capabilities_containerchildImpl();
-		return tosca_capabilities_containerchild;
+	public Tosca_capabilities_container_docker createTosca_capabilities_container_docker() {
+		Tosca_capabilities_container_dockerImpl tosca_capabilities_container_docker = new Tosca_capabilities_container_dockerImpl();
+		return tosca_capabilities_container_docker;
 	}
 
 	/**
@@ -278,9 +294,39 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Tosca_nodes_abstractmongod createTosca_nodes_abstractmongod() {
+		Tosca_nodes_abstractmongodImpl tosca_nodes_abstractmongod = new Tosca_nodes_abstractmongodImpl();
+		return tosca_nodes_abstractmongod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Tosca_nodes_mongod createTosca_nodes_mongod() {
+		Tosca_nodes_mongodImpl tosca_nodes_mongod = new Tosca_nodes_mongodImpl();
+		return tosca_nodes_mongod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Tosca_nodes_network_network createTosca_nodes_network_network() {
 		Tosca_nodes_network_networkImpl tosca_nodes_network_network = new Tosca_nodes_network_networkImpl();
 		return tosca_nodes_network_network;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Tosca_nodes_nodejs createTosca_nodes_nodejs() {
+		Tosca_nodes_nodejsImpl tosca_nodes_nodejs = new Tosca_nodes_nodejsImpl();
+		return tosca_nodes_nodejs;
 	}
 
 	/**
@@ -458,6 +504,16 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Tosca_nodes_nodecellar createTosca_nodes_nodecellar() {
+		Tosca_nodes_nodecellarImpl tosca_nodes_nodecellar = new Tosca_nodes_nodecellarImpl();
+		return tosca_nodes_nodecellar;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Tosca_nodes_nodewithcap createTosca_nodes_nodewithcap() {
 		Tosca_nodes_nodewithcapImpl tosca_nodes_nodewithcap = new Tosca_nodes_nodewithcapImpl();
 		return tosca_nodes_nodewithcap;
@@ -548,16 +604,6 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tosca_nodes_webserver_nodejs createTosca_nodes_webserver_nodejs() {
-		Tosca_nodes_webserver_nodejsImpl tosca_nodes_webserver_nodejs = new Tosca_nodes_webserver_nodejsImpl();
-		return tosca_nodes_webserver_nodejs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Tosca_nodes_dbms_mysql createTosca_nodes_dbms_mysql() {
 		Tosca_nodes_dbms_mysqlImpl tosca_nodes_dbms_mysql = new Tosca_nodes_dbms_mysqlImpl();
 		return tosca_nodes_dbms_mysql;
@@ -578,19 +624,9 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Test_relation_connects createTest_relation_connects() {
-		Test_relation_connectsImpl test_relation_connects = new Test_relation_connectsImpl();
-		return test_relation_connects;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Tosca_relationships_network_bindsto createTosca_relationships_network_bindsto() {
-		Tosca_relationships_network_bindstoImpl tosca_relationships_network_bindsto = new Tosca_relationships_network_bindstoImpl();
-		return tosca_relationships_network_bindsto;
+	public Tosca_relationships_nodecellarhostedonnodejs createTosca_relationships_nodecellarhostedonnodejs() {
+		Tosca_relationships_nodecellarhostedonnodejsImpl tosca_relationships_nodecellarhostedonnodejs = new Tosca_relationships_nodecellarhostedonnodejsImpl();
+		return tosca_relationships_nodecellarhostedonnodejs;
 	}
 
 	/**
@@ -618,9 +654,39 @@ public class ExtendedtoscaFactoryImpl extends EFactoryImpl implements Extendedto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Tosca_relationships_nodejsconnecttomongo createTosca_relationships_nodejsconnecttomongo() {
+		Tosca_relationships_nodejsconnecttomongoImpl tosca_relationships_nodejsconnecttomongo = new Tosca_relationships_nodejsconnecttomongoImpl();
+		return tosca_relationships_nodejsconnecttomongo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Tosca_relationships_network_linksto createTosca_relationships_network_linksto() {
 		Tosca_relationships_network_linkstoImpl tosca_relationships_network_linksto = new Tosca_relationships_network_linkstoImpl();
 		return tosca_relationships_network_linksto;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Test_relation_connects createTest_relation_connects() {
+		Test_relation_connectsImpl test_relation_connects = new Test_relation_connectsImpl();
+		return test_relation_connects;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Tosca_relationships_network_bindsto createTosca_relationships_network_bindsto() {
+		Tosca_relationships_network_bindstoImpl tosca_relationships_network_bindsto = new Tosca_relationships_network_bindstoImpl();
+		return tosca_relationships_network_bindsto;
 	}
 
 	/**

@@ -1,0 +1,53 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+
+metadata:
+  template_name: mongo-types
+  template_version: 1.0.0
+
+description: Mongo types for Debian systems.
+
+imports:
+  - tosca-normative-types:1.0.0
+
+node_types:
+  tosca.nodes.AbstractMongod:
+    derived_from: tosca.nodes.DBMS
+    abstract: true
+    metadata:
+      icon: /images/mongodb.jpg
+    properties:
+      port:
+        type: integer
+        default: 27017
+        constraints:
+          - in_range: [8000,65535]
+
+  tosca.nodes.Mongod:
+    derived_from: tosca.nodes.AbstractMongod
+    description: >
+      A node to install Mongodb nosql database.
+    requirements:
+      - host: # Overrides the parent host requirement to add a specific node_filter and add OS constraints as Impl is based on apt and so restricted to debian.
+          capability: tosca.capabilities.Container
+          node: tosca.nodes.Compute
+          relationship: tosca.relationships.HostedOn
+          occurrences: [1, 1]
+          node_filter:
+            capabilities:
+              - tosca.capabilities.OperatingSystem:
+                  properties:
+                    - type: { equal: linux }
+                    - architecture: { equal: x86_64 }
+                    - distribution: { valid_values: [ debian, ubuntu, knoppix ] }
+    metadata:
+      icon: /images/mongodb.jpg
+    interfaces:
+      Standard:
+        create: scripts/install-mongo.sh
+        configure:
+          inputs:
+            DB_IP: { get_attribute: [HOST, ip_address] }
+            DB_PORT: { get_property: [SELF, port] }
+          implementation: scripts/configure-mongo.sh
+        start: scripts/start-mongo.sh
+        stop: scripts/stop-mongo.sh
