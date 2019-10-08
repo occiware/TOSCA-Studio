@@ -2241,16 +2241,17 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
+		ModmacaoPackage theModmacaoPackage = (ModmacaoPackage)EPackage.Registry.INSTANCE.getEPackage(ModmacaoPackage.eNS_URI);
 		OCCIPackage theOCCIPackage = (OCCIPackage)EPackage.Registry.INSTANCE.getEPackage(OCCIPackage.eNS_URI);
 		PlatformPackage thePlatformPackage = (PlatformPackage)EPackage.Registry.INSTANCE.getEPackage(PlatformPackage.eNS_URI);
 		SlaPackage theSlaPackage = (SlaPackage)EPackage.Registry.INSTANCE.getEPackage(SlaPackage.eNS_URI);
-		ModmacaoPackage theModmacaoPackage = (ModmacaoPackage)EPackage.Registry.INSTANCE.getEPackage(ModmacaoPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		tosca_capabilities_rootEClass.getESuperTypes().add(theModmacaoPackage.getComponent());
 		tosca_capabilities_rootEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		tosca_capabilities_nodeEClass.getESuperTypes().add(this.getTosca_capabilities_root());
 		tosca_capabilities_nodeEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());

@@ -403,7 +403,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_CAPABILITIES_ROOT__MIXIN = OCCIPackage.MIXIN_BASE__MIXIN;
+	int TOSCA_CAPABILITIES_ROOT__MIXIN = ModmacaoPackage.COMPONENT__MIXIN;
 
 	/**
 	 * The feature id for the '<em><b>Entity</b></em>' container reference.
@@ -412,7 +412,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_CAPABILITIES_ROOT__ENTITY = OCCIPackage.MIXIN_BASE__ENTITY;
+	int TOSCA_CAPABILITIES_ROOT__ENTITY = ModmacaoPackage.COMPONENT__ENTITY;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -421,7 +421,16 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_CAPABILITIES_ROOT__ATTRIBUTES = OCCIPackage.MIXIN_BASE__ATTRIBUTES;
+	int TOSCA_CAPABILITIES_ROOT__ATTRIBUTES = ModmacaoPackage.COMPONENT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_CAPABILITIES_ROOT__MODMACAO_COMPONENT_VERSION = ModmacaoPackage.COMPONENT__MODMACAO_COMPONENT_VERSION;
 
 	/**
 	 * The number of structural features of the '<em>Tosca capabilities root</em>' class.
@@ -430,7 +439,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_CAPABILITIES_ROOT_FEATURE_COUNT = OCCIPackage.MIXIN_BASE_FEATURE_COUNT + 0;
+	int TOSCA_CAPABILITIES_ROOT_FEATURE_COUNT = ModmacaoPackage.COMPONENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Tosca capabilities root</em>' class.
@@ -439,7 +448,7 @@ public interface ToscaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOSCA_CAPABILITIES_ROOT_OPERATION_COUNT = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 0;
+	int TOSCA_CAPABILITIES_ROOT_OPERATION_COUNT = ModmacaoPackage.COMPONENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.cmf.occi.tosca.impl.Tosca_capabilities_nodeImpl <em>Tosca capabilities node</em>}' class.
@@ -477,6 +486,15 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_CAPABILITIES_NODE__ATTRIBUTES = TOSCA_CAPABILITIES_ROOT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_CAPABILITIES_NODE__MODMACAO_COMPONENT_VERSION = TOSCA_CAPABILITIES_ROOT__MODMACAO_COMPONENT_VERSION;
 
 	/**
 	 * The number of structural features of the '<em>Tosca capabilities node</em>' class.
@@ -532,6 +550,15 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_CAPABILITIES_ENDPOINT__ATTRIBUTES = TOSCA_CAPABILITIES_ROOT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_CAPABILITIES_ENDPOINT__MODMACAO_COMPONENT_VERSION = TOSCA_CAPABILITIES_ROOT__MODMACAO_COMPONENT_VERSION;
 
 	/**
 	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
@@ -661,6 +688,15 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_CAPABILITIES_SCALABLE__ATTRIBUTES = TOSCA_CAPABILITIES_ROOT__ATTRIBUTES;
 
 	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_CAPABILITIES_SCALABLE__MODMACAO_COMPONENT_VERSION = TOSCA_CAPABILITIES_ROOT__MODMACAO_COMPONENT_VERSION;
+
+	/**
 	 * The feature id for the '<em><b>Min Instances</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -743,6 +779,15 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_CAPABILITIES_NETWORK_BINDABLE__ATTRIBUTES = TOSCA_CAPABILITIES_NODE__ATTRIBUTES;
 
 	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_CAPABILITIES_NETWORK_BINDABLE__MODMACAO_COMPONENT_VERSION = TOSCA_CAPABILITIES_NODE__MODMACAO_COMPONENT_VERSION;
+
+	/**
 	 * The number of structural features of the '<em>Tosca capabilities network bindable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -796,6 +841,15 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_CAPABILITIES_CONTAINER__ATTRIBUTES = TOSCA_CAPABILITIES_ROOT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_CAPABILITIES_CONTAINER__MODMACAO_COMPONENT_VERSION = TOSCA_CAPABILITIES_ROOT__MODMACAO_COMPONENT_VERSION;
 
 	/**
 	 * The feature id for the '<em><b>Disk Size</b></em>' attribute.
@@ -860,6 +914,15 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_CAPABILITIES_ENDPOINT_DATABASE__ATTRIBUTES = TOSCA_CAPABILITIES_ENDPOINT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_CAPABILITIES_ENDPOINT_DATABASE__MODMACAO_COMPONENT_VERSION = TOSCA_CAPABILITIES_ENDPOINT__MODMACAO_COMPONENT_VERSION;
 
 	/**
 	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
@@ -987,6 +1050,15 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_CAPABILITIES_ENDPOINT_PUBLIC__ATTRIBUTES = TOSCA_CAPABILITIES_ENDPOINT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_CAPABILITIES_ENDPOINT_PUBLIC__MODMACAO_COMPONENT_VERSION = TOSCA_CAPABILITIES_ENDPOINT__MODMACAO_COMPONENT_VERSION;
 
 	/**
 	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
@@ -1134,6 +1206,15 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_CAPABILITIES_ENDPOINT_ADMIN__ATTRIBUTES = TOSCA_CAPABILITIES_ENDPOINT__ATTRIBUTES;
 
 	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_CAPABILITIES_ENDPOINT_ADMIN__MODMACAO_COMPONENT_VERSION = TOSCA_CAPABILITIES_ENDPOINT__MODMACAO_COMPONENT_VERSION;
+
+	/**
 	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1261,6 +1342,15 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_CAPABILITIES_OPERATINGSYSTEM__ATTRIBUTES = TOSCA_CAPABILITIES_ROOT__ATTRIBUTES;
 
 	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_CAPABILITIES_OPERATINGSYSTEM__MODMACAO_COMPONENT_VERSION = TOSCA_CAPABILITIES_ROOT__MODMACAO_COMPONENT_VERSION;
+
+	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1343,6 +1433,15 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_CAPABILITIES_ATTACHMENT__ATTRIBUTES = TOSCA_CAPABILITIES_ROOT__ATTRIBUTES;
 
 	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_CAPABILITIES_ATTACHMENT__MODMACAO_COMPONENT_VERSION = TOSCA_CAPABILITIES_ROOT__MODMACAO_COMPONENT_VERSION;
+
+	/**
 	 * The number of structural features of the '<em>Tosca capabilities attachment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1398,6 +1497,15 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_ROOT__ATTRIBUTES = TOSCA_CAPABILITIES_NODE__ATTRIBUTES;
 
 	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_ROOT__MODMACAO_COMPONENT_VERSION = TOSCA_CAPABILITIES_NODE__MODMACAO_COMPONENT_VERSION;
+
+	/**
 	 * The number of structural features of the '<em>Tosca nodes root</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1451,6 +1559,15 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_NODES_WEBAPPLICATION__ATTRIBUTES = TOSCA_NODES_ROOT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_WEBAPPLICATION__MODMACAO_COMPONENT_VERSION = TOSCA_NODES_ROOT__MODMACAO_COMPONENT_VERSION;
 
 	/**
 	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
@@ -1598,6 +1715,15 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_SOFTWARECOMPONENT__ATTRIBUTES = TOSCA_NODES_ROOT__ATTRIBUTES;
 
 	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_SOFTWARECOMPONENT__MODMACAO_COMPONENT_VERSION = TOSCA_NODES_ROOT__MODMACAO_COMPONENT_VERSION;
+
+	/**
 	 * The feature id for the '<em><b>Admin Credential</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1678,6 +1804,15 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_NODES_DBMS__ATTRIBUTES = TOSCA_NODES_SOFTWARECOMPONENT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DBMS__MODMACAO_COMPONENT_VERSION = TOSCA_NODES_SOFTWARECOMPONENT__MODMACAO_COMPONENT_VERSION;
 
 	/**
 	 * The feature id for the '<em><b>Admin Credential</b></em>' containment reference.
@@ -1805,6 +1940,15 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_NODES_OBJECTSTORAGE__ATTRIBUTES = TOSCA_NODES_ROOT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_OBJECTSTORAGE__MODMACAO_COMPONENT_VERSION = TOSCA_NODES_ROOT__MODMACAO_COMPONENT_VERSION;
 
 	/**
 	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
@@ -1959,6 +2103,15 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_NODES_COMPUTE__ATTRIBUTES = TOSCA_NODES_ROOT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_COMPUTE__MODMACAO_COMPONENT_VERSION = TOSCA_NODES_ROOT__MODMACAO_COMPONENT_VERSION;
 
 	/**
 	 * The feature id for the '<em><b>Min Instances</b></em>' attribute.
@@ -2196,6 +2349,15 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_LOADBALANCER__ATTRIBUTES = TOSCA_NODES_ROOT__ATTRIBUTES;
 
 	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_LOADBALANCER__MODMACAO_COMPONENT_VERSION = TOSCA_NODES_ROOT__MODMACAO_COMPONENT_VERSION;
+
+	/**
 	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2357,6 +2519,15 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_NODES_WEBSERVER__ATTRIBUTES = TOSCA_NODES_SOFTWARECOMPONENT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_WEBSERVER__MODMACAO_COMPONENT_VERSION = TOSCA_NODES_SOFTWARECOMPONENT__MODMACAO_COMPONENT_VERSION;
 
 	/**
 	 * The feature id for the '<em><b>Admin Credential</b></em>' containment reference.
@@ -2531,6 +2702,15 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_DATABASE__ATTRIBUTES = TOSCA_NODES_ROOT__ATTRIBUTES;
 
 	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_DATABASE__MODMACAO_COMPONENT_VERSION = TOSCA_NODES_ROOT__MODMACAO_COMPONENT_VERSION;
+
+	/**
 	 * The feature id for the '<em><b>Port Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2694,6 +2874,15 @@ public interface ToscaPackage extends EPackage {
 	int TOSCA_NODES_CONTAINER_APPLICATION__ATTRIBUTES = TOSCA_NODES_ROOT__ATTRIBUTES;
 
 	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_CONTAINER_APPLICATION__MODMACAO_COMPONENT_VERSION = TOSCA_NODES_ROOT__MODMACAO_COMPONENT_VERSION;
+
+	/**
 	 * The number of structural features of the '<em>Tosca nodes container application</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2756,6 +2945,15 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_NODES_CONTAINER_RUNTIME__ATTRIBUTES = TOSCA_NODES_SOFTWARECOMPONENT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_CONTAINER_RUNTIME__MODMACAO_COMPONENT_VERSION = TOSCA_NODES_SOFTWARECOMPONENT__MODMACAO_COMPONENT_VERSION;
 
 	/**
 	 * The feature id for the '<em><b>Admin Credential</b></em>' containment reference.
@@ -2874,6 +3072,15 @@ public interface ToscaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOSCA_NODES_BLOCKSTORAGE__ATTRIBUTES = TOSCA_NODES_ROOT__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Modmacao Component Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOSCA_NODES_BLOCKSTORAGE__MODMACAO_COMPONENT_VERSION = TOSCA_NODES_ROOT__MODMACAO_COMPONENT_VERSION;
 
 	/**
 	 * The feature id for the '<em><b>Volume Id</b></em>' attribute.

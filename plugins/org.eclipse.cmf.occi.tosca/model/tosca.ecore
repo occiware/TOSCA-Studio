@@ -10,9 +10,9 @@
     <details key="occi" value="platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#/"/>
     <details key="infrastructure" value="platform:/plugin/org.eclipse.cmf.occi.infrastructure/model/Infrastructure.ecore#/"/>
     <details key="sla" value="platform:/plugin/org.eclipse.cmf.occi.sla/model/sla.ecore#/"/>
-    <details key="modmacao" value="platform:/resource/org.modmacao.core/model/modmacao.ecore#/"/>
-    <details key="platform" value="platform:/resource/org.modmacao.occi.platform/model/platform.ecore#/"/>
-    <details key="placement" value="platform:/resource/org.modmacao.placement/model/placement.ecore#/"/>
+    <details key="modmacao" value="platform:/plugin/org.modmacao.core/model/modmacao.ecore#/"/>
+    <details key="platform" value="platform:/plugin/org.modmacao.occi.platform/model/platform.ecore#/"/>
+    <details key="placement" value="platform:/plugin/org.modmacao.placement/model/placement.ecore#/"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EDataType" name="string" instanceClassName="java.lang.String"/>
   <eClassifiers xsi:type="ecore:EDataType" name="stringMinOne" instanceClassName="java.lang.String">
@@ -213,7 +213,7 @@
     <eLiterals name="target" value="1" literal="target"/>
     <eLiterals name="peer" value="2" literal="peer"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tosca_capabilities_root" eSuperTypes="platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Tosca_capabilities_root" eSuperTypes="platform:/plugin/org.modmacao.core/model/modmacao.ecore#//Component platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_capabilities_node" eSuperTypes="#//Tosca_capabilities_root platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="Tosca_capabilities_endpoint" eSuperTypes="#//Tosca_capabilities_root platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="portName" eType="#//string">
@@ -359,7 +359,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_dbms" eSuperTypes="#//Tosca_nodes_softwarecomponent #//Tosca_capabilities_container platform:/resource/org.modmacao.occi.platform/model/platform.ecore#//Database platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
+  <eClassifiers xsi:type="ecore:EClass" name="Tosca_nodes_dbms" eSuperTypes="#//Tosca_nodes_softwarecomponent #//Tosca_capabilities_container platform:/plugin/org.modmacao.occi.platform/model/platform.ecore#//Database platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="SourceMustBeDatabase"/>
     </eAnnotations>
@@ -558,7 +558,7 @@
       </eAnnotations>
     </eOperations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tosca_relationships_root" eSuperTypes="platform:/resource/org.modmacao.core/model/modmacao.ecore#//Installationdependency platform:/resource/org.modmacao.core/model/modmacao.ecore#//Executiondependency platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
+  <eClassifiers xsi:type="ecore:EClass" name="Tosca_relationships_root" eSuperTypes="platform:/plugin/org.modmacao.core/model/modmacao.ecore#//Installationdependency platform:/plugin/org.modmacao.core/model/modmacao.ecore#//Executiondependency platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.ecore#//MixinBase">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="appliesConstraint"/>
     </eAnnotations>
