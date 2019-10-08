@@ -6,7 +6,9 @@
   <import href="http://schemas.modmacao.org/modmacao#/"/>
   <import href="http://schemas.modmacao.org/occi/platform#/"/>
   <import href="http://schemas.modmacao.org/placement#/"/>
-  <mixins name="tosca_capabilities_Root" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default (root) TOSCA Capability Type definition that all other TOSCA Capability Types derive from."/>
+  <mixins name="tosca_capabilities_Root" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default (root) TOSCA Capability Type definition that all other TOSCA Capability Types derive from.">
+    <depends href="http://schemas.modmacao.org/modmacao#//@mixins[term='component']"/>
+  </mixins>
   <mixins name="tosca_capabilities_Node" scheme="http://schemas.ogf.org/tosca/core#" title="The Node capability indicates the base capabilities of a TOSCA Node Type." depends="//@mixins[term='tosca_capabilities_root']"/>
   <mixins name="tosca_capabilities_Endpoint" scheme="http://schemas.ogf.org/tosca/core#" title="This is the default TOSCA type that should be used or extended to define a network endpoint capability. This includes the information to express a basic endpoint with a single port or a complex endpoint with multiple ports. By default the Endpoint is assumed to represent an address on a private network unless otherwise specified." depends="//@mixins[term='tosca_capabilities_root']">
     <attributes name="port.name" description="The optional name (or ID) of the network port this endpoint should be bound to." type="//@types.0"/>
