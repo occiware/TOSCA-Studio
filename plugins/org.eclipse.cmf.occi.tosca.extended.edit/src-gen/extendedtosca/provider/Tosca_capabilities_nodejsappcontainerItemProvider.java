@@ -78,8 +78,7 @@ public class Tosca_capabilities_nodejsappcontainerItemProvider extends Tosca_cap
 	 */
 	@Override
 	public String getText(Object object) {
-		Integer labelValue = ((Tosca_capabilities_nodejsappcontainer)object).getDiskSize();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((Tosca_capabilities_nodejsappcontainer)object).getModmacaoComponentVersion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tosca_capabilities_nodejsappcontainer_type") :
 			getString("_UI_Tosca_capabilities_nodejsappcontainer_type") + " " + label;

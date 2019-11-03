@@ -78,7 +78,7 @@ public class RsyslogItemProvider extends Tosca_nodes_softwarecomponentItemProvid
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Rsyslog)object).getComponentVersion();
+		String label = ((Rsyslog)object).getModmacaoComponentVersion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Rsyslog_type") :
 			getString("_UI_Rsyslog_type") + " " + label;

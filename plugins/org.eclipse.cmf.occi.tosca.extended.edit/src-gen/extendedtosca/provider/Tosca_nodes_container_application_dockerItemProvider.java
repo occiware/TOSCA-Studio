@@ -13,6 +13,7 @@
 package extendedtosca.provider;
 
 
+import extendedtosca.Tosca_nodes_container_application_docker;
 import java.util.Collection;
 import java.util.List;
 
@@ -76,7 +77,10 @@ public class Tosca_nodes_container_application_dockerItemProvider extends Tosca_
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Tosca_nodes_container_application_docker_type");
+		String label = ((Tosca_nodes_container_application_docker)object).getModmacaoComponentVersion();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Tosca_nodes_container_application_docker_type") :
+			getString("_UI_Tosca_nodes_container_application_docker_type") + " " + label;
 	}
 
 

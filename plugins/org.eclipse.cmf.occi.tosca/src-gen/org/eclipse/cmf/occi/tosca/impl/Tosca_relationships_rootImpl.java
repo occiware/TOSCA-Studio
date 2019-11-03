@@ -224,7 +224,7 @@ public class Tosca_relationships_rootImpl extends InstallationdependencyImpl imp
 		 *     then true
 		 *     else
 		 *       let
-		 *         result : occi::Boolean[1] = self.entity.oclIsKindOf(occi::Link)
+		 *         result : occi::Boolean[1] = self.entity.oclIsKindOf(platform::Componentlink)
 		 *       in
 		 *         'Tosca_relationships_root::appliesConstraint'.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
 		 *     endif
@@ -238,9 +238,9 @@ public class Tosca_relationships_rootImpl extends InstallationdependencyImpl imp
 			symbol_0 = ValueUtil.TRUE_VALUE;
 		}
 		else {
-			final /*@NonInvalid*/ org.eclipse.ocl.pivot.Class TYP_occi_c_c_Link = idResolver.getClass(ToscaTables.CLSSid_Link, null);
+			final /*@NonInvalid*/ org.eclipse.ocl.pivot.Class TYP_platform_c_c_Componentlink = idResolver.getClass(ToscaTables.CLSSid_Componentlink, null);
 			final /*@NonInvalid*/ Entity entity = this.getEntity();
-			final /*@NonInvalid*/ boolean result = OclAnyOclIsKindOfOperation.INSTANCE.evaluate(executor, entity, TYP_occi_c_c_Link).booleanValue();
+			final /*@NonInvalid*/ boolean result = OclAnyOclIsKindOfOperation.INSTANCE.evaluate(executor, entity, TYP_platform_c_c_Componentlink).booleanValue();
 			final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, ToscaTables.STR_Tosca_relationships_root_c_c_appliesConstraint, this, (Object)null, diagnostics, context, (Object)null, severity_0, result, ToscaTables.INT_0).booleanValue();
 			symbol_0 = logDiagnostic;
 		}

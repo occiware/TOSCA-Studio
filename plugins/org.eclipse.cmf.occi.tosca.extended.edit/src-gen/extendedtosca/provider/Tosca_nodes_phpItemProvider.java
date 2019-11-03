@@ -78,7 +78,7 @@ public class Tosca_nodes_phpItemProvider extends Tosca_nodes_softwarecomponentIt
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Tosca_nodes_php)object).getComponentVersion();
+		String label = ((Tosca_nodes_php)object).getModmacaoComponentVersion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tosca_nodes_php_type") :
 			getString("_UI_Tosca_nodes_php_type") + " " + label;

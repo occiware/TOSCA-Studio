@@ -21,6 +21,12 @@
   <semanticResources>platform:/resource/org.modmacao.placement/model/placement.ecore</semanticResources>
   <semanticResources>http://schemas.ogf.org/occi/platform</semanticResources>
   <semanticResources>model/tosca.occie</semanticResources>
+  <semanticResources>platform:/plugin/org.modmacao.occi.platform/model/platform.ecore</semanticResources>
+  <semanticResources>platform:/plugin/org.modmacao.core/model/modmacao.ecore</semanticResources>
+  <semanticResources>platform:/plugin/org.modmacao.core/model/modmacao.genmodel</semanticResources>
+  <semanticResources>platform:/plugin/org.modmacao.occi.platform/model/platform.genmodel</semanticResources>
+  <semanticResources>platform:/plugin/org.modmacao.placement/model/placement.genmodel</semanticResources>
+  <semanticResources>platform:/plugin/org.modmacao.placement/model/placement.ecore</semanticResources>
   <semanticResources>model/tosca.ecore</semanticResources>
   <semanticResources>model/tosca.genmodel</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_w2FHIJBwEem_U-6LIQAAsA">

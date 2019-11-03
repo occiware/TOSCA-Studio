@@ -172,7 +172,7 @@ public class Tosca_nodes_dbmsItemProvider extends Tosca_nodes_softwarecomponentI
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Tosca_nodes_dbms)object).getComponentVersion();
+		String label = ((Tosca_nodes_dbms)object).getModmacaoComponentVersion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tosca_nodes_dbms_type") :
 			getString("_UI_Tosca_nodes_dbms_type") + " " + label;

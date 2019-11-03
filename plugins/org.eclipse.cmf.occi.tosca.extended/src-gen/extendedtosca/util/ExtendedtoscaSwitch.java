@@ -14,6 +14,7 @@ package extendedtosca.util;
 
 import extendedtosca.*;
 
+import modmacao.Component;
 import modmacao.Dependency;
 import modmacao.Executiondependency;
 import modmacao.Installationdependency;
@@ -136,6 +137,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				T result = caseTosca_capabilities_containerchild(tosca_capabilities_containerchild);
 				if (result == null) result = caseTosca_capabilities_container(tosca_capabilities_containerchild);
 				if (result == null) result = caseTosca_capabilities_root(tosca_capabilities_containerchild);
+				if (result == null) result = caseComponent(tosca_capabilities_containerchild);
 				if (result == null) result = caseMixinBase(tosca_capabilities_containerchild);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -144,6 +146,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				Tosca_capabilities_somecap tosca_capabilities_somecap = (Tosca_capabilities_somecap)theEObject;
 				T result = caseTosca_capabilities_somecap(tosca_capabilities_somecap);
 				if (result == null) result = caseTosca_capabilities_root(tosca_capabilities_somecap);
+				if (result == null) result = caseComponent(tosca_capabilities_somecap);
 				if (result == null) result = caseMixinBase(tosca_capabilities_somecap);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -153,6 +156,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				T result = caseTosca_capabilities_indigo_endpoint(tosca_capabilities_indigo_endpoint);
 				if (result == null) result = caseTosca_capabilities_endpoint(tosca_capabilities_indigo_endpoint);
 				if (result == null) result = caseTosca_capabilities_root(tosca_capabilities_indigo_endpoint);
+				if (result == null) result = caseComponent(tosca_capabilities_indigo_endpoint);
 				if (result == null) result = caseMixinBase(tosca_capabilities_indigo_endpoint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -161,6 +165,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				Tosca_capabilities_ha tosca_capabilities_ha = (Tosca_capabilities_ha)theEObject;
 				T result = caseTosca_capabilities_ha(tosca_capabilities_ha);
 				if (result == null) result = caseTosca_capabilities_root(tosca_capabilities_ha);
+				if (result == null) result = caseComponent(tosca_capabilities_ha);
 				if (result == null) result = caseMixinBase(tosca_capabilities_ha);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -170,6 +175,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				T result = caseTosca_capabilities_nodejsappcontainer(tosca_capabilities_nodejsappcontainer);
 				if (result == null) result = caseTosca_capabilities_container(tosca_capabilities_nodejsappcontainer);
 				if (result == null) result = caseTosca_capabilities_root(tosca_capabilities_nodejsappcontainer);
+				if (result == null) result = caseComponent(tosca_capabilities_nodejsappcontainer);
 				if (result == null) result = caseMixinBase(tosca_capabilities_nodejsappcontainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -179,6 +185,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				T result = caseTosca_capabilities_container_docker(tosca_capabilities_container_docker);
 				if (result == null) result = caseTosca_capabilities_container(tosca_capabilities_container_docker);
 				if (result == null) result = caseTosca_capabilities_root(tosca_capabilities_container_docker);
+				if (result == null) result = caseComponent(tosca_capabilities_container_docker);
 				if (result == null) result = caseMixinBase(tosca_capabilities_container_docker);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -188,6 +195,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				T result = caseTosca_capabilities_somechildcap(tosca_capabilities_somechildcap);
 				if (result == null) result = caseTosca_capabilities_somecap(tosca_capabilities_somechildcap);
 				if (result == null) result = caseTosca_capabilities_root(tosca_capabilities_somechildcap);
+				if (result == null) result = caseComponent(tosca_capabilities_somechildcap);
 				if (result == null) result = caseMixinBase(tosca_capabilities_somechildcap);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -205,6 +213,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_computewithprop);
 				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_computewithprop);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_computewithprop);
+				if (result == null) result = caseComponent(tosca_nodes_computewithprop);
 				if (result == null) result = caseMixinBase(tosca_nodes_computewithprop);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -217,6 +226,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_webapplication_paypalpizzastore);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_webapplication_paypalpizzastore);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_webapplication_paypalpizzastore);
+				if (result == null) result = caseComponent(tosca_nodes_webapplication_paypalpizzastore);
 				if (result == null) result = caseMixinBase(tosca_nodes_webapplication_paypalpizzastore);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -231,6 +241,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_nodes_root(tosca_nodes_abstractmongod);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_abstractmongod);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_abstractmongod);
+				if (result == null) result = caseComponent(tosca_nodes_abstractmongod);
 				if (result == null) result = caseMixinBase(tosca_nodes_abstractmongod);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -246,6 +257,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_nodes_root(tosca_nodes_mongod);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_mongod);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_mongod);
+				if (result == null) result = caseComponent(tosca_nodes_mongod);
 				if (result == null) result = caseMixinBase(tosca_nodes_mongod);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -256,6 +268,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_nodes_root(tosca_nodes_network_network);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_network_network);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_network_network);
+				if (result == null) result = caseComponent(tosca_nodes_network_network);
 				if (result == null) result = caseMixinBase(tosca_nodes_network_network);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -272,6 +285,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_nodejs);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_nodejs);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_nodejs);
+				if (result == null) result = caseComponent(tosca_nodes_nodejs);
 				if (result == null) result = caseMixinBase(tosca_nodes_nodejs);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -283,6 +297,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_nodes_root(tosca_nodes_container_application_docker);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_container_application_docker);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_container_application_docker);
+				if (result == null) result = caseComponent(tosca_nodes_container_application_docker);
 				if (result == null) result = caseMixinBase(tosca_nodes_container_application_docker);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -294,6 +309,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_nodes_root(tosca_nodes_softwarecomponent_kibana);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_softwarecomponent_kibana);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_softwarecomponent_kibana);
+				if (result == null) result = caseComponent(tosca_nodes_softwarecomponent_kibana);
 				if (result == null) result = caseMixinBase(tosca_nodes_softwarecomponent_kibana);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -311,6 +327,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_computewithattrlist);
 				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_computewithattrlist);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_computewithattrlist);
+				if (result == null) result = caseComponent(tosca_nodes_computewithattrlist);
 				if (result == null) result = caseMixinBase(tosca_nodes_computewithattrlist);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -323,6 +340,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_nodes_root(tosca_nodes_softwarecomponent_logstash);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_softwarecomponent_logstash);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_softwarecomponent_logstash);
+				if (result == null) result = caseComponent(tosca_nodes_softwarecomponent_logstash);
 				if (result == null) result = caseMixinBase(tosca_nodes_softwarecomponent_logstash);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -335,6 +353,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_node(example_databasesubsystem);
 				if (result == null) result = caseTosca_capabilities_endpoint(example_databasesubsystem);
 				if (result == null) result = caseTosca_capabilities_root(example_databasesubsystem);
+				if (result == null) result = caseComponent(example_databasesubsystem);
 				if (result == null) result = caseMixinBase(example_databasesubsystem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -346,6 +365,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_nodes_root(tosca_nodes_softwarecomponent_collectd);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_softwarecomponent_collectd);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_softwarecomponent_collectd);
+				if (result == null) result = caseComponent(tosca_nodes_softwarecomponent_collectd);
 				if (result == null) result = caseMixinBase(tosca_nodes_softwarecomponent_collectd);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -357,6 +377,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_nodes_root(tosca_nodes_nodewithreq);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_nodewithreq);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_nodewithreq);
+				if (result == null) result = caseComponent(tosca_nodes_nodewithreq);
 				if (result == null) result = caseMixinBase(tosca_nodes_nodewithreq);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -369,6 +390,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_somenode2);
 				if (result == null) result = caseTosca_capabilities_container(tosca_nodes_somenode2);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_somenode2);
+				if (result == null) result = caseComponent(tosca_nodes_somenode2);
 				if (result == null) result = caseMixinBase(tosca_nodes_somenode2);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -380,6 +402,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_nodes_root(tosca_nodes_php);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_php);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_php);
+				if (result == null) result = caseComponent(tosca_nodes_php);
 				if (result == null) result = caseMixinBase(tosca_nodes_php);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -393,6 +416,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_database_mysql);
 				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_database_mysql);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_database_mysql);
+				if (result == null) result = caseComponent(tosca_nodes_database_mysql);
 				if (result == null) result = caseMixinBase(tosca_nodes_database_mysql);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -404,6 +428,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_endpoint(example_queuingsubsystem);
 				if (result == null) result = caseTosca_capabilities_node(example_queuingsubsystem);
 				if (result == null) result = caseTosca_capabilities_root(example_queuingsubsystem);
+				if (result == null) result = caseComponent(example_queuingsubsystem);
 				if (result == null) result = caseMixinBase(example_queuingsubsystem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -415,6 +440,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_endpoint(example_transactionsubsystem);
 				if (result == null) result = caseTosca_capabilities_node(example_transactionsubsystem);
 				if (result == null) result = caseTosca_capabilities_root(example_transactionsubsystem);
+				if (result == null) result = caseComponent(example_transactionsubsystem);
 				if (result == null) result = caseMixinBase(example_transactionsubsystem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -428,6 +454,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_abstractmysql);
 				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_abstractmysql);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_abstractmysql);
+				if (result == null) result = caseComponent(tosca_nodes_abstractmysql);
 				if (result == null) result = caseMixinBase(tosca_nodes_abstractmysql);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -442,6 +469,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_mysql);
 				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_mysql);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_mysql);
+				if (result == null) result = caseComponent(tosca_nodes_mysql);
 				if (result == null) result = caseMixinBase(tosca_nodes_mysql);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -454,6 +482,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_nodes_root(tosca_nodes_softwarecomponent_elasticsearch);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_softwarecomponent_elasticsearch);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_softwarecomponent_elasticsearch);
+				if (result == null) result = caseComponent(tosca_nodes_softwarecomponent_elasticsearch);
 				if (result == null) result = caseMixinBase(tosca_nodes_softwarecomponent_elasticsearch);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -467,6 +496,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_databasewithlistparam);
 				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_databasewithlistparam);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_databasewithlistparam);
+				if (result == null) result = caseComponent(tosca_nodes_databasewithlistparam);
 				if (result == null) result = caseMixinBase(tosca_nodes_databasewithlistparam);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -478,6 +508,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_endpoint(example_someapp);
 				if (result == null) result = caseTosca_capabilities_node(example_someapp);
 				if (result == null) result = caseTosca_capabilities_root(example_someapp);
+				if (result == null) result = caseComponent(example_someapp);
 				if (result == null) result = caseMixinBase(example_someapp);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -490,6 +521,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_nodecellar);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_nodecellar);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_nodecellar);
+				if (result == null) result = caseComponent(tosca_nodes_nodecellar);
 				if (result == null) result = caseMixinBase(tosca_nodes_nodecellar);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -501,6 +533,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_somecap(tosca_nodes_nodewithcap);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_nodewithcap);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_nodewithcap);
+				if (result == null) result = caseComponent(tosca_nodes_nodewithcap);
 				if (result == null) result = caseMixinBase(tosca_nodes_nodewithcap);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -516,6 +549,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_apache);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_apache);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_apache);
+				if (result == null) result = caseComponent(tosca_nodes_apache);
 				if (result == null) result = caseMixinBase(tosca_nodes_apache);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -527,6 +561,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_nodes_root(rsyslog);
 				if (result == null) result = caseTosca_capabilities_node(rsyslog);
 				if (result == null) result = caseTosca_capabilities_root(rsyslog);
+				if (result == null) result = caseComponent(rsyslog);
 				if (result == null) result = caseMixinBase(rsyslog);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -539,6 +574,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_wordpress);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_wordpress);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_wordpress);
+				if (result == null) result = caseComponent(tosca_nodes_wordpress);
 				if (result == null) result = caseMixinBase(tosca_nodes_wordpress);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -549,6 +585,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_nodes_root(tosca_nodes_network_port);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_network_port);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_network_port);
+				if (result == null) result = caseComponent(tosca_nodes_network_port);
 				if (result == null) result = caseMixinBase(tosca_nodes_network_port);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -567,6 +604,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_computewithcapwithattr);
 				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_computewithcapwithattr);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_computewithcapwithattr);
+				if (result == null) result = caseComponent(tosca_nodes_computewithcapwithattr);
 				if (result == null) result = caseMixinBase(tosca_nodes_computewithcapwithattr);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -578,6 +616,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_nodes_root(tosca_nodes_softwarecomponent_rsyslog);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_softwarecomponent_rsyslog);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_softwarecomponent_rsyslog);
+				if (result == null) result = caseComponent(tosca_nodes_softwarecomponent_rsyslog);
 				if (result == null) result = caseMixinBase(tosca_nodes_softwarecomponent_rsyslog);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -596,6 +635,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_hacompute);
 				if (result == null) result = caseTosca_capabilities_endpoint(tosca_nodes_hacompute);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_hacompute);
+				if (result == null) result = caseComponent(tosca_nodes_hacompute);
 				if (result == null) result = caseMixinBase(tosca_nodes_hacompute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -608,6 +648,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_somenode);
 				if (result == null) result = caseTosca_capabilities_somecap(tosca_nodes_somenode);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_somenode);
+				if (result == null) result = caseComponent(tosca_nodes_somenode);
 				if (result == null) result = caseMixinBase(tosca_nodes_somenode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -622,6 +663,7 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTosca_nodes_root(tosca_nodes_dbms_mysql);
 				if (result == null) result = caseTosca_capabilities_node(tosca_nodes_dbms_mysql);
 				if (result == null) result = caseTosca_capabilities_root(tosca_nodes_dbms_mysql);
+				if (result == null) result = caseComponent(tosca_nodes_dbms_mysql);
 				if (result == null) result = caseMixinBase(tosca_nodes_dbms_mysql);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -1522,6 +1564,21 @@ public class ExtendedtoscaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMixinBase(MixinBase object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Component</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComponent(Component object) {
 		return null;
 	}
 

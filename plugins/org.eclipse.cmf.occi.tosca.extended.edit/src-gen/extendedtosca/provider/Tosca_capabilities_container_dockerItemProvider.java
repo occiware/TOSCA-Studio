@@ -143,8 +143,7 @@ public class Tosca_capabilities_container_dockerItemProvider extends Tosca_capab
 	 */
 	@Override
 	public String getText(Object object) {
-		Integer labelValue = ((Tosca_capabilities_container_docker)object).getDiskSize();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((Tosca_capabilities_container_docker)object).getModmacaoComponentVersion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tosca_capabilities_container_docker_type") :
 			getString("_UI_Tosca_capabilities_container_docker_type") + " " + label;

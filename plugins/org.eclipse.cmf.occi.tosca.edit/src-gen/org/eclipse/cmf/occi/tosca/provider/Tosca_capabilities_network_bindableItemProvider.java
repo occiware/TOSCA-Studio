@@ -16,6 +16,7 @@ package org.eclipse.cmf.occi.tosca.provider;
 import java.util.Collection;
 import java.util.List;
 
+import org.eclipse.cmf.occi.tosca.Tosca_capabilities_network_bindable;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -72,7 +73,10 @@ public class Tosca_capabilities_network_bindableItemProvider extends Tosca_capab
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Tosca_capabilities_network_bindable_type");
+		String label = ((Tosca_capabilities_network_bindable)object).getModmacaoComponentVersion();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Tosca_capabilities_network_bindable_type") :
+			getString("_UI_Tosca_capabilities_network_bindable_type") + " " + label;
 	}
 
 

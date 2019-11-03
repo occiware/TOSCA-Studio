@@ -16,6 +16,7 @@ package org.eclipse.cmf.occi.tosca.provider;
 import java.util.Collection;
 import java.util.List;
 
+import org.eclipse.cmf.occi.tosca.Tosca_capabilities_node;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -72,7 +73,10 @@ public class Tosca_capabilities_nodeItemProvider extends Tosca_capabilities_root
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Tosca_capabilities_node_type");
+		String label = ((Tosca_capabilities_node)object).getModmacaoComponentVersion();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Tosca_capabilities_node_type") :
+			getString("_UI_Tosca_capabilities_node_type") + " " + label;
 	}
 
 

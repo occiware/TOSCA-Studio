@@ -16,8 +16,10 @@ package org.eclipse.cmf.occi.tosca.provider;
 import java.util.Collection;
 import java.util.List;
 
+import modmacao.provider.ComponentItemProvider;
 import org.eclipse.cmf.occi.core.provider.MixinBaseItemProvider;
 
+import org.eclipse.cmf.occi.tosca.Tosca_capabilities_root;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -31,7 +33,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Tosca_capabilities_rootItemProvider extends MixinBaseItemProvider {
+public class Tosca_capabilities_rootItemProvider extends ComponentItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -76,7 +78,10 @@ public class Tosca_capabilities_rootItemProvider extends MixinBaseItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Tosca_capabilities_root_type");
+		String label = ((Tosca_capabilities_root)object).getModmacaoComponentVersion();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Tosca_capabilities_root_type") :
+			getString("_UI_Tosca_capabilities_root_type") + " " + label;
 	}
 
 

@@ -170,7 +170,7 @@ public class Tosca_nodes_container_runtimeItemProvider extends Tosca_nodes_softw
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Tosca_nodes_container_runtime)object).getComponentVersion();
+		String label = ((Tosca_nodes_container_runtime)object).getModmacaoComponentVersion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tosca_nodes_container_runtime_type") :
 			getString("_UI_Tosca_nodes_container_runtime_type") + " " + label;
