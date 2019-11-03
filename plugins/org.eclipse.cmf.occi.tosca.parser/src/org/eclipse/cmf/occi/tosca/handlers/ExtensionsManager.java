@@ -57,7 +57,7 @@ public class ExtensionsManager {
 		
 		extensionsPerName.put("core", OcciHelper.loadExtension("http://schemas.ogf.org/occi/core#"));
 		extensionsPerName.put("infrastructure", OcciHelper.loadExtension("http://schemas.ogf.org/occi/infrastructure#"));
-		extensionsPerName.put("platform", OcciHelper.loadExtension("http://schemas.ogf.org/occi/platform#"));
+		//extensionsPerName.put("platform", OcciHelper.loadExtension("http://schemas.ogf.org/occi/platform#"));
 		extensionsPerName.put("sla", OcciHelper.loadExtension("http://schemas.ogf.org/occi/sla#"));
 
 		extensionsPerName.put("modmacao-core", OcciHelper.loadExtension("http://schemas.modmacao.org/modmacao#"));
@@ -79,7 +79,7 @@ public class ExtensionsManager {
 		extension.setName("tosca");
 		extension.getImport().add(extensionsPerName.get("core"));
 		extension.getImport().add(extensionsPerName.get("infrastructure"));
-		//extension.getImport().add(extensionsPerName.get("platform")); we will use now platform from modmacao
+		//extension.getImport().add(extensionsPerName.get("platform"));
 		extension.getImport().add(extensionsPerName.get("sla"));
 		// MODMACAO
 		extension.getImport().add(extensionsPerName.get("modmacao-core"));

@@ -42,6 +42,10 @@ public class TypeMapper extends Mapper {
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("infrastructure", "compute"), computeConstraint)
 			);
 		
+		this.mappings.put("tosca_capabilities_Root", 
+				new MixinMapping(ExtensionsManager.getMixinFromItsTerm("modmacao-core", "component"))
+			);
+		
 		/*
 		this.mappings.put("tosca_nodes_Root",
 				new MixinMapping(ExtensionsManager.getKindFromItsTerm("modmacao-platform", "component")
@@ -96,7 +100,7 @@ public class TypeMapper extends Mapper {
 		
 		this.mappings.put("tosca_relationships_Root",
 				new MixinMapping(
-						ExtensionsManager.getKindFromItsTerm("core", "link"),
+						ExtensionsManager.getKindFromItsTerm("modmacao-platform", "componentlink"),
 						Arrays.asList(
 								ExtensionsManager.getMixinFromItsTerm("modmacao-core", "installationdependency"),
 								ExtensionsManager.getMixinFromItsTerm("modmacao-core", "executiondependency")
