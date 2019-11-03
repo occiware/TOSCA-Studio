@@ -234,7 +234,7 @@ public interface Tosca_capabilities_endpoint extends Tosca_capabilities_root, Mi
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The optional URL path of the endpoint’s address if applicable for the protocol.
+	 * The optional URL path of the endpointâ€™s address if applicable for the protocol.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Url Path</em>' attribute.
 	 * @see #setUrlPath(String)

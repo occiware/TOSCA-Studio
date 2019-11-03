@@ -239,6 +239,14 @@ public class ToscaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	protected ModmacaoValidator modmacaoValidator;
+
+	/**
+	 * The cached base package validator.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	protected PlatformValidator platformValidator;
 
 	/**
@@ -250,14 +258,6 @@ public class ToscaValidator extends EObjectValidator {
 	protected SlaValidator slaValidator;
 
 	/**
-	 * The cached base package validator.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ModmacaoValidator modmacaoValidator;
-
-	/**
 	 * Creates an instance of the switch.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -265,9 +265,9 @@ public class ToscaValidator extends EObjectValidator {
 	 */
 	public ToscaValidator() {
 		super();
+		modmacaoValidator = ModmacaoValidator.INSTANCE;
 		platformValidator = PlatformValidator.INSTANCE;
 		slaValidator = SlaValidator.INSTANCE;
-		modmacaoValidator = ModmacaoValidator.INSTANCE;
 	}
 
 	/**
@@ -474,7 +474,18 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTosca_capabilities_root(Tosca_capabilities_root tosca_capabilities_root, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tosca_capabilities_root, diagnostics, context);
+		if (!validate_NoCircularContainment(tosca_capabilities_root, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_capabilities_root, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_capabilities_root, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_capabilities_root, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_capabilities_root, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_capabilities_root, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_capabilities_root, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_capabilities_root, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_capabilities_root, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_capabilities_root, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_appliesConstraint(tosca_capabilities_root, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -483,7 +494,18 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTosca_capabilities_node(Tosca_capabilities_node tosca_capabilities_node, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tosca_capabilities_node, diagnostics, context);
+		if (!validate_NoCircularContainment(tosca_capabilities_node, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_capabilities_node, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_capabilities_node, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_capabilities_node, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_capabilities_node, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_capabilities_node, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_capabilities_node, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_capabilities_node, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_capabilities_node, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_capabilities_node, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_appliesConstraint(tosca_capabilities_node, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -492,7 +514,18 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTosca_capabilities_endpoint(Tosca_capabilities_endpoint tosca_capabilities_endpoint, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tosca_capabilities_endpoint, diagnostics, context);
+		if (!validate_NoCircularContainment(tosca_capabilities_endpoint, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_capabilities_endpoint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_capabilities_endpoint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_capabilities_endpoint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_capabilities_endpoint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_capabilities_endpoint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_capabilities_endpoint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_capabilities_endpoint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_capabilities_endpoint, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_capabilities_endpoint, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_appliesConstraint(tosca_capabilities_endpoint, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -501,7 +534,18 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTosca_capabilities_scalable(Tosca_capabilities_scalable tosca_capabilities_scalable, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tosca_capabilities_scalable, diagnostics, context);
+		if (!validate_NoCircularContainment(tosca_capabilities_scalable, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_capabilities_scalable, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_capabilities_scalable, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_capabilities_scalable, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_capabilities_scalable, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_capabilities_scalable, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_capabilities_scalable, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_capabilities_scalable, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_capabilities_scalable, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_capabilities_scalable, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_appliesConstraint(tosca_capabilities_scalable, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -510,7 +554,18 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTosca_capabilities_network_bindable(Tosca_capabilities_network_bindable tosca_capabilities_network_bindable, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tosca_capabilities_network_bindable, diagnostics, context);
+		if (!validate_NoCircularContainment(tosca_capabilities_network_bindable, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_capabilities_network_bindable, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_capabilities_network_bindable, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_capabilities_network_bindable, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_capabilities_network_bindable, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_capabilities_network_bindable, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_capabilities_network_bindable, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_capabilities_network_bindable, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_capabilities_network_bindable, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_capabilities_network_bindable, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_appliesConstraint(tosca_capabilities_network_bindable, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -519,7 +574,18 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTosca_capabilities_container(Tosca_capabilities_container tosca_capabilities_container, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tosca_capabilities_container, diagnostics, context);
+		if (!validate_NoCircularContainment(tosca_capabilities_container, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_capabilities_container, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_capabilities_container, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_capabilities_container, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_capabilities_container, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_capabilities_container, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_capabilities_container, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_capabilities_container, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_capabilities_container, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_capabilities_container, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_appliesConstraint(tosca_capabilities_container, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -528,7 +594,18 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTosca_capabilities_endpoint_database(Tosca_capabilities_endpoint_database tosca_capabilities_endpoint_database, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tosca_capabilities_endpoint_database, diagnostics, context);
+		if (!validate_NoCircularContainment(tosca_capabilities_endpoint_database, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_capabilities_endpoint_database, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_capabilities_endpoint_database, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_capabilities_endpoint_database, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_capabilities_endpoint_database, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_capabilities_endpoint_database, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_capabilities_endpoint_database, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_capabilities_endpoint_database, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_capabilities_endpoint_database, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_capabilities_endpoint_database, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_appliesConstraint(tosca_capabilities_endpoint_database, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -537,7 +614,18 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTosca_capabilities_endpoint_public(Tosca_capabilities_endpoint_public tosca_capabilities_endpoint_public, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tosca_capabilities_endpoint_public, diagnostics, context);
+		if (!validate_NoCircularContainment(tosca_capabilities_endpoint_public, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_capabilities_endpoint_public, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_capabilities_endpoint_public, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_capabilities_endpoint_public, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_capabilities_endpoint_public, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_capabilities_endpoint_public, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_capabilities_endpoint_public, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_capabilities_endpoint_public, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_capabilities_endpoint_public, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_capabilities_endpoint_public, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_appliesConstraint(tosca_capabilities_endpoint_public, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -546,7 +634,18 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTosca_capabilities_endpoint_admin(Tosca_capabilities_endpoint_admin tosca_capabilities_endpoint_admin, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tosca_capabilities_endpoint_admin, diagnostics, context);
+		if (!validate_NoCircularContainment(tosca_capabilities_endpoint_admin, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_capabilities_endpoint_admin, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_capabilities_endpoint_admin, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_capabilities_endpoint_admin, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_capabilities_endpoint_admin, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_capabilities_endpoint_admin, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_capabilities_endpoint_admin, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_capabilities_endpoint_admin, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_capabilities_endpoint_admin, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_capabilities_endpoint_admin, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_appliesConstraint(tosca_capabilities_endpoint_admin, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -555,7 +654,18 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTosca_capabilities_operatingsystem(Tosca_capabilities_operatingsystem tosca_capabilities_operatingsystem, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tosca_capabilities_operatingsystem, diagnostics, context);
+		if (!validate_NoCircularContainment(tosca_capabilities_operatingsystem, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_capabilities_operatingsystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_capabilities_operatingsystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_capabilities_operatingsystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_capabilities_operatingsystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_capabilities_operatingsystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_capabilities_operatingsystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_capabilities_operatingsystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_capabilities_operatingsystem, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_capabilities_operatingsystem, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_appliesConstraint(tosca_capabilities_operatingsystem, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -564,7 +674,18 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTosca_capabilities_attachment(Tosca_capabilities_attachment tosca_capabilities_attachment, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tosca_capabilities_attachment, diagnostics, context);
+		if (!validate_NoCircularContainment(tosca_capabilities_attachment, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_capabilities_attachment, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_capabilities_attachment, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_capabilities_attachment, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_capabilities_attachment, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_capabilities_attachment, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_capabilities_attachment, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_capabilities_attachment, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_capabilities_attachment, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_capabilities_attachment, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_appliesConstraint(tosca_capabilities_attachment, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -573,7 +694,18 @@ public class ToscaValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTosca_nodes_root(Tosca_nodes_root tosca_nodes_root, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tosca_nodes_root, diagnostics, context);
+		if (!validate_NoCircularContainment(tosca_nodes_root, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tosca_nodes_root, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tosca_nodes_root, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tosca_nodes_root, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tosca_nodes_root, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tosca_nodes_root, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_root, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_root, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_root, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_nodes_root, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_appliesConstraint(tosca_nodes_root, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -591,6 +723,7 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_webapplication, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_webapplication, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_webapplication, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_nodes_webapplication, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_nodes_webapplication_appliesConstraint(tosca_nodes_webapplication, diagnostics, context);
 		return result;
 	}
@@ -620,6 +753,7 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_softwarecomponent, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_softwarecomponent, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_softwarecomponent, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_nodes_softwarecomponent, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_nodes_softwarecomponent_appliesConstraint(tosca_nodes_softwarecomponent, diagnostics, context);
 		return result;
 	}
@@ -649,6 +783,7 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_dbms, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_dbms, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_dbms, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_nodes_dbms, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_nodes_softwarecomponent_appliesConstraint(tosca_nodes_dbms, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_nodes_dbms_SourceMustBeDatabase(tosca_nodes_dbms, diagnostics, context);
 		return result;
@@ -679,6 +814,7 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_objectstorage, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_objectstorage, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_objectstorage, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_nodes_objectstorage, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_nodes_objectstorage_appliesConstraint(tosca_nodes_objectstorage, diagnostics, context);
 		return result;
 	}
@@ -708,6 +844,7 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_compute, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_compute, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_compute, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_nodes_compute, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_nodes_compute_appliesConstraint(tosca_nodes_compute, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_nodes_compute_SourceMustBeSoftwareComponent(tosca_nodes_compute, diagnostics, context);
 		return result;
@@ -748,6 +885,7 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_loadbalancer, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_loadbalancer, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_loadbalancer, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_nodes_loadbalancer, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_nodes_loadbalancer_appliesConstraint(tosca_nodes_loadbalancer, diagnostics, context);
 		return result;
 	}
@@ -777,6 +915,7 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_webserver, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_webserver, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_webserver, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_nodes_webserver, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_nodes_softwarecomponent_appliesConstraint(tosca_nodes_webserver, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_nodes_webserver_SourceMustBeWebApplication(tosca_nodes_webserver, diagnostics, context);
 		return result;
@@ -807,6 +946,7 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_database, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_database, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_database, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_nodes_database, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_nodes_database_appliesConstraint(tosca_nodes_database, diagnostics, context);
 		return result;
 	}
@@ -836,6 +976,7 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_container_application, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_container_application, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_container_application, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_nodes_container_application, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_nodes_container_application_appliesConstraint(tosca_nodes_container_application, diagnostics, context);
 		return result;
 	}
@@ -865,6 +1006,7 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_container_runtime, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_container_runtime, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_container_runtime, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_nodes_container_runtime, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_nodes_softwarecomponent_appliesConstraint(tosca_nodes_container_runtime, diagnostics, context);
 		return result;
 	}
@@ -884,6 +1026,7 @@ public class ToscaValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(tosca_nodes_blockstorage, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tosca_nodes_blockstorage, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tosca_nodes_blockstorage, diagnostics, context);
+		if (result || diagnostics != null) result &= modmacaoValidator.validateComponent_OnlyOnePlacementLink(tosca_nodes_blockstorage, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTosca_nodes_blockstorage_appliesConstraint(tosca_nodes_blockstorage, diagnostics, context);
 		return result;
 	}

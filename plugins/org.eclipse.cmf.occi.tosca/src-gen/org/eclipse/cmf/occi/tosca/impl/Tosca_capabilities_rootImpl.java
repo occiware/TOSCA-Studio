@@ -12,7 +12,7 @@
  */
 package org.eclipse.cmf.occi.tosca.impl;
 
-import org.eclipse.cmf.occi.core.impl.MixinBaseImpl;
+import modmacao.impl.ComponentImpl;
 
 import org.eclipse.cmf.occi.tosca.ToscaPackage;
 import org.eclipse.cmf.occi.tosca.Tosca_capabilities_root;
@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Tosca_capabilities_rootImpl extends MixinBaseImpl implements Tosca_capabilities_root {
+public class Tosca_capabilities_rootImpl extends ComponentImpl implements Tosca_capabilities_root {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
