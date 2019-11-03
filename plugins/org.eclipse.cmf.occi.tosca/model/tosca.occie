@@ -126,7 +126,7 @@
     <attributes name="tosca.id" description="A unique identifier of the realized instance of a Relationship Template that derives from any TOSCA normative type." type="//@types.0"/>
     <depends href="http://schemas.modmacao.org/modmacao#//@mixins[term='installationdependency']"/>
     <depends href="http://schemas.modmacao.org/modmacao#//@mixins[term='executiondependency']"/>
-    <applies href="http://schemas.ogf.org/occi/core#//@kinds[term='link']"/>
+    <applies href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
   </mixins>
   <mixins name="tosca_relationships_ConnectsTo" scheme="http://schemas.ogf.org/tosca/core#" title="This type represents a network connection relationship between two nodes." depends="//@mixins[term='tosca_relationships_root']">
     <attributes name="credential" description="The security credential to use to present to the target endpoint to for either authentication or authorization purposes." type="//@types.22"/>

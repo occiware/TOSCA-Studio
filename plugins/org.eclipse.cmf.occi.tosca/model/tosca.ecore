@@ -563,7 +563,7 @@
       <details key="constraints" value="appliesConstraint"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="appliesConstraint" value="self.entity.oclIsKindOf(occi::Link)"/>
+      <details key="appliesConstraint" value="self.entity.oclIsKindOf(platform::Componentlink)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="toscaName" eType="#//string">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
