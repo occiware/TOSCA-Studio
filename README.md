@@ -15,6 +15,7 @@ In this folder, the `normatives-types.yml` contains the normative types definiti
 In the folder `custom-types/`, there are several `.yml` files that contains custom and more specific types definitions such as the ones used in a WordPress configuration.
 
 ## Usage of TOSCA Studio
+TOSCA Studio mainly contains a **TOSCA Designer** that provides users facilities for designing, editing, validating TOSCA-based cloud applications, and an **OCCI Orchestrator** that allows users to deploy and manage these applications.
 
 ### Download
 
@@ -24,13 +25,11 @@ After downloading the proper archive according to your OS, unzip and you should 
 
 By running it (double-click on the executable file or run `./TOSCA-Studio` on the command line), you can choose your worskpace and you have your TOSCA Studio.
 
-### Design TOSCA configurations
-
 ### Running Examples
 
-TOSCA Studio is able to generate TOSCA configurations (`.extendedTosca` files) from `.yml` files.
+TOSCA Studio is able to generate TOSCA configurations (`.extendedTosca` files) from TOSCA topologies (`.yml` files). A TOSCA configuration is a TOSCA-based application that conforms to TOSCA Extension and therefore to OCCIware Metamodel.
 
-You can use the provided example.
+You can use the provided examples.
 
 1. Clone the project:
 
@@ -51,7 +50,7 @@ wget https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/occiwar
 
 Shortly after, you would have new TOSCA configurations that appear. 
 
-What happens is that TOSCA-Studio read each `.yml` files (which are tosca topologies) in the folder `tosca-topologies` and generated a corresponding `.extendedTosca` file (which is a TOSCA configuration).
+What happens is that TOSCA-Studio read each `.yml` file in the folder `tosca-topologies` and generated a corresponding `.extendedTosca` file, which is a TOSCA configuration.
 
 #### Inputs
 
@@ -69,7 +68,9 @@ WordPress is an open source Content management system (CMS) that allows to build
 
 ![WordPressDiagram](https://github.com/occiware/TOSCA-Studio/blob/master/img/WordPressDiagram.jpg)
 
-#### Deployement
+#### Deployment
+
+A visual documentation of WordPress deployment process can be found here:
 
 ### Node Cellar
 
@@ -77,4 +78,6 @@ The Node Cellar application is a sample JavaScript application that allows to ma
 
 ![NodeCellarDiagram](https://github.com/occiware/TOSCA-Studio/blob/master/img/NodeCellarDiagram.jpg)
 
-#### Deployement
+#### Deployment
+
+A visual documentation of Node Cellar deployment process can be found here:
