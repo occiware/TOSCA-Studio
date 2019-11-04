@@ -46,7 +46,7 @@ wget https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/occiwar
 
 3. In TOSCA-Studio, open the project `org.eclipse.cmf.occi.tosca.examples`.
 
-4. Launch the generator by clicking on the custon button `TOSCA Config`.
+4. Launch the generator by clicking on the custom button `TOSCA Config`.
 
 Shortly after, you would have new TOSCA configurations that appear. 
 
