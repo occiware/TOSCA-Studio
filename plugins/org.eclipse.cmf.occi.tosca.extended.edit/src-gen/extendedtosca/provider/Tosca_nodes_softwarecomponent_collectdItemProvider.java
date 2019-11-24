@@ -78,7 +78,7 @@ public class Tosca_nodes_softwarecomponent_collectdItemProvider extends Tosca_no
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Tosca_nodes_softwarecomponent_collectd)object).getComponentVersion();
+		String label = ((Tosca_nodes_softwarecomponent_collectd)object).getModmacaoComponentVersion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tosca_nodes_softwarecomponent_collectd_type") :
 			getString("_UI_Tosca_nodes_softwarecomponent_collectd_type") + " " + label;

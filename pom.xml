@@ -142,7 +142,6 @@
     <module>plugins/org.modmacao.placement.edit</module>    
 
     <!-- TOSCA Parsers -->
-    <module>plugins/org.eclipse.cmf.occi.tosca.parser</module>
     <module>plugins/org.eclipse.cmf.occi.tosca.config</module>
     
     <!-- TOSCA Extensions -->

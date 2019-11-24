@@ -147,8 +147,7 @@ public class Tosca_capabilities_scalableItemProvider extends Tosca_capabilities_
 	 */
 	@Override
 	public String getText(Object object) {
-		Integer labelValue = ((Tosca_capabilities_scalable)object).getMinInstances();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((Tosca_capabilities_scalable)object).getModmacaoComponentVersion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tosca_capabilities_scalable_type") :
 			getString("_UI_Tosca_capabilities_scalable_type") + " " + label;

@@ -13,6 +13,7 @@
 package extendedtosca.provider;
 
 
+import extendedtosca.Tosca_nodes_somenode;
 import java.util.Collection;
 import java.util.List;
 
@@ -76,7 +77,10 @@ public class Tosca_nodes_somenodeItemProvider extends Tosca_nodes_rootItemProvid
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Tosca_nodes_somenode_type");
+		String label = ((Tosca_nodes_somenode)object).getModmacaoComponentVersion();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Tosca_nodes_somenode_type") :
+			getString("_UI_Tosca_nodes_somenode_type") + " " + label;
 	}
 
 

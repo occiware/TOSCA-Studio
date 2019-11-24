@@ -12,6 +12,8 @@
  */
 package org.eclipse.cmf.occi.tosca;
 
+import modmacao.Component;
+
 import org.eclipse.cmf.occi.core.MixinBase;
 
 /**
@@ -24,5 +26,5 @@ import org.eclipse.cmf.occi.core.MixinBase;
  * @model
  * @generated
  */
-public interface Tosca_capabilities_root extends MixinBase {
+public interface Tosca_capabilities_root extends Component, MixinBase {
 } // Tosca_capabilities_root

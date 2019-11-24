@@ -147,7 +147,7 @@ public class Tosca_capabilities_operatingsystemItemProvider extends Tosca_capabi
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Tosca_capabilities_operatingsystem)object).getType();
+		String label = ((Tosca_capabilities_operatingsystem)object).getModmacaoComponentVersion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tosca_capabilities_operatingsystem_type") :
 			getString("_UI_Tosca_capabilities_operatingsystem_type") + " " + label;

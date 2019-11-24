@@ -107,8 +107,7 @@ public class Tosca_nodes_somenode2ItemProvider extends Tosca_nodes_rootItemProvi
 	 */
 	@Override
 	public String getText(Object object) {
-		Integer labelValue = ((Tosca_nodes_somenode2)object).getDiskSize();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((Tosca_nodes_somenode2)object).getModmacaoComponentVersion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tosca_nodes_somenode2_type") :
 			getString("_UI_Tosca_nodes_somenode2_type") + " " + label;

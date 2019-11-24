@@ -10,42 +10,42 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://schemas.ogf.org/tosca/core#/"/>
   <use href="http://schemas.ogf.org/tosca/extended#/"/>
-  <resources xsi:type="platform:Application" id="urn:uuid:5755f806-d7aa-4ea5-b921-1aa8fe80c807">
+  <resources xsi:type="platform:Application" id="urn:uuid:8b69467f-245f-48ca-8f1b-4740f31e5c52">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:57ec9f9b-4e73-41db-8fd3-91345d2a3dff" target="//@resources.2">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:baaebe85-d189-4aa0-9ebe-2a607b7aa1e8" target="//@resources.2">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:f4f19752-ff84-4892-87ea-b4bad4dd6827" target="//@resources.3">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:22ac504c-a21f-434d-98af-a8e70952ba95" target="//@resources.3">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
   </resources>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:c27b9425-536b-4e0b-b959-7acf50139678" title="db_server" rlinks="//@resources.3/@links.0 //@resources.2/@links.1">
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:f773e0a7-8278-4ccf-a578-652208cfee24" title="db_server" rlinks="//@resources.3/@links.0 //@resources.2/@links.1">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
     <parts xsi:type="tosca:Tosca_nodes_compute">
       <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
     </parts>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:6731e4a0-c52c-4921-bf7e-1e4eb27c2a52" title="my_db" rlinks="//@resources.0/@links.0">
+  <resources xsi:type="platform:Component" id="urn:uuid:a4b207fa-13c4-44e4-b735-22a770e2d7e1" title="my_db" rlinks="//@resources.0/@links.0">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_database_mysql">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_database_mysql']"/>
     </parts>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:ff80bbd4-f4aa-415e-9a27-42a9b4ab9ec0" target="//@resources.3">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:5a00bf79-d1ef-4c5a-8f58-9429c43f3068" target="//@resources.3">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
       <parts xsi:type="tosca:Tosca_relationships_hostedon">
         <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_relationships_hostedon']"/>
       </parts>
     </links>
-    <links xsi:type="placement:Placementlink" id="urn:uuid:2b843e8f-29ed-4f8e-ac20-e763d38328e4" target="//@resources.1">
+    <links xsi:type="placement:Placementlink" id="urn:uuid:d8b66849-b3e0-4fc2-a1cb-c2b84693e09f" target="//@resources.1">
       <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
     </links>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:d6ba101f-de8a-4566-998f-19b76771e2fd" title="mysql" rlinks="//@resources.0/@links.1 //@resources.2/@links.0">
+  <resources xsi:type="platform:Component" id="urn:uuid:20ff8c36-1ec9-4b48-be77-a500614eef73" title="mysql" rlinks="//@resources.0/@links.1 //@resources.2/@links.0">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_dbms_mysql" port="3306">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_dbms_mysql']"/>
     </parts>
-    <links xsi:type="placement:Placementlink" id="urn:uuid:74be1381-96b7-418e-abf5-5d299eb20f34" target="//@resources.1">
+    <links xsi:type="placement:Placementlink" id="urn:uuid:56d04409-5932-4af7-9e21-ddebde02e6fa" target="//@resources.1">
       <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
     </links>
   </resources>

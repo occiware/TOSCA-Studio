@@ -124,7 +124,7 @@ public class Tosca_nodes_blockstorageItemProvider extends Tosca_nodes_rootItemPr
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Tosca_nodes_blockstorage)object).getVolumeId();
+		String label = ((Tosca_nodes_blockstorage)object).getModmacaoComponentVersion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tosca_nodes_blockstorage_type") :
 			getString("_UI_Tosca_nodes_blockstorage_type") + " " + label;

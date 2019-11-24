@@ -13,6 +13,7 @@
 package extendedtosca.provider;
 
 
+import extendedtosca.Tosca_capabilities_somecap;
 import java.util.Collection;
 import java.util.List;
 
@@ -76,7 +77,10 @@ public class Tosca_capabilities_somecapItemProvider extends Tosca_capabilities_r
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Tosca_capabilities_somecap_type");
+		String label = ((Tosca_capabilities_somecap)object).getModmacaoComponentVersion();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Tosca_capabilities_somecap_type") :
+			getString("_UI_Tosca_capabilities_somecap_type") + " " + label;
 	}
 
 

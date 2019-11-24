@@ -78,7 +78,7 @@ public class Tosca_nodes_nodewithreqItemProvider extends Tosca_nodes_softwarecom
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Tosca_nodes_nodewithreq)object).getComponentVersion();
+		String label = ((Tosca_nodes_nodewithreq)object).getModmacaoComponentVersion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tosca_nodes_nodewithreq_type") :
 			getString("_UI_Tosca_nodes_nodewithreq_type") + " " + label;

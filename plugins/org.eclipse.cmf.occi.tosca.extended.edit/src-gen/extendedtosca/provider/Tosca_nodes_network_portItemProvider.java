@@ -197,7 +197,7 @@ public class Tosca_nodes_network_portItemProvider extends Tosca_nodes_rootItemPr
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Tosca_nodes_network_port)object).getIpRangeEnd();
+		String label = ((Tosca_nodes_network_port)object).getModmacaoComponentVersion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tosca_nodes_network_port_type") :
 			getString("_UI_Tosca_nodes_network_port_type") + " " + label;

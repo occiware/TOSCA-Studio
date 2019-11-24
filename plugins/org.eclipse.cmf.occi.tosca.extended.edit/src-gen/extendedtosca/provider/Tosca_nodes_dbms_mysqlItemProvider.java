@@ -78,7 +78,7 @@ public class Tosca_nodes_dbms_mysqlItemProvider extends Tosca_nodes_dbmsItemProv
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Tosca_nodes_dbms_mysql)object).getComponentVersion();
+		String label = ((Tosca_nodes_dbms_mysql)object).getModmacaoComponentVersion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tosca_nodes_dbms_mysql_type") :
 			getString("_UI_Tosca_nodes_dbms_mysql_type") + " " + label;

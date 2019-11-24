@@ -78,7 +78,7 @@ public class Tosca_nodes_abstractmongodItemProvider extends Tosca_nodes_dbmsItem
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Tosca_nodes_abstractmongod)object).getComponentVersion();
+		String label = ((Tosca_nodes_abstractmongod)object).getModmacaoComponentVersion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tosca_nodes_abstractmongod_type") :
 			getString("_UI_Tosca_nodes_abstractmongod_type") + " " + label;

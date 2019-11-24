@@ -50,6 +50,8 @@ public class Main extends AbstractHandler {
 			readYamlFile(customTypesMap);
 			executeMapping();
 			ExtensionsManager.save();
+			
+			ExtensionsManager.count();
 
 		} catch (Exception e) {
 			throw new RuntimeException(e);

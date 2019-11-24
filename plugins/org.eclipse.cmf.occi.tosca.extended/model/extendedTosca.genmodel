@@ -297,7 +297,7 @@
   </genPackages>
   <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.infrastructure/model/Infrastructure.genmodel#//infrastructure"/>
   <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.sla/model/sla.genmodel#//sla"/>
-  <usedGenPackages href="platform:/resource/org.eclipse.cmf.occi.tosca/model/tosca.genmodel#//tosca"/>
+  <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.tosca/model/tosca.genmodel#//tosca"/>
   <usedGenPackages href="platform:/resource/org.modmacao.core/model/modmacao.genmodel#//modmacao"/>
   <usedGenPackages href="platform:/resource/org.modmacao.occi.platform/model/platform.genmodel#//platform"/>
   <usedGenPackages href="platform:/resource/org.modmacao.placement/model/placement.genmodel#//placement"/>
