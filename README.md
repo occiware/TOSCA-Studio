@@ -56,7 +56,7 @@ What happens is that TOSCA-Studio read each `.yml` file in the folder `tosca-top
 
 If a tosca topology needs inputs, TOSCA-Studio will read them from `.csv` files in the folder `inputs`.
 The `.csv` must be named as the tosca topolology, suffixed by `-inputs.csv`.
-For example, for the topoloyg `nodecellar.yml`, the corresponding input file is `inputs/nodecellar-inputs.csv`.
+For example, for the topology `nodecellar.yml`, the corresponding input file is `inputs/nodecellar-inputs.csv`.
 
 The format of the inputs are as follow: `<name>:<value>`.
 
@@ -72,6 +72,10 @@ WordPress is an open source Content management system (CMS) that allows to build
 
 A visual documentation of WordPress deployment process can be found here:
 
+![WordPress](videos/WordPress-deployment.gif)
+
+A MP4 video is also available [here](https://github.com/occiware/TOSCA-studio/raw/master/videos/WordPress-deployment.mp4).
+
 ### Node Cellar
 
 The Node Cellar application is a sample JavaScript application that allows to manage (retrieve, create, update, delete) the wines in a wine cellar database. TOSCA allows to define such types, and therefore it allows to define a Node Cellar application. You can find in the following a figure that shows the model of a Node Cellar configuration.
@@ -81,3 +85,7 @@ The Node Cellar application is a sample JavaScript application that allows to ma
 #### Deployment
 
 A visual documentation of Node Cellar deployment process can be found here:
+
+![Node Cellar](videos/Node_Cellar-deployment.gif)
+
+A MP4 video is also available [here](https://github.com/occiware/TOSCA-studio/raw/master/videos/Node_Cellar-deployment.mp4).
