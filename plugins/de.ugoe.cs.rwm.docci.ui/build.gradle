@@ -1,0 +1,151 @@
+apply plugin : 'eclipse'
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'org.standardout.bnd-platform'
+apply plugin: 'osgi'
+
+
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.standardout:bnd-platform:1.7.0'
+    }
+}
+
+
+repositories {
+mavenCentral()
+    jcenter()
+     maven {
+          url "https://nexus.informatik.uni-goettingen.de/content/repositories/rwm/"
+    }
+    maven {
+          url "https://nexus.informatik.uni-goettingen.de/content/repositories/thirdparty/"
+    }
+    maven{
+        url "http://www.jabylon.org/maven/"
+    }
+    
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+            }
+        }
+    }
+    
+
+dependencies {
+    // swt dependencies
+    //compile group: 'org.eclipse', name: 'jface', version: '3.7.0'
+    //compile group: 'org.eclipse.core', name: 'commands', version: '3.3.0-I20070605-0010'
+    compile group: 'org.eclipse.core', name: 'org.eclipse.core.resources', version: '3.7.100'
+    //compile group: 'org.eclipse.equinox', name: 'common', version: '3.6.200-v20130402-1505'
+    compile group: 'org.eclipse.swt', name: 'org.eclipse.swt.win32.win32.x86', version: '4.3'
+    compile group: 'org.eclipse.ui', name: 'workbench', version: '3.2.1-M20060906-0800'
+
+    compile group: 'de.ugoe.cs.rwm', name: 'docci', version: '1.0.2'
+    //platform group: 'de.ugoe.cs.rwm', name: 'docci', version: '1.0.2'
+    //platformaux 'org.checkerframework:checker-qual:2.6.0'
+    
+    
+    platformaux 'org.osgi:org.osgi.core:6.0.0'
+    platformaux 'org.slf4j:slf4j-api:1.7.25'
+    platform 'log4j:log4j:1.2.17'
+   
+   //------------------------------------------------------__//
+   
+    platform group: 'org.eclipse.cmf.occi', name: 'core', version: '1.0.0'
+    platform group: 'org.eclipse.cmf.occi', name: 'infrastructure', version: '1.0.0'
+}
+
+jar {
+     manifest {
+       from("META-INF/MANIFEST.MF")
+    }
+
+}
+
+
+
+platform{
+    determineImportVersions = false
+    featureId = "docci"
+    featureName = "Docci Provisioning Engine"
+    featureProvider = "de.ugoe.cs.rwm"
+    featureVersion = "1.0.0"
+    
+    bundle files('build/libs/de.ugoe.cs.rwm.docci.ui.jar')
+    
+    override {
+        optionalImport 'de.ugoe.cs.rwm.*', 'de.ugeo.cs.rwm.*'
+    }
+    
+    
+    bundle file('lib/de.ugoe.cs.rwm.docci.jar'), {
+        bnd {
+            version = '1.0.2' // mandatory
+            symbolicName = 'de.ugoe.cs.rwm.docci' // mandatory
+            bundleName = 'DOCCI'
+            instruction 'Export-Package', "de.ugoe.cs.rwm.docci.*;version=$version"
+        }
+    }
+    
+     bundle file('lib/de.ugoe.cs.rwm.cocci.jar'), {
+        bnd {
+            version = '1.0.0' // mandatory
+            symbolicName = 'de.ugoe.cs.rwm.cocci' // mandatory
+            bundleName = 'COCCI'
+            instruction 'Export-Package', "de.ugoe.cs.rwm.cocci.*;version=$version"
+        }
+    }
+    
+     bundle file('lib/model-pcg-1.0.0.jar'), {
+        bnd {
+            version = '1.0.0' // mandatory
+            symbolicName = 'de.ugoe.cs.rwm.pcg' // mandatory
+            bundleName = 'PCG'
+            instruction 'Export-Package', "pcg.*;version=$version"
+        }
+    }
+    
+    bundle file('lib/model-pog-1.0.0.jar'), {
+        bnd {
+            version = '1.0.0' // mandatory
+            symbolicName = 'de.ugoe.cs.rwm.pog' // mandatory
+            bundleName = 'POG'
+            instruction 'Export-Package', "pog.*;version=$version"
+        }
+    }
+    
+    bundle file('lib/de.ugoe.cs.rwm.tocci.jar'), {
+        bnd {
+            version = '1.0.0' // mandatory
+            symbolicName = 'de.ugoe.cs.rwm.tocci' // mandatory
+            bundleName = 'TOCCI'
+            instruction 'Export-Package', "de.ugoe.cs.rwm.tocci.*;version=$version"
+        }
+    }
+   
+}
+
+updateSiteZip.dependsOn("build")
+
+    
+processResources {
+   from("."){
+        include("plugin.xml")
+        include("lib/")
+   } 
+}
+
+eclipse {
+    project {
+        name = 'de.ugoe.cs.rwm.docci.ui'
+    }
+}    

@@ -74,6 +74,7 @@
     <module>plugins/org.eclipse.cmf.occi.core.gen.xml</module>
     <module>plugins/org.eclipse.cmf.occi.core.gen.xml.ui</module>
 
+
     <!-- Alloy Generator -->
     <module>plugins/org.eclipse.cmf.occi.core.gen.alloy</module>
     <module>plugins/org.eclipse.cmf.occi.core.gen.alloy.ui</module>
@@ -156,6 +157,9 @@
 
     <!-- TOSCA Examples -->
     <!--<module>plugins/org.eclipse.cmf.occi.tosca.examples</module>-->
+
+    <!-- DOCCI UI -->
+    <module>plugins/de.ugoe.cs.rwm.docci.ui/</module>
     
   </modules>
 
@@ -176,6 +180,17 @@
   </properties>
 
   <repositories>
+     <repository>
+  	<id>uni-goettingen-de-thirdparty</id>
+        <name>Maven Repository from goettingen third party</name>
+        <url>https://nexus.informatik.uni-goettingen.de/content/repositories/thirdparty/</url>
+     </repository>
+     <repository>
+  	<id>uni-goettingen-de-rw</id>
+        <name>Maven Repository from goettingen rw</name>
+        <url>https://nexus.informatik.uni-goettingen.de/content/repositories/rwm/</url>
+     </repository>
+
     <!-- configure p2 repository to resolve against -->
 	<repository>
       <id>photon</id>
