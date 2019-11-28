@@ -11,18 +11,19 @@
  - William Piers <william.piers@obeo.fr>
  - Philippe Merle <philippe.merle@inria.fr>
  - Faiez Zalila <faiez.zalila@inria.fr>
+ - Stéphanie Challita <stephanie.challita@inria.fr>
 -->
 <feature
       id="org.eclipse.cmf.occi"
-      label="OCCI Studio"
+      label="TOSCA Studio"
       version="1.0.0.qualifier"
       provider-name="OCCIware">
 
-   <description url="http://www.occiware.org">
-      OCCI Studio developed within the OCCIware project.
+   <description url="https://github.com/occiware/TOSCA-Studio">
+      TOSCA Studio is developed to support a scientific publication related to cloud computing and model-driven engineering.
    </description>
 
-   <copyright url="http://www.occiware.org">
+   <copyright url="https://github.com/occiware/TOSCA-Studio">
       Copyright (c) 2015-2017 Obeo, Inria
    </copyright>
 
@@ -780,13 +781,6 @@ litigation.
     <!-- TOSCA Parsers -->
 
 <plugin
-         id="org.eclipse.cmf.occi.tosca.parser"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-<plugin
          id="org.eclipse.cmf.occi.tosca.config"
          download-size="0"
          install-size="0"
@@ -834,6 +828,15 @@ litigation.
 
 <plugin
          id="org.eclipse.cmf.occi.tosca.extended.design.extended"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+    <!-- DOCCI -->
+
+<plugin
+         id="de.ugoe.cs.rwm.docci.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
