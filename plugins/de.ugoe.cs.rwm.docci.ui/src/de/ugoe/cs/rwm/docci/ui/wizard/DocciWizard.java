@@ -131,11 +131,9 @@ public class DocciWizard extends Wizard {
 		for (EObject obj : comp.getMissingElements()) {
 			// Network check due to provider network
 			if (obj.eClass().getName().equals("Network") == false) {
-
 				System.out.println(obj);
 				assertion = false;
 			}
-
 		}
 
 		System.out.println("NEW ELEMENTS:");
@@ -152,7 +150,7 @@ public class DocciWizard extends Wizard {
 
 	private void copyRuntimeModelIntoWorkspace() {
 		File run = RUNTIMEPATH.toFile();
-		File tar = localRuntimePath.toFile();
+		File tar = new File(adjustFileExtensionPath(localRuntimePath));
 		
 		try {
 			FileUtils.copyFile(run, tar);
@@ -160,9 +158,27 @@ public class DocciWizard extends Wizard {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	}
 
+	private String adjustFileExtensionPath(Path path) {
+		String adjustedPathString;
+		String extension = getExtension(path);
+		String selectedExtension = getExtension(selectedPath);
+		adjustedPathString = path.toString().replaceAll(extension, selectedExtension);
+		
+		return adjustedPathString;
+	}
+
+	private String getExtension(Path path) {
+		String extension = "";
+
+		int i = path.toString().lastIndexOf('.');
+		if (i > 0) {
+		    extension = path.toString().substring(i);
+		}
+		return extension;
+	}
+	
 	private static void updateWorkspace() {
 		for (IProject project : ResourcesPlugin.getWorkspace().getRoot().getProjects()) {
 			try {
