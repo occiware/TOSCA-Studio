@@ -11,6 +11,7 @@
  - William Piers <william.piers@obeo.fr>
  - Philippe Merle <philippe.merle@inria.fr>
  - Faiez Zalila <faiez.zalila@inria.fr>
+ - Stéphanie Challita <stephanie.challita@inria.fr>
 -->
 <feature
       id="org.eclipse.cmf.occi"
@@ -19,7 +20,7 @@
       provider-name="OCCIware">
 
    <description url="https://github.com/occiware/TOSCA-Studio">
-      TOSCA Studio is developed to support scientific publication within occiware project.
+      TOSCA Studio is developed to support a scientific publication related to cloud computing and model-driven engineering.
    </description>
 
    <copyright url="https://github.com/occiware/TOSCA-Studio">
