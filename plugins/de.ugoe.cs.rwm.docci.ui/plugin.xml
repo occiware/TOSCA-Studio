@@ -31,4 +31,33 @@
          </action>
       </objectContribution>
    </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="de.ugoe.cs.rwm.docci.ui.popup.contribution1"
+            nameFilter="*.extendedTosca"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               label="OCCI Orchestrator"
+               path="additionsOCCIStudio"
+               id="de.ugoe.cs.rwm.docci.ui.popup.menu">
+            <separator
+                  name="group">
+            </separator>
+         </menu>
+         <action
+               class="de.ugoe.cs.rwm.docci.ui.actions.OCCI2DeploymentAction"
+               enablesFor="1"
+               id="de.ugoe.cs.rwm.docci.ui.actions.OCCI2DeploymentAction"
+               label="Deploy OCCI Configuration"
+               menubarPath="de.ugoe.cs.rwm.docci.ui.popup.menu/group">
+         </action>
+         <action
+               class="de.ugoe.cs.rwm.docci.ui.actions.PlatformSpecificTransformationAction"
+               id="de.ugoe.cs.rwm.docci.ui.actions.PlatformSpecificTransformationAction"
+               label="Platform Specific Transformation"
+               menubarPath="de.ugoe.cs.rwm.docci.ui.popup.menu/group">
+         </action>
+      </objectContribution>
+   </extension>
 </plugin>
