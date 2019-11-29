@@ -70,11 +70,12 @@ WordPress is an open source Content management system (CMS) that allows to build
 
 #### Deployment
 
-A visual documentation of WordPress deployment process can be found here:
+While the transformation and deployment process can be triggered from within TOSCA-Studio, a visual documentation of the deployment process  can be achieved using [SmartWYRM](https://gitlab.gwdg.de/rwm/de.ugoe.cs.rwm.smartwyrm), a webserver visualizing the runtime model maintained by the OCCIWare runtime server. Below you can see the design time WordPress OCCI configuration and how it is transferred to the runtime model of the OCCIWare runtime server and deployed on a private OpenStack cloud. Moreover, a short demonstration of the deployed application is provided:
 
 ![WordPress](videos/WordPress-deployment.gif)
 
-A MP4 video is also available [here](https://github.com/occiware/TOSCA-studio/raw/master/videos/WordPress-deployment.mp4).
+The implementation of the OCCI Orchestrator deployment logic can be found [here](https://gitlab.gwdg.de/rwm/de.ugoe.cs.rwm.docci).
+A MP4 video of the deployment process demonstration is available [here](https://github.com/occiware/TOSCA-studio/raw/master/videos/WordPress-deployment.mp4).
 
 ### Node Cellar
 
@@ -83,9 +84,9 @@ The Node Cellar application is a sample JavaScript application that allows to ma
 ![NodeCellarDiagram](https://github.com/occiware/TOSCA-Studio/blob/master/img/NodeCellarDiagram.jpg)
 
 #### Deployment
-
-A visual documentation of Node Cellar deployment process can be found here:
+Similar to the WordPress example, we visualized the deployment of the Node Cellar application using [SmartWYRM]("https://gitlab.gwdg.de/rwm/de.ugoe.cs.rwm.smartwyrm"). Below you can see this process, as well as a short demonstration of the deployed application is provided.
 
 ![Node Cellar](videos/Node_Cellar-deployment.gif)
 
-A MP4 video is also available [here](https://github.com/occiware/TOSCA-studio/raw/master/videos/Node_Cellar-deployment.mp4).
+The implementation of the OCCI Orchestrator deployment logic can be found [here](https://gitlab.gwdg.de/rwm/de.ugoe.cs.rwm.docci).
+A MP4 video of the deployment process demonstration is available [here](https://github.com/occiware/TOSCA-studio/raw/master/videos/Node_Cellar-deployment.mp4).
