@@ -107,7 +107,9 @@ public class TocciWizard extends Wizard {
 
 		File source = new File(selectedPath.toString());
 
-		File copied = new File(selectedPath.toString().replaceAll(".occic", "_PSM.occic"));
+		//File copied = new File(selectedPath.toString().replaceAll(".occic", "_PSM.occic"));
+		File copied = createPSMFile(selectedPath);
+
 
 		try {
 			copyFileUsingStream(source, copied);
@@ -116,6 +118,26 @@ public class TocciWizard extends Wizard {
 			e.printStackTrace();
 		}
 		return copied;
+	}
+
+	private File createPSMFile(Path selectedPath) {
+		File copied = null;
+		String extension = getExtension(selectedPath);
+		System.out.println(extension);
+		if(extension != "") {
+			copied = new File(selectedPath.toString().replaceAll(extension, "_PSM" + extension));
+		}
+		return copied;
+	}
+
+	private String getExtension(Path path) {
+		String extension = "";
+
+		int i = path.toString().lastIndexOf('.');
+		if (i > 0) {
+		    extension = path.toString().substring(i);
+		}
+		return extension;
 	}
 
 	private static void updateWorkspace() {
