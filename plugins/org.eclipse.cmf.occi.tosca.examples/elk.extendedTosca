@@ -10,166 +10,163 @@
   <use href="http://schemas.ogf.org/occi/sla#/"/>
   <use href="http://schemas.ogf.org/tosca/core#/"/>
   <use href="http://schemas.ogf.org/tosca/extended#/"/>
-  <resources xsi:type="platform:Application" id="urn:uuid:a2290e34-6bc8-4eaf-ab1e-4cbf708c4f25">
+  <resources xsi:type="platform:Application" id="urn:uuid:dfe26042-06c7-4d1f-8bdf-1eff063f36c3">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='application']"/>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:8a4e43e4-c790-4789-8311-067daff9d971" target="//@resources.1">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:bf1462ab-fb45-4dcb-8e62-df09c418f873" target="//@resources.1">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:28a07b50-d123-405e-8da7-26ec6878458a" target="//@resources.2">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:a39a544f-dd6d-4f92-bcf0-d7b57c0b45cc" target="//@resources.2">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:81cd1c59-991e-4195-a292-3e79fab7b4f2" target="//@resources.4">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:abff9e9b-bef3-4892-b196-55a854ee31d2" target="//@resources.4">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:3f9deabd-a639-408f-8f3d-9dafceee0492" target="//@resources.7">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:53ef7f03-6609-468a-8b60-c65b6e8d553a" target="//@resources.6">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:c366e142-39d6-472f-b145-4d0bb1809945" target="//@resources.8">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:adc8b54a-10c5-4552-8d74-bc8c330a7ade" target="//@resources.7">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:c82e5b96-0be9-47cd-8c78-102eea1125e9" target="//@resources.10">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:dd923e9d-a3dc-4010-ba20-2009c426b836" target="//@resources.9">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:6561f098-0aa9-440d-b874-ab9532348b2b" target="//@resources.11">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:c3d1c5ea-da5a-468b-96e7-cd0e259da71a" target="//@resources.10">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:4924111d-cccf-4ae4-a379-5947cade1c14" target="//@resources.13">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:680e342e-a140-4be8-bd5c-b86395217f2b" target="//@resources.11">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:f8cb7a9e-a3fe-4a89-a576-ed343f6cb17f" target="//@resources.14">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:335f0638-406d-404a-aa27-1611df924b62" target="//@resources.13">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
     </links>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:4e5cb277-40f2-4f0e-bdae-87b443c7b31d" title="mongo_db" rlinks="//@resources.0/@links.0 //@resources.13/@links.2">
+  <resources xsi:type="platform:Component" id="urn:uuid:630da016-351b-4264-8f52-2ef7af85203b" title="mongo_db" rlinks="//@resources.0/@links.0">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="tosca:Tosca_nodes_database">
       <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_database']"/>
     </parts>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:6fe373a2-a06a-4a14-bdb9-4763848e86e2" target="//@resources.2">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:12988513-c890-4938-b4b8-4b14f89576ef" target="//@resources.2">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
       <parts xsi:type="tosca:Tosca_relationships_hostedon">
         <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_relationships_hostedon']"/>
       </parts>
     </links>
-    <links xsi:type="placement:Placementlink" id="urn:uuid:f871ad0a-cf29-4b5a-949b-2c3c7d590730" target="//@resources.3">
+    <links xsi:type="placement:Placementlink" id="urn:uuid:cc7b60a5-7a3b-4249-980a-4bfca261b344" target="//@resources.3">
       <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
     </links>
-  </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:e5441ab9-6c05-4805-9498-ebd2f90e609f" title="mongo_dbms" rlinks="//@resources.0/@links.1 //@resources.1/@links.0">
-    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
-    <parts xsi:type="tosca:Tosca_nodes_dbms">
-      <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_dbms']"/>
-    </parts>
-    <links xsi:type="placement:Placementlink" id="urn:uuid:211ed64b-f488-4be2-8785-8ba1eb4923c7" target="//@resources.3">
-      <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
-    </links>
-  </resources>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:d38367c1-0bf0-4d7f-b375-595ead6164f3" title="mongo_server" rlinks="//@resources.2/@links.0 //@resources.1/@links.1" occiComputeArchitecture="x64" occiComputeCores="1" occiComputeMemory="4.0">
-    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
-    <parts xsi:type="tosca:Tosca_nodes_compute" type="Linux" distribution="Ubuntu" version="14.04" diskSize="10">
-      <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
-    </parts>
-  </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:1e574251-5ab4-4013-8f60-1732b72add8e" title="app_collectd" rlinks="//@resources.0/@links.2">
-    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
-    <parts xsi:type="extendedtosca:Tosca_nodes_softwarecomponent_collectd">
-      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_softwarecomponent_collectd']"/>
-    </parts>
-    <links xsi:type="placement:Placementlink" id="urn:uuid:d776b0a4-5dfb-4a77-a01b-f7df8ae973df" target="//@resources.5">
-      <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
-    </links>
-  </resources>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:dac7f17c-dd4b-4cd2-b7f8-8d3e1a27ede6" title="app_server" rlinks="//@resources.4/@links.0 //@resources.7/@links.0" occiComputeArchitecture="x64" occiComputeCores="1" occiComputeMemory="4.0">
-    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
-    <parts xsi:type="tosca:Tosca_nodes_compute" type="Linux" distribution="Ubuntu" version="14.04" diskSize="10">
-      <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
-    </parts>
-  </resources>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:6507c474-a835-4d8a-b0ef-fc439b3124f8" title="NodejsHost" rlinks="//@resources.8/@links.0 //@resources.13/@links.1">
-    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
-    <parts xsi:type="tosca:Tosca_nodes_compute">
-      <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
-    </parts>
-  </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:6a77f94c-e0b2-4d76-aa9f-c6186ab2fd08" title="app_rsyslog" rlinks="//@resources.0/@links.3">
-    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
-    <parts xsi:type="extendedtosca:Tosca_nodes_softwarecomponent_rsyslog">
-      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_softwarecomponent_rsyslog']"/>
-    </parts>
-    <links xsi:type="placement:Placementlink" id="urn:uuid:cb6d0825-1a36-451d-9485-048a8c55f780" target="//@resources.5">
-      <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
-    </links>
-  </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:5de44cf7-5234-4374-a049-a22f5afe020a" title="Nodejs" rlinks="//@resources.0/@links.4 //@resources.13/@links.0">
-    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
-    <parts xsi:type="extendedtosca:Tosca_nodes_nodejs" componentVersion="0.12">
-      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_nodejs']"/>
-    </parts>
-    <links xsi:type="placement:Placementlink" id="urn:uuid:929dcc81-355b-4765-8bb0-93efda11dba1" target="//@resources.6">
-      <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
-    </links>
-  </resources>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:07d359bf-8d76-45b2-840c-6e562cea29a2" title="logstash_server" rlinks="//@resources.10/@links.0" occiComputeCores="1" occiComputeMemory="4.0">
-    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
-    <parts xsi:type="tosca:Tosca_nodes_compute" diskSize="10">
-      <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
-    </parts>
-  </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:73bfd23c-92e3-488d-bd57-f379bc7ea37a" title="logstash" rlinks="//@resources.0/@links.5">
-    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
-    <parts xsi:type="extendedtosca:Tosca_nodes_softwarecomponent_logstash">
-      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_softwarecomponent_logstash']"/>
-    </parts>
-    <links xsi:type="placement:Placementlink" id="urn:uuid:1d1e3c28-a85a-4813-80dd-ecf14884c022" target="//@resources.9">
-      <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
-    </links>
-  </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:a7bca0fe-2e8a-4d2e-b338-64b7c7c97b0f" title="elasticsearch" rlinks="//@resources.0/@links.6">
-    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
-    <parts xsi:type="extendedtosca:Tosca_nodes_softwarecomponent_elasticsearch">
-      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_softwarecomponent_elasticsearch']"/>
-    </parts>
-    <links xsi:type="placement:Placementlink" id="urn:uuid:e44fdc98-949e-441b-b70e-105cf30ecf69" target="//@resources.12">
-      <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
-    </links>
-  </resources>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:bd0ce373-a650-4dc5-92a0-d6c7202db480" title="elasticsearch_server" rlinks="//@resources.11/@links.0" occiComputeArchitecture="x64" occiComputeCores="1" occiComputeMemory="4.0">
-    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
-    <parts xsi:type="tosca:Tosca_nodes_compute" type="Linux" distribution="Ubuntu" version="14.04" diskSize="10">
-      <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
-    </parts>
-  </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:27b38879-76ab-4ddd-a6ce-45228109d983" title="Nodecellar" rlinks="//@resources.0/@links.7">
-    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
-    <parts xsi:type="extendedtosca:Tosca_nodes_nodecellar" port="8088">
-      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_nodecellar']"/>
-    </parts>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:b81f47c3-e9ed-4868-bb5d-34098df6d958" target="//@resources.8">
-      <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
-      <parts xsi:type="tosca:Tosca_relationships_hostedon">
-        <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_relationships_hostedon']"/>
-      </parts>
-    </links>
-    <links xsi:type="placement:Placementlink" id="urn:uuid:e09a94eb-0a5d-4899-99d1-6e69101e7016" target="//@resources.6">
-      <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
-    </links>
-    <links xsi:type="platform:Componentlink" id="urn:uuid:c7a31101-146b-404f-b8c4-7ff797dd470d" target="//@resources.1">
+    <links xsi:type="platform:Componentlink" id="urn:uuid:0f5c6549-d688-4edc-9f39-8fc6c07fefaa" target="//@resources.9">
       <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
       <parts xsi:type="tosca:Tosca_relationships_connectsto">
         <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_relationships_connectsto']"/>
       </parts>
     </links>
   </resources>
-  <resources xsi:type="platform:Component" id="urn:uuid:86bc4da9-176f-4941-bc8f-9ac79be02aee" title="kibana" rlinks="//@resources.0/@links.8">
+  <resources xsi:type="platform:Component" id="urn:uuid:deb6d4a8-a6de-42f3-bf3b-75518a0ef44b" title="mongo_dbms" rlinks="//@resources.0/@links.1 //@resources.1/@links.0">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="tosca:Tosca_nodes_dbms">
+      <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_dbms']"/>
+    </parts>
+    <links xsi:type="placement:Placementlink" id="urn:uuid:8b440e45-c034-447e-85e6-7a8417ba8ba0" target="//@resources.3">
+      <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
+    </links>
+  </resources>
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:4fdb4b8c-c538-46bf-9a07-7e6b69f8d8d4" title="mongo_server" occiComputeArchitecture="x64" occiComputeMemory="4.0">
+    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
+    <parts xsi:type="tosca:Tosca_nodes_compute" type="Linux" distribution="Ubuntu" version="14.04" diskSize="10">
+      <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
+    </parts>
+    <rlinks href="#//@resources.2/@links.0"/>
+    <rlinks href="Multi-Tier1-ElasticsearchLogstashKibana.extendedTosca#//@resources.1/@links.1"/>
+    <rlinks href="#//@resources.1/@links.1"/>
+  </resources>
+  <resources xsi:type="platform:Component" id="urn:uuid:986b3077-6028-4a57-a3bb-7b18b903153c" title="app_collectd" rlinks="//@resources.0/@links.2">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="extendedtosca:Tosca_nodes_softwarecomponent_collectd">
+      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_softwarecomponent_collectd']"/>
+    </parts>
+    <links xsi:type="placement:Placementlink" id="urn:uuid:8b0e6985-0fb4-4ef2-958f-d05e13226db0" target="//@resources.5">
+      <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
+    </links>
+  </resources>
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:b8565359-5cd0-4fd7-8f71-9f519ca9c2bd" title="app_server" rlinks="//@resources.4/@links.0 //@resources.6/@links.0 //@resources.7/@links.0 //@resources.9/@links.1" occiComputeArchitecture="x64" occiComputeMemory="4.0">
+    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
+    <parts xsi:type="tosca:Tosca_nodes_compute" type="Linux" distribution="Ubuntu" version="14.04" diskSize="10">
+      <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
+    </parts>
+  </resources>
+  <resources xsi:type="platform:Component" id="urn:uuid:b6cb5020-4bf4-4d81-b588-03fe2a6f6531" title="app_rsyslog" rlinks="//@resources.0/@links.3">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="extendedtosca:Tosca_nodes_softwarecomponent_rsyslog">
+      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_softwarecomponent_rsyslog']"/>
+    </parts>
+    <links xsi:type="placement:Placementlink" id="urn:uuid:58e4e9e6-66b9-4b2e-a48d-5707632916fe" target="//@resources.5">
+      <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
+    </links>
+  </resources>
+  <resources xsi:type="platform:Component" id="urn:uuid:b5a392e0-bde2-45ae-ba2c-6404d9105ddb" title="nodejs" rlinks="//@resources.0/@links.4 //@resources.9/@links.0">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="tosca:Tosca_nodes_webserver">
+      <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_webserver']"/>
+    </parts>
+    <links xsi:type="placement:Placementlink" id="urn:uuid:62b5971c-93bd-4c01-8508-23462c528b1d" target="//@resources.5">
+      <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
+    </links>
+  </resources>
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:0882fb90-1f7b-4be8-8c1b-e107199999d3" title="logstash_server" rlinks="//@resources.10/@links.0" occiComputeArchitecture="x64" occiComputeMemory="4.0">
+    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
+    <parts xsi:type="tosca:Tosca_nodes_compute" type="Linux" distribution="Ubuntu" version="14.04" diskSize="10">
+      <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
+    </parts>
+  </resources>
+  <resources xsi:type="platform:Component" id="urn:uuid:3ea0c1eb-848d-446d-bdb1-c562ce7ff534" title="paypal_pizzastore" rlinks="//@resources.0/@links.5 //@resources.1/@links.2">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="extendedtosca:Tosca_nodes_webapplication_paypalpizzastore">
+      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_webapplication_paypalpizzastore']"/>
+    </parts>
+    <links xsi:type="platform:Componentlink" id="urn:uuid:ff5acf7a-94fc-499c-89dc-81aca0ac2df4" target="//@resources.7">
+      <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='componentlink']"/>
+      <parts xsi:type="tosca:Tosca_relationships_hostedon">
+        <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_relationships_hostedon']"/>
+      </parts>
+    </links>
+    <links xsi:type="placement:Placementlink" id="urn:uuid:ff4619c0-d9df-49e0-b909-7b5271a07cda" target="//@resources.5">
+      <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
+    </links>
+  </resources>
+  <resources xsi:type="platform:Component" id="urn:uuid:d8de9d13-830c-43a4-afee-f6faddd5cbf4" title="logstash" rlinks="//@resources.0/@links.6">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="extendedtosca:Tosca_nodes_softwarecomponent_logstash">
+      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_softwarecomponent_logstash']"/>
+    </parts>
+    <links xsi:type="placement:Placementlink" id="urn:uuid:acb640d7-b4de-473d-8cbb-fdff183b090c" target="//@resources.8">
+      <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
+    </links>
+  </resources>
+  <resources xsi:type="platform:Component" id="urn:uuid:54f97259-a8b9-4320-89af-7b21bae2c39c" title="elasticsearch" rlinks="//@resources.0/@links.7">
+    <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
+    <parts xsi:type="extendedtosca:Tosca_nodes_softwarecomponent_elasticsearch">
+      <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_softwarecomponent_elasticsearch']"/>
+    </parts>
+    <links xsi:type="placement:Placementlink" id="urn:uuid:86a48b98-a389-499f-8c4c-08cade553f79" target="//@resources.12">
+      <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
+    </links>
+  </resources>
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:8286c687-ade4-499f-9232-c2e7c1621d5b" title="elasticsearch_server" rlinks="//@resources.11/@links.0" occiComputeArchitecture="x64" occiComputeMemory="4.0">
+    <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
+    <parts xsi:type="tosca:Tosca_nodes_compute" type="Linux" distribution="Ubuntu" version="14.04" diskSize="10">
+      <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
+    </parts>
+  </resources>
+  <resources xsi:type="platform:Component" id="urn:uuid:7d67a767-28ee-4d7f-8daa-cfbab82f53c7" title="kibana" rlinks="//@resources.0/@links.8">
     <kind href="http://schemas.modmacao.org/occi/platform#//@kinds[term='component']"/>
     <parts xsi:type="extendedtosca:Tosca_nodes_softwarecomponent_kibana">
       <mixin href="http://schemas.ogf.org/tosca/extended#//@mixins[term='tosca_nodes_softwarecomponent_kibana']"/>
     </parts>
-    <links xsi:type="placement:Placementlink" id="urn:uuid:01bb9aa2-cd4e-42a6-abcb-783abefd71be" target="//@resources.15">
+    <links xsi:type="placement:Placementlink" id="urn:uuid:979041f6-ef88-4fe3-a5ab-d73d81f6af12" target="//@resources.14">
       <kind href="http://schemas.modmacao.org/placement#//@kinds[term='placementlink']"/>
     </links>
   </resources>
-  <resources xsi:type="infrastructure:Compute" id="urn:uuid:31744de1-9ccb-41bd-aaf8-0bb27f4fa544" title="kibana_server" rlinks="//@resources.14/@links.0" occiComputeArchitecture="x64" occiComputeCores="1" occiComputeMemory="4.0">
+  <resources xsi:type="infrastructure:Compute" id="urn:uuid:23499bdc-3a5e-42f2-b4ad-a173c5f3d496" title="kibana_server" rlinks="//@resources.13/@links.0" occiComputeArchitecture="x64" occiComputeMemory="4.0">
     <kind href="http://schemas.ogf.org/occi/infrastructure#//@kinds[term='compute']"/>
     <parts xsi:type="tosca:Tosca_nodes_compute" type="Linux" distribution="Ubuntu" version="14.04" diskSize="10">
       <mixin href="http://schemas.ogf.org/tosca/core#//@mixins[term='tosca_nodes_compute']"/>
