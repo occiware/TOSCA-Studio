@@ -34,28 +34,32 @@ topology_template:
             description: The URL to download nodejs.
             default: https://github.com/sample.git
     node_templates:
-        paypal_pizzastore:
-            type: tosca.nodes.WebApplication.PayPalPizzaStore
+        NodejsHost:
+            type: tosca.nodes.Compute
+            requirements:
+                - network:
+                    node: Network
+                    capability: tosca.capabilities.Connectivity
+                    relationship: tosca.relationships.Network
+            capabilities:
+                os:
+                properties:
+                    architecture: x86_64
+                    type: linux
+        Nodejs:
+            type: tosca.nodes.Nodejs
+            requirements:
+                - host: NodejsHost
+        Nodecellar:
+            type: tosca.nodes.Nodecellar
             properties:
-                github_url: { get_input: github_url }
+                port: { get_input: nocecellar_port }
             requirements:
-                - host: nodejs
-                - database_connection: mongo_db
-            interfaces:
-                Standard:
-                    configure:
-                        implementation: scripts/nodejs/configure.sh
-                        inputs:
-                            github_url: { get_property: [ SELF, github_url ] }
-                            mongodb_ip: { get_attribute: [mongo_server, private_address] }
-                    start: scripts/nodejs/start.sh
-        nodejs:
-            type: tosca.nodes.WebServer.Nodejs
-            requirements:
-                - host: app_server
-            interfaces:
-                Standard:
-                    create: scripts/nodejs/create.sh
+                - host: Nodejs
+                - database:
+                    node: mongo_db
+                    capability: tosca.capabilities.endpoint.Mongo
+                    relationship: tosca.relationships.NodejsConnectToMongo
         mongo_db:
             type: tosca.nodes.Database
             requirements:
