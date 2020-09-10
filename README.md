@@ -4,7 +4,7 @@ With the advent of cloud computing, different cloud providers with heterogeneous
 Several standards have been proposed to address this challenge and provide a unified interface to cloud resources.
 The _Open Cloud Computing Interface_ (OCCI) thereby focuses on the standardization of a common API for _Infrastructure-as-a-Service_ (IaaS) providers and the _Topology and Orchestration Specification for Cloud Applications_ (TOSCA) focuses on the standardization of a template language to enable the proper definition of the topology of cloud applications and their orchestrations on top of an IaaS cloud.
 TOSCA thereby does not define how the application topologies are created on the cloud. Therefore, we analyse the conceptual similarities between the two approaches and we integrate both. 
-We propose an automated extensive mapping between the concepts of the two standards and we provide TOSCA Studio, a model-driven tool chain for TOSCA based on the OCCIware approach. TOSCA Studio allows to graphically design cloud applications, but also to deploy and manage them at runtime a fully model-driven cloud orchestrator based on the two standards. Our contribution is validated by successfully designing and deploying two cloud applications: WordPress and Node Cellar.
+We propose an automated extensive mapping between the concepts of the two standards and we provide TOSCA Studio, a model-driven tool chain for TOSCA based on the OCCIware approach. TOSCA Studio allows to graphically design cloud applications, but also to deploy and manage them at runtime a fully model-driven cloud orchestrator based on the two standards. Our contribution is validated by successfully designing and deploying three cloud applications: WordPress, Node Cellar and Multi-Tier.
 
 ## The semantics behind TOSCA Studio
 
@@ -90,3 +90,18 @@ Similar to the WordPress example, we visualized the deployment of the Node Cella
 
 The implementation of the OCCI Orchestrator deployment logic can be found [here](https://gitlab.gwdg.de/rwm/de.ugoe.cs.rwm.docci).
 A MP4 video of the deployment process demonstration is available [here](https://github.com/occiware/TOSCA-studio/raw/master/videos/Node_Cellar-deployment.mp4).
+
+### Multi-Tier
+This use case shows the ELK stack being used in a typical manner to collect, search and monitor/visualize data from a running application. 
+This use case builds upon our NodeCellar application as the one being monitored. Here is our model of a Multi-Tier configuration.
+
+![MultiTierDiagram](https://github.com/occiware/TOSCA-Studio/blob/master/img/MultiTierDiagram.jpg)
+
+#### Deployment
+Below you can see this deployment process of the Multi-Tier application, as well as a short demonstration of the deployed application is provided.
+
+The implementation of the OCCI Orchestrator deployment logic can be found [here](https://gitlab.gwdg.de/rwm/de.ugoe.cs.rwm.docci).
+A MP4 video of the deployment process demonstration is available [here](https://github.com/occiware/TOSCA-studio/raw/master/videos/MultiTier-deployment.mp4).
+
+![MultiTier](videos/MultiTier-deployment.gif)
+
